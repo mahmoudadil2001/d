@@ -1,28 +1,203 @@
 <!DOCTYPE html>
 <html lang="ar" dir="rtl">
 <head>
-  <meta charset="UTF-8">
+  <meta charset="UTF-8" />
   <title>اختبار طب الأسنان</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;700&display=swap" rel="stylesheet" />
   <script type="module" src="./script.js" defer></script>
   <style>
-    body { font-family: sans-serif; padding: 20px; }
-    select, button { margin: 10px; padding: 5px 10px; }
+    body {
+      font-family: 'Tajawal', sans-serif;
+      background: linear-gradient(135deg, #cce5ff, #e6f0ff);
+      min-height: 100vh;
+      margin: 0;
+      padding: 20px 10px;
+      display: flex;
+      justify-content: center;
+      align-items: flex-start;
+      color: #222;
+    }
+
+    .container {
+      background: #fff;
+      width: 100%;
+      max-width: 480px;
+      border-radius: 12px;
+      box-shadow: 0 10px 30px rgba(0, 123, 255, 0.2);
+      padding: 25px 20px;
+    }
+
+    h1 {
+      text-align: center;
+      color: #007bff;
+      margin-bottom: 20px;
+      font-weight: 700;
+      font-size: 28px;
+      /* تم حذف النص داخله */
+    }
+
+    label {
+      display: block;
+      margin: 15px 0 6px 0;
+      font-weight: 600;
+      color: #333;
+    }
+
+    select, button {
+      width: 100%;
+      padding: 12px 15px;
+      font-size: 16px;
+      border: 1.8px solid #007bff;
+      border-radius: 8px;
+      background-color: #e7f1ff;
+      color: #004085;
+      cursor: pointer;
+      transition: background-color 0.3s, color 0.3s;
+      box-sizing: border-box;
+    }
+
+    select:focus, button:focus {
+      outline: none;
+      border-color: #0056b3;
+      background-color: #d0e4ff;
+      color: #003366;
+    }
+
+    #loadBtn {
+      margin-top: 20px; /* هنا تم إضافة المسافة فوق زر ابدأ */
+    }
+
+    #questionsContainer {
+      margin-top: 40px;
+      display: none; /* مخفي في البداية */
+    }
+
+    #homeBtn {
+      display: none;
+      margin-bottom: 20px;
+      background-color: #007bff;
+      color: white;
+      border: none;
+      border-radius: 8px;
+      padding: 10px;
+      font-size: 16px;
+      cursor: pointer;
+      width: 100%;
+      box-sizing: border-box;
+      transition: background-color 0.3s;
+    }
+
+    #homeBtn:hover {
+      background-color: #0056b3;
+    }
+
+    .question-box {
+      margin-bottom: 10px;
+    }
+
+    .question-meta {
+      font-weight: 600;
+      font-size: 14px;
+      color: #666;
+      margin-bottom: 8px;
+      text-align: left;
+      direction: ltr;
+    }
+
+    .question-title {
+      font-weight: 700;
+      font-size: 18px;
+      color: #004085;
+      margin-bottom: 10px;
+    }
+
+    ul {
+      list-style: none;
+      padding: 0;
+    }
+
+    li {
+      background-color: #e9f0ff;
+      border: 1.5px solid #007bff;
+      border-radius: 8px;
+      margin: 10px 0;
+      cursor: pointer;
+      transition: background-color 0.3s, border-color 0.3s;
+      user-select: none;
+    }
+
+    li button {
+      display: block;
+      margin: 0;
+      padding: 12px 15px;
+      width: 100%;
+      font-size: 16px;
+      box-sizing: border-box;
+      border: none;
+      background: none;
+      cursor: pointer;
+      text-align: right;
+      color: #004085;
+      font-weight: 600;
+    }
+
+    li:hover {
+      background-color: #c7d9ff;
+      border-color: #004085;
+    }
+
+    .correct {
+      background-color: #d4edda !important;
+      border-color: #28a745 !important;
+      color: #155724 !important;
+    }
+
+    .wrong {
+      background-color: #f8d7da !important;
+      border-color: #dc3545 !important;
+      color: #721c24 !important;
+    }
+
+    @media (max-width: 480px) {
+      .container {
+        padding: 20px 15px;
+      }
+
+      h1 {
+        font-size: 24px;
+      }
+
+      .question-title {
+        font-size: 16px;
+      }
+
+      select, button {
+        font-size: 15px;
+        padding: 10px 12px;
+      }
+    }
   </style>
 </head>
 <body>
-  <h1>نظام الأسئلة</h1>
+  <div class="container">
+    <button id="homeBtn">العودة للرئيسية</button>
+    <h1></h1> <!-- العنوان فارغ حسب طلبك -->
 
-  <label>اختر المادة:</label>
-  <select id="subjectSelect"></select>
+    <div id="controlsContainer">
+      <label>اختر المادة:</label>
+      <select id="subjectSelect"></select>
 
-  <label>اختر المحاضرة:</label>
-  <select id="lectureSelect"></select>
+      <label>اختر المحاضرة:</label>
+      <select id="lectureSelect"></select>
 
-  <label>اختر النسخة:</label>
-  <select id="versionSelect"></select>
+      <label>اختر النسخة:</label>
+      <select id="versionSelect"></select>
 
-  <button id="loadBtn">ابدأ</button>
+      <button id="loadBtn">ابدأ</button>
+    </div>
 
-  <div id="questionsContainer"></div>
+    <div id="questionsContainer"></div>
+  </div>
 </body>
 </html>
