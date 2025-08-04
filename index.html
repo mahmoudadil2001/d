@@ -2,201 +2,147 @@
 <html lang="ar" dir="rtl">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>نظام الأسئلة ولوحة التحكم</title>
-  <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;700&display=swap" rel="stylesheet" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>نظام الأسئلة - Dentistry JS</title>
   <style>
     body {
       font-family: 'Tajawal', sans-serif;
-      background-color: #f3f4f6;
       padding: 20px;
-      color: #1f2937;
-      margin: 0;
+      background: #f4f4f4;
+      direction: rtl;
+      text-align: right;
     }
-    h1 {
-      text-align: center;
-      color: #2563eb;
-    }
-    /* تنسيق نظام الأسئلة */
-    #quizSystem {
-      max-width: 700px;
-      margin: auto auto 40px auto;
-      background: white;
-      padding: 20px;
-      border-radius: 10px;
-      box-shadow: 0 4px 6px rgba(0,0,0,0.1);
-    }
-    label {
-      display: block;
-      margin-top: 15px;
-      font-weight: bold;
-    }
-    select, input[type="text"], textarea, button {
+    select, textarea, input, button {
+      padding: 8px;
+      margin: 5px 0;
       width: 100%;
-      padding: 10px;
-      margin-top: 5px;
-      border-radius: 6px;
-      border: 1px solid #ccc;
-      font-size: 16px;
       box-sizing: border-box;
-    }
-    textarea {
-      min-height: 150px;
-      font-family: monospace;
+      font-size: 1rem;
     }
     button {
-      background-color: #2563eb;
-      color: white;
-      border: none;
-      margin-top: 20px;
       cursor: pointer;
-      transition: background-color 0.3s;
     }
-    button:hover {
-      background-color: #1d4ed8;
-    }
-    #questionsContainer {
-      margin-top: 20px;
-      background: #e0e7ff;
-      padding: 15px;
-      border-radius: 8px;
-      max-height: 300px;
-      overflow-y: auto;
-      font-size: 16px;
-    }
-
-    /* تنسيق لوحة التحكم */
     .container {
-      max-width: 700px;
+      max-width: 900px;
       margin: auto;
-      background: white;
+      background: #fff;
       padding: 20px;
-      border-radius: 10px;
-      box-shadow: 0 4px 6px rgba(0,0,0,0.1);
-      margin-bottom: 60px;
+      border-radius: 6px;
+      box-shadow: 0 0 10px #ccc;
+      margin-top: 20px;
+    }
+    #questionsContainer div {
+      background: #e8f0fe;
+      margin-bottom: 15px;
+      padding: 10px;
+      border-radius: 6px;
+    }
+    h2 {
+      margin-top: 0;
     }
     .tabs {
       display: flex;
       gap: 10px;
-      margin-bottom: 20px;
+      margin-bottom: 10px;
     }
     .tabs button {
       flex: 1;
-      background-color: #e5e7eb;
-      color: #1f2937;
+      background: #ddd;
       border: none;
-      padding: 10px;
-      font-weight: 700;
       border-radius: 6px;
-      cursor: pointer;
-      transition: background-color 0.3s;
+      font-weight: bold;
+      transition: background 0.3s;
     }
     .tabs button.active {
-      background-color: #2563eb;
+      background: #1976d2;
       color: white;
     }
     .hidden {
       display: none;
     }
-    /* زر admin */
-    #adminBtn {
-      display: block;
-      margin: 20px auto;
-      padding: 10px 20px;
-      font-size: 16px;
-      cursor: pointer;
+    textarea {
+      height: 150px;
+      font-family: monospace;
     }
   </style>
 </head>
 <body>
 
-  <div id="quizSystem">
-    <h1>نظام الأسئلة</h1>
+  <button id="adminBtn">لوحة التحكم (Admin)</button>
 
-    <label for="subjectSelect">اختر المادة:</label>
+  <div class="container">
+
+    <h2>نظام عرض الأسئلة</h2>
+
+    <label for="subjectSelect">المادة:</label>
     <select id="subjectSelect"></select>
 
-    <label for="lectureSelect">اختر المحاضرة:</label>
+    <label for="lectureSelect">المحاضرة:</label>
     <select id="lectureSelect"></select>
 
-    <label for="versionSelect">اختر النسخة:</label>
+    <label for="versionSelect">النسخة:</label>
     <select id="versionSelect"></select>
 
     <button id="loadBtn">ابدأ</button>
 
     <div id="questionsContainer"></div>
-  </div>
 
-  <!-- زر admin -->
-  <button id="adminBtn">Admin</button>
+    <hr />
 
-  <div class="container">
-    <h1>لوحة التحكم</h1>
     <div class="tabs">
       <button id="addTab" class="active">إضافة محاضرة</button>
       <button id="editTab">تعديل محاضرة</button>
     </div>
 
-    <div id="addSection">
-      <label for="addSubject">اختر المادة:</label>
+    <!-- قسم الإضافة -->
+    <section id="addSection">
+      <h3>إضافة محاضرة جديدة</h3>
+
+      <label for="addSubject">المادة:</label>
       <select id="addSubject"></select>
 
-      <label for="addVersion">اختر النسخة المخفية لإظهارها:</label>
+      <label for="addVersion">النسخة:</label>
       <select id="addVersion"></select>
 
       <label for="addLectureName">اسم المحاضرة:</label>
       <input type="text" id="addLectureName" />
 
-      <label for="addJsContent">محتوى ملف js:</label>
-      <textarea id="addJsContent"></textarea>
+      <label for="addJsContent">محتوى الأسئلة (JSON):</label>
+      <textarea id="addJsContent" placeholder='[
+  {
+    "question": "سؤال مثال؟",
+    "options": ["أ", "ب", "ج", "د"],
+    "answer": 0
+  }
+]'></textarea>
 
-      <button id="saveAddBtn">حفظ المحاضرة</button>
-    </div>
+      <button onclick="saveAddLecture()">حفظ الإضافة</button>
+    </section>
 
-    <div id="editSection" class="hidden">
-      <label for="editSubject">اختر المادة:</label>
+    <!-- قسم التعديل -->
+    <section id="editSection" class="hidden">
+      <h3>تعديل محاضرة موجودة</h3>
+
+      <label for="editSubject">المادة:</label>
       <select id="editSubject"></select>
 
-      <label for="editLecture">اختر المحاضرة الظاهرة:</label>
+      <label for="editLecture">المحاضرة:</label>
       <select id="editLecture"></select>
 
-      <label for="editVersion">اختر النسخة:</label>
+      <label for="editVersion">النسخة:</label>
       <select id="editVersion"></select>
 
-      <label for="editLectureName">اسم المحاضرة الجديد:</label>
+      <label for="editLectureName">اسم المحاضرة:</label>
       <input type="text" id="editLectureName" />
 
-      <label for="editJsContent">تعديل محتوى ملف js:</label>
+      <label for="editJsContent">محتوى الأسئلة (JSON):</label>
       <textarea id="editJsContent"></textarea>
 
-      <button id="saveEditBtn">حفظ التعديلات</button>
-    </div>
+      <button onclick="saveEditLecture()">حفظ التعديل</button>
+    </section>
+
   </div>
 
-  <script type="module" src="./script.js"></script>
-  <script src="./admin.js"></script>
-
-  <script>
-    // تبويبات لوحة التحكم
-    const addTab = document.getElementById('addTab');
-    const editTab = document.getElementById('editTab');
-    const addSection = document.getElementById('addSection');
-    const editSection = document.getElementById('editSection');
-
-    addTab.addEventListener('click', () => {
-      addTab.classList.add('active');
-      editTab.classList.remove('active');
-      addSection.classList.remove('hidden');
-      editSection.classList.add('hidden');
-    });
-
-    editTab.addEventListener('click', () => {
-      editTab.classList.add('active');
-      addTab.classList.remove('active');
-      editSection.classList.remove('hidden');
-      addSection.classList.add('hidden');
-    });
-  </script>
-
+  <script type="module" src="./main.js"></script>
 </body>
 </html>
