@@ -195,7 +195,7 @@
 <body>
   <div class="container">
     <button id="homeBtn">العودة للرئيسية</button>
-    <h1></h1>
+    <h1>اختبار طب الأسنان</h1>
 
     <div id="controlsContainer">
       <label>اختر المادة:</label>
@@ -217,5 +217,32 @@
 
     <div id="questionsContainer"></div>
   </div>
+
+  <script type="module">
+    // تحقق وجود بيانات المستخدم في localStorage
+    if (!localStorage.getItem('fullName') || !localStorage.getItem('group')) {
+      window.location.href = 'login.html';
+    }
+
+    import { visibleLectures } from './visibleLectures.js';
+    import { lectureNames } from './lectureNames.js';
+
+    const subjectSelect = document.getElementById("subjectSelect");
+    const lectureSelect = document.getElementById("lectureSelect");
+    const versionSelect = document.getElementById("versionSelect");
+    const loadBtn = document.getElementById("loadBtn");
+    const questionsContainer = document.getElementById("questionsContainer");
+    const controlsContainer = document.getElementById("controlsContainer");
+    const homeBtn = document.getElementById("homeBtn");
+
+    // باقي كود الأسئلة والتحميل والتفاعل مثل ما عندك في script.js
+    // ...
+    // (أضف هنا باقي الكود الخاص بالأسئلة الذي تستخدمه حالياً)
+
+    // لتبسيط الشرح، اضف كود تحميل المواد والمحاضرات والنسخ والتعامل مع الأسئلة هنا
+
+    // ... (كود التحميل، العرض، المؤقت، الأصوات، التنقل، وهكذا)
+
+  </script>
 </body>
 </html>
