@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>اختبار المحاضرات</title>
+  <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;700&display=swap" rel="stylesheet" />
+  <style>
+    body {
+      font-family: 'Tajawal', sans-serif;
+      background-color: #fafafa;
+      padding: 30px;
+      max-width: 600px;
+      margin: auto;
+      text-align: center;
+    }
+    select, button {
+      font-size: 16px;
+      padding: 10px;
+      margin: 10px;
+      width: 90%;
+      max-width: 400px;
+      border-radius: 8px;
+      border: 1px solid #ccc;
+    }
+    button {
+      background-color: #1976d2;
+      color: white;
+      border: none;
+      cursor: pointer;
+    }
+    button:hover {
+      background-color: #0d47a1;
+    }
+    #quizContainer button {
+      width: 100%;
+      margin: 8px 0;
+      padding: 12px;
+      font-size: 16px;
+      border-radius: 8px;
+      border: none;
+      background-color: #eee;
+      cursor: pointer;
+      transition: background-color 0.3s;
+    }
+    #quizContainer button:hover {
+      background-color: #ccc;
+    }
+  </style>
+</head>
+<body>
+  <h1>اختبار المحاضرات</h1>
+
+  <select id="subjectSelect">
+    <option value="" disabled selected>اختر المادة</option>
+    <option value="endodontics">Endodontics</option>
+    <option value="generalmedicine">General Medicine</option>
+    <option value="generalsurgery">General Surgery</option>
+    <option value="operative">Operative</option>
+    <option value="oralpathology">Oral Pathology</option>
+    <option value="oralsurgery">Oral Surgery</option>
+    <option value="orthodontics">Orthodontics</option>
+    <option value="pedodontics">Pedodontics</option>
+    <option value="periodontology">Periodontology</option>
+    <option value="prosthodontics">Prosthodontics</option>
+  </select>
+
+  <select id="lectureSelect">
+    <option value="" disabled selected>اختر رقم المحاضرة</option>
+    <!-- تولد من 1 إلى 30 -->
+  </select>
+
+  <select id="versionSelect">
+    <option value="v1">Version 1</option>
+    <option value="v2">Version 2</option>
+    <option value="v3">Version 3</option>
+    <option value="v4">Version 4</option>
+  </select>
+
+  <button id="startBtn">ابدأ الاختبار</button>
+
+  <div id="quizContainer" style="margin-top: 30px;"></div>
+
+  <script src="main.js"></script>
+  <script>
+    // توليد خيارات المحاضرات 1 إلى 30
+    const lectureSelect = document.getElementById('lectureSelect');
+    for(let i=1; i<=30; i++){
+      const opt = document.createElement('option');
+      opt.value = i;
+      opt.textContent = `محاضرة ${i}`;
+      lectureSelect.appendChild(opt);
+    }
+  </script>
+</body>
+</html>
