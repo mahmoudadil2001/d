@@ -4,48 +4,13 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>اختبار المحاضرات</title>
-  <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;700&display=swap" rel="stylesheet" />
   <style>
-    body {
-      font-family: 'Tajawal', sans-serif;
-      background-color: #fafafa;
-      padding: 30px;
-      max-width: 600px;
-      margin: auto;
-      text-align: center;
-    }
-    select, button {
-      font-size: 16px;
-      padding: 10px;
-      margin: 10px;
-      width: 90%;
-      max-width: 400px;
-      border-radius: 8px;
-      border: 1px solid #ccc;
-    }
-    button {
-      background-color: #1976d2;
-      color: white;
-      border: none;
-      cursor: pointer;
-    }
-    button:hover {
-      background-color: #0d47a1;
-    }
-    #quizContainer button {
-      width: 100%;
-      margin: 8px 0;
-      padding: 12px;
-      font-size: 16px;
-      border-radius: 8px;
-      border: none;
-      background-color: #eee;
-      cursor: pointer;
-      transition: background-color 0.3s;
-    }
-    #quizContainer button:hover {
-      background-color: #ccc;
-    }
+    body { font-family: 'Tajawal', sans-serif; padding: 30px; max-width: 600px; margin: auto; text-align: center; }
+    select, button { font-size: 16px; padding: 10px; margin: 10px; width: 90%; max-width: 400px; border-radius: 8px; border: 1px solid #ccc; }
+    button { background-color: #1976d2; color: white; border: none; cursor: pointer; }
+    button:hover { background-color: #0d47a1; }
+    #quizContainer button { width: 100%; margin: 8px 0; padding: 12px; font-size: 16px; border-radius: 8px; border: none; background-color: #eee; cursor: pointer; transition: background-color 0.3s; }
+    #quizContainer button:hover { background-color: #ccc; }
   </style>
 </head>
 <body>
@@ -65,32 +30,175 @@
     <option value="prosthodontics">Prosthodontics</option>
   </select>
 
-  <select id="lectureSelect">
-    <option value="" disabled selected>اختر رقم المحاضرة</option>
-    <!-- تولد من 1 إلى 30 -->
+  <select id="lectureSelect" disabled>
+    <option value="" disabled selected>اختر المحاضرة</option>
   </select>
 
-  <select id="versionSelect">
-    <option value="v1">Version 1</option>
-    <option value="v2">Version 2</option>
-    <option value="v3">Version 3</option>
-    <option value="v4">Version 4</option>
+  <select id="versionSelect" disabled>
+    <option value="" disabled selected>اختر النسخة</option>
   </select>
 
-  <button id="startBtn">ابدأ الاختبار</button>
+  <button id="startBtn" disabled>ابدأ الاختبار</button>
 
   <div id="quizContainer" style="margin-top: 30px;"></div>
 
-  <script src="main.js"></script>
-  <script>
-    // توليد خيارات المحاضرات 1 إلى 30
+  <script type="module">
+    import { visibleLectures } from './show.js';
+
+    const subjectSelect = document.getElementById('subjectSelect');
     const lectureSelect = document.getElementById('lectureSelect');
-    for(let i=1; i<=30; i++){
-      const opt = document.createElement('option');
-      opt.value = i;
-      opt.textContent = `محاضرة ${i}`;
-      lectureSelect.appendChild(opt);
+    const versionSelect = document.getElementById('versionSelect');
+    const startBtn = document.getElementById('startBtn');
+    const quizContainer = document.getElementById('quizContainer');
+
+    let githubToken = localStorage.getItem('githubToken');
+    let githubUsername = localStorage.getItem('githubUsername');
+    let repoName = localStorage.getItem('repoName');
+
+    let questions = [];
+    let currentIndex = 0;
+    let score = 0;
+
+    subjectSelect.addEventListener('change', () => {
+      const subject = subjectSelect.value;
+      quizContainer.innerHTML = '';
+      versionSelect.innerHTML = '<option value="" disabled selected>اختر النسخة</option>';
+      versionSelect.disabled = true;
+      startBtn.disabled = true;
+
+      // تهيئة قائمة المحاضرات حسب show.js
+      lectureSelect.innerHTML = '<option value="" disabled selected>اختر المحاضرة</option>';
+      if (visibleLectures[subject]) {
+        for (const lecNum of Object.keys(visibleLectures[subject])) {
+          const opt = document.createElement('option');
+          opt.value = lecNum;
+          opt.textContent = `محاضرة ${lecNum}`;
+          lectureSelect.appendChild(opt);
+        }
+        lectureSelect.disabled = false;
+      } else {
+        lectureSelect.disabled = true;
+      }
+    });
+
+    lectureSelect.addEventListener('change', () => {
+      const subject = subjectSelect.value;
+      const lecture = lectureSelect.value;
+      quizContainer.innerHTML = '';
+      startBtn.disabled = true;
+
+      versionSelect.innerHTML = '<option value="" disabled selected>اختر النسخة</option>';
+      if (visibleLectures[subject] && visibleLectures[subject][lecture]) {
+        visibleLectures[subject][lecture].forEach(ver => {
+          const opt = document.createElement('option');
+          opt.value = ver;
+          opt.textContent = ver;
+          versionSelect.appendChild(opt);
+        });
+        versionSelect.disabled = false;
+      } else {
+        versionSelect.disabled = true;
+      }
+    });
+
+    versionSelect.addEventListener('change', () => {
+      quizContainer.innerHTML = '';
+      startBtn.disabled = false;
+    });
+
+    startBtn.addEventListener('click', async () => {
+      const subject = subjectSelect.value;
+      const lectureNumber = lectureSelect.value;
+      const version = versionSelect.value;
+
+      if (!githubToken || !githubUsername || !repoName) {
+        alert("⚠️ الرجاء إدخال بيانات GitHub في لوحة التحكم أولاً");
+        window.location.href = "admin.html";
+        return;
+      }
+
+      await fetchQuestions(subject, lectureNumber, version);
+      startQuiz();
+    });
+
+    async function fetchQuestions(subject, lectureNumber, version) {
+      const path = `${subject}/${subject}${lectureNumber}/${subject}${lectureNumber}_${version}.js`;
+      const url = `https://api.github.com/repos/${githubUsername}/${repoName}/contents/${path}`;
+
+      const res = await fetch(url, {
+        headers: {
+          'Authorization': `token ${githubToken}`,
+          'Accept': 'application/vnd.github.v3.raw'
+        }
+      });
+
+      if (!res.ok) {
+        alert("❌ فشل في تحميل الملف");
+        questions = [];
+        return;
+      }
+
+      const jsText = await res.text();
+
+      // تفريغ متغير الأسئلة قبل تقييم النص
+      questions = [];
+
+      try {
+        // استخرج export const questions = [...] بدون eval (لحماية أكبر)
+        // نفترض أن الملف يحتوي فقط export const questions = [...];
+        // نستطيع استخراج المصفوفة فقط:
+        const match = jsText.match(/export\s+const\s+questions\s*=\s*(\[[\s\S]*\]);?/m);
+        if (match && match[1]) {
+          questions = JSON.parse(match[1]);
+        } else {
+          throw new Error("تعذر إيجاد المتغير questions");
+        }
+      } catch (e) {
+        alert("❌ خطأ في تحليل ملف الأسئلة: " + e.message);
+        questions = [];
+      }
     }
+
+    function startQuiz() {
+      currentIndex = 0;
+      score = 0;
+      quizContainer.innerHTML = '';
+      showQuestion();
+    }
+
+    function showQuestion() {
+      quizContainer.innerHTML = '';
+
+      if (currentIndex >= questions.length) {
+        quizContainer.innerHTML = `
+          <h3>✅ انتهى الاختبار</h3>
+          <p>نقاطك: ${score} من ${questions.length}</p>
+        `;
+        return;
+      }
+
+      const q = questions[currentIndex];
+
+      const questionText = document.createElement('h3');
+      questionText.textContent = `سؤال ${currentIndex + 1} من ${questions.length}: ${q.question}`;
+      quizContainer.appendChild(questionText);
+
+      q.options.forEach((opt, index) => {
+        const btn = document.createElement('button');
+        btn.textContent = opt;
+        btn.onclick = () => handleAnswer(index);
+        quizContainer.appendChild(btn);
+      });
+    }
+
+    function handleAnswer(selectedIndex) {
+      if (selectedIndex === questions[currentIndex].answer) {
+        score++;
+      }
+      currentIndex++;
+      showQuestion();
+    }
+
   </script>
 </body>
 </html>
