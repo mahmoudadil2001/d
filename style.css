@@ -1,104 +1,25 @@
-body {
-  font-family: 'Tajawal', sans-serif;
-  background: #f0f4f8;
-  color: #333;
-  max-width: 700px;
-  margin: 30px auto;
-  padding: 20px;
-  border-radius: 10px;
-  box-shadow: 0 0 10px #bbb;
-}
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8" />
+  <title>اختبار طب الأسنان</title>
+  <link rel="stylesheet" href="./style.css" />
+  <script type="module" src="./script.js" defer></script>
+</head>
+<body>
+  <h1>نظام الأسئلة</h1>
 
-h1 {
-  color: #007acc;
-  text-align: center;
-}
+  <label>اختر المادة:</label>
+  <select id="subjectSelect"></select>
 
-label {
-  font-weight: bold;
-  margin-top: 15px;
-  display: block;
-  color: #005a9c;
-}
+  <label>اختر المحاضرة:</label>
+  <select id="lectureSelect"></select>
 
-select, button {
-  padding: 8px 12px;
-  margin: 10px 0 20px 0;
-  border-radius: 5px;
-  border: 1px solid #007acc;
-  font-size: 16px;
-  cursor: pointer;
-  transition: background-color 0.3s ease;
-}
+  <label>اختر النسخة:</label>
+  <select id="versionSelect"></select>
 
-select:hover, button:hover {
-  background-color: #007acc;
-  color: white;
-  border-color: #005a9c;
-}
+  <button id="loadBtn">ابدأ</button>
 
-button:disabled {
-  background-color: #ccc;
-  border-color: #aaa;
-  cursor: not-allowed;
-  color: #666;
-}
-
-#questionsContainer {
-  background: white;
-  border-radius: 10px;
-  padding: 20px;
-  box-shadow: 0 0 8px #ccc;
-  margin-top: 20px;
-  min-height: 150px;
-}
-
-.question-text {
-  font-size: 1.2em;
-  margin-bottom: 15px;
-  color: #003366;
-}
-
-.options-list {
-  list-style: none;
-  padding: 0;
-}
-
-.options-list li {
-  margin-bottom: 10px;
-}
-
-.options-list li label {
-  cursor: pointer;
-  user-select: none;
-}
-
-.feedback {
-  margin-top: 15px;
-  font-weight: bold;
-  font-size: 1.1em;
-}
-
-.feedback.correct {
-  color: green;
-}
-
-.feedback.incorrect {
-  color: red;
-}
-
-#nextBtn {
-  margin-top: 20px;
-  background-color: #007acc;
-  color: white;
-  border: none;
-  padding: 10px 18px;
-  border-radius: 6px;
-  font-size: 16px;
-  cursor: pointer;
-}
-
-#nextBtn:disabled {
-  background-color: #ccc;
-  cursor: not-allowed;
-}
+  <div id="questionsContainer"></div>
+</body>
+</html>
