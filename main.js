@@ -26,16 +26,23 @@ const editSection = document.getElementById('editSection');
 const addTab = document.getElementById('addTab');
 const editTab = document.getElementById('editTab');
 
-// إنشاء حقل إدخال التوكن في صفحة الإدارة (لوحة التحكم)
-const tokenInput = document.createElement('input');
-tokenInput.type = 'password';
-tokenInput.placeholder = 'أدخل GitHub Token هنا';
-tokenInput.style.width = '100%';
-tokenInput.style.padding = '10px';
-tokenInput.style.marginBottom = '10px';
-tokenInput.style.borderRadius = '6px';
-tokenInput.style.border = '1px solid #ccc';
-document.querySelector('.container').insertBefore(tokenInput, addSection);
+// زر admin
+const adminBtn = document.getElementById('adminBtn');
+const controlPanel = document.querySelector('.container');
+
+// خفي لوحة التحكم افتراضياً
+controlPanel.style.display = 'none';
+
+// زر ادخال كلمة المرور للوحة التحكم
+adminBtn.addEventListener('click', () => {
+  const pass = prompt('أدخل كلمة المرور للوصول إلى لوحة التحكم:');
+  if(pass === '0770'){
+    controlPanel.style.display = 'block';
+    adminBtn.style.display = 'none';
+  } else {
+    alert('كلمة مرور خاطئة!');
+  }
+});
 
 // --- تبويبات لوحة التحكم ---
 addTab.addEventListener('click', () => {
@@ -345,25 +352,33 @@ async function saveEditLecture() {
   alert('تم حفظ التعديلات بنجاح!');
 }
 
-// --- ربط أحداث لوحة التحكم ---
+// --- ربط الأحداث ---
 addSubject.addEventListener('change', fillAddVersions);
 editSubject.addEventListener('change', () => {
   fillEditLectures();
-  editVersion.innerHTML = '';
+  fillEditVersions();
   editJsContent.value = '';
   editLectureName.value = '';
 });
-editLecture.addEventListener('change', () => {
-  fillEditVersions();
-});
+editLecture.addEventListener('change', fillEditVersions);
 editVersion.addEventListener('change', loadEditLectureData);
 
-// تشغيل تهيئة أولية
+document.getElementById('saveAddBtn').addEventListener('click', saveAddLecture);
+document.getElementById('saveEditBtn').addEventListener('click', saveEditLecture);
+
+// إنشاء حقل إدخال التوكن في صفحة الإدارة (لوحة التحكم)
+const tokenInput = document.createElement('input');
+tokenInput.type = 'password';
+tokenInput.placeholder = 'أدخل GitHub Token هنا';
+tokenInput.style.width = '100%';
+tokenInput.style.padding = '10px';
+tokenInput.style.marginBottom = '10px';
+tokenInput.style.borderRadius = '6px';
+tokenInput.style.border = '1px solid #ccc';
+document.querySelector('.container').insertBefore(tokenInput, addSection);
+
+// تهيئة أولية
 fillAddSubjects();
 fillAddVersions();
 fillEditSubjects();
 subjectSelect.dispatchEvent(new Event("change"));
-
-// تعيين دوال الحفظ في النافذة (لتسهيل النداء من HTML)
-window.saveAddLecture = saveAddLecture;
-window.saveEditLecture = saveEditLecture;
