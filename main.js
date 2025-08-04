@@ -1,14 +1,16 @@
 import { visibleLectures } from './show.js';
 import { lectureNames } from './lectureNames.js';
 
-// --- متغيرات DOM لنظام الأسئلة ---
+// عناصر DOM
+const adminBtn = document.getElementById('adminBtn');
+const controlPanel = document.querySelector('.container');
+
 const subjectSelect = document.getElementById("subjectSelect");
 const lectureSelect = document.getElementById("lectureSelect");
 const versionSelect = document.getElementById("versionSelect");
 const loadBtn = document.getElementById("loadBtn");
 const questionsContainer = document.getElementById("questionsContainer");
 
-// --- متغيرات DOM للوحة التحكم ---
 const addSubject = document.getElementById('addSubject');
 const addVersion = document.getElementById('addVersion');
 const addLectureName = document.getElementById('addLectureName');
@@ -26,17 +28,13 @@ const editSection = document.getElementById('editSection');
 const addTab = document.getElementById('addTab');
 const editTab = document.getElementById('editTab');
 
-// زر admin
-const adminBtn = document.getElementById('adminBtn');
-const controlPanel = document.querySelector('.container');
-
-// خفي لوحة التحكم افتراضياً
+// إخفاء لوحة التحكم بالافتراضي
 controlPanel.style.display = 'none';
 
-// زر ادخال كلمة المرور للوحة التحكم
+// زر admin لفتح لوحة التحكم بكلمة مرور
 adminBtn.addEventListener('click', () => {
   const pass = prompt('أدخل كلمة المرور للوصول إلى لوحة التحكم:');
-  if(pass === '0770'){
+  if (pass === '0770') {
     controlPanel.style.display = 'block';
     adminBtn.style.display = 'none';
   } else {
@@ -44,36 +42,34 @@ adminBtn.addEventListener('click', () => {
   }
 });
 
-// --- تبويبات لوحة التحكم ---
+// تبويبات لوحة التحكم
 addTab.addEventListener('click', () => {
   addTab.classList.add('active');
   editTab.classList.remove('active');
-  addSection.classList.remove('hidden');
-  editSection.classList.add('hidden');
+  addSection.style.display = 'block';
+  editSection.style.display = 'none';
 });
 
 editTab.addEventListener('click', () => {
   editTab.classList.add('active');
   addTab.classList.remove('active');
-  editSection.classList.remove('hidden');
-  addSection.classList.add('hidden');
+  addSection.style.display = 'none';
+  editSection.style.display = 'block';
 });
 
-// --- دوال مساعدة للترميز Base64 ---
+// Base64 encoding
 function b64EncodeUnicode(str) {
   return btoa(unescape(encodeURIComponent(str)));
 }
 
-// --- دوال التفاعل مع GitHub API ---
-const GITHUB_USERNAME = 'mahmoudadil2001'; // عدّل حسب حسابك
-const REPO_NAME = 'dentistry-JS';          // عدّل حسب مستودعك
+// GitHub API constants
+const GITHUB_USERNAME = 'mahmoudadil2001';
+const REPO_NAME = 'dentistry-JS';
 const BRANCH = 'main';
 
 async function getFileSha(path, token) {
   const url = `https://api.github.com/repos/${GITHUB_USERNAME}/${REPO_NAME}/contents/${path}`;
-  const res = await fetch(url, {
-    headers: { Authorization: `token ${token}` }
-  });
+  const res = await fetch(url, { headers: { Authorization: `token ${token}` } });
   if (!res.ok) throw new Error(`فشل جلب SHA للملف ${path}`);
   const data = await res.json();
   return data.sha;
@@ -83,18 +79,10 @@ async function updateFileOnGitHub(path, content, message, token) {
   try {
     const sha = await getFileSha(path, token);
     const url = `https://api.github.com/repos/${GITHUB_USERNAME}/${REPO_NAME}/contents/${path}`;
-    const body = {
-      message,
-      content: b64EncodeUnicode(content),
-      sha,
-      branch: BRANCH,
-    };
+    const body = { message, content: b64EncodeUnicode(content), sha, branch: BRANCH };
     const res = await fetch(url, {
       method: 'PUT',
-      headers: {
-        Authorization: `token ${token}`,
-        'Content-Type': 'application/json'
-      },
+      headers: { Authorization: `token ${token}`, 'Content-Type': 'application/json' },
       body: JSON.stringify(body),
     });
     if (!res.ok) {
@@ -107,58 +95,54 @@ async function updateFileOnGitHub(path, content, message, token) {
   }
 }
 
-// ====================
-// --- نظام عرض الأسئلة ---
-// ====================
-
-// تعبئة قائمة المواد
+// --- تعبئة المواد في قوائم الاختيار ---
 function fillSubjects() {
   subjectSelect.innerHTML = '';
   Object.keys(visibleLectures).forEach(subject => {
-    const opt = document.createElement("option");
+    const opt = document.createElement('option');
     opt.value = subject;
     opt.textContent = subject;
     subjectSelect.appendChild(opt);
   });
+  subjectSelect.dispatchEvent(new Event('change'));
 }
-fillSubjects();
 
-// عند تغيير المادة، يتم تحميل المحاضرات
-subjectSelect.addEventListener("change", () => {
-  lectureSelect.innerHTML = "";
-  versionSelect.innerHTML = "";
+// عند تغيير المادة يتم تعبئة المحاضرات
+subjectSelect.addEventListener('change', () => {
+  lectureSelect.innerHTML = '';
+  versionSelect.innerHTML = '';
 
   const selected = subjectSelect.value;
   const lectures = Object.keys(visibleLectures[selected] || {});
 
   lectures.forEach(lec => {
-    const opt = document.createElement("option");
+    const opt = document.createElement('option');
     opt.value = lec;
     const name = lectureNames[selected]?.[lec] || "Unknown";
     opt.textContent = `lec${lec} - ${name}`;
     lectureSelect.appendChild(opt);
   });
 
-  lectureSelect.dispatchEvent(new Event("change"));
+  lectureSelect.dispatchEvent(new Event('change'));
 });
 
-// عند تغيير المحاضرة، يتم تحميل النسخ
-lectureSelect.addEventListener("change", () => {
-  versionSelect.innerHTML = "";
+// عند تغيير المحاضرة يتم تعبئة النسخ
+lectureSelect.addEventListener('change', () => {
+  versionSelect.innerHTML = '';
   const selectedSubject = subjectSelect.value;
   const selectedLecture = lectureSelect.value;
   const versions = visibleLectures[selectedSubject]?.[selectedLecture] || [];
 
   versions.forEach(v => {
-    const opt = document.createElement("option");
+    const opt = document.createElement('option');
     opt.value = v;
     opt.textContent = `Version ${v}`;
     versionSelect.appendChild(opt);
   });
 });
 
-// عند الضغط على زر "ابدأ" لتحميل وعرض الأسئلة
-loadBtn.addEventListener("click", async () => {
+// زر "ابدأ" لتحميل الأسئلة وعرضها
+loadBtn.addEventListener('click', async () => {
   const subject = subjectSelect.value;
   const lecture = lectureSelect.value;
   const version = versionSelect.value;
@@ -189,11 +173,7 @@ function showQuestions(questions) {
   });
 }
 
-// ====================
-// --- لوحة التحكم (الإضافة والتعديل) ---
-// ====================
-
-// تعبئة مواد الإضافة
+// --- تعبئة مواد الإضافة ---
 function fillAddSubjects() {
   addSubject.innerHTML = '';
   Object.keys(visibleLectures).forEach(sub => {
@@ -281,7 +261,7 @@ async function loadEditLectureData() {
 
 // حفظ إضافة محاضرة جديدة على GitHub
 async function saveAddLecture() {
-  const token = tokenInput.value.trim();
+  const token = prompt('أدخل GitHub Token');
   if(!token) return alert('🛑 أدخل GitHub Token أولاً');
   const subject = addSubject.value;
   const version = addVersion.value;
@@ -322,7 +302,7 @@ async function saveAddLecture() {
 
 // حفظ تعديل محاضرة موجودة على GitHub
 async function saveEditLecture() {
-  const token = tokenInput.value.trim();
+  const token = prompt('أدخل GitHub Token');
   if(!token) return alert('🛑 أدخل GitHub Token أولاً');
   const subject = editSubject.value;
   const lecture = editLecture.value;
@@ -352,33 +332,19 @@ async function saveEditLecture() {
   alert('تم حفظ التعديلات بنجاح!');
 }
 
-// --- ربط الأحداث ---
+// ربط الأحداث في لوحة التحكم
 addSubject.addEventListener('change', fillAddVersions);
 editSubject.addEventListener('change', () => {
   fillEditLectures();
-  fillEditVersions();
+  editVersion.innerHTML = '';
   editJsContent.value = '';
   editLectureName.value = '';
 });
 editLecture.addEventListener('change', fillEditVersions);
 editVersion.addEventListener('change', loadEditLectureData);
 
-document.getElementById('saveAddBtn').addEventListener('click', saveAddLecture);
-document.getElementById('saveEditBtn').addEventListener('click', saveEditLecture);
-
-// إنشاء حقل إدخال التوكن في صفحة الإدارة (لوحة التحكم)
-const tokenInput = document.createElement('input');
-tokenInput.type = 'password';
-tokenInput.placeholder = 'أدخل GitHub Token هنا';
-tokenInput.style.width = '100%';
-tokenInput.style.padding = '10px';
-tokenInput.style.marginBottom = '10px';
-tokenInput.style.borderRadius = '6px';
-tokenInput.style.border = '1px solid #ccc';
-document.querySelector('.container').insertBefore(tokenInput, addSection);
-
-// تهيئة أولية
+// تشغيل تهيئة أولية
+fillSubjects();
 fillAddSubjects();
 fillAddVersions();
 fillEditSubjects();
-subjectSelect.dispatchEvent(new Event("change"));
