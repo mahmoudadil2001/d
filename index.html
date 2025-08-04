@@ -1,43 +1,25 @@
 <!DOCTYPE html>
 <html lang="ar" dir="rtl">
 <head>
-  <meta charset="UTF-8" />
+  <meta charset="UTF-8">
   <title>اختبار طب الأسنان</title>
-  <link rel="stylesheet" href="./style.css" />
   <script type="module" src="./script.js" defer></script>
+  <style>
+    body { font-family: sans-serif; padding: 20px; }
+    select, button { margin: 10px; padding: 5px 10px; }
+  </style>
 </head>
 <body>
   <h1>نظام الأسئلة</h1>
 
   <label>اختر المادة:</label>
-  <select id="subjectSelect">
-    <option value="endodontics">Endodontics</option>
-    <option value="generalmedicine">General Medicine</option>
-    <option value="generalsurgery">General Surgery</option>
-    <option value="operative">Operative</option>
-    <option value="oralpathology">Oral Pathology</option>
-    <option value="oralsurgery">Oral Surgery</option>
-    <option value="orthodontics">Orthodontics</option>
-    <option value="pedodontics">Pedodontics</option>
-    <option value="periodontology">Periodontology</option>
-    <option value="prosthodontics">Prosthodontics</option>
-  </select>
+  <select id="subjectSelect"></select>
 
   <label>اختر المحاضرة:</label>
-  <select id="lectureSelect">
-    <option value="1">محاضرة 1</option>
-    <option value="2">محاضرة 2</option>
-    <option value="3">محاضرة 3</option>
-    <!-- أضف حتى 30 حسب حاجتك -->
-  </select>
+  <select id="lectureSelect"></select>
 
   <label>اختر النسخة:</label>
-  <select id="versionSelect">
-    <option value="1">نسخة 1</option>
-    <option value="2">نسخة 2</option>
-    <option value="3">نسخة 3</option>
-    <option value="4">نسخة 4</option>
-  </select>
+  <select id="versionSelect"></select>
 
   <button id="loadBtn">ابدأ</button>
 
