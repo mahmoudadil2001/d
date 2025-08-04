@@ -1,87 +1,105 @@
 // main.js
-import { visibleLecturesMap } from './show.js';
-import { lectureNames } from './lectureNames.js';
 
-const subjects = Object.keys(visibleLecturesMap);
+let githubToken = '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';
+let githubUsername = 'mahmoudadil2001';
+let repoName = 'dentistru-JS';
+let questions = [];
+let currentIndex = 0;
+let score = 0;
 
-const subjectSelect = document.getElementById('subjectSelect');
-const lectureSelect = document.getElementById('lectureSelect');
-const versionSelect = document.getElementById('versionSelect');
-const startBtn = document.getElementById('startBtn');
+// تحميل بيانات GitHub
+function loadGithubCredentials() {
+  githubToken = localStorage.getItem('githubToken') || '';
+  githubUsername = localStorage.getItem('githubUsername') || '';
+  repoName = localStorage.getItem('repoName') || '';
 
-const addSubjectSelect = document.getElementById('addSubjectSelect');
-const addVersionSelect = document.getElementById('addVersionSelect');
-const addLectureName = document.getElementById('addLectureName');
-const addLectureContent = document.getElementById('addLectureContent');
-const saveNewLecture = document.getElementById('saveNewLecture');
+  if (!githubToken || !githubUsername || !repoName) {
+    alert("⚠️ الرجاء إدخال بيانات GitHub من لوحة التحكم أولاً");
+    window.location.href = "admin.html";
+  }
+}
 
-const editSubjectSelect = document.getElementById('editSubjectSelect');
-const editLectureSelect = document.getElementById('editLectureSelect');
-const editVersionSelect = document.getElementById('editVersionSelect');
-const editLectureName = document.getElementById('editLectureName');
-const editLectureContent = document.getElementById('editLectureContent');
-const saveEditedLecture = document.getElementById('saveEditedLecture');
+// تحميل ملف الأسئلة من GitHub
+async function fetchQuestions(subject, lectureNumber, version) {
+  const path = `${subject}/${subject}${lectureNumber}/${subject}${lectureNumber}_${version}.js`;
+  const url = `https://api.github.com/repos/${githubUsername}/${repoName}/contents/${path}`;
 
-const addPanel = document.getElementById('addPanel');
-const editPanel = document.getElementById('editPanel');
+  const res = await fetch(url, {
+    headers: {
+      'Authorization': `token ${githubToken}`,
+      'Accept': 'application/vnd.github.v3.raw'
+    }
+  });
 
-const showAdd = document.getElementById('showAdd');
-const showEdit = document.getElementById('showEdit');
+  if (!res.ok) {
+    alert("❌ فشل في تحميل الملف");
+    return;
+  }
 
-function fillSelect(select, options, map = x => x) {
-  select.innerHTML = '';
-  options.forEach(opt => {
-    const op = document.createElement('option');
-    op.value = opt;
-    op.textContent = map(opt);
-    select.appendChild(op);
+  const jsText = await res.text();
+  eval(jsText); // يجلب questions من export const questions
+
+  if (!Array.isArray(questions) || questions.length === 0) {
+    alert("⚠️ لا توجد أسئلة صالحة في الملف");
+    return;
+  }
+
+  startQuiz();
+}
+
+// بدء الاختبار
+function startQuiz() {
+  currentIndex = 0;
+  score = 0;
+  showQuestion();
+}
+
+// عرض سؤال واحد
+function showQuestion() {
+  const container = document.getElementById("quizContainer");
+  container.innerHTML = '';
+
+  if (currentIndex >= questions.length) {
+    container.innerHTML = `<h3>✅ انتهى الاختبار</h3><p>النتيجة: ${score} من ${questions.length}</p>`;
+    return;
+  }
+
+  const q = questions[currentIndex];
+
+  const questionText = document.createElement('h3');
+  questionText.textContent = q.question;
+  container.appendChild(questionText);
+
+  q.options.forEach((opt, index) => {
+    const btn = document.createElement('button');
+    btn.textContent = opt;
+    btn.style.display = 'block';
+    btn.style.margin = '10px auto';
+    btn.onclick = () => handleAnswer(index);
+    container.appendChild(btn);
   });
 }
 
-function updateLectureSelect(subject, select, showHidden = false) {
-  const lectures = visibleLecturesMap[subject];
-  if (!lectures) return;
-  const filtered = Object.entries(lectureNames[subject] || {}).filter(([num, name]) => {
-    return showHidden || lectures.includes(Number(num));
-  });
-  fillSelect(select, filtered.map(([n]) => n), l => lectureNames[subject][l] || l);
+// التحقق من الإجابة والانتقال
+function handleAnswer(selectedIndex) {
+  if (selectedIndex === questions[currentIndex].answer) {
+    score++;
+  }
+  currentIndex++;
+  showQuestion();
 }
 
-fillSelect(subjectSelect, subjects);
-fillSelect(addSubjectSelect, subjects);
-fillSelect(editSubjectSelect, subjects);
-fillSelect(versionSelect, ['v1','v2','v3','v4']);
-fillSelect(addVersionSelect, ['v1','v2','v3','v4']);
-fillSelect(editVersionSelect, ['v1','v2','v3','v4']);
+// ربط الزر
+document.getElementById("startBtn").onclick = () => {
+  const subject = document.getElementById("subjectSelect").value;
+  const lecture = document.getElementById("lectureSelect").value;
+  const version = document.getElementById("versionSelect").value;
 
-subjectSelect.addEventListener('change', () => {
-  updateLectureSelect(subjectSelect.value, lectureSelect);
-});
+  if (!subject || !lecture || !version) {
+    alert("⚠️ الرجاء اختيار المادة والمحاضرة والنسخة");
+    return;
+  }
 
-addSubjectSelect.addEventListener('change', () => {
-  updateLectureSelect(addSubjectSelect.value, addVersionSelect, true);
-});
-
-editSubjectSelect.addEventListener('change', () => {
-  updateLectureSelect(editSubjectSelect.value, editLectureSelect);
-});
-
-showAdd.addEventListener('click', () => {
-  addPanel.classList.toggle('hidden');
-  editPanel.classList.add('hidden');
-});
-
-showEdit.addEventListener('click', () => {
-  editPanel.classList.toggle('hidden');
-  addPanel.classList.add('hidden');
-});
-
-startBtn.addEventListener('click', () => {
-  const subject = subjectSelect.value;
-  const lecture = lectureSelect.value;
-  const version = versionSelect.value;
-  const path = `./${subject}/${subject}${lecture}/${subject}${lecture}_${version}.js`;
-  import(path).then(mod => {
-    alert("عدد الأسئلة: " + mod.questions.length);
-  }).catch(err => alert("فشل التحميل: " + err));
-});
+  loadGithubCredentials();
+  fetchQuestions(subject, lecture, version);
+};
