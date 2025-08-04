@@ -68,13 +68,15 @@ loadBtn.addEventListener("click", async () => {
   }
 });
 
-// عرض الأسئلة
+// عرض الأسئلة مع (Q1/1)
 function showQuestions(questions) {
   questionsContainer.innerHTML = "";
+  const total = questions.length; // العدد الكلي للأسئلة
   questions.forEach((q, idx) => {
+    const current = idx + 1; // رقم السؤال الحالي
     const div = document.createElement("div");
     div.innerHTML = `
-      <h3>سؤال ${idx + 1}: ${q.question}</h3>
+      <h3>Q${current}/${total}: ${q.question}</h3>
       <ul>
         ${q.options.map(opt => `<li>${opt}</li>`).join("")}
       </ul>
