@@ -46,6 +46,7 @@ const correctSound = new Audio('./sounds/correct.wav');
 const wrongSound = new Audio('./sounds/wrong.wav');
 const clickSound = new Audio('./sounds/click.wav');
 const uiClickSound = new Audio('./sounds/uiclick.wav');
+const subjectSound = new Audio('./sounds/subject.wav');  // صوت اختيار مادة/محاضرة/نسخة
 
 // تشغيل صوت click عند الضغط على أي زر ما عدا خيارات الإجابة
 document.addEventListener("click", (e) => {
@@ -57,25 +58,23 @@ document.addEventListener("click", (e) => {
   }
 });
 
-// تشغيل صوت عند فتح select box
-document.querySelectorAll("select").forEach(select => {
+// تشغيل صوت عند فتح select box (عند الضغط فقط)
+[subjectSelect, lectureSelect, versionSelect].forEach(select => {
   select.addEventListener("mousedown", () => {
     uiClickSound.currentTime = 0;
     uiClickSound.play();
   });
 });
 
-// تعبئة قائمة المواد
-const subjects = Object.keys(visibleLectures);
-subjects.forEach(subject => {
-  const opt = document.createElement("option");
-  opt.value = subject;
-  opt.textContent = subject;
-  subjectSelect.appendChild(opt);
-});
+// تشغيل صوت عند اختيار قيمة جديدة (اختيار المادة أو المحاضرة أو النسخة)
+function playSubjectSound() {
+  subjectSound.currentTime = 0;
+  subjectSound.play();
+}
 
-// عند تغيير المادة، يتم تحميل المحاضرات
 subjectSelect.addEventListener("change", () => {
+  playSubjectSound();
+
   lectureSelect.innerHTML = "";
   versionSelect.innerHTML = "";
 
@@ -93,8 +92,9 @@ subjectSelect.addEventListener("change", () => {
   lectureSelect.dispatchEvent(new Event("change"));
 });
 
-// عند تغيير المحاضرة، يتم تحميل النسخ
 lectureSelect.addEventListener("change", () => {
+  playSubjectSound();
+
   versionSelect.innerHTML = "";
   const selectedSubject = subjectSelect.value;
   const selectedLecture = lectureSelect.value;
@@ -106,6 +106,10 @@ lectureSelect.addEventListener("change", () => {
     opt.textContent = `Version ${v}`;
     versionSelect.appendChild(opt);
   });
+});
+
+versionSelect.addEventListener("change", () => {
+  playSubjectSound();
 });
 
 // دالة بدء المؤقت لكل سؤال
