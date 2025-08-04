@@ -349,8 +349,8 @@ function showNextButton() {
 
 // زر تحديث بدون كاش - مضاف جديد
 const reloadNoCacheBtn = document.createElement("button");
-reloadNoCacheBtn.textContent = "↻ تحديث";
-reloadNoCacheBtn.title = "إعادة تحميل الصفحة";
+reloadNoCacheBtn.textContent = "↻ تحديث بدون كاش";
+reloadNoCacheBtn.title = "إعادة تحميل الصفحة بدون استخدام الكاش";
 reloadNoCacheBtn.style.position = "fixed";
 reloadNoCacheBtn.style.top = "10px";
 reloadNoCacheBtn.style.right = "10px";
