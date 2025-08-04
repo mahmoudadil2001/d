@@ -1,10 +1,8 @@
-// admin.js
-
 import { visibleLectures } from './show.js';
 import { lectureNames } from './lectureNames.js';
 
-const GITHUB_USERNAME = 'mahmoudadil2001'; // غيّرها
-const REPO_NAME = 'dentistry-JS';             // غيّرها
+const GITHUB_USERNAME = 'mahmoudadil2001'; // عدّل حسب حسابك
+const REPO_NAME = 'dentistry-JS';          // عدّل حسب مستودعك
 const BRANCH = 'main';
 
 const addSubject = document.getElementById('addSubject');
@@ -103,7 +101,6 @@ function fillAddSubjects() {
 }
 
 function fillAddVersions() {
-  const subject = addSubject.value;
   addVersion.innerHTML = '';
   [1,2,3,4].forEach(v => {
     const opt = document.createElement('option');
@@ -128,7 +125,9 @@ function fillEditLectures() {
   const subject = editSubject.value;
   editLecture.innerHTML = '';
   if(!visibleLectures[subject]) return;
-  Object.keys(visibleLectures[subject]).forEach(lec => {
+  // فرز المفاتيح رقمياً
+  const lecturesKeys = Object.keys(visibleLectures[subject]).sort((a,b) => Number(a) - Number(b));
+  lecturesKeys.forEach(lec => {
     const opt = document.createElement('option');
     opt.value = lec;
     opt.textContent = `lec${lec} - ${lectureNames[subject]?.[lec] || 'Unknown'}`;
@@ -142,11 +141,14 @@ function fillEditVersions() {
   const lecture = editLecture.value;
   editVersion.innerHTML = '';
   const versions = visibleLectures[subject]?.[lecture] || [];
-  versions.forEach(v => {
-    const opt = document.createElement('option');
-    opt.value = v;
-    opt.textContent = 'v' + v;
-    editVersion.appendChild(opt);
+  versions
+    .map(v => Number(v))
+    .sort((a,b) => a - b)
+    .forEach(v => {
+      const opt = document.createElement('option');
+      opt.value = v;
+      opt.textContent = 'v' + v;
+      editVersion.appendChild(opt);
   });
   editVersion.dispatchEvent(new Event('change'));
 }
@@ -186,20 +188,17 @@ async function saveAddLecture() {
     return alert('محتوى الأسئلة غير صالح JSON');
   }
 
-  // تحديث lectureNames محليًا
   const lectures = lectureNames[subject] || {};
   const newLectureNum = Object.keys(lectures).length + 1;
   lectures[newLectureNum] = lectureName;
   lectureNames[subject] = lectures;
 
-  // تحديث visibleLectures لإظهار النسخة الجديدة
   if(!visibleLectures[subject]) visibleLectures[subject] = {};
   if(!visibleLectures[subject][newLectureNum]) visibleLectures[subject][newLectureNum] = [];
   if(!visibleLectures[subject][newLectureNum].includes(Number(version))) {
     visibleLectures[subject][newLectureNum].push(Number(version));
   }
 
-  // رفع الملفات
   const lectureNamesContent = `export const lectureNames = ${JSON.stringify(lectureNames, null, 2)};`;
   const showContent = `export const visibleLectures = ${JSON.stringify(visibleLectures, null, 2)};`;
   const questionFilePath = `${subject}/${subject}${newLectureNum}/${subject}${newLectureNum}_v${version}.js`;
@@ -227,14 +226,11 @@ async function saveEditLecture() {
     return alert('محتوى الأسئلة غير صالح JSON');
   }
 
-  // تحديث الاسم محلياً
   lectureNames[subject][lecture] = lectureNameNew;
 
-  // تحديث محتوى السؤال
   const questionFilePath = `${subject}/${subject}${lecture}/${subject}${lecture}_v${version}.js`;
   const questionFileContent = `export const questions = ${JSON.stringify(questions, null, 2)};`;
 
-  // تحديث ملفات
   const lectureNamesContent = `export const lectureNames = ${JSON.stringify(lectureNames, null, 2)};`;
 
   await updateFileOnGitHub('lectureNames.js', lectureNamesContent, `Edit lecture name ${subject} lec${lecture}`, token);
@@ -258,6 +254,3 @@ editVersion.addEventListener('change', loadEditLectureData);
 fillAddSubjects();
 fillAddVersions();
 fillEditSubjects();
-
-window.saveAddLecture = saveAddLecture;
-window.saveEditLecture = saveEditLecture;
