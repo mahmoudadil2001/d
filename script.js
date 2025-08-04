@@ -1,3 +1,8 @@
+// تحقق إذا المستخدم مسجل البيانات في localStorage، إذا لا يعيد توجيه لصفحة تسجيل الدخول
+if (!localStorage.getItem('fullName') || !localStorage.getItem('group')) {
+  window.location.href = 'login.html';
+}
+
 import { visibleLectures } from './show.js';
 import { lectureNames } from './lectureNames.js';
 
