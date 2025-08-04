@@ -1,5 +1,6 @@
 import { visibleLectures } from './show.js';
 import { lectureNames } from './lectureNames.js';
+import { startQuiz } from './quiz.js';
 
 const subjectSelect = document.getElementById("subjectSelect");
 const lectureSelect = document.getElementById("lectureSelect");
@@ -61,27 +62,12 @@ loadBtn.addEventListener("click", async () => {
   try {
     const module = await import(path);
     const questions = module.questions;
-    showQuestions(questions);
+    startQuiz(questions); // استدعاء اختبار الأسئلة
   } catch (err) {
     questionsContainer.innerHTML = `<p style="color:red;">فشل تحميل الأسئلة من: ${path}</p>`;
     console.error(err);
   }
 });
-
-// عرض الأسئلة
-function showQuestions(questions) {
-  questionsContainer.innerHTML = "";
-  questions.forEach((q, idx) => {
-    const div = document.createElement("div");
-    div.innerHTML = `
-      <h3>سؤال ${idx + 1}: ${q.question}</h3>
-      <ul>
-        ${q.options.map(opt => `<li>${opt}</li>`).join("")}
-      </ul>
-    `;
-    questionsContainer.appendChild(div);
-  });
-}
 
 // تشغيل التهيئة أول مرة
 subjectSelect.dispatchEvent(new Event("change"));
