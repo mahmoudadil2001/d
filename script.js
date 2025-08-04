@@ -20,6 +20,23 @@ timerDiv.innerHTML = `
 `;
 controlsContainer.insertBefore(timerDiv, loadBtn);
 
+// **إضافة زر تحديث بدون كاش**
+let cacheBuster = ""; // متغير للتحكم في الكاش
+
+const cacheBtn = document.createElement("button");
+cacheBtn.textContent = "تحديث بدون كاش";
+cacheBtn.style.marginLeft = "10px";
+cacheBtn.style.padding = "5px 10px";
+cacheBtn.style.fontSize = "14px";
+cacheBtn.style.cursor = "pointer";
+
+controlsContainer.appendChild(cacheBtn);
+
+cacheBtn.addEventListener("click", () => {
+  cacheBuster = Date.now();  // رقم جديد كل مرة (timestamp)
+  alert("تم تفعيل تحديث بدون كاش. اضغط زر ابدأ لتحميل المحاضرة الجديدة.");
+});
+
 // إضافة select خاص بالتنقل بين الأسئلة (سيظهر عند الضغط على ابدأ)
 const questionNavigatorDiv = document.createElement("div");
 questionNavigatorDiv.style.margin = "15px 0";
@@ -135,7 +152,7 @@ function startTimer() {
 
         // تحديث حالة السؤال إلى خاطئ
         questionStatus[currentIndex] = "wrong";
-        updateQuestionNavigatorStatus(currentIndex);
+        updateQuestionNavigator(currentIndex);
 
         // عرض زر التالي فقط بدون انتقال تلقائي
         showNextButton();
@@ -196,11 +213,15 @@ loadBtn.addEventListener("click", async () => {
 
   timerEnabled = document.getElementById("timerToggle").checked;
 
-  const path = `./${subject}/${subject}${lecture}/${subject}${lecture}_v${version}.js`;
+  let path = `./${subject}/${subject}${lecture}/${subject}${lecture}_v${version}.js`;
+
+  // إذا cacheBuster موجود نضيفه كـ query param
+  if (cacheBuster) {
+    path += `?v=${cacheBuster}`;
+  }
 
   try {
-    // إضافة تجنب الكاش بإضافة قيمة فريدة في مسار الاستيراد
-    const module = await import(`${path}?nocache=${Date.now()}`);
+    const module = await import(path);
     currentQuestions = module.questions;
     currentIndex = 0;
     correctCount = 0;
@@ -296,8 +317,6 @@ function showQuestion() {
         btn.style.backgroundColor = "lightgreen";
       } else if (idx === q.answer && questionStatus[currentIndex] === "wrong") {
         btn.style.backgroundColor = "lightgreen";
-      } else if (questionStatus[currentIndex] === "wrong" && btn.disabled) {
-        // يمكن إضافة تلوين إجابة خاطئة لو تخزنها
       }
     } else {
       btn.disabled = false;
@@ -359,27 +378,6 @@ function showNextButton() {
     showQuestion();
   });
 }
-
-// إضافة زر "تحديث بدون كاش" ثابت في أسفل يمين الصفحة
-const reloadNoCacheBtn = document.createElement("button");
-reloadNoCacheBtn.textContent = "تحديث بدون كاش";
-reloadNoCacheBtn.style.position = "fixed";
-reloadNoCacheBtn.style.bottom = "10px";
-reloadNoCacheBtn.style.right = "10px";
-reloadNoCacheBtn.style.zIndex = "1000";
-reloadNoCacheBtn.style.padding = "8px 12px";
-reloadNoCacheBtn.style.backgroundColor = "#007bff";
-reloadNoCacheBtn.style.color = "white";
-reloadNoCacheBtn.style.border = "none";
-reloadNoCacheBtn.style.borderRadius = "5px";
-reloadNoCacheBtn.style.cursor = "pointer";
-document.body.appendChild(reloadNoCacheBtn);
-
-reloadNoCacheBtn.addEventListener("click", () => {
-  const url = new URL(window.location.href);
-  url.searchParams.set("nocache", Date.now());
-  window.location.href = url.toString();
-});
 
 // تشغيل التهيئة أول مرة
 subjectSelect.dispatchEvent(new Event("change"));
