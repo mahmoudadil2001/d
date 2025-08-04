@@ -3,8 +3,8 @@
 import { visibleLectures } from './show.js';
 import { lectureNames } from './lectureNames.js';
 
-const GITHUB_USERNAME = 'your-github-username'; // غيّرها
-const REPO_NAME = 'your-repo-name';             // غيّرها
+const GITHUB_USERNAME = 'mahmoudadil2001'; // غيّرها
+const REPO_NAME = 'dentistry-JS';             // غيّرها
 const BRANCH = 'main';
 
 const addSubject = document.getElementById('addSubject');
@@ -26,7 +26,7 @@ const editTab = document.getElementById('editTab');
 
 const tokenInput = document.createElement('input');
 tokenInput.type = 'password';
-tokenInput.placeholder = 'أدخل GitHub Token هنا';
+tokenInput.placeholder = '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';
 tokenInput.style.width = '100%';
 tokenInput.style.padding = '10px';
 tokenInput.style.marginBottom = '10px';
