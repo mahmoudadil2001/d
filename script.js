@@ -66,12 +66,22 @@ document.addEventListener("click", (e) => {
   });
 });
 
-// تشغيل صوت عند اختيار قيمة جديدة (اختيار المادة أو المحاضرة أو النسخة)
+// دالة لتشغيل صوت اختيار المادة/المحاضرة/النسخة
 function playSubjectSound() {
   subjectSound.currentTime = 0;
   subjectSound.play();
 }
 
+// تعبئة قائمة المواد
+const subjects = Object.keys(visibleLectures);
+subjects.forEach(subject => {
+  const opt = document.createElement("option");
+  opt.value = subject;
+  opt.textContent = subject;
+  subjectSelect.appendChild(opt);
+});
+
+// عند تغيير المادة، يتم تحميل المحاضرات + تشغيل صوت الاختيار
 subjectSelect.addEventListener("change", () => {
   playSubjectSound();
 
@@ -92,6 +102,7 @@ subjectSelect.addEventListener("change", () => {
   lectureSelect.dispatchEvent(new Event("change"));
 });
 
+// عند تغيير المحاضرة، يتم تحميل النسخ + تشغيل صوت الاختيار
 lectureSelect.addEventListener("change", () => {
   playSubjectSound();
 
@@ -108,6 +119,7 @@ lectureSelect.addEventListener("change", () => {
   });
 });
 
+// عند تغيير النسخة، تشغيل صوت الاختيار
 versionSelect.addEventListener("change", () => {
   playSubjectSound();
 });
