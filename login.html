@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8" />
+  <title>تسجيل الدخول</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <style>
+    body {
+      font-family: 'Tajawal', sans-serif;
+      background: linear-gradient(135deg, #cce5ff, #e6f0ff);
+      min-height: 100vh;
+      margin: 0;
+      padding: 20px 10px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      color: #222;
+    }
+    .container {
+      background: #fff;
+      width: 100%;
+      max-width: 400px;
+      border-radius: 12px;
+      box-shadow: 0 10px 30px rgba(0, 123, 255, 0.2);
+      padding: 30px 25px;
+    }
+    h1 {
+      text-align: center;
+      color: #007bff;
+      margin-bottom: 20px;
+      font-weight: 700;
+      font-size: 28px;
+    }
+    label {
+      display: block;
+      margin: 15px 0 6px 0;
+      font-weight: 600;
+      color: #333;
+    }
+    input {
+      width: 100%;
+      padding: 12px 15px;
+      font-size: 16px;
+      border: 1.8px solid #007bff;
+      border-radius: 8px;
+      background-color: #e7f1ff;
+      color: #004085;
+      box-sizing: border-box;
+    }
+    button {
+      width: 100%;
+      padding: 12px 15px;
+      font-size: 16px;
+      border: none;
+      border-radius: 8px;
+      background-color: #007bff;
+      color: white;
+      cursor: pointer;
+      margin-top: 20px;
+      transition: background-color 0.3s;
+    }
+    button:hover {
+      background-color: #0056b3;
+    }
+    .error {
+      color: red;
+      margin-top: 10px;
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>تسجيل الدخول</h1>
+    <form id="loginForm">
+      <label for="fullName">الاسم الكامل:</label>
+      <input type="text" id="fullName" name="fullName" required />
+
+      <label for="group">الكروب:</label>
+      <input type="text" id="group" name="group" required />
+
+      <button type="submit">دخول</button>
+      <div class="error" id="errorMsg"></div>
+    </form>
+  </div>
+
+  <script>
+    // إذا البيانات موجودة سابقاً، توجّه مباشرة لصفحة الاختبار
+    if(localStorage.getItem('fullName') && localStorage.getItem('group')) {
+      window.location.href = 'index.html';
+    }
+
+    const form = document.getElementById('loginForm');
+    const errorMsg = document.getElementById('errorMsg');
+
+    form.addEventListener('submit', (e) => {
+      e.preventDefault();
+
+      const fullName = document.getElementById('fullName').value.trim();
+      const group = document.getElementById('group').value.trim();
+
+      if(fullName === '' || group === '') {
+        errorMsg.textContent = 'يرجى ملء جميع الحقول.';
+        return;
+      }
+
+      // حفظ البيانات في localStorage
+      localStorage.setItem('fullName', fullName);
+      localStorage.setItem('group', group);
+
+      // إعادة التوجيه لصفحة الأسئلة
+      window.location.href = 'index.html';
+    });
+  </script>
+</body>
+</html>
