@@ -34,7 +34,6 @@
       margin-bottom: 20px;
       font-weight: 700;
       font-size: 28px;
-      /* تم حذف النص داخله */
     }
 
     label {
@@ -65,12 +64,12 @@
     }
 
     #loadBtn {
-      margin-top: 20px; /* هنا تم إضافة المسافة فوق زر ابدأ */
+      margin-top: 20px;
     }
 
     #questionsContainer {
       margin-top: 40px;
-      display: none; /* مخفي في البداية */
+      display: none;
     }
 
     #homeBtn {
@@ -159,6 +158,20 @@
       color: #721c24 !important;
     }
 
+    #questionNav {
+      margin: 20px 0;
+      padding: 10px;
+      border: 1px solid #007bff;
+      border-radius: 8px;
+      background-color: #f0f8ff;
+    }
+
+    #questionNav select {
+      width: 100%;
+      padding: 10px;
+      font-size: 15px;
+    }
+
     @media (max-width: 480px) {
       .container {
         padding: 20px 15px;
@@ -182,7 +195,7 @@
 <body>
   <div class="container">
     <button id="homeBtn">العودة للرئيسية</button>
-    <h1></h1> <!-- العنوان فارغ حسب طلبك -->
+    <h1></h1>
 
     <div id="controlsContainer">
       <label>اختر المادة:</label>
@@ -195,6 +208,11 @@
       <select id="versionSelect"></select>
 
       <button id="loadBtn">ابدأ</button>
+    </div>
+
+    <div id="questionNav" style="display:none;">
+      <label for="questionSelector">الانتقال إلى سؤال:</label>
+      <select id="questionSelector"></select>
     </div>
 
     <div id="questionsContainer"></div>
