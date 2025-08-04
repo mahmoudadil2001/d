@@ -135,7 +135,7 @@ function startTimer() {
 
         // تحديث حالة السؤال إلى خاطئ
         questionStatus[currentIndex] = "wrong";
-        updateQuestionNavigator();
+        updateQuestionNavigatorStatus(currentIndex);
 
         // عرض زر التالي فقط بدون انتقال تلقائي
         showNextButton();
@@ -166,6 +166,7 @@ function updateQuestionNavigator() {
       statusText = " ✗";  // علامة غلط
     }
     opt.textContent = `Q${i + 1}${statusText}`;
+    // لا يمكن تغيير الإجابة، لكن يمكن التنقل بين الأسئلة
     questionSelect.appendChild(opt);
   });
 
@@ -181,6 +182,7 @@ document.addEventListener("change", (e) => {
       currentIndex = selected;
       showQuestion();
     } else {
+      // لا يسمح بتغيير السؤال بعد الإجابة، نرجع الاختيار للسؤال الحالي
       e.target.value = currentIndex;
     }
   }
@@ -197,7 +199,8 @@ loadBtn.addEventListener("click", async () => {
   const path = `./${subject}/${subject}${lecture}/${subject}${lecture}_v${version}.js`;
 
   try {
-    const module = await import(path);
+    // إضافة تجنب الكاش بإضافة قيمة فريدة في مسار الاستيراد
+    const module = await import(`${path}?nocache=${Date.now()}`);
     currentQuestions = module.questions;
     currentIndex = 0;
     correctCount = 0;
@@ -205,8 +208,8 @@ loadBtn.addEventListener("click", async () => {
 
     controlsContainer.style.display = "none";
     questionsContainer.style.display = "block";
-    homeBtn.style.display = "block";
-    questionNavigatorDiv.style.display = "block";
+    homeBtn.style.display = "block";  // إظهار زر العودة
+    questionNavigatorDiv.style.display = "block"; // إظهار select التنقل
 
     updateQuestionNavigator();
     showQuestion();
@@ -221,7 +224,7 @@ homeBtn.addEventListener("click", () => {
   controlsContainer.style.display = "block";
   questionsContainer.style.display = "none";
   homeBtn.style.display = "none";
-  questionNavigatorDiv.style.display = "none";
+  questionNavigatorDiv.style.display = "none"; // إخفاء select التنقل
   currentQuestions = [];
   currentIndex = 0;
   correctCount = 0;
@@ -237,6 +240,7 @@ function showQuestion() {
   questionsContainer.innerHTML = "";
 
   if (currentIndex >= currentQuestions.length) {
+    // عرض النتيجة النهائية مع زر إعادة المحاولة فقط
     questionsContainer.innerHTML = `
       <h2>انتهت الأسئلة!</h2>
       <p>نتيجتك: ${correctCount} من ${currentQuestions.length} صحيحة.</p>
@@ -258,6 +262,7 @@ function showQuestion() {
 
   const q = currentQuestions[currentIndex];
 
+  // عرض العداد بشكل Q رقم/العدد الكلي + مؤقت
   const progressText = `Q ${currentIndex + 1} / ${currentQuestions.length}`;
   const timerHtml = timerEnabled ? `<div id="timerText" style="color:red; margin-bottom: 10px; font-size: 18px;"></div>` : "";
 
@@ -268,6 +273,7 @@ function showQuestion() {
     <h2>${q.question}</h2>
   `;
 
+  // قائمة خيارات
   const optionsList = document.createElement("ul");
   optionsList.style.listStyle = "none";
   optionsList.style.padding = "0";
@@ -276,31 +282,35 @@ function showQuestion() {
     const li = document.createElement("li");
     const btn = document.createElement("button");
     btn.textContent = opt;
-    btn.classList.add("option-btn");
+    btn.classList.add("option-btn"); // لتحديدها كزر خيار
     btn.style.display = "block";
     btn.style.margin = "8px 0";
     btn.style.padding = "8px 12px";
     btn.style.width = "100%";
 
+    // تعطيل الأزرار إذا تم الإجابة سابقًا على هذا السؤال
     if (questionStatus[currentIndex] !== "unanswered") {
       btn.disabled = true;
+      // تلوين الإجابة حسب الحالة
       if (idx === q.answer && questionStatus[currentIndex] === "correct") {
         btn.style.backgroundColor = "lightgreen";
       } else if (idx === q.answer && questionStatus[currentIndex] === "wrong") {
         btn.style.backgroundColor = "lightgreen";
+      } else if (questionStatus[currentIndex] === "wrong" && btn.disabled) {
+        // يمكن إضافة تلوين إجابة خاطئة لو تخزنها
       }
     } else {
       btn.disabled = false;
     }
 
     btn.addEventListener("click", () => {
-      if (answered) return;
+      if (answered) return; // منع الضغط أكثر من مرة
       answered = true;
       clearInterval(timerInterval);
 
       if (idx === q.answer) {
         correctSound.currentTime = 0;
-        correctSound.play();
+        correctSound.play(); // تشغيل صوت الصح
         btn.style.backgroundColor = "lightgreen";
         correctCount++;
         questionStatus[currentIndex] = "correct";
@@ -308,9 +318,10 @@ function showQuestion() {
         showNextButton();
       } else {
         wrongSound.currentTime = 0;
-        wrongSound.play();
+        wrongSound.play(); // تشغيل صوت الخطأ
         btn.style.backgroundColor = "salmon";
 
+        // إبراز الجواب الصحيح
         const correctBtn = optionsList.children[q.answer].querySelector("button");
         correctBtn.style.backgroundColor = "lightgreen";
 
@@ -319,6 +330,7 @@ function showQuestion() {
         showNextButton();
       }
 
+      // تعطيل كل الأزرار بعد الاختيار
       Array.from(optionsList.children).forEach(li => {
         li.querySelector("button").disabled = true;
       });
@@ -331,6 +343,7 @@ function showQuestion() {
   questionDiv.appendChild(optionsList);
   questionsContainer.appendChild(questionDiv);
 
+  // شغل المؤقت إذا مفعل
   if(timerEnabled) startTimer();
 }
 
@@ -347,37 +360,26 @@ function showNextButton() {
   });
 }
 
-// زر تحديث بدون كاش - مضاف جديد
+// إضافة زر "تحديث بدون كاش" ثابت في أسفل يمين الصفحة
 const reloadNoCacheBtn = document.createElement("button");
-reloadNoCacheBtn.textContent = "↻ تحديث بدون كاش";
-reloadNoCacheBtn.title = "إعادة تحميل الصفحة بدون استخدام الكاش";
+reloadNoCacheBtn.textContent = "تحديث بدون كاش";
 reloadNoCacheBtn.style.position = "fixed";
-reloadNoCacheBtn.style.top = "10px";
+reloadNoCacheBtn.style.bottom = "10px";
 reloadNoCacheBtn.style.right = "10px";
-reloadNoCacheBtn.style.padding = "5px 10px";
-reloadNoCacheBtn.style.fontSize = "14px";
-reloadNoCacheBtn.style.zIndex = "10000";
-reloadNoCacheBtn.style.border = "none";
-reloadNoCacheBtn.style.borderRadius = "5px";
+reloadNoCacheBtn.style.zIndex = "1000";
+reloadNoCacheBtn.style.padding = "8px 12px";
 reloadNoCacheBtn.style.backgroundColor = "#007bff";
 reloadNoCacheBtn.style.color = "white";
+reloadNoCacheBtn.style.border = "none";
+reloadNoCacheBtn.style.borderRadius = "5px";
 reloadNoCacheBtn.style.cursor = "pointer";
-reloadNoCacheBtn.style.opacity = "0.7";
-reloadNoCacheBtn.style.transition = "opacity 0.3s";
-
-reloadNoCacheBtn.addEventListener("mouseenter", () => {
-  reloadNoCacheBtn.style.opacity = "1";
-});
-reloadNoCacheBtn.addEventListener("mouseleave", () => {
-  reloadNoCacheBtn.style.opacity = "0.7";
-});
+document.body.appendChild(reloadNoCacheBtn);
 
 reloadNoCacheBtn.addEventListener("click", () => {
-  // أفضل طريقة لتعطيل الكاش بإعادة تحميل الصفحة مع باراميتر فريد
-  location.href = location.origin + location.pathname + "?nocache=" + Date.now();
+  const url = new URL(window.location.href);
+  url.searchParams.set("nocache", Date.now());
+  window.location.href = url.toString();
 });
-
-document.body.appendChild(reloadNoCacheBtn);
 
 // تشغيل التهيئة أول مرة
 subjectSelect.dispatchEvent(new Event("change"));
