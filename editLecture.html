@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <title>تعديل محاضرة</title>
+  <style>
+    body {
+      font-family: 'Tajawal', sans-serif;
+      background-color: #f0f0f0;
+      padding: 30px;
+      text-align: center;
+    }
+    select, input, textarea, button {
+      display: block;
+      margin: 10px auto;
+      padding: 10px;
+      width: 300px;
+      font-size: 16px;
+      border-radius: 8px;
+      border: 1px solid #ccc;
+    }
+    button {
+      cursor: pointer;
+      background-color: #00796b;
+      color: white;
+      border: none;
+    }
+    button:hover {
+      background-color: #004d40;
+    }
+  </style>
+</head>
+<body>
+
+  <h2>🛠️ تعديل محاضرة ظاهرة</h2>
+
+  <select id="subject">
+    <option value="" disabled selected>اختر المادة</option>
+    <option value="endodontics">Endodontics</option>
+    <option value="generalmedicine">General Medicine</option>
+    <option value="generalsurgery">General Surgery</option>
+    <option value="operative">Operative</option>
+    <option value="oralpathology">Oral Pathology</option>
+    <option value="oralsurgery">Oral Surgery</option>
+    <option value="orthodontics">Orthodontics</option>
+    <option value="pedodontics">Pedodontics</option>
+    <option value="periodontology">Periodontology</option>
+    <option value="prosthodontics">Prosthodontics</option>
+  </select>
+
+  <input type="number" id="lectureNumber" min="1" max="30" placeholder="رقم المحاضرة (1 - 30)" />
+  <select id="version">
+    <option value="v1">Version 1</option>
+    <option value="v2">Version 2</option>
+    <option value="v3">Version 3</option>
+    <option value="v4">Version 4</option>
+  </select>
+
+  <button onclick="loadLecture()">📥 تحميل المحاضرة</button>
+
+  <textarea id="content" rows="12" placeholder="سيظهر هنا كود المحاضرة بعد التحميل..."></textarea>
+
+  <button onclick="updateLecture()">📤 تعديل المحاضرة</button>
+
+  <script>
+    let currentSha = ''; // لتخزين SHA عند التعديل
+
+    async function loadLecture() {
+      const token = localStorage.getItem('githubToken');
+      const username = localStorage.getItem('githubUsername');
+      const repo = localStorage.getItem('repoName');
+
+      const subject = document.getElementById('subject').value;
+      const lectureNumber = document.getElementById('lectureNumber').value;
+      const version = document.getElementById('version').value;
+
+      if (!subject || !lectureNumber || !version) {
+        alert("❗ الرجاء ملء كل الحقول");
+        return;
+      }
+
+      const path = `${subject}/${subject}${lectureNumber}/${subject}${lectureNumber}_${version}.js`;
+      const apiUrl = `https://api.github.com/repos/${username}/${repo}/contents/${path}`;
+
+      const res = await fetch(apiUrl, {
+        headers: {
+          'Authorization': `token ${token}`,
+        }
+      });
+
+      if (!res.ok) {
+        alert("❌ لم يتم العثور على الملف أو هناك مشكلة في الوصول");
+        return;
+      }
+
+      const data = await res.json();
+      const decoded = decodeURIComponent(escape(atob(data.content)));
+      document.getElementById('content').value = decoded;
+      currentSha = data.sha;
+
+      alert("✅ تم تحميل المحتوى بنجاح");
+    }
+
+    async function updateLecture() {
+      const token = localStorage.getItem('githubToken');
+      const username = localStorage.getItem('githubUsername');
+      const repo = localStorage.getItem('repoName');
+
+      const subject = document.getElementById('subject').value;
+      const lectureNumber = document.getElementById('lectureNumber').value;
+      const version = document.getElementById('version').value;
+      const content = document.getElementById('content').value;
+
+      if (!subject || !lectureNumber || !version || !content || !currentSha) {
+        alert("❗ تأكد من تحميل المحاضرة أولاً وتعبئة كل الحقول");
+        return;
+      }
+
+      const path = `${subject}/${subject}${lectureNumber}/${subject}${lectureNumber}_${version}.js`;
+      const apiUrl = `https://api.github.com/repos/${username}/${repo}/contents/${path}`;
+      const base64Content = btoa(unescape(encodeURIComponent(content)));
+
+      const body = {
+        message: `تعديل المحاضرة ${subject}${lectureNumber} - ${version}`,
+        content: base64Content,
+        sha: currentSha
+      };
+
+      const res = await fetch(apiUrl, {
+        method: "PUT",
+        headers: {
+          'Authorization': `token ${token}`,
+          'Content-Type': 'application/json'
+        },
+        body: JSON.stringify(body)
+      });
+
+      if (res.ok) {
+        alert("✅ تم تعديل المحاضرة بنجاح");
+      } else {
+        const err = await res.json();
+        alert("❌ فشل التعديل: " + err.message);
+      }
+    }
+  </script>
+</body>
+</html>
