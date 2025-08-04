@@ -20,23 +20,6 @@ timerDiv.innerHTML = `
 `;
 controlsContainer.insertBefore(timerDiv, loadBtn);
 
-// **إضافة زر تحديث بدون كاش**
-let cacheBuster = ""; // متغير للتحكم في الكاش
-
-const cacheBtn = document.createElement("button");
-cacheBtn.textContent = "تحديث بدون كاش";
-cacheBtn.style.marginLeft = "10px";
-cacheBtn.style.padding = "5px 10px";
-cacheBtn.style.fontSize = "14px";
-cacheBtn.style.cursor = "pointer";
-
-controlsContainer.appendChild(cacheBtn);
-
-cacheBtn.addEventListener("click", () => {
-  cacheBuster = Date.now();  // رقم جديد كل مرة (timestamp)
-  alert("تم تفعيل تحديث بدون كاش. اضغط زر ابدأ لتحميل المحاضرة الجديدة.");
-});
-
 // إضافة select خاص بالتنقل بين الأسئلة (سيظهر عند الضغط على ابدأ)
 const questionNavigatorDiv = document.createElement("div");
 questionNavigatorDiv.style.margin = "15px 0";
@@ -152,7 +135,7 @@ function startTimer() {
 
         // تحديث حالة السؤال إلى خاطئ
         questionStatus[currentIndex] = "wrong";
-        updateQuestionNavigator(currentIndex);
+        updateQuestionNavigator();
 
         // عرض زر التالي فقط بدون انتقال تلقائي
         showNextButton();
@@ -183,7 +166,6 @@ function updateQuestionNavigator() {
       statusText = " ✗";  // علامة غلط
     }
     opt.textContent = `Q${i + 1}${statusText}`;
-    // لا يمكن تغيير الإجابة، لكن يمكن التنقل بين الأسئلة
     questionSelect.appendChild(opt);
   });
 
@@ -199,7 +181,6 @@ document.addEventListener("change", (e) => {
       currentIndex = selected;
       showQuestion();
     } else {
-      // لا يسمح بتغيير السؤال بعد الإجابة، نرجع الاختيار للسؤال الحالي
       e.target.value = currentIndex;
     }
   }
@@ -213,12 +194,7 @@ loadBtn.addEventListener("click", async () => {
 
   timerEnabled = document.getElementById("timerToggle").checked;
 
-  let path = `./${subject}/${subject}${lecture}/${subject}${lecture}_v${version}.js`;
-
-  // إذا cacheBuster موجود نضيفه كـ query param
-  if (cacheBuster) {
-    path += `?v=${cacheBuster}`;
-  }
+  const path = `./${subject}/${subject}${lecture}/${subject}${lecture}_v${version}.js`;
 
   try {
     const module = await import(path);
@@ -229,8 +205,8 @@ loadBtn.addEventListener("click", async () => {
 
     controlsContainer.style.display = "none";
     questionsContainer.style.display = "block";
-    homeBtn.style.display = "block";  // إظهار زر العودة
-    questionNavigatorDiv.style.display = "block"; // إظهار select التنقل
+    homeBtn.style.display = "block";
+    questionNavigatorDiv.style.display = "block";
 
     updateQuestionNavigator();
     showQuestion();
@@ -245,7 +221,7 @@ homeBtn.addEventListener("click", () => {
   controlsContainer.style.display = "block";
   questionsContainer.style.display = "none";
   homeBtn.style.display = "none";
-  questionNavigatorDiv.style.display = "none"; // إخفاء select التنقل
+  questionNavigatorDiv.style.display = "none";
   currentQuestions = [];
   currentIndex = 0;
   correctCount = 0;
@@ -261,7 +237,6 @@ function showQuestion() {
   questionsContainer.innerHTML = "";
 
   if (currentIndex >= currentQuestions.length) {
-    // عرض النتيجة النهائية مع زر إعادة المحاولة فقط
     questionsContainer.innerHTML = `
       <h2>انتهت الأسئلة!</h2>
       <p>نتيجتك: ${correctCount} من ${currentQuestions.length} صحيحة.</p>
@@ -283,7 +258,6 @@ function showQuestion() {
 
   const q = currentQuestions[currentIndex];
 
-  // عرض العداد بشكل Q رقم/العدد الكلي + مؤقت
   const progressText = `Q ${currentIndex + 1} / ${currentQuestions.length}`;
   const timerHtml = timerEnabled ? `<div id="timerText" style="color:red; margin-bottom: 10px; font-size: 18px;"></div>` : "";
 
@@ -294,7 +268,6 @@ function showQuestion() {
     <h2>${q.question}</h2>
   `;
 
-  // قائمة خيارات
   const optionsList = document.createElement("ul");
   optionsList.style.listStyle = "none";
   optionsList.style.padding = "0";
@@ -303,16 +276,14 @@ function showQuestion() {
     const li = document.createElement("li");
     const btn = document.createElement("button");
     btn.textContent = opt;
-    btn.classList.add("option-btn"); // لتحديدها كزر خيار
+    btn.classList.add("option-btn");
     btn.style.display = "block";
     btn.style.margin = "8px 0";
     btn.style.padding = "8px 12px";
     btn.style.width = "100%";
 
-    // تعطيل الأزرار إذا تم الإجابة سابقًا على هذا السؤال
     if (questionStatus[currentIndex] !== "unanswered") {
       btn.disabled = true;
-      // تلوين الإجابة حسب الحالة
       if (idx === q.answer && questionStatus[currentIndex] === "correct") {
         btn.style.backgroundColor = "lightgreen";
       } else if (idx === q.answer && questionStatus[currentIndex] === "wrong") {
@@ -323,13 +294,13 @@ function showQuestion() {
     }
 
     btn.addEventListener("click", () => {
-      if (answered) return; // منع الضغط أكثر من مرة
+      if (answered) return;
       answered = true;
       clearInterval(timerInterval);
 
       if (idx === q.answer) {
         correctSound.currentTime = 0;
-        correctSound.play(); // تشغيل صوت الصح
+        correctSound.play();
         btn.style.backgroundColor = "lightgreen";
         correctCount++;
         questionStatus[currentIndex] = "correct";
@@ -337,10 +308,9 @@ function showQuestion() {
         showNextButton();
       } else {
         wrongSound.currentTime = 0;
-        wrongSound.play(); // تشغيل صوت الخطأ
+        wrongSound.play();
         btn.style.backgroundColor = "salmon";
 
-        // إبراز الجواب الصحيح
         const correctBtn = optionsList.children[q.answer].querySelector("button");
         correctBtn.style.backgroundColor = "lightgreen";
 
@@ -349,7 +319,6 @@ function showQuestion() {
         showNextButton();
       }
 
-      // تعطيل كل الأزرار بعد الاختيار
       Array.from(optionsList.children).forEach(li => {
         li.querySelector("button").disabled = true;
       });
@@ -362,7 +331,6 @@ function showQuestion() {
   questionDiv.appendChild(optionsList);
   questionsContainer.appendChild(questionDiv);
 
-  // شغل المؤقت إذا مفعل
   if(timerEnabled) startTimer();
 }
 
