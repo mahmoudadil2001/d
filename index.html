@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>نظام الأسئلة ولوحة التحكم</title>
+  <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;700&display=swap" rel="stylesheet" />
+  <style>
+    body {
+      font-family: 'Tajawal', sans-serif;
+      background-color: #f3f4f6;
+      padding: 20px;
+      color: #1f2937;
+      margin: 0;
+    }
+    h1 {
+      text-align: center;
+      color: #2563eb;
+    }
+    /* تنسيق نظام الأسئلة */
+    #quizSystem {
+      max-width: 700px;
+      margin: auto  auto 40px auto;
+      background: white;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    }
+    label {
+      display: block;
+      margin-top: 15px;
+      font-weight: bold;
+    }
+    select, input[type="text"], textarea, button {
+      width: 100%;
+      padding: 10px;
+      margin-top: 5px;
+      border-radius: 6px;
+      border: 1px solid #ccc;
+      font-size: 16px;
+      box-sizing: border-box;
+    }
+    textarea {
+      min-height: 150px;
+      font-family: monospace;
+    }
+    button {
+      background-color: #2563eb;
+      color: white;
+      border: none;
+      margin-top: 20px;
+      cursor: pointer;
+      transition: background-color 0.3s;
+    }
+    button:hover {
+      background-color: #1d4ed8;
+    }
+    #questionsContainer {
+      margin-top: 20px;
+      background: #e0e7ff;
+      padding: 15px;
+      border-radius: 8px;
+      max-height: 300px;
+      overflow-y: auto;
+      font-size: 16px;
+    }
+
+    /* تنسيق لوحة التحكم */
+    .container {
+      max-width: 700px;
+      margin: auto;
+      background: white;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+      margin-bottom: 60px;
+    }
+    .tabs {
+      display: flex;
+      gap: 10px;
+      margin-bottom: 20px;
+    }
+    .tabs button {
+      flex: 1;
+      background-color: #e5e7eb;
+      color: #1f2937;
+      border: none;
+      padding: 10px;
+      font-weight: 700;
+      border-radius: 6px;
+      cursor: pointer;
+      transition: background-color 0.3s;
+    }
+    .tabs button.active {
+      background-color: #2563eb;
+      color: white;
+    }
+    .hidden {
+      display: none;
+    }
+  </style>
+</head>
+<body>
+
+  <div id="quizSystem">
+    <h1>نظام الأسئلة</h1>
+
+    <label for="subjectSelect">اختر المادة:</label>
+    <select id="subjectSelect"></select>
+
+    <label for="lectureSelect">اختر المحاضرة:</label>
+    <select id="lectureSelect"></select>
+
+    <label for="versionSelect">اختر النسخة:</label>
+    <select id="versionSelect"></select>
+
+    <button id="loadBtn">ابدأ</button>
+
+    <div id="questionsContainer"></div>
+  </div>
+
+  <div class="container">
+    <h1>لوحة التحكم</h1>
+    <div class="tabs">
+      <button id="addTab" class="active">إضافة محاضرة</button>
+      <button id="editTab">تعديل محاضرة</button>
+    </div>
+
+    <div id="addSection">
+      <label for="addSubject">اختر المادة:</label>
+      <select id="addSubject"></select>
+
+      <label for="addVersion">اختر النسخة المخفية لإظهارها:</label>
+      <select id="addVersion"></select>
+
+      <label for="addLectureName">اسم المحاضرة:</label>
+      <input type="text" id="addLectureName" />
+
+      <label for="addJsContent">محتوى ملف js:</label>
+      <textarea id="addJsContent"></textarea>
+
+      <button id="saveAddBtn">حفظ المحاضرة</button>
+    </div>
+
+    <div id="editSection" class="hidden">
+      <label for="editSubject">اختر المادة:</label>
+      <select id="editSubject"></select>
+
+      <label for="editLecture">اختر المحاضرة الظاهرة:</label>
+      <select id="editLecture"></select>
+
+      <label for="editVersion">اختر النسخة:</label>
+      <select id="editVersion"></select>
+
+      <label for="editLectureName">اسم المحاضرة الجديد:</label>
+      <input type="text" id="editLectureName" />
+
+      <label for="editJsContent">تعديل محتوى ملف js:</label>
+      <textarea id="editJsContent"></textarea>
+
+      <button id="saveEditBtn">حفظ التعديلات</button>
+    </div>
+  </div>
+
+  <script type="module" src="./script.js"></script>
+  <script src="./admin.js"></script>
+
+  <script>
+    // تبويبات لوحة التحكم
+    const addTab = document.getElementById('addTab');
+    const editTab = document.getElementById('editTab');
+    const addSection = document.getElementById('addSection');
+    const editSection = document.getElementById('editSection');
+
+    addTab.addEventListener('click', () => {
+      addTab.classList.add('active');
+      editTab.classList.remove('active');
+      addSection.classList.remove('hidden');
+      editSection.classList.add('hidden');
+    });
+
+    editTab.addEventListener('click', () => {
+      editTab.classList.add('active');
+      addTab.classList.remove('active');
+      editSection.classList.remove('hidden');
+      addSection.classList.add('hidden');
+    });
+  </script>
+
+</body>
+</html>
