@@ -1,39 +1,28 @@
 <!DOCTYPE html>
 <html lang="ar" dir="rtl">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>منصة محاضرات طب الأسنان</title>
-  <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;700&display=swap" rel="stylesheet" />
+  <meta charset="UTF-8">
+  <title>اختبار طب الأسنان</title>
+  <script type="module" src="./script.js" defer></script>
   <style>
-    body {
-      font-family: 'Tajawal', sans-serif;
-      text-align: center;
-      background-color: #f0f0f0;
-      padding: 50px;
-    }
-    h1 {
-      margin-bottom: 40px;
-    }
-    button {
-      font-size: 18px;
-      padding: 15px 30px;
-      margin: 20px;
-      border: none;
-      border-radius: 10px;
-      background-color: #1976d2;
-      color: white;
-      cursor: pointer;
-    }
-    button:hover {
-      background-color: #0d47a1;
-    }
+    body { font-family: sans-serif; padding: 20px; }
+    select, button { margin: 10px; padding: 5px 10px; }
   </style>
 </head>
 <body>
-  <h1>منصة محاضرات طب الأسنان</h1>
+  <h1>نظام الأسئلة</h1>
 
-  <button onclick="location.href='showLectures.html'">🧪 أظهار المحاضرات</button>
-  <button onclick="location.href='admin.html'">🛠️ لوحة التحكم</button>
+  <label>اختر المادة:</label>
+  <select id="subjectSelect"></select>
+
+  <label>اختر المحاضرة:</label>
+  <select id="lectureSelect"></select>
+
+  <label>اختر النسخة:</label>
+  <select id="versionSelect"></select>
+
+  <button id="loadBtn">ابدأ</button>
+
+  <div id="questionsContainer"></div>
 </body>
 </html>
