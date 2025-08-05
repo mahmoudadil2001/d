@@ -6,6 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;700&display=swap" rel="stylesheet" />
   <script type="module" src="./script.js" defer></script>
+
   <style>
     body {
       font-family: 'Tajawal', sans-serif;
@@ -192,6 +193,7 @@
     }
   </style>
 </head>
+
 <body>
   <div class="container">
     <button id="homeBtn">العودة للرئيسية</button>
@@ -218,12 +220,18 @@
     <div id="questionsContainer"></div>
   </div>
 
+  <!-- ✅ إضافة تحقق تسجيل الدخول -->
   <script type="module">
-    // تحقق وجود بيانات المستخدم في localStorage
-    if (!localStorage.getItem('fullName') || !localStorage.getItem('group')) {
-      window.location.href = 'login.html';
-    }
+    const fullName = localStorage.getItem('fullName');
+    const group = localStorage.getItem('group');
 
+    if (!fullName || !group) {
+      window.location.href = 'log_in.html';
+    }
+  </script>
+
+  <!-- ✅ تحميل السكريبتات -->
+  <script type="module">
     import { visibleLectures } from './visibleLectures.js';
     import { lectureNames } from './lectureNames.js';
 
@@ -235,14 +243,7 @@
     const controlsContainer = document.getElementById("controlsContainer");
     const homeBtn = document.getElementById("homeBtn");
 
-    // باقي كود الأسئلة والتحميل والتفاعل مثل ما عندك في script.js
-    // ...
-    // (أضف هنا باقي الكود الخاص بالأسئلة الذي تستخدمه حالياً)
-
-    // لتبسيط الشرح، اضف كود تحميل المواد والمحاضرات والنسخ والتعامل مع الأسئلة هنا
-
-    // ... (كود التحميل، العرض، المؤقت، الأصوات، التنقل، وهكذا)
-
+    // باقي منطق تحميل الأسئلة موجود في script.js المرتبط أعلاه
   </script>
 </body>
 </html>
