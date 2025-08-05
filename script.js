@@ -20,7 +20,7 @@ timerDiv.style.margin = "10px 0";
 timerDiv.innerHTML = `
   <label>
     <input type="checkbox" id="timerToggle" />
-    تفعيل المؤقت 55 ثانية لكل سؤال
+    تفعيل المؤقت 45 ثانية لكل سؤال
   </label>
 `;
 controlsContainer.insertBefore(timerDiv, loadBtn);
@@ -41,7 +41,7 @@ let correctCount = 0;
 let answered = false;
 let timerEnabled = false;
 let timerInterval;
-let timeLeft = 55;  // وقت 55 ثانية
+let timeLeft = 45;  // زمن 45 ثانية لكل سؤال
 
 // حالة كل سؤال: "unanswered", "correct", "wrong"
 let questionStatus = [];
@@ -52,6 +52,7 @@ const wrongSound = new Audio('./sounds/wrong.wav');
 const clickSound = new Audio('./sounds/click.wav');
 const uiClickSound = new Audio('./sounds/uiclick.wav');
 const subjectSound = new Audio('./sounds/subject.wav');  // صوت اختيار مادة/محاضرة/نسخة
+const timeDownSound = new Audio('./sounds/timedown.wav'); // صوت المؤقت عند بداية السؤال
 
 // تشغيل صوت click عند الضغط على أي زر ما عدا خيارات الإجابة
 document.addEventListener("click", (e) => {
@@ -131,8 +132,12 @@ versionSelect.addEventListener("change", () => {
 
 // دالة بدء المؤقت لكل سؤال
 function startTimer() {
-  timeLeft = 55;  // وقت 55 ثانية
+  timeLeft = 45;  // وقت 45 ثانية
   updateTimerText();
+
+  // تشغيل صوت بداية السؤال
+  timeDownSound.currentTime = 0;
+  timeDownSound.play();
 
   timerInterval = setInterval(() => {
     timeLeft--;
@@ -140,6 +145,7 @@ function startTimer() {
 
     if (timeLeft <= 0) {
       clearInterval(timerInterval);
+      stopTimeDownSound();
       if (!answered) {
         answered = true;
         wrongSound.currentTime = 0;
@@ -170,6 +176,11 @@ function updateTimerText() {
   if(timerTextElem){
     timerTextElem.textContent = `الوقت المتبقي: ${timeLeft} ثانية`;
   }
+}
+
+function stopTimeDownSound() {
+  timeDownSound.pause();
+  timeDownSound.currentTime = 0;
 }
 
 // تحديث قائمة التنقل بين الأسئلة مع عرض حالة كل سؤال
@@ -249,12 +260,14 @@ homeBtn.addEventListener("click", () => {
   questionStatus = [];
   questionsContainer.innerHTML = "";
   clearInterval(timerInterval);
+  stopTimeDownSound();
 });
 
 // دالة عرض سؤال واحد فقط مع الخيارات
 function showQuestion() {
   answered = false;
   clearInterval(timerInterval);
+  stopTimeDownSound();
   questionsContainer.innerHTML = "";
 
   if (currentIndex >= currentQuestions.length) {
@@ -305,9 +318,7 @@ function showQuestion() {
 
     if (questionStatus[currentIndex] !== "unanswered") {
       btn.disabled = true;
-      if (idx === q.answer && questionStatus[currentIndex] === "correct") {
-        btn.style.backgroundColor = "lightgreen";
-      } else if (idx === q.answer && questionStatus[currentIndex] === "wrong") {
+      if (idx === q.answer && (questionStatus[currentIndex] === "correct" || questionStatus[currentIndex] === "wrong")) {
         btn.style.backgroundColor = "lightgreen";
       }
     } else {
@@ -318,6 +329,7 @@ function showQuestion() {
       if (answered) return;
       answered = true;
       clearInterval(timerInterval);
+      stopTimeDownSound();
 
       if (idx === q.answer) {
         correctSound.currentTime = 0;
