@@ -2,19 +2,12 @@ import { visibleLectures } from "./show.js";
 import { lectureNames } from "./lectureNames.js";
 import AuthManager from "./auth.js";
 import FriendsManager from "./friends.js";
-import AdminManager from "./admin.js";
 
 // Initialize Authentication
 const authManager = new AuthManager();
 
 // Initialize Friends System
 const friendsManager = new FriendsManager(authManager);
-
-// Initialize Admin System
-const adminManager = new AdminManager(authManager);
-
-// Make admin manager globally accessible
-window.adminManager = adminManager;
 
 const subjectSelect = document.getElementById("subjectSelect");
 const lectureSelect = document.getElementById("lectureSelect");
@@ -58,13 +51,6 @@ let timeLeft = 43; // زمن 43 ثانية لكل سؤال
 
 // حالة كل سؤال: "unanswered", "correct", "wrong"
 let questionStatus = [];
-// تتبع الإجابات الخاطئة المختارة
-let wrongAnswers = [];
-
-// دالة للعثور على الإجابة الخاطئة المختارة لسؤال معين
-function findSelectedWrongAnswer(questionIndex) {
-  return wrongAnswers[questionIndex] || -1;
-}
 
 // تحميل ملفات الصوت
 const correctSound = new Audio("./sounds/correct.wav");
@@ -285,9 +271,13 @@ function updateQuestionNavigator() {
 document.addEventListener("change", (e) => {
   if (e.target.id === "questionSelect") {
     const selected = parseInt(e.target.value, 10);
-    // السماح بالتنقل دائماً، حتى للأسئلة المجاب عليها
-    currentIndex = selected;
-    showQuestion();
+    if (!answered) {
+      // لمنع تغيير السؤال أثناء الإجابة على سؤال مفتوح
+      currentIndex = selected;
+      showQuestion();
+    } else {
+      e.target.value = currentIndex;
+    }
   }
 });
 
@@ -312,7 +302,6 @@ loadBtn.addEventListener("click", async () => {
     currentIndex = 0;
     correctCount = 0;
     questionStatus = new Array(currentQuestions.length).fill("unanswered");
-    wrongAnswers = new Array(currentQuestions.length).fill(-1);
 
     controlsContainer.style.display = "none";
     questionsContainer.style.display = "block";
@@ -350,7 +339,6 @@ homeBtn.addEventListener("click", () => {
   currentIndex = 0;
   correctCount = 0;
   questionStatus = [];
-  wrongAnswers = [];
   questionsContainer.innerHTML = "";
   clearInterval(timerInterval);
   stopTimeDownSound();
@@ -365,12 +353,6 @@ function showQuestion() {
   clearInterval(timerInterval);
   stopTimeDownSound();
   questionsContainer.innerHTML = "";
-
-  // إخفاء عداد الوقت عند التنقل بين الأسئلة
-  const navigatorTimer = document.getElementById("navigatorTimer");
-  if (navigatorTimer) {
-    navigatorTimer.style.display = "none";
-  }
 
   // التأكد من إخفاء العنوان بشكل دائم أثناء وضع الاختبار
   const titleElement = document.querySelector("h1");
@@ -408,20 +390,12 @@ function showQuestion() {
 
     if (questionStatus[currentIndex] !== "unanswered") {
       btn.disabled = true;
-      // لا تعيين answered = true هنا للسماح بالتنقل
       if (
         idx === q.answer &&
         (questionStatus[currentIndex] === "correct" ||
           questionStatus[currentIndex] === "wrong")
       ) {
         btn.style.backgroundColor = "lightgreen";
-      }
-      if (idx !== q.answer && questionStatus[currentIndex] === "wrong") {
-        // إظهار الإجابة الخاطئة المختارة سابقاً
-        const selectedWrongIndex = findSelectedWrongAnswer(currentIndex);
-        if (idx === selectedWrongIndex) {
-          btn.style.backgroundColor = "salmon";
-        }
       }
     } else {
       btn.disabled = false;
@@ -446,9 +420,6 @@ function showQuestion() {
         wrongSound.play();
         btn.style.backgroundColor = "salmon";
 
-        // تسجيل الإجابة الخاطئة المختارة
-        wrongAnswers[currentIndex] = idx;
-
         const correctBtn =
           optionsList.children[q.answer].querySelector("button");
         correctBtn.style.backgroundColor = "lightgreen";
@@ -470,10 +441,7 @@ function showQuestion() {
   questionDiv.appendChild(optionsList);
   questionsContainer.appendChild(questionDiv);
 
-  // بدء المؤقت فقط للأسئلة غير المجاب عليها
-  if (timerEnabled && questionStatus[currentIndex] === "unanswered") {
-    startTimer();
-  }
+  if (timerEnabled) startTimer();
 }
 
 // زر التالي
@@ -566,12 +534,6 @@ document.addEventListener("DOMContentLoaded", () => {
       authManager.showSignInPage();
     });
   }
-
-  // Setup authentication menu
-  authManager.setupAuthMenu();
-
-  // Setup admin system on page load
-  setupAdminSystem();
 });
 
 // Set authentication state change callback
@@ -589,8 +551,6 @@ authManager.setAuthChangeCallback((user) => {
     updateVersionSelector();
     // إظهار زر الأصدقاء
     setupFriendsSystem();
-    // إعداد نظام الإدارة بعد تسجيل الدخول
-    setupAdminSystem();
   } else {
     console.log("User signed out");
     // Reset quiz state when user signs out
@@ -601,8 +561,6 @@ authManager.setAuthChangeCallback((user) => {
     updateVersionSelector();
     // إخفاء زر الأصدقاء
     hideFriendsSystem();
-    // إخفاء زر الإدارة
-    setupAdminSystem();
   }
 });
 
@@ -613,9 +571,6 @@ function setupFriendsSystem() {
   if (friendsBtn) {
     friendsBtn.style.display = "flex";
   }
-
-  // إظهار زر الإدارة للمشرفين
-  setupAdminSystem();
 
   // تحديث التنبيهات
   updateFriendRequestsBadge();
@@ -633,32 +588,10 @@ function setupFriendsSystem() {
   }, 30000);
 }
 
-// تهيئة نظام الإدارة
-function setupAdminSystem() {
-  // Check if user is admin and show/hide admin button
-  const adminBtn = document.getElementById("adminBtn");
-  if (adminBtn && adminManager) {
-    // Make sure adminManager has the current user info
-    if (authManager.isSignedIn() && authManager.currentUser) {
-      adminManager.currentUser = authManager.currentUser;
-    }
-    
-    console.log('Checking admin status for user:', adminManager.currentUser?.email);
-    if (adminManager.isAdmin()) {
-      console.log('User is admin, showing admin button');
-      adminBtn.style.display = "flex";
-    } else {
-      console.log('User is not admin, hiding admin button');
-      adminBtn.style.display = "none";
-    }
-  }
-}
-
 // إخفاء نظام الأصدقاء
 function hideFriendsSystem() {
   const friendsModal = document.getElementById("friendsModal");
   const friendsBtn = document.getElementById("friendsBtn");
-  const adminBtn = document.getElementById("adminBtn");
 
   if (friendsModal) {
     friendsModal.style.display = "none";
@@ -666,10 +599,6 @@ function hideFriendsSystem() {
 
   if (friendsBtn) {
     friendsBtn.style.display = "none";
-  }
-
-  if (adminBtn) {
-    adminBtn.style.display = "none";
   }
 }
 
@@ -789,18 +718,6 @@ async function openFriendsModal() {
 // جعل الدالة متاحة عالمياً
 window.openFriendsModal = openFriendsModal;
 
-// فتح نافذة الإدارة
-function openAdminModal() {
-  if (adminManager && adminManager.isAdmin()) {
-    adminManager.showAdminModal();
-  } else {
-    console.error('غير مصرح لك بالوصول للوحة الإدارة');
-  }
-}
-
-// جعل الدالة متاحة عالمياً
-window.openAdminModal = openAdminModal;
-
 // تبديل التبويبات
 function switchTab(tabName) {
   // إخفاء جميع التبويبات
@@ -882,12 +799,7 @@ async function loadMyFriends() {
   let recentlyActiveFriends = 0;
 
   sortedFriends.forEach((friend) => {
-    const status = friendsStatus[friend.uid] || {
-      status: "غير متاح",
-      statusColor: "#6c757d",
-      statusIcon: "⚪",
-      lastSeen: "غير محدد",
-    };
+    const status = friendsStatus[friend.uid];
     if (status) {
       if (status.status.includes("متصل الآن")) {
         onlineFriends++;
@@ -1252,30 +1164,30 @@ function showFinalResults() {
         from { opacity: 0; transform: translateY(50px) scale(0.9); }
         to { opacity: 1; transform: translateY(0) scale(1); }
       }
-
+      
       @keyframes scoreCountUp {
         from { transform: scale(1); }
         to { transform: scale(1.1); }
       }
-
+      
       @keyframes sparkle {
         0% { transform: scale(1); opacity: 1; }
         50% { transform: scale(1.1); opacity: 0.9; }
         100% { transform: scale(1); opacity: 1; }
       }
-
+      
       @keyframes pulse {
         0% { box-shadow: 0 0 0 0 rgba(40, 167, 69, 0.7); }
         70% { box-shadow: 0 0 0 20px rgba(40, 167, 69, 0); }
         100% { box-shadow: 0 0 0 0 rgba(40, 167, 69, 0); }
       }
-
+      
       @keyframes float {
         0% { transform: translateY(0px); }
         50% { transform: translateY(-10px); }
         100% { transform: translateY(0px); }
       }
-
+      
       .results-container {
         background: linear-gradient(145deg, rgba(255, 255, 255, 0.95), rgba(248, 249, 250, 0.98));
         border-radius: 25px;
@@ -1287,7 +1199,7 @@ function showFinalResults() {
         position: relative;
         overflow: hidden;
       }
-
+      
       .results-container::before {
         content: '';
         position: absolute;
@@ -1299,18 +1211,18 @@ function showFinalResults() {
         transform: rotate(45deg);
         animation: shimmer 3s infinite;
       }
-
+      
       @keyframes shimmer {
         0% { transform: translateX(-100%) translateY(-100%) rotate(45deg); }
         100% { transform: translateX(100%) translateY(100%) rotate(45deg); }
       }
-
+      
       .grade-icon {
         font-size: 80px;
         margin-bottom: 20px;
         animation: float 3s ease-in-out infinite;
       }
-
+      
       .grade-title {
         font-size: 36px;
         font-weight: 700;
@@ -1319,7 +1231,7 @@ function showFinalResults() {
         text-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
         animation: sparkle 2s ease-in-out infinite;
       }
-
+      
       .percentage-circle {
         width: 150px;
         height: 150px;
@@ -1332,7 +1244,7 @@ function showFinalResults() {
         position: relative;
         animation: pulse 2s infinite;
       }
-
+      
       .percentage-inner {
         width: 120px;
         height: 120px;
@@ -1346,14 +1258,14 @@ function showFinalResults() {
         color: ${gradeColor};
         box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
       }
-
+      
       .stats-grid {
         display: grid;
         grid-template-columns: repeat(3, 1fr);
         gap: 20px;
         margin: 30px 0;
       }
-
+      
       .stat-card {
         background: linear-gradient(135deg, rgba(255, 255, 255, 0.9), rgba(248, 249, 250, 0.95));
         border-radius: 16px;
@@ -1364,24 +1276,24 @@ function showFinalResults() {
         animation-delay: 0.2s;
         animation-fill-mode: both;
       }
-
+      
       .stat-number {
         font-size: 32px;
         font-weight: 700;
         margin-bottom: 8px;
         animation: scoreCountUp 0.3s ease-in-out infinite alternate;
       }
-
+      
       .stat-label {
         font-size: 14px;
         color: #6c757d;
         font-weight: 600;
       }
-
+      
       .correct-stat { color: #28a745; }
       .wrong-stat { color: #dc3545; }
       .total-stat { color: #667eea; }
-
+      
       .action-buttons {
         display: flex;
         gap: 15px;
@@ -1392,7 +1304,7 @@ function showFinalResults() {
         animation-delay: 0.6s;
         animation-fill-mode: both;
       }
-
+      
       .action-btn {
         padding: 15px 25px;
         font-size: 16px;
@@ -1405,7 +1317,7 @@ function showFinalResults() {
         position: relative;
         overflow: hidden;
       }
-
+      
       .action-btn::before {
         content: '';
         position: absolute;
@@ -1418,73 +1330,73 @@ function showFinalResults() {
         transition: all 0.3s ease;
         transform: translate(-50%, -50%);
       }
-
+      
       .action-btn:hover::before {
         width: 300px;
         height: 300px;
       }
-
+      
       .restart-btn {
         background: linear-gradient(135deg, #667eea, #764ba2);
         color: white;
         box-shadow: 0 8px 25px rgba(102, 126, 234, 0.3);
       }
-
+      
       .restart-btn:hover {
         transform: translateY(-3px);
         box-shadow: 0 12px 35px rgba(102, 126, 234, 0.4);
       }
-
+      
       .home-btn {
         background: linear-gradient(135deg, #6c757d, #495057);
         color: white;
         box-shadow: 0 8px 25px rgba(108, 117, 125, 0.3);
       }
-
+      
       .home-btn:hover {
         transform: translateY(-3px);
         box-shadow: 0 12px 35px rgba(108, 117, 125, 0.4);
       }
-
+      
       @media (max-width: 480px) {
         .stats-grid {
           grid-template-columns: 1fr;
           gap: 15px;
         }
-
+        
         .action-buttons {
           flex-direction: column;
         }
-
+        
         .percentage-circle {
           width: 120px;
           height: 120px;
         }
-
+        
         .percentage-inner {
           width: 100px;
           height: 100px;
           font-size: 24px;
         }
-
+        
         .grade-title {
           font-size: 28px;
         }
-
+        
         .grade-icon {
           font-size: 60px;
         }
       }
     </style>
-
+    
     <div class="results-container">
       <div class="grade-icon">${gradeIcon}</div>
       <div class="grade-title">${gradeText}</div>
-
+      
       <div class="percentage-circle">
         <div class="percentage-inner">${percentage}%</div>
       </div>
-
+      
       <div class="stats-grid">
         <div class="stat-card">
           <div class="stat-number correct-stat">${correctCount}</div>
@@ -1499,7 +1411,7 @@ function showFinalResults() {
           <div class="stat-label">إجمالي الأسئلة</div>
         </div>
       </div>
-
+      
       <div class="action-buttons">
         <button id="restartBtn" class="action-btn restart-btn">
           🔄 إعادة المحاولة
@@ -1527,12 +1439,11 @@ function showFinalResults() {
     currentIndex = 0;
     correctCount = 0;
     questionStatus = new Array(currentQuestions.length).fill("unanswered");
-    wrongAnswers = new Array(currentQuestions.length).fill(-1);
-
+    
     // إظهار العناصر المخفية عند إعادة المحاولة
     document.getElementById("questionSelect").parentNode.style.display = "block";
     homeBtn.style.display = "block";
-
+    
     updateQuestionNavigator();
     showQuestion();
   });
