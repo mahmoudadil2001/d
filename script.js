@@ -1439,6 +1439,11 @@ function showFinalResults() {
     currentIndex = 0;
     correctCount = 0;
     questionStatus = new Array(currentQuestions.length).fill("unanswered");
+    
+    // إظهار العناصر المخفية عند إعادة المحاولة
+    document.getElementById("questionSelect").parentNode.style.display = "block";
+    homeBtn.style.display = "block";
+    
     updateQuestionNavigator();
     showQuestion();
   });
