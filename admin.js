@@ -1,3 +1,4 @@
+
 import { 
   auth, 
   db,
@@ -18,13 +19,12 @@ class AdminManager {
       'mahmoudadil2001@gmail.com', // Add your admin emails here
       // Add more admin emails as needed
     ];
-
+    
     // GitHub integration
     this.githubToken = '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';
     this.githubRepo = 'mahmoudadil2001/d';
     this.githubBranch = 'main';
-    this.githubApiBase = 'https://api.github.com';
-
+    
     // Set up auth callback to update current user
     const originalCallback = this.authManager.authChangeCallback;
     this.authManager.setAuthChangeCallback((user) => {
@@ -147,7 +147,7 @@ class AdminManager {
             box-shadow: 0 4px 15px rgba(0, 123, 255, 0.3);
           ">✏️ تعديل أسماء المحاضرات</button>
 
-
+          
 
           <button id="deleteContentBtn" class="admin-action-btn" style="
             background: linear-gradient(135deg, #dc3545, #c82333);
@@ -195,7 +195,7 @@ class AdminManager {
             transition: all 0.3s ease;
             display: none;
           ">← العودة للقائمة الرئيسية</button>
-
+          
           <div id="defaultMessage" style="
             text-align: center;
             color: #6c757d;
@@ -245,7 +245,7 @@ class AdminManager {
       this.showEditLectureNamesContent();
     });
 
-
+    
 
     document.getElementById('deleteContentBtn').addEventListener('click', () => {
       this.hideButtons();
@@ -263,7 +263,7 @@ class AdminManager {
     const buttonsContainer = document.getElementById('adminActionButtons');
     const backBtn = document.getElementById('backToMenuBtn');
     const defaultMessage = document.getElementById('defaultMessage');
-
+    
     if (buttonsContainer) {
       buttonsContainer.style.display = 'none';
     }
@@ -281,7 +281,7 @@ class AdminManager {
     const backBtn = document.getElementById('backToMenuBtn');
     const defaultMessage = document.getElementById('defaultMessage');
     const contentArea = document.getElementById('adminContentArea');
-
+    
     if (buttonsContainer) {
       buttonsContainer.style.display = 'grid';
     }
@@ -291,7 +291,7 @@ class AdminManager {
     if (defaultMessage) {
       defaultMessage.style.display = 'block';
     }
-
+    
     // Clear content area except for back button and default message
     if (contentArea) {
       contentArea.innerHTML = `
@@ -309,7 +309,7 @@ class AdminManager {
           transition: all 0.3s ease;
           display: none;
         ">← العودة للقائمة الرئيسية</button>
-
+        
         <div id="defaultMessage" style="
           text-align: center;
           color: #6c757d;
@@ -319,7 +319,7 @@ class AdminManager {
           🛠️ اختر أحد الخيارات أعلاه للبدء
         </div>
       `;
-
+      
       // Re-attach back button event listener
       document.getElementById('backToMenuBtn').addEventListener('click', () => {
         this.showMainMenu();
@@ -345,10 +345,10 @@ class AdminManager {
         transition: all 0.3s ease;
         display: block;
       ">← العودة للقائمة الرئيسية</button>
-
+      
       <div style="animation: fadeIn 0.3s ease-out;">
         <h3 style="color: #28a745; margin-bottom: 20px; font-size: 24px;">📝 إضافة محاضرة أو نسخة جديدة</h3>
-
+        
         <!-- Step 1: Subject Selection -->
         <div id="subjectSelectionStep" style="background: white; padding: 25px; border-radius: 12px; box-shadow: 0 4px 15px rgba(0,0,0,0.1); margin-bottom: 20px;">
           <h4 style="margin-bottom: 15px; color: #495057;">الخطوة 1: اختيار المادة</h4>
@@ -408,7 +408,7 @@ class AdminManager {
           <!-- New Lecture Form -->
           <div id="newLectureForm" style="background: white; padding: 25px; border-radius: 12px; box-shadow: 0 4px 15px rgba(0,0,0,0.1); margin-bottom: 20px; display: none;">
             <h4 style="margin-bottom: 15px; color: #007bff;">📚 إضافة محاضرة جديدة</h4>
-
+            
             <div style="margin-bottom: 15px;">
               <label style="display: block; margin-bottom: 8px; font-weight: 600;">رقم المحاضرة:</label>
               <input type="number" id="lectureNumber" placeholder="رقم المحاضرة" style="
@@ -474,7 +474,7 @@ class AdminManager {
   // أضف المزيد من الأسئلة...
 ];"></textarea>
             </div>
-
+            
             <button id="saveLectureBtn" style="
               background: linear-gradient(135deg, #28a745, #20c997);
               color: white;
@@ -555,7 +555,7 @@ class AdminManager {
         </div>
       </div>
     `;
-
+    
     this.setupNewContentEventListeners();
   }
 
@@ -602,7 +602,7 @@ class AdminManager {
     const contentFormsStep = document.getElementById('contentFormsStep');
     const newLectureForm = document.getElementById('newLectureForm');
     const newVersionForm = document.getElementById('newVersionForm');
-
+    
     contentFormsStep.style.display = 'block';
     newLectureForm.style.display = 'block';
     newVersionForm.style.display = 'none';
@@ -617,7 +617,7 @@ class AdminManager {
     const contentFormsStep = document.getElementById('contentFormsStep');
     const newLectureForm = document.getElementById('newLectureForm');
     const newVersionForm = document.getElementById('newVersionForm');
-
+    
     contentFormsStep.style.display = 'block';
     newLectureForm.style.display = 'none';
     newVersionForm.style.display = 'block';
@@ -634,11 +634,11 @@ class AdminManager {
   async loadExistingLecturesForVersion() {
     try {
       const { visibleLectures } = await import('./show.js?' + Date.now());
-      const { lectureNames } = await import('./lectureNames.js?' + Date.now());
-
       const existingLectureSelect = document.getElementById('existingLectureSelect');
+      const { lectureNames } = await import('./lectureNames.js?' + Date.now());
+      
       existingLectureSelect.innerHTML = '<option value="">اختر المحاضرة الموجودة</option>';
-
+      
       const lectures = visibleLectures[this.selectedSubject] || {};
       Object.keys(lectures).forEach(lectureNum => {
         const option = document.createElement('option');
@@ -711,15 +711,15 @@ class AdminManager {
     try {
       // Add to show.js (visibleLectures) with specified version
       await this.updateShowFileForNewLectureWithVersion(this.selectedSubject, lectureNumber, lectureVersion);
-
+      
       // Add to lectureNames.js
       await this.updateLectureNamesFile(this.selectedSubject, lectureNumber, lectureTitle);
-
+      
       // Create lecture file with custom content and specified version
       await this.createLectureFileWithContentAndVersion(this.selectedSubject, lectureNumber, lectureVersion, lectureContent);
 
       this.showSuccess('تم إضافة المحاضرة بنجاح');
-
+      
       // Clear form
       document.getElementById('lectureNumber').value = '';
       document.getElementById('lectureVersion').value = '1';
@@ -745,12 +745,12 @@ class AdminManager {
     try {
       // Add version to show.js
       await this.addVersionToShowFile(this.selectedSubject, existingLecture, versionNumber);
-
+      
       // Create version file with custom content
       await this.createVersionFileWithContent(this.selectedSubject, existingLecture, versionNumber, versionContent);
 
       this.showSuccess('تم إضافة النسخة بنجاح');
-
+      
       // Clear form
       document.getElementById('versionNumber').value = '';
       document.getElementById('versionContent').value = '';
@@ -766,7 +766,7 @@ class AdminManager {
     try {
       const showModule = await import('./show.js?' + Date.now());
       const currentVisibleLectures = { ...showModule.visibleLectures };
-
+      
       if (!currentVisibleLectures[subject]) {
         currentVisibleLectures[subject] = {};
       }
@@ -776,7 +776,7 @@ class AdminManager {
 
       const showContent = `export const visibleLectures = ${JSON.stringify(currentVisibleLectures, null, 2)};`;
       await this.saveFileContent('show.js', showContent);
-
+      
     } catch (error) {
       console.error('Error updating show.js:', error);
       throw error;
@@ -788,7 +788,7 @@ class AdminManager {
     try {
       const showModule = await import('./show.js?' + Date.now());
       const currentVisibleLectures = { ...showModule.visibleLectures };
-
+      
       if (!currentVisibleLectures[subject]) {
         currentVisibleLectures[subject] = {};
       }
@@ -804,7 +804,7 @@ class AdminManager {
 
       const showContent = `export const visibleLectures = ${JSON.stringify(currentVisibleLectures, null, 2)};`;
       await this.saveFileContent('show.js', showContent);
-
+      
     } catch (error) {
       console.error('Error updating show.js:', error);
       throw error;
@@ -847,10 +847,10 @@ class AdminManager {
         transition: all 0.3s ease;
         display: block;
       ">← العودة للقائمة الرئيسية</button>
-
+      
       <div style="animation: fadeIn 0.3s ease-out;">
         <h3 style="color: #007bff; margin-bottom: 20px; font-size: 24px;">✏️ تعديل أسماء المحاضرات</h3>
-
+        
         <!-- Step 1: Subject Selection -->
         <div id="editSubjectStep" style="background: white; padding: 25px; border-radius: 12px; box-shadow: 0 4px 15px rgba(0,0,0,0.1); margin-bottom: 20px;">
           <h4 style="margin-bottom: 15px; color: #495057;">الخطوة 1: اختيار المادة</h4>
@@ -902,7 +902,7 @@ class AdminManager {
         <!-- Step 4: Edit Form -->
         <div id="editFormStep" style="background: white; padding: 25px; border-radius: 12px; box-shadow: 0 4px 15px rgba(0,0,0,0.1); margin-bottom: 20px; display: none;">
           <h4 style="margin-bottom: 15px; color: #007bff;">الخطوة 4: تعديل المحاضرة</h4>
-
+          
           <div style="margin-bottom: 15px;">
             <label style="display: block; margin-bottom: 8px; font-weight: 600;">عنوان المحاضرة:</label>
             <input type="text" id="editLectureTitle" style="
@@ -930,7 +930,7 @@ class AdminManager {
               box-sizing: border-box;
             " placeholder="تحميل محتوى المحاضرة..."></textarea>
           </div>
-
+          
           <button id="saveEditedLectureBtn" style="
             background: linear-gradient(135deg, #007bff, #0056b3);
             color: white;
@@ -947,11 +947,11 @@ class AdminManager {
         </div>
       </div>
     `;
-
+    
     this.setupEditLectureEventListeners();
   }
 
-
+  
 
   // Show Delete Content
   showDeleteContentContent() {
@@ -971,10 +971,10 @@ class AdminManager {
         transition: all 0.3s ease;
         display: block;
       ">← العودة للقائمة الرئيسية</button>
-
+      
       <div style="animation: fadeIn 0.3s ease-out;">
         <h3 style="color: #dc3545; margin-bottom: 20px; font-size: 24px;">🗑️ حذف المحاضرات والنسخ</h3>
-
+        
         <!-- Step 1: Subject Selection -->
         <div id="deleteSubjectStep" style="background: white; padding: 25px; border-radius: 12px; box-shadow: 0 4px 15px rgba(0,0,0,0.1); margin-bottom: 20px;">
           <h4 style="margin-bottom: 15px; color: #495057;">الخطوة 1: اختيار المادة</h4>
@@ -1021,7 +1021,7 @@ class AdminManager {
           ">
             <option value="">اختر النسخة</option>
           </select>
-
+          
           <button id="deleteBtn" style="
             background: linear-gradient(135deg, #dc3545, #c82333);
             color: white;
@@ -1038,7 +1038,7 @@ class AdminManager {
         </div>
       </div>
     `;
-
+    
     this.setupDeleteEventListeners();
   }
 
@@ -1060,7 +1060,7 @@ class AdminManager {
         transition: all 0.3s ease;
         display: block;
       ">← العودة للقائمة الرئيسية</button>
-
+      
       <div style="animation: fadeIn 0.3s ease-out;">
         <h3 style="color: #6f42c1; margin-bottom: 20px; font-size: 24px;">🔄 مزامنة مع GitHub</h3>
         <div style="background: white; padding: 25px; border-radius: 12px; box-shadow: 0 4px 15px rgba(0,0,0,0.1);">
@@ -1071,7 +1071,7 @@ class AdminManager {
               <strong>Branch:</strong> ${this.githubBranch}
             </p>
           </div>
-
+          
           <button id="syncToGithubBtn" style="
             background: linear-gradient(135deg, #6f42c1, #5a32a3);
             color: white;
@@ -1086,7 +1086,7 @@ class AdminManager {
             margin-bottom: 15px;
             transition: all 0.3s ease;
           ">⬆️ رفع التغييرات إلى GitHub</button>
-
+          
           <button id="pullFromGithubBtn" style="
             background: linear-gradient(135deg, #fd7e14, #e36209);
             color: white;
@@ -1100,17 +1100,17 @@ class AdminManager {
             width: 100%;
             transition: all 0.3s ease;
           ">⬇️ سحب التحديثات من GitHub</button>
-
+          
           <div id="githubStatus" style="margin-top: 20px;"></div>
         </div>
       </div>
     `;
-
+    
     // Add event listeners
     document.getElementById('backToMenuBtn').addEventListener('click', () => {
       this.showMainMenu();
     });
-
+    
     document.getElementById('syncToGithubBtn').addEventListener('click', () => {
       this.syncToGithub();
     });
@@ -1132,7 +1132,7 @@ class AdminManager {
       const lectureStep = document.getElementById('editLectureStep');
       const versionStep = document.getElementById('editVersionStep');
       const formStep = document.getElementById('editFormStep');
-
+      
       if (e.target.value) {
         lectureStep.style.display = 'block';
         versionStep.style.display = 'none';
@@ -1150,7 +1150,7 @@ class AdminManager {
     document.getElementById('editLecture').addEventListener('change', (e) => {
       const versionStep = document.getElementById('editVersionStep');
       const formStep = document.getElementById('editFormStep');
-
+      
       if (e.target.value) {
         versionStep.style.display = 'block';
         formStep.style.display = 'none';
@@ -1165,7 +1165,7 @@ class AdminManager {
     // Version selection
     document.getElementById('editVersion').addEventListener('change', (e) => {
       const formStep = document.getElementById('editFormStep');
-
+      
       if (e.target.value) {
         formStep.style.display = 'block';
         this.selectedEditVersion = e.target.value;
@@ -1189,9 +1189,9 @@ class AdminManager {
     try {
       const { visibleLectures } = await import('./show.js?' + Date.now());
       const editSubject = document.getElementById('editSubject');
-
+      
       editSubject.innerHTML = '<option value="">اختر المادة</option>';
-
+      
       Object.keys(visibleLectures).forEach(subject => {
         const option = document.createElement('option');
         option.value = subject;
@@ -1209,9 +1209,9 @@ class AdminManager {
       const { visibleLectures } = await import('./show.js?' + Date.now());
       const { lectureNames } = await import('./lectureNames.js?' + Date.now());
       const editLecture = document.getElementById('editLecture');
-
+      
       editLecture.innerHTML = '<option value="">اختر المحاضرة</option>';
-
+      
       const lectures = visibleLectures[this.selectedEditSubject] || {};
       Object.keys(lectures).forEach(lectureNum => {
         const option = document.createElement('option');
@@ -1230,9 +1230,9 @@ class AdminManager {
     try {
       const { visibleLectures } = await import('./show.js?' + Date.now());
       const editVersion = document.getElementById('editVersion');
-
+      
       editVersion.innerHTML = '<option value="">اختر النسخة</option>';
-
+      
       const versions = visibleLectures[this.selectedEditSubject]?.[this.selectedEditLecture] || [];
       versions.forEach(versionNum => {
         const option = document.createElement('option');
@@ -1251,14 +1251,14 @@ class AdminManager {
       const { lectureNames } = await import('./lectureNames.js?' + Date.now());
       const editTitleInput = document.getElementById('editLectureTitle');
       const editContentTextarea = document.getElementById('editLectureContent');
-
+      
       // Load lecture title
       const currentTitle = lectureNames[this.selectedEditSubject]?.[this.selectedEditLecture] || '';
       editTitleInput.value = currentTitle;
-
+      
       // Load lecture content
       const fileName = `${this.selectedEditSubject}/${this.selectedEditSubject}${this.selectedEditLecture}/${this.selectedEditSubject}${this.selectedEditLecture}_v${this.selectedEditVersion}.js`;
-
+      
       try {
         const response = await fetch(fileName);
         if (response.ok) {
@@ -1289,7 +1289,7 @@ class AdminManager {
     try {
       // Update lecture title in lectureNames.js
       await this.updateLectureNamesFile(this.selectedEditSubject, this.selectedEditLecture, title);
-
+      
       // Update lecture content file
       const fileName = `${this.selectedEditSubject}/${this.selectedEditSubject}${this.selectedEditLecture}/${this.selectedEditSubject}${this.selectedEditLecture}_v${this.selectedEditVersion}.js`;
       await this.saveFileContent(fileName, content);
@@ -1311,15 +1311,15 @@ class AdminManager {
   async loadVersionManagement() {
     try {
       const { visibleLectures } = await import('./show.js?' + Date.now());
-
+      
       const subjectSelect = document.getElementById('versionSubject');
       const deleteSubjectSelect = document.getElementById('deleteSubject');
-
+      
       // Populate both version and delete dropdowns
       [subjectSelect, deleteSubjectSelect].forEach(select => {
         if (select) {
           select.innerHTML = '<option value="">اختر المادة</option>';
-
+          
           Object.keys(visibleLectures).forEach(subject => {
             const option = document.createElement('option');
             option.value = subject;
@@ -1338,7 +1338,7 @@ class AdminManager {
     const subjectSelect = document.getElementById('versionSubject');
     const lectureSelect = document.getElementById('versionLecture');
     const versionsList = document.getElementById('versionsList');
-
+    
     if (!subjectSelect.value) {
       lectureSelect.innerHTML = '<option value="">اختر المحاضرة</option>';
       versionsList.innerHTML = '';
@@ -1348,7 +1348,7 @@ class AdminManager {
     try {
       const { visibleLectures } = await import('./show.js');
       const lectures = visibleLectures[subjectSelect.value] || {};
-
+      
       lectureSelect.innerHTML = '<option value="">اختر المحاضرة</option>';
       Object.keys(lectures).forEach(lectureNum => {
         const option = document.createElement('option');
@@ -1388,16 +1388,16 @@ class AdminManager {
     try {
       // Add to show.js (visibleLectures)
       await this.updateShowFile(subject, lectureNum);
-
+      
       // Add to lectureNames.js
       await this.updateLectureNamesFile(subject, lectureNum, lectureName);
-
+      
       // Create initial version file
       await this.createInitialVersionFile(subject, lectureNum);
 
       this.showSuccess('تم إضافة المحاضرة بنجاح');
       this.loadExistingLectures();
-
+      
       // Clear form
       document.getElementById('newLectureSubject').value = '';
       document.getElementById('newLectureNumber').value = '';
@@ -1422,13 +1422,13 @@ class AdminManager {
     try {
       // Update show.js to include new version
       await this.addVersionToShowFile(subject, lectureNum, versionNum);
-
+      
       // Create new version file
       await this.createVersionFile(subject, lectureNum, versionNum);
 
       this.showSuccess('تم إضافة النسخة بنجاح');
       this.updateVersionLectures();
-
+      
       // Clear form
       document.getElementById('newVersionNumber').value = '';
     } catch (error) {
@@ -1508,7 +1508,7 @@ class AdminManager {
       // Import current show.js
       const showModule = await import('./show.js?' + Date.now());
       const currentVisibleLectures = { ...showModule.visibleLectures };
-
+      
       // Add new lecture to the structure
       if (!currentVisibleLectures[subject]) {
         currentVisibleLectures[subject] = {};
@@ -1519,10 +1519,10 @@ class AdminManager {
 
       // Generate new show.js content
       const showContent = `export const visibleLectures = ${JSON.stringify(currentVisibleLectures, null, 2)};`;
-
+      
       // Save to file (this requires server-side implementation)
       await this.saveFileContent('show.js', showContent);
-
+      
     } catch (error) {
       console.error('Error updating show.js:', error);
       throw error;
@@ -1534,7 +1534,7 @@ class AdminManager {
       // Import current lectureNames.js
       const namesModule = await import('./lectureNames.js?' + Date.now());
       const currentLectureNames = { ...namesModule.lectureNames };
-
+      
       // Update lecture name
       if (!currentLectureNames[subject]) {
         currentLectureNames[subject] = {};
@@ -1543,10 +1543,10 @@ class AdminManager {
 
       // Generate new lectureNames.js content
       const namesContent = `export const lectureNames = ${JSON.stringify(currentLectureNames, null, 2)};`;
-
+      
       // Save to file
       await this.saveFileContent('lectureNames.js', namesContent);
-
+      
     } catch (error) {
       console.error('Error updating lectureNames.js:', error);
       throw error;
@@ -1558,7 +1558,7 @@ class AdminManager {
       // Import current show.js
       const showModule = await import('./show.js?' + Date.now());
       const currentVisibleLectures = { ...showModule.visibleLectures };
-
+      
       // Add version if it doesn't exist
       if (currentVisibleLectures[subject] && currentVisibleLectures[subject][lectureNum]) {
         if (!currentVisibleLectures[subject][lectureNum].includes(parseInt(versionNum))) {
@@ -1569,10 +1569,10 @@ class AdminManager {
 
       // Generate new show.js content
       const showContent = `export const visibleLectures = ${JSON.stringify(currentVisibleLectures, null, 2)};`;
-
+      
       // Save to file
       await this.saveFileContent('show.js', showContent);
-
+      
     } catch (error) {
       console.error('Error adding version to show.js:', error);
       throw error;
@@ -1645,7 +1645,7 @@ class AdminManager {
     document.getElementById('deleteSubject').addEventListener('change', (e) => {
       const lectureStep = document.getElementById('deleteLectureStep');
       const versionStep = document.getElementById('deleteVersionStep');
-
+      
       if (e.target.value) {
         lectureStep.style.display = 'block';
         versionStep.style.display = 'none';
@@ -1660,7 +1660,7 @@ class AdminManager {
     // Lecture selection
     document.getElementById('deleteLecture').addEventListener('change', (e) => {
       const versionStep = document.getElementById('deleteVersionStep');
-
+      
       if (e.target.value) {
         versionStep.style.display = 'block';
         this.selectedDeleteLecture = e.target.value;
@@ -1684,9 +1684,9 @@ class AdminManager {
     try {
       const { visibleLectures } = await import('./show.js?' + Date.now());
       const deleteSubject = document.getElementById('deleteSubject');
-
+      
       deleteSubject.innerHTML = '<option value="">اختر المادة</option>';
-
+      
       Object.keys(visibleLectures).forEach(subject => {
         const option = document.createElement('option');
         option.value = subject;
@@ -1704,9 +1704,9 @@ class AdminManager {
       const { visibleLectures } = await import('./show.js?' + Date.now());
       const { lectureNames } = await import('./lectureNames.js?' + Date.now());
       const deleteLecture = document.getElementById('deleteLecture');
-
+      
       deleteLecture.innerHTML = '<option value="">اختر المحاضرة</option>';
-
+      
       const lectures = visibleLectures[this.selectedDeleteSubject] || {};
       Object.keys(lectures).forEach(lectureNum => {
         const option = document.createElement('option');
@@ -1725,9 +1725,9 @@ class AdminManager {
     try {
       const { visibleLectures } = await import('./show.js?' + Date.now());
       const deleteVersion = document.getElementById('deleteVersion');
-
+      
       deleteVersion.innerHTML = '<option value="">اختر النسخة</option>';
-
+      
       const versions = visibleLectures[this.selectedDeleteSubject]?.[this.selectedDeleteLecture] || [];
       versions.forEach(versionNum => {
         const option = document.createElement('option');
@@ -1757,10 +1757,10 @@ class AdminManager {
     try {
       await this.deleteVersion(this.selectedDeleteSubject, this.selectedDeleteLecture, selectedVersion);
       this.showSuccess('تم حذف النسخة بنجاح');
-
+      
       // Reset the form
       this.loadDeleteVersions();
-
+      
       // If no versions left, reset lecture selection
       const { visibleLectures } = await import('./show.js?' + Date.now());
       const remainingVersions = visibleLectures[this.selectedDeleteSubject]?.[this.selectedDeleteLecture] || [];
@@ -1793,7 +1793,7 @@ class AdminManager {
   async deleteVersion(subject, lectureNum, versionNum) {
     // Delete version file
     const filePath = `${subject}/${subject}${lectureNum}/${subject}${lectureNum}_v${versionNum}.js`;
-
+    
     const response = await fetch('/admin/delete-file', {
       method: 'DELETE',
       headers: {
@@ -1844,18 +1844,18 @@ class AdminManager {
   async removeVersionFromShowFile(subject, lectureNum, versionNum) {
     const showModule = await import('./show.js?' + Date.now());
     const currentVisibleLectures = { ...showModule.visibleLectures };
-
+    
     if (currentVisibleLectures[subject] && currentVisibleLectures[subject][lectureNum]) {
       const versions = currentVisibleLectures[subject][lectureNum];
       const index = versions.indexOf(parseInt(versionNum));
       if (index > -1) {
         versions.splice(index, 1);
       }
-
+      
       // If no versions left, remove the lecture
       if (versions.length === 0) {
         delete currentVisibleLectures[subject][lectureNum];
-
+        
         // If no lectures left, remove the subject
         if (Object.keys(currentVisibleLectures[subject]).length === 0) {
           delete currentVisibleLectures[subject];
@@ -1871,10 +1871,10 @@ class AdminManager {
     // Remove from show.js
     const showModule = await import('./show.js?' + Date.now());
     const currentVisibleLectures = { ...showModule.visibleLectures };
-
+    
     if (currentVisibleLectures[subject]) {
       delete currentVisibleLectures[subject][lectureNum];
-
+      
       if (Object.keys(currentVisibleLectures[subject]).length === 0) {
         delete currentVisibleLectures[subject];
       }
@@ -1886,10 +1886,10 @@ class AdminManager {
     // Remove from lectureNames.js
     const namesModule = await import('./lectureNames.js?' + Date.now());
     const currentLectureNames = { ...namesModule.lectureNames };
-
+    
     if (currentLectureNames[subject]) {
       delete currentLectureNames[subject][lectureNum];
-
+      
       if (Object.keys(currentLectureNames[subject]).length === 0) {
         delete currentLectureNames[subject];
       }
@@ -1921,23 +1921,23 @@ class AdminManager {
   async loadDeleteDropdowns() {
     try {
       const { visibleLectures } = await import('./show.js?' + Date.now());
-
+      
       const deleteSubjectSelect = document.getElementById('deleteSubject');
       const versionSubjectSelect = document.getElementById('versionSubject');
-
+      
       // Update both delete and version management dropdowns
       [deleteSubjectSelect, versionSubjectSelect].forEach(select => {
         if (select) {
           const currentValue = select.value;
           select.innerHTML = '<option value="">اختر المادة</option>';
-
+          
           Object.keys(visibleLectures).forEach(subject => {
             const option = document.createElement('option');
             option.value = subject;
             option.textContent = subject;
             select.appendChild(option);
           });
-
+          
           if (currentValue && visibleLectures[currentValue]) {
             select.value = currentValue;
           }
