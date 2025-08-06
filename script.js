@@ -15,7 +15,7 @@ timerDiv.style.margin = "10px 0";
 timerDiv.innerHTML = `
   <label>
     <input type="checkbox" id="timerToggle" />
-    تفعيل المؤقت 45 ثانية لكل سؤال
+    تفعيل المؤقت 43 ثانية لكل سؤال
   </label>
 `;
 controlsContainer.insertBefore(timerDiv, loadBtn);
@@ -25,8 +25,8 @@ const questionNavigatorDiv = document.createElement("div");
 questionNavigatorDiv.style.margin = "15px 0";
 questionNavigatorDiv.style.display = "none"; // مخفي بالبداية
 questionNavigatorDiv.innerHTML = `
-  <label for="questionSelect">اختر السؤال:</label>
   <select id="questionSelect" style="width: 100%; padding: 10px; font-size: 16px; border-radius: 8px; border: 1.8px solid #007bff; background-color: #e7f1ff; color: #004085; cursor: pointer; box-sizing: border-box;"></select>
+  <div id="navigatorTimer" style="color: red; font-size: 16px; font-weight: bold; margin-top: 2px; text-align: center; display: none;"></div>
 `;
 controlsContainer.parentNode.insertBefore(questionNavigatorDiv, questionsContainer);
 
@@ -36,7 +36,7 @@ let correctCount = 0;
 let answered = false;
 let timerEnabled = false;
 let timerInterval;
-let timeLeft = 45;  // زمن 45 ثانية لكل سؤال
+let timeLeft = 43;  // زمن 43 ثانية لكل سؤال
 
 // حالة كل سؤال: "unanswered", "correct", "wrong"
 let questionStatus = [];
@@ -127,7 +127,7 @@ versionSelect.addEventListener("change", () => {
 
 // دالة بدء المؤقت لكل سؤال
 function startTimer() {
-  timeLeft = 45;  // وقت 45 ثانية
+  timeLeft = 43;  // وقت 43 ثانية
   updateTimerText();
 
   // تشغيل صوت بداية السؤال
@@ -167,9 +167,13 @@ function startTimer() {
 }
 
 function updateTimerText() {
-  const timerTextElem = document.getElementById("timerText");
-  if(timerTextElem){
-    timerTextElem.textContent = `الوقت المتبقي: ${timeLeft} ثانية`;
+  const navigatorTimer = document.getElementById("navigatorTimer");
+  
+  if(navigatorTimer && timerEnabled && !answered && timeLeft > 0) {
+    navigatorTimer.textContent = `الوقت المتبقي: ${timeLeft} ثانية`;
+    navigatorTimer.style.display = "block";
+  } else if(navigatorTimer) {
+    navigatorTimer.style.display = "none";
   }
 }
 
@@ -192,7 +196,8 @@ function updateQuestionNavigator() {
     } else if (questionStatus[i] === "wrong") {
       statusText = " ✗";  // علامة غلط
     }
-    opt.textContent = `Q${i + 1}${statusText}`;
+    
+    opt.textContent = `Q${i + 1}/${currentQuestions.length}${statusText}`;
     questionSelect.appendChild(opt);
   });
 
@@ -234,6 +239,9 @@ loadBtn.addEventListener("click", async () => {
     questionsContainer.style.display = "block";
     homeBtn.style.display = "block";
     questionNavigatorDiv.style.display = "block";
+    
+    // Hide the title when entering quiz mode
+    document.querySelector("h1").style.display = "none";
 
     updateQuestionNavigator();
     showQuestion();
@@ -249,6 +257,10 @@ homeBtn.addEventListener("click", () => {
   questionsContainer.style.display = "none";
   homeBtn.style.display = "none";
   questionNavigatorDiv.style.display = "none";
+  
+  // Show the title when returning to home
+  document.querySelector("h1").style.display = "block";
+  
   currentQuestions = [];
   currentIndex = 0;
   correctCount = 0;
@@ -287,13 +299,8 @@ function showQuestion() {
 
   const q = currentQuestions[currentIndex];
 
-  const progressText = `Q ${currentIndex + 1} / ${currentQuestions.length}`;
-  const timerHtml = timerEnabled ? `<div id="timerText" style="color:red; margin-bottom: 10px; font-size: 18px;"></div>` : "";
-
   const questionDiv = document.createElement("div");
   questionDiv.innerHTML = `
-    <h3>${progressText}</h3>
-    ${timerHtml}
     <h2>${q.question}</h2>
   `;
 
