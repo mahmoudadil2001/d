@@ -330,6 +330,8 @@ class AuthManager {
       // إبقاء زر القائمة مرئياً دائماً ولكن تحديث وظائفه
       if (authMenuBtn) {
         authMenuBtn.style.display = 'flex';
+        authMenuBtn.innerHTML = '☰';
+        authMenuBtn.style.transform = 'rotate(0deg)';
       }
       if (authMenu) {
         authMenu.style.display = 'none';
@@ -351,8 +353,11 @@ class AuthManager {
       if (mainContainer) {
         mainContainer.style.display = 'block';
       }
+      // إبقاء زر القائمة مرئياً دائماً للمستخدمين غير المسجلين أيضاً
       if (authMenuBtn) {
         authMenuBtn.style.display = 'flex';
+        authMenuBtn.innerHTML = '☰';
+        authMenuBtn.style.transform = 'rotate(0deg)';
       }
       if (authMenu) {
         authMenu.style.display = 'none';
@@ -1132,14 +1137,19 @@ class AuthManager {
     const questionsContainer = document.getElementById('questionsContainer');
 
     if (authMenuBtn) {
-      // Hide auth button when questions are being displayed
-      if (questionsContainer && questionsContainer.style.display !== 'none') {
+      // Only hide auth button when questions are actively being displayed (not just hidden by default)
+      const isInQuizMode = questionsContainer && 
+                          questionsContainer.style.display === 'block' && 
+                          questionsContainer.innerHTML.trim() !== '';
+      
+      if (isInQuizMode) {
         authMenuBtn.style.display = 'none';
         if (userInfoDiv) {
           userInfoDiv.style.display = 'none';
           userInfoDiv.style.opacity = '0';
         }
       } else {
+        // Always show auth button when not in active quiz mode
         authMenuBtn.style.display = 'flex';
         // Reset button state when returning to home
         if (this.isSignedIn()) {
