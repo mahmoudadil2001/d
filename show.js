@@ -1,8 +1,7 @@
+
 export const visibleLectures = {
   endodontics: {
     1: [1, 2],
-    2: [1],
-    3: [1]
   },
   generalmedicine: {
     1: [1],
@@ -29,6 +28,6 @@ export const visibleLectures = {
     1: [1],
   },
   prosthodontics: {
-    1: [1],
-  },
+  1: [1],
+  }
 };
