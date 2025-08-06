@@ -168,11 +168,11 @@ function startTimer() {
 
 function updateTimerText() {
   const navigatorTimer = document.getElementById("navigatorTimer");
-  
-  if(navigatorTimer && timerEnabled && !answered && timeLeft > 0) {
+
+  if (timerEnabled && !answered && timeLeft > 0) {
     navigatorTimer.textContent = `الوقت المتبقي: ${timeLeft} ثانية`;
     navigatorTimer.style.display = "block";
-  } else if(navigatorTimer) {
+  } else {
     navigatorTimer.style.display = "none";
   }
 }
@@ -196,7 +196,7 @@ function updateQuestionNavigator() {
     } else if (questionStatus[i] === "wrong") {
       statusText = " ✗";  // علامة غلط
     }
-    
+
     opt.textContent = `Q${i + 1}/${currentQuestions.length}${statusText}`;
     questionSelect.appendChild(opt);
   });
@@ -226,6 +226,11 @@ loadBtn.addEventListener("click", async () => {
 
   timerEnabled = document.getElementById("timerToggle").checked;
 
+  const navigatorTimer = document.getElementById("navigatorTimer");
+  if (!timerEnabled) {
+    navigatorTimer.style.display = "none";
+  }
+
   const path = `./${subject}/${subject}${lecture}/${subject}${lecture}_v${version}.js`;
 
   try {
@@ -239,7 +244,7 @@ loadBtn.addEventListener("click", async () => {
     questionsContainer.style.display = "block";
     homeBtn.style.display = "block";
     questionNavigatorDiv.style.display = "block";
-    
+
     // Hide the title when entering quiz mode
     document.querySelector("h1").style.display = "none";
 
@@ -257,10 +262,10 @@ homeBtn.addEventListener("click", () => {
   questionsContainer.style.display = "none";
   homeBtn.style.display = "none";
   questionNavigatorDiv.style.display = "none";
-  
+
   // Show the title when returning to home
   document.querySelector("h1").style.display = "block";
-  
+
   currentQuestions = [];
   currentIndex = 0;
   correctCount = 0;
@@ -268,6 +273,9 @@ homeBtn.addEventListener("click", () => {
   questionsContainer.innerHTML = "";
   clearInterval(timerInterval);
   stopTimeDownSound();
+
+  // إخفاء عداد الوقت عند العودة
+  document.getElementById("navigatorTimer").style.display = "none";
 });
 
 // دالة عرض سؤال واحد فقط مع الخيارات
