@@ -278,13 +278,9 @@ function updateQuestionNavigator() {
 document.addEventListener("change", (e) => {
   if (e.target.id === "questionSelect") {
     const selected = parseInt(e.target.value, 10);
-    if (!answered) {
-      // لمنع تغيير السؤال أثناء الإجابة على سؤال مفتوح
-      currentIndex = selected;
-      showQuestion();
-    } else {
-      e.target.value = currentIndex;
-    }
+    // السماح بالتنقل دائماً، حتى للأسئلة المجاب عليها
+    currentIndex = selected;
+    showQuestion();
   }
 });
 
@@ -405,7 +401,7 @@ function showQuestion() {
 
     if (questionStatus[currentIndex] !== "unanswered") {
       btn.disabled = true;
-      answered = true; // تعيين حالة الإجابة للأسئلة المجاب عليها مسبقاً
+      // لا تعيين answered = true هنا للسماح بالتنقل
       if (
         idx === q.answer &&
         (questionStatus[currentIndex] === "correct" ||
