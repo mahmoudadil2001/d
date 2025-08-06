@@ -1,8 +1,6 @@
 import { 
   auth, 
   db,
-  googleProvider, 
-  signInWithPopup, 
   signOut, 
   onAuthStateChanged,
   signInWithEmailAndPassword,
@@ -82,51 +80,7 @@ class AuthManager {
     this.onAuthChange = callback;
   }
 
-  // Sign in with Google
-  async signInWithGoogle() {
-    try {
-      // Configure popup settings to avoid blocking
-      googleProvider.setCustomParameters({
-        prompt: 'select_account'
-      });
-
-      const result = await signInWithPopup(auth, googleProvider);
-      console.log('Google sign-in successful:', result.user);
-
-      // Get user data for Telegram notification
-      const email = result.user.email || 'غير متوفر';
-      const fullName = result.user.displayName || 'غير متوفر';
-      let group = 'غير متوفر';
-
-      // Try to get additional data from Firestore
-      try {
-        const userDoc = await getDoc(doc(db, 'users', result.user.uid));
-        if (userDoc.exists()) {
-          const userData = userDoc.data();
-          group = userData["الجروب"] || userData.group || group;
-        }
-      } catch (error) {
-        console.error('Error fetching user data from Firestore:', error);
-      }
-
-      // Send Telegram notification for Google sign-in
-      await this.sendTelegramNotification(email, fullName, group, 'تسجيل دخول بـ Google 🔑', result.user.uid);
-
-      return result.user;
-    } catch (error) {
-      console.error('Google sign-in error:', error);
-      if (error.code === 'auth/popup-blocked') {
-        this.showError('تم حظر النافذة المنبثقة. يرجى السماح بالنوافذ المنبثقة وإعادة المحاولة');
-      } else if (error.code === 'auth/cancelled-popup-request') {
-        this.showError('تم إلغاء تسجيل الدخول');
-      } else if (error.code === 'auth/unauthorized-domain') {
-        this.showError('النطاق غير مصرح به. يجب إضافة النطاق في إعدادات Firebase');
-      } else {
-        this.showError('فشل تسجيل الدخول باستخدام Google: ' + this.getArabicErrorMessage(error.code));
-      }
-      throw error;
-    }
-  }
+  
 
   // Sign in with email and password
   async signInWithEmail(email, password) {
