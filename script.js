@@ -1,5 +1,9 @@
 import { visibleLectures } from './show.js';
 import { lectureNames } from './lectureNames.js';
+import AuthManager from './auth.js';
+
+// Initialize Authentication
+const authManager = new AuthManager();
 
 const subjectSelect = document.getElementById("subjectSelect");
 const lectureSelect = document.getElementById("lectureSelect");
@@ -172,6 +176,20 @@ function updateTimerText() {
   if (timerEnabled && !answered && timeLeft > 0) {
     navigatorTimer.textContent = `الوقت المتبقي: ${timeLeft} ثانية`;
     navigatorTimer.style.display = "block";
+    
+    // تغيير اللون والنبضات حسب الوقت المتبقي
+    navigatorTimer.className = ""; // إزالة الكلاسات السابقة
+    
+    if (timeLeft > 25) {
+      // أكثر من 25 ثانية - أخضر مع نبضات بطيئة
+      navigatorTimer.classList.add("timer-safe");
+    } else if (timeLeft > 10) {
+      // من 10 إلى 25 ثانية - أصفر مع نبضات متوسطة
+      navigatorTimer.classList.add("timer-warning");
+    } else {
+      // أقل من 10 ثواني - أحمر مع نبضات سريعة
+      navigatorTimer.classList.add("timer-danger");
+    }
   } else {
     navigatorTimer.style.display = "none";
   }
@@ -247,6 +265,9 @@ loadBtn.addEventListener("click", async () => {
 
     // Hide the title when entering quiz mode
     document.querySelector("h1").style.display = "none";
+    
+    // Hide user info when entering quiz mode
+    authManager.updateUserInfoVisibility();
 
     updateQuestionNavigator();
     showQuestion();
@@ -265,6 +286,9 @@ homeBtn.addEventListener("click", () => {
 
   // Show the title when returning to home
   document.querySelector("h1").style.display = "block";
+  
+  // Show user info when returning to home
+  authManager.updateUserInfoVisibility();
 
   currentQuestions = [];
   currentIndex = 0;
@@ -390,5 +414,95 @@ function showNextButton() {
   });
 }
 
-// تشغيل التهيئة أول مرة
-subjectSelect.dispatchEvent(new Event("change"));
+// Authentication Event Listeners
+document.addEventListener('DOMContentLoaded', () => {
+  // Google Sign-in (Sign In Page)
+  const googleSignInBtn = document.getElementById('googleSignInBtn');
+  if (googleSignInBtn) {
+    googleSignInBtn.addEventListener('click', () => {
+      authManager.signInWithGoogle();
+    });
+  }
+
+  // Google Sign-up (Sign Up Page)
+  const googleSignUpBtn = document.getElementById('googleSignUpBtn');
+  if (googleSignUpBtn) {
+    googleSignUpBtn.addEventListener('click', () => {
+      authManager.signInWithGoogle();
+    });
+  }
+
+  // Sign In Form
+  const signInForm = document.getElementById('signInForm');
+  if (signInForm) {
+    signInForm.addEventListener('submit', (e) => {
+      e.preventDefault();
+      const email = document.getElementById('signInEmailInput').value;
+      const password = document.getElementById('signInPasswordInput').value;
+      authManager.signInWithEmail(email, password);
+    });
+  }
+
+  // Sign Up Form
+  const signUpForm = document.getElementById('signUpForm');
+  if (signUpForm) {
+    signUpForm.addEventListener('submit', (e) => {
+      e.preventDefault();
+      const fullName = document.getElementById('fullNameInput').value;
+      const group = document.getElementById('groupInput').value;
+      const email = document.getElementById('signUpEmailInput').value;
+      const password = document.getElementById('signUpPasswordInput').value;
+      const confirmPassword = document.getElementById('confirmPasswordInput').value;
+      
+      if (!fullName || !group || !email || !password || !confirmPassword) {
+        authManager.showError('يرجى ملء جميع الحقول');
+        return;
+      }
+      
+      if (password !== confirmPassword) {
+        authManager.showError('كلمة المرور وتأكيد كلمة المرور غير متطابقتين');
+        return;
+      }
+      
+      authManager.createAccount(email, password, fullName, group);
+    });
+  }
+
+  // Go to Sign Up Button
+  const goToSignUpBtn = document.getElementById('goToSignUpBtn');
+  if (goToSignUpBtn) {
+    goToSignUpBtn.addEventListener('click', () => {
+      authManager.showSignUpPage();
+    });
+  }
+
+  // Back to Sign In Button
+  const backToSignInBtn = document.getElementById('backToSignInBtn');
+  if (backToSignInBtn) {
+    backToSignInBtn.addEventListener('click', () => {
+      authManager.showSignInPage();
+    });
+  }
+});
+
+// Set authentication state change callback
+authManager.setAuthChangeCallback((user) => {
+  if (user) {
+    console.log('User signed in:', user);
+    // Initialize quiz when user signs in
+    if (subjectSelect) {
+      subjectSelect.dispatchEvent(new Event("change"));
+    }
+  } else {
+    console.log('User signed out');
+    // Reset quiz state when user signs out
+    if (questionsContainer) {
+      questionsContainer.innerHTML = "";
+    }
+  }
+});
+
+// تشغيل التهيئة أول مرة (only if user is authenticated)
+if (authManager.isSignedIn()) {
+  subjectSelect.dispatchEvent(new Event("change"));
+}
