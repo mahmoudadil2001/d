@@ -4,8 +4,6 @@ import { initializeApp } from 'https://www.gstatic.com/firebasejs/10.7.1/firebas
 import { getAnalytics } from 'https://www.gstatic.com/firebasejs/10.7.1/firebase-analytics.js';
 import { 
   getAuth, 
-  signInWithPopup, 
-  GoogleAuthProvider, 
   signOut, 
   onAuthStateChanged,
   signInWithEmailAndPassword,
@@ -43,23 +41,10 @@ const analytics = getAnalytics(app);
 const auth = getAuth(app);
 const db = getFirestore(app);
 
-// Configure Google Auth Provider
-const googleProvider = new GoogleAuthProvider();
-googleProvider.addScope('email');
-googleProvider.addScope('profile');
-
-// Set custom parameters for GitHub Pages compatibility
-googleProvider.setCustomParameters({
-  prompt: 'select_account',
-  display: 'popup'
-});
-
 // Export auth and firestore functions
 export {
   auth,
   db,
-  googleProvider,
-  signInWithPopup,
   signOut,
   onAuthStateChanged,
   signInWithEmailAndPassword,
