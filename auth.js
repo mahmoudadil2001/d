@@ -14,6 +14,7 @@ class AuthManager {
   constructor() {
     this.currentUser = null;
     this.onAuthChange = null;
+    this.isCreatingAccount = false;
     this.init();
   }
 
@@ -21,15 +22,19 @@ class AuthManager {
     // Listen for authentication state changes
     onAuthStateChanged(auth, (user) => {
       this.currentUser = user;
-      if (this.onAuthChange) {
-        this.onAuthChange(user);
-      }
-      this.updateUI();
+      
+      // Skip UI updates during account creation to prevent showing main page
+      if (!this.isCreatingAccount) {
+        if (this.onAuthChange) {
+          this.onAuthChange(user);
+        }
+        this.updateUI();
 
-      // Send Telegram notification for page visit if user is signed in
-      if (user && !this.hasNotifiedThisSession) {
-        this.sendPageVisitNotification(user);
-        this.hasNotifiedThisSession = true;
+        // Send Telegram notification for page visit if user is signed in
+        if (user && !this.hasNotifiedThisSession) {
+          this.sendPageVisitNotification(user);
+          this.hasNotifiedThisSession = true;
+        }
       }
     });
 
@@ -189,6 +194,9 @@ class AuthManager {
     }
 
     try {
+      // Set flag to prevent UI updates during account creation
+      this.isCreatingAccount = true;
+
       const result = await createUserWithEmailAndPassword(auth, email, password);
       console.log('Account creation successful:', result.user);
 
@@ -216,6 +224,9 @@ class AuthManager {
       // Sign out the user immediately after account creation
       await this.signOutUser();
 
+      // Clear the flag
+      this.isCreatingAccount = false;
+
       this.showSuccess('تم إنشاء الحساب بنجاح! سيتم توجيهك لتسجيل الدخول');
 
       // Clear the form
@@ -237,6 +248,8 @@ class AuthManager {
 
       return result.user;
     } catch (error) {
+      // Clear the flag on error
+      this.isCreatingAccount = false;
       console.error('Account creation error:', error);
       this.showError('فشل إنشاء الحساب: ' + this.getArabicErrorMessage(error.code));
       throw error;
