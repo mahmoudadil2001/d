@@ -51,6 +51,13 @@ let timeLeft = 43; // زمن 43 ثانية لكل سؤال
 
 // حالة كل سؤال: "unanswered", "correct", "wrong"
 let questionStatus = [];
+// تتبع الإجابات الخاطئة المختارة
+let wrongAnswers = [];
+
+// دالة للعثور على الإجابة الخاطئة المختارة لسؤال معين
+function findSelectedWrongAnswer(questionIndex) {
+  return wrongAnswers[questionIndex] || -1;
+}
 
 // تحميل ملفات الصوت
 const correctSound = new Audio("./sounds/correct.wav");
@@ -302,6 +309,7 @@ loadBtn.addEventListener("click", async () => {
     currentIndex = 0;
     correctCount = 0;
     questionStatus = new Array(currentQuestions.length).fill("unanswered");
+    wrongAnswers = new Array(currentQuestions.length).fill(-1);
 
     controlsContainer.style.display = "none";
     questionsContainer.style.display = "block";
@@ -339,6 +347,7 @@ homeBtn.addEventListener("click", () => {
   currentIndex = 0;
   correctCount = 0;
   questionStatus = [];
+  wrongAnswers = [];
   questionsContainer.innerHTML = "";
   clearInterval(timerInterval);
   stopTimeDownSound();
@@ -353,6 +362,12 @@ function showQuestion() {
   clearInterval(timerInterval);
   stopTimeDownSound();
   questionsContainer.innerHTML = "";
+
+  // إخفاء عداد الوقت عند التنقل بين الأسئلة
+  const navigatorTimer = document.getElementById("navigatorTimer");
+  if (navigatorTimer) {
+    navigatorTimer.style.display = "none";
+  }
 
   // التأكد من إخفاء العنوان بشكل دائم أثناء وضع الاختبار
   const titleElement = document.querySelector("h1");
@@ -390,12 +405,20 @@ function showQuestion() {
 
     if (questionStatus[currentIndex] !== "unanswered") {
       btn.disabled = true;
+      answered = true; // تعيين حالة الإجابة للأسئلة المجاب عليها مسبقاً
       if (
         idx === q.answer &&
         (questionStatus[currentIndex] === "correct" ||
           questionStatus[currentIndex] === "wrong")
       ) {
         btn.style.backgroundColor = "lightgreen";
+      }
+      if (idx !== q.answer && questionStatus[currentIndex] === "wrong") {
+        // إظهار الإجابة الخاطئة المختارة سابقاً
+        const selectedWrongIndex = findSelectedWrongAnswer(currentIndex);
+        if (idx === selectedWrongIndex) {
+          btn.style.backgroundColor = "salmon";
+        }
       }
     } else {
       btn.disabled = false;
@@ -419,6 +442,9 @@ function showQuestion() {
         wrongSound.currentTime = 0;
         wrongSound.play();
         btn.style.backgroundColor = "salmon";
+        
+        // تسجيل الإجابة الخاطئة المختارة
+        wrongAnswers[currentIndex] = idx;
 
         const correctBtn =
           optionsList.children[q.answer].querySelector("button");
@@ -441,7 +467,10 @@ function showQuestion() {
   questionDiv.appendChild(optionsList);
   questionsContainer.appendChild(questionDiv);
 
-  if (timerEnabled) startTimer();
+  // بدء المؤقت فقط للأسئلة غير المجاب عليها
+  if (timerEnabled && questionStatus[currentIndex] === "unanswered") {
+    startTimer();
+  }
 }
 
 // زر التالي
@@ -1439,6 +1468,7 @@ function showFinalResults() {
     currentIndex = 0;
     correctCount = 0;
     questionStatus = new Array(currentQuestions.length).fill("unanswered");
+    wrongAnswers = new Array(currentQuestions.length).fill(-1);
     
     // إظهار العناصر المخفية عند إعادة المحاولة
     document.getElementById("questionSelect").parentNode.style.display = "block";
