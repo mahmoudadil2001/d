@@ -22,7 +22,7 @@ class AuthManager {
     // Listen for authentication state changes
     onAuthStateChanged(auth, (user) => {
       this.currentUser = user;
-      
+
       // Skip UI updates during account creation to prevent showing main page
       if (!this.isCreatingAccount) {
         if (this.onAuthChange) {
@@ -85,7 +85,7 @@ class AuthManager {
     this.onAuthChange = callback;
   }
 
-  
+
 
   // Sign in with email and password
   async signInWithEmail(email, password) {
@@ -382,7 +382,7 @@ class AuthManager {
     }
 
     const freshAuthMenuBtn = document.getElementById('authMenuBtn');
-    
+
     if (freshAuthMenuBtn && authMenu) {
       // Toggle menu visibility
       freshAuthMenuBtn.addEventListener('click', (e) => {
@@ -429,15 +429,12 @@ class AuthManager {
   // تحديث قائمة المستخدم المسجل الدخول
   updateAuthMenuForSignedInUser() {
     const authMenu = document.getElementById('authMenu');
-    
+
     if (authMenu) {
       // تحديث محتوى القائمة للمستخدم المسجل الدخول
       authMenu.innerHTML = `
         <button id="showUserProfileBtn" class="auth-btn primary-btn" style="width: 100%; margin-bottom: 10px;">
           👤 الملف الشخصي
-        </button>
-        <button id="showFriendsBtn" class="auth-btn secondary-btn" style="width: 100%; margin-bottom: 10px;">
-          👥 الأصدقاء
         </button>
         <button id="signOutMenuBtn" class="auth-btn" style="width: 100%; background: #dc3545; color: white;">
           🚪 تسجيل الخروج
@@ -446,27 +443,34 @@ class AuthManager {
 
       // إضافة مستمعي الأحداث للأزرار الجديدة
       const showUserProfileBtn = document.getElementById('showUserProfileBtn');
-      const showFriendsBtn = document.getElementById('showFriendsBtn');
       const signOutMenuBtn = document.getElementById('signOutMenuBtn');
 
       if (showUserProfileBtn) {
-        showUserProfileBtn.addEventListener('click', () => {
-          // تحريك التركيز لمعلومات المستخدم
-          const userInfoToggle = document.getElementById('userInfoToggle');
-          if (userInfoToggle) {
-            userInfoToggle.click();
-          }
+        showUserProfileBtn.addEventListener('click', async (e) => {
+          e.stopPropagation();
+          
+          // إخفاء القائمة أولاً
           authMenu.style.display = 'none';
-        });
-      }
-
-      if (showFriendsBtn) {
-        showFriendsBtn.addEventListener('click', () => {
-          // فتح نافذة الأصدقاء
-          if (window.openFriendsModal) {
-            window.openFriendsModal();
+          
+          // إظهار معلومات المستخدم
+          const userInfoDiv = document.getElementById('userInfo');
+          const authMenuBtn = document.getElementById('authMenuBtn');
+          
+          if (userInfoDiv && authMenuBtn) {
+            // تأكد من تحميل المحتوى
+            if (userInfoDiv.innerHTML.trim() === '') {
+              await this.populateUserInfoContent(userInfoDiv);
+            }
+            
+            // إظهار معلومات المستخدم دائماً عند النقر على الملف الشخصي
+            userInfoDiv.style.display = 'block';
+            setTimeout(() => {
+              userInfoDiv.style.opacity = '1';
+              userInfoDiv.style.transform = 'translateY(0)';
+            }, 10);
+            authMenuBtn.innerHTML = '✕';
+            authMenuBtn.style.transform = 'rotate(180deg)';
           }
-          authMenu.style.display = 'none';
         });
       }
 
@@ -486,25 +490,66 @@ class AuthManager {
   setupMenuButton() {
     const authMenuBtn = document.getElementById('authMenuBtn');
     const authMenu = document.getElementById('authMenu');
-    
-    if (authMenuBtn && authMenu) {
+    const userInfoDiv = document.getElementById('userInfo');
+
+    if (authMenuBtn) {
       // إزالة المستمع القديم وإضافة جديد
       const newAuthMenuBtn = authMenuBtn.cloneNode(true);
       authMenuBtn.parentNode.replaceChild(newAuthMenuBtn, authMenuBtn);
-      
+
       const freshAuthMenuBtn = document.getElementById('authMenuBtn');
-      
-      // Toggle menu visibility
+
+      // Toggle functionality based on current state
       freshAuthMenuBtn.addEventListener('click', (e) => {
         e.stopPropagation();
-        const isVisible = authMenu.style.display !== 'none';
-        authMenu.style.display = isVisible ? 'none' : 'block';
+        
+        // Check if user info is currently visible
+        const isUserInfoVisible = userInfoDiv && userInfoDiv.style.display === 'block';
+        
+        if (isUserInfoVisible) {
+          // Hide user info
+          userInfoDiv.style.opacity = '0';
+          userInfoDiv.style.transform = 'translateY(-10px)';
+          setTimeout(() => {
+            userInfoDiv.style.display = 'none';
+          }, 300);
+          freshAuthMenuBtn.innerHTML = '☰';
+          freshAuthMenuBtn.style.transform = 'rotate(0deg)';
+          
+          // Also hide auth menu if it's open
+          if (authMenu) {
+            authMenu.style.display = 'none';
+          }
+        } else {
+          // For signed-in users, show auth menu
+          if (this.isSignedIn() && authMenu) {
+            const isMenuVisible = authMenu.style.display === 'block';
+            authMenu.style.display = isMenuVisible ? 'none' : 'block';
+          }
+          // For non-signed-in users, also show auth menu
+          else if (!this.isSignedIn() && authMenu) {
+            const isMenuVisible = authMenu.style.display === 'block';
+            authMenu.style.display = isMenuVisible ? 'none' : 'block';
+          }
+        }
       });
 
       // Close menu when clicking outside
       document.addEventListener('click', (e) => {
-        if (!authMenu.contains(e.target) && !freshAuthMenuBtn.contains(e.target)) {
+        if (authMenu && !authMenu.contains(e.target) && !freshAuthMenuBtn.contains(e.target)) {
           authMenu.style.display = 'none';
+        }
+        
+        // Also close user info when clicking outside
+        if (userInfoDiv && userInfoDiv.style.display === 'block' && 
+            !userInfoDiv.contains(e.target) && !freshAuthMenuBtn.contains(e.target)) {
+          userInfoDiv.style.opacity = '0';
+          userInfoDiv.style.transform = 'translateY(-10px)';
+          setTimeout(() => {
+            userInfoDiv.style.display = 'none';
+          }, 300);
+          freshAuthMenuBtn.innerHTML = '☰';
+          freshAuthMenuBtn.style.transform = 'rotate(0deg)';
         }
       });
     }
@@ -593,93 +638,53 @@ class AuthManager {
   // Show user info
   async showUserInfo() {
     let userInfoDiv = document.getElementById('userInfo');
-    let toggleBtn = document.getElementById('userInfoToggle');
+    const authMenuBtn = document.getElementById('authMenuBtn');
 
-    if (!userInfoDiv) {
-      // Create toggle button first
-      toggleBtn = document.createElement('button');
-      toggleBtn.id = 'userInfoToggle';
+    // Hide the original auth menu button and use it as our toggle
+    if (authMenuBtn) {
+      authMenuBtn.style.display = 'flex';
+
+      // Clear any existing event listeners
+      const newAuthMenuBtn = authMenuBtn.cloneNode(true);
+      authMenuBtn.parentNode.replaceChild(newAuthMenuBtn, authMenuBtn);
+
+      // Get reference to the new button
+      const toggleBtn = document.getElementById('authMenuBtn');
       toggleBtn.innerHTML = '☰';
-      toggleBtn.style.cssText = `
-        position: fixed;
-        top: 20px;
-        right: 20px;
-        background: linear-gradient(135deg, #667eea, #764ba2);
-        color: white;
-        border: none;
-        border-radius: 50%;
-        width: 50px;
-        height: 50px;
-        font-size: 20px;
-        cursor: pointer;
-        z-index: 1000;
-        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
-        transition: all 0.3s ease;
-        font-family: 'Tajawal', sans-serif;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-      `;
 
-      userInfoDiv = document.createElement('div');
-      userInfoDiv.id = 'userInfo';
-      userInfoDiv.style.cssText = `
-        background: linear-gradient(135deg, #667eea, #764ba2);
-        color: white;
-        padding: 15px 20px;
-        border-radius: 12px;
-        box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
-        font-family: 'Tajawal', sans-serif;
-        font-size: 16px;
-        margin-bottom: 20px;
-        text-align: center;
-        display: none;
-        opacity: 0;
-        transform: translateY(-10px);
-        transition: all 0.3s ease;
-      `;
+      if (!userInfoDiv) {
+        userInfoDiv = document.createElement('div');
+        userInfoDiv.id = 'userInfo';
+        userInfoDiv.style.cssText = `
+          background: linear-gradient(135deg, #667eea, #764ba2);
+          color: white;
+          padding: 15px 20px;
+          border-radius: 12px;
+          box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+          font-family: 'Tajawal', sans-serif;
+          font-size: 16px;
+          margin-bottom: 20px;
+          text-align: center;
+          display: none;
+          opacity: 0;
+          transform: translateY(-10px);
+          transition: all 0.3s ease;
+        `;
 
-      // Insert the toggle button at the top of body
-      document.body.appendChild(toggleBtn);
+        // Insert the user info above the title
+        const container = document.querySelector('.container');
+        const title = container.querySelector('h1');
+        container.insertBefore(userInfoDiv, title);
+      }
 
-      // Insert the user info above the title
-      const container = document.querySelector('.container');
-      const title = container.querySelector('h1');
-      container.insertBefore(userInfoDiv, title);
-
-      // Add toggle functionality
-      toggleBtn.addEventListener('click', async () => {
-        const isVisible = userInfoDiv.style.display !== 'none';
-
-        if (isVisible) {
-          // Hide
-          userInfoDiv.style.opacity = '0';
-          userInfoDiv.style.transform = 'translateY(-10px)';
-          setTimeout(() => {
-            userInfoDiv.style.display = 'none';
-          }, 300);
-          toggleBtn.innerHTML = '☰';
-          toggleBtn.style.transform = 'rotate(0deg)';
-        } else {
-          // Show - but first make sure content is loaded
-          if (userInfoDiv.innerHTML.trim() === '') {
-            // Content not loaded yet, populate it
-            await this.populateUserInfoContent(userInfoDiv);
-          }
-
-          userInfoDiv.style.display = 'block';
-          setTimeout(() => {
-            userInfoDiv.style.opacity = '1';
-            userInfoDiv.style.transform = 'translateY(0)';
-          }, 10);
-          toggleBtn.innerHTML = '✕';
-          toggleBtn.style.transform = 'rotate(180deg)';
-        }
-      });
+      // Add toggle functionality - this will be handled by setupMenuButton now
+      // Just populate content initially if needed
+      this.setupMenuButton();
 
       // Add hover effects
       toggleBtn.addEventListener('mouseenter', () => {
-        toggleBtn.style.transform += ' scale(1.1)';
+        const currentTransform = toggleBtn.style.transform || '';
+        toggleBtn.style.transform = currentTransform + ' scale(1.1)';
         toggleBtn.style.boxShadow = '0 6px 20px rgba(0, 0, 0, 0.3)';
       });
 
@@ -742,16 +747,6 @@ class AuthManager {
 
     // Hide user info when entering quiz mode
     this.updateUserInfoVisibility();
-
-    // Hide auth menu if visible
-    const authMenuBtn = document.getElementById('authMenuBtn');
-    const authMenuDiv = document.getElementById('authMenu');
-    if (authMenuBtn) {
-      authMenuBtn.style.display = 'none';
-    }
-    if (authMenuDiv) {
-      authMenuDiv.style.display = 'none';
-    }
   }
 
   // Separate method to populate user info content
@@ -851,7 +846,7 @@ class AuthManager {
           window.openFriendsModal();
         }
         // إخفاء القائمة بعد النقر
-        const toggleBtn = document.getElementById('userInfoToggle');
+        const toggleBtn = document.getElementById('authMenuBtn');
         if (toggleBtn) {
           userInfoDiv.style.opacity = '0';
           userInfoDiv.style.transform = 'translateY(-10px)';
@@ -932,7 +927,7 @@ class AuthManager {
           window.openFriendsModal();
         }
         // إخفاء القائمة بعد النقر
-        const toggleBtn = document.getElementById('userInfoToggle');
+        const toggleBtn = document.getElementById('authMenuBtn');
         if (toggleBtn) {
           userInfoDiv.style.opacity = '0';
           userInfoDiv.style.transform = 'translateY(-10px)';
@@ -1133,19 +1128,24 @@ class AuthManager {
   // Update user info visibility based on quiz state
   updateUserInfoVisibility() {
     const userInfoDiv = document.getElementById('userInfo');
-    const toggleBtn = document.getElementById('userInfoToggle');
+    const authMenuBtn = document.getElementById('authMenuBtn');
     const questionsContainer = document.getElementById('questionsContainer');
 
-    if (toggleBtn) {
-      // Hide toggle button when questions are being displayed
+    if (authMenuBtn) {
+      // Hide auth button when questions are being displayed
       if (questionsContainer && questionsContainer.style.display !== 'none') {
-        toggleBtn.style.display = 'none';
+        authMenuBtn.style.display = 'none';
         if (userInfoDiv) {
           userInfoDiv.style.display = 'none';
           userInfoDiv.style.opacity = '0';
         }
       } else {
-        toggleBtn.style.display = 'flex';
+        authMenuBtn.style.display = 'flex';
+        // Reset button state when returning to home
+        if (this.isSignedIn()) {
+          authMenuBtn.innerHTML = '☰';
+          authMenuBtn.style.transform = 'rotate(0deg)';
+        }
         // Don't automatically show userInfo - let user control it with toggle
         if (userInfoDiv) {
           // Keep userInfo hidden by default unless user manually opened it
@@ -1161,7 +1161,7 @@ class AuthManager {
   // Hide user info when user signs out
   hideUserInfo() {
     const userInfoDiv = document.getElementById('userInfo');
-    const toggleBtn = document.getElementById('userInfoToggle');
+    const authMenuBtn = document.getElementById('authMenuBtn');
 
     if (userInfoDiv) {
       userInfoDiv.style.display = 'none';
@@ -1169,8 +1169,11 @@ class AuthManager {
       userInfoDiv.innerHTML = '';
     }
 
-    if (toggleBtn) {
-      toggleBtn.style.display = 'none';
+    // Reset the auth menu button to its original state
+    if (authMenuBtn) {
+      authMenuBtn.innerHTML = '☰';
+      authMenuBtn.style.transform = 'rotate(0deg)';
+      authMenuBtn.style.display = 'flex';
     }
   }
 
