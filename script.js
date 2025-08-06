@@ -1,7 +1,7 @@
-import { visibleLectures } from './show.js';
-import { lectureNames } from './lectureNames.js';
-import AuthManager from './auth.js';
-import FriendsManager from './friends.js';
+import { visibleLectures } from "./show.js";
+import { lectureNames } from "./lectureNames.js";
+import AuthManager from "./auth.js";
+import FriendsManager from "./friends.js";
 
 // Initialize Authentication
 const authManager = new AuthManager();
@@ -36,7 +36,10 @@ questionNavigatorDiv.innerHTML = `
   <select id="questionSelect" style="width: 100%; padding: 10px; font-size: 16px; border-radius: 8px; border: 1.8px solid #007bff; background-color: #e7f1ff; color: #004085; cursor: pointer; box-sizing: border-box;"></select>
   <div id="navigatorTimer" style="color: red; font-size: 16px; font-weight: bold; margin-top: 2px; text-align: center; display: none;"></div>
 `;
-controlsContainer.parentNode.insertBefore(questionNavigatorDiv, questionsContainer);
+controlsContainer.parentNode.insertBefore(
+  questionNavigatorDiv,
+  questionsContainer,
+);
 
 let currentQuestions = [];
 let currentIndex = 0;
@@ -44,18 +47,18 @@ let correctCount = 0;
 let answered = false;
 let timerEnabled = false;
 let timerInterval;
-let timeLeft = 43;  // زمن 43 ثانية لكل سؤال
+let timeLeft = 43; // زمن 43 ثانية لكل سؤال
 
 // حالة كل سؤال: "unanswered", "correct", "wrong"
 let questionStatus = [];
 
 // تحميل ملفات الصوت
-const correctSound = new Audio('./sounds/correct.wav');
-const wrongSound = new Audio('./sounds/wrong.wav');
-const clickSound = new Audio('./sounds/click.wav');
-const uiClickSound = new Audio('./sounds/uiclick.wav');
-const subjectSound = new Audio('./sounds/subject.wav');  // صوت اختيار مادة/محاضرة/نسخة
-const timeDownSound = new Audio('./sounds/timedown.wav'); // صوت المؤقت عند بداية السؤال
+const correctSound = new Audio("./sounds/correct.wav");
+const wrongSound = new Audio("./sounds/wrong.wav");
+const clickSound = new Audio("./sounds/click.wav");
+const uiClickSound = new Audio("./sounds/uiclick.wav");
+const subjectSound = new Audio("./sounds/subject.wav"); // صوت اختيار مادة/محاضرة/نسخة
+const timeDownSound = new Audio("./sounds/timedown.mp3"); // صوت المؤقت عند بداية السؤال
 
 // تشغيل صوت click عند الضغط على أي زر ما عدا خيارات الإجابة
 document.addEventListener("click", (e) => {
@@ -68,7 +71,7 @@ document.addEventListener("click", (e) => {
 });
 
 // تشغيل صوت عند فتح select box (عند الضغط فقط)
-[subjectSelect, lectureSelect, versionSelect].forEach(select => {
+[subjectSelect, lectureSelect, versionSelect].forEach((select) => {
   select.addEventListener("mousedown", () => {
     uiClickSound.currentTime = 0;
     uiClickSound.play();
@@ -83,7 +86,7 @@ function playSubjectSound() {
 
 // تعبئة قائمة المواد
 const subjects = Object.keys(visibleLectures);
-subjects.forEach(subject => {
+subjects.forEach((subject) => {
   const opt = document.createElement("option");
   opt.value = subject;
   opt.textContent = subject;
@@ -100,7 +103,7 @@ subjectSelect.addEventListener("change", () => {
   const selected = subjectSelect.value;
   const lectures = Object.keys(visibleLectures[selected] || {});
 
-  lectures.forEach(lec => {
+  lectures.forEach((lec) => {
     const opt = document.createElement("option");
     opt.value = lec;
     const name = lectureNames[selected]?.[lec] || "Unknown";
@@ -137,7 +140,7 @@ function updateVersionSelector() {
     versionSelect.style.display = "block";
     versionLoginMessage.style.display = "none";
 
-    versions.forEach(v => {
+    versions.forEach((v) => {
       const opt = document.createElement("option");
       opt.value = v;
       opt.textContent = `Version ${v}`;
@@ -160,12 +163,23 @@ function updateVersionSelector() {
 
 // دالة بدء المؤقت لكل سؤال
 function startTimer() {
-  timeLeft = 43;  // وقت 43 ثانية
+  timeLeft = 43; // وقت 43 ثانية
   updateTimerText();
 
-  // تشغيل صوت بداية السؤال
+  // تشغيل صوت بداية السؤال مع التأكد من التشغيل
   timeDownSound.currentTime = 0;
-  timeDownSound.play();
+  const playPromise = timeDownSound.play();
+
+  // التعامل مع متصفحات تمنع التشغيل التلقائي
+  if (playPromise !== undefined) {
+    playPromise
+      .then(() => {
+        console.log("Timer sound started successfully");
+      })
+      .catch((error) => {
+        console.log("Timer sound autoplay prevented:", error);
+      });
+  }
 
   timerInterval = setInterval(() => {
     timeLeft--;
@@ -182,11 +196,12 @@ function startTimer() {
         // إبراز الجواب الصحيح
         const options = document.querySelectorAll(".option-btn");
         if (options[currentQuestions[currentIndex].answer]) {
-          options[currentQuestions[currentIndex].answer].style.backgroundColor = "lightgreen";
+          options[currentQuestions[currentIndex].answer].style.backgroundColor =
+            "lightgreen";
         }
 
         // تعطيل كل الأزرار بعد انتهاء الوقت
-        options.forEach(btn => btn.disabled = true);
+        options.forEach((btn) => (btn.disabled = true));
 
         // تحديث حالة السؤال إلى خاطئ
         questionStatus[currentIndex] = "wrong";
@@ -239,9 +254,9 @@ function updateQuestionNavigator() {
     opt.value = i;
     let statusText = "";
     if (questionStatus[i] === "correct") {
-      statusText = " ✓";  // علامة صح
+      statusText = " ✓"; // علامة صح
     } else if (questionStatus[i] === "wrong") {
-      statusText = " ✗";  // علامة غلط
+      statusText = " ✗"; // علامة غلط
     }
 
     opt.textContent = `Q${i + 1}/${currentQuestions.length}${statusText}`;
@@ -256,7 +271,8 @@ function updateQuestionNavigator() {
 document.addEventListener("change", (e) => {
   if (e.target.id === "questionSelect") {
     const selected = parseInt(e.target.value, 10);
-    if (!answered) { // لمنع تغيير السؤال أثناء الإجابة على سؤال مفتوح
+    if (!answered) {
+      // لمنع تغيير السؤال أثناء الإجابة على سؤال مفتوح
       currentIndex = selected;
       showQuestion();
     } else {
@@ -374,7 +390,11 @@ function showQuestion() {
 
     if (questionStatus[currentIndex] !== "unanswered") {
       btn.disabled = true;
-      if (idx === q.answer && (questionStatus[currentIndex] === "correct" || questionStatus[currentIndex] === "wrong")) {
+      if (
+        idx === q.answer &&
+        (questionStatus[currentIndex] === "correct" ||
+          questionStatus[currentIndex] === "wrong")
+      ) {
         btn.style.backgroundColor = "lightgreen";
       }
     } else {
@@ -385,7 +405,7 @@ function showQuestion() {
       if (answered) return;
       answered = true;
       clearInterval(timerInterval);
-      stopTimeDownSound();
+      stopTimeDownSound(); // إيقاف صوت العد التنازلي عند الإجابة
 
       if (idx === q.answer) {
         correctSound.currentTime = 0;
@@ -400,7 +420,8 @@ function showQuestion() {
         wrongSound.play();
         btn.style.backgroundColor = "salmon";
 
-        const correctBtn = optionsList.children[q.answer].querySelector("button");
+        const correctBtn =
+          optionsList.children[q.answer].querySelector("button");
         correctBtn.style.backgroundColor = "lightgreen";
 
         questionStatus[currentIndex] = "wrong";
@@ -408,7 +429,7 @@ function showQuestion() {
         showNextButton();
       }
 
-      Array.from(optionsList.children).forEach(li => {
+      Array.from(optionsList.children).forEach((li) => {
         li.querySelector("button").disabled = true;
       });
     });
@@ -420,13 +441,14 @@ function showQuestion() {
   questionDiv.appendChild(optionsList);
   questionsContainer.appendChild(questionDiv);
 
-  if(timerEnabled) startTimer();
+  if (timerEnabled) startTimer();
 }
 
 // زر التالي
 function showNextButton() {
   const nextBtn = document.createElement("button");
-  nextBtn.textContent = currentIndex + 1 === currentQuestions.length ? "عرض النتيجة" : "التالي";
+  nextBtn.textContent =
+    currentIndex + 1 === currentQuestions.length ? "عرض النتيجة" : "التالي";
   nextBtn.style.marginTop = "20px";
   questionsContainer.appendChild(nextBtn);
 
@@ -442,52 +464,54 @@ function showNextButton() {
 }
 
 // Authentication Event Listeners
-document.addEventListener('DOMContentLoaded', () => {
+document.addEventListener("DOMContentLoaded", () => {
   // Google Sign-in (Sign In Page)
-  const googleSignInBtn = document.getElementById('googleSignInBtn');
+  const googleSignInBtn = document.getElementById("googleSignInBtn");
   if (googleSignInBtn) {
-    googleSignInBtn.addEventListener('click', () => {
+    googleSignInBtn.addEventListener("click", () => {
       authManager.signInWithGoogle();
     });
   }
 
   // Google Sign-up (Sign Up Page)
-  const googleSignUpBtn = document.getElementById('googleSignUpBtn');
+  const googleSignUpBtn = document.getElementById("googleSignUpBtn");
   if (googleSignUpBtn) {
-    googleSignUpBtn.addEventListener('click', () => {
+    googleSignUpBtn.addEventListener("click", () => {
       authManager.signInWithGoogle();
     });
   }
 
   // Sign In Form
-  const signInForm = document.getElementById('signInForm');
+  const signInForm = document.getElementById("signInForm");
   if (signInForm) {
-    signInForm.addEventListener('submit', (e) => {
+    signInForm.addEventListener("submit", (e) => {
       e.preventDefault();
-      const email = document.getElementById('signInEmailInput').value;
-      const password = document.getElementById('signInPasswordInput').value;
+      const email = document.getElementById("signInEmailInput").value;
+      const password = document.getElementById("signInPasswordInput").value;
       authManager.signInWithEmail(email, password);
     });
   }
 
   // Sign Up Form
-  const signUpForm = document.getElementById('signUpForm');
+  const signUpForm = document.getElementById("signUpForm");
   if (signUpForm) {
-    signUpForm.addEventListener('submit', (e) => {
+    signUpForm.addEventListener("submit", (e) => {
       e.preventDefault();
-      const fullName = document.getElementById('fullNameInput').value;
-      const group = document.getElementById('groupInput').value;
-      const email = document.getElementById('signUpEmailInput').value;
-      const password = document.getElementById('signUpPasswordInput').value;
-      const confirmPassword = document.getElementById('confirmPasswordInput').value;
+      const fullName = document.getElementById("fullNameInput").value;
+      const group = document.getElementById("groupInput").value;
+      const email = document.getElementById("signUpEmailInput").value;
+      const password = document.getElementById("signUpPasswordInput").value;
+      const confirmPassword = document.getElementById(
+        "confirmPasswordInput",
+      ).value;
 
       if (!fullName || !group || !email || !password || !confirmPassword) {
-        authManager.showError('يرجى ملء جميع الحقول');
+        authManager.showError("يرجى ملء جميع الحقول");
         return;
       }
 
       if (password !== confirmPassword) {
-        authManager.showError('كلمة المرور وتأكيد كلمة المرور غير متطابقتين');
+        authManager.showError("كلمة المرور وتأكيد كلمة المرور غير متطابقتين");
         return;
       }
 
@@ -496,17 +520,17 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
   // Go to Sign Up Button
-  const goToSignUpBtn = document.getElementById('goToSignUpBtn');
+  const goToSignUpBtn = document.getElementById("goToSignUpBtn");
   if (goToSignUpBtn) {
-    goToSignUpBtn.addEventListener('click', () => {
+    goToSignUpBtn.addEventListener("click", () => {
       authManager.showSignUpPage();
     });
   }
 
   // Back to Sign In Button
-  const backToSignInBtn = document.getElementById('backToSignInBtn');
+  const backToSignInBtn = document.getElementById("backToSignInBtn");
   if (backToSignInBtn) {
-    backToSignInBtn.addEventListener('click', () => {
+    backToSignInBtn.addEventListener("click", () => {
       authManager.showSignInPage();
     });
   }
@@ -516,9 +540,9 @@ document.addEventListener('DOMContentLoaded', () => {
 authManager.setAuthChangeCallback((user) => {
   // تحديث المستخدم الحالي في FriendsManager
   friendsManager.updateCurrentUser(user);
-  
+
   if (user) {
-    console.log('User signed in:', user);
+    console.log("User signed in:", user);
     // Initialize quiz when user signs in
     if (subjectSelect) {
       subjectSelect.dispatchEvent(new Event("change"));
@@ -528,7 +552,7 @@ authManager.setAuthChangeCallback((user) => {
     // إظهار زر الأصدقاء
     setupFriendsSystem();
   } else {
-    console.log('User signed out');
+    console.log("User signed out");
     // Reset quiz state when user signs out
     if (questionsContainer) {
       questionsContainer.innerHTML = "";
@@ -543,18 +567,18 @@ authManager.setAuthChangeCallback((user) => {
 // تهيئة نظام الأصدقاء
 function setupFriendsSystem() {
   // إظهار زر الأصدقاء
-  const friendsBtn = document.getElementById('friendsBtn');
+  const friendsBtn = document.getElementById("friendsBtn");
   if (friendsBtn) {
-    friendsBtn.style.display = 'flex';
+    friendsBtn.style.display = "flex";
   }
-  
+
   // تحديث التنبيهات
   updateFriendRequestsBadge();
   updateOnlineFriendsBadge();
-  
+
   // إعداد أحداث النافذة
   setupFriendsModal();
-  
+
   // تحديث التنبيهات كل 30 ثانية
   setInterval(() => {
     if (authManager.isSignedIn()) {
@@ -566,76 +590,77 @@ function setupFriendsSystem() {
 
 // إخفاء نظام الأصدقاء
 function hideFriendsSystem() {
-  const friendsModal = document.getElementById('friendsModal');
-  const friendsBtn = document.getElementById('friendsBtn');
-  
+  const friendsModal = document.getElementById("friendsModal");
+  const friendsBtn = document.getElementById("friendsBtn");
+
   if (friendsModal) {
-    friendsModal.style.display = 'none';
+    friendsModal.style.display = "none";
   }
-  
+
   if (friendsBtn) {
-    friendsBtn.style.display = 'none';
+    friendsBtn.style.display = "none";
   }
 }
 
 // إعداد نافذة الأصدقاء
 function setupFriendsModal() {
-  const friendsModal = document.getElementById('friendsModal');
-  const closeFriendsModal = document.getElementById('closeFriendsModal');
-  const myFriendsTab = document.getElementById('myFriendsTab');
-  const searchFriendsTab = document.getElementById('searchFriendsTab');
-  const friendRequestsTab = document.getElementById('friendRequestsTab');
-  const friendSearchInput = document.getElementById('friendSearchInput');
+  const friendsModal = document.getElementById("friendsModal");
+  const closeFriendsModal = document.getElementById("closeFriendsModal");
+  const myFriendsTab = document.getElementById("myFriendsTab");
+  const searchFriendsTab = document.getElementById("searchFriendsTab");
+  const friendRequestsTab = document.getElementById("friendRequestsTab");
+  const friendSearchInput = document.getElementById("friendSearchInput");
 
   // إغلاق النافذة
   if (closeFriendsModal) {
-    closeFriendsModal.addEventListener('click', () => {
-      friendsModal.style.display = 'none';
+    closeFriendsModal.addEventListener("click", () => {
+      friendsModal.style.display = "none";
     });
   }
 
   // إغلاق النافذة بالضغط خارجها
-  friendsModal.addEventListener('click', (e) => {
+  friendsModal.addEventListener("click", (e) => {
     if (e.target === friendsModal) {
-      friendsModal.style.display = 'none';
+      friendsModal.style.display = "none";
     }
   });
 
   // تبويب أصدقائي
   if (myFriendsTab) {
-    myFriendsTab.addEventListener('click', () => {
-      switchTab('myFriends');
+    myFriendsTab.addEventListener("click", () => {
+      switchTab("myFriends");
       loadMyFriends();
     });
   }
 
   // زر تحديث حالة الأصدقاء
-  const refreshFriendsBtn = document.getElementById('refreshFriendsBtn');
+  const refreshFriendsBtn = document.getElementById("refreshFriendsBtn");
   if (refreshFriendsBtn) {
-    refreshFriendsBtn.addEventListener('click', () => {
+    refreshFriendsBtn.addEventListener("click", () => {
       loadMyFriends();
       // تأثير بصري للزر
-      refreshFriendsBtn.style.transform = 'rotate(360deg)';
+      refreshFriendsBtn.style.transform = "rotate(360deg)";
       setTimeout(() => {
-        refreshFriendsBtn.style.transform = 'rotate(0deg)';
+        refreshFriendsBtn.style.transform = "rotate(0deg)";
       }, 500);
     });
   }
 
   // تبويب البحث
   if (searchFriendsTab) {
-    searchFriendsTab.addEventListener('click', () => {
-      switchTab('searchFriends');
+    searchFriendsTab.addEventListener("click", () => {
+      switchTab("searchFriends");
       // عرض رسالة بدلاً من تحميل المستخدمين تلقائياً
-      const searchResults = document.getElementById('searchResults');
-      searchResults.innerHTML = '<div class="no-results">💡 ابدأ بكتابة اسم أو إيميل أو مجموعة للبحث</div>';
+      const searchResults = document.getElementById("searchResults");
+      searchResults.innerHTML =
+        '<div class="no-results">💡 ابدأ بكتابة اسم أو إيميل أو مجموعة للبحث</div>';
     });
   }
 
   // تبويب طلبات الصداقة
   if (friendRequestsTab) {
-    friendRequestsTab.addEventListener('click', () => {
-      switchTab('friendRequests');
+    friendRequestsTab.addEventListener("click", () => {
+      switchTab("friendRequests");
       loadFriendRequests();
     });
   }
@@ -643,17 +668,18 @@ function setupFriendsModal() {
   // البحث
   if (friendSearchInput) {
     let searchTimeout;
-    friendSearchInput.addEventListener('input', (e) => {
+    friendSearchInput.addEventListener("input", (e) => {
       clearTimeout(searchTimeout);
       const searchTerm = e.target.value.trim();
-      
+
       if (searchTerm.length === 0) {
         // إذا كان حقل البحث فارغ، عرض رسالة
-        const searchResults = document.getElementById('searchResults');
-        searchResults.innerHTML = '<div class="no-results">💡 ابدأ بكتابة اسم أو إيميل أو مجموعة للبحث</div>';
+        const searchResults = document.getElementById("searchResults");
+        searchResults.innerHTML =
+          '<div class="no-results">💡 ابدأ بكتابة اسم أو إيميل أو مجموعة للبحث</div>';
         return;
       }
-      
+
       // البحث الفوري بدون انتظار
       searchTimeout = setTimeout(() => {
         searchUsers(searchTerm);
@@ -661,8 +687,8 @@ function setupFriendsModal() {
     });
 
     // إضافة مستمع للضغط على Enter للبحث الفوري
-    friendSearchInput.addEventListener('keypress', (e) => {
-      if (e.key === 'Enter') {
+    friendSearchInput.addEventListener("keypress", (e) => {
+      if (e.key === "Enter") {
         clearTimeout(searchTimeout);
         const searchTerm = e.target.value.trim();
         if (searchTerm.length > 0) {
@@ -675,17 +701,17 @@ function setupFriendsModal() {
 
 // فتح نافذة الأصدقاء
 async function openFriendsModal() {
-  const friendsModal = document.getElementById('friendsModal');
-  friendsModal.style.display = 'flex';
-  
+  const friendsModal = document.getElementById("friendsModal");
+  friendsModal.style.display = "flex";
+
   // تحديث عدد طلبات الصداقة
   await updateFriendRequestsBadge();
-  
+
   // تحديث عدد الأصدقاء المتصلين
   await updateOnlineFriendsBadge();
-  
+
   // تحميل أصدقائي بشكل افتراضي
-  switchTab('myFriends');
+  switchTab("myFriends");
   loadMyFriends();
 }
 
@@ -695,50 +721,53 @@ window.openFriendsModal = openFriendsModal;
 // تبديل التبويبات
 function switchTab(tabName) {
   // إخفاء جميع التبويبات
-  document.querySelectorAll('.tab-content').forEach(tab => {
-    tab.style.display = 'none';
+  document.querySelectorAll(".tab-content").forEach((tab) => {
+    tab.style.display = "none";
   });
-  
+
   // إزالة الكلاس النشط من جميع الأزرار
-  document.querySelectorAll('.friends-tab').forEach(btn => {
-    btn.classList.remove('active');
+  document.querySelectorAll(".friends-tab").forEach((btn) => {
+    btn.classList.remove("active");
   });
 
   // إظهار التبويب المطلوب
-  switch(tabName) {
-    case 'myFriends':
-      document.getElementById('myFriendsContent').style.display = 'block';
-      document.getElementById('myFriendsTab').classList.add('active');
+  switch (tabName) {
+    case "myFriends":
+      document.getElementById("myFriendsContent").style.display = "block";
+      document.getElementById("myFriendsTab").classList.add("active");
       break;
-    case 'searchFriends':
-      document.getElementById('searchFriendsContent').style.display = 'block';
-      document.getElementById('searchFriendsTab').classList.add('active');
+    case "searchFriends":
+      document.getElementById("searchFriendsContent").style.display = "block";
+      document.getElementById("searchFriendsTab").classList.add("active");
       break;
-    case 'friendRequests':
-      document.getElementById('friendRequestsContent').style.display = 'block';
-      document.getElementById('friendRequestsTab').classList.add('active');
+    case "friendRequests":
+      document.getElementById("friendRequestsContent").style.display = "block";
+      document.getElementById("friendRequestsTab").classList.add("active");
       break;
   }
 }
 
 // تحميل قائمة أصدقائي
 async function loadMyFriends() {
-  const friendsList = document.getElementById('friendsList');
-  
+  const friendsList = document.getElementById("friendsList");
+
   if (!authManager.isSignedIn()) {
-    friendsList.innerHTML = '<div class="no-results">يرجى تسجيل الدخول أولاً</div>';
+    friendsList.innerHTML =
+      '<div class="no-results">يرجى تسجيل الدخول أولاً</div>';
     return;
   }
 
   await friendsManager.loadUserFriends();
-  
+
   if (friendsManager.friends.length === 0) {
-    friendsList.innerHTML = '<div class="no-results">لا توجد أصدقاء حتى الآن<br>استخدم البحث لإضافة أصدقاء جدد</div>';
+    friendsList.innerHTML =
+      '<div class="no-results">لا توجد أصدقاء حتى الآن<br>استخدم البحث لإضافة أصدقاء جدد</div>';
     return;
   }
 
   // عرض رسالة التحميل
-  friendsList.innerHTML = '<div class="no-results">🔄 جاري تحميل حالة الأصدقاء...</div>';
+  friendsList.innerHTML =
+    '<div class="no-results">🔄 جاري تحميل حالة الأصدقاء...</div>';
 
   // الحصول على حالة نشاط الأصدقاء
   const friendsStatus = await friendsManager.getFriendsActivityStatus();
@@ -747,41 +776,41 @@ async function loadMyFriends() {
   const sortedFriends = [...friendsManager.friends].sort((a, b) => {
     const statusA = friendsStatus[a.uid];
     const statusB = friendsStatus[b.uid];
-    
+
     if (statusA && statusB) {
       // المتصلين الآن أولاً
       if (statusA.isOnline && !statusB.isOnline) return -1;
       if (!statusA.isOnline && statusB.isOnline) return 1;
-      
+
       // ترتيب حسب وقت آخر ظهور للمتصلين
       if (statusA.isOnline && statusB.isOnline) {
-        return statusA.status.includes('متصل الآن') ? -1 : 1;
+        return statusA.status.includes("متصل الآن") ? -1 : 1;
       }
-      
+
       // ثم حسب وقت آخر ظهور
-      return statusA.status.localeCompare(statusB.status, 'ar');
+      return statusA.status.localeCompare(statusB.status, "ar");
     }
-    
-    return a.name.localeCompare(b.name, 'ar');
+
+    return a.name.localeCompare(b.name, "ar");
   });
 
   // عد الأصدقاء النشطين للتنبيه
   let onlineFriends = 0;
   let recentlyActiveFriends = 0;
-  
-  sortedFriends.forEach(friend => {
+
+  sortedFriends.forEach((friend) => {
     const status = friendsStatus[friend.uid];
     if (status) {
-      if (status.status.includes('متصل الآن')) {
+      if (status.status.includes("متصل الآن")) {
         onlineFriends++;
-      } else if (status.status.includes('نشط مؤخراً')) {
+      } else if (status.status.includes("نشط مؤخراً")) {
         recentlyActiveFriends++;
       }
     }
   });
 
   // إضافة عنوان بالأصدقاء النشطين
-  let html = '';
+  let html = "";
   if (onlineFriends > 0 || recentlyActiveFriends > 0) {
     html += `
       <div style="
@@ -794,19 +823,19 @@ async function loadMyFriends() {
         font-weight: 600;
         box-shadow: 0 4px 15px rgba(40, 167, 69, 0.3);
       ">
-        🔔 ${onlineFriends > 0 ? `${onlineFriends} صديق متصل الآن` : ''}
-        ${onlineFriends > 0 && recentlyActiveFriends > 0 ? ' • ' : ''}
-        ${recentlyActiveFriends > 0 ? `${recentlyActiveFriends} نشط مؤخراً` : ''}
+        🔔 ${onlineFriends > 0 ? `${onlineFriends} صديق متصل الآن` : ""}
+        ${onlineFriends > 0 && recentlyActiveFriends > 0 ? " • " : ""}
+        ${recentlyActiveFriends > 0 ? `${recentlyActiveFriends} نشط مؤخراً` : ""}
       </div>
     `;
   }
-  
-  sortedFriends.forEach(friend => {
+
+  sortedFriends.forEach((friend) => {
     const status = friendsStatus[friend.uid] || {
-      status: 'غير متاح',
-      statusColor: '#6c757d',
-      statusIcon: '⚪',
-      lastSeen: 'غير محدد'
+      status: "غير متاح",
+      statusColor: "#6c757d",
+      statusIcon: "⚪",
+      lastSeen: "غير محدد",
     };
 
     html += `
@@ -841,43 +870,48 @@ async function loadMyFriends() {
       </div>
     `;
   });
-  
+
   friendsList.innerHTML = html;
 }
 
 // البحث عن المستخدمين
 async function searchUsers(searchTerm) {
-  const searchResults = document.getElementById('searchResults');
-  
+  const searchResults = document.getElementById("searchResults");
+
   if (!authManager.isSignedIn()) {
-    searchResults.innerHTML = '<div class="no-results">يرجى تسجيل الدخول أولاً</div>';
+    searchResults.innerHTML =
+      '<div class="no-results">يرجى تسجيل الدخول أولاً</div>';
     return;
   }
 
   // عرض رسالة التحميل
-  searchResults.innerHTML = '<div class="no-results">🔍 جاري البحث في قاعدة البيانات...</div>';
+  searchResults.innerHTML =
+    '<div class="no-results">🔍 جاري البحث في قاعدة البيانات...</div>';
 
   try {
-    const results = await friendsManager.searchUsers(searchTerm || '');
-    
+    const results = await friendsManager.searchUsers(searchTerm || "");
+
     if (results.length === 0) {
       if (searchTerm && searchTerm.length > 0) {
-        searchResults.innerHTML = '<div class="no-results">❌ لم يتم العثور على نتائج للبحث</div>';
+        searchResults.innerHTML =
+          '<div class="no-results">❌ لم يتم العثور على نتائج للبحث</div>';
       } else {
-        searchResults.innerHTML = '<div class="no-results">📭 لا يوجد مستخدمين متاحين للإضافة</div>';
+        searchResults.innerHTML =
+          '<div class="no-results">📭 لا يوجد مستخدمين متاحين للإضافة</div>';
       }
       return;
     }
 
     let html = `<div style="margin-bottom: 15px; color: #28a745; font-weight: bold; text-align: center;">📊 تم العثور على ${results.length} مستخدم</div>`;
-    
-    results.forEach(user => {
-      let buttonHtml = '';
-      let statusIcon = '';
-      
+
+    results.forEach((user) => {
+      let buttonHtml = "";
+      let statusIcon = "";
+
       if (user.hasSentRequest) {
-        buttonHtml = '<button class="friend-btn pending-btn">⏳ تم إرسال الطلب</button>';
-        statusIcon = '📤';
+        buttonHtml =
+          '<button class="friend-btn pending-btn">⏳ تم إرسال الطلب</button>';
+        statusIcon = "📤";
       } else if (user.hasReceivedRequest) {
         buttonHtml = `
           <button class="friend-btn accept-btn" onclick="acceptFriendRequest('${user.uid}')">
@@ -887,14 +921,14 @@ async function searchUsers(searchTerm) {
             ❌ رفض
           </button>
         `;
-        statusIcon = '📥';
+        statusIcon = "📥";
       } else {
         buttonHtml = `
           <button class="friend-btn add-friend-btn" onclick="sendFriendRequest('${user.uid}')">
             ➕ إضافة صديق
           </button>
         `;
-        statusIcon = '👤';
+        statusIcon = "👤";
       }
 
       html += `
@@ -912,33 +946,36 @@ async function searchUsers(searchTerm) {
         </div>
       `;
     });
-    
+
     searchResults.innerHTML = html;
   } catch (error) {
-    console.error('Search error:', error);
-    searchResults.innerHTML = '<div class="no-results">❌ حدث خطأ في البحث، يرجى المحاولة مرة أخرى</div>';
+    console.error("Search error:", error);
+    searchResults.innerHTML =
+      '<div class="no-results">❌ حدث خطأ في البحث، يرجى المحاولة مرة أخرى</div>';
   }
 }
 
 // تحميل طلبات الصداقة
 async function loadFriendRequests() {
-  const requestsList = document.getElementById('requestsList');
-  
+  const requestsList = document.getElementById("requestsList");
+
   if (!authManager.isSignedIn()) {
-    requestsList.innerHTML = '<div class="no-results">يرجى تسجيل الدخول أولاً</div>';
+    requestsList.innerHTML =
+      '<div class="no-results">يرجى تسجيل الدخول أولاً</div>';
     return;
   }
 
   await friendsManager.loadUserFriends();
   const requests = await friendsManager.getFriendRequestsWithDetails();
-  
+
   if (requests.length === 0) {
-    requestsList.innerHTML = '<div class="no-results">لا توجد طلبات صداقة</div>';
+    requestsList.innerHTML =
+      '<div class="no-results">لا توجد طلبات صداقة</div>';
     return;
   }
 
-  let html = '';
-  requests.forEach(user => {
+  let html = "";
+  requests.forEach((user) => {
     html += `
       <div class="friend-card">
         <div class="friend-info">
@@ -959,36 +996,36 @@ async function loadFriendRequests() {
       </div>
     `;
   });
-  
+
   requestsList.innerHTML = html;
 }
 
 // تحديث رقم طلبات الصداقة
 async function updateFriendRequestsBadge() {
   if (!authManager.isSignedIn()) return;
-  
+
   await friendsManager.loadUserFriends();
-  const requestsBadge = document.getElementById('requestsBadge');
-  const requestsBadgeBtn = document.getElementById('friendRequestsBadgeBtn');
+  const requestsBadge = document.getElementById("requestsBadge");
+  const requestsBadgeBtn = document.getElementById("friendRequestsBadgeBtn");
   const count = friendsManager.friendRequests.length;
-  
+
   // تحديث الرقم في نافذة الأصدقاء
   if (requestsBadge) {
     if (count > 0) {
       requestsBadge.textContent = count;
-      requestsBadge.style.display = 'inline';
+      requestsBadge.style.display = "inline";
     } else {
-      requestsBadge.style.display = 'none';
+      requestsBadge.style.display = "none";
     }
   }
-  
+
   // تحديث الرقم على زر الأصدقاء الخارجي
   if (requestsBadgeBtn) {
     if (count > 0) {
       requestsBadgeBtn.textContent = count;
-      requestsBadgeBtn.style.display = 'flex';
+      requestsBadgeBtn.style.display = "flex";
     } else {
-      requestsBadgeBtn.style.display = 'none';
+      requestsBadgeBtn.style.display = "none";
     }
   }
 }
@@ -996,32 +1033,32 @@ async function updateFriendRequestsBadge() {
 // تحديث عدد الأصدقاء المتصلين
 async function updateOnlineFriendsBadge() {
   if (!authManager.isSignedIn()) return;
-  
-  const onlineBadge = document.getElementById('onlineFriendsBadge');
+
+  const onlineBadge = document.getElementById("onlineFriendsBadge");
   if (!onlineBadge) return;
-  
+
   await friendsManager.loadUserFriends();
-  
+
   if (friendsManager.friends.length === 0) {
-    onlineBadge.style.display = 'none';
+    onlineBadge.style.display = "none";
     return;
   }
-  
+
   const friendsStatus = await friendsManager.getFriendsActivityStatus();
   let onlineCount = 0;
-  
-  friendsManager.friends.forEach(friend => {
+
+  friendsManager.friends.forEach((friend) => {
     const status = friendsStatus[friend.uid];
-    if (status && status.status.includes('متصل الآن')) {
+    if (status && status.status.includes("متصل الآن")) {
       onlineCount++;
     }
   });
-  
+
   if (onlineCount > 0) {
     onlineBadge.textContent = onlineCount;
-    onlineBadge.style.display = 'flex';
+    onlineBadge.style.display = "flex";
   } else {
-    onlineBadge.style.display = 'none';
+    onlineBadge.style.display = "none";
   }
 }
 
@@ -1030,7 +1067,7 @@ window.sendFriendRequest = async (userId) => {
   const success = await friendsManager.sendFriendRequest(userId);
   if (success) {
     // إعادة تحميل نتائج البحث
-    const searchTerm = document.getElementById('friendSearchInput').value;
+    const searchTerm = document.getElementById("friendSearchInput").value;
     if (searchTerm) {
       searchUsers(searchTerm);
     }
@@ -1044,9 +1081,9 @@ window.acceptFriendRequest = async (userId) => {
     loadFriendRequests();
     updateFriendRequestsBadge();
     updateOnlineFriendsBadge();
-    
+
     // إعادة تحميل نتائج البحث إذا كانت مفتوحة
-    const searchTerm = document.getElementById('friendSearchInput').value;
+    const searchTerm = document.getElementById("friendSearchInput").value;
     if (searchTerm) {
       searchUsers(searchTerm);
     }
@@ -1059,9 +1096,9 @@ window.rejectFriendRequest = async (userId) => {
     // إعادة تحميل طلبات الصداقة وتحديث الرقم
     loadFriendRequests();
     updateFriendRequestsBadge();
-    
+
     // إعادة تحميل نتائج البحث إذا كانت مفتوحة
-    const searchTerm = document.getElementById('friendSearchInput').value;
+    const searchTerm = document.getElementById("friendSearchInput").value;
     if (searchTerm) {
       searchUsers(searchTerm);
     }
@@ -1069,7 +1106,7 @@ window.rejectFriendRequest = async (userId) => {
 };
 
 window.removeFriend = async (userId) => {
-  if (confirm('هل أنت متأكد من حذف هذا الصديق؟')) {
+  if (confirm("هل أنت متأكد من حذف هذا الصديق؟")) {
     const success = await friendsManager.removeFriend(userId);
     if (success) {
       // إعادة تحميل قائمة الأصدقاء وتحديث التنبيهات
@@ -1088,12 +1125,12 @@ function showFinalResults() {
   document.getElementById("navigatorTimer").style.display = "none";
   document.getElementById("questionSelect").parentNode.style.display = "none";
   homeBtn.style.display = "none";
-  
+
   const percentage = Math.round((correctCount / currentQuestions.length) * 100);
   const wrongCount = currentQuestions.length - correctCount;
-  
+
   let gradeText, gradeColor, gradeIcon, motivationalText;
-  
+
   if (percentage >= 90) {
     gradeText = "ممتاز";
     gradeColor = "#28a745";
@@ -1408,7 +1445,8 @@ function showFinalResults() {
 
   document.getElementById("backToHomeBtn").addEventListener("click", () => {
     // إظهار العناصر المخفية قبل العودة للرئيسية
-    document.getElementById("questionSelect").parentNode.style.display = "block";
+    document.getElementById("questionSelect").parentNode.style.display =
+      "block";
     homeBtn.style.display = "block";
     homeBtn.click();
   });
