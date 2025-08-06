@@ -852,6 +852,11 @@ function showFinalResults() {
     currentIndex = 0;
     correctCount = 0;
     questionStatus = new Array(currentQuestions.length).fill("unanswered");
+    
+    // إظهار عناصر التنقل وزر العودة للرئيسية
+    document.getElementById("questionSelect").parentNode.style.display = "block";
+    homeBtn.style.display = "block";
+    
     updateQuestionNavigator();
     showQuestion();
   });
