@@ -230,22 +230,12 @@ export const questions = [
     answer: 1
   },
   {
-    question: "What is the purpose of occlusal adjustment in treating Symptomatic Apical Periodontitis in vital teeth?",
-    options: [
-      "To remove caries",
-      "To reduce traumatic forces",
-      "To improve aesthetics",
-      "To prepare for crown"
-    ],
-    answer: 1
-  },
-  {
     question: "Which of the following is a key diagnostic feature of Chronic Apical Abscess?",
     options: [
       "Severe spontaneous pain",
       "Sinus tract formation",
       "Tooth discoloration",
-      "Pulp vitality"
+  
     ],
     answer: 1
   },
