@@ -1,0 +1,1328 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8" />
+  <title>اختبار طب الأسنان</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;700&display=swap" rel="stylesheet" />
+  <script type="module" src="./script.js" defer></script>
+  <script type="module" src="./auth.js" defer></script>
+  <style>
+    @import url("https://fonts.googleapis.com/css2?family=Quicksand:wght@300&display=swap");
+
+    body {
+      font-family: 'Tajawal', sans-serif;
+      background: #111;
+      min-height: 100vh;
+      margin: 0;
+      padding: 20px 10px;
+      display: flex;
+      justify-content: center;
+      align-items: flex-start;
+      color: #2c3e50;
+      position: relative;
+      overflow-x: hidden;
+    }
+
+    /* Animated Ring Background */
+    .ring-background {
+      position: fixed;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 100vw;
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      z-index: -1;
+      opacity: 0.4;
+    }
+
+    .ring-background i {
+      position: absolute;
+      inset: 0;
+      border: 2px solid #fff;
+      transition: 0.5s;
+    }
+
+    .ring-background i:nth-child(1) {
+      border-radius: 38% 62% 63% 37% / 41% 44% 56% 59%;
+      animation: animate 6s linear infinite;
+      border-color: #00ff0a;
+      filter: drop-shadow(0 0 20px #00ff0a);
+    }
+
+    .ring-background i:nth-child(2) {
+      border-radius: 41% 44% 56% 59%/38% 62% 63% 37%;
+      animation: animate 4s linear infinite;
+      border-color: #ff0057;
+      filter: drop-shadow(0 0 20px #ff0057);
+    }
+
+    .ring-background i:nth-child(3) {
+      border-radius: 41% 44% 56% 59%/38% 62% 63% 37%;
+      animation: animate2 10s linear infinite;
+      border-color: #fffd44;
+      filter: drop-shadow(0 0 20px #fffd44);
+    }
+
+    @keyframes animate {
+      0% {
+        transform: rotate(0deg);
+      }
+      100% {
+        transform: rotate(360deg);
+      }
+    }
+
+    @keyframes animate2 {
+      0% {
+        transform: rotate(360deg);
+      }
+      100% {
+        transform: rotate(0deg);
+      }
+    }
+
+    /* Additional animated rings for more effect */
+    .ring-background::before,
+    .ring-background::after {
+      content: '';
+      position: absolute;
+      inset: -50px;
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      border-radius: 50%;
+      animation: animate 8s linear infinite reverse;
+    }
+
+    .ring-background::after {
+      inset: -100px;
+      animation: animate2 12s linear infinite;
+      border-color: rgba(0, 255, 10, 0.1);
+    }
+
+    .container {
+      background: transparent;
+      width: 100%;
+      max-width: 500px;
+      padding: 30px 25px;
+      margin-top: 20px;
+      position: relative;
+      z-index: 10;
+    }
+
+    @keyframes slideIn {
+      from {
+        opacity: 0;
+        transform: translateY(30px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    h1 {
+      text-align: center;
+      color: #ffffff;
+      text-shadow: 0 2px 10px rgba(0, 0, 0, 0.7), 0 0 20px rgba(255, 255, 255, 0.3);
+      margin-bottom: 25px;
+      font-weight: 700;
+      font-size: 32px;
+    }
+
+    label {
+      display: block;
+      margin: 18px 0 8px 0;
+      font-weight: 600;
+      color: #ffffff;
+      font-size: 16px;
+      text-shadow: 0 1px 5px rgba(0, 0, 0, 0.7);
+    }
+
+    select, button {
+      width: 100%;
+      padding: 15px 18px;
+      font-size: 16px;
+      border: none;
+      background: #ffffff;
+      color: #495057;
+      cursor: pointer;
+      transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+      box-sizing: border-box;
+      font-family: 'Tajawal', sans-serif;
+    }
+
+    select:hover, button:hover {
+      transform: translateY(-1px);
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.12);
+      border-color: #667eea;
+      background: #ffffff;
+    }
+
+    select:focus, button:focus {
+      outline: none;
+      border-color: #667eea;
+      background: #ffffff;
+      box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.25);
+    }
+
+    #loadBtn {
+      margin-top: 25px;
+      background: linear-gradient(135deg, #667eea, #764ba2);
+      color: white;
+      font-weight: 600;
+      border: none;
+      font-size: 18px;
+      padding: 16px 20px;
+    }
+
+    #loadBtn:hover {
+      background: linear-gradient(135deg, #5a6fd8, #6a4190);
+      transform: translateY(-3px);
+      box-shadow: 0 10px 30px rgba(102, 126, 234, 0.3);
+    }
+
+    #questionsContainer {
+      margin-top: 40px;
+      display: none;
+    }
+
+    #homeBtn {
+      display: none;
+      margin-bottom: 25px;
+      background: linear-gradient(135deg, #6c757d, #495057);
+      color: white;
+      border: none;
+      border-radius: 12px;
+      padding: 12px 16px;
+      font-size: 16px;
+      cursor: pointer;
+      width: 100%;
+      box-sizing: border-box;
+      transition: all 0.3s ease;
+      font-weight: 600;
+    }
+
+    #homeBtn:hover {
+      background: linear-gradient(135deg, #5a6268, #343a40);
+      transform: translateY(-2px);
+      box-shadow: 0 8px 25px rgba(108, 117, 125, 0.3);
+    }
+
+    .question-box {
+      margin-bottom: 15px;
+      padding: 20px;
+      background: transparent;
+    }
+
+    .question-meta {
+      font-weight: 600;
+      font-size: 14px;
+      color: #6c757d;
+      margin-bottom: 12px;
+      text-align: left;
+      direction: ltr;
+      padding: 8px 12px;
+      background: rgba(102, 126, 234, 0.1);
+      border-radius: 8px;
+      border-left: 4px solid #667eea;
+    }
+
+    .question-title {
+      font-weight: 700;
+      font-size: 20px;
+      color: #ffffff;
+      text-shadow: 0 2px 10px rgba(0, 0, 0, 0.8);
+      margin-bottom: 20px;
+      line-height: 1.4;
+    }
+
+    .question-box h2 {
+      color: #ffffff !important;
+      text-shadow: 0 2px 10px rgba(0, 0, 0, 0.8);
+    }
+
+    .question-box p,
+    .question-box div,
+    .question-text,
+    .question-box h2,
+    .question-box * {
+      color: #ffffff !important;
+      text-shadow: 0 1px 5px rgba(0, 0, 0, 0.7);
+    }
+
+    /* Ensure all question content is white */
+    #questionsContainer,
+    #questionsContainer *,
+    #questionsContainer h2,
+    #questionsContainer p,
+    #questionsContainer div {
+      color: #ffffff !important;
+      text-shadow: 0 1px 5px rgba(0, 0, 0, 0.7);
+    }
+
+    ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+
+    li {
+      margin: 12px 0;
+      cursor: pointer;
+      transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+      user-select: none;
+    }
+
+    li button {
+      display: block;
+      margin: 0;
+      padding: 16px 20px;
+      width: 100%;
+      font-size: 16px;
+      box-sizing: border-box;
+      border: 2px solid rgba(255, 255, 255, 0.3);
+      background: rgba(255, 255, 255, 0.1);
+      backdrop-filter: blur(10px);
+      border-radius: 12px;
+      cursor: pointer;
+      text-align: right;
+      color: #ffffff;
+      text-shadow: 0 1px 5px rgba(0, 0, 0, 0.7);
+      font-weight: 600;
+      font-family: 'Tajawal', sans-serif;
+      transition: all 0.3s ease;
+      outline: none !important;
+    }
+
+    /* إزالة جميع المخططات من العناصر التفاعلية */
+    *, *:focus, *:active, *:hover {
+      outline: none !important;
+      -webkit-tap-highlight-color: transparent !important;
+    }
+
+    /* إزالة المخطط من الأزرار بشكل خاص */
+    button, button:focus, button:active, button:hover {
+      outline: none !important;
+      -webkit-tap-highlight-color: transparent !important;
+      -webkit-focus-ring-color: transparent !important;
+    }
+
+    /* إزالة المخطط من عناصر القائمة */
+    li, li:focus, li:active, li:hover {
+      outline: none !important;
+      -webkit-tap-highlight-color: transparent !important;
+    }
+
+    li button:hover {
+      transform: translateX(-5px);
+      border-color: #667eea;
+      box-shadow: 0 8px 25px rgba(102, 126, 234, 0.15);
+      background: rgba(255, 255, 255, 0.2);
+    }
+
+    .correct {
+      background: linear-gradient(135deg, #d4edda, #c3e6cb) !important;
+      border-color: #28a745 !important;
+      color: #155724 !important;
+      box-shadow: 0 8px 25px rgba(40, 167, 69, 0.2) !important;
+    }
+
+    .wrong {
+      background: linear-gradient(135deg, #f8d7da, #f5c6cb) !important;
+      border-color: #dc3545 !important;
+      color: #721c24 !important;
+      box-shadow: 0 8px 25px rgba(220, 53, 69, 0.2) !important;
+    }
+
+    #questionNav {
+      margin: 25px 0;
+      padding: 18px;
+      background: rgba(255, 255, 255, 0.1);
+      backdrop-filter: blur(10px);
+      border-radius: 12px;
+      border: 1px solid rgba(255, 255, 255, 0.2);
+    }
+
+    #questionNav select {
+      width: 100%;
+      padding: 12px 16px;
+      font-size: 16px;
+      border: 2px solid #e9ecef;
+      border-radius: 10px;
+      background: white;
+    }
+
+    /* Timer styling */
+    #navigatorTimer {
+      color: white;
+      padding: 12px 18px;
+      border-radius: 12px;
+      text-align: center;
+      font-weight: 700;
+      font-size: 18px;
+      margin-top: 12px;
+      transition: all 0.3s ease;
+      border: 2px solid rgba(255, 255, 255, 0.3);
+    }
+
+    /* Timer color states */
+    .timer-safe {
+      background: linear-gradient(135deg, #28a745, #20c997);
+      box-shadow: 0 4px 20px rgba(40, 167, 69, 0.4);
+      animation: pulse-safe 3s infinite;
+    }
+
+    .timer-warning {
+      background: linear-gradient(135deg, #ffc107, #fd7e14);
+      box-shadow: 0 4px 20px rgba(255, 193, 7, 0.5);
+      animation: pulse-warning 1.5s infinite;
+    }
+
+    .timer-danger {
+      background: linear-gradient(135deg, #dc3545, #c82333);
+      box-shadow: 0 6px 25px rgba(220, 53, 69, 0.6);
+      animation: pulse-danger 0.5s infinite;
+    }
+
+    @keyframes pulse-safe {
+      0% { transform: scale(1); opacity: 0.9; }
+      50% { transform: scale(1.02); opacity: 1; }
+      100% { transform: scale(1); opacity: 0.9; }
+    }
+
+    @keyframes pulse-warning {
+      0% { transform: scale(1); opacity: 0.85; }
+      50% { transform: scale(1.05); opacity: 1; }
+      100% { transform: scale(1); opacity: 0.85; }
+    }
+
+    @keyframes pulse-danger {
+      0% { transform: scale(1) rotate(-1deg); opacity: 0.8; }
+      50% { transform: scale(1.08) rotate(1deg); opacity: 1; }
+      100% { transform: scale(1) rotate(-1deg); opacity: 0.8; }
+    }
+
+    /* Checkbox styling */
+    input[type="checkbox"] {
+      appearance: none;
+      width: 20px;
+      height: 20px;
+      border: 2px solid #667eea;
+      border-radius: 4px;
+      margin-left: 10px;
+      position: relative;
+      cursor: pointer;
+      transition: all 0.3s ease;
+    }
+
+    input[type="checkbox"]:checked {
+      background: linear-gradient(135deg, #667eea, #764ba2);
+      border-color: #667eea;
+    }
+
+    input[type="checkbox"]:checked::after {
+      content: '✓';
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      color: white;
+      font-weight: bold;
+      font-size: 12px;
+    }
+
+    /* Authentication Styles */
+    .auth-container {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+      background: transparent;
+      position: relative;
+      z-index: 10;
+    }
+
+    .auth-box {
+      background: transparent;
+      padding: 40px 30px;
+      width: 100%;
+      max-width: 400px;
+      margin-top: 80px;
+      position: relative;
+      z-index: 10;
+    }
+
+    .auth-box h1 {
+      text-align: center;
+      background: linear-gradient(135deg, #667eea, #764ba2);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      margin-bottom: 20px;
+      font-weight: 700;
+      font-size: 32px;
+    }
+
+    .auth-btn {
+      width: 100%;
+      padding: 15px 20px;
+      font-size: 16px;
+      border: none;
+      border-radius: 12px;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      font-family: 'Tajawal', sans-serif;
+      font-weight: 600;
+      margin: 10px 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      box-sizing: border-box;
+    }
+
+
+
+    .primary-btn {
+      background: linear-gradient(135deg, #667eea, #764ba2);
+      color: white;
+    }
+
+    .primary-btn:hover {
+      background: linear-gradient(135deg, #5a6fd8, #6a4190);
+      transform: translateY(-2px);
+      box-shadow: 0 8px 25px rgba(102, 126, 234, 0.3);
+    }
+
+    .secondary-btn {
+      background: linear-gradient(135deg, #6c757d, #495057);
+      color: white;
+    }
+
+    .secondary-btn:hover {
+      background: linear-gradient(135deg, #5a6268, #343a40);
+      transform: translateY(-2px);
+      box-shadow: 0 8px 25px rgba(108, 117, 125, 0.3);
+    }
+
+    .auth-form {
+      margin-top: 20px;
+    }
+
+    .auth-form input {
+      width: 100%;
+      padding: 15px 18px;
+      font-size: 16px;
+      border: 1px solid #e9ecef;
+      border-radius: 12px;
+      background: #f8f9fa;
+      color: #495057;
+      margin: 10px 0;
+      box-sizing: border-box;
+      font-family: 'Tajawal', sans-serif;
+      transition: all 0.3s ease;
+      box-shadow: 0 1px 4px rgba(0, 0, 0, 0.05);
+    }
+
+    .auth-form input:focus {
+      outline: none;
+      border-color: #667eea;
+      background: white;
+      box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.25);
+    }
+
+    .divider {
+      text-align: center;
+      margin: 25px 0;
+      position: relative;
+      color: #6c757d;
+    }
+
+    .divider::before {
+      content: '';
+      position: absolute;
+      top: 50%;
+      left: 0;
+      right: 0;
+      height: 1px;
+      background: #e9ecef;
+    }
+
+    .divider span {
+      background: rgba(255, 255, 255, 0.95);
+      padding: 0 15px;
+      font-weight: 600;
+    }
+
+    /* Friends System Styles */
+    .friends-tab {
+      border-bottom: 3px solid transparent;
+    }
+
+    .friends-tab.active {
+      background: white !important;
+      border-bottom-color: #28a745 !important;
+      color: #28a745 !important;
+    }
+
+    .friends-tab:hover:not(.active) {
+      background: rgba(40, 167, 69, 0.1) !important;
+    }
+
+    #refreshFriendsBtn:hover:not(.active) {
+        background: rgba(40, 167, 69, 0.1) !important;
+      }
+
+      #refreshFriendsBtn {
+        transition: all 0.3s ease !important;
+      }
+
+      #refreshFriendsBtn:hover {
+        background: #218838 !important;
+        transform: scale(1.1) !important;
+        box-shadow: 0 4px 15px rgba(40, 167, 69, 0.4) !important;
+      }
+
+    .tab-content {
+      animation: fadeIn 0.3s ease-out;
+    }
+
+    .friend-card {
+      background: #ffffff;
+      border: 1px solid #e9ecef;
+      border-radius: 16px;
+      padding: 15px;
+      margin-bottom: 15px;
+      transition: all 0.3s ease;
+      animation: slideIn 0.3s ease-out;
+    }
+
+    .friend-card:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+      border-color: #28a745;
+    }
+
+    .friend-info {
+      margin-bottom: 10px;
+    }
+
+    .friend-name {
+      font-weight: 700;
+      color: #2c3e50;
+      font-size: 18px;
+      margin-bottom: 5px;
+    }
+
+    .friend-details {
+      color: #6c757d;
+      font-size: 14px;
+      line-height: 1.4;
+    }
+
+    .friend-actions {
+      display: flex;
+      gap: 8px;
+      justify-content: flex-end;
+      flex-wrap: wrap;
+    }
+
+    .friend-btn {
+      padding: 8px 16px;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      font-family: 'Tajawal', sans-serif;
+      font-size: 14px;
+      font-weight: 600;
+      transition: all 0.3s ease;
+      display: flex;
+      align-items: center;
+      gap: 5px;
+    }
+
+    .add-friend-btn {
+      background: linear-gradient(135deg, #28a745, #20c997);
+      color: white;
+    }
+
+    .add-friend-btn:hover {
+      background: linear-gradient(135deg, #218838, #1ba085);
+      transform: translateY(-1px);
+    }
+
+    .accept-btn {
+      background: linear-gradient(135deg, #007bff, #0056b3);
+      color: white;
+    }
+
+    .accept-btn:hover {
+      background: linear-gradient(135deg, #0056b3, #004085);
+      transform: translateY(-1px);
+    }
+
+    .reject-btn {
+      background: linear-gradient(135deg, #dc3545, #c82333);
+      color: white;
+    }
+
+    .reject-btn:hover {
+      background: linear-gradient(135deg, #c82333, #a71e2a);
+      transform: translateY(-1px);
+    }
+
+    .remove-btn {
+      background: linear-gradient(135deg, #6c757d, #495057);
+      color: white;
+    }
+
+    .remove-btn:hover {
+      background: linear-gradient(135deg, #5a6268, #343a40);
+      transform: translateY(-1px);
+    }
+
+    .pending-btn {
+      background: linear-gradient(135deg, #ffc107, #e0a800);
+      color: #212529;
+    }
+
+    .no-results {
+      text-align: center;
+      color: #6c757d;
+      padding: 40px 20px;
+      font-style: italic;
+    }
+
+    #friendSearchInput:focus {
+      outline: none;
+      border-color: #28a745;
+      box-shadow: 0 0 0 3px rgba(40, 167, 69, 0.25);
+    }
+
+    #closeFriendsModal:hover {
+      background: rgba(255, 255, 255, 0.3) !important;
+      transform: scale(1.1);
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; }
+      to { opacity: 1; }
+    }
+
+    @keyframes slideInRight {
+      from {
+        opacity: 0;
+        transform: translateX(100%);
+      }
+      to {
+        opacity: 1;
+        transform: translateX(0);
+      }
+    }
+
+    @keyframes pulse {
+      0% {
+        opacity: 1;
+      }
+      50% {
+        opacity: 0.7;
+      }
+      100% {
+        opacity: 1;
+      }
+    }
+
+    /* أنماط الدردشة */
+    .chat-btn {
+      background: linear-gradient(135deg, #17a2b8, #138496);
+      color: white;
+    }
+
+    .chat-btn:hover {
+      background: linear-gradient(135deg, #138496, #117a8b);
+      transform: translateY(-1px);
+    }
+
+    /* أنماط الرسائل الصوتية */
+    audio {
+      max-width: 100%;
+      height: 30px;
+    }
+
+    audio::-webkit-media-controls-panel {
+      background-color: rgba(255, 255, 255, 0.1);
+      border-radius: 15px;
+    }
+
+    /* تأثيرات الدردشة */
+    @keyframes pulse {
+      0% {
+        opacity: 1;
+      }
+      50% {
+        opacity: 0.7;
+      }
+      100% {
+        opacity: 1;
+      }
+    }
+
+    /* أنماط نافذة الدردشة */
+    #chatWindow {
+      animation: slideInRight 0.3s ease-out;
+    }
+
+    @keyframes slideInRight {
+      from {
+        opacity: 0;
+        transform: translateX(100%);
+      }
+      to {
+        opacity: 1;
+        transform: translateX(0);
+      }
+    }
+
+    /* أنماط الرسائل */
+    .message-text {
+      word-wrap: break-word;
+      line-height: 1.4;
+    }
+
+    .voice-message {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    /* تحسين شكل عنصر التحكم في الصوت */
+    audio::-webkit-media-controls-play-button {
+      background-color: #17a2b8;
+      border-radius: 50%;
+    }
+
+    audio::-webkit-media-controls-timeline {
+      background-color: rgba(255, 255, 255, 0.3);
+      border-radius: 25px;
+    }
+
+    /* Tablet Responsive Styles */
+    @media (max-width: 768px) and (min-width: 481px) {
+      body {
+        padding: 15px;
+      }
+
+      .container {
+        max-width: 600px;
+        padding: 25px 20px;
+        margin-top: 20px;
+      }
+
+      .auth-box {
+        max-width: 450px;
+        padding: 35px 25px;
+        margin-top: 80px;
+      }
+
+      #authMenuBtn, #friendsBtn {
+        width: 45px;
+        height: 45px;
+        font-size: 18px;
+      }
+    }
+
+    /* Mobile Responsive Styles */
+    @media (max-width: 480px) {
+      body {
+        padding: 10px 5px;
+      }
+
+      .container {
+        padding: 20px 15px;
+        margin: 5px;
+        margin-top: 20px;
+        background: transparent;
+      }
+
+      .auth-box {
+        padding: 25px 20px;
+        margin: 10px;
+        margin-top: 80px;
+        max-width: none;
+        width: calc(100% - 20px);
+        background: transparent;
+      }
+
+      .auth-container {
+        padding: 10px 5px;
+        min-height: 100vh;
+      }
+
+      .ring-background {
+        width: 100vw;
+        height: 100vh;
+        opacity: 0.3;
+      }
+
+      h1 {
+        font-size: 24px;
+        margin-bottom: 20px;
+      }
+
+      .auth-box h1 {
+        font-size: 26px;
+        margin-bottom: 15px;
+      }
+
+      .auth-box p {
+        font-size: 14px;
+        margin-bottom: 20px;
+        line-height: 1.5;
+      }
+
+      .question-title {
+        font-size: 18px;
+      }
+
+      select, button {
+        font-size: 16px;
+        padding: 14px 16px;
+        border-radius: 10px;
+      }
+
+      #loadBtn {
+        font-size: 16px;
+        padding: 16px 18px;
+      }
+
+      .auth-btn {
+        font-size: 16px;
+        padding: 14px 18px;
+        border-radius: 10px;
+        margin: 8px 0;
+      }
+
+      .auth-form input {
+        font-size: 16px;
+        padding: 14px 16px;
+        margin: 8px 0;
+        border-radius: 10px;
+      }
+
+
+
+      .divider {
+        margin: 20px 0;
+        font-size: 14px;
+      }
+
+      #authMenuBtn {
+        width: 45px;
+        height: 45px;
+        font-size: 18px;
+      }
+
+      #friendsBtn {
+        width: 45px;
+        height: 45px;
+        font-size: 18px;
+      }
+
+      #authMenu {
+        width: 220px;
+        padding: 15px;
+      }
+
+      .friend-actions {
+        justify-content: center;
+      }
+
+      .friend-btn {
+        font-size: 12px;
+        padding: 6px 12px;
+      }
+
+      /* Improve touch targets for mobile */
+      .auth-btn:hover {
+        transform: none;
+      }
+
+      .auth-btn:active {
+        transform: scale(0.98);
+      }
+
+      /* Better spacing for form elements */
+      .auth-form {
+        margin-top: 15px;
+      }
+
+      /* Ensure buttons are easily tappable */
+      button {
+        min-height: 48px;
+        touch-action: manipulation;
+      }
+
+      /* Improve input focus states for mobile */
+      input:focus {
+        transform: none;
+        box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.25);
+      }
+    }
+  </style>
+</head>
+<body>
+  <!-- Animated Ring Background -->
+  <div class="ring-background">
+    <i></i>
+    <i></i>
+    <i></i>
+  </div>
+
+
+
+  <!-- قائمة التسجيل المخفية -->
+  <div id="authMenu" style="
+    position: fixed;
+    top: 80px;
+    right: 20px;
+    background: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(15px);
+    border-radius: 15px;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    padding: 20px;
+    width: 250px;
+    z-index: 999;
+    display: none;
+    animation: slideIn 0.3s ease-out;
+    font-family: 'Tajawal', sans-serif;
+  ">
+    <button id="showSignInBtn" class="auth-btn primary-btn" style="width: 100%; margin-bottom: 10px;">
+      تسجيل الدخول
+    </button>
+    <button id="showSignUpBtn" class="auth-btn secondary-btn" style="width: 100%;">
+      إنشاء حساب جديد
+    </button>
+  </div>
+
+  <!-- نافذة الأصدقاء -->
+  <div id="friendsModal" style="
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(5px);
+    z-index: 9999;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    animation: fadeIn 0.3s ease-out;
+  ">
+    <div style="
+      background: rgba(255, 255, 255, 0.95);
+      backdrop-filter: blur(15px);
+      border-radius: 20px;
+      box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+      border: 1px solid rgba(255, 255, 255, 0.2);
+      width: 90%;
+      max-width: 600px;
+      max-height: 80vh;
+      overflow-y: auto;
+      animation: slideIn 0.5s ease-out;
+    ">
+      <!-- رأس النافذة -->
+      <div style="
+        background: linear-gradient(135deg, #28a745, #20c997);
+        color: white;
+        padding: 20px;
+        border-radius: 20px 20px 0 0;
+        text-align: center;
+        position: relative;
+      ">
+        <h2 style="margin: 0; font-family: 'Tajawal', sans-serif; font-size: 24px; font-weight: 700;">👥 الأصدقاء</h2>
+        <button id="closeFriendsModal" onclick="closeFriendsModal()" style="
+          position: absolute;
+          top: 15px;
+          left: 20px;
+          background: rgba(255, 255, 255, 0.2);
+          border: none;
+          color: white;
+          border-radius: 50%;
+          width: 35px;
+          height: 35px;
+          cursor: pointer;
+          font-size: 18px;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          transition: all 0.3s ease;
+        ">✕</button>
+      </div>
+
+      <!-- تبويبات -->
+      <div style="
+        display: flex;
+        background: #f8f9fa;
+        border-bottom: 1px solid #e9ecef;
+      ">
+        <button id="myFriendsTab" class="friends-tab active" style="
+          flex: 1;
+          padding: 15px;
+          border: none;
+          background: none;
+          cursor: pointer;
+          font-family: 'Tajawal', sans-serif;
+          font-weight: 600;
+          transition: all 0.3s ease;
+        ">أصدقائي</button>
+        <button id="searchFriendsTab" class="friends-tab" style="
+          flex: 1;
+          padding: 15px;
+          border: none;
+          background: none;
+          cursor: pointer;
+          font-family: 'Tajawal', sans-serif;
+          font-weight: 600;
+          transition: all 0.3s ease;
+        ">البحث</button>
+        <button id="friendRequestsTab" class="friends-tab" style="
+          flex: 1;
+          padding: 15px;
+          border: none;
+          background: none;
+          cursor: pointer;
+          font-family: 'Tajawal', sans-serif;
+          font-weight: 600;
+          transition: all 0.3s ease;
+          position: relative;
+        ">الطلبات <span id="requestsBadge" style="
+          background: #dc3545;
+          color: white;
+          border-radius: 50%;
+          padding: 2px 6px;
+          font-size: 12px;
+          margin-right: 5px;
+          display: none;
+        ">0</span></button>
+      </div>
+
+      <!-- محتوى التبويبات -->
+      <div style="padding: 20px;">
+        <!-- تبويب أصدقائي -->
+        <div id="myFriendsContent" class="tab-content">
+          <div id="friendsList" style="
+            max-height: 400px;
+            overflow-y: auto;
+          "></div>
+        </div>
+
+        <!-- تبويب البحث -->
+        <div id="searchFriendsContent" class="tab-content" style="display: none;">
+          <div style="margin-bottom: 20px;">
+            <input type="text" id="friendSearchInput" placeholder="🔍 ابحث بالاسم (كلمتين على الأقل، كل منها 3 أحرف)..." style="
+              width: 100%;
+              padding: 12px 16px;
+              border: 2px solid #e9ecef;
+              border-radius: 12px;
+              font-family: 'Tajawal', sans-serif;
+              font-size: 16px;
+              box-sizing: border-box;
+              transition: all 0.3s ease;
+            ">
+          </div>
+          <div id="searchResults" style="
+            max-height: 400px;
+            overflow-y: auto;
+          "></div>
+        </div>
+
+        <!-- تبويب طلبات الصداقة -->
+        <div id="friendRequestsContent" class="tab-content" style="display: none;">
+          <div id="requestsList" style="
+            max-height: 400px;
+            overflow-y: auto;
+          "></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Authentication Container -->
+  <!-- Sign In Container -->
+  <div id="signInContainer" class="auth-container" style="display: none;">
+    <div class="auth-box">
+      <h1>تسجيل الدخول</h1>
+      <p style="text-align: center; color: #6c757d; margin-bottom: 30px;">قم بتسجيل الدخول للوصول إلى اختبارات طب الأسنان</p>
+
+
+
+      <!-- Email/Password Form -->
+      <form id="signInForm" class="auth-form">
+        <input type="email" id="signInEmailInput" placeholder="البريد الإلكتروني" required>
+        <input type="password" id="signInPasswordInput" placeholder="كلمة المرور" required>
+
+        <button type="submit" id="signInBtn" class="auth-btn primary-btn">
+          تسجيل الدخول
+        </button>
+
+        <button type="button" id="goToSignUpBtn" class="auth-btn secondary-btn">
+          إنشاء حساب جديد
+        </button>
+
+        <button type="button" id="cancelSignInBtn" class="auth-btn" style="background: #6c757d; color: white; margin-top: 10px;">
+          إلغاء
+        </button>
+      </form>
+    </div>
+  </div>
+
+  <!-- Sign Up Container -->
+  <div id="signUpContainer" class="auth-container" style="display: none;">
+    <div class="auth-box">
+      <h1>إنشاء حساب جديد</h1>
+      <p style="text-align: center; color: #6c757d; margin-bottom: 30px;">قم بإنشاء حساب جديد للوصول إلى اختبارات طب الأسنان</p>
+
+
+
+      <!-- Sign Up Form -->
+      <form id="signUpForm" class="auth-form">
+        <input type="text" id="fullNameInput" placeholder="الاسم الكامل" required>
+        <input type="text" id="groupInput" placeholder="المجموعة/الدفعة" required>
+        <input type="email" id="signUpEmailInput" placeholder="البريد الإلكتروني" required>
+        <input type="password" id="signUpPasswordInput" placeholder="كلمة المرور (6 أحرف على الأقل)" required minlength="6">
+        <input type="password" id="confirmPasswordInput" placeholder="تأكيد كلمة المرور" required minlength="6">
+
+        <button type="submit" id="createNewAccountBtn" class="auth-btn primary-btn">
+          إنشاء الحساب
+        </button>
+
+        <button type="button" id="backToSignInBtn" class="auth-btn secondary-btn">
+          لدي حساب بالفعل - تسجيل الدخول
+        </button>
+
+        <button type="button" id="cancelSignUpBtn" class="auth-btn" style="background: #6c757d; color: white; margin-top: 10px;">
+          إلغاء
+        </button>
+      </form>
+    </div>
+  </div>
+
+  <div class="container">
+    <button id="homeBtn">العودة للرئيسية</button>
+    <h1></h1>
+
+    <div id="controlsContainer">
+      <!-- أزرار القائمة والأصدقاء - في الأعلى مع المحتوى -->
+      <div style="
+        display: flex;
+        justify-content: flex-end;
+        gap: 15px;
+        margin-bottom: 20px;
+        align-items: center;
+      ">
+        <!-- زر الأصدقاء -->
+        <button id="friendsBtn" onclick="openFriendsModal()" style="
+          background: linear-gradient(135deg, #28a745, #20c997);
+          color: white;
+          border: none;
+          border-radius: 50%;
+          width: 50px;
+          height: 50px;
+          font-size: 20px;
+          cursor: pointer;
+          box-shadow: 0 4px 15px rgba(40, 167, 69, 0.2);
+          transition: all 0.3s ease;
+          font-family: 'Tajawal', sans-serif;
+          display: none;
+          align-items: center;
+          justify-content: center;
+          position: relative;
+        " title="الأصدقاء">
+          👥
+          <!-- تنبيه الأصدقاء المتصلين -->
+          <span id="onlineFriendsBadge" style="
+            position: absolute;
+            top: -5px;
+            left: -5px;
+            background: #28a745;
+            color: white;
+            border-radius: 50%;
+            min-width: 18px;
+            height: 18px;
+            font-size: 10px;
+            font-weight: bold;
+            display: none;
+            align-items: center;
+            justify-content: center;
+            border: 2px solid white;
+            box-shadow: 0 2px 8px rgba(40, 167, 69, 0.4);
+          ">0</span>
+          <!-- تنبيه طلبات الصداقة -->
+          <span id="friendRequestsBadgeBtn" style="
+            position: absolute;
+            top: -5px;
+            right: -5px;
+            background: #dc3545;
+            color: white;
+            border-radius: 50%;
+            min-width: 18px;
+            height: 18px;
+            font-size: 10px;
+            font-weight: bold;
+            display: none;
+            align-items: center;
+            justify-content: center;
+            border: 2px solid white;
+            box-shadow: 0 2px 8px rgba(220, 53, 69, 0.4);
+          ">0</span>
+        </button>
+
+        <!-- زر القائمة المخفية -->
+        <button id="authMenuBtn" style="
+          background: linear-gradient(135deg, #667eea, #764ba2);
+          color: white;
+          border: none;
+          border-radius: 50%;
+          width: 50px;
+          height: 50px;
+          font-size: 20px;
+          cursor: pointer;
+          box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+          transition: all 0.3s ease;
+          font-family: 'Tajawal', sans-serif;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+        ">☰</button>
+      </div>
+
+      <label>اختر المادة:</label>
+      <select id="subjectSelect"></select>
+
+      <label>اختر المحاضرة:</label>
+      <select id="lectureSelect"></select>
+
+      <label>اختر النسخة:</label>
+      <select id="versionSelect" style="display: none;"></select>
+      <div id="versionLoginMessage" style="display: none; color: #dc3545; font-weight: bold; padding: 10px; background: rgba(220, 53, 69, 0.1); border: 1px solid #dc3545; border-radius: 8px; margin-top: 10px;">
+        سجل الدخول لتحصل على أكثر من نسخة أسئلة لنفس المحاضرة
+      </div>
+
+      <button id="loadBtn">ابدأ</button>
+    </div>
+
+    <div id="questionNav" style="display:none;">
+      <label for="questionSelector">الانتقال إلى سؤال:</label>
+      <select id="questionSelector"></select>
+    </div>
+
+    <div id="questionsContainer"></div>
+  </div>
+
+
+</body>
+</html>
