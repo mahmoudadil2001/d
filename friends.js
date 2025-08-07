@@ -34,7 +34,7 @@ class FriendsManager {
   updateCurrentUser(user) {
     this.currentUser = user;
     console.log('FriendsManager: currentUser updated to:', user?.uid || 'null');
-    
+
     // تحديث آخر ظهور عند تسجيل الدخول
     if (user) {
       this.updateLastSeen();
@@ -136,7 +136,7 @@ class FriendsManager {
           const friendData = friendDoc.data();
           const lastSeen = friendData.lastSeen ? new Date(friendData.lastSeen) : null;
           const isOnline = friendData.isOnline === true;
-          
+
           // تحديد الحالة
           let status = 'غير متاح';
           let statusColor = '#6c757d';
@@ -296,7 +296,7 @@ class FriendsManager {
     } catch (error) {
       console.error('Error searching users:', error);
       let errorMessage = 'فشل في البحث عن المستخدمين';
-      
+
       if (error.code === 'permission-denied') {
         errorMessage = 'ليس لديك صلاحية للوصول لقاعدة البيانات';
       } else if (error.code === 'unavailable') {
@@ -304,7 +304,7 @@ class FriendsManager {
       } else if (error.message) {
         errorMessage += ': ' + error.message;
       }
-      
+
       this.showError(errorMessage);
       return [];
     }
@@ -390,7 +390,7 @@ class FriendsManager {
       // إنشاء كائن الطلب بمعلومات المرسل
       const currentUserDoc = await getDoc(doc(db, 'users', this.currentUser.uid));
       const currentUserData = currentUserDoc.exists() ? currentUserDoc.data() : {};
-      
+
       const requestData = {
         uid: this.currentUser.uid,
         name: currentUserData["الاسم الكامل"] || currentUserData.fullName || this.currentUser.displayName || 'غير محدد',
@@ -419,7 +419,7 @@ class FriendsManager {
     } catch (error) {
       console.error('Error sending friend request:', error);
       let errorMessage = 'فشل في إرسال طلب الصداقة';
-      
+
       if (error.code === 'permission-denied') {
         errorMessage = 'ليس لديك صلاحية للوصول لهذه البيانات';
       } else if (error.code === 'unavailable') {
@@ -427,7 +427,7 @@ class FriendsManager {
       } else if (error.code === 'not-found') {
         errorMessage = 'المستخدم غير موجود';
       }
-      
+
       this.showError(errorMessage);
       return false;
     }
@@ -509,13 +509,13 @@ class FriendsManager {
     } catch (error) {
       console.error('Error accepting friend request:', error);
       let errorMessage = 'فشل في قبول طلب الصداقة';
-      
+
       if (error.code === 'permission-denied') {
         errorMessage = 'ليس لديك صلاحية للوصول لهذه البيانات';
       } else if (error.code === 'unavailable') {
         errorMessage = 'لا يمكن الاتصال بقاعدة البيانات، تحقق من الاتصال بالإنترنت';
       }
-      
+
       this.showError(errorMessage);
       return false;
     }
@@ -557,7 +557,7 @@ class FriendsManager {
     }
   }
 
-  
+
 
   // حذف صديق
   async removeFriend(friendUserId) {
@@ -610,7 +610,7 @@ class FriendsManager {
       for (const request of this.friendRequests) {
         // التعامل مع الطلبات القديمة (مجرد string) والجديدة (كائن)
         let userId, requestData;
-        
+
         if (typeof request === 'string') {
           userId = request;
           // جلب البيانات من قاعدة البيانات للطلبات القديمة
@@ -620,7 +620,7 @@ class FriendsManager {
             const name = userData["الاسم الكامل"] || userData.fullName || 'غير محدد';
             const email = userData["الايميل"] || userData.email || '';
             const group = userData["الجروب"] || userData.group || 'غير محدد';
-            
+
             requestData = {
               uid: userId,
               name: name,
@@ -637,7 +637,7 @@ class FriendsManager {
             group: request.group || 'غير محدد'
           };
         }
-        
+
         if (requestData) {
           requests.push(requestData);
         }
@@ -649,7 +649,7 @@ class FriendsManager {
     }
   }
 
-  
+
 
   // عرض رسالة نجاح
   showSuccess(message) {
