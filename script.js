@@ -271,11 +271,12 @@ function updateQuestionNavigator() {
 document.addEventListener("change", (e) => {
   if (e.target.id === "questionSelect") {
     const selected = parseInt(e.target.value, 10);
-    if (!answered) {
-      // لمنع تغيير السؤال أثناء الإجابة على سؤال مفتوح
+    // السماح بالتنقل إذا كان السؤال الحالي مجاب عليه أو السؤال المطلوب مجاب عليه
+    if (!answered || questionStatus[currentIndex] !== "unanswered" || questionStatus[selected] !== "unanswered") {
       currentIndex = selected;
       showQuestion();
     } else {
+      // منع التنقل فقط إذا كان السؤال الحالي قيد الإجابة (timer running)
       e.target.value = currentIndex;
     }
   }
@@ -389,6 +390,7 @@ function showQuestion() {
     btn.style.width = "100%";
 
     if (questionStatus[currentIndex] !== "unanswered") {
+      answered = true; // تعيين السؤال كمجاب عليه إذا كان قد تم الإجابة عليه من قبل
       btn.disabled = true;
       if (
         idx === q.answer &&
@@ -441,7 +443,14 @@ function showQuestion() {
   questionDiv.appendChild(optionsList);
   questionsContainer.appendChild(questionDiv);
 
-  if (timerEnabled) startTimer();
+  // تشغيل المؤقت فقط إذا كان السؤال لم تتم الإجابة عليه بعد
+  if (timerEnabled && questionStatus[currentIndex] === "unanswered") {
+    startTimer();
+  } else {
+    // إخفاء المؤقت للأسئلة المجاب عليها
+    const navigatorTimer = document.getElementById("navigatorTimer");
+    navigatorTimer.style.display = "none";
+  }
 }
 
 // زر التالي
