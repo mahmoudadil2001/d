@@ -414,9 +414,6 @@ class FriendsManager {
       // تحديث البيانات المحلية
       this.sentRequests.push(targetUserId);
 
-      // إرسال إشعار تليجرام
-      await this.sendFriendNotification(targetUserId, 'طلب صداقة جديد');
-
       this.showSuccess('تم إرسال طلب الصداقة بنجاح');
       return true;
     } catch (error) {
@@ -506,9 +503,6 @@ class FriendsManager {
       this.friendRequests = this.friendRequests.filter(req => 
         (typeof req === 'string' ? req : req.uid) !== friendUserId
       );
-
-      // إرسال إشعار تليجرام
-      await this.sendFriendNotification(friendUserId, 'تم قبول طلب الصداقة');
 
       this.showSuccess('تم قبول طلب الصداقة بنجاح');
       return true;
@@ -655,43 +649,7 @@ class FriendsManager {
     }
   }
 
-  // إرسال إشعار تليجرام للصديق
-  async sendFriendNotification(targetUserId, action) {
-    try {
-      const targetUserDoc = await getDoc(doc(db, 'users', targetUserId));
-      if (!targetUserDoc.exists()) return;
-
-      const targetUserData = targetUserDoc.data();
-      const currentUserDoc = await getDoc(doc(db, 'users', this.currentUser.uid));
-      const currentUserData = currentUserDoc.data();
-
-      const botToken = '8165532786:AAHYiNEgO8k1TDz5WNtXmPHNruQM15LIgD4';
-      const chatId = '6283768537';
-
-      let message = `🤝 ${action}\n\n`;
-      message += `👤 من: ${currentUserData["الاسم الكامل"] || currentUserData.fullName || 'غير محدد'}\n`;
-      message += `📧 إيميل المرسل: ${currentUserData["الايميل"] || currentUserData.email || ''}\n`;
-      message += `👥 جروب المرسل: ${currentUserData["الجروب"] || currentUserData.group || 'غير محدد'}\n`;
-      message += `➡️ إلى: ${targetUserData["الاسم الكامل"] || targetUserData.fullName || 'غير محدد'}\n`;
-      message += `📧 إيميل المستقبل: ${targetUserData["الايميل"] || targetUserData.email || ''}\n`;
-      message += `👥 جروب المستقبل: ${targetUserData["الجروب"] || targetUserData.group || 'غير محدد'}\n`;
-      message += `⏰ الوقت: ${new Date().toLocaleString('ar-EG', { timeZone: 'Africa/Cairo' })}`;
-
-      await fetch(`https://api.telegram.org/bot${botToken}/sendMessage`, {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-        },
-        body: JSON.stringify({
-          chat_id: chatId,
-          text: message,
-          parse_mode: 'HTML'
-        })
-      });
-    } catch (error) {
-      console.error('Error sending friend notification:', error);
-    }
-  }
+  
 
   // عرض رسالة نجاح
   showSuccess(message) {
