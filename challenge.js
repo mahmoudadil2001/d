@@ -42,10 +42,30 @@ class ChallengeManager {
       this.currentUser = user;
       if (user) {
         this.startListeningForChallenges();
+        
+        // إعادة تشغيل المستمعين عند العودة للتطبيق (للأجهزة المحمولة)
+        document.addEventListener('visibilitychange', () => {
+          if (!document.hidden && this.currentUser) {
+            console.log('App became visible, restarting challenge listeners...');
+            setTimeout(() => {
+              this.restartListeners();
+            }, 1000);
+          }
+        });
       } else {
         this.stopListening();
         // مسح إشعارات الجلسة عند تسجيل الخروج
         this.clearSessionNotifications();
+      }
+    });
+
+    // إضافة مستمع لإعادة الاتصال عند استعادة الاتصال بالإنترنت
+    window.addEventListener('online', () => {
+      if (this.currentUser) {
+        console.log('Internet connection restored, restarting challenge listeners...');
+        setTimeout(() => {
+          this.restartListeners();
+        }, 2000);
       }
     });
   }
@@ -72,28 +92,147 @@ class ChallengeManager {
 
     this.challengeListeners.set('incoming', incomingUnsubscribe);
 
-    // استمع للتحديات المقبولة (للمرسل)
+    // استمع للتحديات المقبولة (للمرسل) مع تحسين للأجهزة المحمولة
+    this.setupAcceptedChallengeListener();
+
+    // استمع للإشعارات عندما يغادر المرسل التحدي
+    this.startListeningForChallengerLeftNotifications();
+  }
+
+  // إعداد مستمع محسن للتحديات المقبولة مع دعم أفضل للأجهزة المحمولة
+  setupAcceptedChallengeListener() {
+    const challengesRef = collection(db, 'challenges');
     const acceptedQuery = query(
       challengesRef,
-      where('challengerId', '==', this.currentUser.uid),
-      where('status', '==', 'accepted')
+      where('challengerId', '==', this.currentUser.uid)
     );
 
     const acceptedUnsubscribe = onSnapshot(acceptedQuery, (snapshot) => {
       snapshot.docChanges().forEach((change) => {
-        if (change.type === 'modified' || change.type === 'added') {
-          const challengeData = change.doc.data();
-          console.log('Challenge status changed:', challengeData.status, 'for challenger:', challengeData.challengerId);
+        const challengeData = change.doc.data();
+        const changeType = change.type;
+        
+        console.log('Challenge document changed:', changeType, 'Status:', challengeData.status, 'ID:', change.doc.id);
 
-          // التأكد من أن هذا التحدي للمستخدم الحالي وأنه تم قبوله
-          if (challengeData.status === 'accepted' && challengeData.challengerId === this.currentUser.uid) {
+        // التحقق من قبول التحدي مع معالجة محسنة للأجهزة المحمولة
+        if (challengeData.status === 'accepted' && challengeData.challengerId === this.currentUser.uid) {
+          console.log('Challenge accepted detected for current user');
+          
+          // تأخير صغير للتأكد من اكتمال التحديث
+          setTimeout(() => {
             this.handleAcceptedChallenge(challengeData, change.doc.id);
-          }
+          }, 100);
         }
       });
+    }, (error) => {
+      console.error('Error listening to accepted challenges:', error);
+      
+      // إعادة المحاولة بعد فترة في حالة فشل الاتصال
+      setTimeout(() => {
+        if (this.currentUser && !this.challengeListeners.has('accepted')) {
+          this.setupAcceptedChallengeListener();
+        }
+      }, 5000);
     });
 
     this.challengeListeners.set('accepted', acceptedUnsubscribe);
+
+    // إضافة مستمع إضافي للأجهزة المحمولة
+    this.setupMobileBackupListener();
+  }
+
+  // إيقاف جميع المستمعين
+  stopListening() {
+    this.challengeListeners.forEach((unsubscribe) => {
+      if (typeof unsubscribe === 'function') {
+        unsubscribe();
+      }
+    });
+    this.challengeListeners.clear();
+
+    if (this.roomListener) {
+      this.roomListener();
+      this.roomListener = null;
+    }
+
+    if (this.mobileCheckInterval) {
+      clearInterval(this.mobileCheckInterval);
+      this.mobileCheckInterval = null;
+    }
+  }
+
+  // مسح إشعارات الجلسة
+  clearSessionNotifications() {
+    // مسح جميع إشعارات التحدي من sessionStorage
+    const keys = Object.keys(sessionStorage);
+    keys.forEach(key => {
+      if (key.startsWith('challenge_') || key.startsWith('notification_')) {
+        sessionStorage.removeItem(key);
+      }
+    });
+  }
+
+  // إعادة تشغيل المستمعين
+  restartListeners() {
+    if (this.currentUser) {
+      this.stopListening();
+      setTimeout(() => {
+        this.startListeningForChallenges();
+      }, 1000);
+    }
+  }
+
+  // مستمع إضافي للأجهزة المحمولة
+  setupMobileBackupListener() {
+    // التحقق من كون الجهاز محمول
+    const isMobile = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
+    
+    if (!isMobile) return;
+
+    console.log('Setting up mobile backup listener for challenge acceptance');
+
+    // مستمع دوري للتحقق من التحديات المقبولة
+    this.mobileCheckInterval = setInterval(async () => {
+      try {
+        const challengesRef = collection(db, 'challenges');
+        const mobileQuery = query(
+          challengesRef,
+          where('challengerId', '==', this.currentUser.uid),
+          where('status', '==', 'accepted')
+        );
+
+        const snapshot = await getDocs(mobileQuery);
+        
+        snapshot.forEach((doc) => {
+          const challengeData = doc.data();
+          const challengeId = doc.id;
+          const notificationKey = `challenge_accepted_${challengeId}`;
+          
+          // التحقق من أن الإشعار لم يتم عرضه من قبل
+          const hasShownNotification = sessionStorage.getItem(notificationKey);
+          
+          // التحقق من أن التحدي تم قبوله مؤخراً (خلال آخر دقيقتين)
+          const acceptedAt = challengeData.acceptedAt;
+          const now = Date.now();
+          let shouldShowNotification = false;
+
+          if (acceptedAt && acceptedAt.toMillis) {
+            const acceptedTime = acceptedAt.toMillis();
+            shouldShowNotification = (now - acceptedTime) < 120000; // دقيقتان
+          } else if (challengeData.lastUpdated) {
+            shouldShowNotification = (now - challengeData.lastUpdated) < 120000;
+          }
+
+          if (shouldShowNotification && !hasShownNotification) {
+            console.log('Mobile backup: showing challenge accepted notification');
+            sessionStorage.setItem(notificationKey, 'true');
+            this.handleAcceptedChallenge(challengeData, challengeId);
+          }
+        });
+      } catch (error) {
+        console.error('Error in mobile backup listener:', error);
+      }
+    }, 10000); // كل 10 ثوانِ
   }
 
   // Handle incoming challenge notification
@@ -138,30 +277,42 @@ class ChallengeManager {
       if (challengeData.challengerId === this.currentUser.uid && challengeData.status === 'accepted') {
         console.log('Challenge accepted! Checking if notification should be shown...');
 
-        // التحقق من أن التحدي تم قبوله مؤخراً (خلال آخر 30 ثانية)
+        // التحقق من أننا لم نعرض هذا الإشعار من قبل أولاً
+        const notificationKey = `challenge_accepted_${challengeId}`;
+        const hasShownNotification = sessionStorage.getItem(notificationKey);
+
+        if (hasShownNotification) {
+          console.log('Notification already shown for this challenge');
+          return;
+        }
+
+        // التحقق من أن التحدي تم قبوله مؤخراً (زيادة المدة للأجهزة المحمولة)
         const acceptedAt = challengeData.acceptedAt;
         const lastUpdated = challengeData.lastUpdated;
         const now = Date.now();
+        
+        // تحديد ما إذا كان الجهاز محمول
+        const isMobile = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
+        const timeWindow = isMobile ? 120000 : 30000; // دقيقتان للجوال، 30 ثانية للكمبيوتر
 
         let shouldShowNotification = false;
 
         if (acceptedAt && acceptedAt.toMillis) {
           // إذا كان acceptedAt موجود كـ Firestore timestamp
           const acceptedTime = acceptedAt.toMillis();
-          shouldShowNotification = (now - acceptedTime) < 30000; // 30 ثانية
+          shouldShowNotification = (now - acceptedTime) < timeWindow;
+          console.log(`Time since acceptance: ${(now - acceptedTime) / 1000} seconds (limit: ${timeWindow / 1000})`);
         } else if (lastUpdated) {
           // إذا كان lastUpdated موجود كـ timestamp عادي
-          shouldShowNotification = (now - lastUpdated) < 30000; // 30 ثانية
+          shouldShowNotification = (now - lastUpdated) < timeWindow;
+          console.log(`Time since last update: ${(now - lastUpdated) / 1000} seconds (limit: ${timeWindow / 1000})`);
         } else {
-          // إذا لم يكن هناك timestamp، لا نعرض الإشعار
-          shouldShowNotification = false;
+          // إذا لم يكن هناك timestamp، اعرض الإشعار على أي حال (للأجهزة المحمولة)
+          shouldShowNotification = isMobile;
+          console.log('No timestamp found, showing notification for mobile devices');
         }
 
-        // التحقق من أننا لم نعرض هذا الإشعار من قبل
-        const notificationKey = `challenge_accepted_${challengeId}`;
-        const hasShownNotification = sessionStorage.getItem(notificationKey);
-
-        if (shouldShowNotification && !hasShownNotification) {
+        if (shouldShowNotification) {
           console.log('Showing challenge accepted notification...');
 
           // تسجيل أننا عرضنا الإشعار
@@ -175,7 +326,7 @@ class ChallengeManager {
           // Show acceptance notification
           this.showChallengeAcceptedNotification(challengeData, challengeId, opponentName);
         } else {
-          console.log('Notification not shown - either too old or already shown');
+          console.log('Notification not shown - too much time has passed');
         }
       }
 
@@ -362,69 +513,82 @@ class ChallengeManager {
     modal.innerHTML = `
       <div style="
         background: linear-gradient(135deg, #28a745, #20c997);
-        border-radius: 15px;
-        padding: 18px;
-        max-width: 280px;
-        width: 85%;
+        border-radius: 20px;
+        padding: 30px;
+        max-width: 450px;
+        width: 95%;
         text-align: center;
         color: white;
-        box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
-        animation: bounceIn 0.6s ease-out;
+        box-shadow: 0 25px 50px rgba(0, 0, 0, 0.5);
+        animation: bounceIn 0.8s ease-out;
         font-family: 'Tajawal', sans-serif;
       ">
-        <div style="font-size: 40px; margin-bottom: 8px;">🎉</div>
-        <h2 style="margin: 0 0 8px 0; font-size: 18px; font-weight: 700;">
+        <div style="font-size: 80px; margin-bottom: 20px; animation: pulse 2s infinite;">🎉</div>
+        <h2 style="margin: 0 0 15px 0; font-size: 28px; font-weight: 700; text-shadow: 0 2px 10px rgba(0,0,0,0.3);">
           تم قبول التحدي!
         </h2>
-        <p style="margin: 8px 0; font-size: 14px; line-height: 1.2;">
-          <strong style="color: #fff200;">🏆 ${opponentName}</strong> قبل تحديك!
+        <p style="margin: 15px 0; font-size: 20px; line-height: 1.4; text-shadow: 0 1px 5px rgba(0,0,0,0.3);">
+          <strong style="color: #fff200;">🏆 ${opponentName}</strong><br>
+          قبل تحديك ويريد المواجهة!
         </p>
 
         <div style="
-          background: rgba(255, 255, 255, 0.2);
-          border-radius: 8px;
-          padding: 10px;
-          margin: 12px 0;
-          border: 1px solid rgba(255, 255, 255, 0.3);
-          font-size: 12px;
-          line-height: 1.3;
+          background: rgba(255, 255, 255, 0.25);
+          border-radius: 15px;
+          padding: 20px;
+          margin: 25px 0;
+          border: 2px solid rgba(255, 255, 255, 0.4);
+          box-shadow: inset 0 2px 10px rgba(0,0,0,0.2);
         ">
-          <div>📚 ${challengeData.subject}</div>
-          <div>📖 المحاضرة ${challengeData.lecture}</div>
-          <div>🔢 النسخة ${challengeData.version}</div>
+          <p style="margin: 8px 0; font-weight: 600; font-size: 16px;">📚 المادة: <span style="color: #fff200;">${challengeData.subject}</span></p>
+          <p style="margin: 8px 0; font-weight: 600; font-size: 16px;">📖 المحاضرة: <span style="color: #fff200;">${challengeData.lecture}</span></p>
+          <p style="margin: 8px 0; font-weight: 600; font-size: 16px;">🔢 النسخة: <span style="color: #fff200;">${challengeData.version}</span></p>
         </div>
 
-        <div style="display: flex; gap: 8px; justify-content: center; margin-top: 15px;">
+        <div style="
+          background: rgba(255, 255, 255, 0.15);
+          border-radius: 10px;
+          padding: 15px;
+          margin: 20px 0;
+          border: 1px solid rgba(255, 255, 255, 0.3);
+        ">
+          <p style="margin: 0; font-size: 16px; font-weight: 600; color: #ffeb3b;">
+            ⚡ هل أنت مستعد للمواجهة؟
+          </p>
+        </div>
+
+        <div style="display: flex; gap: 15px; justify-content: center; margin-top: 30px;">
           <button id="enterChallengeBtn" style="
             background: linear-gradient(135deg, #ff6b35, #f7931e);
             color: white;
             border: none;
-            border-radius: 10px;
-            padding: 10px 16px;
-            font-size: 14px;
-            font-weight: 600;
+            border-radius: 15px;
+            padding: 15px 30px;
+            font-size: 18px;
+            font-weight: 700;
             cursor: pointer;
             transition: all 0.3s ease;
             font-family: 'Tajawal', sans-serif;
-            flex: 1;
-          ">🚀 ابدأ</button>
+            box-shadow: 0 8px 20px rgba(255, 107, 53, 0.4);
+            text-shadow: 0 2px 5px rgba(0,0,0,0.3);
+          ">🚀 ابدأ المواجهة</button>
           <button id="declineEnterBtn" style="
             background: linear-gradient(135deg, #6c757d, #495057);
             color: white;
             border: none;
-            border-radius: 10px;
-            padding: 10px 16px;
-            font-size: 14px;
-            font-weight: 600;
+            border-radius: 15px;
+            padding: 15px 30px;
+            font-size: 18px;
+            font-weight: 700;
             cursor: pointer;
             transition: all 0.3s ease;
             font-family: 'Tajawal', sans-serif;
-            flex: 1;
-          ">❌ لاحقاً</button>
+            box-shadow: 0 8px 20px rgba(108, 117, 125, 0.4);
+          ">❌ ليس الآن</button>
         </div>
 
-        <div style="margin-top: 12px; font-size: 11px; opacity: 0.8;">
-          ⏰ ينتهي خلال دقيقة
+        <div style="margin-top: 20px; font-size: 14px; opacity: 0.9;">
+          ⏰ ستنتهي صلاحية هذا الإشعار خلال دقيقة واحدة
         </div>
       </div>
     `;
@@ -458,6 +622,9 @@ class ChallengeManager {
       console.log('User declined to enter challenge');
       document.body.removeChild(modal);
       this.showToast('تم تأجيل دخول التحدي', 'info');
+      
+      // إرسال تنبيه للخصم بأن المرسل غادر التحدي
+      this.notifyOpponentChallengerLeft(challengeData, challengeId);
     };
 
     // Auto-close after 60 seconds with decline
@@ -477,6 +644,205 @@ class ChallengeManager {
       audio.play().catch(e => console.log('Could not play acceptance sound:', e));
     } catch (error) {
       console.log('Error playing acceptance sound:', error);
+    }
+  }
+
+  // إرسال تنبيه للخصم بأن المرسل غادر التحدي
+  async notifyOpponentChallengerLeft(challengeData, challengeId) {
+    try {
+      // تحديث حالة التحدي في قاعدة البيانات
+      await updateDoc(doc(db, 'challenges', challengeId), {
+        status: 'challenger_declined_entry',
+        challengerDeclinedAt: serverTimestamp(),
+        lastUpdated: Date.now()
+      });
+
+      // إضافة إشعار للخصم
+      const notificationData = {
+        type: 'challenger_left',
+        challengeId: challengeId,
+        challengerId: challengeData.challengerId,
+        opponentId: challengeData.opponentId,
+        challengerName: this.currentUser.displayName || 'المرسل',
+        subject: challengeData.subject,
+        lecture: challengeData.lecture,
+        version: challengeData.version,
+        timestamp: serverTimestamp(),
+        read: false
+      };
+
+      await addDoc(collection(db, 'notifications'), notificationData);
+      console.log('Opponent notified that challenger declined to enter');
+    } catch (error) {
+      console.error('Error notifying opponent about challenger leaving:', error);
+    }
+  }
+
+  // الاستماع للإشعارات عندما يغادر المرسل التحدي
+  startListeningForChallengerLeftNotifications() {
+    if (!this.currentUser) return;
+
+    const notificationsRef = collection(db, 'notifications');
+    const notificationsQuery = query(
+      notificationsRef,
+      where('opponentId', '==', this.currentUser.uid),
+      where('type', '==', 'challenger_left'),
+      where('read', '==', false)
+    );
+
+    const notificationsUnsubscribe = onSnapshot(notificationsQuery, (snapshot) => {
+      snapshot.docChanges().forEach((change) => {
+        if (change.type === 'added') {
+          const notificationData = change.doc.data();
+          
+          // التحقق من أن الإشعار جديد
+          const notificationTime = notificationData.timestamp;
+          if (notificationTime && notificationTime.toMillis) {
+            const timeDiff = Date.now() - notificationTime.toMillis();
+            if (timeDiff < 60000) { // خلال آخر دقيقة
+              this.showChallengerLeftNotification(notificationData, change.doc.id);
+            }
+          }
+        }
+      });
+    });
+
+    this.challengeListeners.set('challengerLeft', notificationsUnsubscribe);
+  }
+
+  // عرض إشعار أن المرسل غادر التحدي
+  async showChallengerLeftNotification(notificationData, notificationId) {
+    try {
+      // الحصول على اسم المرسل
+      let challengerName = notificationData.challengerName || 'المرسل';
+      try {
+        const challengerDoc = await getDoc(doc(db, 'users', notificationData.challengerId));
+        if (challengerDoc.exists()) {
+          challengerName = challengerDoc.data()['الاسم الكامل'] || challengerName;
+        }
+      } catch (error) {
+        console.log('Could not get challenger name:', error);
+      }
+
+      // إنشاء النافذة
+      const modal = document.createElement('div');
+      modal.id = 'challengerLeftModal';
+      modal.style.cssText = `
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(0, 0, 0, 0.85);
+        backdrop-filter: blur(8px);
+        z-index: 10000;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        animation: fadeIn 0.3s ease-out;
+      `;
+
+      modal.innerHTML = `
+        <div style="
+          background: linear-gradient(135deg, #dc3545, #c82333);
+          border-radius: 20px;
+          padding: 30px;
+          max-width: 420px;
+          width: 90%;
+          text-align: center;
+          color: white;
+          box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+          animation: slideIn 0.5s ease-out;
+          font-family: 'Tajawal', sans-serif;
+        ">
+          <div style="font-size: 60px; margin-bottom: 20px;">😔</div>
+          <h2 style="margin: 0 0 15px 0; font-size: 24px; font-weight: 700;">المرسل غادر التحدي</h2>
+          <p style="margin: 15px 0; font-size: 18px; line-height: 1.4;">
+            <strong>${challengerName}</strong><br>
+            قرر عدم دخول التحدي بعد قبولك له
+          </p>
+
+          <div style="
+            background: rgba(255, 255, 255, 0.2);
+            border-radius: 12px;
+            padding: 15px;
+            margin: 20px 0;
+            border: 1px solid rgba(255, 255, 255, 0.3);
+          ">
+            <p style="margin: 5px 0; font-weight: 600;">📚 المادة: ${notificationData.subject}</p>
+            <p style="margin: 5px 0; font-weight: 600;">📖 المحاضرة: ${notificationData.lecture}</p>
+            <p style="margin: 5px 0; font-weight: 600;">🔢 النسخة: ${notificationData.version}</p>
+          </div>
+
+          <div style="
+            background: rgba(255, 255, 255, 0.15);
+            border-radius: 10px;
+            padding: 15px;
+            margin: 20px 0;
+            border: 1px solid rgba(255, 255, 255, 0.3);
+          ">
+            <p style="margin: 0; font-size: 16px; font-weight: 600; color: #ffeb3b;">
+              💔 التحدي ملغي - يمكنك إرسال تحدي آخر لاحقاً
+            </p>
+          </div>
+
+          <button id="closeNotificationBtn" style="
+            background: rgba(255, 255, 255, 0.9);
+            color: #dc3545;
+            border: none;
+            border-radius: 12px;
+            padding: 12px 25px;
+            font-size: 16px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            font-family: 'Tajawal', sans-serif;
+            margin-top: 20px;
+          ">حسناً</button>
+        </div>
+      `;
+
+      document.body.appendChild(modal);
+
+      // إغلاق النافذة
+      modal.querySelector('#closeNotificationBtn').onclick = () => {
+        document.body.removeChild(modal);
+        // تحديد الإشعار كمقروء
+        this.markNotificationAsRead(notificationId);
+      };
+
+      // إغلاق تلقائي بعد 15 ثانية
+      setTimeout(() => {
+        if (document.getElementById('challengerLeftModal')) {
+          document.body.removeChild(modal);
+          this.markNotificationAsRead(notificationId);
+        }
+      }, 15000);
+
+      // تشغيل صوت التنبيه
+      try {
+        const audio = new Audio('./sounds/wrong.wav');
+        audio.volume = 0.6;
+        audio.play().catch(e => console.log('Could not play notification sound:', e));
+      } catch (error) {
+        console.log('Error playing notification sound:', error);
+      }
+
+    } catch (error) {
+      console.error('Error showing challenger left notification:', error);
+    }
+  }
+
+  // تحديد الإشعار كمقروء
+  async markNotificationAsRead(notificationId) {
+    try {
+      await updateDoc(doc(db, 'notifications', notificationId), {
+        read: true,
+        readAt: serverTimestamp()
+      });
+      console.log('Notification marked as read');
+    } catch (error) {
+      console.error('Error marking notification as read:', error);
     }
   }
 
@@ -3086,6 +3452,21 @@ class ChallengeManager {
     });
   }
 
+  // إعادة تشغيل المستمعين (للأجهزة المحمولة)
+  restartListeners() {
+    if (!this.currentUser) return;
+
+    console.log('Restarting challenge listeners...');
+    
+    // إيقاف المستمعين الحاليين
+    this.stopListening();
+    
+    // إعادة تشغيلهم بعد تأخير قصير
+    setTimeout(() => {
+      this.startListeningForChallenges();
+    }, 500);
+  }
+
   // Stop all listeners
   stopListening() {
     this.challengeListeners.forEach(unsubscribe => unsubscribe());
@@ -3094,6 +3475,13 @@ class ChallengeManager {
     if (this.roomListener) {
       this.roomListener();
       this.roomListener = null;
+    }
+
+    // إيقاف المستمع الإضافي للأجهزة المحمولة
+    if (this.mobileCheckInterval) {
+      clearInterval(this.mobileCheckInterval);
+      this.mobileCheckInterval = null;
+      console.log('Mobile backup listener stopped');
     }
   }
 
