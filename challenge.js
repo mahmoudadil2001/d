@@ -362,82 +362,68 @@ class ChallengeManager {
     modal.innerHTML = `
       <div style="
         background: linear-gradient(135deg, #28a745, #20c997);
-        border-radius: 20px;
-        padding: 30px;
-        max-width: 450px;
-        width: 95%;
+        border-radius: 15px;
+        padding: 20px;
+        max-width: 350px;
+        width: 90%;
         text-align: center;
         color: white;
-        box-shadow: 0 25px 50px rgba(0, 0, 0, 0.5);
-        animation: bounceIn 0.8s ease-out;
+        box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
+        animation: bounceIn 0.6s ease-out;
         font-family: 'Tajawal', sans-serif;
       ">
-        <div style="font-size: 80px; margin-bottom: 20px; animation: pulse 2s infinite;">🎉</div>
-        <h2 style="margin: 0 0 15px 0; font-size: 28px; font-weight: 700; text-shadow: 0 2px 10px rgba(0,0,0,0.3);">
+        <div style="font-size: 50px; margin-bottom: 10px;">🎉</div>
+        <h2 style="margin: 0 0 10px 0; font-size: 22px; font-weight: 700;">
           تم قبول التحدي!
         </h2>
-        <p style="margin: 15px 0; font-size: 20px; line-height: 1.4; text-shadow: 0 1px 5px rgba(0,0,0,0.3);">
-          <strong style="color: #fff200;">🏆 ${opponentName}</strong><br>
-          قبل تحديك ويريد المواجهة!
+        <p style="margin: 10px 0; font-size: 16px; line-height: 1.3;">
+          <strong style="color: #fff200;">🏆 ${opponentName}</strong> قبل تحديك!
         </p>
 
         <div style="
-          background: rgba(255, 255, 255, 0.25);
-          border-radius: 15px;
-          padding: 20px;
-          margin: 25px 0;
-          border: 2px solid rgba(255, 255, 255, 0.4);
-          box-shadow: inset 0 2px 10px rgba(0,0,0,0.2);
-        ">
-          <p style="margin: 8px 0; font-weight: 600; font-size: 16px;">📚 المادة: <span style="color: #fff200;">${challengeData.subject}</span></p>
-          <p style="margin: 8px 0; font-weight: 600; font-size: 16px;">📖 المحاضرة: <span style="color: #fff200;">${challengeData.lecture}</span></p>
-          <p style="margin: 8px 0; font-weight: 600; font-size: 16px;">🔢 النسخة: <span style="color: #fff200;">${challengeData.version}</span></p>
-        </div>
-
-        <div style="
-          background: rgba(255, 255, 255, 0.15);
+          background: rgba(255, 255, 255, 0.2);
           border-radius: 10px;
-          padding: 15px;
-          margin: 20px 0;
+          padding: 12px;
+          margin: 15px 0;
           border: 1px solid rgba(255, 255, 255, 0.3);
+          font-size: 14px;
         ">
-          <p style="margin: 0; font-size: 16px; font-weight: 600; color: #ffeb3b;">
-            ⚡ هل أنت مستعد للمواجهة؟
-          </p>
+          <div>📚 ${challengeData.subject}</div>
+          <div>📖 المحاضرة ${challengeData.lecture}</div>
+          <div>🔢 النسخة ${challengeData.version}</div>
         </div>
 
-        <div style="display: flex; gap: 15px; justify-content: center; margin-top: 30px;">
+        <div style="display: flex; gap: 10px; justify-content: center; margin-top: 20px;">
           <button id="enterChallengeBtn" style="
             background: linear-gradient(135deg, #ff6b35, #f7931e);
             color: white;
             border: none;
-            border-radius: 15px;
-            padding: 15px 30px;
-            font-size: 18px;
-            font-weight: 700;
+            border-radius: 12px;
+            padding: 12px 20px;
+            font-size: 16px;
+            font-weight: 600;
             cursor: pointer;
             transition: all 0.3s ease;
             font-family: 'Tajawal', sans-serif;
-            box-shadow: 0 8px 20px rgba(255, 107, 53, 0.4);
-            text-shadow: 0 2px 5px rgba(0,0,0,0.3);
-          ">🚀 ابدأ المواجهة</button>
+            flex: 1;
+          ">🚀 ابدأ</button>
           <button id="declineEnterBtn" style="
             background: linear-gradient(135deg, #6c757d, #495057);
             color: white;
             border: none;
-            border-radius: 15px;
-            padding: 15px 30px;
-            font-size: 18px;
-            font-weight: 700;
+            border-radius: 12px;
+            padding: 12px 20px;
+            font-size: 16px;
+            font-weight: 600;
             cursor: pointer;
             transition: all 0.3s ease;
             font-family: 'Tajawal', sans-serif;
-            box-shadow: 0 8px 20px rgba(108, 117, 125, 0.4);
-          ">❌ ليس الآن</button>
+            flex: 1;
+          ">❌ لاحقاً</button>
         </div>
 
-        <div style="margin-top: 20px; font-size: 14px; opacity: 0.9;">
-          ⏰ ستنتهي صلاحية هذا الإشعار خلال دقيقة واحدة
+        <div style="margin-top: 15px; font-size: 12px; opacity: 0.8;">
+          ⏰ ينتهي خلال دقيقة
         </div>
       </div>
     `;
