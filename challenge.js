@@ -363,44 +363,45 @@ class ChallengeManager {
       <div style="
         background: linear-gradient(135deg, #28a745, #20c997);
         border-radius: 15px;
-        padding: 20px;
-        max-width: 350px;
-        width: 90%;
+        padding: 18px;
+        max-width: 280px;
+        width: 85%;
         text-align: center;
         color: white;
         box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
         animation: bounceIn 0.6s ease-out;
         font-family: 'Tajawal', sans-serif;
       ">
-        <div style="font-size: 50px; margin-bottom: 10px;">🎉</div>
-        <h2 style="margin: 0 0 10px 0; font-size: 22px; font-weight: 700;">
+        <div style="font-size: 40px; margin-bottom: 8px;">🎉</div>
+        <h2 style="margin: 0 0 8px 0; font-size: 18px; font-weight: 700;">
           تم قبول التحدي!
         </h2>
-        <p style="margin: 10px 0; font-size: 16px; line-height: 1.3;">
+        <p style="margin: 8px 0; font-size: 14px; line-height: 1.2;">
           <strong style="color: #fff200;">🏆 ${opponentName}</strong> قبل تحديك!
         </p>
 
         <div style="
           background: rgba(255, 255, 255, 0.2);
-          border-radius: 10px;
-          padding: 12px;
-          margin: 15px 0;
+          border-radius: 8px;
+          padding: 10px;
+          margin: 12px 0;
           border: 1px solid rgba(255, 255, 255, 0.3);
-          font-size: 14px;
+          font-size: 12px;
+          line-height: 1.3;
         ">
           <div>📚 ${challengeData.subject}</div>
           <div>📖 المحاضرة ${challengeData.lecture}</div>
           <div>🔢 النسخة ${challengeData.version}</div>
         </div>
 
-        <div style="display: flex; gap: 10px; justify-content: center; margin-top: 20px;">
+        <div style="display: flex; gap: 8px; justify-content: center; margin-top: 15px;">
           <button id="enterChallengeBtn" style="
             background: linear-gradient(135deg, #ff6b35, #f7931e);
             color: white;
             border: none;
-            border-radius: 12px;
-            padding: 12px 20px;
-            font-size: 16px;
+            border-radius: 10px;
+            padding: 10px 16px;
+            font-size: 14px;
             font-weight: 600;
             cursor: pointer;
             transition: all 0.3s ease;
@@ -411,9 +412,9 @@ class ChallengeManager {
             background: linear-gradient(135deg, #6c757d, #495057);
             color: white;
             border: none;
-            border-radius: 12px;
-            padding: 12px 20px;
-            font-size: 16px;
+            border-radius: 10px;
+            padding: 10px 16px;
+            font-size: 14px;
             font-weight: 600;
             cursor: pointer;
             transition: all 0.3s ease;
@@ -422,7 +423,7 @@ class ChallengeManager {
           ">❌ لاحقاً</button>
         </div>
 
-        <div style="margin-top: 15px; font-size: 12px; opacity: 0.8;">
+        <div style="margin-top: 12px; font-size: 11px; opacity: 0.8;">
           ⏰ ينتهي خلال دقيقة
         </div>
       </div>
