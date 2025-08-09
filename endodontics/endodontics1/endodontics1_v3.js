@@ -7,271 +7,246 @@ export const additionalQuestions = [
       "To extract the tooth",
       "To clean root canals"
     ],
-    answer: 1,
-    explanation: "Pulp capping aims to preserve pulp health by covering exposed dentin/pulp."
+    answer: 1
   },
   {
     question: "Which procedure is used to induce root end closure in immature non-vital teeth?",
     options: [
       "Pulpotomy",
-      "Apexification",  // Correct
+      "Apexification",
       "Apexogenesis",
       "Hemisection"
     ],
-    answer: 1,
-    explanation: "Apexification stimulates apical closure in non-vital immature teeth."
+    answer: 1
   },
   {
     question: "What characterizes the cell-rich zone of the pulp?",
     options: [
       "Contains only blood vessels",
-      "Has fibroblasts and undifferentiated mesenchymal cells",  // Correct
+      "Has fibroblasts and undifferentiated mesenchymal cells",
       "Is completely acellular",
       "Contains only odontoblasts"
     ],
-    answer: 1,
-    explanation: "This zone contains proliferative cells that can differentiate into odontoblasts."
+    answer: 1
   },
   {
     question: "Which symptom is MOST indicative of reversible pulpitis?",
     options: [
       "Spontaneous severe pain lasting hours",
-      "Momentary pain to cold that subsides immediately",  // Correct
+      "Momentary pain to cold that subsides immediately",
       "Constant throbbing pain",
       "Pain to percussion"
     ],
-    answer: 1,
-    explanation: "Brief, stimulus-dependent pain that resolves quickly is key for reversible pulpitis."
+    answer: 1
   },
   {
     question: "What is the main component of gutta-percha?",
     options: [
       "Zinc oxide",
-      "Latex from the Palaquium tree",  // Correct
+      "Latex from the Palaquium tree",
       "Calcium hydroxide",
       "Resin polymers"
     ],
-    answer: 1,
-    explanation: "Gutta-percha is derived from the sap of tropical trees."
+    answer: 1
   },
   {
     question: "Which condition presents as a 'pink spot' on the crown?",
     options: [
       "Hyperplastic pulpitis",
-      "Internal resorption",  // Correct
+      "Internal resorption",
       "Pulp necrosis",
       "Pulp calcification"
     ],
-    answer: 1,
-    explanation: "Internal resorption may show through enamel as a pink discoloration."
+    answer: 1
   },
   {
     question: "What is the PRIMARY reason for using rubber dam isolation?",
     options: [
       "To improve aesthetics",
-      "To prevent salivary contamination of canals",  // Correct
+      "To prevent salivary contamination of canals",
       "To reduce treatment time",
       "To minimize X-ray exposure"
     ],
-    answer: 1,
-    explanation: "Rubber dam maintains a sterile field by blocking saliva/bacteria."
+    answer: 1
   },
   {
     question: "Which bacteria are MOST commonly found in infected root canals?",
     options: [
-      "Streptococcus mutans and Lactobacillus",  // Correct
+      "Streptococcus mutans and Lactobacillus",
       "E. coli and Salmonella",
       "Staphylococcus aureus",
       "Pseudomonas aeruginosa"
     ],
-    answer: 0,
-    explanation: "Oral commensals like Streptococci dominate endodontic infections."
+    answer: 0
   },
   {
     question: "What is the FIRST phase of root canal treatment?",
     options: [
       "Obliteration phase",
       "Preparatory phase",
-      "Diagnostic phase",  // Correct
+      "Diagnostic phase",
       "Surgical phase"
     ],
-    answer: 2,
-    explanation: "Proper diagnosis always precedes treatment."
+    answer: 2
   },
   {
     question: "Which material is commonly used for pulp capping?",
     options: [
       "Gutta-percha",
-      "Calcium hydroxide or MTA",  // Correct
+      "Calcium hydroxide or MTA",
       "Zinc phosphate cement",
       "Composite resin"
     ],
-    answer: 1,
-    explanation: "These materials stimulate dentin bridge formation."
+    answer: 1
   },
   {
     question: "What radiographic finding suggests apical periodontitis?",
     options: [
       "Pulp stones",
-      "Periapical radiolucency",  // Correct
+      "Periapical radiolucency",
       "Dentin dysplasia",
       "Enamel hypoplasia"
     ],
-    answer: 1,
-    explanation: "Bone loss at the apex appears as radiolucency."
+    answer: 1
   },
   {
     question: "Which factor does NOT contribute to pulp necrosis?",
     options: [
       "Advanced caries",
       "Trauma",
-      "Orthodontic movement",  // Correct
+      "Orthodontic movement",
       "Prolonged pulpitis"
     ],
-    answer: 2,
-    explanation: "Normal orthodontic forces don't cause necrosis."
+    answer: 2
   },
   {
     question: "What is the key difference between apexogenesis and apexification?",
     options: [
-      "Apexogenesis preserves vital pulp; apexification treats non-vital teeth",  // Correct
+      "Apexogenesis preserves vital pulp; apexification treats non-vital teeth",
       "Apexogenesis uses MTA exclusively",
       "Apexification is only for mature teeth",
       "Apexogenesis requires multiple visits"
     ],
-    answer: 0,
-    explanation: "Vitality status determines which procedure is appropriate."
+    answer: 0
   },
   {
     question: "Which symptom suggests symptomatic irreversible pulpitis?",
     options: [
       "Brief sensitivity to sweets",
-      "Spontaneous, lingering pain",  // Correct
+      "Spontaneous, lingering pain",
       "Pain only when chewing",
       "No symptoms"
     ],
-    answer: 1,
-    explanation: "Persistent spontaneous pain indicates irreversible inflammation."
+    answer: 1
   },
   {
     question: "What is the PRIMARY goal of root canal obturation?",
     options: [
       "To bleach the tooth",
-      "To prevent bacterial leakage",  // Correct
+      "To prevent bacterial leakage",
       "To strengthen dentin",
       "To stimulate pulp regeneration"
     ],
-    answer: 1,
-    explanation: "3D sealing blocks reinfection."
+    answer: 1
   },
   {
     question: "Which is NOT a contraindication for RCT?",
     options: [
       "Non-restorable tooth",
       "Severe periodontal disease",
-      "Reversible pulpitis",  // Correct
+      "Reversible pulpitis",
       "Vertical root fracture"
     ],
-    answer: 2,
-    explanation: "Reversible pulpitis doesn't require RCT."
+    answer: 2
   },
   {
     question: "What characterizes hyperplastic pulpitis?",
     options: [
-      "Pulp polyp protruding from cavity",  // Correct
+      "Pulp polyp protruding from cavity",
       "Pulp stones visible on X-ray",
       "Total pulp necrosis",
       "External root resorption"
     ],
-    answer: 0,
-    explanation: "Granulation tissue grows into carious exposure."
+    answer: 0
   },
   {
     question: "Which irrigant has both antibacterial and tissue-dissolving properties?",
     options: [
       "Saline",
-      "Sodium hypochlorite",  // Correct
+      "Sodium hypochlorite",
       "Hydrogen peroxide",
       "EDTA"
     ],
-    answer: 1,
-    explanation: "NaOCl is the gold standard irrigant."
+    answer: 1
   },
   {
     question: "What indicates successful RCT radiographically?",
     options: [
-      "Resolution of periapical radiolucency",  // Correct
+      "Resolution of periapical radiolucency",
       "Presence of pulp stones",
       "Increased root length",
       "Canal calcification"
     ],
-    answer: 0,
-    explanation: "Bone healing confirms success."
+    answer: 0
   },
   {
     question: "Which is TRUE about pulp stones?",
     options: [
       "Always cause pain",
-      "May be free-floating or attached to dentin",  // Correct
+      "May be free-floating or attached to dentin",
       "Indicate need for extraction",
       "Only occur in older patients"
     ],
-    answer: 1,
-    explanation: "Stones vary in location and attachment."
+    answer: 1
   },
   {
     question: "What is the main advantage of single-visit endodontics?",
     options: [
       "Lower cost",
-      "Reduced risk of interappointment infection",  // Correct
+      "Reduced risk of interappointment infection",
       "Stronger obturation",
       "Faster crown preparation"
     ],
-    answer: 1,
-    explanation: "Eliminates contamination between visits."
+    answer: 1
   },
   {
     question: "Which describes the pulp-dentin complex?",
     options: [
       "Enamel-dentin junction",
-      "Functional unity between odontoblasts and dentin",  // Correct
+      "Functional unity between odontoblasts and dentin",
       "Pulp-periodontal ligament connection",
       "Cementum-dentin interface"
     ],
-    answer: 1,
-    explanation: "Odontoblasts extend processes into dentin."
+    answer: 1
   },
   {
     question: "What causes pain relief from cold in irreversible pulpitis?",
     options: [
       "Nerve anesthesia",
-      "Vasoconstriction reducing pressure",  // Correct
+      "Vasoconstriction reducing pressure",
       "Bacterial death",
       "Dentin desensitization"
     ],
-    answer: 1,
-    explanation: "Cold shrinks gases/fluids, temporarily relieving pressure."
+    answer: 1
   },
   {
     question: "Which is NOT a mode of bacterial entry into pulp?",
     options: [
       "Dental caries",
       "Dentinal tubules",
-      "Lymphatic system",  // Correct
+      "Lymphatic system",
       "Apical foramen"
     ],
-    answer: 2,
-    explanation: "Bacteria enter via caries, tubules, blood (anachoresis), or apex."
+    answer: 2
   },
   {
     question: "What is the final step after RCT?",
     options: [
       "Tooth extraction",
-      "Definitive coronal restoration",  // Correct
+      "Definitive coronal restoration",
       "Periodontal surgery",
       "Bleaching"
     ],
-    answer: 1,
-    explanation: "Proper restoration prevents microleakage/fracture."
+    answer: 1
   }
 ];
