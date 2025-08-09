@@ -4,7 +4,7 @@ export const questions = [
     options: [
       "To remove the tooth entirely",
       "To create biologically acceptable environment within the root canal system",
-      "To replace the tooth with an implant",
+      "To replace the tooth with implant",
       "To whiten the tooth"
     ],
     answer: 1
