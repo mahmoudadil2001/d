@@ -29,7 +29,6 @@ export const visibleLectures = {
         ]
     },
     "operative": {
-        "0": [],
         "1": [
             1
         ]
