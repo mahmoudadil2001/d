@@ -270,7 +270,32 @@ subjectSelect.addEventListener("change", () => {
   const selected = subjectSelect.value;
   const lectures = Object.keys(visibleLectures[selected] || {});
 
-  lectures.forEach((lec) => {
+  // تصفية المحاضرات لإظهار الأرقام الموجبة فقط وتجاهل جميع الكلمات والأحرف
+  const numericLectures = lectures.filter(lec => {
+    // قائمة الكلمات المكتوبة بالأرقام لتجاهلها
+    const textNumbers = ['zero', 'one', 'two', 'three', 'four', 'five', 'six', 'seven', 'eight', 'nine', 'ten', 
+                        'eleven', 'twelve', 'thirteen', 'fourteen', 'fifteen', 'sixteen', 'seventeen', 'eighteen', 'nineteen', 'twenty',
+                        'thirty', 'forty', 'fifty', 'sixty', 'seventy', 'eighty', 'ninety', 'hundred', 'thousand'];
+    
+    // التحقق من عدم وجود كلمات نصية
+    const lecLower = lec.toString().toLowerCase();
+    const hasTextNumbers = textNumbers.some(textNum => lecLower.includes(textNum));
+    if (hasTextNumbers) return false;
+    
+    // التحقق من عدم وجود أحرف غير رقمية
+    if (!/^\d+$/.test(lec)) return false;
+    
+    // التحقق الثاني: تحويل لرقم والتأكد أنه موجب
+    const num = parseInt(lec, 10);
+    if (isNaN(num) || num <= 0) return false;
+    
+    // التحقق الثالث: التأكد أن النتيجة مطابقة تماماً للمدخل
+    if (lec !== num.toString()) return false;
+    
+    return true;
+  });
+
+  numericLectures.forEach((lec) => {
     const opt = document.createElement("option");
     opt.value = lec;
     const name = lectureNames[selected]?.[lec] || "Unknown";
