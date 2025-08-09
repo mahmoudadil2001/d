@@ -13,12 +13,12 @@ export const visibleLectures = {
         "1": [
             1
         ],
-        "4": [
-            1,
-            4
-        ],
         "two": [
             1
+        ],
+        "four": [
+            1,
+            4
         ]
     },
     "generalsurgery": {
