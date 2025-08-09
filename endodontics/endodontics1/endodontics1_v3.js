@@ -1,4 +1,4 @@
-export const additionalQuestions = [
+export const questions = [
   {
     question: "What is the primary purpose of pulp capping in vital pulp therapy?",
     options: [
