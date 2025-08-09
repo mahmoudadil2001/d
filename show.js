@@ -1,6 +1,6 @@
 export const visibleLectures = {
     "endodontics": {
-        "0": [],
+        "3": [],
         "1": [
             2,
             1
