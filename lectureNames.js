@@ -1,6 +1,6 @@
 export const lectureNames = {
     "endodontics": {
-        "1": "ooo",
+        "1": "introduction",
         "2": "Unknown",
         "3": "Unknown",
         "4": "tt",
