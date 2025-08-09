@@ -1,4 +1,4 @@
-export const newQuestions = [
+export const questions = [
   {
     question: "Which is NOT a primary objective of endodontics?",
     options: [
