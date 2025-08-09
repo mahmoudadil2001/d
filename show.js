@@ -1,10 +1,10 @@
 export const visibleLectures = {
     "endodontics": {
+        "0": [],
         "1": [
             2,
             1
         ],
-        "3": [],
         "4": []
     },
     "generalmedicine": {
