@@ -24,7 +24,7 @@ export const lectureNames = {
     "29": "Unknown",
     "3": "Unknown",
     "30": "Unknown",
-    "4": "Unknown",
+    "4": "tt",
     "5": "Unknown",
     "6": "Unknown",
     "7": "Unknown",
