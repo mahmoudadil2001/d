@@ -4,10 +4,10 @@ export const visibleLectures = {
             2,
             1
         ],
-        "4": [],
         "three": [
             1
-        ]
+        ],
+        "four": []
     },
     "generalmedicine": {
         "1": [
