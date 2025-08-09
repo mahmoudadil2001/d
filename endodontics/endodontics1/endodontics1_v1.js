@@ -3,7 +3,7 @@ export const questions = [
     question: "What is primary objective of endodontic therapy?",
     options: [
       "To remove the tooth entirely",
-      "To create a biologically acceptable environment within the root canal system",
+      "To create biologically acceptable environment within the root canal system",
       "To replace the tooth with an implant",
       "To whiten the tooth"
     ],
