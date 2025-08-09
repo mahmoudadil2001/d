@@ -92,7 +92,7 @@ export const lectureNames = {
         "26": "Unknown",
         "27": "Unknown",
         "28": "Unknown",
-        "29": "qq",
+        "29": "welcome",
         "30": "Unknown"
     },
     "operative": {
