@@ -1,167 +1,277 @@
-export const questions = [
+export const additionalQuestions = [
   {
-    question: "من هو الخليفة العباسي الذي بنى مدينة بغداد؟",
-    options: ["أبو جعفر المنصور", "هارون الرشيد", "المأمون", "المعتصم بالله"],
-    answer: 0
+    question: "What is the primary purpose of pulp capping in vital pulp therapy?",
+    options: [
+      "To remove the entire pulp",
+      "To maintain pulp vitality by sealing exposed dentin",
+      "To extract the tooth",
+      "To clean root canals"
+    ],
+    answer: 1,
+    explanation: "Pulp capping aims to preserve pulp health by covering exposed dentin/pulp."
   },
   {
-    question: "ما اسم الكوكب المعروف بالكوكب الأحمر؟",
-    options: ["الزهرة", "المشتري", "المريخ", "زحل"],
-    answer: 2
+    question: "Which procedure is used to induce root end closure in immature non-vital teeth?",
+    options: [
+      "Pulpotomy",
+      "Apexification",  // Correct
+      "Apexogenesis",
+      "Hemisection"
+    ],
+    answer: 1,
+    explanation: "Apexification stimulates apical closure in non-vital immature teeth."
   },
   {
-    question: "ما هي السورة التي تُسمى قلب القرآن؟",
-    options: ["البقرة", "يس", "الرحمن", "الملك"],
-    answer: 1
+    question: "What characterizes the cell-rich zone of the pulp?",
+    options: [
+      "Contains only blood vessels",
+      "Has fibroblasts and undifferentiated mesenchymal cells",  // Correct
+      "Is completely acellular",
+      "Contains only odontoblasts"
+    ],
+    answer: 1,
+    explanation: "This zone contains proliferative cells that can differentiate into odontoblasts."
   },
   {
-    question: "من هو مؤلف رواية (الحرب والسلام)؟",
-    options: ["فيودور دوستويفسكي", "تولستوي", "شكسبير", "فرانز كافكا"],
-    answer: 1
+    question: "Which symptom is MOST indicative of reversible pulpitis?",
+    options: [
+      "Spontaneous severe pain lasting hours",
+      "Momentary pain to cold that subsides immediately",  // Correct
+      "Constant throbbing pain",
+      "Pain to percussion"
+    ],
+    answer: 1,
+    explanation: "Brief, stimulus-dependent pain that resolves quickly is key for reversible pulpitis."
   },
   {
-    question: "ما هي الدولة العربية التي ليس لها حدود برية؟",
-    options: ["قطر", "البحرين", "الكويت", "عمان"],
-    answer: 1
+    question: "What is the main component of gutta-percha?",
+    options: [
+      "Zinc oxide",
+      "Latex from the Palaquium tree",  // Correct
+      "Calcium hydroxide",
+      "Resin polymers"
+    ],
+    answer: 1,
+    explanation: "Gutta-percha is derived from the sap of tropical trees."
   },
   {
-    question: "كم عدد أركان الإسلام؟",
-    options: ["4", "5", "6", "7"],
-    answer: 1
+    question: "Which condition presents as a 'pink spot' on the crown?",
+    options: [
+      "Hyperplastic pulpitis",
+      "Internal resorption",  // Correct
+      "Pulp necrosis",
+      "Pulp calcification"
+    ],
+    answer: 1,
+    explanation: "Internal resorption may show through enamel as a pink discoloration."
   },
   {
-    question: "من هو الصحابي الذي لقّبه النبي بـ (الفاروق)؟",
-    options: ["أبو بكر الصديق", "علي بن أبي طالب", "عمر بن الخطاب", "عثمان بن عفان"],
-    answer: 2
+    question: "What is the PRIMARY reason for using rubber dam isolation?",
+    options: [
+      "To improve aesthetics",
+      "To prevent salivary contamination of canals",  // Correct
+      "To reduce treatment time",
+      "To minimize X-ray exposure"
+    ],
+    answer: 1,
+    explanation: "Rubber dam maintains a sterile field by blocking saliva/bacteria."
   },
   {
-    question: "أين تقع جبال الأنديز؟",
-    options: ["أمريكا الشمالية", "أوروبا", "أمريكا الجنوبية", "آسيا"],
-    answer: 2
+    question: "Which bacteria are MOST commonly found in infected root canals?",
+    options: [
+      "Streptococcus mutans and Lactobacillus",  // Correct
+      "E. coli and Salmonella",
+      "Staphylococcus aureus",
+      "Pseudomonas aeruginosa"
+    ],
+    answer: 0,
+    explanation: "Oral commensals like Streptococci dominate endodontic infections."
   },
   {
-    question: "من أول من آمن من الصبيان؟",
-    options: ["عبدالله بن عباس", "علي بن أبي طالب", "زيد بن ثابت", "الحسن بن علي"],
-    answer: 1
+    question: "What is the FIRST phase of root canal treatment?",
+    options: [
+      "Obliteration phase",
+      "Preparatory phase",
+      "Diagnostic phase",  // Correct
+      "Surgical phase"
+    ],
+    answer: 2,
+    explanation: "Proper diagnosis always precedes treatment."
   },
   {
-    question: "ما هو الغاز الأساسي الذي تتنفسه الكائنات الحية؟",
-    options: ["الهيدروجين", "النيتروجين", "الأكسجين", "ثاني أكسيد الكربون"],
-    answer: 2
+    question: "Which material is commonly used for pulp capping?",
+    options: [
+      "Gutta-percha",
+      "Calcium hydroxide or MTA",  // Correct
+      "Zinc phosphate cement",
+      "Composite resin"
+    ],
+    answer: 1,
+    explanation: "These materials stimulate dentin bridge formation."
   },
   {
-    question: "من هو القائد المسلم في معركة حطين؟",
-    options: ["خالد بن الوليد", "طارق بن زياد", "صلاح الدين الأيوبي", "محمد الفاتح"],
-    answer: 2
+    question: "What radiographic finding suggests apical periodontitis?",
+    options: [
+      "Pulp stones",
+      "Periapical radiolucency",  // Correct
+      "Dentin dysplasia",
+      "Enamel hypoplasia"
+    ],
+    answer: 1,
+    explanation: "Bone loss at the apex appears as radiolucency."
   },
   {
-    question: "في أي عام أُسست الأمم المتحدة؟",
-    options: ["1940", "1945", "1950", "1939"],
-    answer: 1
+    question: "Which factor does NOT contribute to pulp necrosis?",
+    options: [
+      "Advanced caries",
+      "Trauma",
+      "Orthodontic movement",  // Correct
+      "Prolonged pulpitis"
+    ],
+    answer: 2,
+    explanation: "Normal orthodontic forces don't cause necrosis."
   },
   {
-    question: "من هو مؤلف كتاب (مقدمة ابن خلدون)؟",
-    options: ["الفارابي", "ابن سينا", "ابن خلدون", "الطبري"],
-    answer: 2
+    question: "What is the key difference between apexogenesis and apexification?",
+    options: [
+      "Apexogenesis preserves vital pulp; apexification treats non-vital teeth",  // Correct
+      "Apexogenesis uses MTA exclusively",
+      "Apexification is only for mature teeth",
+      "Apexogenesis requires multiple visits"
+    ],
+    answer: 0,
+    explanation: "Vitality status determines which procedure is appropriate."
   },
   {
-    question: "كم عدد ساعات اليوم على كوكب الأرض؟",
-    options: ["12", "24", "36", "48"],
-    answer: 1
+    question: "Which symptom suggests symptomatic irreversible pulpitis?",
+    options: [
+      "Brief sensitivity to sweets",
+      "Spontaneous, lingering pain",  // Correct
+      "Pain only when chewing",
+      "No symptoms"
+    ],
+    answer: 1,
+    explanation: "Persistent spontaneous pain indicates irreversible inflammation."
   },
   {
-    question: "من هو مخترع الهاتف؟",
-    options: ["ألكسندر غراهام بيل", "توماس إديسون", "ماركوني", "نيوتن"],
-    answer: 0
+    question: "What is the PRIMARY goal of root canal obturation?",
+    options: [
+      "To bleach the tooth",
+      "To prevent bacterial leakage",  // Correct
+      "To strengthen dentin",
+      "To stimulate pulp regeneration"
+    ],
+    answer: 1,
+    explanation: "3D sealing blocks reinfection."
   },
   {
-    question: "أي دولة عربية تُعرف ببلاد الأرز؟",
-    options: ["سوريا", "لبنان", "الأردن", "العراق"],
-    answer: 1
+    question: "Which is NOT a contraindication for RCT?",
+    options: [
+      "Non-restorable tooth",
+      "Severe periodontal disease",
+      "Reversible pulpitis",  // Correct
+      "Vertical root fracture"
+    ],
+    answer: 2,
+    explanation: "Reversible pulpitis doesn't require RCT."
   },
   {
-    question: "من هو الشاعر الذي قال: إذا الشعبُ يومًا أراد الحياة؟",
-    options: ["محمود درويش", "أحمد شوقي", "أبو القاسم الشابي", "نزار قباني"],
-    answer: 2
+    question: "What characterizes hyperplastic pulpitis?",
+    options: [
+      "Pulp polyp protruding from cavity",  // Correct
+      "Pulp stones visible on X-ray",
+      "Total pulp necrosis",
+      "External root resorption"
+    ],
+    answer: 0,
+    explanation: "Granulation tissue grows into carious exposure."
   },
   {
-    question: "ما هو أصل كلمة 'أكسجين'؟",
-    options: ["لاتيني", "فرنسي", "يوناني", "ألماني"],
-    answer: 2
+    question: "Which irrigant has both antibacterial and tissue-dissolving properties?",
+    options: [
+      "Saline",
+      "Sodium hypochlorite",  // Correct
+      "Hydrogen peroxide",
+      "EDTA"
+    ],
+    answer: 1,
+    explanation: "NaOCl is the gold standard irrigant."
   },
   {
-    question: "ما هو عدد قارات العالم؟",
-    options: ["5", "6", "7", "8"],
-    answer: 2
+    question: "What indicates successful RCT radiographically?",
+    options: [
+      "Resolution of periapical radiolucency",  // Correct
+      "Presence of pulp stones",
+      "Increased root length",
+      "Canal calcification"
+    ],
+    answer: 0,
+    explanation: "Bone healing confirms success."
   },
   {
-    question: "ما هو اسم أول جامعة في العالم الإسلامي؟",
-    options: ["الجامعة الأزهر", "القرويين", "الزيتونة", "بيت الحكمة"],
-    answer: 1
-  }
-];  {
-    question: "من هو الشاعر المعروف بلقب أمير الشعراء؟",
-    options: ["أحمد شوقي", "نزار قباني", "المتنبي", "عنترة بن شداد"],
-    answer: 0
+    question: "Which is TRUE about pulp stones?",
+    options: [
+      "Always cause pain",
+      "May be free-floating or attached to dentin",  // Correct
+      "Indicate need for extraction",
+      "Only occur in older patients"
+    ],
+    answer: 1,
+    explanation: "Stones vary in location and attachment."
   },
   {
-    question: "في أي قارة يقع نهر الأمازون؟",
-    options: ["أفريقيا", "آسيا", "أمريكا الجنوبية", "أوروبا"],
-    answer: 2
+    question: "What is the main advantage of single-visit endodontics?",
+    options: [
+      "Lower cost",
+      "Reduced risk of interappointment infection",  // Correct
+      "Stronger obturation",
+      "Faster crown preparation"
+    ],
+    answer: 1,
+    explanation: "Eliminates contamination between visits."
   },
   {
-    question: "ما هو الحيوان الذي يُطلق عليه لقب سفينة الصحراء؟",
-    options: ["الغزال", "الجمل", "الحصان", "الماعز"],
-    answer: 1
+    question: "Which describes the pulp-dentin complex?",
+    options: [
+      "Enamel-dentin junction",
+      "Functional unity between odontoblasts and dentin",  // Correct
+      "Pulp-periodontal ligament connection",
+      "Cementum-dentin interface"
+    ],
+    answer: 1,
+    explanation: "Odontoblasts extend processes into dentin."
   },
   {
-    question: "ما هو أقدم خط زمني معروف للكتابة؟",
-    options: ["الهيروغليفية", "اللاتينية", "الآرامية", "السومرية"],
-    answer: 3
+    question: "What causes pain relief from cold in irreversible pulpitis?",
+    options: [
+      "Nerve anesthesia",
+      "Vasoconstriction reducing pressure",  // Correct
+      "Bacterial death",
+      "Dentin desensitization"
+    ],
+    answer: 1,
+    explanation: "Cold shrinks gases/fluids, temporarily relieving pressure."
   },
   {
-    question: "في أي دولة يقع جبل إيفرست؟",
-    options: ["الصين", "الهند", "النيبال", "باكستان"],
-    answer: 2
+    question: "Which is NOT a mode of bacterial entry into pulp?",
+    options: [
+      "Dental caries",
+      "Dentinal tubules",
+      "Lymphatic system",  // Correct
+      "Apical foramen"
+    ],
+    answer: 2,
+    explanation: "Bacteria enter via caries, tubules, blood (anachoresis), or apex."
   },
   {
-    question: "كم عدد كواكب المجموعة الشمسية؟",
-    options: ["8", "9", "7", "10"],
-    answer: 0
-  },
-  {
-    question: "من هو النبي الذي ابتلعه الحوت؟",
-    options: ["يوسف", "يونس", "أيوب", "إبراهيم"],
-    answer: 1
-  },
-  {
-    question: "ما هو اسم العملة الرسمية في بريطانيا؟",
-    options: ["يورو", "دولار", "جنيه إسترليني", "فرنك"],
-    answer: 2
-  },
-  {
-    question: "ما هي عاصمة كندا؟",
-    options: ["تورنتو", "أوتاوا", "مونتريال", "فانكوفر"],
-    answer: 1
-  },
-  {
-    question: "من هو مخترع المصباح الكهربائي؟",
-    options: ["إسحاق نيوتن", "ألبرت أينشتاين", "توماس إديسون", "ألكسندر غراهام بيل"],
-    answer: 2
-  },
-  {
-    question: "ما هو العنصر الذي يرمز له بالرمز (O)؟",
-    options: ["الهيدروجين", "الذهب", "الأكسجين", "الحديد"],
-    answer: 2
-  },
-  {
-    question: "ما هو اسم أطول نهر في العالم؟",
-    options: ["الأمازون", "النيجر", "الفرات", "النيل"],
-    answer: 3
-  },
-  {
-    question: "أي من هذه الدول ليست عضوًا في جامعة الدول العربية؟",
-    options: ["الصومال", "تركيا", "جزر القمر", "لبنان"],
-    answer: 1
+    question: "What is the final step after RCT?",
+    options: [
+      "Tooth extraction",
+      "Definitive coronal restoration",  // Correct
+      "Periodontal surgery",
+      "Bleaching"
+    ],
+    answer: 1,
+    explanation: "Proper restoration prevents microleakage/fracture."
   }
 ];
