@@ -9,15 +9,9 @@ export const visibleLectures = {
     "generalmedicine": {
         "1": [
             1,
-            2,
-            3,
-            4
         ],
         "2": [
             1,
-            2,
-            3,
-            4
         ]
     },
     "generalsurgery": {
