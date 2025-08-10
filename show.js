@@ -58,7 +58,8 @@ export const visibleLectures = {
     "periodontology": {
         "1": [
             1,
-            2
+            2,
+            3
         ]
     },
     "prosthodontics": {
