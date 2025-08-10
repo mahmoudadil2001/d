@@ -1,252 +1,127 @@
 export const questions = [
   {
     question: "What does the term 'periodontium' mean?",
-    options: [
-      "The tissues around and supporting the teeth",
-      "The study of gum diseases",
-      "The treatment of periodontal diseases",
-      "The branch of dentistry dealing with tooth extraction"
-    ],
+    options: ["Around the tooth", "Inside the gum", "Bone structure", "Tooth enamel"],
     answer: 0
   },
   {
-    question: "Which of the following is NOT a component of the periodontium?",
-    options: [
-      "Alveolar bone",
-      "Root cementum",
-      "Dentin",
-      "Periodontal ligament"
-    ],
+    question: "Which of the following is NOT part of the periodontium?",
+    options: ["Alveolar bone", "Root cementum", "Enamel", "Gingiva"],
     answer: 2
   },
   {
-    question: "What is the primary function of the gingiva?",
-    options: [
-      "To produce saliva",
-      "To protect surrounding tissues from the oral environment",
-      "To anchor teeth to the jawbone",
-      "To secrete enamel"
-    ],
-    answer: 1
-  },
-  {
-    question: "Which type of mucosa includes the gingiva and the covering of the hard palate?",
-    options: [
-      "Lining mucosa",
-      "Specialized mucosa",
-      "Masticatory mucosa",
-      "Alveolar mucosa"
-    ],
+    question: "Which mucosa covers the hard palate and gingiva?",
+    options: ["Lining mucosa", "Specialized mucosa", "Masticatory mucosa", "Alveolar mucosa"],
     answer: 2
   },
   {
-    question: "Where is the mucogingival junction located?",
-    options: [
-      "Between the free gingiva and attached gingiva",
-      "Between the attached gingiva and alveolar mucosa",
-      "Between the alveolar mucosa and the vestibule",
-      "On the palatal side of the gingiva"
-    ],
+    question: "The mucogingival junction separates attached gingiva from:",
+    options: ["Free gingiva", "Alveolar mucosa", "Periodontal ligament", "Root cementum"],
     answer: 1
   },
   {
-    question: "What is the normal probing depth of a healthy gingival sulcus?",
-    options: [
-      "0 mm",
-      "1-2 mm",
-      "2-3 mm",
-      "4-5 mm"
-    ],
+    question: "Which tissue connects the cementum to the alveolar bone?",
+    options: ["Gingiva", "Periodontal ligament", "Dentin", "Oral mucosa"],
+    answer: 1
+  },
+  {
+    question: "Marginal gingiva is separated from attached gingiva by:",
+    options: ["Gingival sulcus", "Mucogingival junction", "Free gingival groove", "Col"],
     answer: 2
   },
   {
-    question: "Which part of the gingiva is firmly attached to the tooth and underlying bone?",
-    options: [
-      "Marginal gingiva",
-      "Attached gingiva",
-      "Interdental gingiva",
-      "Alveolar mucosa"
-    ],
+    question: "Normal probing depth of the gingival sulcus is:",
+    options: ["0-1mm", "2-3mm", "4-5mm", "More than 5mm"],
     answer: 1
   },
   {
-    question: "What is the shape of the interdental gingiva when teeth are in contact?",
-    options: [
-      "Col",
-      "Pyramidal",
-      "Circular",
-      "Linear"
-    ],
+    question: "Which type of gingiva is firm, resilient, and tightly bound to the tooth?",
+    options: ["Marginal gingiva", "Attached gingiva", "Interdental gingiva", "Alveolar mucosa"],
+    answer: 1
+  },
+  {
+    question: "The least width of attached gingiva is found in:",
+    options: ["Maxillary incisors", "Mandibular first premolars", "Maxillary molars", "Mandibular canines"],
+    answer: 1
+  },
+  {
+    question: "Interdental gingiva between teeth can be either pyramidal or:",
+    options: ["Flat", "Circular", "Col-shaped", "Triangular"],
+    answer: 2
+  },
+  {
+    question: "The gingival area most susceptible to disease initiation is:",
+    options: ["Marginal gingiva", "Attached gingiva", "Col", "Alveolar mucosa"],
+    answer: 2
+  },
+  {
+    question: "Which epithelium is keratinized in the gingiva?",
+    options: ["Oral epithelium", "Sulcular epithelium", "Junctional epithelium", "All of the above"],
     answer: 0
   },
   {
-    question: "Which type of epithelium covers the outer surface of the gingiva?",
-    options: [
-      "Sulcular epithelium",
-      "Junctional epithelium",
-      "Oral epithelium",
-      "Non-keratinized epithelium"
-    ],
+    question: "Keratinization is highest in which area?",
+    options: ["Cheek", "Palate", "Gingiva", "Ventral tongue"],
+    answer: 1
+  },
+  {
+    question: "Rete pegs are projections of:",
+    options: ["Connective tissue into epithelium", "Epithelium into connective tissue", "PDL into cementum", "Bone into gingiva"],
+    answer: 1
+  },
+  {
+    question: "Principal cell type of oral epithelium is:",
+    options: ["Melanocyte", "Keratinocyte", "Langerhans cell", "Merkel cell"],
+    answer: 1
+  },
+  {
+    question: "Langerhans cells play a role in:",
+    options: ["Keratin production", "Tactile sensation", "Antigen recognition", "Collagen synthesis"],
     answer: 2
   },
   {
-    question: "Which layer of the oral epithelium is responsible for cell renewal?",
-    options: [
-      "Stratum corneum",
-      "Stratum granulosum",
-      "Stratum spinosum",
-      "Stratum basale"
-    ],
+    question: "Sulcular epithelium is:",
+    options: ["Keratinized", "Partially keratinized", "Non-keratinized", "Parakeratinized"],
+    answer: 2
+  },
+  {
+    question: "Which epithelium attaches the gingiva to the tooth?",
+    options: ["Sulcular", "Junctional", "Oral", "Basal"],
+    answer: 1
+  },
+  {
+    question: "Turnover rate of junctional epithelium is approximately:",
+    options: ["4-6 days", "6-12 days", "2-3 weeks", "40 days"],
+    answer: 0
+  },
+  {
+    question: "Main cell type in gingival connective tissue is:",
+    options: ["Fibroblast", "Macrophage", "Mast cell", "Plasma cell"],
+    answer: 0
+  },
+  {
+    question: "Dentogingival fibers attach gingiva to:",
+    options: ["Bone", "Tooth cementum", "Periodontal ligament", "Enamel"],
+    answer: 1
+  },
+  {
+    question: "Circular fibers surround the tooth in:",
+    options: ["Horizontal bands", "Cuff-like rings", "Vertical lines", "Fan-shaped patterns"],
+    answer: 1
+  },
+  {
+    question: "Blood supply to gingiva comes from:",
+    options: ["Internal maxillary artery", "External carotid vein", "Lingual vein", "Facial nerve"],
+    answer: 0
+  },
+  {
+    question: "Normal gingival color is influenced by:",
+    options: ["Melanin", "Keratinization", "Epithelium thickness", "All of the above"],
     answer: 3
   },
   {
-    question: "What is the primary cell type in the oral epithelium?",
-    options: [
-      "Melanocytes",
-      "Keratinocytes",
-      "Langerhans cells",
-      "Merkel cells"
-    ],
-    answer: 1
-  },
-  {
-    question: "Which epithelium forms the base of the gingival sulcus?",
-    options: [
-      "Oral epithelium",
-      "Sulcular epithelium",
-      "Junctional epithelium",
-      "Alveolar epithelium"
-    ],
-    answer: 2
-  },
-  {
-    question: "What is the turnover rate of the junctional epithelium?",
-    options: [
-      "1-2 days",
-      "4-6 days",
-      "6-12 days",
-      "20-30 days"
-    ],
-    answer: 1
-  },
-  {
-    question: "Which of the following is NOT a principal group of gingival fibers?",
-    options: [
-      "Dentogingival fibers",
-      "Alveolar gingival fibers",
-      "Trans-septal fibers",
-      "Elastin fibers"
-    ],
-    answer: 3
-  },
-  {
-    question: "What is the main function of the dentogingival fibers?",
-    options: [
-      "To attach the gingiva to the alveolar bone",
-      "To provide support to the gingiva by attaching it to the tooth",
-      "To protect the periodontal ligament",
-      "To maintain tooth-to-tooth contact"
-    ],
-    answer: 1
-  },
-  {
-    question: "Which cells are responsible for producing melanin in the gingiva?",
-    options: [
-      "Keratinocytes",
-      "Melanocytes",
-      "Langerhans cells",
-      "Merkel cells"
-    ],
-    answer: 1
-  },
-  {
-    question: "What is the normal color of healthy gingiva?",
-    options: [
-      "Bright red",
-      "Bluish red",
-      "Coral pink",
-      "White"
-    ],
-    answer: 2
-  },
-  {
-    question: "Which of the following is a characteristic of inflamed gingiva?",
-    options: [
-      "Coral pink color",
-      "Knife-edged margins",
-      "Bluish red color",
-      "Stippled surface"
-    ],
-    answer: 2
-  },
-  {
-    question: "What gives the attached gingiva its stippled appearance?",
-    options: [
-      "Keratinization",
-      "Alternating pattern of connective tissue papillae and epithelial rete pegs",
-      "Presence of melanin",
-      "High vascularity"
-    ],
-    answer: 1
-  },
-  {
-    question: "Which of the following is NOT a layer of the basement membrane?",
-    options: [
-      "Lamina lucida",
-      "Lamina densa",
-      "Stratum corneum",
-      "Anchoring fibrils"
-    ],
-    answer: 2
-  },
-  {
-    question: "What is the primary component of the gingival connective tissue fibers?",
-    options: [
-      "Collagen",
-      "Elastin",
-      "Oxytalan",
-      "Reticulin"
-    ],
-    answer: 0
-  },
-  {
-    question: "Which of the following is a function of the gingival fibers?",
-    options: [
-      "To produce saliva",
-      "To withstand forces exerted by mastication",
-      "To secrete enamel",
-      "To anchor teeth to the jawbone"
-    ],
-    answer: 1
-  },
-  {
-    question: "Where is the width of the attached gingiva the greatest?",
-    options: [
-      "Mandibular first premolar area",
-      "Maxillary incisors region",
-      "Mandibular molar region",
-      "Maxillary canine region"
-    ],
-    answer: 1
-  },
-  {
-    question: "Which of the following is true about the sulcular epithelium?",
-    options: [
-      "It is keratinized",
-      "It has rete pegs",
-      "It may act as a semi-permeable membrane",
-      "It is the most keratinized part of the gingiva"
-    ],
-    answer: 2
-  },
-  {
-    question: "What is the main function of the junctional epithelium?",
-    options: [
-      "To produce keratin",
-      "To attach the gingiva to the tooth surface",
-      "To secrete saliva",
-      "To withstand masticatory forces"
-    ],
+    question: "In chronic inflammation, gingiva may become:",
+    options: ["Soft", "Fibrotic", "Spongy", "Eroded"],
     answer: 1
   }
 ];
