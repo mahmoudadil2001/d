@@ -1,151 +1,151 @@
 export const questions = [
   {
-    question: "Which of the following is true about acellular cementum?",
+    question: "Which cells in the PDL are multinucleated and resorb bone?",
     options: [
-      "It contains cementocytes",
-      "It is formed after tooth eruption",
-      "It covers the apical third of the root",
-      "It is the first to be formed during root development"
-    ],
-    answer: 3
-  },
-  {
-    question: "What is the primary cause of hypercementosis in a tooth without antagonists?",
-    options: [
-      "Increased functional demand",
-      "Lack of occlusal forces",
-      "Paget's disease",
-      "Trauma from occlusion"
-    ],
-    answer: 1
-  },
-  {
-    question: "Which cells are found within lacunae in cellular cementum?",
-    options: [
+      "Osteoblasts",
+      "Osteoclasts",
       "Cementoblasts",
-      "Cementocytes",
-      "Fibroblasts",
-      "Odontoblasts"
+      "Fibroblasts"
     ],
     answer: 1
   },
   {
-    question: "What is the primary difference between extrinsic and intrinsic fibers in cementum?",
+    question: "What is the primary function of the alveolar crest fibers?",
     options: [
-      "Extrinsic fibers are produced by cementoblasts",
-      "Intrinsic fibers are Sharpey's fibers",
-      "Extrinsic fibers are PDL fibers embedded in cementum",
-      "Intrinsic fibers are less calcified"
+      "Resist axial forces",
+      "Retain tooth in socket and resist lateral movement",
+      "Prevent tooth tipping",
+      "Protect neurovascular supplies"
+    ],
+    answer: 1
+  },
+  {
+    question: "Which of the following is a resorptive cell in the PDL?",
+    options: [
+      "Cementoblast",
+      "Fibroblast",
+      "Osteoclast",
+      "Progenitor cell"
     ],
     answer: 2
   },
   {
-    question: "Which of the following is a systemic cause of cemental resorption?",
+    question: "What is the composition of the principal fibers of the PDL?",
     options: [
-      "Orthodontic movement",
-      "Hypothyroidism",
-      "Cyst formation",
-      "Mesial drift"
+      "Elastin",
+      "Collagen",
+      "Keratin",
+      "Reticulin"
     ],
     answer: 1
   },
   {
-    question: "What is the term for the non-calcified layer of cementum initially formed?",
+    question: "Where are the epithelial rests of Malassez located?",
     options: [
-      "Cementoid",
-      "Dentinoid",
-      "Osteoid",
-      "Enameloid"
+      "Near the alveolar bone",
+      "Close to cementum",
+      "In the pulp",
+      "In the gingiva"
+    ],
+    answer: 1
+  },
+  {
+    question: "Which PDL fibers radiate from the root apex to the bone?",
+    options: [
+      "Horizontal fibers",
+      "Oblique fibers",
+      "Apical fibers",
+      "Inter-radicular fibers"
+    ],
+    answer: 2
+  },
+  {
+    question: "What is the primary role of the PDL’s sensory function?",
+    options: [
+      "Produce heat",
+      "Transmit touch, pressure, and pain",
+      "Synthesize hormones",
+      "Regulate blood flow"
+    ],
+    answer: 1
+  },
+  {
+    question: "Which component of the PDL is derived from dental, inter-radicular, and interdental arteries?",
+    options: [
+      "Nerves",
+      "Lymphatics",
+      "Blood vessels",
+      "Cementicles"
+    ],
+    answer: 2
+  },
+  {
+    question: "What is the term for calcified masses adherent to the root surface?",
+    options: [
+      "Cementicles",
+      "Sharpey’s fibers",
+      "Oxytalan fibers",
+      "Epithelial rests"
     ],
     answer: 0
   },
   {
-    question: "Which of the following is a feature of ankylosis?",
+    question: "Which group of PDL fibers resists luxation and tipping in multi-rooted teeth?",
     options: [
-      "Increased tooth mobility",
-      "Preservation of PDL space",
-      "Loss of proprioception",
-      "Enhanced eruption ability"
-    ],
-    answer: 2
-  },
-  {
-    question: "Where is cementum thicker due to functional stimulation from mesial drift?",
-    options: [
-      "Mesial surfaces",
-      "Distal surfaces",
-      "Buccal surfaces",
-      "Lingual surfaces"
+      "Oblique fibers",
+      "Inter-radicular fibers",
+      "Horizontal fibers",
+      "Alveolar crest fibers"
     ],
     answer: 1
   },
   {
-    question: "What is the primary role of Sharpey's fibers in cementum?",
+    question: "What is the primary function of the ground substance in the PDL?",
     options: [
-      "To produce collagen",
-      "To anchor PDL fibers to the tooth",
-      "To mineralize the tissue",
-      "To resorb cementum"
+      "Provide rigidity",
+      "Support cell-cell interactions and hydration",
+      "Resorb bone",
+      "Produce enamel"
     ],
     answer: 1
   },
   {
-    question: "Which of the following is true about the permeability of cementum?",
+    question: "Which cells synthesize collagen and degrade old fibers in the PDL?",
     options: [
-      "It increases with age",
-      "It is higher in cellular cementum",
-      "It is unaffected by mineralization",
-      "It prevents bacterial invasion"
+      "Osteoblasts",
+      "Fibroblasts",
+      "Cementoclasts",
+      "Mast cells"
     ],
     answer: 1
   },
   {
-    question: "What is the term for the spaces in cellular cementum that house cementocytes?",
+    question: "What is the width of the PDL space in a tooth with normal function?",
     options: [
-      "Canaliculi",
-      "Lacunae",
-      "Trabeculae",
-      "Haversian canals"
+      "0.10 mm",
+      "0.25 mm",
+      "0.50 mm",
+      "1.00 mm"
     ],
     answer: 1
   },
   {
-    question: "Which of the following is NOT a component of cementum?",
+    question: "Which of the following is NOT a synthetic cell in the PDL?",
     options: [
-      "Collagen fibers",
-      "Cementocytes",
-      "Enamel rods",
-      "Interfibrillar matrix"
+      "Osteoblast",
+      "Fibroblast",
+      "Cementoblast",
+      "Cementoclast"
     ],
-    answer: 2
+    answer: 3
   },
   {
-    question: "What is the primary reason for cementum's continuous deposition?",
+    question: "What is the primary role of the oblique fibers?",
     options: [
-      "To replace enamel",
-      "To compensate for tooth eruption and attrition",
-      "To increase tooth mobility",
-      "To reduce sensitivity"
-    ],
-    answer: 1
-  },
-  {
-    question: "Which of the following describes the relationship between cementum and enamel in 30% of cases?",
-    options: [
-      "Cementum overlaps enamel",
-      "Edge-to-edge (butt joint)",
-      "Cementum and enamel fail to meet",
-      "Enamel overlaps cementum"
-    ],
-    answer: 1
-  },
-  {
-    question: "What is the primary function of incremental lines in cementum?",
-    options: [
-      "To anchor PDL fibers",
-      "To mark rest periods in formation",
-      "To resorb cementum",
-      "To increase permeability"
+      "Resist lateral movement",
+      "Resist axial forces",
+      "Prevent tooth tipping",
+      "Protect neurovascular supplies"
     ],
     answer: 1
   }
