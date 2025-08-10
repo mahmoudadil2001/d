@@ -258,7 +258,7 @@ export const lectureNames = {
     "periodontology": {
         "1": "Terms in periodontology",
         "2": "unknown",
-        "3": "Unknown",
+        "3": "Cementum",
         "4": "Unknown",
         "5": "Unknown",
         "6": "Unknown",
