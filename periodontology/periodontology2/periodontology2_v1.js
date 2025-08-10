@@ -1,152 +1,152 @@
 export const questions = [
   {
-    question: "What is the primary function of cementum?",
+    question: "What is the primary function of the periodontal ligament (PDL)?",
     options: [
-      "To provide sensation to the tooth",
-      "To anchor the tooth in the alveolus and attach PDL fibers",
       "To produce enamel",
-      "To undergo physiological remodeling"
+      "To connect the tooth root to the alveolar bone",
+      "To resorb cementum",
+      "To synthesize dentin"
     ],
     answer: 1
   },
   {
-    question: "Which type of cementum is formed first during root formation?",
+    question: "Which cells are responsible for the formation of alveolar bone?",
     options: [
-      "Cellular cementum",
-      "Acellular cementum",
-      "Intermediate cementum",
-      "Hypercementosis"
+      "Cementoblasts",
+      "Osteoblasts",
+      "Fibroblasts",
+      "Cementoclasts"
     ],
     answer: 1
   },
   {
-    question: "What is the most common relationship at the cementoenamel junction (CEJ)?",
+    question: "What is the approximate width of the PDL space in a normally functioning tooth?",
     options: [
-      "Cementum and enamel fail to meet",
-      "Edge-to-edge (butt joint)",
-      "Cementum overlaps enamel",
-      "Enamel overlaps cementum"
+      "0.05-0.10 mm",
+      "0.15-0.38 mm",
+      "0.50-0.75 mm",
+      "1.00-1.25 mm"
+    ],
+    answer: 1
+  },
+  {
+    question: "Which group of PDL fibers resists axial forces?",
+    options: [
+      "Alveolar crest fibers",
+      "Horizontal fibers",
+      "Oblique fibers",
+      "Apical fibers"
     ],
     answer: 2
   },
   {
-    question: "Which cells are responsible for the formation of cementum?",
+    question: "What are the terminal portions of principal fibers that insert into cementum and bone called?",
     options: [
-      "Odontoblasts",
-      "Cementoblasts",
-      "Fibroblasts",
-      "Osteoclasts"
+      "Oxytalan fibers",
+      "Sharpey’s fibers",
+      "Reticulin fibers",
+      "Elastin fibers"
     ],
     answer: 1
   },
   {
-    question: "What is the main component of Sharpey's fibers in cementum?",
+    question: "Which cells in the PDL are capable of phagocytosis?",
     options: [
-      "Type I collagen",
-      "Type II collagen",
-      "Elastin",
+      "Mast cells",
+      "Macrophages",
+      "Epithelial rests of Malassez",
+      "Progenitor cells"
+    ],
+    answer: 1
+  },
+  {
+    question: "What is the main component of the ground substance in the PDL?",
+    options: [
+      "Collagen fibers",
+      "Glycosaminoglycans and glycoproteins",
+      "Hydroxyapatite crystals",
       "Keratin"
     ],
-    answer: 0
-  },
-  {
-    question: "Which type of cementum contains cementocytes?",
-    options: [
-      "Acellular cementum",
-      "Cellular cementum",
-      "Both types",
-      "Neither type"
-    ],
     answer: 1
   },
   {
-    question: "What causes the permeability of cementum to decrease with age?",
+    question: "Which PDL fibers prevent tooth tipping and protect neurovascular supplies?",
     options: [
-      "Increased vascularity",
-      "Reduction in canaliculi",
-      "Increased mineralization",
-      "Loss of collagen fibers"
+      "Alveolar crest fibers",
+      "Horizontal fibers",
+      "Apical fibers",
+      "Inter-radicular fibers"
     ],
     answer: 2
   },
   {
-    question: "Which condition results in the fusion of cementum and alveolar bone?",
+    question: "What is the role of fibroblasts in the PDL?",
     options: [
-      "Hypercementosis",
+      "Resorb bone",
+      "Synthesize collagen and matrix",
+      "Produce enamel",
+      "Phagocytose bacteria"
+    ],
+    answer: 1
+  },
+  {
+    question: "Which condition results in a wider PDL space?",
+    options: [
+      "Tooth hypofunction",
+      "Tooth hyperfunction",
       "Ankylosis",
-      "Cemental aplasia",
-      "Cementum hypoplasia"
+      "Cemental aplasia"
     ],
     answer: 1
   },
   {
-    question: "Where is cellular cementum predominantly found?",
+    question: "What is the function of the epithelial rests of Malassez?",
     options: [
-      "Cervical third of the root",
-      "Apical third of the root",
-      "Entire root surface",
-      "Only at the CEJ"
+      "Synthesize collagen",
+      "Form cysts or tumors under pathologic conditions",
+      "Resorb cementum",
+      "Produce ground substance"
     ],
     answer: 1
   },
   {
-    question: "What is the term for excessive thickening of cementum?",
+    question: "Which nerve provides sensory innervation to the PDL?",
     options: [
-      "Ankylosis",
-      "Hypercementosis",
-      "Cemental aplasia",
-      "Cementum resorption"
+      "Facial nerve",
+      "Trigeminal nerve (alveolar branches)",
+      "Glossopharyngeal nerve",
+      "Hypoglossal nerve"
     ],
     answer: 1
   },
   {
-    question: "Which systemic condition can lead to localized cemental resorption?",
+    question: "Where is the PDL space narrowest?",
     options: [
-      "Hyperthyroidism",
-      "Calcium deficiency",
-      "Diabetes mellitus",
-      "Hypertension"
+      "Cervical portion",
+      "Mid-root level",
+      "Apical portion",
+      "Furcation area"
     ],
     answer: 1
   },
   {
-    question: "What is the primary difference between cementum and bone?",
+    question: "Which fibers resist luxation and torquing forces in multi-rooted teeth?",
     options: [
-      "Cementum has blood vessels",
-      "Cementum undergoes remodeling",
-      "Cementum lacks innervation and blood vessels",
-      "Cementum is less mineralized"
+      "Oblique fibers",
+      "Inter-radicular fibers",
+      "Horizontal fibers",
+      "Alveolar crest fibers"
     ],
-    answer: 2
+    answer: 1
   },
   {
-    question: "Which fibers are produced by cementoblasts and run parallel to the root surface?",
+    question: "What is the primary sensory function of the PDL?",
     options: [
-      "Sharpey's fibers",
-      "Extrinsic fibers",
-      "Intrinsic fibers",
-      "Principal fibers"
+      "Taste perception",
+      "Proprioception during mastication",
+      "Thermal regulation",
+      "Saliva production"
     ],
-    answer: 2
-  },
-  {
-    question: "What is the term for the non-calcified precursor of cementum?",
-    options: [
-      "Cementoid",
-      "Dentinoid",
-      "Osteoid",
-      "Enameloid"
-    ],
-    answer: 0
-  },
-  {
-    question: "Which of the following is NOT a function of cementum?",
-    options: [
-      "Anchoring PDL fibers",
-      "Repairing root damage",
-      "Producing enamel",
-      "Compensating for tooth eruption"
-    ],
-    answer: 2
+    answer: 1
   }
 ];
