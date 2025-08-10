@@ -1,152 +1,152 @@
 export const questions = [
   {
-    question: "Which type of cementum is less calcified?",
+    question: "Which cells in the PDL are responsible for cementum deposition?",
     options: [
-      "Acellular cementum",
-      "Cellular cementum",
-      "Both are equally calcified",
-      "Intermediate cementum"
-    ],
-    answer: 1
-  },
-  {
-    question: "What is the primary cause of gingival recession at the CEJ when cementum and enamel fail to meet?",
-    options: [
-      "Increased tooth mobility",
-      "Dentin exposure and sensitivity",
-      "Hypercementosis",
-      "Ankylosis"
-    ],
-    answer: 1
-  },
-  {
-    question: "Which cells are responsible for root resorption in primary teeth?",
-    options: [
+      "Osteoblasts",
       "Cementoblasts",
-      "Cementoclasts",
       "Fibroblasts",
-      "Odontoblasts"
+      "Cementoclasts"
     ],
     answer: 1
   },
   {
-    question: "What is the main role of proteoglycans in cementum?",
+    question: "What is the shape of the PDL space?",
     options: [
-      "Providing tensile strength",
-      "Regulating cell-cell and cell-matrix interactions",
-      "Mineralizing the tissue",
-      "Producing collagen fibers"
+      "Circular",
+      "Hourglass",
+      "Rectangular",
+      "Triangular"
     ],
     answer: 1
   },
   {
-    question: "Where is cementum thickest on the tooth?",
+    question: "Which PDL fibers extend from the cementum to the alveolar crest?",
     options: [
-      "Cervical third",
-      "Middle third",
-      "Apical third",
-      "Coronal third"
+      "Horizontal fibers",
+      "Alveolar crest fibers",
+      "Oblique fibers",
+      "Apical fibers"
+    ],
+    answer: 1
+  },
+  {
+    question: "What is the primary role of oxytalan fibers in the PDL?",
+    options: [
+      "Resorb bone",
+      "Support collagen bundles",
+      "Provide elasticity",
+      "Anchor teeth to bone"
     ],
     answer: 2
   },
   {
-    question: "What is the term for the absence of cellular cementum?",
+    question: "Which cells in the PDL can differentiate into other connective tissue cells?",
     options: [
-      "Hypercementosis",
-      "Cemental aplasia",
-      "Ankylosis",
-      "Cementum hypoplasia"
+      "Progenitor cells",
+      "Mast cells",
+      "Epithelial rests of Malassez",
+      "Macrophages"
     ],
-    answer: 1
+    answer: 0
   },
   {
-    question: "Which of the following is a local cause of cemental resorption?",
+    question: "What is the function of the horizontal group of PDL fibers?",
     options: [
-      "Calcium deficiency",
-      "Hypothyroidism",
-      "Orthodontic movement",
-      "Paget's disease"
+      "Resist axial forces",
+      "Prevent tooth tipping",
+      "Resist lateral movement",
+      "Protect neurovascular supplies"
     ],
     answer: 2
   },
   {
-    question: "What is the primary component of the interfibrillar matrix in cementum?",
+    question: "Which component of the PDL has a high water content (70%)?",
     options: [
       "Collagen fibers",
-      "Hydroxyapatite crystals",
-      "Proteoglycans and glycoproteins",
-      "Elastin fibers"
+      "Ground substance",
+      "Sharpey’s fibers",
+      "Cementicles"
+    ],
+    answer: 1
+  },
+  {
+    question: "What is the primary source of blood supply to the PDL?",
+    options: [
+      "Pulpal arteries",
+      "Dental, inter-radicular, and interdental arteries",
+      "Facial artery",
+      "Lingual artery"
+    ],
+    answer: 1
+  },
+  {
+    question: "Which cells are involved in the inflammatory response in the PDL?",
+    options: [
+      "Cementoblasts",
+      "Mast cells",
+      "Osteoclasts",
+      "Progenitor cells"
+    ],
+    answer: 1
+  },
+  {
+    question: "What happens to the PDL width in a tooth subjected to hyperfunction?",
+    options: [
+      "It narrows",
+      "It widens",
+      "It disappears",
+      "It calcifies"
+    ],
+    answer: 1
+  },
+  {
+    question: "Which fibers are the largest group in the PDL?",
+    options: [
+      "Alveolar crest fibers",
+      "Horizontal fibers",
+      "Oblique fibers",
+      "Apical fibers"
     ],
     answer: 2
   },
   {
-    question: "Which type of cementum covers the cervical two-thirds of the root?",
+    question: "What is the role of cementoclasts?",
     options: [
-      "Cellular cementum",
-      "Acellular cementum",
-      "Both types equally",
-      "Intermediate cementum"
+      "Deposit cementum",
+      "Resorb cementum under certain conditions",
+      "Synthesize collagen",
+      "Phagocytose bacteria"
     ],
     answer: 1
   },
   {
-    question: "What is the term for the lines representing rest periods in cementum formation?",
+    question: "Which glycoprotein is found in the PDL ground substance?",
     options: [
-      "Incremental lines of Salter",
-      "Sharpey's fibers",
-      "Reversal lines",
-      "Canaliculi"
-    ],
-    answer: 0
-  },
-  {
-    question: "Which condition is characterized by direct bone-to-implant contact without connective tissue?",
-    options: [
-      "Hypercementosis",
-      "Ankylosis",
-      "Cemental aplasia",
-      "Cementum hypoplasia"
+      "Collagen",
+      "Fibronectin",
+      "Keratin",
+      "Elastin"
     ],
     answer: 1
   },
   {
-    question: "What is the primary reason for cementum deposition throughout life?",
+    question: "What is the primary function of the PDL’s nutritive role?",
     options: [
-      "To replace enamel",
-      "To compensate for tooth eruption and attrition",
-      "To increase tooth mobility",
-      "To reduce permeability"
+      "Provide oxygen to enamel",
+      "Supply nutrients to cementum, bone, and gingiva",
+      "Produce saliva",
+      "Regulate tooth color"
     ],
     answer: 1
   },
   {
-    question: "Which of the following is NOT a characteristic of cementum?",
+    question: "Which structure is NOT part of the PDL?",
     options: [
-      "Contains blood vessels",
-      "Lacks innervation",
-      "Undergoes continuous deposition",
-      "Anchors PDL fibers"
+      "Sharpey’s fibers",
+      "Epithelial rests of Malassez",
+      "Enamel rods",
+      "Cementicles"
     ],
-    answer: 0
-  },
-  {
-    question: "What is the term for the border of previous resorption in cementum?",
-    options: [
-      "Incremental line",
-      "Reversal line",
-      "Sharpey's fiber",
-      "Canaliculi"
-    ],
-    answer: 1
-  },
-  {
-    question: "Which type of collagen is most abundant in cementum?",
-    options: [
-      "Type I",
-      "Type II",
-      "Type III",
-      "Type IV"
-    ],
-    answer: 0
+    answer: 2
   }
 ];
