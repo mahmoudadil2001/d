@@ -1043,17 +1043,20 @@
       /* Footer links mobile styles */
       #footerLinks {
         margin-top: 30px !important;
-        gap: 20px !important;
+        gap: 15px !important;
         padding: 15px !important;
-        flex-direction: column !important;
+        flex-direction: row !important;
         align-items: center !important;
+        justify-content: center !important;
+        flex-wrap: wrap !important;
       }
 
       #footerLinks a {
         font-size: 14px !important;
-        padding: 10px 16px !important;
-        width: 120px !important;
+        padding: 8px 12px !important;
+        min-width: 100px !important;
         text-align: center !important;
+        flex: 0 0 auto !important;
       }
     }
   </style>
@@ -1683,9 +1686,11 @@
       margin-top: 40px;
       display: flex;
       justify-content: center;
-      gap: 40px;
+      align-items: center;
+      gap: 30px;
       padding: 20px;
       border-top: 1px solid rgba(255, 255, 255, 0.2);
+      flex-wrap: wrap;
     ">
       <a href="#" id="aboutUsLink" style="
         color: #ffc107;
