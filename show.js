@@ -12,10 +12,10 @@ export const visibleLectures = {
             3,
             4
         ],
-        "four": [],
-        "three": [
+        "3": [
             1
-        ]
+        ],
+        "four": []
     },
     "generalmedicine": {
         "1": [
