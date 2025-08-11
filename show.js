@@ -6,10 +6,10 @@ export const visibleLectures = {
             3,
             4
         ],
-        "2": [
+        "four": [],
+        "two": [
             1
-        ],
-        "four": []
+        ]
     },
     "generalmedicine": {
         "1": [
