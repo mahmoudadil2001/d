@@ -2,7 +2,7 @@ export const lectureNames = {
     "endodontics": {
         "1": "introduction",
         "2": "Classification of periapical disease",
-        "3": "Unknow",
+        "3": "Access Opening Preparation",
         "4": "tt",
         "5": "Unknown",
         "6": "Unknown",
