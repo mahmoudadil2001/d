@@ -3,7 +3,7 @@ export const lectureNames = {
         "1": "introduction",
         "2": "Classification of periapical disease",
         "3": "Access Opening Preparation",
-        "4": "tt",
+        "4": "Applications of radiography",
         "5": "Unknown",
         "6": "Unknown",
         "7": "Unknown",
