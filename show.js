@@ -46,11 +46,11 @@ export const visibleLectures = {
         "1": [
             1
         ],
-        "9": [
-            1
-        ],
         "twentynine": [
             4
+        ],
+        "nine": [
+            1
         ]
     },
     "operative": {
