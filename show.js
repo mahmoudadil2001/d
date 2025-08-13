@@ -59,6 +59,9 @@ export const visibleLectures = {
     "oralpathology": {
         "1": [
             1
+        ],
+        "8": [
+            1
         ]
     },
     "oralsurgery": {
