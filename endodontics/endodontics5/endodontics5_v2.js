@@ -1,6 +1,6 @@
 export const questions = [
   {
-    question: "What is the main purpose of rubber dam in preventing intracanal irrigants from entering the mouth?",
+    question: "What is main purpose of rubber dam in preventing intracanal irrigants from entering the mouth?",
     options: ["They are toxic", "They have unpleasant taste", "They cause allergic reactions", "They are expensive"],
     answer: 1
   },
