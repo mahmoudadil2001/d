@@ -31,7 +31,8 @@ export const visibleLectures = {
             4
         ],
         "6": [
-            1
+            1,
+            2
         ]
     },
     "generalmedicine": {
