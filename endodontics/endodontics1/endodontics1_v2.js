@@ -1,6 +1,6 @@
 export const questions = [
   {
-    question: "Which of the following is NOT a zone of the pulp as described in the histology of dental pulp?",
+    question: "Which of following is NOT a zone of the pulp as described in the histology of dental pulp?",
     options: [
       "Odontoblastic layer",
       "Cell-free zone of Weil",
