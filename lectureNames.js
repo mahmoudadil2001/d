@@ -4,7 +4,7 @@ export const lectureNames = {
         "2": "Classification of periapical disease",
         "3": "Access Opening Preparation",
         "4": "Applications of radiography",
-        "5": "Rubber Dam",
+        "5": "Rubber Da",
         "6": "Unknown",
         "7": "Unknown",
         "8": "Unknown",
