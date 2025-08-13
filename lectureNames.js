@@ -72,7 +72,7 @@ export const lectureNames = {
         "6": "Unknown",
         "7": "Unknown",
         "8": "Unknown",
-        "9": "Unknown",
+        "9": "test",
         "10": "Unknown",
         "11": "Unknown",
         "12": "Unknown",
