@@ -1,6 +1,6 @@
 export const questions = [
   {
-    question: "How long has the idea of using sheet of rubber to isolate teeth been in practice?",
+    question: "How long has the idea of using sheet of a rubber to isolate teeth been in practice?",
     options: ["More than 100 years", "More than 150 years", "More than 200 years", "More than 50 years"],
     answer: 1
   },
