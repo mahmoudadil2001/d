@@ -37,8 +37,7 @@ export const visibleLectures = {
             4
         ],
         "7": [
-            1,
-            2
+            1
         ],
         "eight": [],
         "nine": [],
