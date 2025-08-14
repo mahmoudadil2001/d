@@ -167,11 +167,23 @@ class ChallengeManager {
   clearSessionNotifications() {
     // مسح جميع إشعارات التحدي من sessionStorage
     const keys = Object.keys(sessionStorage);
+    const now = Date.now();
+    
     keys.forEach(key => {
       if (key.startsWith('challenge_') || key.startsWith('notification_')) {
-        sessionStorage.removeItem(key);
+        // أضافة منطق لمسح الإشعارات القديمة فقط (أكثر من ساعة)
+        const timestamp = sessionStorage.getItem(key + '_timestamp');
+        if (!timestamp || (now - parseInt(timestamp)) > 3600000) { // ساعة واحدة
+          sessionStorage.removeItem(key);
+          if (timestamp) {
+            sessionStorage.removeItem(key + '_timestamp');
+          }
+        }
       }
     });
+    
+    // تسجيل وقت بداية الجلسة الجديدة
+    sessionStorage.setItem('session_start_time', now.toString());
   }
 
   // إعادة تشغيل المستمعين
@@ -253,7 +265,17 @@ class ChallengeManager {
         isNewChallenge = createdTime > this.sessionStartTime;
       }
 
-      if (!hasShownNotification && isNewChallenge) {
+      // التحقق إضافي: التأكد من أن التحدي تم إنشاؤه حديثاً (خلال آخر 10 دقائق)
+      const now = Date.now();
+      let isRecentlyCreated = false;
+      
+      if (createdAt && createdAt.toMillis) {
+        const createdTime = createdAt.toMillis();
+        const timeDiff = now - createdTime;
+        isRecentlyCreated = timeDiff < 600000; // 10 دقائق
+      }
+
+      if (!hasShownNotification && isNewChallenge && isRecentlyCreated) {
         // تسجيل أننا عرضنا الإشعار
         sessionStorage.setItem(notificationKey, 'true');
 
@@ -265,7 +287,7 @@ class ChallengeManager {
         // Show challenge notification
         this.showChallengeNotification(challengeData, challengeId, challengerName);
       } else {
-        console.log('Incoming challenge notification not shown - already shown or old challenge');
+        console.log('Incoming challenge notification not shown - already shown, old challenge, or not recent');
       }
     } catch (error) {
       console.error('Error handling incoming challenge:', error);
@@ -288,6 +310,26 @@ class ChallengeManager {
           return;
         }
 
+        // التحقق من أن التحدي تم قبوله مؤخراً (خلال آخر 5 دقائق)
+        const acceptedAt = challengeData.acceptedAt;
+        const now = Date.now();
+        let isRecentlyAccepted = false;
+
+        if (acceptedAt && acceptedAt.toMillis) {
+          const acceptedTime = acceptedAt.toMillis();
+          const timeDiff = now - acceptedTime;
+          isRecentlyAccepted = timeDiff < 300000; // 5 دقائق
+        } else if (challengeData.lastUpdated) {
+          const timeDiff = now - challengeData.lastUpdated;
+          isRecentlyAccepted = timeDiff < 300000; // 5 دقائق
+        }
+
+        // عرض الإشعار فقط إذا كان التحدي تم قبوله مؤخراً
+        if (!isRecentlyAccepted) {
+          console.log('Challenge was not recently accepted, skipping notification');
+          return;
+        }
+
         // تسجيل أننا عرضنا الإشعار
         sessionStorage.setItem(notificationKey, 'true');
 
@@ -296,7 +338,7 @@ class ChallengeManager {
         const opponentName = opponentDoc.exists() ?
           opponentDoc.data()['الاسم الكامل'] : 'الخصم';
 
-        // Show acceptance notification immediately regardless of timing
+        // Show acceptance notification
         console.log('Showing challenge accepted notification...');
         this.showChallengeAcceptedNotification(challengeData, challengeId, opponentName);
       }
