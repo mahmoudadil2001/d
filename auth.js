@@ -181,7 +181,7 @@ class AuthManager {
     }
 
     // Validation for Full Name: 3 words, each word at least 3 Arabic letters
-    const nameWords = fullName.split(' ');
+    const nameWords = fullName.trim().split(/\s+/).filter(word => word.length > 0);
     if (nameWords.length < 3) {
       this.showError('يجب أن يتكون الاسم الكامل من ثلاث كلمات على الأقل.');
       return;
@@ -192,14 +192,15 @@ class AuthManager {
         return;
       }
       // Check if all characters are Arabic letters
-      if (!/^[آ-ي\s]+$/.test(word)) {
+      if (!/^[آ-ي]+$/.test(word)) {
         this.showError('يجب أن تكون جميع أحرف الاسم باللغة العربية.');
         return;
       }
     }
 
-    // Validation for Group: 1 English letter from a-g
-    if (group.length !== 1 || !/^[a-g]$/i.test(group)) {
+    // Validation for Group: 1 English letter from a-g (with whitespace trimming)
+    const trimmedGroup = group.trim();
+    if (trimmedGroup.length !== 1 || !/^[a-g]$/i.test(trimmedGroup)) {
       this.showError('يجب أن تكون المجموعة حرفًا واحدًا فقط من (a-g).');
       return;
     }
@@ -212,14 +213,14 @@ class AuthManager {
       console.log('Account creation successful:', result.user);
 
       // Send Telegram notification for new account creation
-      await this.sendTelegramNotification(email, fullName, group, 'تسجيل حساب جديد 🆕', result.user.uid);
+      await this.sendTelegramNotification(email, fullName, trimmedGroup, 'تسجيل حساب جديد 🆕', result.user.uid);
 
       // Store additional user data in Firestore with Arabic field names
       const userData = {
         uid: result.user.uid,
         "الايميل": email,
         "الاسم الكامل": fullName,
-        "الجروب": group,
+        "الجروب": trimmedGroup,
         createdAt: new Date().toISOString(),
         // Add 1-minute free trial for new accounts
         freeTrialStartDate: new Date().toISOString(),
@@ -1060,19 +1061,26 @@ class AuthManager {
             }
 
             // Validation
-            const nameWords = fullName.split(' ');
+            const nameWords = fullName.trim().split(/\s+/).filter(word => word.length > 0);
             if (nameWords.length < 3) {
               this.showError('يجب أن يتكون الاسم الكامل من ثلاث كلمات على الأقل.');
               return;
             }
             for (const word of nameWords) {
-              if (word.length < 3 || !/^[آ-ي\s]+$/.test(word)) {
-                this.showError('يجب أن تكون جميع أحرف الاسم باللغة العربية وكل كلمة 3 أحرف على الأقل.');
+              if (word.length < 3) {
+                this.showError('كل كلمة في الاسم يجب أن تتكون من 3 أحرف عربية على الأقل.');
+                return;
+              }
+              // Check if all characters are Arabic letters
+              if (!/^[آ-ي]+$/.test(word)) {
+                this.showError('يجب أن تكون جميع أحرف الاسم باللغة العربية.');
                 return;
               }
             }
 
-            if (group.length !== 1 || !/^[a-g]$/i.test(group)) {
+            // Validation for Group: 1 English letter from a-g (with whitespace trimming)
+            const trimmedGroup = group.trim();
+            if (trimmedGroup.length !== 1 || !/^[a-g]$/i.test(trimmedGroup)) {
               this.showError('يجب أن تكون المجموعة حرفًا واحدًا فقط من (a-g).');
               return;
             }
@@ -1082,7 +1090,7 @@ class AuthManager {
               uid: this.currentUser.uid,
               "الايميل": this.currentUser.email,
               "الاسم الكامل": fullName,
-              "الجروب": group,
+              "الجروب": trimmedGroup,
               createdAt: existingData?.createdAt || new Date().toISOString(),
               updatedAt: new Date().toISOString()
             };
@@ -1093,14 +1101,14 @@ class AuthManager {
             await this.sendTelegramNotification(
               this.currentUser.email,
               fullName,
-              group,
+              trimmedGroup,
               existingData ? 'تحديث البيانات الشخصية 📝' : 'إضافة البيانات الشخصية 📝',
               this.currentUser.uid
             );
 
             // Refresh content
             setTimeout(() => {
-              this.populateExpandableUserInfo(contentDiv);
+              this.populateExpandableUserInfo(contentDiv, userData);
             }, 1000);
 
           } catch (error) {
@@ -1369,7 +1377,7 @@ class AuthManager {
       }
 
       // Validation for Full Name: 3 words, each word at least 3 Arabic letters
-      const nameWords = fullName.split(' ');
+      const nameWords = fullName.trim().split(/\s+/).filter(word => word.length > 0);
       if (nameWords.length < 3) {
         this.showError('يجب أن يتكون الاسم الكامل من ثلاث كلمات على الأقل.');
         return;
@@ -1380,14 +1388,15 @@ class AuthManager {
           return;
         }
         // Check if all characters are Arabic letters
-        if (!/^[آ-ي\s]+$/.test(word)) {
+        if (!/^[آ-ي]+$/.test(word)) {
           this.showError('يجب أن تكون جميع أحرف الاسم باللغة العربية.');
           return;
         }
       }
 
-      // Validation for Group: 1 English letter from a-g
-      if (group.length !== 1 || !/^[a-g]$/i.test(group)) {
+      // Validation for Group: 1 English letter from a-g (with whitespace trimming)
+      const trimmedGroup = group.trim();
+      if (trimmedGroup.length !== 1 || !/^[a-g]$/i.test(trimmedGroup)) {
         this.showError('يجب أن تكون المجموعة حرفًا واحدًا فقط من (a-g).');
         return;
       }
@@ -1398,7 +1407,7 @@ class AuthManager {
         uid: this.currentUser.uid,
         "الايميل": this.currentUser.email,
         "الاسم الكامل": fullName,
-        "الجروب": group,
+        "الجروب": trimmedGroup,
         createdAt: existingData?.createdAt || new Date().toISOString(),
         updatedAt: new Date().toISOString()
       };
@@ -1412,7 +1421,7 @@ class AuthManager {
         await this.sendTelegramNotification(
           this.currentUser.email,
           fullName,
-          group,
+          trimmedGroup,
           existingData ? 'تحديث البيانات الشخصية 📝' : 'إضافة البيانات الشخصية 📝',
           this.currentUser.uid
         );
@@ -1997,14 +2006,19 @@ async function showUserDataFormInSettings(contentDiv) {
       }
 
       // Validation
-      const nameWords = fullName.split(' ');
+      const nameWords = fullName.trim().split(/\s+/).filter(word => word.length > 0);
       if (nameWords.length < 3) {
         authManager.showError('يجب أن يتكون الاسم الكامل من ثلاث كلمات على الأقل.');
         return;
       }
       for (const word of nameWords) {
-        if (word.length < 3 || !/^[آ-ي\s]+$/.test(word)) {
-          authManager.showError('يجب أن تكون جميع أحرف الاسم باللغة العربية وكل كلمة 3 أحرف على الأقل.');
+        if (word.length < 3) {
+          authManager.showError('كل كلمة في الاسم يجب أن تتكون من 3 أحرف عربية على الأقل.');
+          return;
+        }
+        // Check if all characters are Arabic letters
+        if (!/^[آ-ي]+$/.test(word)) {
+          authManager.showError('يجب أن تكون جميع أحرف الاسم باللغة العربية.');
           return;
         }
       }
