@@ -5,7 +5,7 @@ export const lectureNames = {
         "3": "Access Opening Preparation",
         "4": "Applications of radiography",
         "5": "Rubber Dam",
-        "6": "clean& shape root canal",
+        "6": "Clean& Shape Root Canal",
         "7": "Clean& Shape Root Canal 2",
         "8": "Root Canal Obturation",
         "9": "Unknown",
