@@ -42,19 +42,19 @@ export const visibleLectures = {
             3,
             4
         ],
+        "8": [
+            1,
+            2,
+            3,
+            4
+        ],
         "nine": [],
         "ten": [],
         "eleven": [],
         "twelve": [],
         "thirteen": [],
         "fourteen": [],
-        "fifteen": [],
-        "eight": [
-            1,
-            2,
-            3,
-            4
-        ]
+        "fifteen": []
     },
     "generalmedicine": {
         "1": [
