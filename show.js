@@ -12,7 +12,7 @@ export const visibleLectures = {
             3,
             4
         ],
-        "three": [
+        "3": [
             1,
             2,
             3,
@@ -116,7 +116,7 @@ export const visibleLectures = {
             3,
             4
         ],
-        "3": [
+        "three": [
             1,
             2,
             3,
