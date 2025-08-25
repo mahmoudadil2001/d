@@ -2264,10 +2264,10 @@ function initializeFreeTrial() {
     const currentTime = Date.now();
     const elapsedTime = (currentTime - startTime) / 1000; // in seconds
     
-    if (elapsedTime < 30) { // 30 seconds
+    if (elapsedTime < 60) { // 60 seconds
       // Continue existing trial
       freeTrialActive = true;
-      freeTrialTimeLeft = Math.ceil(30 - elapsedTime);
+      freeTrialTimeLeft = Math.ceil(60 - elapsedTime);
       startFreeTrialTimer();
     } else {
       // Trial expired
@@ -2279,7 +2279,7 @@ function initializeFreeTrial() {
 // Start free trial
 function startFreeTrial() {
   freeTrialActive = true;
-  freeTrialTimeLeft = 30; // 30 seconds
+  freeTrialTimeLeft = 60; // 60 seconds (1 minute)
   localStorage.setItem('freeTrialStartTime', Date.now().toString());
   startFreeTrialTimer();
   showFreeTrialNotification();
@@ -3007,30 +3007,31 @@ function showVipSubscriptionModal() {
       animation: slideIn 0.5s ease-out;
       position: relative;
       color: #212529;
+      z-index: 10001;
     ">
       <!-- Header -->
       <div style="
-        background: rgba(255, 255, 255, 0.15);
+        background: rgba(255, 255, 255, 0.2);
         padding: 25px;
         border-radius: 20px 20px 0 0;
         text-align: center;
         position: relative;
-        border-bottom: 2px solid rgba(255, 255, 255, 0.3);
+        border-bottom: 2px solid rgba(255, 255, 255, 0.4);
       ">
-        <div style="font-size: 50px; margin-bottom: 10px;"></div>
+        <div style="font-size: 50px; margin-bottom: 10px;">👑</div>
         <h2 style="margin: 0; font-family: 'Tajawal', sans-serif; font-size: 28px; font-weight: 700; color: #212529;">
-         
+          اشتراك VIP المميز
         </h2>
-        <p style="margin: 10px 0 0 0; opacity: 0.8; font-size: 16px;">
-          
+        <p style="margin: 10px 0 0 0; opacity: 0.9; font-size: 16px; color: #495057;">
+          احصل على مميزات حصرية وتجربة أفضل
         </p>
         <button onclick="closeVipSubscriptionModal()" style="
           position: absolute;
           top: 20px;
           left: 25px;
-          background: rgba(255, 255, 255, 0.25);
+          background: rgba(220, 53, 69, 0.8);
           border: none;
-          color: #212529;
+          color: white;
           border-radius: 50%;
           width: 40px;
           height: 40px;
@@ -3041,6 +3042,7 @@ function showVipSubscriptionModal() {
           justify-content: center;
           transition: all 0.3s ease;
           font-weight: bold;
+          backdrop-filter: blur(5px);
         ">×</button>
       </div>
 
@@ -3215,7 +3217,7 @@ function showVipSubscriptionModal() {
     </div>
   `;
 
-  // Add CSS for animations
+  // Add CSS for animations and improved styling
   const style = document.createElement('style');
   style.textContent = `
     @keyframes fadeIn {
@@ -3226,10 +3228,38 @@ function showVipSubscriptionModal() {
       from { opacity: 0; transform: translateY(-50px) scale(0.9); }
       to { opacity: 1; transform: translateY(0) scale(1); }
     }
-    #vipSubscriptionModal [style*="cursor: pointer"]:hover {
+    
+    #vipSubscriptionModal {
+      backdrop-filter: blur(10px) !important;
+      background: rgba(0, 0, 0, 0.8) !important;
+    }
+    
+    #vipSubscriptionModal .vip-feature {
+      transition: all 0.3s ease !important;
+      border: 1px solid rgba(255, 255, 255, 0.3) !important;
+    }
+    
+    #vipSubscriptionModal .vip-feature:hover {
       transform: translateY(-2px) !important;
-      box-shadow: 0 12px 35px rgba(0, 0, 0, 0.2) !important;
-      background: rgba(255, 255, 255, 0.35) !important;
+      box-shadow: 0 8px 25px rgba(255, 255, 255, 0.3) !important;
+      background: rgba(255, 255, 255, 0.3) !important;
+    }
+    
+    #vipSubscriptionModal .vip-header {
+      transition: all 0.3s ease !important;
+      user-select: none !important;
+    }
+    
+    #vipSubscriptionModal .vip-header:hover {
+      background: rgba(255, 255, 255, 0.1) !important;
+      border-radius: 8px !important;
+      padding: 5px !important;
+    }
+    
+    #vipSubscriptionModal .expand-indicator {
+      transition: all 0.3s ease !important;
+      cursor: pointer !important;
+      user-select: none !important;
     }
   `;
   document.head.appendChild(style);
@@ -3257,55 +3287,47 @@ function showVipSubscriptionModal() {
       }
     }
 
-    // Initial automatic popup for 2.5 seconds with smooth animation
+    // Show features immediately when modal opens
     setTimeout(() => {
       vipFeatures.classList.add('show');
       vipFeatures.style.maxHeight = '1000px';
       vipFeatures.style.opacity = '1';
       expandIndicator.textContent = '▲';
-      
-      // Auto-hide after 2.5 seconds
-      setTimeout(() => {
-        vipFeatures.classList.remove('show');
-        vipFeatures.style.maxHeight = '0';
-        vipFeatures.style.opacity = '0';
-        expandIndicator.textContent = '▼';
-      }, 2500);
-    }, 200);
+    }, 300);
 
-    // Toggle on header click
+    // Toggle on header click - single click functionality
     if (vipHeader) {
-      vipHeader.addEventListener('click', toggleFeatures);
+      vipHeader.addEventListener('click', (e) => {
+        e.preventDefault();
+        e.stopPropagation();
+        toggleFeatures();
+      });
+      
+      // Also make the indicator clickable
+      expandIndicator.addEventListener('click', (e) => {
+        e.preventDefault();
+        e.stopPropagation();
+        toggleFeatures();
+      });
     }
 
-    // Toggle individual feature descriptions on hover and click
+    // Show all feature descriptions by default
     modal.querySelectorAll('.vip-feature').forEach(feature => {
-      // Show description on hover
+      const desc = feature.querySelector('.feature-desc');
+      if (desc) {
+        desc.style.display = 'block';
+        desc.style.opacity = '1';
+      }
+      
+      // Add hover effect only for visual feedback
       feature.addEventListener('mouseenter', () => {
-        const desc = feature.querySelector('.feature-desc');
-        if (desc) {
-          desc.style.display = 'block';
-        }
+        feature.style.transform = 'translateY(-2px)';
+        feature.style.boxShadow = '0 8px 25px rgba(255, 255, 255, 0.3)';
       });
 
-      // Hide description when mouse leaves
       feature.addEventListener('mouseleave', () => {
-        const desc = feature.querySelector('.feature-desc');
-        if (desc) {
-          desc.style.display = 'none';
-        }
-      });
-
-      // Toggle description on click
-      feature.addEventListener('click', () => {
-        const desc = feature.querySelector('.feature-desc');
-        if (desc) {
-          if (desc.style.display === 'none' || desc.style.display === '') {
-            desc.style.display = 'block';
-          } else {
-            desc.style.display = 'none';
-          }
-        }
+        feature.style.transform = 'translateY(0)';
+        feature.style.boxShadow = 'none';
       });
     });
 
