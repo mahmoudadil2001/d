@@ -32,7 +32,7 @@ export const lectureNames = {
         "30": "Unknown"
     },
     "generalmedicine": {
-        "1": "Unknown",
+        "1": "Diabetes Mellitus",
         "2": "Unknown",
         "3": "Unknown",
         "4": "Unknown",
