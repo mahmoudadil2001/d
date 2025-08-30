@@ -128,7 +128,7 @@ export const lectureNames = {
         "30": "Unknown"
     },
     "oralpathology": {
-        "1": "introduction",
+        "1": "Biopsy (Principles and techniques)",
         "2": "Unknown",
         "3": "Unknown",
         "4": "Unknown",
