@@ -129,7 +129,7 @@ export const lectureNames = {
     },
     "oralpathology": {
         "1": "Biopsy (Principles and techniques)",
-        "2": "Unknown",
+        "2": "Dental caries",
         "3": "Unknown",
         "4": "Unknown",
         "5": "Unknown",
