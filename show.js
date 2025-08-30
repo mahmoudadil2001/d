@@ -124,7 +124,8 @@ export const visibleLectures = {
     "oralsurgery": {
         "1": [
             1,
-            2
+            2,
+            3
         ]
     },
     "orthodontics": {
