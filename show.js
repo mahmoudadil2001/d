@@ -94,7 +94,8 @@ export const visibleLectures = {
     "operative": {
         "1": [
             1,
-            2
+            2,
+            3
         ],
         "twentytwo": []
     },
