@@ -97,7 +97,7 @@ export const lectureNames = {
     },
     "operative": {
         "1": "Assessment, Diagnosis, Treatment Planning",
-        "2": "Unknown",
+        "2": " Assessment, Diagnosis, Treatment Planning 2",
         "3": "Unknown",
         "4": "Unknown",
         "5": "Unknown",
