@@ -64,7 +64,7 @@ export const lectureNames = {
         "30": "Unknown"
     },
     "generalsurgery": {
-        "1": "Unknown",
+        "1": "Metabolic response to injury",
         "2": "Unknown",
         "3": "Unknown",
         "4": "Unknown",
