@@ -65,7 +65,7 @@ export const lectureNames = {
     },
     "generalsurgery": {
         "1": "Metabolic response to injury",
-        "2": "Unknown",
+        "2": "Wounds healing",
         "3": "Unknown",
         "4": "Unknown",
         "5": "Unknown",
