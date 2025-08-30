@@ -75,7 +75,8 @@ export const visibleLectures = {
     },
     "generalsurgery": {
         "1": [
-            1
+            1,
+            2
         ],
         "twentynine": [
             4
