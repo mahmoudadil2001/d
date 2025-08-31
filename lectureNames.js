@@ -224,7 +224,7 @@ export const lectureNames = {
         "30": "Unknown"
     },
     "pedodontics": {
-        "1": "Unknown",
+        "1": "Pediatric dentistry",
         "2": "Unknown",
         "3": "Unknown",
         "4": "Unknown",
