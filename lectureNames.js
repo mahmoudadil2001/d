@@ -192,7 +192,7 @@ export const lectureNames = {
         "30": "Unknown"
     },
     "orthodontics": {
-        "1": "Unknown",
+        "1": "Introduction",
         "2": "Unknown",
         "3": "Unknown",
         "4": "Unknown",
