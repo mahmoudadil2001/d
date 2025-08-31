@@ -289,7 +289,7 @@ export const lectureNames = {
     },
     "prosthodontics": {
         "1": "Osteology",
-        "2": "Unknown",
+        "2": "Myology",
         "3": "Unknown",
         "4": "Unknown",
         "5": "Unknown",
