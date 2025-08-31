@@ -193,7 +193,7 @@ export const lectureNames = {
     },
     "orthodontics": {
         "1": "Introduction",
-        "2": "Unknown",
+        "2": "Terminology",
         "3": "Unknown",
         "4": "Unknown",
         "5": "Unknown",
