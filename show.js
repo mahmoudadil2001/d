@@ -151,7 +151,8 @@ export const visibleLectures = {
     },
     "pedodontics": {
         "1": [
-            1
+            1,
+            2
         ]
     },
     "periodontology": {
