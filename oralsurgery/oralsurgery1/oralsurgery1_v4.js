@@ -1,77 +1,77 @@
 export const questions = [
   {
-    question: "What is the hormone that promotes glucose entry into cells?",
-    options: ["Glucagon", "Insulin", "Cortisol", "Epinephrine"],
+    question: "What is the difference between diastolic and systolic pressures called?",
+    options: ["Mean arterial pressure", "Pulse pressure", "Cardiac output", "Peripheral resistance"],
     answer: 1
   },
   {
-    question: "Which vascular complication affects both eyes and kidneys?",
-    options: ["Macroangiopathy", "Microangiopathy", "Venous thrombosis", "Arterial stenosis"],
+    question: "Which of the following is a cause of secondary hypertension?",
+    options: ["Genetic factors", "Chronic corticosteroid therapy", "Obesity", "Smoking"],
     answer: 1
   },
   {
-    question: "What causes Type 1 diabetes?",
-    options: ["Insulin resistance", "Body's failure to produce insulin", "Obesity", "Pregnancy"],
-    answer: 1
-  },
-  {
-    question: "Which test involves a glucose load after overnight fasting?",
-    options: ["Fasting blood glucose", "HbA1c", "2-hour postprandial", "Random glucose"],
-    answer: 2
-  },
-  {
-    question: "What does elevated HbA1c accelerate?",
-    options: ["Wound healing", "Diabetes complications", "Insulin production", "Glucose excretion"],
-    answer: 1
-  },
-  {
-    question: "Which insulin regimen attempts to mimic physiologic secretion?",
-    options: ["Once daily injection", "Multiple daily injections", "Weekly injection", "Monthly injection"],
-    answer: 1
-  },
-  {
-    question: "Which oral agent is contraindicated in renal insufficiency?",
-    options: ["Sulfonylureas", "Metformin", "Thiazolidinediones", "Meglitinides"],
-    answer: 1
-  },
-  {
-    question: "What is the severe stage sign of insulin reaction?",
-    options: ["Sweating", "Tachycardia", "Hypotension", "Hunger"],
-    answer: 2
-  },
-  {
-    question: "What should be done for poorly controlled diabetic patients?",
-    options: ["Routine dental treatment", "Emergency care only", "Referral for medical evaluation", "No treatment needed"],
-    answer: 2
-  },
-  {
-    question: "What do insulin-controlled patients usually require during oral infections?",
-    options: ["Reduced insulin dosage", "Increased insulin dosage", "No change in insulin", "Stop insulin temporarily"],
-    answer: 1
-  },
-  {
-    question: "Which infection is common in poorly controlled diabetes?",
-    options: ["Candidiasis", "Actinomycosis", "Syphilis", "Tuberculosis"],
+    question: "What percentage of hypertensive patients are asymptomatic?",
+    options: ["One third", "One half", "Two thirds", "Three quarters"],
     answer: 0
   },
   {
-    question: "What does epinephrine use in diabetics potentially cause?",
-    options: ["Hypoglycemia", "Hyperglycemia", "No effect", "Insulin secretion"],
+    question: "Which antihypertensive drug may cause dry mouth as a side effect?",
+    options: ["ACE inhibitors", "Beta-blockers", "Diuretics", "Calcium channel blockers"],
+    answer: 2
+  },
+  {
+    question: "What is the dental management for blood pressure ≥140/90 but <160/100?",
+    options: ["No treatment provided", "Any treatment with medical consultation encouraged", "Only emergency treatment", "Treatment with general anesthesia"],
     answer: 1
   },
   {
-    question: "Which symptom is highly suggestive of diabetes in adults?",
-    options: ["Gradual vision changes", "Rapid onset of myopia", "Cataracts", "Glaucoma"],
+    question: "What is the term for episodes of chest pain caused by myocardial ischemia?",
+    options: ["Myocardial infarction", "Angina pectoris", "Pericarditis", "Heart failure"],
     answer: 1
   },
   {
-    question: "What is a risk factor for developing diabetes?",
-    options: ["Age under 30", "Giving birth to large babies", "Underweight", "Vegetarian diet"],
+    question: "Which intervention aims to open up coronary blood flow with a balloon-tipped catheter?",
+    options: ["CABG", "PTCA", "ECG", "ACS"],
     answer: 1
   },
   {
-    question: "Which treatment approach is used for Type 2 diabetes?",
-    options: ["Insulin only", "Lifestyle interventions and drug therapy", "Surgery only", "No treatment needed"],
+    question: "What is the recommended waiting period for elective dental care after coronary artery stenting?",
+    options: ["2 weeks", "1 month", "3 months", "6 months"],
+    answer: 3
+  },
+  {
+    question: "Which cardiac enzyme is most specific for myocardial infarction diagnosis?",
+    options: ["AST", "LDH", "Troponin T", "CK-MB"],
+    answer: 2
+  },
+  {
+    question: "What should be avoided in patients taking nonselective beta-blockers?",
+    options: ["Acetaminophen", "Excessive vasoconstrictors", "Antibiotics", "Local anesthesia without vasoconstrictor"],
     answer: 1
+  },
+  {
+    question: "Which of the following is a clinical feature of malignant hypertension?",
+    options: ["Facial palsy", "Gingival hyperplasia", "Tooth mobility", "Oral lichen planus"],
+    answer: 0
+  },
+  {
+    question: "What is the first-line treatment for angina pectoris symptoms?",
+    options: ["Beta-blockers", "Calcium antagonists", "Glyceryl trinitrate", "ACE inhibitors"],
+    answer: 2
+  },
+  {
+    question: "Which of the following is NOT a complication of myocardial infarction?",
+    options: ["Pericarditis", "Cardiogenic shock", "Improved cardiac function", "Ventricular fibrillation"],
+    answer: 2
+  },
+  {
+    question: "What is the recommended management for patients on antiplatelet therapy?",
+    options: ["Discontinue medication before dental treatment", "Use local hemostatic measures", "Avoid all dental treatment", "Use general anesthesia for all procedures"],
+    answer: 1
+  },
+  {
+    question: "Which gas should be avoided during conscious sedation in cardiac patients due to potential hypertension?",
+    options: ["Nitrous oxide", "Oxygen", "Carbon dioxide", "Hypoxia"],
+    answer: 3
   }
 ];
