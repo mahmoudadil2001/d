@@ -1,77 +1,77 @@
 export const questions = [
   {
-    question: "What promotes glucose entry into body cells?",
-    options: ["Glucagon", "Insulin", "Somatostatin", "Epinephrine"],
+    question: "What is the product of cardiac output and peripheral resistance?",
+    options: ["Heart rate", "Blood pressure", "Stroke volume", "Pulse pressure"],
     answer: 1
   },
   {
-    question: "Which complication results from diabetic microangiopathy?",
-    options: ["Diabetic nephropathy", "Coronary artery disease", "Hypertension", "Liver cirrhosis"],
-    answer: 0
-  },
-  {
-    question: "What was Type 2 DM previously called?",
-    options: ["IDDM", "NIDDM", "Juvenile diabetes", "Brittle diabetes"],
+    question: "Which condition is characterized by systolic >200 mmHg and diastolic >130 mmHg?",
+    options: ["White coat hypertension", "Malignant hypertension", "Essential hypertension", "Secondary hypertension"],
     answer: 1
   },
   {
-    question: "What may precede development of Type 2 DM?",
-    options: ["Type 1 DM", "Gestational diabetes", "Secondary diabetes", "Prediabetes"],
-    answer: 1
-  },
-  {
-    question: "Which test doesn't require fasting for diabetes monitoring?",
-    options: ["Fasting blood glucose", "HbA1c", "2-hour postprandial", "Oral glucose tolerance"],
-    answer: 1
-  },
-  {
-    question: "How often should HbA1c be measured in insulin-taking patients?",
-    options: ["Monthly", "Quarterly", "Biannually", "Annually"],
-    answer: 1
-  },
-  {
-    question: "Which drug class improves insulin sensitivity in peripheral tissues?",
-    options: ["Biguanides", "Sulfonylureas", "Thiazolidinediones", "Alpha-glucosidase inhibitors"],
+    question: "Which lifestyle factor is NOT mentioned as modifying hypertension?",
+    options: ["Obesity", "Excessive alcohol intake", "High fiber diet", "Physical inactivity"],
     answer: 2
   },
   {
-    question: "What is the moderate stage symptom of insulin reaction?",
-    options: ["Hunger", "Incoherence", "Unconsciousness", "Sweating"],
+    question: "Which antihypertensive drug is associated with lichenoid reactions?",
+    options: ["ACE inhibitors", "Thiazide diuretics", "Calcium channel blockers", "Beta-blockers"],
     answer: 1
   },
   {
-    question: "Which dental management approach is used for well-controlled non-insulin dependent patients?",
-    options: ["Special precautions needed", "No special precautions", "Hospitalization required", "Emergency care only"],
+    question: "What is the recommended follow-up for prehypertension (120-139/80-89 mmHg)?",
+    options: ["Recheck in 2 years", "Recheck in 1 year", "Confirm within 2 months", "Evaluate within 1 month"],
     answer: 1
   },
   {
-    question: "What should be done for diabetic patients with acute oral infections?",
-    options: ["Avoid treatment", "Consult with physician", "Extract all teeth", "Use only topical treatments"],
+    question: "What is the chief complication of malignant hypertension?",
+    options: ["Liver failure", "Severe ischemic damage to kidneys", "Pulmonary embolism", "Cerebral hemorrhage"],
     answer: 1
   },
   {
-    question: "Which oral condition is more common in diabetic patients?",
-    options: ["Gingivitis and periodontal disease", "Dental fluorosis", "Enamel hypoplasia", "Ankyloglossia"],
-    answer: 0
+    question: "Which type of angina is caused by coronary artery spasm?",
+    options: ["Stable angina", "Unstable angina", "Decubitus angina", "Variant or Prinzmetal's angina"],
+    answer: 3
   },
   {
-    question: "What may be a consequence of long-standing diabetic neuropathy?",
-    options: ["Reversible symptoms", "Irreversible changes", "Improved sensation", "Decreased pain"],
+    question: "What is the maximum safe number of local anesthetic cartridges for hypertensive patients?",
+    options: ["One cartridge", "Two cartridges", "Three cartridges", "No limit with proper aspiration"],
     answer: 1
   },
   {
-    question: "Which factor increases risk for developing diabetes?",
-    options: ["Underweight", "Age under 20", "Obese", "Vegetarian diet"],
+    question: "Which enzyme level is used in the diagnosis of myocardial infarction?",
+    options: ["Amylase", "Creatine Kinase MB", "Alkaline phosphatase", "Lipase"],
+    answer: 1
+  },
+  {
+    question: "What is the recommended management for patients with unstable angina?",
+    options: ["All elective dental treatment", "Only emergency treatment with physician consultation", "Routine treatment with double anesthesia", "Treatment after 1 month of stability"],
+    answer: 1
+  },
+  {
+    question: "Which of the following is an irreversible risk factor for atheroma?",
+    options: ["Cigarette smoking", "Hypertension", "Increasing age", "Diabetes mellitus"],
     answer: 2
   },
   {
-    question: "What is the primary action of metformin?",
-    options: ["Stimulates insulin secretion", "Reduces hepatic glucose production", "Increases glucose absorption", "Blocks carbohydrate digestion"],
+    question: "What is the primary benefit of early thrombolytic therapy in myocardial infarction?",
+    options: ["Prevents arrhythmias", "Decreases extent of necrosis", "Reduces blood pressure", "Prevents reinfarction"],
     answer: 1
   },
   {
-    question: "Which nervous system tissue doesn't require insulin for glucose use?",
-    options: ["Peripheral nerves", "Autonomic nerves", "Brain and CNS", "Spinal cord"],
+    question: "Which parameter should be monitored during dental treatment of high-risk cardiac patients?",
+    options: ["Blood glucose", "International Normalized Ratio", "Blood pressure and vital signs", "Liver enzymes"],
+    answer: 2
+  },
+  {
+    question: "What is the recommended action if chest pain persists after three doses of nitroglycerin?",
+    options: ["Send patient home", "Continue dental treatment", "Suspect myocardial infarction", "Administer epinephrine"],
+    answer: 2
+  },
+  {
+    question: "Which of the following is NOT a recommended stress-reduction measure for cardiac patients?",
+    options: ["Good communication", "Oral sedation", "Hypoxia induction", "Excellent local anesthesia"],
     answer: 2
   }
 ];
