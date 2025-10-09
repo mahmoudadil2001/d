@@ -1,77 +1,152 @@
 export const questions = [
   {
-    question: "What is the definition of hypertension in adults according to the text?",
-    options: ["Systolic >130 mmHg and/or diastolic >85 mmHg", "Systolic ≥140 mmHg and/or diastolic ≥90 mmHg", "Systolic >120 mmHg and/or diastolic >80 mmHg", "Systolic ≥160 mmHg and/or diastolic ≥100 mmHg"],
+    question: "According to ACC/AHA, how is Heart Failure (HF) defined?",
+    options: [
+      "A sudden cardiac arrest due to electrical malfunction",
+      "A complex clinical syndrome impairing ventricular filling or ejection",
+      "A condition solely caused by hypertension",
+      "An irreversible end-stage heart disease"
+    ],
     answer: 1
   },
   {
-    question: "Which type of hypertension accounts for about 90% of all cases and has no readily identifiable cause?",
-    options: ["Secondary hypertension", "Malignant hypertension", "Primary/Essential hypertension", "Renovascular hypertension"],
-    answer: 2
-  },
-  {
-    question: "What is the term for consistently elevated BP only in the presence of a healthcare worker?",
-    options: ["Masked hypertension", "White coat hypertension", "Labile hypertension", "Paroxysmal hypertension"],
+    question: "Which of the following is the most common cause of heart failure?",
+    options: [
+      "Congenital heart diseases",
+      "Ischemic heart diseases",
+      "Pulmonary embolism",
+      "Chronic anemia"
+    ],
     answer: 1
   },
   {
-    question: "Which class of antihypertensive drugs is known to cause gingival hyperplasia?",
-    options: ["Diuretics", "ACE inhibitors", "Calcium channel blockers", "Beta-blockers"],
-    answer: 2
-  },
-  {
-    question: "What is the recommended dental management for patients with blood pressure ≥180/110 mmHg?",
-    options: ["Any treatment can be provided", "Only emergency treatment with physician consultation", "Routine dental treatment with BP monitoring", "Treatment after premedication with anxiolytics"],
+    question: "In which ACC/AHA stage of HF are patients asymptomatic but have structural heart disease?",
+    options: [
+      "Stage A",
+      "Stage B",
+      "Stage C",
+      "Stage D"
+    ],
     answer: 1
   },
   {
-    question: "Which of the following is a potentially reversible risk factor for atheroma?",
-    options: ["Increasing age", "Male gender", "Family history", "Cigarette smoking"],
+    question: "Which NYHA class describes patients with symptoms at rest?",
+    options: [
+      "Class I",
+      "Class II",
+      "Class III",
+      "Class IV"
+    ],
     answer: 3
   },
   {
-    question: "What is the maximum recommended amount of adrenaline in local anesthesia for hypertensive patients?",
-    options: ["No adrenaline should be used", "Up to 0.036 mg adrenaline", "Up to 0.10 mg adrenaline", "Unlimited amount if aspirated properly"],
+    question: "What is the term for symptomatic HF?",
+    options: [
+      "Compensated HF",
+      "Decompensated HF",
+      "Asymptomatic HF",
+      "Chronic HF"
+    ],
     answer: 1
   },
   {
-    question: "Which symptom is NOT typically associated with angina pectoris?",
-    options: ["Chest pain lasting 2-5 minutes", "Pain radiating to jaw/teeth", "Relieved by rest or nitroglycerin", "Fever and chills"],
+    question: "Which of the following is a sign of heart failure?",
+    options: [
+      "Bradycardia",
+      "Pulsus alternans",
+      "Hypertension",
+      "Hyperthermia"
+    ],
+    answer: 1
+  },
+  {
+    question: "What ejection fraction (EF) value is typically indicative of heart failure?",
+    options: [
+      ">70%",
+      "50-70%",
+      "40-50%",
+      "<40%"
+    ],
     answer: 3
   },
   {
-    question: "What is the most common cause of death in patients during the first hour of myocardial infarction?",
-    options: ["Cardiac rupture", "Ventricular fibrillation", "Congestive heart failure", "Cerebrovascular accident"],
+    question: "Which drug class is commonly used in HF management?",
+    options: [
+      "NSAIDs",
+      "ACE inhibitors",
+      "Antibiotics",
+      "Anticoagulants"
+    ],
     answer: 1
   },
   {
-    question: "Which dental material should be avoided in hypertensive patients due to rapid absorption of concentrated adrenaline?",
-    options: ["Composite resin", "Adrenaline-impregnated gingival retraction cord", "Zinc oxide eugenol", "Glass ionomer cement"],
-    answer: 1
+    question: "For which NYHA class should elective dental care be deferred?",
+    options: [
+      "Class I",
+      "Class II",
+      "Class III",
+      "Class IV"
+    ],
+    answer: 3
   },
   {
-    question: "What is the primary pathological process underlying ischemic heart disease?",
-    options: ["Vasospasm", "Atheroma formation", "Cardiac hypertrophy", "Valvular dysfunction"],
-    answer: 1
-  },
-  {
-    question: "Which medication should be readily available when treating dental patients with a history of angina?",
-    options: ["Epinephrine auto-injector", "Nitroglycerin sublingual tablets", "Aspirin chewable tablets", "Oral antihyperglycemic agents"],
-    answer: 1
-  },
-  {
-    question: "What is the recommended waiting period for elective dental care after myocardial infarction?",
-    options: ["Immediately after hospital discharge", "2 weeks", "6 months", "1 year"],
+    question: "Which drug should be avoided in HF patients due to symptom exacerbation?",
+    options: [
+      "ACE inhibitors",
+      "Diuretics",
+      "NSAIDs",
+      "Beta blockers"
+    ],
     answer: 2
   },
   {
-    question: "Which of the following is an oral manifestation associated with some antihypertensive drugs?",
-    options: ["Geographic tongue", "Lichenoid reactions", "Black hairy tongue", "Burning mouth syndrome"],
+    question: "Which oral manifestation is associated with ACE inhibitors?",
+    options: [
+      "Dry mouth",
+      "Lichenoid reactions",
+      "Gingival hyperplasia",
+      "Tooth discoloration"
+    ],
     answer: 1
   },
   {
-    question: "What is the most appropriate initial management for a patient experiencing chest pain in the dental office?",
-    options: ["Continue treatment and monitor", "Administer epinephrine", "Give nitroglycerin sublingually and oxygen", "Start CPR immediately"],
-    answer: 2
+    question: "What is a potential cause of arrhythmias?",
+    options: [
+      "Hypoglycemia",
+      "Electrolyte disturbances",
+      "Hypervitaminosis",
+      "Dehydration only"
+    ],
+    answer: 1
+  },
+  {
+    question: "Which device is used for bradycardia pacing?",
+    options: [
+      "Defibrillator",
+      "Pacemaker",
+      "Ablation catheter",
+      "ECG monitor"
+    ],
+    answer: 1
+  },
+  {
+    question: "In dental management of arrhythmia patients, what should be avoided?",
+    options: [
+      "Short appointments",
+      "Vasoconstrictors in some cases",
+      "Local anesthesia",
+      "Radiographs"
+    ],
+    answer: 1
+  },
+  {
+    question: "For patients on Warfarin, what INR range is generally safe for minor oral surgery?",
+    options: [
+      "1.0-1.5",
+      "2.0-3.5",
+      "4.0-5.0",
+      ">5.0"
+    ],
+    answer: 1
   }
 ];
