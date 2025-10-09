@@ -162,7 +162,7 @@ export const lectureNames = {
     "oralsurgery": {
         "1": "Hypertension",
         "2": "Heart failure",
-        "3": "Unknown",
+        "3": "Infective endocarditis",
         "4": "Unknown",
         "5": "Unknown",
         "6": "Unknown",
