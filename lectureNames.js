@@ -160,7 +160,7 @@ export const lectureNames = {
         "30": "Unknown"
     },
     "oralsurgery": {
-        "1": "Diabetes mellitus",
+        "1": "Hypertension",
         "2": "Hypertension",
         "3": "Unknown",
         "4": "Unknown",
