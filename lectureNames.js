@@ -161,7 +161,7 @@ export const lectureNames = {
     },
     "oralsurgery": {
         "1": "Hypertension",
-        "2": "Hypertension",
+        "2": "Heart failure",
         "3": "Unknown",
         "4": "Unknown",
         "5": "Unknown",
