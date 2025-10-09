@@ -2,7 +2,7 @@ function showContactUsModal() {
   const accounts = [
     { name: "محمود عادل", username: "@io_620", link: "https://t.me/io_620", visible: true },
     { name: "محمد قاسم", username: "@m1_qc", link: "https://t.me/m1_qc", visible: true },
-    { name: "خالد علي", username: "@khalid_2", link: "https://t.me/khalid_2", visible: false },
+    { name: "حيدر ساجد", username: "@itishaider", link: "https://t.me/khalid_2", visible: false },
     { name: "سعيد عمر", username: "@saeed_3", link: "https://t.me/saeed_3", visible: false },
     { name: "ليلى حسن", username: "@layla_4", link: "https://t.me/layla_4", visible: false },
     { name: "محمد جاسم", username: "@mohammed_5", link: "https://t.me/mohammed_5", visible: false },
