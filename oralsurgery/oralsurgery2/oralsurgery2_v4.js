@@ -1,77 +1,152 @@
 export const questions = [
   {
-    question: "What is the difference between diastolic and systolic pressures called?",
-    options: ["Mean arterial pressure", "Pulse pressure", "Cardiac output", "Peripheral resistance"],
+    question: "What does CHF stand for?",
+    options: [
+      "Chronic Heart Function",
+      "Congestive Heart Failure",
+      "Cardiac Hypertension Failure",
+      "Coronary Heart Failure"
+    ],
     answer: 1
   },
   {
-    question: "Which of the following is a cause of secondary hypertension?",
-    options: ["Genetic factors", "Chronic corticosteroid therapy", "Obesity", "Smoking"],
+    question: "Which of the following is a cause of heart failure?",
+    options: [
+      "Diabetes insipidus",
+      "Pulmonary hypertension",
+      "Hyperthyroidism only",
+      "Osteoporosis"
+    ],
     answer: 1
   },
   {
-    question: "What percentage of hypertensive patients are asymptomatic?",
-    options: ["One third", "One half", "Two thirds", "Three quarters"],
-    answer: 0
-  },
-  {
-    question: "Which antihypertensive drug may cause dry mouth as a side effect?",
-    options: ["ACE inhibitors", "Beta-blockers", "Diuretics", "Calcium channel blockers"],
+    question: "Which ACC/AHA stage includes patients with past or present symptoms?",
+    options: [
+      "Stage A",
+      "Stage B",
+      "Stage C",
+      "Stage D"
+    ],
     answer: 2
   },
   {
-    question: "What is the dental management for blood pressure ≥140/90 but <160/100?",
-    options: ["No treatment provided", "Any treatment with medical consultation encouraged", "Only emergency treatment", "Treatment with general anesthesia"],
+    question: "Which NYHA class has slight limitation of physical activity?",
+    options: [
+      "Class I",
+      "Class II",
+      "Class III",
+      "Class IV"
+    ],
     answer: 1
   },
   {
-    question: "What is the term for episodes of chest pain caused by myocardial ischemia?",
-    options: ["Myocardial infarction", "Angina pectoris", "Pericarditis", "Heart failure"],
+    question: "What is pulsus alternans?",
+    options: [
+      "Irregular rhythm",
+      "Alternating strong and weak contractions",
+      "Rapid heart rate",
+      "Slow heart rate"
+    ],
     answer: 1
   },
   {
-    question: "Which intervention aims to open up coronary blood flow with a balloon-tipped catheter?",
-    options: ["CABG", "PTCA", "ECG", "ACS"],
+    question: "Which diagnostic method determines ejection fraction?",
+    options: [
+      "ECG",
+      "Echocardiography",
+      "Chest X-ray",
+      "Blood test"
+    ],
     answer: 1
   },
   {
-    question: "What is the recommended waiting period for elective dental care after coronary artery stenting?",
-    options: ["2 weeks", "1 month", "3 months", "6 months"],
-    answer: 3
-  },
-  {
-    question: "Which cardiac enzyme is most specific for myocardial infarction diagnosis?",
-    options: ["AST", "LDH", "Troponin T", "CK-MB"],
+    question: "Which drug is an angiotensin II receptor blocker?",
+    options: [
+      "Enalapril",
+      "Lisinopril",
+      "Losartan",
+      "Furosemide"
+    ],
     answer: 2
   },
   {
-    question: "What should be avoided in patients taking nonselective beta-blockers?",
-    options: ["Acetaminophen", "Excessive vasoconstrictors", "Antibiotics", "Local anesthesia without vasoconstrictor"],
-    answer: 1
-  },
-  {
-    question: "Which of the following is a clinical feature of malignant hypertension?",
-    options: ["Facial palsy", "Gingival hyperplasia", "Tooth mobility", "Oral lichen planus"],
-    answer: 0
-  },
-  {
-    question: "What is the first-line treatment for angina pectoris symptoms?",
-    options: ["Beta-blockers", "Calcium antagonists", "Glyceryl trinitrate", "ACE inhibitors"],
+    question: "Which of the following is a dental management recommendation for HF patients?",
+    options: [
+      "Long appointments",
+      "Use of NSAIDs",
+      "Semisupine chair position",
+      "High dose epinephrine"
+    ],
     answer: 2
   },
   {
-    question: "Which of the following is NOT a complication of myocardial infarction?",
-    options: ["Pericarditis", "Cardiogenic shock", "Improved cardiac function", "Ventricular fibrillation"],
-    answer: 2
-  },
-  {
-    question: "What is the recommended management for patients on antiplatelet therapy?",
-    options: ["Discontinue medication before dental treatment", "Use local hemostatic measures", "Avoid all dental treatment", "Use general anesthesia for all procedures"],
+    question: "Which oral condition is associated with ACE inhibitors?",
+    options: [
+      "Dry mouth",
+      "Angioedema",
+      "Gingival hyperplasia",
+      "Tooth erosion"
+    ],
     answer: 1
   },
   {
-    question: "Which gas should be avoided during conscious sedation in cardiac patients due to potential hypertension?",
-    options: ["Nitrous oxide", "Oxygen", "Carbon dioxide", "Hypoxia"],
-    answer: 3
+    question: "What is a non-cardiac cause of arrhythmia?",
+    options: [
+      "Myocardial infarction",
+      "Mitral valve disease",
+      "Fever",
+      "Cardiomyopathy"
+    ],
+    answer: 2
+  },
+  {
+    question: "Which class of antiarrhythmic drugs includes potassium channel blockers?",
+    options: [
+      "Class I",
+      "Class II",
+      "Class III",
+      "Class IV"
+    ],
+    answer: 2
+  },
+  {
+    question: "Which device can deliver a shock for arrhythmia?",
+    options: [
+      "Pacemaker",
+      "ICD",
+      "ECG",
+      "Pulse oximeter"
+    ],
+    answer: 1
+  },
+  {
+    question: "Which of the following should be avoided in patients with pacemakers?",
+    options: [
+      "Radiographs",
+      "Electrosurgery",
+      "Hand scalers",
+      "Amalgam restorations"
+    ],
+    answer: 1
+  },
+  {
+    question: "What is the safe epinephrine dose for low-risk arrhythmia patients?",
+    options: [
+      "0.018 mg",
+      "0.036 mg",
+      "0.054 mg",
+      "0.072 mg"
+    ],
+    answer: 1
+  },
+  {
+    question: "Which of the following is used for stress reduction in dental patients with arrhythmia?",
+    options: [
+      "Long afternoon appointments",
+      "Preoperative sedation",
+      "Loud music",
+      "Cold room temperature"
+    ],
+    answer: 1
   }
 ];
