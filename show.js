@@ -125,6 +125,7 @@ export const visibleLectures = {
             3,
             4
         ],
+        "3": [],
         "eight": []
     },
     "oralsurgery": {
