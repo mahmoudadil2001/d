@@ -194,7 +194,7 @@ export const lectureNames = {
     "orthodontics": {
         "1": "Introduction",
         "2": "Terminology",
-        "3": "Unknown",
+        "3": "Iatrogenic effect of orthodontic treatment",
         "4": "Unknown",
         "5": "Unknown",
         "6": "Unknown",
