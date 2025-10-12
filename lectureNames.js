@@ -163,7 +163,7 @@ export const lectureNames = {
         "1": "Hypertension",
         "2": "Heart failure",
         "3": "Infective endocarditis",
-        "4": "Unknown",
+        "4": "Diabetes mellitus",
         "5": "Unknown",
         "6": "Unknown",
         "7": "Unknown",
