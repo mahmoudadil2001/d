@@ -164,7 +164,7 @@ export const lectureNames = {
         "2": "Heart failure",
         "3": "Infective endocarditis",
         "4": "Diabetes mellitus",
-        "5": "Unknown",
+        "5": "Adrenal Insufficiency",
         "6": "Unknown",
         "7": "Unknown",
         "8": "Unknown",
