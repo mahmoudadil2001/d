@@ -1,77 +1,77 @@
 export const questions = [
   {
-    question: "What is the target hemoglobin A1c level for diabetes management?",
-    options: ["<5%", "<7%", "<9%", "<11%"],
+    question: "What is the approximate percentage of new diabetes cases that can be controlled by diet and lifestyle advice alone?",
+    options: ["25%", "50%", "75%", "10%"],
     answer: 1
   },
   {
-    question: "Which medication is considered the first-line pharmacological treatment for type 2 diabetes?",
-    options: ["Sulfonylureas", "Metformin", "Insulin", "Thiazolidinediones"],
+    question: "Which oral anti-diabetic drug is widely used as first-line therapy for type 2 diabetes and works by reducing insulin resistance?",
+    options: ["Glibenclamide", "Metformin", "Insulin", "Sulfonylurea"],
     answer: 1
   },
   {
-    question: "What is the primary mechanism of action of metformin?",
-    options: ["Stimulating insulin secretion", "Suppressing hepatic gluconeogenesis", "Increasing glucose absorption in gut", "Blocking carbohydrate digestion"],
-    answer: 1
-  },
-  {
-    question: "Which complication is NOT considered a microvascular complication of diabetes?",
-    options: ["Retinopathy", "Nephropathy", "Neuropathy", "Myocardial infarction"],
-    answer: 3
-  },
-  {
-    question: "What is the recommended caloric distribution for dinner in diabetic dietary management?",
-    options: ["15%", "20%", "30%", "35%"],
+    question: "What is a common gastrointestinal side effect of Metformin?",
+    options: ["Hypoglycemia", "Weight gain", "Diarrhea", "Hypertension"],
     answer: 2
   },
   {
-    question: "Which of the following is a symptom of neuroglycopenia during hypoglycemia?",
-    options: ["Sweating", "Trembling", "Confusion", "Hunger"],
+    question: "Sulfonylureas primarily lower blood glucose by:",
+    options: ["Reducing glucose absorption", "Promoting pancreatic insulin secretion", "Increasing insulin sensitivity", "Inhibiting hepatic gluconeogenesis"],
+    answer: 1
+  },
+  {
+    question: "Which of the following is a main adverse effect of Sulfonylureas?",
+    options: ["Weight loss", "Hypoglycemia", "Hypertension", "Improved wound healing"],
+    answer: 1
+  },
+  {
+    question: "The basic treatment for Type 1 Diabetes is:",
+    options: ["Oral Metformin", "Subcutaneous Insulin", "Lifestyle changes only", "Sulfonylureas"],
+    answer: 1
+  },
+  {
+    question: "Which type of insulin analogue allows administration immediately before, during, or after meals?",
+    options: ["Long-acting", "Intermediate-acting", "Rapid-acting", "Isophane"],
     answer: 2
   },
   {
-    question: "For which condition is insulin therapy NOT typically indicated?",
-    options: ["Type 1 diabetes", "Gestational diabetes", "Diabetic ketoacidosis", "Well-controlled type 2 diabetes with diet alone"],
+    question: "What is the earliest clinical sign of Diabetic Nephropathy?",
+    options: ["Hypertension", "Peripheral edema", "Proteinuria", "Reduced GFR"],
+    answer: 2
+  },
+  {
+    question: "Diabetic Neuropathy most commonly affects which type of nerves?",
+    options: ["Motor nerves", "Sensory nerves", "Autonomic nerves", "Cranial nerves"],
+    answer: 1
+  },
+  {
+    question: "The cardinal biochemical feature of Diabetic Ketoacidosis (DKA) includes all EXCEPT:",
+    options: ["Hyperglycemia", "Metabolic acidosis", "Hyperketonemia", "Severe hypoglycemia"],
     answer: 3
   },
   {
-    question: "What is the protein restriction recommended for diabetic patients with nephropathy?",
-    options: ["0.8 g/kg per day", "1.0 g/kg per day", "1.5 g/kg per day", "2.0 g/kg per day"],
+    question: "In a Hyperglycemic Hyperosmolar State, blood glucose is typically:",
+    options: ["< 200 mg/dL", "> 600 mg/dL", "Normal", "Slightly elevated"],
+    answer: 1
+  },
+  {
+    question: "What is the blood glucose level that defines hypoglycemia?",
+    options: ["< 63 mg/dL", "> 200 mg/dL", "> 126 mg/dL", "< 100 mg/dL"],
     answer: 0
   },
   {
-    question: "Which oral complication is associated with diabetes?",
-    options: ["Reduced caries incidence", "Improved wound healing", "Xerostomia", "Decreased fungal infections"],
-    answer: 2
-  },
-  {
-    question: "What is the first step in managing diabetic ketoacidosis?",
-    options: ["Insulin administration", "Potassium replacement", "Bicarbonate therapy", "Rehydration with isotonic saline"],
-    answer: 3
-  },
-  {
-    question: "Which of the following is NOT an advantage of exercise in diabetes management?",
-    options: ["Lowers blood glucose", "Improves insulin resistance", "Increases appetite significantly", "Helps weight control"],
-    answer: 2
-  },
-  {
-    question: "What is the diagnostic criteria for hypoglycemia?",
-    options: ["Blood glucose < 100 mg/dL", "Blood glucose < 83 mg/dL", "Blood glucose < 63 mg/dL", "Blood glucose < 43 mg/dL"],
-    answer: 2
-  },
-  {
-    question: "Which medication is associated with metallic taste as a side effect?",
-    options: ["Sulfonylureas", "Metformin", "Insulin", "Thiazolidinediones"],
+    question: "Which of the following is a symptom of neuroglycopenia?",
+    options: ["Sweating", "Confusion", "Trembling", "Palpitations"],
     answer: 1
   },
   {
-    question: "What is the primary physiological defense against hypoglycemia in non-diabetics?",
-    options: ["Increased insulin secretion", "Suppression of endogenous insulin release", "Decreased glucagon release", "Reduced catecholamine production"],
-    answer: 1
+    question: "For a severe hypoglycemic event where the patient is unconscious, what is the appropriate initial treatment?",
+    options: ["Oral glucose drink", "Complex carbohydrate snack", "IV dextrose or IM glucagon", "Wait for symptoms to resolve"],
+    answer: 2
   },
   {
-    question: "Which type of insulin therapy is recommended for most people with type 1 diabetes?",
-    options: ["Once daily long-acting insulin", "Multiple daily insulin injections", "Oral insulin tablets", "Weekly insulin injections"],
+    question: "Which oral complication is associated with Metformin use?",
+    options: ["Xerostomia", "Metallic taste", "Burning mouth", "Paresthesias"],
     answer: 1
   }
 ];
