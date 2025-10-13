@@ -3,7 +3,7 @@ function showContactUsModal() {
     { name: "محمود عادل", username: "@io_620", link: "https://t.me/io_620", visible: true },
     { name: "محمد قاسم", username: "@m1_qc", link: "https://t.me/m1_qc", visible: true },
     { name: "حيدر ساجد", username: "@itishaider", link: "https://t.me/itishaider", visible: true },
-    { name: "سعيد عمر", username: "@saeed_3", link: "https://t.me/saeed_3", visible: false },
+    { name: "زيد حسين", username: "@W5_h6", link: "https://t.me/@W5_h6", visible: true },
     { name: "ليلى حسن", username: "@layla_4", link: "https://t.me/layla_4", visible: false },
     { name: "محمد جاسم", username: "@mohammed_5", link: "https://t.me/mohammed_5", visible: false },
     { name: "نور عبد", username: "@noor_6", link: "https://t.me/noor_6", visible: false },
