@@ -1,77 +1,77 @@
 export const questions = [
   {
-    question: "What is the target preprandial capillary plasma glucose range?",
-    options: ["50-90 mg/dL", "70-130 mg/dL", "100-150 mg/dL", "130-180 mg/dL"],
-    answer: 1
-  },
-  {
-    question: "Which oral hypoglycemic agent works primarily by stimulating insulin release from beta cells?",
-    options: ["Biguanides", "Sulfonylureas", "Thiazolidinediones", "Alpha-glucosidase inhibitors"],
-    answer: 1
-  },
-  {
-    question: "What is the recommended protein intake for adults with diabetes without nephropathy?",
-    options: ["0.5-0.8 g/kg per day", "1.0-1.5 g/kg per day", "1.8-2.2 g/kg per day", "2.5-3.0 g/kg per day"],
-    answer: 1
-  },
-  {
-    question: "Which complication is characterized by abnormal blood vessel proliferation in the retina?",
-    options: ["Non-proliferative retinopathy", "Proliferative retinopathy", "Macular edema", "Cataracts"],
-    answer: 1
-  },
-  {
-    question: "What percentage of total calories should come from fat in diabetic diets?",
-    options: ["10%", "20%", "30%", "40%"],
+    question: "Which dietary component is encouraged for people with diabetes due to its low glycemic index?",
+    options: ["White bread", "Sugary drinks", "Basmati rice", "Potato chips"],
     answer: 2
   },
   {
-    question: "Which of the following is NOT a typical symptom of autonomic nervous system activation during hypoglycemia?",
-    options: ["Sweating", "Trembling", "Confusion", "Hunger"],
-    answer: 2
-  },
-  {
-    question: "In which condition is metformin contraindicated?",
-    options: ["Hypertension", "Renal insufficiency", "Hyperlipidemia", "Obesity"],
+    question: "Why is weight management particularly important in Type 2 Diabetes?",
+    options: ["It cures diabetes", "Many anti-diabetic drugs cause weight gain", "It prevents all complications", "It replaces the need for medication"],
     answer: 1
   },
   {
-    question: "What is the earliest sign of diabetic nephropathy?",
-    options: ["Elevated blood urea nitrogen", "Increased serum creatinine", "Proteinuria", "Hematuria"],
-    answer: 2
-  },
-  {
-    question: "Which gastrointestinal problem can result from autonomic neuropathy in diabetes?",
-    options: ["Increased gastric emptying", "Improved nutrient absorption", "Delayed gastric emptying", "Reduced acid secretion"],
-    answer: 2
-  },
-  {
-    question: "What is the treatment for severe hypoglycemia in a semiconscious patient?",
-    options: ["Oral glucose drink", "Complex carbohydrate snack", "IV dextrose or IM glucagon", "Subcutaneous insulin"],
-    answer: 2
-  },
-  {
-    question: "Which of the following is a macrovascular complication of diabetes?",
-    options: ["Retinopathy", "Nephropathy", "Neuropathy", "Stroke"],
-    answer: 3
-  },
-  {
-    question: "What is the recommended caloric intake for an adult with average activity level?",
-    options: ["25 kcal/kg", "35 kcal/kg", "45 kcal/kg", "55 kcal/kg"],
+    question: "Metformin is considered a potent blood glucose-lowering treatment that:",
+    options: ["Causes significant hypoglycemia", "Does not cause hypoglycemia", "Is only for Type 1 diabetes", "Is used as a last resort"],
     answer: 1
   },
   {
-    question: "Which class of drugs for type 2 diabetes is associated with weight gain and increased appetite?",
-    options: ["Biguanides", "Sulfonylureas", "GLP-1 receptor agonists", "SGLT2 inhibitors"],
-    answer: 1
-  },
-  {
-    question: "What is the primary defect in type 1 diabetes?",
-    options: ["Insulin resistance", "Beta cell dysfunction", "Autoimmune destruction of beta cells", "Hepatic insulin overproduction"],
+    question: "The usual maintenance dose of Metformin is:",
+    options: ["500 mg once daily", "250 mg twice daily", "1 g twice daily", "2 g once daily"],
     answer: 2
   },
   {
-    question: "Which of the following is NOT a component of diabetic ketoacidosis diagnosis?",
-    options: ["Hyperglycemia", "Ketone bodies in urine and blood", "Arterial pH < 7.35", "Hyponatremia"],
-    answer: 3
+    question: "Sulfonylureas are often added to Metformin when:",
+    options: ["Metformin causes side effects", "Glycemia is inadequately controlled on Metformin alone", "The patient has Type 1 diabetes", "The patient is underweight"],
+    answer: 1
+  },
+  {
+    question: "Insulin concentration in most available formulations is standardized at:",
+    options: ["50 U/mL", "100 U/mL", "200 U/mL", "500 U/mL"],
+    answer: 1
+  },
+  {
+    question: "Once absorbed into the blood, the half-life of insulin is:",
+    options: ["Several hours", "About 1 hour", "Just a few minutes", "24 hours"],
+    answer: 2
+  },
+  {
+    question: "Which microvascular complication is characterized by abnormal blood vessel proliferation in the retina?",
+    options: ["Nephropathy", "Neuropathy", "Proliferative Retinopathy", "Macular Degeneration"],
+    answer: 2
+  },
+  {
+    question: "Autonomic neuropathy can lead to:",
+    options: ["Improved gastric emptying", "Postural hypotension", "Increased pain perception", "Hyperactive bladder"],
+    answer: 1
+  },
+  {
+    question: "Diabetic Ketoacidosis (DKA) is characteristic of which type of diabetes?",
+    options: ["Type 2 only", "Type 1 primarily", "Gestational diabetes", "Pre-diabetes"],
+    answer: 1
+  },
+  {
+    question: "A prominent clinical feature of DKA is:",
+    options: ["Skin flushing and hydration", "Salt and water depletion", "Bradycardia", "Hypertension"],
+    answer: 1
+  },
+  {
+    question: "In non-diabetics, which hormone's release is increased during hypoglycemia?",
+    options: ["Insulin", "Glucagon", "Estrogen", "Thyroxine"],
+    answer: 1
+  },
+  {
+    question: "Symptoms like sweating and trembling during hypoglycemia are due to:",
+    options: ["Neuroglycopenia", "Activation of the autonomic nervous system", "Liver failure", "Dehydration"],
+    answer: 1
+  },
+  {
+    question: "For mild hypoglycemia, what is the recommended initial self-treatment?",
+    options: ["A complex carbohydrate snack only", "10-15g of fast-acting carbohydrate", "Immediate insulin injection", "Drinking water"],
+    answer: 1
+  },
+  {
+    question: "What dental procedure should be deferred until periodontal disease is well controlled in diabetic patients?",
+    options: ["Routine cleaning", "Orthodontic and prosthodontic care", "Oral hygiene instruction", "Radiographs"],
+    answer: 1
   }
 ];
