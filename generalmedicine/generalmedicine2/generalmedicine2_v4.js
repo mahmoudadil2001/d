@@ -1,77 +1,77 @@
 export const questions = [
   {
-    question: "Which of the following is NOT a goal of diabetes management?",
-    options: ["Maintain hemoglobin A1c < 7%", "Achieve normoglycemia or near normoglycemia", "Eliminate all carbohydrates from diet", "Reduce acute and chronic complications"],
+    question: "Which professional should people with diabetes have access to for nutritional advice?",
+    options: ["Cardiologist", "Dermatologist", "Dietitian", "Neurologist"],
     answer: 2
   },
   {
-    question: "What is the mechanism of action of sulfonylureas?",
-    options: ["Suppress hepatic gluconeogenesis", "Stimulate insulin release from beta cells", "Increase peripheral glucose uptake", "Delay carbohydrate absorption"],
+    question: "Metformin is increasingly used as an adjunct to insulin therapy in which group of patients?",
+    options: ["Underweight Type 2 diabetics", "Obese patients with Type 1 diabetes", "Children with gestational diabetes", "Elderly patients with no comorbidities"],
     answer: 1
   },
   {
-    question: "Which complication of diabetes affects the kidneys?",
-    options: ["Retinopathy", "Nephropathy", "Neuropathy", "Cardiomyopathy"],
+    question: "Sulfonylureas can cause hypoglycemia because they:",
+    options: ["Increase insulin sensitivity", "Cause unregulated insulin secretion", "Slow gastric emptying", "Block glucose absorption"],
     answer: 1
   },
   {
-    question: "What is the recommended snack pattern in diabetic dietary management?",
-    options: ["No snacks between meals", "Midmorning and midafternoon snacks", "Only late evening snack", "Snacks every hour"],
+    question: "The rate of absorption of subcutaneously injected insulin can be influenced by:",
+    options: ["The patient's eye color", "The injection site and skin temperature", "The patient's height", "The time of day only"],
     answer: 1
   },
   {
-    question: "Which of the following is a symptom of autonomic neuropathy?",
-    options: ["Improved bladder control", "Postural hypotension", "Increased gastric emptying", "Enhanced cardiac function"],
+    question: "Pen injectors have largely replaced:",
+    options: ["Insulin pumps", "Disposable plastic syringes", "Oral medications", "Blood glucose meters"],
     answer: 1
   },
   {
-    question: "What is the maximum recommended daily dose of metformin?",
-    options: ["500-1000 mg", "1000-1500 mg", "1500-2000 mg", "2000-2550 mg"],
-    answer: 3
-  },
-  {
-    question: "Which treatment is NOT recommended for most patients with diabetic ketoacidosis?",
-    options: ["Rehydration with isotonic saline", "Potassium replacement", "Bicarbonate therapy", "Insulin therapy"],
+    question: "The earliest retinal changes in diabetic retinopathy are classified as:",
+    options: ["Proliferative retinopathy", "Macular edema", "Non-proliferative retinopathy", "Cataract formation"],
     answer: 2
   },
   {
-    question: "What is the primary benefit of exercise in diabetes management?",
-    options: ["Increases insulin resistance", "Raises blood glucose levels", "Lowers blood glucose and improves control", "Promotes weight gain"],
-    answer: 2
-  },
-  {
-    question: "Which oral complication is more common in patients with diabetes?",
-    options: ["Reduced caries incidence", "Decreased periodontal disease", "Improved wound healing", "Increased fungal infections"],
-    answer: 3
-  },
-  {
-    question: "What should follow the initial treatment of mild hypoglycemia with fast-acting carbohydrates?",
-    options: ["Immediate exercise", "Complex carbohydrate snack", "Protein-rich meal", "No additional food needed"],
+    question: "Autonomic neuropathy can cause gastrointestinal problems such as:",
+    options: ["Rapid gastric emptying", "Delayed gastric emptying", "Increased appetite", "Decreased acid production"],
     answer: 1
   },
   {
-    question: "Which diabetes management approach emphasizes individual patient preferences and characteristics?",
-    options: ["Standardized protocol for all", "Patient-centered approach", "Physician-determined only", "Insurance-driven decisions"],
-    answer: 1
-  },
-  {
-    question: "What is the earliest change in diabetic retinopathy?",
-    options: ["Proliferation of abnormal blood vessels", "Retinal detachment", "Dilation and occlusion of retinal vessels", "Vitreous hemorrhage"],
-    answer: 2
-  },
-  {
-    question: "Which of the following is a contraindication for sulfonylurea use?",
-    options: ["Hypertension", "Renal impairment", "Hyperlipidemia", "Obesity"],
-    answer: 1
-  },
-  {
-    question: "What is the recommended calorie distribution for lunch in diabetic meal planning?",
-    options: ["15%", "20%", "30%", "35%"],
-    answer: 3
-  },
-  {
-    question: "Which condition may result from diabetic autonomic neuropathy affecting the gastrointestinal system?",
-    options: ["Diarrhea and constipation", "Increased appetite", "Improved nutrient absorption", "Reduced acid production"],
+    question: "A Hyperglycemic Hyperosmolar State is characterized by:",
+    options: ["Severe hyperglycemia without significant ketoacidosis", "Severe hypoglycemia", "Mild hyperglycemia with severe acidosis", "Normal blood glucose with ketonuria"],
     answer: 0
+  },
+  {
+    question: "In DKA, management in the hospital focuses on:",
+    options: ["Adequate fluid and insulin replacement", "Oral hypoglycemic agents", "Potassium restriction", "High-protein diet"],
+    answer: 0
+  },
+  {
+    question: "People with long-standing Type 1 diabetes have impaired defense against hypoglycemia due to:",
+    options: ["Increased glucagon release", "Loss of glucagon release ability", "Overproduction of insulin", "Enhanced catecholamine response"],
+    answer: 1
+  },
+  {
+    question: "Symptoms like irritability and inability to concentrate during hypoglycemia are primarily due to:",
+    options: ["Autonomic nervous system activation", "Glucose deficiency in the brain", "Catecholamine release", "Increased glucagon"],
+    answer: 1
+  },
+  {
+    question: "For a child with severe hypoglycemia, the recommended IV dextrose dose is:",
+    options: ["75 mL of 20% dextrose", "0.2 g/kg", "1 mg glucagon", "15 g of oral glucose"],
+    answer: 1
+  },
+  {
+    question: "Diabetic neuropathy may lead to oral symptoms such as:",
+    options: ["Paresthesias and burning", "Improved taste sensation", "Increased salivation", "Faster tooth eruption"],
+    answer: 0
+  },
+  {
+    question: "Before a dental appointment, a patient on insulin should:",
+    options: ["Skip their insulin dose", "Eat a normal meal", "Fast for 12 hours", "Drink only water"],
+    answer: 1
+  },
+  {
+    question: "If a diabetic patient develops an oral infection, what might be necessary regarding their insulin?",
+    options: ["Decreased insulin dosage", "No change in insulin", "Increased insulin dosage", "Stopping insulin temporarily"],
+    answer: 2
   }
 ];
