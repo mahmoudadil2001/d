@@ -259,7 +259,7 @@ export const lectureNames = {
         "1": "Terms in periodontology",
         "2": "Periodontal ligament ",
         "3": "Cementum",
-        "4": "Unknown",
+        "4": "Alveolar process",
         "5": "Unknown",
         "6": "Unknown",
         "7": "Unknown",
