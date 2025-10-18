@@ -131,7 +131,7 @@ export const lectureNames = {
         "1": "Biopsy (Principles and techniques)",
         "2": "Dental caries",
         "3": "Disorders of dental pulp",
-        "4": "Unknown",
+        "4": "Periapical Pathology",
         "5": "Unknown",
         "6": "Unknown",
         "7": "Unknown",
