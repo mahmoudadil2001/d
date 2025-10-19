@@ -165,7 +165,7 @@ export const lectureNames = {
         "3": "Infective endocarditis",
         "4": "Diabetes mellitus",
         "5": "Adrenal Insufficiency",
-        "6": "Unknown",
+        "6": "Thyroid diseases",
         "7": "Unknown",
         "8": "Unknown",
         "9": "Unknown",
