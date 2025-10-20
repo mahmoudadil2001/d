@@ -1,77 +1,77 @@
 export const questions = [
   {
-    question: "According to Angle's classification, what is the key reference point for determining malocclusion?",
-    options: ["Maxillary canine relationship", "Mandibular first permanent molar", "Maxillary first permanent molar", "Mandibular central incisors"],
-    answer: 2
-  },
-  {
-    question: "In Angle's Class I malocclusion, where does the buccal groove of the mandibular first molar occlude?",
-    options: ["Distal to mesiobuccal cusp of maxillary first molar", "Mesial to mesiobuccal cusp of maxillary first molar", "With mesiobuccal cusp of maxillary first molar", "With distobuccal cusp of maxillary first molar"],
-    answer: 2
-  },
-  {
-    question: "Which classification is used when first permanent molars are missing?",
-    options: ["Incisor classification", "Canine classification", "Premolar classification", "Deciduous molar classification"],
+    question: "What is the primary basis for skeletal classification of malocclusion?",
+    options: ["Tooth alignment", "Relationship between upper and lower jaw bones", "Facial symmetry", "Dental arch shape"],
     answer: 1
   },
   {
-    question: "In Class II Division 1 malocclusion, what is the characteristic of maxillary incisors?",
-    options: ["Retroclined", "Proclined", "Normally inclined", "Absent"],
+    question: "Which cephalometric angle measures the anteroposterior position of the maxilla relative to the anterior cranial base?",
+    options: ["SNB angle", "ANB angle", "SNA angle", "FMA angle"],
+    answer: 2
+  },
+  {
+    question: "In Angle's classification, what defines a Class I malocclusion?",
+    options: ["Mandibular first molar buccal groove occludes distal to maxillary mesiobuccal cusp", "Mandibular first molar buccal groove occludes mesial to maxillary mesiobuccal cusp", "Mandibular first molar buccal groove occludes with maxillary mesiobuccal cusp", "There is no molar contact"],
+    answer: 2
+  },
+  {
+    question: "Which type of skeletal malocclusion results in a concave facial profile?",
+    options: ["Class I", "Class II", "Class III", "Class IV"],
+    answer: 2
+  },
+  {
+    question: "What characterizes Class II Division 2 malocclusion?",
+    options: ["Proclined maxillary incisors with increased overjet", "Retroclined maxillary central incisors with deep overbite", "Anterior open bite", "Posterior crossbite"],
     answer: 1
   },
   {
-    question: "What type of terminal plane relationship predisposes to Class III malocclusion?",
+    question: "In incisor classification, Class I is defined as:",
+    options: ["Lower incisor edges lie posterior to cingulum plateau of upper incisors", "Lower incisor edges lie anterior to cingulum plateau of upper incisors", "Lower incisor edges occlude with or below cingulum plateau of upper incisors", "No contact between upper and lower incisors"],
+    answer: 2
+  },
+  {
+    question: "What terminal plane relationship in deciduous dentition predisposes to Class II permanent molar relationship?",
+    options: ["Mesial step", "Distal step", "Flush terminal plane", "Vertical plane"],
+    answer: 1
+  },
+  {
+    question: "Which clinical finding is associated with increased lower facial height?",
+    options: ["Deep bite", "Anterior open bite", "Class II Division 2", "Crowding"],
+    answer: 1
+  },
+  {
+    question: "What is the alternative classification used when first permanent molars are missing?",
+    options: ["Premolar classification", "Canine classification", "Incisor classification", "Deciduous molar classification"],
+    answer: 1
+  },
+  {
+    question: "Which skeletal class is characterized by a retrognathic mandible or prognathic maxilla?",
+    options: ["Class I", "Class II", "Class III", "Class IV"],
+    answer: 1
+  },
+  {
+    question: "In cephalometric analysis, what does the ANB angle measure?",
+    options: ["Maxilla to cranial base relationship", "Mandible to cranial base relationship", "Maxilla to mandible relationship", "Vertical facial proportions"],
+    answer: 2
+  },
+  {
+    question: "Which type of Class II Division 2 malocclusion has all four maxillary incisors tipped palatally without crowding?",
+    options: ["Type A", "Type B", "Type C", "Type D"],
+    answer: 0
+  },
+  {
+    question: "What is the normal canine relationship in occlusion?",
+    options: ["Upper canine tip between lower canine and first premolar", "Upper canine tip between lower lateral incisor and canine", "Upper canine tip distal to lower first premolar", "Upper canine tip mesial to lower canine"],
+    answer: 0
+  },
+  {
+    question: "Which terminal plane relationship may lead to Class III permanent molar relationship?",
     options: ["Distal step", "Flush terminal plane", "Mesial step", "Vertical step"],
     answer: 2
   },
   {
-    question: "In Class III malocclusion, the mandibular first molar occludes:",
-    options: ["Posterior to normal position", "Anterior to normal position", "In normal position", "Laterally to normal position"],
-    answer: 1
-  },
-  {
-    question: "Which of the following is NOT considered in Angle's classification?",
-    options: ["Molar relationship", "Crowding", "Overjet", "All of the above"],
-    answer: 3
-  },
-  {
-    question: "In Class II Division 2 malocclusion Type B, how are the maxillary lateral incisors positioned?",
-    options: ["Tipped palatally", "Tipped labially", "Normally positioned", "Missing"],
-    answer: 1
-  },
-  {
-    question: "What is the normal canine relationship in occlusion?",
-    options: ["Tip of upper canine in embrasure between lower canine and first premolar", "Tip of upper canine distal to lower canine", "Tip of upper canine mesial to lower canine", "Tip of upper canine opposite lower first premolar"],
-    answer: 0
-  },
-  {
-    question: "In incisor classification, Class I is defined by lower incisor edges occluding with:",
-    options: ["The incisal edges of upper incisors", "The cervical third of upper incisors", "The cingulum plateau of upper incisors", "The root surface of upper incisors"],
-    answer: 2
-  },
-  {
-    question: "Which terminal plane relationship usually leads to Class I or Class II molar relationship?",
-    options: ["Distal step", "Flush terminal plane", "Mesial step", "Vertical plane"],
-    answer: 1
-  },
-  {
-    question: "In Class II malocclusion, the mandibular first molar is positioned:",
-    options: ["Mesially to normal", "Distally to normal", "Buccally to normal", "Lingually to normal"],
-    answer: 1
-  },
-  {
-    question: "What is the characteristic overjet in Class II Division 2 malocclusion?",
-    options: ["Increased", "Decreased", "Normal or average", "Reversed"],
-    answer: 2
-  },
-  {
-    question: "Which classification is considered more useful in clinical practice than Angle's classification?",
-    options: ["Canine classification", "Incisor classification", "Premolar classification", "Deciduous classification"],
-    answer: 1
-  },
-  {
-    question: "In Class III incisor relationship, the lower incisor edges lie:",
-    options: ["Posterior to cingulum plateau", "At cingulum plateau", "Anterior to cingulum plateau", "Superior to cingulum plateau"],
+    question: "In skeletal classification, what facial profile is associated with Class II malocclusion?",
+    options: ["Straight", "Concave", "Convex", "Asymmetric"],
     answer: 2
   }
 ];
