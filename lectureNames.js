@@ -34,7 +34,7 @@ export const lectureNames = {
     "generalmedicine": {
         "1": "Diabetes Mellitus",
         "2": "Management of DM",
-        "3": "WBC disorders part 2",
+        "3": "WBC disorders part 1",
         "4": "Unknown",
         "5": "Unknown",
         "6": "Unknown",
