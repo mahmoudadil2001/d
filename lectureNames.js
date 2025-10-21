@@ -226,7 +226,7 @@ export const lectureNames = {
     "pedodontics": {
         "1": "Teeth reuption",
         "2": "teeth numbering system",
-        "3": "Unknown",
+        "3": "Dental caries",
         "4": "Unknown",
         "5": "Unknown",
         "6": "Unknown",
