@@ -132,7 +132,7 @@ export const lectureNames = {
         "2": "Dental caries",
         "3": "Disorders of dental pulp",
         "4": "Periapical Pathology",
-        "5": "Unknown",
+        "5": "inflammatory diseases of bone",
         "6": "Unknown",
         "7": "Unknown",
         "8": "Unknown",
