@@ -67,7 +67,7 @@ export const lectureNames = {
         "1": "Metabolic response to injury",
         "2": "Wounds healing",
         "3": "Surgical wounds and infections",
-        "4": "Unknown",
+        "4": "Hemorrhage and blood transfusion",
         "5": "Unknown",
         "6": "Unknown",
         "7": "Unknown",
