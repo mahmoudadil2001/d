@@ -261,7 +261,7 @@ export const lectureNames = {
         "3": "Cementum",
         "4": "Alveolar process",
         "5": "Classification of periodontal diseases 1",
-        "6": "(6) Classification of periodontal diseases 2",
+        "6": "Classification of periodontal diseases 2",
         "7": "Unknown",
         "8": "Unknown",
         "9": "Unknown",
