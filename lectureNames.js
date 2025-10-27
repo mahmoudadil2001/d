@@ -291,7 +291,7 @@ export const lectureNames = {
         "1": "Osteology",
         "2": "Myology",
         "3": "Diagnosis & Treatment Plan for RPD",
-        "4": "Unknown",
+        "4": "Mouth Preparation for RPD",
         "5": "Unknown",
         "6": "Unknown",
         "7": "Unknown",
