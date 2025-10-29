@@ -98,7 +98,7 @@ export const lectureNames = {
     "operative": {
         "1": "Assessment, Diagnosis, Treatment Planning",
         "2": " Assessment, Diagnosis, Treatment Planning 2",
-        "3": "Unknown",
+        "3": "Biologic Consideration of Enamel",
         "4": "Unknown",
         "5": "Unknown",
         "6": "Unknown",
