@@ -1,77 +1,77 @@
 export const questions = [
   {
-    question: "Fibro-osseous lesions are characterized microscopically by:",
-    options: ["Fibrous stroma containing bone/cementum-like material", "Cartilaginous tissue with bone formation", "Purely cystic structures with fibrous walls", "Malignant osteoid production"],
-    answer: 0
-  },
-  {
-    question: "Which of the following is NOT considered a fibro-osseous lesion?",
-    options: ["Osteosarcoma", "Fibrous dysplasia", "Ossifying fibroma", "Cemento-osseous dysplasia"],
-    answer: 0
-  },
-  {
-    question: "The mutation responsible for Fibrous Dysplasia occurs in which gene?",
-    options: ["TP53", "GNAS1", "RB1", "EGFR"],
+    question: "Which characteristic is essential for diagnosing fibro-osseous lesions?",
+    options: ["Serum alkaline phosphatase levels", "Clinical, radiographic, and histopathologic correlation", "Genetic testing only", "Response to antibiotic therapy"],
     answer: 1
   },
   {
-    question: "McCune-Albright syndrome includes all EXCEPT:",
-    options: ["Multiple ossifying fibromas", "Polyostotic fibrous dysplasia", "Café-au-lait macules", "Endocrine abnormalities"],
-    answer: 0
-  },
-  {
-    question: "The classic radiographic appearance of Fibrous Dysplasia is described as:",
-    options: ["Sunburst", "Onion-skin", "Ground-glass", "Soap-bubble"],
+    question: "Monostotic Fibrous Dysplasia accounts for approximately what percentage of cases?",
+    options: ["30%", "50%", "80%", "10%"],
     answer: 2
   },
   {
-    question: "Which laboratory finding is typical in monostotic Fibrous Dysplasia?",
-    options: ["Elevated alkaline phosphatase", "Normal serum calcium and alkaline phosphatase", "Decreased serum phosphorus", "Hypercalcemia"],
-    answer: 1
-  },
-  {
-    question: "Histologically, bone trabeculae in Fibrous Dysplasia resemble:",
-    options: ["Paget's mosaic", "Chinese characters", "Reversal lines", "Howship's lacunae"],
-    answer: 1
-  },
-  {
-    question: "Malignant transformation in Fibrous Dysplasia is most associated with:",
-    options: ["Monostotic form", "Craniofacial form", "Polyostotic form", "Jaffe-Lichtenstein syndrome"],
+    question: "In Fibrous Dysplasia, mutation occurring during postnatal life typically results in:",
+    options: ["Multiple bone lesions", "McCune-Albright syndrome", "Single bone involvement", "Jaffe-Lichtenstein syndrome"],
     answer: 2
   },
   {
-    question: "Ossifying Fibroma is considered a:",
-    options: ["Reactive lesion", "Developmental anomaly", "True neoplasm", "Inflammatory process"],
+    question: "Fibrous Dysplasia most commonly affects which jaw bone?",
+    options: ["Mandible", "Both equally", "Maxilla", "Zygoma only"],
     answer: 2
   },
   {
-    question: "The most common radiographic feature of Ossifying Fibroma is:",
-    options: ["Ill-defined margins blending with normal bone", "Well-circumscribed, sharply demarcated border", "Sunburst periosteal reaction", "Moth-eaten appearance"],
-    answer: 1
-  },
-  {
-    question: "Cemento-osseous dysplasia includes all EXCEPT:",
-    options: ["Periapical granuloma", "Focal COD", "Florid COD", "Periapical COD"],
-    answer: 0
-  },
-  {
-    question: "Periapical COD is differentiated from periapical granuloma by:",
-    options: ["Radiographic size", "Pain intensity", "Vitality test", "Tooth mobility"],
+    question: "Radiographically, Fibrous Dysplasia lesions are characterized by:",
+    options: ["Sharp, sclerotic borders", "Cortical destruction", "Poorly defined margins blending into normal bone", "Pathologic fractures"],
     answer: 2
   },
   {
-    question: "Florid COD shows predilection for:",
-    options: ["Asian males", "Caucasian children", "Black females", "Hispanic elderly"],
+    question: "Histologically, bone trabeculae in Fibrous Dysplasia show:",
+    options: ["Prominent osteoblastic rimming", "Numerous osteoclasts", "No osteoblastic rimming", "Cartilaginous caps"],
     answer: 2
   },
   {
-    question: "The treatment for asymptomatic Cemento-osseous Dysplasia is typically:",
-    options: ["Surgical excision", "Radiation therapy", "No treatment", "Chemotherapy"],
+    question: "The treatment for small, asymptomatic Fibrous Dysplasia lesions is usually:",
+    options: ["Surgical recontouring", "Radiation therapy", "No treatment", "Chemotherapy"],
     answer: 2
   },
   {
-    question: "Florid COD may become complicated by:",
-    options: ["Osteosarcoma", "Metastasis", "Osteomyelitis", "Fibrosarcoma"],
+    question: "Ossifying Fibroma originates from stem cells in the:",
+    options: ["Dental pulp", "Oral epithelium", "Periodontal ligament", "Salivary glands"],
     answer: 2
+  },
+  {
+    question: "Ossifying Fibroma typically occurs in which decades of life?",
+    options: ["1st and 2nd decades", "5th and 6th decades", "3rd and 4th decades", "7th and 8th decades"],
+    answer: 2
+  },
+  {
+    question: "The WHO classification uses which term for Ossifying Fibroma?",
+    options: ["Cementifying fibroma", "Fibro-osseous lesion", "Ossifying fibroma", "Cemento-ossifying fibroma"],
+    answer: 3
+  },
+  {
+    question: "Periapical COD initially appears radiographically as:",
+    options: ["Dense radiopacity", "Mixed lesion", "Periapical lucency", "Ground-glass appearance"],
+    answer: 2
+  },
+  {
+    question: "Focal COD most commonly involves the:",
+    options: ["Anterior maxilla", "Maxillary sinus", "Posterior mandible", "Condylar process"],
+    answer: 2
+  },
+  {
+    question: "Florid COD typically affects:",
+    options: ["Single quadrant only", "Maxilla only", "Mandible only", "All four quadrants"],
+    answer: 3
+  },
+  {
+    question: "In mature COD, the histologic appearance shows:",
+    options: ["Highly cellular fibrous tissue", "Malignant osteoid", "Cartilaginous islands", "Solid sclerotic masses of bone/cementum"],
+    answer: 3
+  },
+  {
+    question: "Patients with Florid COD should maintain good oral hygiene to prevent:",
+    options: ["Malignant transformation", "Tooth loss", "Facial deformity", "Osteomyelitis"],
+    answer: 3
   }
 ];
