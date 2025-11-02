@@ -292,7 +292,7 @@ export const lectureNames = {
         "2": "Myology",
         "3": "Diagnosis & Treatment Plan for RPD",
         "4": "Mouth Preparation for RPD",
-        "5": "Unknown",
+        "5": "Impression for RPD",
         "6": "Unknown",
         "7": "Unknown",
         "8": "Unknown",
