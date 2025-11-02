@@ -228,7 +228,7 @@ export const lectureNames = {
         "2": "teeth numbering system",
         "3": "Dental caries",
         "4": "Rampant caries",
-        "5": "Unknown",
+        "5": "Morphology of primary teeth",
         "6": "Unknown",
         "7": "Unknown",
         "8": "Unknown",
