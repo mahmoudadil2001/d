@@ -1,77 +1,77 @@
 export const questions = [
   {
-    question: "What is the shape of the primary mandibular first molar from the occlusal aspect?",
-    options: ["Rectangular", "Square", "Rhomboidal", "Oval"],
+    question: "Which growth theory has been largely discarded since the 1960s?",
+    options: ["Cartilage theory", "Functional Matrix Theory", "Bone theory", "All theories are equally accepted"],
     answer: 2
   },
   {
-    question: "The primary maxillary second molar has how many well-developed cusps?",
-    options: ["2", "3", "4", "5"],
+    question: "Why is treatment timing important in relation to growth spurts?",
+    options: ["It has no significance", "Treatment effectiveness can be enhanced", "Growth spurts indicate treatment should stop", "It only affects surgical cases"],
+    answer: 1
+  },
+  {
+    question: "Which growth pattern involves tissues proliferating beyond adult amount then undergoing involution?",
+    options: ["Neural growth", "Somatic growth", "Lymphoid growth", "Genital growth"],
     answer: 2
   },
   {
-    question: "Which primary tooth has a root that is longer and more slender compared to crown size?",
-    options: ["Maxillary incisor", "Mandibular molar", "Maxillary canine", "All primary teeth"],
+    question: "What can dentists identify through knowledge of facial growth?",
+    options: ["Only dental caries", "Abnormal skeletal growth patterns", "Systemic diseases only", "Nutritional deficiencies"],
     answer: 1
   },
   {
-    question: "The primary maxillary first molar's roots are:",
-    options: ["Fused", "Thin and widely spread", "Short and thick", "Non-existent"],
+    question: "At birth, what proportion of total body length do the legs represent?",
+    options: ["One-half", "One-third", "One-quarter", "Two-thirds"],
     answer: 1
   },
   {
-    question: "The lingual surface of the primary maxillary canine has:",
-    options: ["No cingulum", "A poorly developed cingulum", "A well-developed cingulum", "Multiple cusps"],
-    answer: 2
-  },
-  {
-    question: "Root formation in primary teeth is initiated by:",
-    options: ["Ameloblasts", "Hertwig's epithelial root sheath", "Cementoblasts", "Odontoblasts"],
+    question: "Which theory proposes that cartilage is the primary determinant of skeletal growth?",
+    options: ["Bone theory", "Cartilage theory", "Functional Matrix Theory", "Matrix dominance theory"],
     answer: 1
   },
   {
-    question: "Which primary tooth has a prominent mesiobuccal cervical ridge?",
-    options: ["Maxillary central incisor", "Mandibular first molar", "Maxillary first molar", "Mandibular canine"],
-    answer: 1
-  },
-  {
-    question: "The primary mandibular second molar usually has how many canals?",
-    options: ["1", "2", "3", "4"],
-    answer: 2
-  },
-  {
-    question: "Primary teeth have ______ sensitivity to pain compared to permanent teeth.",
-    options: ["Increased", "Decreased", "The same", "No"],
-    answer: 1
-  },
-  {
-    question: "The primary maxillary central incisor's root is:",
-    options: ["Flattened", "Conical", "Bifurcated", "Curved"],
-    answer: 1
-  },
-  {
-    question: "Which cusp is the largest on the primary mandibular first molar?",
-    options: ["Distobuccal", "Mesiobuccal", "Mesiolingual", "Distolingual"],
-    answer: 2
-  },
-  {
-    question: "The primary dentition has how many teeth?",
-    options: ["20", "24", "28", "32"],
+    question: "What is the growth pattern where facial structures grow downward and forward away from cranium?",
+    options: ["Cephalocaudal gradient", "Uniform growth", "Reverse gradient", "Circular growth"],
     answer: 0
   },
   {
-    question: "The primary maxillary first molar's occlusal surface is:",
-    options: ["Triangular", "Rectangular", "Square", "Round"],
+    question: "When is the pubertal growth spurt typically observed in boys?",
+    options: ["11 years", "13 years", "8 years", "17 years"],
     answer: 1
   },
   {
-    question: "Which primary tooth often has a fifth cusp (tubercle of Carabelli)?",
-    options: ["Maxillary first molar", "Maxillary second molar", "Mandibular second molar", "Maxillary canine"],
+    question: "Which growth curve shows nearly complete growth by 6-7 years of age?",
+    options: ["Genital tissues", "Neural tissues", "Lymphoid tissues", "Somatic tissues"],
     answer: 1
   },
   {
-    question: "The primary mandibular canine is ______ than the maxillary canine.",
-    options: ["Larger", "Smaller mesiodistally", "Longer", "Wider"],
+    question: "What aspect of genetic control differs among the three major growth theories?",
+    options: ["Whether genetic control exists", "The location where genetic control is expressed", "The timing of genetic expression", "The strength of genetic control"],
     answer: 1
+  },
+  {
+    question: "What is considered a disadvantage in treatment of skeletal Class III?",
+    options: ["Maxilla grows more than mandible", "Mandible grows more and later than maxilla", "Both grow equally", "No growth occurs"],
+    answer: 1
+  },
+  {
+    question: "What percentage of total body length does the head represent in fetal life?",
+    options: ["30%", "12%", "50%", "70%"],
+    answer: 2
+  },
+  {
+    question: "Which facial bone has a growth pattern closer to neural growth?",
+    options: ["Mandible", "Maxilla", "Both have similar patterns", "Zygomatic bone"],
+    answer: 1
+  },
+  {
+    question: "How do facial proportions change from childhood to adulthood?",
+    options: ["Face becomes relatively smaller", "Face becomes relatively larger", "No change occurs", "Cranium grows faster"],
+    answer: 1
+  },
+  {
+    question: "According to Moss's theory, what would be the effect of losing mandibular condylar cartilage?",
+    options: ["Complete growth cessation", "Severe growth disturbance", "Little effect if proper function maintained", "Immediate facial deformity"],
+    answer: 2
   }
 ];
