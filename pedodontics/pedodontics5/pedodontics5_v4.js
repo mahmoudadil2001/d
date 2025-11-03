@@ -1,77 +1,77 @@
 export const questions = [
   {
-    question: "Which theory of craniofacial growth is considered most acceptable today?",
-    options: ["Bone theory", "Cartilage theory", "Functional Matrix Theory", "Hybrid theory"],
+    question: "What is the distinguishing feature of the primary maxillary second molar's occlusal surface?",
+    options: ["Lack of fossae", "Absence of grooves", "Prominent oblique ridge", "Single central pit"],
     answer: 2
   },
   {
-    question: "What is the clinical importance of identifying when facial growth is completed?",
-    options: ["For planning dental fillings", "For orthognathic surgery timing", "For fluoride treatment", "For dental prophylaxis"],
+    question: "Which cusp is poorly developed on the primary maxillary first molar?",
+    options: ["Mesiolingual cusp", "Mesiobuccal cusp", "Distolingual cusp", "Distobuccal cusp"],
+    answer: 2
+  },
+  {
+    question: "How does the buccal outline appear on the primary maxillary first molar from mesial aspect?",
+    options: ["Concave throughout", "Convex in cervical third", "Straight from cervical ridge to occlusal", "S-shaped curve"],
+    answer: 2
+  },
+  {
+    question: "What is the root morphology of primary mandibular first molar?",
+    options: ["Fused single root", "Thin widely separated roots", "Short convergent roots", "Thick parallel roots"],
     answer: 1
   },
   {
-    question: "Which growth pattern shows rapid acceleration at puberty after childhood slowing?",
-    options: ["Lymphoid pattern", "Neural pattern", "Somatic pattern", "Genital pattern"],
-    answer: 2
+    question: "Which primary tooth has a mesial marginal ridge located more occlusally than distal marginal ridge?",
+    options: ["Maxillary first molar", "Mandibular first molar", "Maxillary central incisor", "Mandibular canine"],
+    answer: 1
   },
   {
-    question: "How can malocclusions result from skeletal discrepancies?",
-    options: ["Due to differences in comparative jaw growth", "Due to tooth size only", "Due to dental caries", "Due to oral habits only"],
+    question: "What is the shape of the pulp chamber in primary teeth?",
+    options: ["Follows the surface of the crown", "Random and unpredictable", "Always round", "Square shaped"],
     answer: 0
   },
   {
-    question: "In the adult, what percentage of total body length does the head represent?",
-    options: ["50%", "30%", "12%", "25%"],
-    answer: 2
-  },
-  {
-    question: "Who proposed the Functional Matrix Theory of growth?",
-    options: ["Scammon", "Moss", "Bjork", "Ricketts"],
-    answer: 1
-  },
-  {
-    question: "What does the cephalocaudal gradient explain about growth?",
-    options: ["Growth proceeds from head to feet", "Growth is uniform throughout body", "Lower limbs grow before upper limbs", "Facial growth precedes cranial growth"],
+    question: "How many root canals are typically found in primary maxillary canines?",
+    options: ["One", "Two", "Three", "Four"],
     answer: 0
   },
   {
-    question: "When is the mixed dentition period particularly advantageous for treatment?",
-    options: ["For all orthodontic treatments", "For treatment of skeletal discrepancies during growth spurt", "Only for surgical cases", "For retention planning only"],
-    answer: 1
-  },
-  {
-    question: "Which tissues follow Scammon's neural growth curve?",
-    options: ["Reproductive organs", "Lymph nodes and tonsils", "Brain and calvarium", "Long bones and muscles"],
-    answer: 2
-  },
-  {
-    question: "What is the fundamental disagreement among the three major growth theories?",
-    options: ["The existence of growth patterns", "The location of genetic control expression", "The importance of orthodontic treatment", "The role of nutrition in growth"],
-    answer: 1
-  },
-  {
-    question: "Why might posterior rotational growth of the mandible be problematic?",
-    options: ["It may lead to skeletal open bite", "It improves Class II malocclusion", "It enhances facial aesthetics", "It accelerates dental development"],
+    question: "What percentage of primary mandibular incisors have two canals?",
+    options: ["Less than 10%", "25-35%", "50-60%", "75-85%"],
     answer: 0
   },
   {
-    question: "What proportion of total body length do legs represent at birth?",
-    options: ["One-half", "One-third", "One-quarter", "Two-thirds"],
+    question: "Which primary tooth has the largest pulp chambers?",
+    options: ["Maxillary molars", "Mandibular molars", "Maxillary incisors", "Mandibular incisors"],
     answer: 1
   },
   {
-    question: "Which jaw bone more closely follows the somatic growth pattern?",
-    options: ["Maxilla", "Mandible", "Both follow neural pattern", "Neither follows somatic pattern"],
+    question: "What is the first primary tooth to erupt into the oral cavity?",
+    options: ["Maxillary central incisor", "Mandibular central incisor", "Maxillary first molar", "Mandibular first molar"],
     answer: 1
   },
   {
-    question: "How does the infant's skull compare proportionally to an adult's?",
-    options: ["Larger cranium and smaller face", "Smaller cranium and larger face", "Same proportions", "More developed facial structures"],
+    question: "How do the roots of primary anterior teeth compare mesiodistally to permanent teeth?",
+    options: ["Wider mesiodistally", "Narrower mesiodistally", "Same width", "No consistent pattern"],
+    answer: 1
+  },
+  {
+    question: "What is present under each cusp in primary teeth?",
+    options: ["Pulp horn", "Enamel pearl", "Cementum bulge", "Dentin island"],
     answer: 0
   },
   {
-    question: "According to Functional Matrix Theory, what controls craniofacial growth?",
-    options: ["Genetic expression in bone", "Cartilage proliferation", "Soft tissue functional needs", "Hormonal factors only"],
-    answer: 2
+    question: "Which primary tooth has a prominent mesiobuccal angle that is acute?",
+    options: ["Maxillary first molar", "Mandibular first molar", "Maxillary second molar", "Mandibular second molar"],
+    answer: 1
+  },
+  {
+    question: "What is the sensitivity to pain like in primary teeth compared to permanent teeth?",
+    options: ["Increased sensitivity", "Reduced sensitivity", "Same sensitivity", "No nerve supply"],
+    answer: 1
+  },
+  {
+    question: "How many teeth are present in the complete primary dentition?",
+    options: ["16", "20", "24", "28"],
+    answer: 1
   }
 ];
