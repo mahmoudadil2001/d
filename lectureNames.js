@@ -196,7 +196,7 @@ export const lectureNames = {
         "2": "Terminology",
         "3": "Iatrogenic effect of orthodontic treatment",
         "4": "Classification of Malocclusion",
-        "5": "Unknown",
+        "5": "growth and development",
         "6": "Unknown",
         "7": "Unknown",
         "8": "Unknown",
