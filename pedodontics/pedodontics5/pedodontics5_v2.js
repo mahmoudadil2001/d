@@ -1,77 +1,77 @@
 export const questions = [
   {
-    question: "Which theory of craniofacial growth proposes that genetic control is mediated outside the skeletal system?",
-    options: ["Bone theory", "Cartilage theory", "Functional Matrix Theory", "Periodontal theory"],
-    answer: 2
-  },
-  {
-    question: "What is the advantage of the mandible growing more and later than the maxilla?",
-    options: ["Beneficial for Class III treatment", "Beneficial for Class II treatment", "Makes no difference in treatment", "Complicates all treatments"],
+    question: "What is prominent on the buccal surface of primary mandibular molars in the cervical third?",
+    options: ["Developmental groove", "Cervical ridge", "Vertical depression", "Horizontal ridge"],
     answer: 1
   },
   {
-    question: "Which growth pattern is characterized by an S-shaped curve with acceleration at puberty?",
-    options: ["Lymphoid growth", "Genital growth", "Neural growth", "Somatic growth"],
+    question: "Which cusp is most prominent on the primary maxillary first molar?",
+    options: ["Distobuccal cusp", "Mesiolingual cusp", "Distolingual cusp", "Mesiobuccal cusp"],
+    answer: 1
+  },
+  {
+    question: "How many roots does the primary maxillary first molar have?",
+    options: ["One", "Two", "Three", "Four"],
+    answer: 2
+  },
+  {
+    question: "What is the shape of the primary maxillary central incisor's crown from labial view?",
+    options: ["Wider mesiodistally than cervicoincisally", "Wider cervicoincisally than mesiodistally", "Square shaped", "Round shaped"],
+    answer: 0
+  },
+  {
+    question: "Which angle is rounded on the primary maxillary central incisor?",
+    options: ["Mesioincisal angle", "Distoincisal angle", "Both angles are sharp", "Both angles are rounded"],
+    answer: 1
+  },
+  {
+    question: "What is unique about the root formation of primary teeth?",
+    options: ["Roots don't form completely", "Resorption begins shortly after root completion", "Roots continue growing throughout life", "Roots fuse together"],
+    answer: 1
+  },
+  {
+    question: "Which primary tooth has an oblique ridge connecting mesiolingual and distobuccal cusps?",
+    options: ["Mandibular first molar", "Maxillary first molar", "Mandibular second molar", "Maxillary second molar"],
+    answer: 1
+  },
+  {
+    question: "What percentage of maxillary second primary molars have bifurcated mesiofacial roots?",
+    options: ["25-35%", "50-60%", "75-85%", "85-95%"],
     answer: 3
   },
   {
-    question: "Why might poorly timed extractions during growth have unfortunate consequences?",
-    options: ["They always improve occlusion", "They affect the developing occlusion", "They have no effect on growth", "They only affect dental caries"],
+    question: "How do primary molar roots flare compared to permanent teeth?",
+    options: ["Flare less at apex", "Flare more as they approach apex", "No flaring occurs", "Flare only mesiodistally"],
     answer: 1
   },
   {
-    question: "In adults, what percentage of total body length do the legs represent?",
-    options: ["One-third", "One-half", "One-quarter", "Two-thirds"],
+    question: "Which primary tooth does NOT resemble any permanent tooth?",
+    options: ["Maxillary second molar", "Mandibular first molar", "Maxillary canine", "Mandibular central incisor"],
     answer: 1
   },
   {
-    question: "Which theory suggests that bone is the primary determinant of its own growth?",
-    options: ["Bone theory", "Cartilage theory", "Functional Matrix Theory", "Soft tissue theory"],
-    answer: 0
+    question: "What is the root-to-crown ratio in primary maxillary canines?",
+    options: ["Root is shorter than crown", "Root equals crown length", "Root is slightly longer than crown", "Root is approximately twice crown height"],
+    answer: 3
   },
   {
-    question: "What does the change in head-to-body proportion from fetal life to adulthood demonstrate?",
-    options: ["Cephalocaudal gradient of growth", "Uniform growth pattern", "Random growth distribution", "Limb-dominated growth"],
-    answer: 0
-  },
-  {
-    question: "When is the best time for arch expansion in orthodontic treatment?",
-    options: ["After growth cessation", "During maximum growth period", "In early infancy", "Only in adulthood"],
+    question: "Which surface of primary anterior teeth shows well-developed marginal ridges?",
+    options: ["Labial surface", "Lingual surface", "Proximal surfaces", "Incisal edge"],
     answer: 1
   },
   {
-    question: "Which tissue system shows rapid acceleration at puberty?",
-    options: ["Neural tissues", "Lymphoid tissues", "Genital tissues", "All tissues equally"],
+    question: "How many cusps does the primary mandibular second molar typically have?",
+    options: ["Three", "Four", "Five", "Six"],
     answer: 2
   },
   {
-    question: "What is the key factor that differentiates the three major growth theories?",
-    options: ["Their treatment recommendations", "Their understanding of malocclusion", "The location of genetic control expression", "Their approach to retention"],
+    question: "What is the timing for exfoliation of primary teeth relative to permanent tooth eruption?",
+    options: ["Before permanent teeth begin forming", "After permanent teeth fully erupt", "As succedaneous teeth move occlusally", "Only when forced by orthodontic treatment"],
     answer: 2
   },
   {
-    question: "Until what age might mandibular growth continue, affecting Class III retention?",
-    options: ["15 years", "17 years", "20 years", "12 years"],
-    answer: 2
-  },
-  {
-    question: "What is the proportion of head to total body length in adults?",
-    options: ["50%", "30%", "12%", "25%"],
-    answer: 2
-  },
-  {
-    question: "Which bone follows the somatic growth curve more closely?",
-    options: ["Maxilla", "Mandible", "Both equally", "Cranial bones"],
-    answer: 1
-  },
-  {
-    question: "How does the face of a child compare proportionally to an adult's face?",
-    options: ["Larger relative to cranium", "Smaller relative to cranium", "Same proportion", "More developed"],
-    answer: 1
-  },
-  {
-    question: "According to Moss, what drives the growth of maxilla and mandible?",
-    options: ["Cartilage proliferation", "Bone remodeling", "Enlargement of nasal and oral cavities", "Genetic expression in periosteum"],
+    question: "Which primary teeth are absent in the dentition?",
+    options: ["Central incisors", "Canines", "Bicuspids and third molars", "First molars"],
     answer: 2
   }
 ];
