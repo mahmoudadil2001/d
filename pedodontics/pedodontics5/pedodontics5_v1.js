@@ -1,77 +1,77 @@
 export const questions = [
   {
-    question: "Which feature is characteristic of the buccal aspect of the primary maxillary first molar?",
-    options: ["Definite cusp form", "Long root trunk", "Prominent cervical ridge", "No cervical constriction"],
+    question: "According to Moss's Functional Matrix Theory, what is the primary determinant of craniofacial growth?",
+    options: ["Bone tissue", "Cartilage tissue", "Adjacent soft tissues and functional needs", "Genetic control directly expressed in periosteum"],
     answer: 2
   },
   {
-    question: "The primary maxillary second molar resembles which permanent tooth?",
-    options: ["Permanent maxillary first molar", "Permanent maxillary second molar", "Permanent mandibular first molar", "Permanent mandibular second molar"],
-    answer: 0
-  },
-  {
-    question: "What is a key difference between primary and permanent teeth regarding enamel rods in the gingival third?",
-    options: ["They extend apically in primary teeth", "They extend occlusally in primary teeth", "They are absent in primary teeth", "They are thicker in primary teeth"],
+    question: "What is the clinical significance of growth spurts in orthodontic treatment?",
+    options: ["They have no significant impact on treatment", "They allow for more predictable treatment direction and management", "They indicate when to stop all orthodontic interventions", "They are only important for surgical planning"],
     answer: 1
   },
   {
-    question: "Which primary tooth has the largest pulp chamber?",
-    options: ["Maxillary molar", "Mandibular molar", "Maxillary canine", "Mandibular incisor"],
-    answer: 1
-  },
-  {
-    question: "The mesiolingual cusp of the primary maxillary first molar is:",
-    options: ["Poorly developed", "The smallest cusp", "The most prominent and sharpest", "Absent"],
+    question: "Which growth pattern is characterized by rapid early growth that slows by age 8 and is nearly complete?",
+    options: ["Lymphoid growth", "Genital growth", "Neural growth", "Somatic growth"],
     answer: 2
   },
   {
-    question: "Root completion of primary teeth occurs between which ages?",
-    options: ["6–12 months", "18 months–3 years", "3–5 years", "5–7 years"],
+    question: "Why is knowledge of facial growth important for dentists?",
+    options: ["To perform extractions without considering timing", "To identify abnormal occlusal development early for interceptive treatment", "To focus only on dental caries treatment", "To avoid considering skeletal discrepancies"],
     answer: 1
   },
   {
-    question: "Which primary tooth does NOT resemble any permanent tooth?",
-    options: ["Maxillary second molar", "Mandibular first molar", "Mandibular canine", "Maxillary central incisor"],
+    question: "What percentage of total body length does the head represent in fetal life at about the third month?",
+    options: ["30%", "50%", "12%", "70%"],
     answer: 1
   },
   {
-    question: "The 'tubercle of Carabelli' is found on which primary tooth?",
-    options: ["Maxillary first molar", "Maxillary second molar", "Mandibular first molar", "Mandibular second molar"],
+    question: "Which theory suggests that genetic control is expressed in cartilage while bone responds passively?",
+    options: ["Bone theory", "Cartilage theory", "Functional Matrix Theory", "Epigenetic theory"],
     answer: 1
   },
   {
-    question: "Primary teeth are generally ______ in color compared to permanent teeth.",
-    options: ["Darker", "Lighter", "The same", "More yellow"],
+    question: "What is the cephalocaudal gradient of growth?",
+    options: ["Growth from feet to head", "Growth from head to feet", "Equal growth in all directions", "Growth only in facial structures"],
     answer: 1
   },
   {
-    question: "Which primary molar usually has three canals?",
-    options: ["Mandibular first molar", "Mandibular second molar", "Maxillary first molar", "Maxillary canine"],
+    question: "When should orthognathic surgery typically be performed?",
+    options: ["During pubertal growth spurt", "In early childhood", "After growth ceases", "During mixed dentition period"],
+    answer: 2
+  },
+  {
+    question: "Which tissue system shows proliferation beyond adult amount in late childhood followed by involution?",
+    options: ["Neural tissues", "Genital tissues", "Lymphoid tissues", "Somatic tissues"],
+    answer: 2
+  },
+  {
+    question: "What is the main difference between the three major theories of craniofacial growth?",
+    options: ["Their explanation of malocclusion etiology", "The location at which genetic control is expressed", "Their approach to orthodontic treatment", "Their understanding of dental development"],
     answer: 1
   },
   {
-    question: "The primary mandibular first molar from the occlusal aspect is generally:",
-    options: ["Rectangular", "Rhomboidal", "Square", "Triangular"],
+    question: "Why does Class III malocclusion typically require a longer retention period?",
+    options: ["Because maxillary growth continues until age 20", "Because mandibular growth may continue until age 20", "Because it involves more teeth", "Because it's easier to treat"],
     answer: 1
   },
   {
-    question: "Resorption of primary anterior teeth begins on which surface?",
-    options: ["Buccal", "Lingual", "Mesial", "Distal"],
+    question: "At birth, what percentage of total body length does the head represent?",
+    options: ["50%", "30%", "12%", "70%"],
     answer: 1
   },
   {
-    question: "Which primary tooth has the longest root relative to crown height?",
-    options: ["Maxillary central incisor", "Maxillary canine", "Mandibular canine", "Maxillary first molar"],
+    question: "Which growth pattern do the maxilla and mandible follow?",
+    options: ["Pure neural growth", "Pure somatic growth", "Intermediate between neural and somatic growth", "Lymphoid growth pattern"],
+    answer: 2
+  },
+  {
+    question: "What happens to facial proportions compared to cranial proportions during growth?",
+    options: ["The face becomes relatively smaller", "The face becomes relatively larger", "They remain the same", "The cranium grows faster than the face"],
     answer: 1
   },
   {
-    question: "The primary maxillary central incisor is wider in which dimension?",
-    options: ["Cervico-incisal height", "Mesiodistal width", "Labiolingual width", "All dimensions are equal"],
-    answer: 1
-  },
-  {
-    question: "How many cusps does the primary mandibular second molar typically have?",
-    options: ["3", "4", "5", "6"],
+    question: "According to Moss's theory, what would happen if normal function is absent?",
+    options: ["No effect on growth", "Minimal impact on growth", "Wide-ranging effects on normal growth", "Only dental development is affected"],
     answer: 2
   }
 ];
