@@ -167,7 +167,7 @@ export const lectureNames = {
         "5": "Adrenal Insufficiency",
         "6": "Thyroid diseases",
         "7": "Unknown",
-        "8": "Unknown",
+        "8": "bleeding disorder",
         "9": "Unknown",
         "10": "Unknown",
         "11": "Unknown",
