@@ -36,7 +36,7 @@ export const lectureNames = {
         "2": "Management of DM",
         "3": "WBC disorders part 1",
         "4": "WBC Disorders part 2",
-        "5": "Unknown",
+        "5": "bleeding disorders",
         "6": "Unknown",
         "7": "Unknown",
         "8": "Unknown",
