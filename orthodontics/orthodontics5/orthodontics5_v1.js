@@ -1,77 +1,77 @@
 export const questions = [
   {
-    question: "According to Moss's Functional Matrix Theory, what is the primary determinant of craniofacial growth?",
-    options: ["Bone tissue", "Cartilage tissue", "Adjacent soft tissues and functional needs", "Genetic control directly expressed in periosteum"],
+    question: "What is the definition of 'Growth'?",
+    options: ["Progress toward maturity", "An increase in size, change in proportion, and progressive complexity", "The formation of organs and organ systems", "Development of facial structures"],
+    answer: 1
+  },
+  {
+    question: "During which prenatal period do most congenital malformations develop?",
+    options: ["Period of Ovum", "Period of Embryo", "Period of Fetus", "Neonatal Period"],
+    answer: 1
+  },
+  {
+    question: "What structure does the trophoblast develop into?",
+    options: ["The embryo", "The inner cell mass", "The embryonic part of the placenta", "The zygote"],
     answer: 2
   },
   {
-    question: "What is the clinical significance of growth spurts in orthodontic treatment?",
-    options: ["They have no significant impact on treatment", "They allow for more predictable treatment direction and management", "They indicate when to stop all orthodontic interventions", "They are only important for surgical planning"],
+    question: "The frontonasal process is formed by the proliferation of mesoderm covering which structure?",
+    options: ["The stomodeum", "The developing brain", "The pericardium", "The buccopharyngeal membrane"],
     answer: 1
   },
   {
-    question: "Which growth pattern is characterized by rapid early growth that slows by age 8 and is nearly complete?",
-    options: ["Lymphoid growth", "Genital growth", "Neural growth", "Somatic growth"],
+    question: "What does the primary palate develop from?",
+    options: ["Maxillary process", "Frontonasal process", "Mandibular arch", "Lateral nasal process"],
+    answer: 1
+  },
+  {
+    question: "Cleft lip results from the failure of fusion between which two processes?",
+    options: ["Medial nasal and lateral nasal", "Maxillary and mandibular", "Medial nasal and maxillary", "Frontonasal and mandibular"],
     answer: 2
   },
   {
-    question: "Why is knowledge of facial growth important for dentists?",
-    options: ["To perform extractions without considering timing", "To identify abnormal occlusal development early for interceptive treatment", "To focus only on dental caries treatment", "To avoid considering skeletal discrepancies"],
+    question: "The secondary palate gives rise to which structures?",
+    options: ["Premaxilla and incisor teeth", "Hard and soft palate posterior to incisive foramen", "Nasal septum and philtrum", "Frontonasal process and tuberculum impar"],
     answer: 1
   },
   {
-    question: "What percentage of total body length does the head represent in fetal life at about the third month?",
-    options: ["30%", "50%", "12%", "70%"],
+    question: "Which part of the tongue is derived from the third branchial arch?",
+    options: ["Anterior two-thirds", "Tuberculum impar", "Lateral lingual swellings", "Posterior one-third (base)"],
+    answer: 3
+  },
+  {
+    question: "The cranial vault develops through which type of ossification?",
+    options: ["Endochondral ossification", "Intramembranous ossification", "Cartilaginous ossification", "Synchondrosis ossification"],
     answer: 1
   },
   {
-    question: "Which theory suggests that genetic control is expressed in cartilage while bone responds passively?",
-    options: ["Bone theory", "Cartilage theory", "Functional Matrix Theory", "Epigenetic theory"],
-    answer: 1
-  },
-  {
-    question: "What is the cephalocaudal gradient of growth?",
-    options: ["Growth from feet to head", "Growth from head to feet", "Equal growth in all directions", "Growth only in facial structures"],
-    answer: 1
-  },
-  {
-    question: "When should orthognathic surgery typically be performed?",
-    options: ["During pubertal growth spurt", "In early childhood", "After growth ceases", "During mixed dentition period"],
+    question: "Which bone is part of the membranous viscerocranium?",
+    options: ["Hyoid bone", "Malleus", "Maxilla", "Styloid process"],
     answer: 2
   },
   {
-    question: "Which tissue system shows proliferation beyond adult amount in late childhood followed by involution?",
-    options: ["Neural tissues", "Genital tissues", "Lymphoid tissues", "Somatic tissues"],
+    question: "The maxilla develops from which pharyngeal arch?",
+    options: ["First arch", "Second arch", "Third arch", "Fourth arch"],
+    answer: 0
+  },
+  {
+    question: "At what week does the palate develop?",
+    options: ["3rd to 5th week", "6th to 9th week", "10th to 12th week", "13th to 15th week"],
+    answer: 1
+  },
+  {
+    question: "What is the initial direction of the palatine shelves before tongue withdrawal?",
+    options: ["Horizontally", "Vertically downward", "Obliquely upward", "Medially inward"],
+    answer: 1
+  },
+  {
+    question: "Which cartilage is most important for postnatal mandibular growth?",
+    options: ["Meckel's cartilage", "Coronoid cartilage", "Condylar cartilage", "Symphyseal cartilage"],
     answer: 2
   },
   {
-    question: "What is the main difference between the three major theories of craniofacial growth?",
-    options: ["Their explanation of malocclusion etiology", "The location at which genetic control is expressed", "Their approach to orthodontic treatment", "Their understanding of dental development"],
-    answer: 1
-  },
-  {
-    question: "Why does Class III malocclusion typically require a longer retention period?",
-    options: ["Because maxillary growth continues until age 20", "Because mandibular growth may continue until age 20", "Because it involves more teeth", "Because it's easier to treat"],
-    answer: 1
-  },
-  {
-    question: "At birth, what percentage of total body length does the head represent?",
-    options: ["50%", "30%", "12%", "70%"],
-    answer: 1
-  },
-  {
-    question: "Which growth pattern do the maxilla and mandible follow?",
-    options: ["Pure neural growth", "Pure somatic growth", "Intermediate between neural and somatic growth", "Lymphoid growth pattern"],
-    answer: 2
-  },
-  {
-    question: "What happens to facial proportions compared to cranial proportions during growth?",
-    options: ["The face becomes relatively smaller", "The face becomes relatively larger", "They remain the same", "The cranium grows faster than the face"],
-    answer: 1
-  },
-  {
-    question: "According to Moss's theory, what would happen if normal function is absent?",
-    options: ["No effect on growth", "Minimal impact on growth", "Wide-ranging effects on normal growth", "Only dental development is affected"],
+    question: "The foramen cecum is located in which part of the tongue?",
+    options: ["At the tip of the tongue", "On the lateral border", "In the midline of the sulcus terminalis", "At the base of the hypobranchial eminence"],
     answer: 2
   }
 ];
