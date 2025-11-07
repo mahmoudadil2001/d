@@ -1,77 +1,77 @@
 export const questions = [
   {
-    question: "Which theory of craniofacial growth is considered most acceptable today?",
-    options: ["Bone theory", "Cartilage theory", "Functional Matrix Theory", "Hybrid theory"],
-    answer: 2
-  },
-  {
-    question: "What is the clinical importance of identifying when facial growth is completed?",
-    options: ["For planning dental fillings", "For orthognathic surgery timing", "For fluoride treatment", "For dental prophylaxis"],
+    question: "Knowledge of growth and development is crucial for orthodontists primarily because:",
+    options: ["It helps in understanding genetic disorders", "Facial changes occur throughout life and can be influenced by treatment", "It explains the formation of the zygote", "It details the structure of the blastocyst"],
     answer: 1
   },
   {
-    question: "Which growth pattern shows rapid acceleration at puberty after childhood slowing?",
-    options: ["Lymphoid pattern", "Neural pattern", "Somatic pattern", "Genital pattern"],
+    question: "The blastocyst is characterized by:",
+    options: ["A solid ball of cells", "A fluid-filled cavity called blastocele", "The presence of the morula", "Formation of the pharyngeal arches"],
+    answer: 1
+  },
+  {
+    question: "When does the buccopharyngeal membrane rupture?",
+    options: ["During the period of the ovum", "To form the blastocele", "To establish the oral opening", "During the formation of the neck"],
     answer: 2
   },
   {
-    question: "How can malocclusions result from skeletal discrepancies?",
-    options: ["Due to differences in comparative jaw growth", "Due to tooth size only", "Due to dental caries", "Due to oral habits only"],
+    question: "The nasal placodes develop from:",
+    options: ["Ectodermal proliferations on the frontal process", "Endodermal lining of the foregut", "Mesoderm of the pharyngeal arches", "The maxillary processes"],
     answer: 0
   },
   {
-    question: "In the adult, what percentage of total body length does the head represent?",
-    options: ["50%", "30%", "12%", "25%"],
-    answer: 2
-  },
-  {
-    question: "Who proposed the Functional Matrix Theory of growth?",
-    options: ["Scammon", "Moss", "Bjork", "Ricketts"],
-    answer: 1
-  },
-  {
-    question: "What does the cephalocaudal gradient explain about growth?",
-    options: ["Growth proceeds from head to feet", "Growth is uniform throughout body", "Lower limbs grow before upper limbs", "Facial growth precedes cranial growth"],
+    question: "What is the incisive foramen a landmark between?",
+    options: ["Primary and secondary palate", "Hard and soft palate", "Maxilla and mandible", "Nasal cavity and pharynx"],
     answer: 0
   },
   {
-    question: "When is the mixed dentition period particularly advantageous for treatment?",
-    options: ["For all orthodontic treatments", "For treatment of skeletal discrepancies during growth spurt", "Only for surgical cases", "For retention planning only"],
+    question: "The copula is associated with which branchial arch and what is its fate?",
+    options: ["First arch; forms anterior tongue", "Second arch; disappears without contributing to tongue", "Third arch; forms posterior tongue", "Fourth arch; forms epiglottis"],
     answer: 1
   },
   {
-    question: "Which tissues follow Scammon's neural growth curve?",
-    options: ["Reproductive organs", "Lymph nodes and tonsils", "Brain and calvarium", "Long bones and muscles"],
+    question: "Which part of the skull is derived from the pharyngeal arches?",
+    options: ["Neurocranium", "Viscerocranium", "Cranial vault", "Calvaria"],
+    answer: 1
+  },
+  {
+    question: "The petrous part of the temporal bone is formed by which type of ossification?",
+    options: ["Intramembranous", "Endochondral", "Both", "Neither"],
+    answer: 1
+  },
+  {
+    question: "Meckel's cartilage is most directly involved in:",
+    options: ["Forming the mandibular bone via ossification", "Serving as a precursor for mandibular mesenchyme", "Forming the maxilla", "Developing the temporomandibular joint"],
+    answer: 1
+  },
+  {
+    question: "Which of the following is NOT a site of endochondral ossification in the mandible?",
+    options: ["Condylar process", "Coronoid process", "Alveolar process", "Mental region"],
     answer: 2
   },
   {
-    question: "What is the fundamental disagreement among the three major growth theories?",
-    options: ["The existence of growth patterns", "The location of genetic control expression", "The importance of orthodontic treatment", "The role of nutrition in growth"],
+    question: "The frontal prominence, mandibular arch, and maxillary processes are collectively called the:",
+    options: ["Pharyngeal arches", "Stomodeum", "Nasal pits", "Branchial apparatus"],
     answer: 1
   },
   {
-    question: "Why might posterior rotational growth of the mandible be problematic?",
-    options: ["It may lead to skeletal open bite", "It improves Class II malocclusion", "It enhances facial aesthetics", "It accelerates dental development"],
+    question: "The medial alveolar plate of the maxilla develops from:",
+    options: ["The nasal septum", "The junction of the palatal process and the main body of maxilla", "The zygomatic process", "The frontonasal process"],
+    answer: 1
+  },
+  {
+    question: "At what gestational week does the tongue begin to develop?",
+    options: ["2nd week", "4th week", "6th week", "8th week"],
+    answer: 1
+  },
+  {
+    question: "The sulcus terminalis separates:",
+    options: ["Anterior and posterior parts of the tongue", "Tongue from floor of mouth", "Nasal and oral cavities", "Primary and secondary palate"],
     answer: 0
   },
   {
-    question: "What proportion of total body length do legs represent at birth?",
-    options: ["One-half", "One-third", "One-quarter", "Two-thirds"],
+    question: "What is the role of the condylar cartilage in prenatal life?",
+    options: ["Major growth contributor", "No role", "Forms the coronoid process", "Fuses with Meckel's cartilage"],
     answer: 1
-  },
-  {
-    question: "Which jaw bone more closely follows the somatic growth pattern?",
-    options: ["Maxilla", "Mandible", "Both follow neural pattern", "Neither follows somatic pattern"],
-    answer: 1
-  },
-  {
-    question: "How does the infant's skull compare proportionally to an adult's?",
-    options: ["Larger cranium and smaller face", "Smaller cranium and larger face", "Same proportions", "More developed facial structures"],
-    answer: 0
-  },
-  {
-    question: "According to Functional Matrix Theory, what controls craniofacial growth?",
-    options: ["Genetic expression in bone", "Cartilage proliferation", "Soft tissue functional needs", "Hormonal factors only"],
-    answer: 2
   }
 ];
