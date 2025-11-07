@@ -1,77 +1,77 @@
 export const questions = [
   {
-    question: "Which theory of craniofacial growth proposes that genetic control is mediated outside the skeletal system?",
-    options: ["Bone theory", "Cartilage theory", "Functional Matrix Theory", "Periodontal theory"],
+    question: "What does 'Development' mean in the context of growth and development?",
+    options: ["Increase in size", "Change in proportion", "Progress toward maturity", "Formation of organs"],
     answer: 2
   },
   {
-    question: "What is the advantage of the mandible growing more and later than the maxilla?",
-    options: ["Beneficial for Class III treatment", "Beneficial for Class II treatment", "Makes no difference in treatment", "Complicates all treatments"],
+    question: "The period of the embryo lasts from which day to which day?",
+    options: ["Fertilization to 14th day", "14th to 56th day", "56th day to birth", "21st day to 8th week"],
     answer: 1
   },
   {
-    question: "Which growth pattern is characterized by an S-shaped curve with acceleration at puberty?",
-    options: ["Lymphoid growth", "Genital growth", "Neural growth", "Somatic growth"],
+    question: "What is the morula?",
+    options: ["A fluid-filled cavity", "The inner cell mass", "A ball of 16-32 cells", "The fertilized oocyte"],
+    answer: 2
+  },
+  {
+    question: "The stomodeum is initially separated from the foregut by what structure?",
+    options: ["Frontonasal process", "Buccopharyngeal membrane", "Pharyngeal arch", "Nasal placode"],
+    answer: 1
+  },
+  {
+    question: "The philtrum is formed by the fusion of which processes?",
+    options: ["Two maxillary processes", "Two medial nasal processes", "Medial nasal and maxillary processes", "Lateral nasal and maxillary processes"],
+    answer: 1
+  },
+  {
+    question: "Which structure forms the premaxilla?",
+    options: ["Secondary palate", "Primary palate", "Palatine shelves", "Nasal septum"],
+    answer: 1
+  },
+  {
+    question: "The tuberculum impar and lateral lingual swellings contribute to the formation of which part of the tongue?",
+    options: ["Posterior one-third", "Entire tongue", "Anterior two-thirds", "Foramen cecum only"],
+    answer: 2
+  },
+  {
+    question: "Which component of the skull develops through endochondral ossification?",
+    options: ["Cranial vault", "Maxilla", "Cranial base", "Zygomatic bone"],
+    answer: 2
+  },
+  {
+    question: "The hyoid bone is part of which craniofacial component?",
+    options: ["Membranous neurocranium", "Cartilaginous neurocranium", "Membranous viscerocranium", "Cartilaginous viscerocranium"],
     answer: 3
   },
   {
-    question: "Why might poorly timed extractions during growth have unfortunate consequences?",
-    options: ["They always improve occlusion", "They affect the developing occlusion", "They have no effect on growth", "They only affect dental caries"],
+    question: "At what age does the condylar cartilage cease activity?",
+    options: ["At birth", "5 years", "20 years", "Puberty"],
+    answer: 2
+  },
+  {
+    question: "The maxillary sinus at birth is approximately the size of what?",
+    options: ["A marble", "A small pea", "A bean", "A grape"],
     answer: 1
   },
   {
-    question: "In adults, what percentage of total body length do the legs represent?",
-    options: ["One-third", "One-half", "One-quarter", "Two-thirds"],
-    answer: 1
-  },
-  {
-    question: "Which theory suggests that bone is the primary determinant of its own growth?",
-    options: ["Bone theory", "Cartilage theory", "Functional Matrix Theory", "Soft tissue theory"],
+    question: "Meckel's cartilage is associated with which pharyngeal arch?",
+    options: ["First arch", "Second arch", "Third arch", "Fourth arch"],
     answer: 0
   },
   {
-    question: "What does the change in head-to-body proportion from fetal life to adulthood demonstrate?",
-    options: ["Cephalocaudal gradient of growth", "Uniform growth pattern", "Random growth distribution", "Limb-dominated growth"],
-    answer: 0
+    question: "Intramembranous ossification of the mandible begins near which structure?",
+    options: ["Meckel's cartilage", "Condylar cartilage", "Coronoid process", "Inferior alveolar nerve"],
+    answer: 3
   },
   {
-    question: "When is the best time for arch expansion in orthodontic treatment?",
-    options: ["After growth cessation", "During maximum growth period", "In early infancy", "Only in adulthood"],
+    question: "The nasal pits give rise to which structures?",
+    options: ["Eyes and ears", "Medial and lateral nasal processes", "Maxillary processes", "Pharyngeal arches"],
     answer: 1
   },
   {
-    question: "Which tissue system shows rapid acceleration at puberty?",
-    options: ["Neural tissues", "Lymphoid tissues", "Genital tissues", "All tissues equally"],
-    answer: 2
-  },
-  {
-    question: "What is the key factor that differentiates the three major growth theories?",
-    options: ["Their treatment recommendations", "Their understanding of malocclusion", "The location of genetic control expression", "Their approach to retention"],
-    answer: 2
-  },
-  {
-    question: "Until what age might mandibular growth continue, affecting Class III retention?",
-    options: ["15 years", "17 years", "20 years", "12 years"],
-    answer: 2
-  },
-  {
-    question: "What is the proportion of head to total body length in adults?",
-    options: ["50%", "30%", "12%", "25%"],
-    answer: 2
-  },
-  {
-    question: "Which bone follows the somatic growth curve more closely?",
-    options: ["Maxilla", "Mandible", "Both equally", "Cranial bones"],
+    question: "What is the function of the synchondroses in the cranial base?",
+    options: ["Muscle attachment", "Cartilage junctions between bones for growth", "Nerve passage", "Blood vessel canals"],
     answer: 1
-  },
-  {
-    question: "How does the face of a child compare proportionally to an adult's face?",
-    options: ["Larger relative to cranium", "Smaller relative to cranium", "Same proportion", "More developed"],
-    answer: 1
-  },
-  {
-    question: "According to Moss, what drives the growth of maxilla and mandible?",
-    options: ["Cartilage proliferation", "Bone remodeling", "Enlargement of nasal and oral cavities", "Genetic expression in periosteum"],
-    answer: 2
   }
 ];
