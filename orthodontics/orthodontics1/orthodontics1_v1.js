@@ -1,77 +1,77 @@
 export const questions = [
   {
-    question: "According to the American Board of Orthodontics (ABO), orthodontics includes the study of dentition from:",
-    options: ["Birth to dental maturity", "Childhood to adolescence", "Adolescence to adulthood", "Infancy to old age"],
-    answer: 0
+    question: "What is the etymological meaning of 'Orthodontics'?",
+    options: ["Straight teeth", "Correct jaw", "Straight or correct teeth", "Facial beauty"],
+    answer: 2
   },
   {
-    question: "Which of the following is NOT one of Jackson’s Triad?",
-    options: ["Functional Efficiency", "Structural Balance", "Esthetic Harmony", "Dental Longevity"],
+    question: "Using a space maintainer after the early loss of a deciduous tooth is an example of:",
+    options: ["Interceptive Orthodontics", "Preventive Orthodontics", "Corrective Orthodontics", "Surgical Orthodontics"],
+    answer: 1
+  },
+  {
+    question: "Which branch of orthodontics combines orthodontic treatment with maxillofacial surgery?",
+    options: ["Preventive Orthodontics", "Interceptive Orthodontics", "Corrective Orthodontics", "Surgical Orthodontics"],
     answer: 3
   },
   {
-    question: "What is the average root length loss during a 2-year fixed-appliance treatment?",
-    options: ["0.5 mm", "1 mm", "2 mm", "3 mm"],
-    answer: 1
-  },
-  {
-    question: "Which factor is most strongly correlated with caries experience?",
-    options: ["Malocclusion", "Diet and fluoride use", "Crowding", "Tooth size"],
-    answer: 1
-  },
-  {
-    question: "An overjet greater than how many millimeters doubles the risk of trauma to upper incisors?",
-    options: ["2 mm", "3 mm", "4 mm", "5 mm"],
-    answer: 1
-  },
-  {
-    question: "Which key of normal occlusion refers to the relationship between the upper first molar and lower first molar?",
-    options: ["Crown inclination", "Crown angulation", "Molar relationship", "Occlusal plane"],
+    question: "An occlusion that is a causative factor in traumatic lesions of the muscles and TMJ is termed:",
+    options: ["Ideal Occlusion", "Normal Occlusion", "Traumatic Occlusion", "Therapeutic Occlusion"],
     answer: 2
   },
   {
-    question: "Crown angulation refers to the angulation of:",
-    options: ["The entire tooth", "The root only", "The crown only", "The pulp"],
-    answer: 2
-  },
-  {
-    question: "Which teeth are inclined lingually in normal occlusion?",
-    options: ["Incisors", "Buccal segment teeth", "Canines", "Molars only"],
+    question: "Incisal Overjet is primarily dependent on:",
+    options: ["Vertical development of the anterior segments", "The inclination of the incisors and antero-posterior arch relationship", "Buccolingual width of the posterior teeth", "The rotation of the molars"],
     answer: 1
   },
   {
-    question: "Why are rotated molars undesirable?",
-    options: ["They look bad", "They occupy more space", "They cause pain", "They are harder to clean"],
+    question: "An anterior open bite is a type of:",
+    options: ["Positive Overbite", "Negative Overbite", "Excessive Overbite", "Traumatic Overbite"],
     answer: 1
   },
   {
-    question: "What is the maximum acceptable depth of the curve of Spee for stability?",
-    options: ["0.5 mm", "1.0 mm", "1.5 mm", "2.0 mm"],
-    answer: 2
-  },
-  {
-    question: "Who proposed that correct tooth size is the seventh key for normal occlusion?",
-    options: ["Andrews", "Angle", "Bennett & McLaughlin", "Jackson"],
-    answer: 2
-  },
-  {
-    question: "What is a common risk associated with fixed appliances due to difficulty in cleaning?",
-    options: ["Root resorption", "Pulpal death", "Gingival inflammation", "Tooth impaction"],
-    answer: 2
-  },
-  {
-    question: "Which malocclusion is most commonly associated with difficulty in incising food?",
-    options: ["Deep bite", "Anterior open bite", "Crossbite", "Crowding"],
+    question: "A deep bite caused by the impingement of mandibular incisors on the palatal mucosa is classified as:",
+    options: ["Non-traumatic Deep Bite", "Traumatic Deep Bite", "Bi-traumatic Deep Bite", "Skeletal Deep Bite"],
     answer: 1
   },
   {
-    question: "Traumatic ulceration is more commonly seen with which type of appliance?",
-    options: ["Removable", "Fixed", "Functional", "Clear aligners"],
+    question: "A 'Scissors-bite' is characterized by:",
+    options: ["Anterior crossbite", "Posterior teeth overlapping vertically without occlusal contact", "Deep overbite", "Edge-to-edge incisor relationship"],
     answer: 1
   },
   {
-    question: "Ethically, orthodontic treatment should only be undertaken if:",
-    options: ["The patient insists", "There is a demonstrable benefit", "It is cheap", "The dentist recommends it"],
+    question: "Generalized spacing in the dental arch is most often caused by:",
+    options: ["Early extraction of deciduous teeth", "Abnormal soft tissue function like tongue thrust", "Collapsed maxillary arch", "Dental caries"],
+    answer: 1
+  },
+  {
+    question: "What is the term for the overlapping of incisors and canines in the same arch, usually due to crowding?",
+    options: ["Spacing", "Imbrication", "Rotation", "Protrusion"],
+    answer: 1
+  },
+  {
+    question: "A midline shift that occurs due to a premature occlusal contact is associated with:",
+    options: ["Mandibular deviation during closure", "No mandibular deviation", "Maxillary collapse", "Tooth impaction"],
+    answer: 0
+  },
+  {
+    question: "A tooth positioned below the occlusal plane is said to be in:",
+    options: ["Supraeruption", "Infraposition", "Protrusion", "Retroclination"],
+    answer: 1
+  },
+  {
+    question: "What is the key difference between dental retrusion and dental retroclination?",
+    options: ["Retrusion is anterior positioning, retroclination is posterior", "Retrusion maintains normal inclination, retroclination involves tipping", "Retroclination maintains normal inclination, retrusion involves tipping", "They are synonymous terms"],
+    answer: 1
+  },
+  {
+    question: "The most common teeth to become impacted are:",
+    options: ["Central incisors", "First molars", "The last teeth to erupt in each segment", "The first teeth to erupt in each segment"],
+    answer: 2
+  },
+  {
+    question: "What defines a 'false unilateral posterior crossbite'?",
+    options: ["Asymmetry in the dental arch", "It is caused by mandibular deviation to achieve maximum intercuspation", "It affects both sides of the arch", "There is no mandibular deviation during closure"],
     answer: 1
   }
 ];
