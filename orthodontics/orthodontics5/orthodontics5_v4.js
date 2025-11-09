@@ -1,77 +1,77 @@
 export const questions = [
   {
-    question: "Which skeletal pattern is characterized by the mandible positioned further back relative to the maxilla?",
-    options: ["Skeletal Class I", "Skeletal Class II", "Skeletal Class III", "Open bite"],
+    question: "Which factor is NOT general etiology of malocclusion?",
+    options: ["Skeletal", "Muscular", "Dental", "Improper restorations"],
+    answer: 3
+  },
+  {
+    question: "Crossbite can appear when:",
+    options: ["Upper jaw wider", "Lower jaw wider", "Tongue large", "Overjet reduced"],
     answer: 1
   },
   {
-    question: "High gonial angle is typically associated with:",
-    options: ["Short lower facial height", "Deep bite", "Increased vertical facial dimension", "Lingual crossbite"],
+    question: "Concrescence happens when two teeth unite at:",
+    options: ["Enamel", "Dentin", "Cementum", "Crown only"],
     answer: 2
   },
   {
-    question: "The zone where labial/buccal musculature and tongue forces balance is called:",
-    options: ["Neutral zone", "Occlusal plane", "Curve of Spee", "Functional path"],
+    question: "Large tongue often causes:",
+    options: ["Deep bite", "Anterior open bite", "Retrognathia", "Microdontia"],
+    answer: 1
+  },
+  {
+    question: "Which leads to posterior space loss?",
+    options: ["Mandibular expansion", "Early loss of deciduous molars", "Large tongue", "Class III"],
+    answer: 1
+  },
+  {
+    question: "Endogenous tongue thrust affects:",
+    options: ["Stable occlusion", "Relapse after orthodontics", "No effect", "Only posterior teeth"],
+    answer: 1
+  },
+  {
+    question: "Lip line located behind upper incisors produces:",
+    options: ["Proclination", "No lip line", "Spacing", "Rotation"],
+    answer: 1
+  },
+  {
+    question: "Microdontia is mostly seen in:",
+    options: ["Maxillary lateral incisors", "Mandibular incisors", "Canines", "Molars"],
     answer: 0
   },
   {
-    question: "The most commonly missing permanent teeth are:",
-    options: ["Maxillary lateral incisors", "Mandibular centrals", "Third molars", "Canines"],
-    answer: 2
-  },
-  {
-    question: "Which is the most frequently impacted tooth (excluding 3rd molars)?",
-    options: ["Maxillary canine", "Second premolar", "Mandibular incisor", "Mandibular canine"],
+    question: "Muscle influence on occlusion depends on:",
+    options: ["Origin & insertion", "Color of mucosa", "Tooth shade", "Cavity depth"],
     answer: 0
   },
   {
-    question: "Adaptive tongue posture often leads to:",
-    options: ["Crowding of posterior teeth", "Incomplete overbite/open bite", "Increased overjet", "Scissor bite"],
+    question: "Delayed eruption due to cyst formation leads to:",
+    options: ["Labial eruption", "Impaction", "Short roots", "Spacing"],
     answer: 1
   },
   {
-    question: "Peg-shaped lateral incisors are seen in:",
-    options: ["True generalized microdontia", "Localized microdontia", "Macrodontia", "Anodontia"],
-    answer: 1
-  },
-  {
-    question: "Mesiodens typically occurs:",
-    options: ["Between maxillary central incisors", "In mandibular premolars", "In third molar region", "Near canines"],
+    question: "Skeletal Class I means:",
+    options: ["Ideal AP jaw relation", "Mandible retruded", "Mandible protruded", "Open bite"],
     answer: 0
   },
   {
-    question: "Ankylosis of a primary molar causes:",
-    options: ["Spacing", "Infra-occlusion", "Anterior deep bite", "Large dental arch"],
+    question: "Supernumerary teeth may cause:",
+    options: ["Early eruption", "Crowding & deflection", "Deep bite", "No change"],
     answer: 1
   },
   {
-    question: "Class II division 2 usually shows:",
-    options: ["Proclined upper incisors", "Retroclined upper incisors", "Open bite", "Class III jaw relation"],
-    answer: 1
+    question: "Jaw positioning assessed relative to:",
+    options: ["Anterior cranial base", "Neck muscle", "Tongue base", "Lower lip"],
+    answer: 0
   },
   {
-    question: "Primary incisor spacing is important for:",
-    options: ["Canine eruption only", "Deep bite formation", "Preventing future crowding", "Rotating molars"],
-    answer: 2
+    question: "Enlarged adenoids often cause:",
+    options: ["Mouth breathing", "Small tongue", "Crossbite only", "Open lips only"],
+    answer: 0
   },
   {
-    question: "Premature loss of deciduous molars mainly leads to:",
-    options: ["Distal molar shift", "Mesial migration of permanent molars", "Open bite", "Large overjet"],
-    answer: 1
-  },
-  {
-    question: "Under-contoured proximal restoration causes:",
-    options: ["Spacing increase", "Arch length decrease", "Canine impaction prevention", "Class III malocclusion"],
-    answer: 1
-  },
-  {
-    question: "Oral breathing habit typically results in:",
-    options: ["Well-developed maxilla", "Anterior open bite", "Deep bite", "Class III skeletal pattern"],
-    answer: 1
-  },
-  {
-    question: "Thumb sucking habit affects dentition mainly due to:",
-    options: ["High intensity short duration", "Low intensity repeated duration", "No muscular effect", "Basal bone reduction"],
-    answer: 1
+    question: "Crowding often affects:",
+    options: ["Last erupting teeth like canines", "Incisors only", "Molars only", "Primary teeth only"],
+    answer: 0
   }
 ];
