@@ -1,77 +1,77 @@
 export const questions = [
   {
-    question: "During which prenatal period is there rapid growth without significant differentiation?",
-    options: ["Period of Ovum", "Period of Embryo", "Period of Fetus", "Period of Zygote"],
+    question: "Which skeletal class shows prognathic mandible?",
+    options: ["Class I", "Class II", "Class III", "No relation"],
     answer: 2
   },
   {
-    question: "What is formed from the inner cell mass of the blastocyst?",
-    options: ["Trophoblast", "Embryo", "Placenta", "Blastocele"],
+    question: "Talon cusp mainly interferes with:",
+    options: ["Lip closure", "Occlusion & pulp safety", "Tooth color", "Speech only"],
     answer: 1
   },
   {
-    question: "The neck is formed mainly by the appearance of what structures?",
-    options: ["Pharyngeal arches", "Stomodeum", "Frontonasal process", "Nasal pits"],
+    question: "Mouth breathing typically leads to:",
+    options: ["Narrow maxilla & open bite", "Wider mandible", "Deep bite only", "Hyperactive tongue only"],
     answer: 0
   },
   {
-    question: "The union of the medial nasal and maxillary processes forms which structure?",
-    options: ["Mandible", "Philtrum", "Primary palate", "Maxilla, palate, upper lip, and lower central nose"],
-    answer: 3
-  },
-  {
-    question: "The secondary palate is formed by the fusion of all EXCEPT:",
-    options: ["Two palatine shelves", "Nasal septum", "Primary palate", "Frontonasal process"],
-    answer: 3
-  },
-  {
-    question: "The posterior one-third of the tongue is derived from which branchial arch?",
-    options: ["First arch", "Second arch", "Third arch", "Fourth arch"],
-    answer: 2
-  },
-  {
-    question: "Which bone is part of the cartilaginous neurocranium?",
-    options: ["Parietal bone", "Frontal bone", "Ethmoid bone", "Zygomatic bone"],
-    answer: 2
-  },
-  {
-    question: "The mandible develops primarily through which type of ossification?",
-    options: ["Endochondral", "Intramembranous", "Both equally", "Neither"],
+    question: "Which habit creates negative intraoral pressure narrowing maxilla?",
+    options: ["Tongue thrust", "Cheek sucking", "Bruxism", "Nail biting"],
     answer: 1
   },
   {
-    question: "When does the maxillary sinus begin to form?",
-    options: ["At birth", "3rd month of gestation", "6th month of gestation", "1st year postpartum"],
+    question: "Gemination is due to:",
+    options: ["Union of two tooth germs", "Division of a single tooth germ", "Cementum fusion", "Root dilaceration"],
     answer: 1
   },
   {
-    question: "Which secondary cartilage contributes to the development of the maxilla?",
-    options: ["Condylar cartilage", "Zygomatic/malar cartilage", "Coronoid cartilage", "Symphyseal cartilage"],
+    question: "Delayed eruption may be caused by:",
+    options: ["Impacted supernumerary", "Small alveolar bone", "Large basal bone", "Short root"],
+    answer: 0
+  },
+  {
+    question: "Proximal caries in primary molars usually cause:",
+    options: ["Spacing increase", "Arch length loss", "Class III only", "Deep bite"],
     answer: 1
   },
   {
-    question: "The mandibular symphysis is composed of what tissue until after birth?",
-    options: ["Bone", "Cartilage", "Fibrous tissue", "Muscle"],
-    answer: 2
+    question: "Class II often results in the lower lip:",
+    options: ["Behind upper incisors", "Forward of maxilla", "Covering lower incisors only", "Flattened tongue"],
+    answer: 0
   },
   {
-    question: "What is the initial site of osteogenesis in the mandible?",
-    options: ["Near the condyle", "Lateral to Meckel's cartilage near the inferior alveolar nerve", "At the symphysis", "In the coronoid process"],
+    question: "Open bite frequently occurs due to:",
+    options: ["Tongue between teeth during swallow", "Thick enamel", "Strong mandible", "Deep palate"],
+    answer: 0
+  },
+  {
+    question: "Alveolar bone supports teeth and follows:",
+    options: ["Basal bone only", "Tooth position", "Tongue only", "Muscles only"],
     answer: 1
   },
   {
-    question: "Which nerve is associated with the center of ossification in the maxilla?",
-    options: ["Facial nerve", "Inferior orbital and anterosuperior alveolar nerves", "Trigeminal nerve", "Glossopharyngeal nerve"],
+    question: "Over-retained primary teeth can lead to:",
+    options: ["Proper canine alignment", "Permanent tooth impaction", "No malocclusion", "Rapid eruption"],
     answer: 1
   },
   {
-    question: "The hypobranchial eminence is primarily composed of which arch mesenchyme?",
-    options: ["First arch", "Second arch", "Third arch", "Fourth arch"],
-    answer: 2
+    question: "Fusion differs from gemination by:",
+    options: ["One tooth germ vs two germs", "More pulp chambers", "Location only", "Crown size reduction only"],
+    answer: 0
   },
   {
-    question: "What structure separates the stomodeum into nasal and oral cavities during palate development?",
-    options: ["Palatine shelves", "Nasal septum", "Tongue", "Buccopharyngeal membrane"],
+    question: "Thumb sucking causes:",
+    options: ["Reduced overjet", "Increased overjet", "Lingual tilt of upper incisors", "Molar distal shift"],
+    answer: 1
+  },
+  {
+    question: "Supernumerary in molar region may cause:",
+    options: ["Canine impaction", "Molar deflection", "Spacing only", "No effect"],
+    answer: 1
+  },
+  {
+    question: "Neck posture affects:",
+    options: ["Growth of maxilla", "Jaw position & facial growth", "Enamel formation", "Tongue color"],
     answer: 1
   }
 ];
