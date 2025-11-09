@@ -197,7 +197,7 @@ export const lectureNames = {
         "3": "Iatrogenic effect of orthodontic treatment",
         "4": "Classification of Malocclusion",
         "5": "Etiology of malocclusion",
-        "6": "Unknown",
+        "6": "G&D introduction",
         "7": "Unknown",
         "8": "Unknown",
         "9": "Unknown",
