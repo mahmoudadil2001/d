@@ -1,77 +1,77 @@
 export const questions = [
   {
-    question: "Who defined orthodontics as 'the correction of malocclusion of the teeth' in 1907?",
-    options: ["Andrews", "Angle", "Jackson", "Bennett"],
-    answer: 1
-  },
-  {
-    question: "Which element of Jackson’s Triad refers to the relationship of teeth to the skull for proper function?",
-    options: ["Structural Balance", "Esthetic Harmony", "Functional Efficiency", "Dental Proportion"],
+    question: "Which of the following is NOT a branch of orthodontic treatment as defined in the lecture?",
+    options: ["Preventive", "Interceptive", "Restorative", "Surgical"],
     answer: 2
   },
   {
-    question: "What is a potential risk of over-enthusiastic apical movement?",
-    options: ["Root resorption", "Pulpal injury", "Demineralisation", "Soft tissue damage"],
-    answer: 1
-  },
-  {
-    question: "Crowding may lead to reduction of periodontal support due to:",
-    options: ["Plaque accumulation", "Teeth squeezed out of bone", "Root resorption", "Gingival recession"],
-    answer: 1
-  },
-  {
-    question: "Which speech issue may occur if there is no contact between anterior incisors?",
-    options: ["Stutter", "Lisp", "Mumble", "Slur"],
-    answer: 1
-  },
-  {
-    question: "Which key of occlusion ensures tight contact points between teeth?",
-    options: ["No rotations", "No spaces", "Flat occlusal plane", "Correct crown inclination"],
-    answer: 1
-  },
-  {
-    question: "In normal occlusion, the gingival portion of the crown’s long axis is distal to the incisal portion for:",
-    options: ["All teeth", "Incisors only", "Molars only", "Varies with tooth type"],
+    question: "Correcting proximal caries to preserve occlusion falls under which orthodontic branch?",
+    options: ["Surgical Orthodontics", "Corrective Orthodontics", "Interceptive Orthodontics", "Preventive Orthodontics"],
     answer: 3
   },
   {
-    question: "Buccal segment teeth in the lower arch show progressive inclination toward:",
-    options: ["Buccal", "Lingual", "Mesial", "Distal"],
+    question: "Planning serial extraction is a procedure used in:",
+    options: ["Preventive Orthodontics", "Interceptive Orthodontics", "Corrective Orthodontics", "Surgical Orthodontics"],
     answer: 1
   },
   {
-    question: "The curve of Spee is measured from the lower central incisor to the:",
-    options: ["Lower first molar", "Lower second molar", "Upper first molar", "Upper second molar"],
+    question: "A theoretical concept of an ideal tooth arrangement that is almost never found in nature is called:",
+    options: ["Normal Occlusion", "Ideal Occlusion", "Traumatic Occlusion", "Therapeutic Occlusion"],
     answer: 1
   },
   {
-    question: "Tooth size discrepancy may require:",
-    options: ["Extraction", "Interproximal reduction", "Crown lengthening", "Root canal"],
-    answer: 1
-  },
-  {
-    question: "Which pathology can be caused by impacted maxillary canines?",
-    options: ["Caries", "Root resorption of adjacent teeth", "Gingivitis", "Pulpitis"],
-    answer: 1
-  },
-  {
-    question: "Demineralisation during orthodontic treatment is primarily due to:",
-    options: ["Metal allergy", "Plaque accumulation and diet", "Root movement", "Soft tissue damage"],
-    answer: 1
-  },
-  {
-    question: "Which of the following is least affected by malocclusion?",
-    options: ["Masticatory function", "Speech", "Self-esteem", "Caries risk"],
-    answer: 1
-  },
-  {
-    question: "Orthodontic treatment should consider potential risks versus:",
-    options: ["Cost", "Duration", "Advantages", "Age of patient"],
+    question: "A reversed incisal overjet is typically seen in which malocclusion class?",
+    options: ["Class I", "Class II", "Class III", "Class IV"],
     answer: 2
   },
   {
-    question: "The distobuccal cusp of the upper first molar contacts which lower tooth?",
-    options: ["Lower first molar", "Lower second molar", "Lower canine", "Lower premolar"],
+    question: "What governs the degree of incisal overbite?",
+    options: ["Antero-posterior arch relationship", "The vertical development of the anterior dento-alveolar segments", "Buccal overjet", "Incisor inclination"],
     answer: 1
+  },
+  {
+    question: "A dental open bite is often localized and caused by:",
+    options: ["Mandibular plane divergence", "Tongue thrust or digit-sucking", "Maxillary hyperplasia", "Genetic factors only"],
+    answer: 1
+  },
+  {
+    question: "In a bi-traumatic deep bite, trauma can occur to:",
+    options: ["The occlusal surfaces of molars only", "The labial mucosa of maxillary incisors only", "Both the labial and palatal mucosa", "The TMJ only"],
+    answer: 2
+  },
+  {
+    "question": "The term 'Buccal Overjet' is an unofficial term used to assess the tendency for:",
+    "options": ["Anterior Open Bite", "Deep Bite", "Posterior Crossbite", "Tooth Rotation"],
+    "answer": 2
+  },
+  {
+    question: "A 'maxillary posterior lingual crossbite' indicates that the primary cause is:",
+    options: ["A wide mandibular arch", "A narrow maxillary arch", "Mandibular deviation", "Tooth rotation"],
+    answer: 1
+  },
+  {
+    question: "Crowding of more than 2 mm in the entire dental arch can be caused by:",
+    options: ["Tongue thrust", "A collapsed maxillary arch", "Median diastema", "Ankylosis"],
+    answer: 1
+  },
+  {
+    question: "A midline shift of the FACE is most commonly caused by:",
+    options: ["Unilateral tooth extraction", "Abnormal skeletal factors", "Dental crowding", "Premature occlusal contact"],
+    answer: 1
+  },
+  {
+    question: "The situation where an unopposed tooth extends beyond the occlusal plane is called:",
+    options: ["Infraocclusion", "Overeruption", "Retrusion", "Retroclination"],
+    answer: 1
+  },
+  {
+    question: "Anterior positioning of a tooth while keeping its long axis with normal inclination is termed:",
+    options: ["Proclination", "Protrusion", "Retrusion", "Retroclination"],
+    answer: 1
+  },
+  {
+    question: "A severe tooth rotation (more than 90 degrees) typically requires:",
+    options: ["No treatment", "A removable appliance only", "A fixed orthodontic appliance only", "Extraction"],
+    answer: 2
   }
 ];
