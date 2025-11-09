@@ -1,77 +1,77 @@
 export const questions = [
   {
-    question: "Which term describes minor irregularities within normal limits?",
-    options: ["Ideal occlusion", "Normal occlusion", "Malocclusion", "Open bite"],
-    answer: 1
-  },
-  {
-    question: "The current emphasis in ideal occlusion has moved to concern with:",
-    options: ["Aesthetic standards only", "Anatomic standards only", "Function, health and comfort", "Theoretical concepts only"],
+    question: "According to Key 1, the distal marginal ridge of the upper first molar contacts which structure?",
+    options: ["Mesial marginal ridge of the lower first molar", "Distal marginal ridge of the lower second molar", "Mesial marginal ridge of the lower second molar", "Distal marginal ridge of the lower first molar"],
     answer: 2
   },
   {
-    question: "Overjet is measured between which surfaces of incisors?",
-    options: ["Lingual to lingual", "Labial to labial", "Incisal to incisal", "Mesial to distal"],
+    question: "Crown angulation is also known as:",
+    options: ["Torque", "Tip", "Inclination", "Rotation"],
     answer: 1
   },
   {
-    question: "In normal overbite, lower incisor edges contact:",
-    options: ["The labial surface of upper incisors", "The incisal edges of upper incisors", "The lingual surface of upper incisors at or above cingulum", "No contact occurs"],
+    question: "In maxillary incisors, the labial surface is inclined such that the incisal edge is:",
+    options: ["Lingual to the gingival portion", "Labial to the gingival portion", "At the same level as the gingival portion", "Distal to the gingival portion"],
+    answer: 1
+  },
+  {
+    question: "Which key states that there should be no rotations?",
+    options: ["Key 1", "Key 3", "Key 4", "Key 5"],
     answer: 2
   },
   {
-    question: "Anterior open bite is identified when:",
-    options: ["There is excessive vertical overlap", "There is no vertical overlap between incisors", "There is horizontal overlap", "Posterior teeth don't meet"],
+    question: "The occlusal plane in normal occlusion should be:",
+    options: ["Curved deeply", "Flat or slightly curved", "Steeply inclined", "Irregular"],
     answer: 1
   },
   {
-    question: "Open bite classification is based on:",
-    options: ["Severity of the condition", "Region involved", "Patient's age", "Etiology"],
+    question: "Rotated molars and bicuspids result in:",
+    options: ["Less space occupation", "More space occupation", "Improved function", "Better aesthetics"],
     answer: 1
   },
   {
-    question: "Skeletal deep bite is caused by:",
-    options: ["Over-eruption of anteriors", "Infra-occlusion of molars", "Genetic origin with mandibular rotation", "Tongue thrusting habit"],
+    question: "Jackson's Triad does NOT include:",
+    options: ["Structural balance", "Functional efficiency", "Esthetic harmony", "Crown torque"],
+    answer: 3
+  },
+  {
+    question: "The mesiobuccal cusp of the upper first molar occludes in the groove between which cusps of the lower first molar?",
+    options: ["Mesial and distal", "Buccal and lingual", "Mesial and middle", "Distal and middle"],
     answer: 2
   },
   {
-    question: "Crossbite can be:",
-    options: ["Anterior or posterior only", "Unilateral or bilateral only", "Anterior/posterior and unilateral/bilateral", "Only unilateral"],
-    answer: 2
-  },
-  {
-    question: "A scissors bite involves which type of displacement?",
-    options: ["Lingual displacement of mandibular teeth", "Buccal displacement of maxillary teeth", "Vertical displacement of anterior teeth", "Mesial displacement of all teeth"],
+    question: "Crown inclination is measured relative to a line perpendicular to the:",
+    options: ["Frankfort plane", "Occlusal plane", "Mandibular plane", "Coronal plane"],
     answer: 1
   },
   {
-    question: "Diastema often occurs between:",
-    options: ["Mandibular central incisors", "Maxillary central incisors", "Maxillary canines and premolars", "Mandibular molars"],
+    question: "Key 5 emphasizes:",
+    options: ["No rotations", "Tight contacts", "Flat occlusal plane", "Proper crown angulation"],
     answer: 1
   },
   {
-    question: "Tooth size-arch size disproportion usually manifests as:",
-    options: ["Spacing", "Crowding", "Open bite", "Deep bite"],
+    question: "The curve of Spee is associated with which key?",
+    options: ["Key 1", "Key 3", "Key 5", "Key 6"],
+    answer: 3
+  },
+  {
+    question: "The maximum depth of the curve of Spee for occlusal stability is:",
+    options: ["1.0 mm", "1.5 mm", "2.0 mm", "2.5 mm"],
     answer: 1
   },
   {
-    question: "Potential crowding occurs when:",
-    options: ["Teeth remain upright over basal bone", "Teeth align at the expense of lip position", "There is generalized spacing", "Teeth are infraoccluded"],
+    question: "The long axis of non-molar teeth is identified by the:",
+    options: ["Dominant vertical groove", "Mid-developmental ridge", "Cusp tip", "Lingual fossa"],
     answer: 1
   },
   {
-    question: "Midline shift not associated with mandibular deviation occurs in cases of:",
-    options: ["Premature occlusal contact", "Unilateral missing teeth", "Mandibular rotation", "TMJ disorders"],
+    question: "Structural balance in orthodontics refers to:",
+    options: ["Balancing tooth size", "Harmony between teeth, soft tissues, and skeletal structures", "Equal distribution of masticatory forces", "Symmetrical arch form"],
     answer: 1
   },
   {
-    question: "Infraposition is commonly due to:",
-    options: ["Overeruption", "Deleterious habits or ankylosis", "Tongue thrusting", "Missing teeth"],
-    answer: 1
-  },
-  {
-    question: "Severe rotation (more than 90°) is best treated with:",
-    options: ["Removable appliances", "Fixed appliances", "No treatment needed", "Extraction only"],
+    question: "Which key ensures no spacing between teeth?",
+    options: ["Key 4", "Key 5", "Key 6", "Key 2"],
     answer: 1
   }
 ];
