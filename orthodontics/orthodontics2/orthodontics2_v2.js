@@ -1,77 +1,77 @@
 export const questions = [
   {
-    question: "Normal occlusion satisfies requirements of:",
-    options: ["Function only", "Aesthetics only", "Both function and aesthetics", "Neither function nor aesthetics"],
+    question: "According to Andrews' first key, the mesiobuccal cusp of the upper first molar fits into which groove of the lower first molar?",
+    options: ["Distal groove", "Central groove", "Groove between mesial and middle cusps", "Buccal groove"],
     answer: 2
   },
   {
-    question: "Ideal occlusion is primarily based on:",
-    options: ["Patient comfort", "Tooth morphology", "Soft tissue function", "Skeletal pattern"],
+    question: "Crown angulation is defined by the tip of the crown's long axis in which direction?",
+    options: ["Buccolingual", "Mesiodistal", "Vertical", "Horizontal"],
     answer: 1
   },
   {
-    question: "Malocclusion can be defined as:",
-    options: ["Perfect tooth alignment", "Minor irregularities within normal limits", "Appreciable deviation from the ideal", "Theoretical concept only"],
+    question: "For maxillary incisors, the incisal portion of the labial surface is positioned how relative to the gingival portion?",
+    options: ["Lingual", "Labial", "Distal", "Mesial"],
+    answer: 1
+  },
+  {
+    question: "Which key emphasizes the absence of rotations?",
+    options: ["Key 1", "Key 2", "Key 4", "Key 6"],
     answer: 2
   },
   {
-    question: "Increased overjet is measured as:",
-    options: ["Less than 2 mm", "2-4 mm", "More than 4 mm", "Negative value"],
+    question: "What is the ideal occlusal plane according to Key 6?",
+    options: ["Deep curve of Spee", "Steep curve", "Flat", "S-shaped"],
     answer: 2
   },
   {
-    question: "Reduced overbite is measured as:",
-    options: ["Less than 2 mm", "2-4 mm", "More than 4 mm", "No overbite"],
-    answer: 0
-  },
-  {
-    question: "Posterior open bite affects:",
-    options: ["Anterior teeth only", "Posterior teeth only", "Both anterior and posterior teeth", "No teeth are affected"],
+    question: "Rotated incisors typically occupy:",
+    options: ["More space", "Less space", "The same space", "No space"],
     answer: 1
   },
   {
-    question: "Which is NOT a problem associated with open bite?",
-    options: ["Difficulty in speech", "TMJ disorders", "Improved incisor guidance", "Poor aesthetics"],
+    question: "Jackson's Triad includes all EXCEPT:",
+    options: ["Structural balance", "Functional efficiency", "Esthetic harmony", "Crown inclination"],
+    answer: 3
+  },
+  {
+    question: "The mesiolingual cusp of the upper first molar seats in which area of the lower first molar?",
+    options: ["Mesial marginal ridge", "Distal fossa", "Central fossa", "Buccal groove"],
     answer: 2
   },
   {
-    question: "Dental deep bite occurs due to:",
-    options: ["Genetic origin", "Mandibular rotation", "Over-eruption of anteriors", "Maxillary inclination"],
+    question: "Crown inclination refers to the inclination in which direction?",
+    options: ["Mesiodistal", "Buccolingual", "Vertical", "Horizontal"],
+    answer: 1
+  },
+  {
+    question: "Tight contact points are emphasized in which key?",
+    options: ["Key 4", "Key 5", "Key 6", "Key 3"],
+    answer: 1
+  },
+  {
+    question: "Which key addresses the curve of the occlusal plane?",
+    options: ["Key 1", "Key 3", "Key 5", "Key 6"],
+    answer: 3
+  },
+  {
+    question: "The maximum acceptable depth of the curve of Spee is:",
+    options: ["1.0 mm", "1.5 mm", "2.0 mm", "2.5 mm"],
+    answer: 1
+  },
+  {
+    question: "The long axis of molars is identified by:",
+    options: ["The mid-developmental ridge", "The cusp tips", "The dominant vertical groove on the buccal surface", "The lingual fossa"],
     answer: 2
   },
   {
-    question: "Anterior crossbite can be classified as:",
-    options: ["Unilateral or bilateral", "Single tooth or segmental", "Mild or severe", "Dental or skeletal"],
+    question: "Functional efficiency in orthodontics primarily aims to improve:",
+    options: ["Aesthetics", "Masticatory function", "Tooth color", "Gingival health"],
     answer: 1
   },
   {
-    question: "Posterior crossbite is classified based on:",
-    options: ["Number of teeth involved", "Side involved", "Severity of malocclusion", "Tooth size discrepancy"],
-    answer: 1
-  },
-  {
-    question: "The line of occlusion specifies:",
-    options: ["Only occlusal relationships", "Only interarch relationships", "Both occlusal and interarch relationships", "Neither occlusal nor interarch relationships"],
+    question: "Which key ensures no rotations are present?",
+    options: ["Key 2", "Key 3", "Key 4", "Key 5"],
     answer: 2
-  },
-  {
-    question: "Generalized spacing is mostly caused by:",
-    options: ["Abnormal frenal attachment", "Abnormal soft tissue function", "Tooth size discrepancy", "Crowding"],
-    answer: 1
-  },
-  {
-    question: "Midline shift associated with mandibular deviation occurs in cases of:",
-    options: ["Unilateral missing teeth", "Premature occlusal contact", "Crowding", "Spacing"],
-    answer: 1
-  },
-  {
-    question: "Overeruption refers to teeth extending:",
-    options: ["Below the occlusal plane", "At the occlusal plane", "Beyond the occlusal plane", "In crossbite"],
-    answer: 2
-  },
-  {
-    question: "Tooth impaction tends to affect:",
-    options: ["The first teeth to erupt", "The last teeth to erupt", "All teeth equally", "Only anterior teeth"],
-    answer: 1
   }
 ];
