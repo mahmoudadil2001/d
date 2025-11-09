@@ -196,7 +196,7 @@ export const lectureNames = {
         "2": "andrew keys of normal occlusion",
         "3": "Iatrogenic effect of orthodontic treatment",
         "4": "Classification of Malocclusion",
-        "5": "growth and development",
+        "5": "Etiology of malocclusion",
         "6": "Unknown",
         "7": "Unknown",
         "8": "Unknown",
