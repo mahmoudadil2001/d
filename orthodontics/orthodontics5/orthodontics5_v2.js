@@ -1,77 +1,77 @@
 export const questions = [
   {
-    question: "What does 'Development' mean in the context of growth and development?",
-    options: ["Increase in size", "Change in proportion", "Progress toward maturity", "Formation of organs"],
-    answer: 2
-  },
-  {
-    question: "The period of the embryo lasts from which day to which day?",
-    options: ["Fertilization to 14th day", "14th to 56th day", "56th day to birth", "21st day to 8th week"],
+    question: "Excessive jaw width discrepancy can result in:",
+    options: ["Anterior open bite", "Crossbite", "Deep bite", "Edge-to-edge incisors"],
     answer: 1
   },
   {
-    question: "What is the morula?",
-    options: ["A fluid-filled cavity", "The inner cell mass", "A ball of 16-32 cells", "The fertilized oocyte"],
-    answer: 2
-  },
-  {
-    question: "The stomodeum is initially separated from the foregut by what structure?",
-    options: ["Frontonasal process", "Buccopharyngeal membrane", "Pharyngeal arch", "Nasal placode"],
+    question: "Which muscle controls lower lip protrusion influencing incisors inclination?",
+    options: ["Orbicularis oris", "Mentalis", "Buccinator", "Masseter"],
     answer: 1
   },
   {
-    question: "The philtrum is formed by the fusion of which processes?",
-    options: ["Two maxillary processes", "Two medial nasal processes", "Medial nasal and maxillary processes", "Lateral nasal and maxillary processes"],
-    answer: 1
-  },
-  {
-    question: "Which structure forms the premaxilla?",
-    options: ["Secondary palate", "Primary palate", "Palatine shelves", "Nasal septum"],
-    answer: 1
-  },
-  {
-    question: "The tuberculum impar and lateral lingual swellings contribute to the formation of which part of the tongue?",
-    options: ["Posterior one-third", "Entire tongue", "Anterior two-thirds", "Foramen cecum only"],
+    question: "Which anomaly is ‘tooth within a tooth’?",
+    options: ["Gemination", "Fusion", "Dens in dente", "Concrescence"],
     answer: 2
   },
   {
-    question: "Which component of the skull develops through endochondral ossification?",
-    options: ["Cranial vault", "Maxilla", "Cranial base", "Zygomatic bone"],
-    answer: 2
-  },
-  {
-    question: "The hyoid bone is part of which craniofacial component?",
-    options: ["Membranous neurocranium", "Cartilaginous neurocranium", "Membranous viscerocranium", "Cartilaginous viscerocranium"],
-    answer: 3
-  },
-  {
-    question: "At what age does the condylar cartilage cease activity?",
-    options: ["At birth", "5 years", "20 years", "Puberty"],
-    answer: 2
-  },
-  {
-    question: "The maxillary sinus at birth is approximately the size of what?",
-    options: ["A marble", "A small pea", "A bean", "A grape"],
+    question: "Supplemental supernumerary teeth resemble:",
+    options: ["Different teeth", "Normal teeth of same group", "Only incisors", "Only molars"],
     answer: 1
   },
   {
-    question: "Meckel's cartilage is associated with which pharyngeal arch?",
-    options: ["First arch", "Second arch", "Third arch", "Fourth arch"],
+    question: "Lip incompetence primarily is due to:",
+    options: ["Short upper lip", "Small tongue", "Strong buccinator", "Increased basal bone size"],
     answer: 0
   },
   {
-    question: "Intramembranous ossification of the mandible begins near which structure?",
-    options: ["Meckel's cartilage", "Condylar cartilage", "Coronoid process", "Inferior alveolar nerve"],
-    answer: 3
-  },
-  {
-    question: "The nasal pits give rise to which structures?",
-    options: ["Eyes and ears", "Medial and lateral nasal processes", "Maxillary processes", "Pharyngeal arches"],
+    question: "Excessive teeth size relative to arches leads to:",
+    options: ["Spacing", "Crowding", "Open bite", "Class III"],
     answer: 1
   },
   {
-    question: "What is the function of the synchondroses in the cranial base?",
-    options: ["Muscle attachment", "Cartilage junctions between bones for growth", "Nerve passage", "Blood vessel canals"],
+    question: "Prolonged retention of primary incisors causes:",
+    options: ["Impaction of premolars", "Lingual eruption of permanent incisors", "Spacing increase", "High palate"],
     answer: 1
+  },
+  {
+    question: "Lingual crossbite occurs when:",
+    options: ["Maxilla wider than mandible", "Mandible wider than maxilla", "Both arches equal", "Open bite present"],
+    answer: 1
+  },
+  {
+    question: "True generalized macrodontia is related to:",
+    options: ["Hypothyroidism", "Pituitary gigantism", "Dwarfism", "Muscle hypotonia"],
+    answer: 1
+  },
+  {
+    question: "A blanch test is used to diagnose:",
+    options: ["Tongue thrust", "Frenum interference", "Impaction", "Crossbite"],
+    answer: 1
+  },
+  {
+    question: "Neutral zone is influenced by:",
+    options: ["Lips & cheeks vs. tongue forces", "Bruxism only", "Occlusal trauma only", "Bone thickness only"],
+    answer: 0
+  },
+  {
+    question: "Concrescence is fusion of teeth at:",
+    options: ["Enamel", "Dentin", "Cementum", "Pulp"],
+    answer: 2
+  },
+  {
+    question: "Endogenous tongue thrust causes:",
+    options: ["Orthodontic success", "Reoccurrence of malocclusion", "Posterior crossbite", "Deep bite improvement"],
+    answer: 1
+  },
+  {
+    question: "Basal bone determines:",
+    options: ["Tooth color", "Jaw position in skull", "Salivary flow", "Tongue posture only"],
+    answer: 1
+  },
+  {
+    question: "Missing maxillary lateral incisors usually cause:",
+    options: ["Anterior spacing", "Class III", "Posterior crowding", "Deep bite"],
+    answer: 0
   }
 ];
