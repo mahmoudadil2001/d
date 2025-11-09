@@ -1,77 +1,77 @@
 export const questions = [
   {
-    question: "Knowledge of growth and development is crucial for orthodontists primarily because:",
-    options: ["It helps in understanding genetic disorders", "Facial changes occur throughout life and can be influenced by treatment", "It explains the formation of the zygote", "It details the structure of the blastocyst"],
+    question: "Which skeletal pattern is characterized by the mandible positioned further back relative to the maxilla?",
+    options: ["Skeletal Class I", "Skeletal Class II", "Skeletal Class III", "Open bite"],
     answer: 1
   },
   {
-    question: "The blastocyst is characterized by:",
-    options: ["A solid ball of cells", "A fluid-filled cavity called blastocele", "The presence of the morula", "Formation of the pharyngeal arches"],
-    answer: 1
-  },
-  {
-    question: "When does the buccopharyngeal membrane rupture?",
-    options: ["During the period of the ovum", "To form the blastocele", "To establish the oral opening", "During the formation of the neck"],
+    question: "High gonial angle is typically associated with:",
+    options: ["Short lower facial height", "Deep bite", "Increased vertical facial dimension", "Lingual crossbite"],
     answer: 2
   },
   {
-    question: "The nasal placodes develop from:",
-    options: ["Ectodermal proliferations on the frontal process", "Endodermal lining of the foregut", "Mesoderm of the pharyngeal arches", "The maxillary processes"],
+    question: "The zone where labial/buccal musculature and tongue forces balance is called:",
+    options: ["Neutral zone", "Occlusal plane", "Curve of Spee", "Functional path"],
     answer: 0
   },
   {
-    question: "What is the incisive foramen a landmark between?",
-    options: ["Primary and secondary palate", "Hard and soft palate", "Maxilla and mandible", "Nasal cavity and pharynx"],
-    answer: 0
-  },
-  {
-    question: "The copula is associated with which branchial arch and what is its fate?",
-    options: ["First arch; forms anterior tongue", "Second arch; disappears without contributing to tongue", "Third arch; forms posterior tongue", "Fourth arch; forms epiglottis"],
-    answer: 1
-  },
-  {
-    question: "Which part of the skull is derived from the pharyngeal arches?",
-    options: ["Neurocranium", "Viscerocranium", "Cranial vault", "Calvaria"],
-    answer: 1
-  },
-  {
-    question: "The petrous part of the temporal bone is formed by which type of ossification?",
-    options: ["Intramembranous", "Endochondral", "Both", "Neither"],
-    answer: 1
-  },
-  {
-    question: "Meckel's cartilage is most directly involved in:",
-    options: ["Forming the mandibular bone via ossification", "Serving as a precursor for mandibular mesenchyme", "Forming the maxilla", "Developing the temporomandibular joint"],
-    answer: 1
-  },
-  {
-    question: "Which of the following is NOT a site of endochondral ossification in the mandible?",
-    options: ["Condylar process", "Coronoid process", "Alveolar process", "Mental region"],
+    question: "The most commonly missing permanent teeth are:",
+    options: ["Maxillary lateral incisors", "Mandibular centrals", "Third molars", "Canines"],
     answer: 2
   },
   {
-    question: "The frontal prominence, mandibular arch, and maxillary processes are collectively called the:",
-    options: ["Pharyngeal arches", "Stomodeum", "Nasal pits", "Branchial apparatus"],
-    answer: 1
-  },
-  {
-    question: "The medial alveolar plate of the maxilla develops from:",
-    options: ["The nasal septum", "The junction of the palatal process and the main body of maxilla", "The zygomatic process", "The frontonasal process"],
-    answer: 1
-  },
-  {
-    question: "At what gestational week does the tongue begin to develop?",
-    options: ["2nd week", "4th week", "6th week", "8th week"],
-    answer: 1
-  },
-  {
-    question: "The sulcus terminalis separates:",
-    options: ["Anterior and posterior parts of the tongue", "Tongue from floor of mouth", "Nasal and oral cavities", "Primary and secondary palate"],
+    question: "Which is the most frequently impacted tooth (excluding 3rd molars)?",
+    options: ["Maxillary canine", "Second premolar", "Mandibular incisor", "Mandibular canine"],
     answer: 0
   },
   {
-    question: "What is the role of the condylar cartilage in prenatal life?",
-    options: ["Major growth contributor", "No role", "Forms the coronoid process", "Fuses with Meckel's cartilage"],
+    question: "Adaptive tongue posture often leads to:",
+    options: ["Crowding of posterior teeth", "Incomplete overbite/open bite", "Increased overjet", "Scissor bite"],
+    answer: 1
+  },
+  {
+    question: "Peg-shaped lateral incisors are seen in:",
+    options: ["True generalized microdontia", "Localized microdontia", "Macrodontia", "Anodontia"],
+    answer: 1
+  },
+  {
+    question: "Mesiodens typically occurs:",
+    options: ["Between maxillary central incisors", "In mandibular premolars", "In third molar region", "Near canines"],
+    answer: 0
+  },
+  {
+    question: "Ankylosis of a primary molar causes:",
+    options: ["Spacing", "Infra-occlusion", "Anterior deep bite", "Large dental arch"],
+    answer: 1
+  },
+  {
+    question: "Class II division 2 usually shows:",
+    options: ["Proclined upper incisors", "Retroclined upper incisors", "Open bite", "Class III jaw relation"],
+    answer: 1
+  },
+  {
+    question: "Primary incisor spacing is important for:",
+    options: ["Canine eruption only", "Deep bite formation", "Preventing future crowding", "Rotating molars"],
+    answer: 2
+  },
+  {
+    question: "Premature loss of deciduous molars mainly leads to:",
+    options: ["Distal molar shift", "Mesial migration of permanent molars", "Open bite", "Large overjet"],
+    answer: 1
+  },
+  {
+    question: "Under-contoured proximal restoration causes:",
+    options: ["Spacing increase", "Arch length decrease", "Canine impaction prevention", "Class III malocclusion"],
+    answer: 1
+  },
+  {
+    question: "Oral breathing habit typically results in:",
+    options: ["Well-developed maxilla", "Anterior open bite", "Deep bite", "Class III skeletal pattern"],
+    answer: 1
+  },
+  {
+    question: "Thumb sucking habit affects dentition mainly due to:",
+    options: ["High intensity short duration", "Low intensity repeated duration", "No muscular effect", "Basal bone reduction"],
     answer: 1
   }
 ];
