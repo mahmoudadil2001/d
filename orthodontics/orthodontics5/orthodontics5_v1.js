@@ -1,77 +1,77 @@
 export const questions = [
   {
-    question: "What is the definition of 'Growth'?",
-    options: ["Progress toward maturity", "An increase in size, change in proportion, and progressive complexity", "The formation of organs and organ systems", "Development of facial structures"],
+    question: "Which skeletal pattern is characterized by the mandible positioned further back relative to the maxilla?",
+    options: ["Skeletal Class I", "Skeletal Class II", "Skeletal Class III", "Open bite"],
     answer: 1
   },
   {
-    question: "During which prenatal period do most congenital malformations develop?",
-    options: ["Period of Ovum", "Period of Embryo", "Period of Fetus", "Neonatal Period"],
-    answer: 1
-  },
-  {
-    question: "What structure does the trophoblast develop into?",
-    options: ["The embryo", "The inner cell mass", "The embryonic part of the placenta", "The zygote"],
+    question: "High gonial angle is typically associated with:",
+    options: ["Short lower facial height", "Deep bite", "Increased vertical facial dimension", "Lingual crossbite"],
     answer: 2
   },
   {
-    question: "The frontonasal process is formed by the proliferation of mesoderm covering which structure?",
-    options: ["The stomodeum", "The developing brain", "The pericardium", "The buccopharyngeal membrane"],
-    answer: 1
-  },
-  {
-    question: "What does the primary palate develop from?",
-    options: ["Maxillary process", "Frontonasal process", "Mandibular arch", "Lateral nasal process"],
-    answer: 1
-  },
-  {
-    question: "Cleft lip results from the failure of fusion between which two processes?",
-    options: ["Medial nasal and lateral nasal", "Maxillary and mandibular", "Medial nasal and maxillary", "Frontonasal and mandibular"],
-    answer: 2
-  },
-  {
-    question: "The secondary palate gives rise to which structures?",
-    options: ["Premaxilla and incisor teeth", "Hard and soft palate posterior to incisive foramen", "Nasal septum and philtrum", "Frontonasal process and tuberculum impar"],
-    answer: 1
-  },
-  {
-    question: "Which part of the tongue is derived from the third branchial arch?",
-    options: ["Anterior two-thirds", "Tuberculum impar", "Lateral lingual swellings", "Posterior one-third (base)"],
-    answer: 3
-  },
-  {
-    question: "The cranial vault develops through which type of ossification?",
-    options: ["Endochondral ossification", "Intramembranous ossification", "Cartilaginous ossification", "Synchondrosis ossification"],
-    answer: 1
-  },
-  {
-    question: "Which bone is part of the membranous viscerocranium?",
-    options: ["Hyoid bone", "Malleus", "Maxilla", "Styloid process"],
-    answer: 2
-  },
-  {
-    question: "The maxilla develops from which pharyngeal arch?",
-    options: ["First arch", "Second arch", "Third arch", "Fourth arch"],
+    question: "The zone where labial/buccal musculature and tongue forces balance is called:",
+    options: ["Neutral zone", "Occlusal plane", "Curve of Spee", "Functional path"],
     answer: 0
   },
   {
-    question: "At what week does the palate develop?",
-    options: ["3rd to 5th week", "6th to 9th week", "10th to 12th week", "13th to 15th week"],
-    answer: 1
-  },
-  {
-    question: "What is the initial direction of the palatine shelves before tongue withdrawal?",
-    options: ["Horizontally", "Vertically downward", "Obliquely upward", "Medially inward"],
-    answer: 1
-  },
-  {
-    question: "Which cartilage is most important for postnatal mandibular growth?",
-    options: ["Meckel's cartilage", "Coronoid cartilage", "Condylar cartilage", "Symphyseal cartilage"],
+    question: "The most commonly missing permanent teeth are:",
+    options: ["Maxillary lateral incisors", "Mandibular centrals", "Third molars", "Canines"],
     answer: 2
   },
   {
-    question: "The foramen cecum is located in which part of the tongue?",
-    options: ["At the tip of the tongue", "On the lateral border", "In the midline of the sulcus terminalis", "At the base of the hypobranchial eminence"],
+    question: "Which is the most frequently impacted tooth (excluding 3rd molars)?",
+    options: ["Maxillary canine", "Second premolar", "Mandibular incisor", "Mandibular canine"],
+    answer: 0
+  },
+  {
+    question: "Adaptive tongue posture often leads to:",
+    options: ["Crowding of posterior teeth", "Incomplete overbite/open bite", "Increased overjet", "Scissor bite"],
+    answer: 1
+  },
+  {
+    question: "Peg-shaped lateral incisors are seen in:",
+    options: ["True generalized microdontia", "Localized microdontia", "Macrodontia", "Anodontia"],
+    answer: 1
+  },
+  {
+    question: "Mesiodens typically occurs:",
+    options: ["Between maxillary central incisors", "In mandibular premolars", "In third molar region", "Near canines"],
+    answer: 0
+  },
+  {
+    question: "Ankylosis of a primary molar causes:",
+    options: ["Spacing", "Infra-occlusion", "Anterior deep bite", "Large dental arch"],
+    answer: 1
+  },
+  {
+    question: "Class II division 2 usually shows:",
+    options: ["Proclined upper incisors", "Retroclined upper incisors", "Open bite", "Class III jaw relation"],
+    answer: 1
+  },
+  {
+    question: "Primary incisor spacing is important for:",
+    options: ["Canine eruption only", "Deep bite formation", "Preventing future crowding", "Rotating molars"],
     answer: 2
+  },
+  {
+    question: "Premature loss of deciduous molars mainly leads to:",
+    options: ["Distal molar shift", "Mesial migration of permanent molars", "Open bite", "Large overjet"],
+    answer: 1
+  },
+  {
+    question: "Under-contoured proximal restoration causes:",
+    options: ["Spacing increase", "Arch length decrease", "Canine impaction prevention", "Class III malocclusion"],
+    answer: 1
+  },
+  {
+    question: "Oral breathing habit typically results in:",
+    options: ["Well-developed maxilla", "Anterior open bite", "Deep bite", "Class III skeletal pattern"],
+    answer: 1
+  },
+  {
+    question: "Thumb sucking habit affects dentition mainly due to:",
+    options: ["High intensity short duration", "Low intensity repeated duration", "No muscular effect", "Basal bone reduction"],
+    answer: 1
   }
 ];
