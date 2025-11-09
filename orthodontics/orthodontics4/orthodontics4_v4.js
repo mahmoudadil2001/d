@@ -1,77 +1,77 @@
 export const questions = [
   {
-    question: "Which skeletal classification has a normal relationship between upper and lower jaws?",
+    question: "Which skeletal class features a retrognathic maxilla or prognathic mandible?",
     options: ["Class I", "Class II", "Class III", "Class IV"],
-    answer: 0
-  },
-  {
-    question: "In Angle's classification, the severity of deviation from Class I is measured in:",
-    options: ["Millimeters of overjet", "Fractions of premolar crown width", "Cephalometric angles", "Millimeters of crowding"],
-    answer: 1
-  },
-  {
-    question: "Which radiographic analysis is used to assess skeletal relationships?",
-    options: ["Panoramic radiography", "Cephalometric analysis", "Periapical radiography", "CBCT scan"],
-    answer: 1
-  },
-  {
-    question: "In Class II Division 1 malocclusion, overjet is typically:",
-    options: ["Reduced", "Increased", "Normal", "Reversed"],
-    answer: 1
-  },
-  {
-    question: "What characterizes Class III incisor relationship?",
-    options: ["Lower incisors posterior to upper cingulum", "Lower incisors anterior to upper cingulum", "Lower incisors at upper cingulum", "No incisor contact"],
-    answer: 1
-  },
-  {
-    question: "Which terminal plane relationship predisposes to Class II molar relationship?",
-    options: ["Mesial step", "Distal step", "Flush terminal plane", "Vertical step"],
-    answer: 1
-  },
-  {
-    question: "In skeletal Class III cases, clinical assessment shows:",
-    options: ["Index finger ahead of middle finger", "Middle finger ahead of index finger", "Fingers at same level", "Cannot assess with fingers"],
-    answer: 1
-  },
-  {
-    question: "What is the key difference between Class II Division 1 and Division 2?",
-    options: ["Molar relationship", "Incisor inclination", "Canine relationship", "Presence of crowding"],
-    answer: 1
-  },
-  {
-    question: "In normal vertical facial proportions, the lower facial height is:",
-    options: ["Greater than upper facial height", "Less than upper facial height", "Equal to upper facial height", "Not related to upper facial height"],
     answer: 2
   },
   {
-    question: "Which classification system is considered more useful in clinical practice than Angle's classification?",
-    options: ["Canine classification", "Incisor classification", "Deciduous classification", "Skeletal classification"],
+    question: "In cephalometric analysis, what does the SNB angle specifically measure?",
+    options: ["Maxillary position to cranial base", "Mandibular position to cranial base", "Maxillomandibular relationship", "Vertical facial height"],
     answer: 1
   },
   {
-    question: "What does the SNA angle measure in cephalometrics?",
-    options: ["Mandible to cranial base", "Maxilla to cranial base", "Maxilla to mandible", "Vertical proportions"],
+    question: "According to Angle's classification, in Class II malocclusion the mandibular first molar occludes:",
+    options: ["Mesial to the maxillary first molar", "Distal to the maxillary first molar", "In normal relationship", "With no contact"],
     answer: 1
   },
   {
-    question: "In Class II Division 2 malocclusion, the maxillary central incisors are typically:",
-    options: ["Proclined", "Retroclined", "Normally inclined", "Extruded"],
+    question: "Which clinical finding would indicate a skeletal Class II relationship during finger assessment?",
+    options: ["Middle finger ahead of index finger", "Index finger much ahead of middle finger", "Fingers at same level", "Unable to palpate properly"],
     answer: 1
   },
   {
-    question: "What is the main advantage of incisor classification over Angle's classification?",
-    options: ["It focuses on treatment goals", "It is easier to measure", "It requires no radiographs", "It assesses molar relationship"],
-    answer: 0
+    question: "In incisor classification, Class I relationship exists when lower incisor edges occlude with or below the:",
+    options: ["Incisal edges of upper incisors", "Cingulum plateau of upper incisors", "Cervical third of upper incisors", "Palatal gingival margin"],
+    answer: 1
   },
   {
-    question: "Which terminal plane relationship may lead to Class III permanent molar relationship?",
-    options: ["Distal step", "Flush terminal plane", "Mesial step", "Occlusal plane"],
+    question: "Reduced lower facial height in clinical assessment is typically associated with:",
+    options: ["Anterior open bites", "Deep bites", "Class III malocclusions", "Normal occlusion"],
+    answer: 1
+  },
+  {
+    question: "Which classification system is used when both first permanent molars and canines cannot be used for assessment?",
+    options: ["Premolar classification", "Incisor classification", "Deciduous molar classification", "Soft tissue classification"],
+    answer: 1
+  },
+  {
+    question: "In Class II Division 2 malocclusion, the upper central incisors are typically:",
+    options: ["Proclined", "Retroclined", "Normally inclined", "Severely rotated"],
+    answer: 1
+  },
+  {
+    question: "What is the terminal plane in deciduous dentition?",
+    options: ["Mesial surface of first deciduous molars", "Distal surface of second deciduous molars", "Occlusal surface of canines", "Incisal edges of anterior teeth"],
+    answer: 1
+  },
+  {
+    question: "An increased ANB angle in cephalometrics typically indicates which skeletal relationship?",
+    options: ["Class I", "Class II", "Class III", "Normal"],
+    answer: 1
+  },
+  {
+    question: "In canine classification, Class II relationship indicates the lower canine is:",
+    options: ["More forward than normal", "More backward than normal", "In normal position", "Severely rotated"],
+    answer: 1
+  },
+  {
+    question: "Which aspect of malocclusion does Angle's classification NOT account for?",
+    options: ["Molar relationship in sagittal plane", "Transverse relationships like crossbites", "Dental midline relationships", "Tooth color and morphology"],
+    answer: 1
+  },
+  {
+    question: "A distal step in deciduous dentition is thought to predispose to which permanent molar relationship?",
+    options: ["Class I", "Class II", "Class III", "Normal occlusion"],
+    answer: 1
+  },
+  {
+    question: "In a Class III incisor relationship, where do the lower incisor edges lie relative to the upper cingulum plateau?",
+    options: ["Posterior", "At the same level", "Anterior", "No specific relationship"],
     answer: 2
   },
   {
-    question: "In clinical assessment of AP jaw relationship, ideal maxilla position is:",
-    options: ["2-3 mm posterior to mandible", "2-3 mm anterior to mandible", "Equal to mandible", "5 mm anterior to mandible"],
-    answer: 1
+    question: "What is the primary tool used for clinical assessment of anteroposterior jaw relationship?",
+    options: ["Cephalometric analysis", "Visual inspection only", "Finger placement at A and B points", "Dental cast measurement"],
+    answer: 2
   }
 ];
