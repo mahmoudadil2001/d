@@ -193,7 +193,7 @@ export const lectureNames = {
     },
     "orthodontics": {
         "1": "Introduction",
-        "2": "Terminology",
+        "2": "andrew keys of normal occlusion",
         "3": "Iatrogenic effect of orthodontic treatment",
         "4": "Classification of Malocclusion",
         "5": "growth and development",
