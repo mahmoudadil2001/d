@@ -293,7 +293,7 @@ export const lectureNames = {
         "3": "Diagnosis & Treatment Plan for RPD",
         "4": "Mouth Preparation for RPD",
         "5": "Impression for RPD",
-        "6": "Unknown",
+        "6": "impression materials 2",
         "7": "Unknown",
         "8": "Unknown",
         "9": "Unknown",
