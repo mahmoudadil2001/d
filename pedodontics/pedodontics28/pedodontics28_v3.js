@@ -1,77 +1,77 @@
 export const questions = [
   {
-    question: "What may cause an anterior open bite?",
-    options: ["Tongue positioning between teeth", "Lip competence", "Normal swallowing", "Small tongue size"],
+    question: "Incomplete overbite may result from:",
+    options: ["Tongue lower-lip seal", "Deep palatal vault", "Large tongue size", "Short lips"],
     answer: 0
   },
   {
-    question: "A mesiodens is most commonly located:",
-    options: ["Between mandibular incisors", "Between maxillary central incisors", "In the molar region", "In the premolar region"],
+    question: "Tongue thrust during swallowing may produce:",
+    options: ["Posterior collapse", "Anterior open bite", "Class III molar relation", "Mandibular prognathism"],
     answer: 1
   },
   {
-    question: "What is the effect of a small tongue in a large mandible?",
-    options: ["Open bite", "Deep bite", "No effect", "Crowding"],
+    question: "Endogenous tongue thrust differs from adaptive type because:",
+    options: ["It improves with age", "It persists after orthodontics", "It only occurs during sleep", "It affects only speech"],
+    answer: 1
+  },
+  {
+    question: "Neutral zone depends on balance of:",
+    options: ["Bone density and saliva", "Tongue and lip/cheek forces", "Tooth eruption and speech", "Breathing and posture"],
+    answer: 1
+  },
+  {
+    question: "Teeth displaced due to crowding are usually:",
+    options: ["First molars", "Central incisors", "Last erupting teeth in segments", "Primary canines"],
     answer: 2
   },
   {
-    question: "Which condition is characterized by congenital absence of all teeth?",
-    options: ["Hypodontia", "Oligodontia", "Anodontia", "Macrodontia"],
+    question: "Impaction of teeth due to crowding commonly affects:",
+    options: ["Upper centrals", "Canines", "Lower incisors", "First premolars"],
+    answer: 1
+  },
+  {
+    question: "Supernumerary teeth increasing arch perimeter may:",
+    options: ["Decrease overjet", "Reduce mesial drift", "Increase overjet in maxilla", "Flatten the palate"],
     answer: 2
   },
   {
-    question: "What is the key difference between adaptive and endogenous tongue thrust?",
-    options: ["Response to orthodontic treatment", "Tongue size", "Lip activity", "Jaw relationship"],
-    answer: 0
-  },
-  {
-    question: "The neutral zone is a balance between forces from:",
-    options: ["Lips/cheeks and tongue", "Upper and lower teeth", "Tongue and palate", "Teeth and periodontium"],
-    answer: 0
-  },
-  {
-    question: "Which tooth is most likely to be peg-shaped?",
-    options: ["Maxillary central incisor", "Maxillary lateral incisor", "Mandibular incisor", "Maxillary canine"],
+    question: "Hypodontia is defined as missing:",
+    options: ["More than 6 teeth", "1–2 teeth", "Half the dentition", "Only primary teeth"],
     answer: 1
   },
   {
-    question: "Supernumerary teeth in the maxillary arch may increase:",
-    options: ["Overjet", "Overbite", "Arch length", "Crowding"],
+    question: "Oligodontia leads to:",
+    options: ["Overeruption", "Multiple functional issues", "Rapid growth", "Improved occlusion"],
+    answer: 1
+  },
+  {
+    question: "Peg laterals exhibit:",
+    options: ["Large roots", "Converging mesial and distal sides", "Multiple cusps", "Bifurcated roots"],
+    answer: 1
+  },
+  {
+    question: "Generalized macrodontia is linked to:",
+    options: ["Pituitary gigantism", "Calcium deficiency", "Genetic anomalies only", "Excessive fluoride"],
     answer: 0
   },
   {
-    question: "What is the term for congenital absence of 6 or more teeth?",
-    options: ["Hypodontia", "Oligodontia", "Anodontia", "Microdontia"],
+    question: "Supernumerary teeth often:",
+    options: ["Speed eruption", "Delay eruption", "Flatten curve of Spee", "Prevent crossbite"],
     answer: 1
   },
   {
-    question: "In normal swallowing, the teeth are in:",
-    options: ["Heavy contact", "Light occlusal contact", "No contact", "Edge-to-edge contact"],
-    answer: 1
+    question: "Spacing occurs when:",
+    options: ["Dental arch is larger than dentition", "Teeth erupt early", "Tongue is small", "Jaw is retrognathic"],
+    answer: 0
   },
   {
-    question: "What is a consequence of multiple missing teeth?",
-    options: ["No effect", "Improved function", "Multiple problems", "Spacing only"],
+    question: "Mesial migration refers to teeth moving:",
+    options: ["Distally", "Buccally", "Toward midline", "Palatally"],
     answer: 2
   },
   {
-    question: "Generalized macrodontia is seen in:",
-    options: ["Pituitary dwarfism", "Pituitary gigantism", "Hyperdontia", "Anodontia"],
-    answer: 1
-  },
-  {
-    question: "The tongue's adaptive postural position may be due to:",
-    options: ["Nasal breathing difficulty", "Lip competence", "Normal jaw size", "Small tongue"],
+    question: "Neutral zone is influenced by:",
+    options: ["Air pressures", "Blood flow", "Salivary rate", "Bone remodeling"],
     answer: 0
-  },
-  {
-    question: "Which factor is a dental factor in malocclusion?",
-    options: ["Jaw size", "Tooth size", "Tongue function", "Lip form"],
-    answer: 1
-  },
-  {
-    question: "Why might teeth be displaced?",
-    options: ["Arch too large", "Teeth too small", "Arch too small for dentition", "Normal arch size"],
-    answer: 2
   }
 ];
