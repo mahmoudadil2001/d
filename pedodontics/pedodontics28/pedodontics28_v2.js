@@ -1,77 +1,77 @@
 export const questions = [
   {
-    question: "What is the ideal tongue position during rest?",
-    options: ["Between the teeth", "Below the arch", "Within the dental arches", "Against the lips"],
+    question: "A large lower jaw relative to upper jaw forces the tongue to:",
+    options: ["Shift backward", "Find space between arches", "Elevate to palate", "Touch upper lip"],
+    answer: 1
+  },
+  {
+    question: "Tongue protrusion between incisors during rest prevents:",
+    options: ["Overjet development", "Full vertical incisal eruption", "Lip seal", "Palatal growth"],
+    answer: 1
+  },
+  {
+    question: "Adaptive swallowing may lead to:",
+    options: ["Posterior crossbite", "Buccal crossbite", "Lingual crossbite", "Open gingival embrasures"],
+    answer: 1
+  },
+  {
+    question: "Endogenous tongue thrust affects:",
+    options: ["Posterior segment only", "Anterior segment primarily", "Entire arch uniformly", "Only molars"],
+    answer: 1
+  },
+  {
+    question: "In neutral zone, teeth are positioned where:",
+    options: ["Cheek pressure dominates", "Tongue pressure dominates", "Muscle forces balance", "Lip pressure disappears"],
     answer: 2
   },
   {
-    question: "Which supernumerary tooth is conical and located between central incisors?",
-    options: ["Supplemental", "Mesiodens", "Peg lateral", "Paramolar"],
+    question: "Arch–tooth size discrepancy causing spacing occurs when:",
+    options: ["Teeth are large", "Bones are small", "Arches are large relative to teeth", "Muscle tone is high"],
+    answer: 2
+  },
+  {
+    question: "Mesiodens is usually located between:",
+    options: ["Canine and premolar", "Upper central incisors", "Lower central incisors", "Premolars"],
     answer: 1
   },
   {
-    question: "Excessive dental arch size relative to dentition size leads to:",
-    options: ["Crowding", "Spacing", "Impaction", "Crossbite"],
+    question: "Supernumerary teeth may cause:",
+    options: ["Transverse arch expansion", "Overjet increase in maxilla", "Reduced mandibular length", "Maxillary constriction"],
     answer: 1
   },
   {
-    question: "The most commonly missing teeth after third molars are:",
-    options: ["Maxillary lateral incisors", "Mandibular canines", "Maxillary central incisors", "Mandibular premolars"],
+    question: "Absence of all permanent teeth is called:",
+    options: ["Hypodontia", "Oligodontia", "Partial anodontia", "Anodontia"],
+    answer: 3
+  },
+  {
+    question: "Most commonly missing teeth after third molars:",
+    options: ["Maxillary canines", "Mandibular incisors", "Maxillary lateral incisors", "Second molars"],
+    answer: 2
+  },
+  {
+    question: "Microdontia is most commonly localized to:",
+    options: ["Maxillary lateral incisors", "Lower canines", "Upper central incisors", "Lower molars"],
     answer: 0
   },
   {
-    question: "Which swallowing type may reproduce original tooth position after orthodontic treatment?",
-    options: ["Adaptive swallowing", "Endogenous tongue thrust", "Normal swallowing", "Infantile swallowing"],
-    answer: 1
-  },
-  {
-    question: "The neutral zone concept includes balance between:",
-    options: ["Tongue and palate", "Lips/cheeks and tongue", "Upper and lower jaws", "Teeth and bone"],
-    answer: 1
-  },
-  {
-    question: "A peg-shaped tooth is most commonly a:",
-    options: ["Maxillary lateral incisor", "Mandibular central incisor", "Maxillary canine", "Mandibular molar"],
-    answer: 0
-  },
-  {
-    question: "Supernumerary teeth can cause all EXCEPT:",
-    options: ["Eruption delay", "Tooth deflection", "Decreased overjet in maxilla", "Crowding"],
+    question: "True generalized microdontia is often seen in:",
+    options: ["Gigantism", "Hypothyroidism", "Dwarfism", "Hyperparathyroidism"],
     answer: 2
   },
   {
-    question: "Missing 1-2 permanent teeth is termed:",
-    options: ["Anodontia", "Oligodontia", "Hypodontia", "Microdontia"],
-    answer: 2
-  },
-  {
-    question: "What may result from adaptive swallowing with buccal teeth apart?",
-    options: ["Narrow arch and crossbite", "Deep bite", "Spacing", "No change"],
-    answer: 0
-  },
-  {
-    question: "Tongue size is mainly related to the size of the:",
-    options: ["Maxilla", "Mandible", "Cranial base", "Nasal cavity"],
+    question: "Missing lateral incisors may lead to:",
+    options: ["Space loss", "Tongue thrust habit", "Posterior open bite", "Deepened palate"],
     answer: 1
   },
   {
-    question: "What is the main clinical significance of the neutral zone?",
-    options: ["Aesthetics", "Preventing relapse", "Reducing cost", "Faster treatment"],
+    question: "Crowding usually affects:",
+    options: ["First molars", "Lateral incisors and canines", "Upper centrals only", "Posterior teeth exclusively"],
     answer: 1
   },
   {
-    question: "Generalized microdontia is associated with:",
-    options: ["Pituitary gigantism", "Pituitary dwarfism", "Hyperthyroidism", "Macrodontia"],
+    question: "Mesial migration occurs due to:",
+    options: ["Tooth discoloration", "Alveolar growth", "Reduced muscle activity", "Tongue enlargement"],
     answer: 1
-  },
-  {
-    question: "An anterior oral seal using tongue and lower lip may develop due to:",
-    options: ["Lip competence", "Difficulty in lip sealing", "Normal jaw relationship", "Small tongue"],
-    answer: 1
-  },
-  {
-    question: "Which is a local factor in malocclusion?",
-    options: ["Skeletal pattern", "Muscle function", "Anomalies of tooth size", "Tongue posture"],
-    answer: 2
   }
 ];
