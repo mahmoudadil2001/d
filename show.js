@@ -315,6 +315,7 @@ export const visibleLectures = {
             3,
             4
         ],
+        "26": [],
         "twentyseven": [
             1,
             2,
