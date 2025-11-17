@@ -199,7 +199,7 @@ export const lectureNames = {
         "5": "Etiology of malocclusion",
         "6": "G&D introduction",
         "7": "G&D Growth pattern, timing, variability",
-        "8": "Unknown",
+        "8": "G&D Craniofacial Growth",
         "9": "Unknown",
         "10": "Unknown",
         "11": "Unknown",
