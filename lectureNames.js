@@ -294,7 +294,7 @@ export const lectureNames = {
         "4": "Mouth Preparation for RPD",
         "5": "Impression for RPD",
         "6": "impression materials 2",
-        "7": "Unknown",
+        "7": "support for Distal Extension base",
         "8": "Unknown",
         "9": "Unknown",
         "10": "Unknown",
