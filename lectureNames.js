@@ -169,7 +169,7 @@ export const lectureNames = {
         "7": "Unknown",
         "8": "bleeding disorder",
         "9": "Unknown",
-        "10": "Unknown",
+        "10": "liver disease",
         "11": "Unknown",
         "12": "Unknown",
         "13": "Unknown",
