@@ -134,7 +134,7 @@ export const lectureNames = {
         "4": "Periapical Pathology",
         "5": "inflammatory diseases of bone",
         "6": "Fibro osseous Lesions",
-        "7": "Unknown",
+        "7": "Giant cell lesions",
         "8": "Unknown",
         "9": "Unknown",
         "10": "Unknown",
