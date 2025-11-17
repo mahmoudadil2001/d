@@ -69,7 +69,7 @@ export const lectureNames = {
         "3": "Surgical wounds and infections",
         "4": "Hemorrhage and blood transfusion",
         "5": "Shock",
-        "6": "Unknown",
+        "6": "Parenteral nutrition",
         "7": "Unknown",
         "8": "Unknown",
         "9": "test",
