@@ -101,7 +101,7 @@ export const lectureNames = {
         "3": "Biologic Consideration of Enamel",
         "4": "Biologic Consideration of Dentin 1",
         "5": "Biologic Consideration of Dentin 2",
-        "6": "Unknown",
+        "6": "dental caries",
         "7": "Unknown",
         "8": "Unknown",
         "9": "Unknown",
