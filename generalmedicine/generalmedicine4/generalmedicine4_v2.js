@@ -1,77 +1,77 @@
 export const questions = [
   {
-    question: "What was Angle's assumption about the maxillary first permanent molar in his classification?",
-    options: ["It is always malpositioned", "It is always in physiologically correct position", "It varies with age", "It is irrelevant to classification"],
+    question: "What should be included in screening tests for potential WBC disorders?",
+    options: ["Only blood pressure", "Total and differential WBC counts, hemoglobin and platelet count", "Urine analysis only", "Liver function tests only"],
     answer: 1
   },
   {
-    question: "In Class II malocclusion, the buccal groove of mandibular first molar occludes:",
-    options: ["Anterior to mesiobuccal cusp", "Posterior to mesiobuccal cusp", "With mesiobuccal cusp", "With distobuccal cusp"],
+    question: "What should a dentist do if a patient displays classic signs of leukemia or lymphoma?",
+    options: ["Treat immediately", "Refer directly to a physician", "Ignore the signs", "Prescribe antibiotics"],
     answer: 1
   },
   {
-    question: "Which division of Class II malocclusion features retroclined maxillary central incisors?",
-    options: ["Division 1", "Division 2", "Division 3", "Division 4"],
+    question: "What are the three phases of medical therapy considered in dental management of WBC disorders?",
+    options: ["Diagnosis, treatment, follow-up", "Pre-treatment assessment, care during therapy, post-treatment management", "Initial, intermediate, final", "Emergency, routine, surgical"],
     answer: 1
   },
   {
-    question: "What is the key difference between Class II Division 1 and Division 2?",
-    options: ["Molar relationship", "Incisor inclination", "Canine relationship", "Overbite severity"],
+    question: "What should pretreatment dental care include?",
+    options: ["Only tooth extraction", "Oral hygiene instructions, caries elimination, and eliminating sources of mucosal injury", "Cosmetic procedures only", "Orthodontic treatment"],
     answer: 1
   },
   {
-    question: "In canine classification, Class II indicates the lower canine is:",
-    options: ["More forward than normal", "More backward than normal", "In normal position", "Missing"],
-    answer: 1
-  },
-  {
-    question: "Which terminal plane relationship predisposes to Class II malocclusion?",
-    options: ["Mesial step", "Distal step", "Flush terminal plane", "Horizontal plane"],
-    answer: 1
-  },
-  {
-    question: "In Class III malocclusion, the severity of deviation is measured in:",
-    options: ["Millimeters of overjet", "Fractions of premolar crown width", "Degrees of inclination", "Millimeters of crowding"],
-    answer: 1
-  },
-  {
-    question: "What spatial condition characterizes Type A Class II Division 2 malocclusion?",
-    options: ["Central incisors palatally, laterals labially", "All four incisors palatally without crowding", "All four incisors palatally with crowding", "Canines labially positioned"],
-    answer: 1
-  },
-  {
-    question: "When is incisor classification used instead of Angle's classification?",
-    options: ["When molars are present", "When canines are missing", "When premolars are erupted", "When deciduous teeth are present"],
-    answer: 1
-  },
-  {
-    question: "In normal incisor relationship, the lower incisor edges occlude with:",
-    options: ["Incisal edges of upper incisors", "Cingulum plateau of upper incisors", "Cervical area of upper incisors", "Root surfaces of upper incisors"],
-    answer: 1
-  },
-  {
-    question: "What is the characteristic overbite in Class II Division 2 malocclusion?",
-    options: ["Open bite", "Normal overbite", "Increased overbite", "Edge-to-edge bite"],
+    question: "Why might chemotherapy be initiated quickly in acute leukemia cases?",
+    options: ["To save costs", "Because dental treatment takes priority", "Often within few days of diagnosis, before patient becomes neutropenic", "To avoid weekend treatments"],
     answer: 2
   },
   {
-    question: "Which classification system considers the terminal plane of deciduous second molars?",
-    options: ["Angle's classification", "Canine classification", "Deciduous teeth classification", "Incisor classification"],
-    answer: 2
-  },
-  {
-    question: "In Class I canine relationship, the tip of upper canine is located in:",
-    options: ["Embrasure between lower lateral and canine", "Embrasure between lower canine and first premolar", "Opposite lower canine tip", "Opposite lower first molar"],
+    question: "What can be used to promote growth and differentiation of neutrophils before surgical procedures?",
+    options: ["Antibiotics", "Recombinant human granulocyte colony stimulating factor", "Painkillers", "Antifungal medications"],
     answer: 1
   },
   {
-    question: "What does a flush terminal plane typically lead to?",
-    options: ["Class I or Class II molar relationship", "Class III molar relationship", "Class I only", "Class II only"],
+    question: "Which patients are more susceptible to mucositis from chemotherapy?",
+    options: ["Older persons", "Younger persons", "Only males", "Only females"],
+    answer: 1
+  },
+  {
+    question: "How can mucositis be managed?",
+    options: ["Bland mouth rinses, topical anesthetics, and systemic analgesics", "Only by stopping chemotherapy", "With strong antiseptics only", "No treatment is effective"],
     answer: 0
   },
   {
-    question: "In Class II Division 1 malocclusion, the overjet is typically:",
-    options: ["Decreased", "Normal", "Increased", "Reversed"],
+    question: "What should be done when an oral infection develops in neutropenic patients?",
+    options: ["Ignore it", "Send exudate for culture and antibiotic sensitivity testing", "Prescribe random antibiotics", "Extract all teeth"],
+    answer: 1
+  },
+  {
+    question: "Why are opportunistic infections common in leukemic patients?",
+    options: ["Due to excessive eating", "Because of immature malignant leukocytes, chemotherapy-induced immunocompromise, and broad-spectrum antibiotic use", "Due to poor dental hygiene only", "Because of genetic factors only"],
+    answer: 1
+  },
+  {
+    question: "How do herpetic lesions in leukemic patients compare to those in non-leukemic patients?",
+    options: ["Smaller and heal faster", "Larger and take longer to heal", "Exactly the same", "Never occur"],
+    answer: 1
+  },
+  {
+    question: "What causes submucosal hemorrhage in leukemic patients?",
+    options: ["Excessive brushing", "Thrombocytopenia", "Eating hard foods", "Dental procedures only"],
+    answer: 1
+  },
+  {
+    question: "Which medications are used to prevent GVHD?",
+    options: ["Antibiotics only", "Immunosuppressive agents like corticosteroids, cyclosporine, methotrexate", "Painkillers only", "Vitamin supplements"],
+    answer: 1
+  },
+  {
+    question: "What effect can chemotherapy have on facial bone development in children?",
+    options: ["No effect", "Can lead to micrognathia, retrognathia, or neurosulsion", "Only affects tooth color", "Improves bone growth"],
+    answer: 1
+  },
+  {
+    question: "What percentage of multiple myeloma patients present with osteopenia, osteolysis, and pathologic fractures?",
+    options: ["Up to 20%", "Up to 50%", "Up to 80%", "100%"],
     answer: 2
   }
 ];
