@@ -1,77 +1,77 @@
 export const questions = [
   {
-    question: "According to Angle's classification, what is the key reference point for determining malocclusion?",
-    options: ["Maxillary canine relationship", "Mandibular first permanent molar", "Maxillary first permanent molar", "Mandibular central incisors"],
+    question: "Why is it important for dentists to identify leukemic patients before starting treatment?",
+    options: ["To avoid legal complications", "To prevent serious bleeding problems, poor healing, and postsurgical infection", "To reduce treatment costs", "To simplify dental procedures"],
+    answer: 1
+  },
+  {
+    question: "What finding during clinical examination is highly suggestive of malignancy?",
+    options: ["Enlarged tonsils", "Dental caries", "Enlarged supraclavicular node", "Gingivitis"],
     answer: 2
   },
   {
-    question: "In Angle's Class I malocclusion, where does the buccal groove of the mandibular first molar occlude?",
-    options: ["Distal to mesiobuccal cusp of maxillary first molar", "Mesial to mesiobuccal cusp of maxillary first molar", "With mesiobuccal cusp of maxillary first molar", "With distobuccal cusp of maxillary first molar"],
+    question: "Which diagnostic tool can provide insight into osteolytic lesions associated with WBC disorders?",
+    options: ["Blood pressure monitor", "Panoramic films (OPG)", "Electrocardiogram", "Urine test"],
+    answer: 1
+  },
+  {
+    question: "What is the goal of pretreatment dental assessment for patients with WBC disorders?",
+    options: ["To maximize treatment fees", "To minimize or eliminate oral diseases before chemotherapy", "To delay medical treatment", "To perform cosmetic procedures"],
+    answer: 1
+  },
+  {
+    question: "When should extraction be considered before chemotherapy?",
+    options: ["For all teeth", "Only for anterior teeth", "If periodontal pocket depths >5mm, periapical inflammation present, or tooth is nonfunctional", "Only for cosmetic reasons"],
     answer: 2
   },
   {
-    question: "Which classification is used when first permanent molars are missing?",
-    options: ["Incisor classification", "Canine classification", "Premolar classification", "Deciduous molar classification"],
-    answer: 1
-  },
-  {
-    question: "In Class II Division 1 malocclusion, what is the characteristic of maxillary incisors?",
-    options: ["Retroclined", "Proclined", "Normally inclined", "Absent"],
-    answer: 1
-  },
-  {
-    question: "What type of terminal plane relationship predisposes to Class III malocclusion?",
-    options: ["Distal step", "Flush terminal plane", "Mesial step", "Vertical step"],
+    question: "How much time should be scheduled between extraction and initiation of chemotherapy?",
+    options: ["1 day", "1 week", "Minimum of 3 weeks", "6 months"],
     answer: 2
   },
   {
-    question: "In Class III malocclusion, the mandibular first molar occludes:",
-    options: ["Posterior to normal position", "Anterior to normal position", "In normal position", "Laterally to normal position"],
+    question: "When are prophylactic antibiotics often recommended for dental procedures?",
+    options: ["Always", "Never", "If WBC count is less than 2000/µL", "Only for children"],
+    answer: 2
+  },
+  {
+    question: "What is mucositis and when does it typically begin after chemotherapy initiation?",
+    options: ["Tooth decay that begins immediately", "Inflammation of oral mucosa that begins 7-10 days after chemotherapy", "Gingival overgrowth that begins after radiation", "Bone infection that begins months later"],
     answer: 1
   },
   {
-    question: "Which of the following is NOT considered in Angle's classification?",
-    options: ["Molar relationship", "Crowding", "Overjet", "All of the above"],
-    answer: 3
-  },
-  {
-    question: "In Class II Division 2 malocclusion Type B, how are the maxillary lateral incisors positioned?",
-    options: ["Tipped palatally", "Tipped labially", "Normally positioned", "Missing"],
-    answer: 1
-  },
-  {
-    question: "What is the normal canine relationship in occlusion?",
-    options: ["Tip of upper canine in embrasure between lower canine and first premolar", "Tip of upper canine distal to lower canine", "Tip of upper canine mesial to lower canine", "Tip of upper canine opposite lower first premolar"],
+    question: "Why are signs of infection often masked in leukemic patients?",
+    options: ["Due to neutropenia", "Because they don't feel pain", "Due to excessive bleeding", "Because of xerostomia"],
     answer: 0
   },
   {
-    question: "In incisor classification, Class I is defined by lower incisor edges occluding with:",
-    options: ["The incisal edges of upper incisors", "The cervical third of upper incisors", "The cingulum plateau of upper incisors", "The root surface of upper incisors"],
-    answer: 2
+    question: "What is a common opportunistic infection in leukemic patients?",
+    options: ["Acute pseudomembranous candidiasis", "Dental caries", "Pulpitis", "Temporomandibular joint disorder"],
+    answer: 0
   },
   {
-    question: "Which terminal plane relationship usually leads to Class I or Class II molar relationship?",
-    options: ["Distal step", "Flush terminal plane", "Mesial step", "Vertical plane"],
+    question: "What platelet count is recommended before performing invasive dental procedures?",
+    options: ["At least 10,000/µL", "At least 50,000/µL", "At least 100,000/µL", "Platelet count doesn't matter"],
     answer: 1
   },
   {
-    question: "In Class II malocclusion, the mandibular first molar is positioned:",
-    options: ["Mesially to normal", "Distally to normal", "Buccally to normal", "Lingually to normal"],
+    question: "What is Graft-versus-Host Disease (GVHD)?",
+    options: ["A type of dental caries", "Reaction where donor T cells react against host antigens", "A viral infection", "A fungal infection"],
     answer: 1
   },
   {
-    question: "What is the characteristic overjet in Class II Division 2 malocclusion?",
-    options: ["Increased", "Decreased", "Normal or average", "Reversed"],
-    answer: 2
-  },
-  {
-    question: "Which classification is considered more useful in clinical practice than Angle's classification?",
-    options: ["Canine classification", "Incisor classification", "Premolar classification", "Deciduous classification"],
+    question: "Which drug can cause gingival overgrowth in bone marrow transplant patients?",
+    options: ["Penicillin", "Cyclosporine", "Aspirin", "Calcium supplements"],
     answer: 1
   },
   {
-    question: "In Class III incisor relationship, the lower incisor edges lie:",
-    options: ["Posterior to cingulum plateau", "At cingulum plateau", "Anterior to cingulum plateau", "Superior to cingulum plateau"],
+    question: "What dental complications can chemotherapy during childhood cause?",
+    options: ["Only cosmetic issues", "Shortened or blunted roots, microdontia, hypodontia", "Increased tooth size", "No significant effects"],
+    answer: 1
+  },
+  {
+    question: "What is a serious adverse effect of bisphosphonates used in multiple myeloma patients?",
+    options: ["Tooth discoloration", "Gingival bleeding", "Osteonecrosis of the jaws", "Enamel erosion"],
     answer: 2
   }
 ];
