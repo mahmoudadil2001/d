@@ -136,7 +136,7 @@ export const questions = [
       "Infectious and hypersensitivity vasculitis",
       "Rickettsis and meningococcal infections",
       "Kinocellanoidin purpuri (immune)",
-      "A:d are correct."
+      "All are correct."
     ],
     answer: 3
   },
