@@ -93,8 +93,8 @@ export const questions = [
   {
     question: "Which of the following is NOT one of the four major physiologic events of homeostasis?",
     options: [
-      "Fibronomy",
-      "Alcoholic",
+      "Fibronolysis",
+      "vasodilation",
       "Platelet plug formation",
       "Fibrin production"
     ],
