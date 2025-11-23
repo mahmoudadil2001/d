@@ -238,7 +238,7 @@ export const questions = [
       "Hypoglycemia.",
       "None of the above is correct."
     ],
-    answer: 3
+    answer: 0
   },
   {
     question: "Complications of diabetes.",
