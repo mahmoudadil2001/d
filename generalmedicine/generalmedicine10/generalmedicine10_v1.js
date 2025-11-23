@@ -208,7 +208,7 @@ export const questions = [
       "Stimulates hepatic gluconeogenesis.",
       "All are correct."
     ],
-    answer: 3
+    answer: 0
   },
   {
     question: "Treatment of diabetes with metformin: one is wrong.",
