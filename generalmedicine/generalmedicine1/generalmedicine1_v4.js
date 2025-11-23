@@ -1,77 +1,77 @@
 export const questions = [
   {
-    question: "What is the primary cause of hyperglycemia in diabetes?",
-    options: ["Insulin excess", "Insulin deficiency", "Glucagon deficiency", "Leptin excess"],
-    answer: 1
-  },
-  {
-    question: "Which diabetes type is drug-induced?",
-    options: ["Type 1", "Type 2", "Other specific types", "GDM"],
+    question: "What is the role of insulin in protein metabolism?",
+    options: ["Promotes protein breakdown", "Inhibits protein synthesis", "Promotes protein synthesis", "Has no effect on proteins"],
     answer: 2
   },
   {
-    question: "What is the fasting blood sugar level for prediabetes?",
-    options: ["<100 mg/dL", "100-125 mg/dL", "126-140 mg/dL", ">140 mg/dL"],
-    answer: 1
-  },
-  {
-    question: "Which diabetes type is characterized by insulin resistance?",
-    options: ["Type 1", "Type 2", "GDM", "MODY"],
-    answer: 1
-  },
-  {
-    question: "What is the effect of insulin on amino acid uptake?",
-    options: ["Inhibits", "Facilitates", "No effect", "Destroys"],
-    answer: 1
-  },
-  {
-    question: "Which diabetes type is transient and occurs during pregnancy?",
-    options: ["Type 1", "Type 2", "GDM", "MODY"],
-    answer: 2
-  },
-  {
-    question: "What is the random blood sugar level for prediabetes?",
-    options: ["<140 mg/dL", "140-199 mg/dL", "200-250 mg/dL", ">250 mg/dL"],
-    answer: 1
-  },
-  {
-    question: "Which diabetes type is associated with ketoacidosis?",
-    options: ["Type 1", "Type 2", "GDM", "MODY"],
+    question: "Which type of diabetes was previously called juvenile diabetes?",
+    options: ["Type 1 DM", "Type 2 DM", "Gestational DM", "All types"],
     answer: 0
   },
   {
-    question: "What is the effect of insulin on fat mobilization?",
-    options: ["Stimulates", "Inhibits", "No effect", "Accelerates"],
+    question: "What happens to blood glucose levels under stress in diabetics?",
+    options: ["Decreases significantly", "Remains unchanged", "Increases and remains elevated", "Fluctuates rapidly"],
+    answer: 2
+  },
+  {
+    question: "Which dietary constituent has been proposed as potentially diabetogenic?",
+    options: ["Vitamin C", "Nitrosamines", "Fiber", "Antioxidants"],
     answer: 1
   },
   {
-    question: "Which test is most reliable for asymptomatic diabetes screening?",
-    options: ["RBS", "A1C", "FBS", "OGTT"],
+    question: "What is the destructive process in Type 1 diabetes specific to?",
+    options: ["All pancreatic cells", "Alpha cells only", "Beta cells only", "Delta cells only"],
     answer: 2
   },
   {
-    question: "What is the conversion formula from mg/dL to mmol/L for glucose?",
-    options: ["÷10", "÷15", "÷18", "÷20"],
+    question: "Which statement about Type 2 diabetes pathology is correct?",
+    options: ["Autoimmune destruction occurs", "Always requires insulin immediately", "Involves insulin resistance", "Never causes weight loss"],
     answer: 2
   },
   {
-    question: "Which diabetes type has a strong genetic component?",
-    options: ["Type 1", "Type 2", "GDM", "All types"],
-    answer: 3
+    question: "What is the normal A1C level?",
+    options: ["Below 5.7%", "5.7-6.4%", "6.5-7.0%", "Above 7.0%"],
+    answer: 0
   },
   {
-    question: "What is the effect of growth hormone on glucose disposal?",
-    options: ["Stimulates", "Blocks", "No effect", "Inhibits"],
+    question: "Which symptom is more common in Type 1 than Type 2 diabetes?",
+    options: ["Asymptomatic presentation", "Classic triad symptoms", "Hypertension", "Dyslipidemia"],
     answer: 1
   },
   {
-    question: "Which diabetes type is least common?",
-    options: ["Type 1", "Type 2", "GDM", "Other specific types"],
+    question: "What does the detection of autoantibodies help confirm?",
+    options: ["Type 2 diabetes", "Gestational diabetes", "Type 1 diabetes", "Prediabetes"],
+    answer: 2
+  },
+  {
+    question: "Which factor is NOT associated with increased gestational diabetes risk?",
+    options: ["Overweight", "Age over 25 years", "Family history of DM", "Young maternal age"],
     answer: 3
   },
   {
-    question: "What is the primary treatment for GDM?",
-    options: ["Oral agents", "Diet only", "Insulin", "Surgery"],
+    question: "What characterizes the progression from insulin resistance to overt diabetes?",
+    options: ["Decline in insulin secretion", "Increase in hepatic glucose production", "Both A and B", "Improved beta cell function"],
     answer: 2
+  },
+  {
+    question: "Which test is NOT currently recommended for diabetes diagnosis?",
+    options: ["FBS", "HbA1c", "RBS with symptoms", "OGTT"],
+    answer: 1
+  },
+  {
+    question: "What metabolic disturbance seldom occurs in Type 2 diabetes?",
+    options: ["Hyperglycemia", "Weight loss and ketoacidosis", "Dyslipidemia", "Insulin resistance"],
+    answer: 1
+  },
+  {
+    question: "Which condition may be associated with genetic syndromes like Down's syndrome?",
+    options: ["Secondary diabetes", "Type 1 diabetes", "Gestational diabetes", "Prediabetes"],
+    answer: 0
+  },
+  {
+    question: "What effect does insulin have on gluconeogenesis?",
+    options: ["Stimulates it", "Suppresses it", "Has no effect", "Only affects it in liver"],
+    answer: 1
   }
 ];
