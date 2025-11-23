@@ -3,7 +3,7 @@ export const lectureNames = {
         "1": "Introduction",
         "2": "Classification Of Periapical Disease",
         "3": "Access Opening Preparation",
-        "4": "Applications Of Radiography",
+        "4": "Working length Determination",
         "5": "Rubber Dam",
         "6": "Clean& Shape Root Canal",
         "7": "Clean& Shape Root Canal 2",
