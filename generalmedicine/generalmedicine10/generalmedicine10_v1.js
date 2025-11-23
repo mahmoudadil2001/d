@@ -181,7 +181,7 @@ export const questions = [
     answer: 1
   },
   {
-    question: "Clinical manifestations of hemophilia (A & B) gone is wrong.",
+    question: "Clinical manifestations of hemophilia (A & B) one is wrong.",
     options: [
       "Hemarthrosis (most common) Fixed joints.",
       "Petechiae.",
