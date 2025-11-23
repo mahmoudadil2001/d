@@ -16,12 +16,12 @@ export const questions = [
       "Frequent urination (Polyturia)",
       "Extreme hunger (Polypiagia)",
       "Blurred vision",
-      "Stovelation infections"
+      "Slow healing infections"
     ],
-    answer: 4
+    answer: 3
   },
   {
-    question: "What are lipid glucose insulin?",
+    question: "What gland secret insulin?",
     options: [
       "A dental glands",
       "Primary gland",
@@ -34,11 +34,11 @@ export const questions = [
     question: "What is a long-term complication of poorly controlled diabetes?",
     options: [
       "Improved immune function",
-      "New cell name",
+      "Nerve damage",
       "Lower blood pressure",
       "Weight gain"
     ],
-    answer: 1
+    answer: 3
   },
   {
     question: "Which test measures the average blood sugar level over the past 2-3 months?",
