@@ -124,7 +124,7 @@ export const questions = [
     question: "Regarding Hemophilia A:",
     options: [
       "Is X-Liked disease",
-      "And PET reveals Prolonged PT",
+      "lab tests reveals Prolonged PT and PTT",
       "Is an autosomal dominant disease",
       "Only A and B are correct"
     ],
