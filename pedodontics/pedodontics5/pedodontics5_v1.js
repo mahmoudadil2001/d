@@ -1,77 +1,77 @@
 export const questions = [
   {
-    question: "Which feature characterizes the buccal aspect of the primary maxillary first molar?",
-    options: ["Definite cusp form with sharp cusps", "Marked cervical constriction", "Long root trunk with minimal flare", "Deep developmental grooves"],
+    question: "What is the characteristic feature of the occlusal outline of the maxillary first primary molar from the buccal aspect?",
+    options: ["Definite cusp form", "Scalloped with no definite cusp form", "Straight line", "V-shaped"],
     answer: 1
   },
   {
-    question: "What is the shape of the occlusal surface of the primary mandibular first molar?",
-    options: ["Triangular", "Rhomboidal", "Square", "Oval"],
+    question: "Which cusp is the most prominent, largest and sharpest in the maxillary first primary molar?",
+    options: ["Distobuccal cusp", "Mesiobuccal cusp", "Mesiolingual cusp", "Distolingual cusp"],
+    answer: 2
+  },
+  {
+    question: "What is the shape of the occlusal surface of the maxillary first primary molar?",
+    options: ["Triangular", "Circular", "Rectangular", "Square"],
+    answer: 2
+  },
+  {
+    question: "Which feature connects the mesiolingual and distobuccal cusps in the maxillary first primary molar?",
+    options: ["Central groove", "Buccal developmental groove", "Oblique ridge", "Transverse ridge"],
+    answer: 2
+  },
+  {
+    question: "How does the primary maxillary second molar compare to the permanent maxillary first molar?",
+    options: ["Larger in size", "Same size", "Smaller in size", "Different number of cusps"],
+    answer: 2
+  },
+  {
+    question: "What is the name of the supplemental cusp found on the lingual surface of the mesiolingual cusp in maxillary second molars?",
+    options: ["Cusp of Carabelli", "Tubercle of Carabelli", "Lingual tubercle", "Fifth cusp of Miller"],
     answer: 1
   },
   {
-    question: "Which primary tooth resembles the permanent mandibular first molar?",
-    options: ["Mandibular first molar", "Mandibular second molar", "Maxillary first molar", "Maxillary second molar"],
+    question: "Which primary tooth does NOT resemble any tooth in the permanent dentition?",
+    options: ["Maxillary second molar", "Mandibular first molar", "Mandibular canine", "Maxillary central incisor"],
     answer: 1
   },
   {
-    question: "What is the distinguishing feature of the primary maxillary second molar's lingual aspect?",
-    options: ["Presence of tubercle of Carabelli", "Absence of distolingual cusp", "Single lingual cusp", "No lingual groove"],
+    question: "What is the largest cusp in the mandibular first primary molar?",
+    options: ["Distobuccal cusp", "Mesiobuccal cusp", "Mesiolingual cusp", "Distolingual cusp"],
+    answer: 2
+  },
+  {
+    question: "How many cusps does the mandibular second primary molar typically have?",
+    options: ["Three", "Four", "Five", "Six"],
+    answer: 2
+  },
+  {
+    question: "Which angle is acute and prominent in the mandibular first primary molar from the occlusal aspect?",
+    options: ["Distolingual angle", "Mesiobuccal angle", "Distobuccal angle", "Mesiolingual angle"],
+    answer: 1
+  },
+  {
+    question: "What is the relationship between mesiodistal diameter and cervicoincisal height in maxillary central incisors?",
+    options: ["MD diameter is greater than CI height", "CI height is greater than MD diameter", "They are equal", "Variable relationship"],
     answer: 0
   },
   {
-    question: "How does the crown width of primary teeth compare mesiodistally to faciolingually in anterior teeth?",
-    options: ["Wider mesiodistally", "Wider faciolingually", "Equal in both dimensions", "Varies by tooth type"],
-    answer: 0
-  },
-  {
-    question: "What is the root length compared to crown height in primary mandibular incisors?",
-    options: ["Roots are shorter than crown", "Roots are equal to crown height", "Roots are nearly twice as long as crowns", "Roots are three times longer than crowns"],
-    answer: 2
-  },
-  {
-    question: "Which statement about primary tooth pulp chambers is correct?",
-    options: ["They are smaller than permanent teeth relative to crown size", "They decrease in size with age and function", "They are not affected by occlusal abrasion", "They have fewer pulp horns than permanent teeth"],
+    question: "How does the maxillary lateral incisor differ from the central incisor?",
+    options: ["Larger crown size", "Crown height is greater than mesiodistal width", "Sharper distoincisal angle", "Shorter root"],
     answer: 1
   },
   {
-    question: "When are primary tooth roots typically completed?",
-    options: ["6-12 months after eruption", "18 months to 3 years of age", "4-5 years of age", "6-7 years of age"],
+    question: "What is the characteristic of the maxillary canine's cusp slopes?",
+    options: ["Both slopes equal", "Distal slope longer than mesial", "Mesial slope longer than distal", "No cusp slopes"],
+    answer: 2
+  },
+  {
+    question: "How does the mandibular canine compare to the maxillary canine in mesiodistal dimension?",
+    options: ["Larger", "Smaller", "Same size", "No difference"],
     answer: 1
   },
   {
-    question: "Where does resorption typically begin in primary anterior teeth?",
-    options: ["Buccal surface in cervical third", "Lingual surface in apical third", "Mesial surface near contact area", "Distal surface near apex"],
+    question: "What is the largest tooth in the deciduous dentition?",
+    options: ["Maxillary second molar", "Mandibular second molar", "Maxillary canine", "Mandibular first molar"],
     answer: 1
-  },
-  {
-    question: "What percentage of mandibular first primary molars' mesial roots contain two canals?",
-    options: ["25%", "50%", "75%", "90%"],
-    answer: 2
-  },
-  {
-    question: "Which feature is characteristic of primary maxillary canines?",
-    options: ["Short, blunt root", "Minimal cervical constriction", "Long slender root twice crown height", "Multiple roots"],
-    answer: 2
-  },
-  {
-    question: "What is the color of primary teeth compared to permanent teeth?",
-    options: ["Darker", "Lighter", "Same color", "More yellow"],
-    answer: 1
-  },
-  {
-    question: "How many canals does the mandibular second primary molar typically have?",
-    options: ["One", "Two", "Three", "Four"],
-    answer: 2
-  },
-  {
-    question: "What is the direction of enamel rods in the gingival third of primary teeth?",
-    options: ["Extend occlusally from DEJ", "Extend apically from DEJ", "Run parallel to DEJ", "Run perpendicular to DEJ"],
-    answer: 0
-  },
-  {
-    question: "Which primary tooth has the simplest root canal system?",
-    options: ["Maxillary first molar", "Mandibular second molar", "Maxillary canine", "Mandibular first molar"],
-    answer: 2
   }
 ];
