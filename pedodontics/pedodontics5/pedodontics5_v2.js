@@ -1,77 +1,77 @@
 export const questions = [
   {
-    question: "What is prominent on the buccal surface of primary mandibular molars in the cervical third?",
-    options: ["Developmental groove", "Cervical ridge", "Vertical depression", "Horizontal ridge"],
+    question: "What is prominent in the cervical third of the buccal surface of maxillary first primary molars?",
+    options: ["Developmental groove", "Cervical ridge", "Cusp tip", "Marginal ridge"],
     answer: 1
   },
   {
-    question: "Which cusp is most prominent on the primary maxillary first molar?",
-    options: ["Distobuccal cusp", "Mesiolingual cusp", "Distolingual cusp", "Mesiobuccal cusp"],
+    question: "Which root is longer and larger than others in the maxillary first primary molar?",
+    options: ["Mesiobuccal root", "Distobuccal root", "Palatal root", "All roots are equal"],
+    answer: 2
+  },
+  {
+    question: "What type of convergence does the crown of maxillary first primary molar show?",
+    options: ["Buccal and mesial", "Lingual and distal", "Buccal and distal", "Lingual and mesial"],
     answer: 1
   },
   {
-    question: "How many roots does the primary maxillary first molar have?",
+    question: "Which groove separates the mesiobuccal and distobuccal cusps in maxillary first primary molars?",
+    options: ["Central groove", "Lingual groove", "Buccal developmental groove", "Distal groove"],
+    answer: 2
+  },
+  {
+    question: "What is the shape of the occlusal surface of maxillary second primary molars?",
+    options: ["Triangular", "Rhomboidal", "Circular", "Square"],
+    answer: 1
+  },
+  {
+    question: "Which cusps are connected by the oblique ridge in maxillary second primary molars?",
+    options: ["Mesiobuccal and distolingual", "Mesiolingual and distobuccal", "Mesiobuccal and mesiolingual", "Distobuccal and distolingual"],
+    answer: 1
+  },
+  {
+    question: "From which aspect can part of the mesial surface be visible in mandibular first primary molars?",
+    options: ["Buccal aspect", "Lingual aspect", "Occlusal aspect", "Distal aspect"],
+    answer: 1
+  },
+  {
+    question: "What is the general outline of the mandibular first primary molar from the occlusal aspect?",
+    options: ["Rectangular", "Rhomboidal", "Triangular", "Circular"],
+    answer: 1
+  },
+  {
+    question: "Which cusp is the largest in the mandibular second primary molar?",
+    options: ["Distobuccal cusp", "Mesiobuccal cusp", "Distal cusp", "Mesiolingual cusp"],
+    answer: 1
+  },
+  {
+    question: "How many root canals does the mesial root of mandibular second primary molar typically have?",
     options: ["One", "Two", "Three", "Four"],
+    answer: 1
+  },
+  {
+    question: "What characterizes the incisal edge of maxillary central incisors?",
+    options: ["Curved", "Straight with sharp mesioincisal and rounded distoincisal angle", "Rounded both angles", "Sharp both angles"],
+    answer: 1
+  },
+  {
+    question: "Which surface of maxillary central incisors is smooth without developmental grooves?",
+    options: ["Lingual surface", "Labial surface", "Mesial surface", "Distal surface"],
+    answer: 1
+  },
+  {
+    question: "What is well developed on the lingual surface of maxillary canines?",
+    options: ["Lingual fossa", "Cingulum and marginal ridges", "Developmental grooves", "Incisal edge"],
+    answer: 1
+  },
+  {
+    question: "How do mandibular central and lateral incisors compare to their permanent counterparts?",
+    options: ["Larger in size", "Same size", "Much smaller in size", "Different shape"],
     answer: 2
   },
   {
-    question: "What is the shape of the primary maxillary central incisor's crown from labial view?",
-    options: ["Wider mesiodistally than cervicoincisally", "Wider cervicoincisally than mesiodistally", "Square shaped", "Round shaped"],
-    answer: 0
-  },
-  {
-    question: "Which angle is rounded on the primary maxillary central incisor?",
-    options: ["Mesioincisal angle", "Distoincisal angle", "Both angles are sharp", "Both angles are rounded"],
+    question: "What is the relationship between root length and crown height in maxillary canines?",
+    options: ["Root is shorter than crown", "Root is approximately twice crown height", "Root and crown are equal", "No specific relationship"],
     answer: 1
-  },
-  {
-    question: "What is unique about the root formation of primary teeth?",
-    options: ["Roots don't form completely", "Resorption begins shortly after root completion", "Roots continue growing throughout life", "Roots fuse together"],
-    answer: 1
-  },
-  {
-    question: "Which primary tooth has an oblique ridge connecting mesiolingual and distobuccal cusps?",
-    options: ["Mandibular first molar", "Maxillary first molar", "Mandibular second molar", "Maxillary second molar"],
-    answer: 1
-  },
-  {
-    question: "What percentage of maxillary second primary molars have bifurcated mesiofacial roots?",
-    options: ["25-35%", "50-60%", "75-85%", "85-95%"],
-    answer: 3
-  },
-  {
-    question: "How do primary molar roots flare compared to permanent teeth?",
-    options: ["Flare less at apex", "Flare more as they approach apex", "No flaring occurs", "Flare only mesiodistally"],
-    answer: 1
-  },
-  {
-    question: "Which primary tooth does NOT resemble any permanent tooth?",
-    options: ["Maxillary second molar", "Mandibular first molar", "Maxillary canine", "Mandibular central incisor"],
-    answer: 1
-  },
-  {
-    question: "What is the root-to-crown ratio in primary maxillary canines?",
-    options: ["Root is shorter than crown", "Root equals crown length", "Root is slightly longer than crown", "Root is approximately twice crown height"],
-    answer: 3
-  },
-  {
-    question: "Which surface of primary anterior teeth shows well-developed marginal ridges?",
-    options: ["Labial surface", "Lingual surface", "Proximal surfaces", "Incisal edge"],
-    answer: 1
-  },
-  {
-    question: "How many cusps does the primary mandibular second molar typically have?",
-    options: ["Three", "Four", "Five", "Six"],
-    answer: 2
-  },
-  {
-    question: "What is the timing for exfoliation of primary teeth relative to permanent tooth eruption?",
-    options: ["Before permanent teeth begin forming", "After permanent teeth fully erupt", "As succedaneous teeth move occlusally", "Only when forced by orthodontic treatment"],
-    answer: 2
-  },
-  {
-    question: "Which primary teeth are absent in the dentition?",
-    options: ["Central incisors", "Canines", "Bicuspids and third molars", "First molars"],
-    answer: 2
   }
 ];
