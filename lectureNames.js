@@ -168,7 +168,7 @@ export const lectureNames = {
         "6": "Thyroid diseases",
         "7": "Unknown",
         "8": "bleeding disorder",
-        "9": "Unknown",
+        "9": "Blood discrasia",
         "10": "liver disease",
         "11": "CNS diseases",
         "12": "Allergy",
