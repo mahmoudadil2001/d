@@ -201,7 +201,7 @@ export const lectureNames = {
         "7": "G&D Growth pattern, timing, variability",
         "8": "G&D Craniofacial Growth",
         "9": "G&D  Development of Dentition& Occlusion",
-        "10": "Unknown",
+        "10": "G&D Development of Dentition& Occlusion 2",
         "11": "Unknown",
         "12": "Unknown",
         "13": "Unknown",
