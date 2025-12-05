@@ -39,7 +39,7 @@ export const lectureNames = {
         "5": "bleeding disorders",
         "6": "Unknown",
         "7": "Unknown",
-        "8": "Unknown",
+        "8": "Gastrointestinal Diseases",
         "9": "Unknown",
         "10": "اسئلة الفصل الاول",
         "11": "Unknown",
