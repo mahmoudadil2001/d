@@ -264,7 +264,7 @@ export const lectureNames = {
         "6": "Classification of periodontal diseases 2",
         "7": "pathogenesis of periodontal disease",
         "8": "dental plaque biofilm",
-        "9": "Unknown",
+        "9": "Microbiologic Specificity",
         "10": "Unknown",
         "11": "Unknown",
         "12": "Unknown",
