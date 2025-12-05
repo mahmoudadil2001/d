@@ -1,77 +1,77 @@
 export const questions = [
   {
-    question: "Which of the following is NOT classified as a physical irritant to the pulp?",
-    options: ["Tooth preparation", "Orthodontic movement", "Chemical erosion", "Tooth fracture"],
+    question: "What percentage of dental pulp is composed of water?",
+    options: ["25%", "50%", "75%", "90%"],
     answer: 2
   },
   {
-    question: "What is the primary response of odontoblasts to bacterial irritation in caries?",
-    options: ["Release cytokines and chemokines", "Produce reparative dentin immediately", "Undergo necrosis", "Migrate to the pulp center"],
+    question: "Which pulp function involves pain transmission?",
+    options: ["Formative", "Nutritive", "Sensory", "Protective"],
+    answer: 2
+  },
+  {
+    question: "What is the primary source of bacterial irritation in periodontal disease affecting the pulp?",
+    options: ["Dentinal tubules", "Accessory canals", "Enamel cracks", "Salivary ducts"],
+    answer: 1
+  },
+  {
+    question: "Which mechanical irritant is caused by horizontal tooth brushing?",
+    options: ["Attrition", "Abrasion", "Abfraction", "Erosion"],
+    answer: 1
+  },
+  {
+    question: "What is the term for tooth structure loss due to occlusal forces causing cervical flexure?",
+    options: ["Attrition", "Abrasion", "Abfraction", "Erosion"],
+    answer: 2
+  },
+  {
+    question: "Which type of dentin is formed as a defense reaction to severe irritation?",
+    options: ["Primary dentin", "Reactionary dentin", "Reparative dentin", "Sclerotic dentin"],
+    answer: 2
+  },
+  {
+    question: "What is the clinical appearance of sclerotic dentin?",
+    options: ["Soft and discolored", "Shiny and hard", "Mushy and wet", "Yellow and porous"],
+    answer: 1
+  },
+  {
+    question: "Which pulpal condition may develop into a pulp polyp in young patients?",
+    options: ["Acute pulpitis", "Chronic hyperplastic pulpitis", "Total necrosis", "Hyperemia"],
+    answer: 1
+  },
+  {
+    question: "What is the main cause of pulp irritation during composite resin polymerization?",
+    options: ["Chemical toxicity", "Thermal increase", "Bacterial invasion", "Mechanical pressure"],
+    answer: 1
+  },
+  {
+    question: "Which term describes dentin that is softened and contaminated with bacteria?",
+    options: ["Affected dentin", "Infected dentin", "Sclerotic dentin", "Reparative dentin"],
+    answer: 1
+  },
+  {
+    question: "What is the primary treatment for irreversible pulpitis?",
+    options: ["Pulpotomy", "Root canal treatment", "Fluoride application", "Crown preparation"],
+    answer: 1
+  },
+  {
+    question: "Which factor can lead to pulp necrosis during orthodontic treatment?",
+    options: ["Excessive force", "Acid etching", "Air abrasion", "Laser use"],
     answer: 0
   },
   {
-    question: "Which factor is most critical in determining pulpal response during cavity preparation?",
-    options: ["Color of the tooth", "Remaining dentin thickness", "Patient's age", "Type of anesthetic used"],
+    question: "What is the term for a chronic open pulpitis with exposure to the oral cavity?",
+    options: ["Pulp polyp", "Pulp abscess", "Hyperemia", "Reversible pulpitis"],
     answer: 1
   },
   {
-    question: "What type of necrosis occurs at the site of pulp exposure due to bacterial invasion?",
-    options: ["Coagulation necrosis", "Caseous necrosis", "Liquefaction necrosis", "Gangrenous necrosis"],
-    answer: 2
-  },
-  {
-    question: "Which of the following describes the relationship between remaining dentin thickness and pulp injury?",
-    options: ["Direct relationship", "Inverse relationship", "No relationship", "Variable relationship"],
+    question: "Which type of necrosis results in recognizable cell outlines but loss of intracellular details?",
+    options: ["Liquefaction necrosis", "Coagulation necrosis", "Caseous necrosis", "Fat necrosis"],
     answer: 1
   },
   {
-    question: "What is the main cause of pulp damage during orthodontic treatment?",
-    options: ["Chemical irritation", "Thermal injury", "Circulatory disturbance", "Bacterial invasion"],
-    answer: 2
-  },
-  {
-    question: "Which condition is characterized by loss of tooth structure due to mechanical or frictional forces?",
-    options: ["Erosion", "Abrasion", "Attrition", "Abfraction"],
+    question: "What is the main clinical symptom of acute pulpitis superimposed on chronic pulpitis?",
+    options: ["Mild sensitivity", "Severe night pain", "No pain", "Bleeding on probing"],
     answer: 1
-  },
-  {
-    question: "What effect does deep radiation therapy have on salivary glands?",
-    options: ["Increased salivary flow", "Decreased salivary flow", "No effect", "Changed saliva composition only"],
-    answer: 1
-  },
-  {
-    question: "Which of the following is a formative function of the pulp?",
-    options: ["Pain transmission", "Dentin generation", "Inflammatory response", "Nutrient supply"],
-    answer: 1
-  },
-  {
-    question: "What is the primary mechanism by which periodontal disease affects the pulp?",
-    options: ["Through enamel defects", "Via accessory canals and apical foramen", "Through dentinal tubules only", "Via blood circulation"],
-    answer: 1
-  },
-  {
-    question: "Which dental procedure generates heat and causes difficulty in determining cutting progress?",
-    options: ["Laser preparation", "High-speed drilling with water", "Air abrasion", "Hand instrumentation"],
-    answer: 2
-  },
-  {
-    question: "What is the primary characteristic of erosion lesions?",
-    options: ["V-shaped notches", "Rounded, cupped-out defects", "Linear cracks", "Brown stains"],
-    answer: 1
-  },
-  {
-    question: "Which of the following represents the sensory function of the pulp?",
-    options: ["Dentinogenesis", "Nociception", "Vascular supply", "Inflammatory coordination"],
-    answer: 1
-  },
-  {
-    question: "What happens when tooth fracture occurs through the root?",
-    options: ["Increased dentin formation", "Disturbance in vascular supply", "Enhanced pulp vitality", "Spontaneous healing"],
-    answer: 1
-  },
-  {
-    question: "Which term describes the loss of tooth structure at the cervical area due to occlusal forces?",
-    options: ["Abrasion", "Erosion", "Attrition", "Abfraction"],
-    answer: 3
   }
 ];
