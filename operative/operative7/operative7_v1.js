@@ -1,77 +1,77 @@
 export const questions = [
   {
-    question: "What percentage of dental pulp is composed of water?",
-    options: ["25%", "50%", "75%", "90%"],
+    question: "What is the primary organic material found in dental pulp?",
+    options: ["Collagen fibers and ground substance", "Enamel rods", "Hydroxyapatite crystals", "Salivary proteins"],
+    answer: 0
+  },
+  {
+    question: "Which function of the pulp involves the generation of dentin?",
+    options: ["Nutritive", "Sensory", "Formative", "Protective"],
     answer: 2
   },
   {
-    question: "Which cells in the pulp primarily respond to bacterial irritation by releasing cytokines and chemokines?",
-    options: ["Fibroblasts", "Odontoblasts", "Macrophages", "Leukocytes"],
-    answer: 1
-  },
-  {
-    question: "What is the minimum remaining dentin thickness (RDT) below which acid etching may cause severe pulp irritation?",
-    options: ["100 μm", "200 μm", "300 μm", "500 μm"],
+    question: "What is the main route of bacterial irritation in dental caries?",
+    options: ["Through the periodontal ligament", "Via the apical foramen", "Through dentinal tubules", "Direct pulpal exposure"],
     answer: 2
   },
   {
-    question: "Which of the following is NOT a function of the dental pulp?",
-    options: ["Formative", "Nutritive", "Sensory", "Respiratory"],
-    answer: 3
-  },
-  {
-    question: "What type of pulp response occurs when bacterial invasion leads to localized infiltration by polymorphonuclear leukocytes?",
-    options: ["Reparative dentin formation", "Liquefaction necrosis", "Dentin sclerosis", "Pulp calcification"],
-    answer: 1
-  },
-  {
-    question: "Which dental procedure is LEAST likely to cause significant thermal damage to the pulp?",
-    options: ["Tooth preparation without water coolant", "Composite resin polymerization", "Laser used in pulsating manner", "Air abrasion cavity preparation"],
+    question: "Which physical irritant is associated with tooth wear due to bruxism?",
+    options: ["Abrasion", "Abfraction", "Attrition", "Erosion"],
     answer: 2
   },
   {
-    question: "Through which pathways can periodontal disease extend to affect the pulp?",
-    options: ["Dentinal tubules only", "Accessory canals and apical foramen", "Enamel cracks", "Gingival sulcus"],
+    question: "What is the recommended remaining dentin thickness to avoid severe pulp irritation from acid etching?",
+    options: ["Less than 100 μm", "Less than 300 μm", "More than 500 μm", "Exactly 1 mm"],
     answer: 1
   },
   {
-    question: "What is the primary cause of tooth structure loss in dental erosion?",
-    options: ["Mechanical wear", "Chemical action", "Bacterial acids", "Occlusal forces"],
-    answer: 1
-  },
-  {
-    question: "Which term describes the loss of tooth structure due to occlusal forces causing tooth flexure in the cervical area?",
-    options: ["Attrition", "Abrasion", "Abfraction", "Erosion"],
+    question: "Which type of dentin is formed as a reaction to mild irritation by surviving odontoblasts?",
+    options: ["Primary dentin", "Reparative dentin", "Reactionary dentin", "Sclerotic dentin"],
     answer: 2
   },
   {
-    question: "What temperature increase in the pulp for 10 seconds can cause irreversible damage?",
-    options: ["2.5°C", "5.5°C", "7.5°C", "10.5°C"],
-    answer: 1
-  },
-  {
-    question: "Which of the following is a physical irritant to the pulp?",
-    options: ["Bacterial toxins", "Restorative materials", "Orthodontic movement", "Periodontal disease"],
+    question: "What is the term for dentin that has become mineralized and less permeable due to aging or slow caries?",
+    options: ["Affected dentin", "Infected dentin", "Sclerotic dentin", "Tertiary dentin"],
     answer: 2
   },
   {
-    question: "What is the main component of the organic material in dental pulp?",
-    options: ["Elastin fibers", "Collagen fibers", "Reticular fibers", "Muscle fibers"],
+    question: "Which condition is characterized by a chronic hyperplastic pulp response in young individuals?",
+    options: ["Pulp necrosis", "Pulp polyp", "Acute pulpitis", "Hyperemia"],
     answer: 1
   },
   {
-    question: "Which condition may result from root curettage during periodontal treatment?",
-    options: ["Pulp calcification", "Pulp devitalization", "Dentin sclerosis", "Enamel hypoplasia"],
+    question: "What is the primary cause of dental erosion?",
+    options: ["Mechanical wear", "Chemical action", "Bacterial toxins", "Thermal stress"],
     answer: 1
   },
   {
-    question: "What type of lesion appears as V-shaped notches on the labial surface of teeth?",
-    options: ["Erosion lesions", "Abfraction lesions", "Abrasion lesions", "Attrition lesions"],
+    question: "Which pulpal condition is considered reversible if the irritant is removed?",
+    options: ["Chronic pulpitis with necrosis", "Acute pulpitis", "Hyperemia", "Total necrosis"],
     answer: 2
   },
   {
-    question: "Which of the following best describes the concept of the pulp-dentin complex?",
-    options: ["Pulp and dentin respond independently to irritation", "Pulp and dentin function as separate organs", "Pulp and dentin respond as one organ to pathology", "Dentin protects pulp from all irritants"],
+    question: "What is the main clinical feature of sclerotic dentin?",
+    options: ["Soft and mushy", "Shiny and hard", "Yellow and porous", "Red and inflamed"],
+    answer: 1
+  },
+  {
+    question: "Which instrument is commonly used for air abrasion in operative dentistry?",
+    options: ["Laser", "High-speed handpiece", "Air abrasive device", "Ultrasonic scaler"],
+    answer: 2
+  },
+  {
+    question: "What is the term for tooth structure loss due to occlusal stress and flexure?",
+    options: ["Abrasion", "Attrition", "Abfraction", "Erosion"],
+    answer: 2
+  },
+  {
+    question: "Which type of pulpitis involves liquefaction necrosis surrounded by inflammatory cells?",
+    options: ["Acute pulpitis", "Chronic pulpitis with abscess", "Hyperemia", "Reversible pulpitis"],
+    answer: 1
+  },
+  {
+    question: "What is the final stage of pulpal response to injury?",
+    options: ["Hyperemia", "Chronic pulpitis", "Total necrosis", "Reversible pulpitis"],
     answer: 2
   }
 ];
