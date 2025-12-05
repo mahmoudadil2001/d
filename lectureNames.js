@@ -37,7 +37,7 @@ export const lectureNames = {
         "3": "WBC disorders part 1",
         "4": "WBC Disorders part 2",
         "5": "bleeding disorders",
-        "6": "Unknown",
+        "6": "adrenal glands 1",
         "7": "Unknown",
         "8": "Gastrointestinal Diseases",
         "9": "Unknown",
