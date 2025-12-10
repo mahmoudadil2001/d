@@ -230,7 +230,7 @@ export const lectureNames = {
         "4": "Rampant caries",
         "5": "Morphology of primary teeth",
         "6": "morphology differences primary& permenent",
-        "7": "Unknown",
+        "7": "dental lamina cyst",
         "8": "Unknown",
         "9": "Unknown",
         "10": "Unknown",
