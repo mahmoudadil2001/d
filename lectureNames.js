@@ -265,7 +265,7 @@ export const lectureNames = {
         "7": "pathogenesis of periodontal disease",
         "8": "dental plaque biofilm",
         "9": "Microbiologic Specificity",
-        "10": "Unknown",
+        "10": "Dental calculus",
         "11": "Unknown",
         "12": "Unknown",
         "13": "Unknown",
