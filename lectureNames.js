@@ -71,7 +71,7 @@ export const lectureNames = {
         "5": "Shock",
         "6": "Parenteral nutrition",
         "7": "Fluid balance",
-        "8": "Unknown",
+        "8": "Head injuries and multiple trauma",
         "9": "test",
         "10": "Unknown",
         "11": "Unknown",
