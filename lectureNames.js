@@ -136,7 +136,7 @@ export const lectureNames = {
         "6": "Fibro osseous Lesions",
         "7": "Giant cell lesions",
         "8": "Metabolic and Genetic diseases of bone",
-        "9": "Unknown",
+        "9": "bone neoplasms",
         "10": "Unknown",
         "11": "Unknown",
         "12": "Unknown",
