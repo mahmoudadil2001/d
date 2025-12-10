@@ -333,7 +333,8 @@ export const visibleLectures = {
         ],
         "13": [
             2,
-            3
+            3,
+            4
         ]
     },
     "orthodontics": {
