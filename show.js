@@ -404,6 +404,9 @@ export const visibleLectures = {
             2,
             3,
             4
+        ],
+        "11": [
+            1
         ]
     },
     "pedodontics": {
