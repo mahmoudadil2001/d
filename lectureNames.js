@@ -202,7 +202,7 @@ export const lectureNames = {
         "8": "G&D Craniofacial Growth",
         "9": "G&D  Development of Dentition& Occlusion",
         "10": "G&D Development of Dentition& Occlusion 2",
-        "11": "Unknown",
+        "11": "Tooth movement",
         "12": "Unknown",
         "13": "Unknown",
         "14": "Unknown",
