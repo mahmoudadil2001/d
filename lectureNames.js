@@ -267,7 +267,7 @@ export const lectureNames = {
         "9": "Microbiologic Specificity",
         "10": "Dental calculus",
         "11": "dental stain",
-        "12": "Unknown",
+        "12": "Risk factors",
         "13": "Unknown",
         "14": "Unknown",
         "15": "Unknown",
