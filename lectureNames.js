@@ -103,7 +103,7 @@ export const lectureNames = {
         "5": "Biologic Consideration of Dentin 2",
         "6": "dental caries",
         "7": "Pulp Irritants and inflammatory conditions",
-        "8": "Unknown",
+        "8": "Restorative Dentistry and Pulpal Health",
         "9": "Unknown",
         "10": "Unknown",
         "11": "Unknown",
