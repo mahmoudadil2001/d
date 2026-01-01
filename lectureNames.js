@@ -211,7 +211,7 @@ export const lectureNames = {
         "17": "Unknown",
         "18": "Unknown",
         "19": "Unknown",
-        "20": "Unknown",
+        "20": "lec0 Genetic Factors of Malocclusion",
         "21": "Unknown",
         "22": "Unknown",
         "23": "Unknown",
