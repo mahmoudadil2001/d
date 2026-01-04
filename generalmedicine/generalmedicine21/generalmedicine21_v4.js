@@ -63,3 +63,6 @@ export const questions = [
   {
     question: "In the palpatory method of BP measurement, what is felt?",
     options: ["Brachial pulse", "Radial pulse", "Apical pulse", "Carotid pulse"],
+    answer: 1
+  }
+];
