@@ -40,7 +40,7 @@ export const lectureNames = {
         "6": "adrenal glands 1",
         "7": "adrenal glands 2",
         "8": "Gastrointestinal Diseases",
-        "9": "Inflammatory Bowel Disease",
+        "9": "Inflammatory Bowel Disease part 1",
         "10": "اسئلة الفصل الاول",
         "11": "Unknown",
         "12": "Unknown",
