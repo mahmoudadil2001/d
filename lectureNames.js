@@ -53,7 +53,7 @@ export const lectureNames = {
         "19": "اسئلة الفصل الاول",
         "20": "Lab1 History Taking",
         "21": "clinical examination 1",
-        "22": "clinical examination 2",
+        "22": "Lab3 clinical examination 2",
         "23": "Lab 4 CVS examination",
         "24": "Unknown",
         "25": "Unknown",
