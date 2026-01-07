@@ -72,7 +72,7 @@ export const lectureNames = {
         "6": "Parenteral nutrition",
         "7": "Fluid balance",
         "8": "Head injuries and multiple trauma",
-        "9": "test",
+        "9": "post operative care",
         "10": "Unknown",
         "11": "Unknown",
         "12": "Unknown",
