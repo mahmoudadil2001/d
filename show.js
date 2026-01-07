@@ -199,10 +199,10 @@ export const visibleLectures = {
             3,
             4
         ],
+        "9": [],
         "twentynine": [
             4
-        ],
-        "nine": []
+        ]
     },
     "operative": {
         "1": [
