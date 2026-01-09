@@ -1,77 +1,152 @@
 export const questions = [
   {
-    question: "What causes the disintegration of organic material in dental caries?",
-    options: ["Physical trauma", "Metabolic events in biofilm", "Chemical burns", "Thermal changes"],
+    question: "Which classification of caries is based on whether the lesion is on a smooth surface or in pits/fissures?",
+    options: [
+      "By activity",
+      "By cavitation",
+      "By anatomical site",
+      "By onset"
+    ],
+    answer: 2
+  },
+  {
+    question: "A dentist uses FOTI during examination. What is one clinical use of FOTI?",
+    options: [
+      "To measure bacterial fluorescence",
+      "To decide if radiographs are needed",
+      "To assess pulp vitality",
+      "To detect periapical lesions"
+    ],
     answer: 1
   },
   {
-    question: "Which surfaces of primary teeth are generally not affected by caries except in rampant cases?",
-    options: ["Occlusal surfaces", "Lingual/buccal surfaces", "Proximal surfaces", "Labial surfaces"],
+    question: "Which condition makes teeth more prone to post-eruptive enamel loss?",
+    options: [
+      "Fluorosis",
+      "Amelogenesis imperfecta",
+      "MIH",
+      "Dentinogenesis imperfecta"
+    ],
+    answer: 2
+  },
+  {
+    question: "In permanent dentition, which molars are more susceptible to caries?",
+    options: [
+      "Maxillary first molars",
+      "Mandibular second molars",
+      "Maxillary second molars",
+      "Mandibular first molars"
+    ],
     answer: 1
   },
   {
-    question: "What is the sequence of caries attack in primary dentition after mandibular molars?",
-    options: ["Mandibular anterior teeth", "Maxillary molars", "Primary canines", "Maxillary anterior teeth"],
+    question: "What should be done before visual caries examination to improve detection?",
+    options: [
+      "Use a sharp probe",
+      "Polish and dry teeth",
+      "Take radiographs",
+      "Apply disclosing solution"
+    ],
     answer: 1
   },
   {
-    question: "Once first permanent molars erupt, where does caries frequently occur?",
-    options: ["Root surfaces", "Occlusal pits and fissures", "Cervical areas", "Incisal edges"],
+    question: "Which is a limitation of the Electric Caries Meter (ECM) in children?",
+    options: [
+      "High radiation",
+      "Not reliable on immature teeth",
+      "Causes discomfort",
+      "Only for proximal surfaces"
+    ],
     answer: 1
   },
   {
-    question: "What is the purpose of working round tooth surfaces systematically during examination?",
-    options: ["To save time", "To ensure no surface is missed", "To please the patient", "To follow insurance requirements"],
+    question: "Which type of caries develops adjacent to a filling?",
+    options: [
+      "Primary",
+      "Residual",
+      "Secondary",
+      "Incipient"
+    ],
+    answer: 2
+  },
+  {
+    question: "What is the main benefit of bitewing radiographs in pediatric dentistry?",
+    options: [
+      "Detect periapical pathology",
+      "Assess trauma",
+      "Diagnose proximal and occlusal caries",
+      "Evaluate root development"
+    ],
+    answer: 2
+  },
+  {
+    question: "Which factor is considered a LOCAL secondary factor in caries development?",
+    options: [
+      "Family habits",
+      "Medications",
+      "Orthodontic appliances",
+      "Systemic illness"
+    ],
+    answer: 2
+  },
+  {
+    question: "Which method allows direct visual access to proximal surfaces without radiation?",
+    options: [
+      "Bitewing",
+      "OPG",
+      "TTS",
+      "FOTI"
+    ],
+    answer: 2
+  },
+  {
+    question: "What does a glossy white spot lesion indicate?",
+    options: [
+      "Active caries",
+      "Arrested caries",
+      "Cavitation",
+      "Staining"
+    ],
     answer: 1
   },
   {
-    question: "What facilitates transillumination during caries diagnosis?",
-    options: ["Sharp probes", "Good illumination and light source", "Radiographs", "Dyes and stains"],
-    answer: 1
+    question: "Which diagnostic aid measures electrical conductivity changes in carious enamel?",
+    options: [
+      "Diagnodent",
+      "FOTI",
+      "ECM",
+      "TTS"
+    ],
+    answer: 2
   },
   {
-    question: "What is the problem with probing demineralized sites?",
-    options: ["It causes pain", "It further destroys enamel structure", "It spreads infection", "It changes tooth color"],
-    answer: 1
-  },
-  {
-    question: "Which radiographic view is useful for pre-cooperative children?",
-    options: ["Bitewings", "Periapical", "OPG", "Bimolar"],
+    question: "Which primary teeth are usually affected LAST in the caries sequence?",
+    options: [
+      "Mandibular molars",
+      "Maxillary molars",
+      "Maxillary anteriors",
+      "Mandibular anteriors"
+    ],
     answer: 3
   },
   {
-    question: "What can Laser Fluorescence help with regarding equivocal lesions?",
-    options: ["Provide definitive diagnosis", "Aid the dentist's decision", "Replace radiographs", "Determine treatment cost"],
-    answer: 1
+    question: "What is the main reason proximal caries progresses faster than occlusal caries?",
+    options: [
+      "Deeper fissures",
+      "Less plaque accumulation",
+      "Earlier detection",
+      "Anatomy and contact areas"
+    ],
+    answer: 3
   },
   {
-    question: "What conducts electricity in carious enamel?",
-    options: ["Bacteria themselves", "Ions in the pores of the lesion", "Organic material", "Fluoride compounds"],
-    answer: 1
-  },
-  {
-    question: "How should dentists approach doubtful lesions?",
-    options: ["Ignore them", "Treat as active lesions", "Wait and see", "Refer immediately"],
-    answer: 1
-  },
-  {
-    question: "What is the first visible sign of caries on enamel?",
-    options: ["Brown spot", "Cavitation", "White-spot lesion", "Translucent area"],
-    answer: 2
-  },
-  {
-    question: "Which is NOT a secondary factor in caries etiology?",
-    options: ["Tooth anatomy in early eruption", "Crowding of teeth", "The microorganisms", "Dental appliances"],
-    answer: 2
-  },
-  {
-    question: "What can common childhood illnesses cause in dental hard tissues?",
-    options: ["Hypermineralization", "Hypomineralization and discoloration", "Accelerated eruption", "Spacing between teeth"],
-    answer: 1
-  },
-  {
-    question: "Why is family dietary habit important in caries?",
-    options: ["It determines tooth morphology", "It affects saliva composition", "'Sweet tooth' can be a family phenomenon", "It changes oral pH permanently"],
+    question: "Which is NOT a component of the visual examination for caries diagnosis?",
+    options: [
+      "Systematic approach",
+      "Cleaning teeth",
+      "Using sharp probe",
+      "Drying teeth"
+    ],
     answer: 2
   }
 ];
