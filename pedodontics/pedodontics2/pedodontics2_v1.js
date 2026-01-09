@@ -7,7 +7,7 @@ export const questions = [
       "9",
       "25"
     ],
-    answer: 2
+    answer: 1
   },
   {
     question: "A pediatric dentist is documenting a 4-year-old's primary teeth. Using the FDI system, what is the correct notation for the primary mandibular left second molar?",
