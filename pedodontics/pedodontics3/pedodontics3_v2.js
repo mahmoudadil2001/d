@@ -1,77 +1,152 @@
 export const questions = [
   {
-    question: "In early stages, why can dental caries be arrested?",
-    options: ["Because bacteria die spontaneously", "Because remineralization can occur", "Because enamel self-repairs", "Because saliva kills all bacteria"],
+    question: "A dentist examines a child’s teeth after polishing and drying. A white spot lesion with a matt surface is seen. What does this most likely indicate?",
+    options: [
+      "An arrested lesion",
+      "An active lesion",
+      "A cavitated lesion",
+      "A stained fissure"
+    ],
     answer: 1
   },
   {
-    question: "Which primary teeth are rarely affected by caries?",
-    options: ["Maxillary molars", "Mandibular anterior teeth", "Maxillary anterior teeth", "Mandibular molars"],
+    question: "Which teeth are affected in Molar Incisor Hypomineralization (MIH)?",
+    options: [
+      "Primary molars only",
+      "Permanent incisors and first permanent molars",
+      "All primary teeth",
+      "Only mandibular canines"
+    ],
     answer: 1
   },
   {
-    question: "Why are second primary molars more susceptible to caries than first primary molars?",
-    options: ["They erupt earlier", "They have deeper pits and fissures", "They have thinner enamel", "They are larger in size"],
+    question: "What is the primary advantage of using magnification during caries diagnosis?",
+    options: [
+      "Replaces the need for radiographs",
+      "Improves detection of early lesions",
+      "Prevents caries progression",
+      "Eliminates plaque"
+    ],
     answer: 1
   },
   {
-    question: "Which permanent teeth are not highly susceptible to caries except in rampant caries?",
-    options: ["First permanent molars", "Permanent incisors", "Second permanent molars", "Permanent canines"],
+    question: "Which statement about the Electric Caries Meter (ECM) is TRUE?",
+    options: [
+      "It is highly reliable on immature teeth",
+      "It works on the principle of electrical conductivity",
+      "It is primarily used for proximal caries",
+      "It measures bacterial fluorescence"
+    ],
     answer: 1
   },
   {
-    question: "What is the first step in systematic visual examination for caries?",
-    options: ["Start with anterior teeth", "Start at the same place each time", "Start with the most decayed tooth", "Start with patient's complaint area"],
+    question: "Which type of caries is most likely to progress rapidly and cause pulp exposure in children?",
+    options: [
+      "Occlusal caries",
+      "Proximal caries",
+      "Smooth surface caries",
+      "Residual caries"
+    ],
     answer: 1
   },
   {
-    question: "Why must teeth be cleaned before caries diagnosis?",
-    options: ["To make teeth whiter", "Because plaque is not translucent", "To reduce bacterial count", "To apply fluoride"],
+    question: "A 5-year-old patient has no spaces between primary molars. Which diagnostic tool is ESSENTIAL for detecting proximal caries?",
+    options: [
+      "Visual examination only",
+      "Bitewing radiographs",
+      "Orthopantomogram (OPG)",
+      "Laser fluorescence"
+    ],
     answer: 1
   },
   {
-    question: "What does transillumination help with in caries diagnosis?",
-    options: ["Detecting pulp vitality", "Detecting proximal lesions", "Measuring cavity depth", "Assessing occlusion"],
+    question: "Which factor is NOT a primary factor in the etiology of dental caries?",
+    options: [
+      "The tooth",
+      "Fermentable carbohydrates",
+      "Crowding of teeth",
+      "Time"
+    ],
+    answer: 2
+  },
+  {
+    question: "What does the term 'hidden caries' refer to?",
+    options: [
+      "Caries under a filling",
+      "Caries visible only after drying",
+      "Dentin lesions missed visually but seen on radiographs",
+      "Caries on buccal surfaces"
+    ],
+    answer: 2
+  },
+  {
+    question: "Which is a major drawback of Temporary Tooth Separation (TTS)?",
+    options: [
+      "Exposure to radiation",
+      "Inability to detect cavitation",
+      "Patient discomfort",
+      "High cost"
+    ],
+    answer: 2
+  },
+  {
+    question: "Which microorganism is mainly responsible for caries and can be transmitted from mother to child?",
+    options: [
+      "Lactobacillus",
+      "Streptococcus mutans",
+      "Actinomyces",
+      "Candida albicans"
+    ],
     answer: 1
   },
   {
-    question: "Why is drying teeth important for caries detection?",
-    options: ["To sterilize the surface", "To detect differences in porosity and refractive index", "To apply materials better", "To reduce sensitivity"],
+    question: "Which radiographic view is LEAST accurate for detecting proximal caries?",
+    options: [
+      "Bitewing",
+      "Periapical",
+      "Orthopantomogram (OPG)",
+      "Bimolar"
+    ],
+    answer: 2
+  },
+  {
+    question: "A lesion that formed years ago and shows no progression is classified as:",
+    options: [
+      "Active caries",
+      "Inactive/arrested caries",
+      "Secondary caries",
+      "Residual caries"
+    ],
     answer: 1
   },
   {
-    question: "What can a blunt probe be used for in caries examination?",
-    options: ["Creating retention for fillings", "Removing plaque from fissures", "Testing pulp vitality", "Measuring pocket depth"],
-    answer: 1
+    question: "Why are second primary molars more caries-susceptible than first primary molars?",
+    options: [
+      "They erupt earlier",
+      "They have shallower fissures",
+      "They have deeper pits and fissures",
+      "They are less mineralized"
+    ],
+    answer: 2
   },
   {
-    question: "Which radiographic view is best for periodontal disease diagnosis?",
-    options: ["Bitewing", "Periapical", "OPG", "Bimolar"],
-    answer: 1
+    question: "Which is a SYSTEMIC secondary factor in caries etiology?",
+    options: [
+      "Dental appliance",
+      "Crowding",
+      "Childhood fever",
+      "Anatomy of teeth"
+    ],
+    answer: 2
   },
   {
-    question: "What is FOTI used for?",
-    options: ["Detecting pulp stones", "Detecting proximal enamel and dentinal lesions", "Measuring tooth mobility", "Assessing bone density"],
-    answer: 1
-  },
-  {
-    question: "How long should orthodontic separators be placed for Temporary Tooth Separation?",
-    options: ["1-2 days", "3-4 days", "1 week", "2 weeks"],
-    answer: 1
-  },
-  {
-    question: "What is a drawback of Temporary Tooth Separation?",
-    options: ["High cost", "Patient discomfort", "Ineffectiveness", "Time consumption"],
-    answer: 1
-  },
-  {
-    question: "What principle does Electric Caries Meter work on?",
-    options: ["Thermal conductivity", "Electrical conductivity through porous enamel", "Sound reflection", "Light absorption"],
-    answer: 1
-  },
-  {
-    question: "How are carious lesions classified according to anatomical site?",
-    options: ["Primary and secondary", "Smooth surface and pit & fissure", "Active and inactive", "Cavitated and non-cavitated"],
+    question: "What should be written on prescriptions to indicate sugar-free medicines?",
+    options: [
+      "NF",
+      "SF",
+      "CF",
+      "DF"
+    ],
     answer: 1
   }
 ];
