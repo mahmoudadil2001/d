@@ -1,77 +1,77 @@
 export const questions = [
   {
-    question: "Which lesion is found along the midpalatine raphe?",
-    options: ["Bohn nodules", "Epstein pearls", "Dental lamina cysts", "Natal teeth"],
-    answer: 1
-  },
-  {
-    question: "Dental lamina cysts originate from remnants of the:",
-    options: ["Salivary glands", "Epithelial tissue along raphe", "Dental lamina", "Enamel organ"],
-    answer: 2
-  },
-  {
-    question: "Shedding of primary teeth results from resorption of:",
-    options: ["Crown", "Roots and supporting tissues", "Enamel", "Pulp"],
-    answer: 1
-  },
-  {
-    question: "Permanent premolars erupt by resorbing roots of which teeth?",
-    options: ["Primary incisors", "Primary canines", "Primary molars", "Permanent molars"],
-    answer: 2
-  },
-  {
-    question: "Retained deciduous teeth are commonly seen in which tooth type?",
-    options: ["Maxillary lateral incisor", "Mandibular first molar", "Maxillary canine", "Mandibular central incisor"],
+    question: "What characterizes the contact areas between deciduous molars?",
+    options: ["Very broad and flat", "Very narrow and pointed", "No contact areas", "Irregular and rough"],
     answer: 0
   },
   {
-    question: "Which environmental factor delays tooth eruption?",
-    options: ["Rural diet", "Industrialized diet", "Good nutrition", "High socioeconomic level"],
+    question: "How do deciduous roots compare to crown size in posterior teeth?",
+    options: ["Shorter and thicker", "Longer and slenderer", "Same proportion as anterior teeth", "No consistent relationship"],
     answer: 1
   },
   {
-    question: "Trauma to a primary tooth may lead to:",
-    options: ["Early eruption of permanent successor", "Late eruption of permanent successor", "No effect", "Ankylosis only"],
+    question: "What is the position of pulp horns in deciduous teeth relative to the outer surface?",
+    options: ["Much deeper", "Closer to outer surface", "At the same depth", "No pulp horns"],
     answer: 1
   },
   {
-    question: "Hereditary gingival fibromatosis can cause:",
-    options: ["Tooth displacement and malocclusion", "Early shedding", "Increased tooth size", "Enamel hypoplasia"],
-    answer: 0
-  },
-  {
-    question: "Ankylosis is best described as:",
-    options: ["Increased tooth mobility", "Fusion of tooth to bone", "Root resorption only", "Crown fracture"],
+    question: "What type of dentin formation is increased in deciduous teeth?",
+    options: ["Primary dentin", "Reparative dentin", "Interglobular dentin", "Sclerotic dentin"],
     answer: 1
   },
   {
-    question: "Which diagnostic aid is most valuable for ankylosis?",
-    options: ["Visual inspection", "Radiograph", "Mobility test only", "Pulp testing"],
+    question: "Why is infection localization poor in deciduous pulp?",
+    options: ["Thick dentin walls", "Anatomical complexity", "Lack of blood supply", "No nerve supply"],
     answer: 1
   },
   {
-    question: "Management of ankylosed teeth often involves:",
-    options: ["Immediate extraction always", "Watchful waiting if no complications", "Orthodontic movement", "Crown reduction"],
+    question: "What discourages gross enlargement of deciduous root canals?",
+    options: ["Wide canal shape", "Ribbon shape narrower mesiodistally", "Straight canals", "Multiple canals"],
     answer: 1
   },
   {
-    question: "In unerupted permanent teeth, ankylosis may occur after:",
-    options: ["Enamel epithelium disintegration", "Dentine formation", "Crown completion", "Root completion"],
-    answer: 0
-  },
-  {
-    question: "Which factor is a local influence on eruption time?",
-    options: ["Race", "Sex", "Infection around tooth", "Socioeconomic level"],
+    question: "Which teeth are present in permanent but not primary dentition?",
+    options: ["Incisors and canines", "First and second molars", "Bicuspids and third molars", "All teeth are same"],
     answer: 2
   },
   {
-    question: "An ankylosed tooth appears submerged because:",
-    options: ["It erupts faster", "Adjacent teeth continue to erupt", "It resorbs quickly", "It is smaller"],
+    question: "What affects the size reduction of pulp chambers in primary teeth?",
+    options: ["Function and abrasion only", "Age only", "Function, abrasion, and age", "No reduction occurs"],
+    answer: 2
+  },
+  {
+    question: "What is unique about primary teeth regarding root formation and resorption?",
+    options: ["Roots never form completely", "Resorption begins soon after root completion", "Roots continue growing throughout life", "No resorption occurs"],
     answer: 1
   },
   {
-    question: "What is deposited in the place of resorbed enamel in ankylosis?",
-    options: ["Secondary dentine", "Bone or cementum", "Pulp tissue", "Calculus"],
+    question: "During what age range are primary tooth roots completed?",
+    options: ["6-12 months", "18 months to 3 years", "4-6 years", "7-9 years"],
+    answer: 1
+  },
+  {
+    question: "What is the shape of root canals in primary maxillary incisors?",
+    options: ["Square", "Triangular", "Almost round but somewhat compressed", "Flat and ribbon-like"],
+    answer: 2
+  },
+  {
+    question: "How common are two canals in primary mandibular incisors?",
+    options: ["Very common (>50%)", "Less than 10%", "About 25%", "Never occurs"],
+    answer: 1
+  },
+  {
+    question: "What is the root configuration of mandibular primary molars?",
+    options: ["Single root", "Two roots: mesial and distal", "Three roots", "Four roots"],
+    answer: 1
+  },
+  {
+    question: "What variation exists in maxillary first primary molar canals?",
+    options: ["Always single canal", "Three to four canals with variations", "Always five canals", "No canals present"],
+    answer: 1
+  },
+  {
+    question: "In mandibular second primary molars, how often does the distal root contain more than one canal?",
+    options: ["5%", "25%", "50%", "75%"],
     answer: 1
   }
 ];
