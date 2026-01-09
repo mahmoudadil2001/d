@@ -1,77 +1,77 @@
 export const questions = [
   {
-    question: "What is prominent in the cervical third of the buccal surface of maxillary first primary molars?",
-    options: ["Developmental groove", "Cervical ridge", "Cusp tip", "Marginal ridge"],
+    question: "Which primary tooth's crown is wider mesiodistally than its cervicoincisal height?",
+    options: ["Maxillary lateral incisor", "Maxillary central incisor", "Mandibular canine", "Mandibular lateral incisor"],
     answer: 1
   },
   {
-    question: "Which root is longer and larger than others in the maxillary first primary molar?",
-    options: ["Mesiobuccal root", "Distobuccal root", "Palatal root", "All roots are equal"],
+    question: "In maxillary central incisor, where is the distal contact area located?",
+    options: ["Cervical third", "Middle third", "Incisal third", "Junction of middle and incisal"],
     answer: 2
   },
   {
-    question: "What type of convergence does the crown of maxillary first primary molar show?",
-    options: ["Buccal and mesial", "Lingual and distal", "Buccal and distal", "Lingual and mesial"],
+    question: "Which angle of the maxillary central incisor is sharp?",
+    options: ["Distoincisal", "Mesioincisal", "Both", "Neither"],
     answer: 1
   },
   {
-    question: "Which groove separates the mesiobuccal and distobuccal cusps in maxillary first primary molars?",
-    options: ["Central groove", "Lingual groove", "Buccal developmental groove", "Distal groove"],
+    question: "What is a feature of the mandibular canine compared to the maxillary canine?",
+    options: ["Larger mesiodistally", "More prominent cervical ridge", "Smaller mesiodistally", "Longer root"],
     answer: 2
   },
   {
-    question: "What is the shape of the occlusal surface of maxillary second primary molars?",
-    options: ["Triangular", "Rhomboidal", "Circular", "Square"],
+    question: "Which tooth's root is conical with evenly tapered sides?",
+    options: ["Maxillary central incisor", "Mandibular lateral incisor", "Maxillary canine", "Mandibular canine"],
+    answer: 0
+  },
+  {
+    question: "In the maxillary lateral incisor, what is true about the root?",
+    options: ["Shorter than crown", "Proportionally longer than central", "Same as central", "Absent"],
     answer: 1
   },
   {
-    question: "Which cusps are connected by the oblique ridge in maxillary second primary molars?",
-    options: ["Mesiobuccal and distolingual", "Mesiolingual and distobuccal", "Mesiobuccal and mesiolingual", "Distobuccal and distolingual"],
-    answer: 1
-  },
-  {
-    question: "From which aspect can part of the mesial surface be visible in mandibular first primary molars?",
-    options: ["Buccal aspect", "Lingual aspect", "Occlusal aspect", "Distal aspect"],
-    answer: 1
-  },
-  {
-    question: "What is the general outline of the mandibular first primary molar from the occlusal aspect?",
-    options: ["Rectangular", "Rhomboidal", "Triangular", "Circular"],
-    answer: 1
-  },
-  {
-    question: "Which cusp is the largest in the mandibular second primary molar?",
-    options: ["Distobuccal cusp", "Mesiobuccal cusp", "Distal cusp", "Mesiolingual cusp"],
-    answer: 1
-  },
-  {
-    question: "How many root canals does the mesial root of mandibular second primary molar typically have?",
-    options: ["One", "Two", "Three", "Four"],
-    answer: 1
-  },
-  {
-    question: "What characterizes the incisal edge of maxillary central incisors?",
-    options: ["Curved", "Straight with sharp mesioincisal and rounded distoincisal angle", "Rounded both angles", "Sharp both angles"],
-    answer: 1
-  },
-  {
-    question: "Which surface of maxillary central incisors is smooth without developmental grooves?",
-    options: ["Lingual surface", "Labial surface", "Mesial surface", "Distal surface"],
-    answer: 1
-  },
-  {
-    question: "What is well developed on the lingual surface of maxillary canines?",
-    options: ["Lingual fossa", "Cingulum and marginal ridges", "Developmental grooves", "Incisal edge"],
-    answer: 1
-  },
-  {
-    question: "How do mandibular central and lateral incisors compare to their permanent counterparts?",
-    options: ["Larger in size", "Same size", "Much smaller in size", "Different shape"],
+    question: "Which tooth has a cingulum centered mesiodistally in incisal view?",
+    options: ["Maxillary central incisor", "Maxillary lateral incisor", "Maxillary canine", "Mandibular central incisor"],
     answer: 2
   },
   {
-    question: "What is the relationship between root length and crown height in maxillary canines?",
-    options: ["Root is shorter than crown", "Root is approximately twice crown height", "Root and crown are equal", "No specific relationship"],
+    question: "In primary mandibular incisors, what is the shape of the incisal edge?",
+    options: ["Curved", "Straight", "Angled", "Wavy"],
     answer: 1
+  },
+  {
+    question: "Which tooth has a mesiodistal dimension at root trunk greater than at contact area?",
+    options: ["Maxillary central incisor", "Mandibular canine", "Maxillary lateral incisor", "Mandibular lateral incisor"],
+    answer: 1
+  },
+  {
+    question: "What is the shape of the distal outline in maxillary central incisor labial view?",
+    options: ["Straight", "Convex", "Concave", "Angular"],
+    answer: 1
+  },
+  {
+    question: "Which tooth's lingual surface shows well-developed marginal ridges and cingulum?",
+    options: ["Mandibular central incisor", "Maxillary canine", "Maxillary central incisor", "All of the above"],
+    answer: 3
+  },
+  {
+    question: "In maxillary canine, where are the contact areas located?",
+    options: ["Near incisal edge", "Near cervical line", "Center of crown cervicoocclusally", "Absent"],
+    answer: 2
+  },
+  {
+    question: "Which primary incisor has a distoincisal angle that is rounded?",
+    options: ["Maxillary central", "Mandibular central", "Maxillary lateral", "Mandibular lateral"],
+    answer: 2
+  },
+  {
+    question: "What is the root shape of the maxillary canine?",
+    options: ["Short and thick", "Long and slender", "Bifurcated", "Fused"],
+    answer: 1
+  },
+  {
+    question: "In the maxillary central incisor, which aspect tapers toward the cingulum?",
+    options: ["Labial", "Incisal", "Lingual", "Distal"],
+    answer: 2
   }
 ];
