@@ -1,77 +1,152 @@
 export const questions = [
   {
-    question: "According to the definition, rampant caries results in early involvement of which tooth structure?",
-    options: ["Enamel only", "Dentin surface", "The pulp", "Cementum only"],
+    question: "Which definition best fits 'rampant caries' as described by Massler?",
+    options: [
+      "Slow decay affecting only pits and fissures",
+      "Gradual decay due to aging",
+      "Sudden, widespread, rapidly progressing caries affecting resistant surfaces",
+      "Caries only in malformed teeth"
+    ],
     answer: 2
   },
   {
-    question: "What does the text state about the mechanism of decay in rampant caries compared to ordinary caries?",
-    options: ["The mechanism is completely different", "There is no evidence the mechanism is different", "It only affects malformed teeth", "It bypasses enamel entirely"],
+    question: "A 4-year-old child from a low-income family presents with multiple decayed primary teeth. Which factor likely contributed?",
+    options: [
+      "High socioeconomic status",
+      "Low socioeconomic status",
+      "Excessive fluoride use",
+      "Regular dental visits"
+    ],
     answer: 1
   },
   {
-    question: "Which salivary characteristic has been blamed for rampant dental caries?",
-    options: ["Both thick, ropy saliva and thin, watery saliva", "Only neutral pH saliva", "Excessively fluoridated saliva", "Saliva with high calcium content"],
-    answer: 0
-  },
-  {
-    question: "How does socioeconomic status affect caries prevalence in children?",
-    options: ["Wealthy children have more caries", "Children in poverty suffer twice as much tooth decay", "Socioeconomic status has no effect", "Middle-class children are most affected"],
+    question: "Which anatomic feature makes newly erupted permanent teeth susceptible to caries?",
+    options: [
+      "Fully coalesced pits",
+      "Incomplete enamel calcification",
+      "Lack of fissures",
+      "Thick enamel"
+    ],
     answer: 1
   },
   {
-    question: "What makes permanent molars particularly susceptible to caries?",
-    options: ["They have incompletely coalesced pits and fissures", "They have the hardest enamel", "They are immune to decay", "They have no fissures"],
+    question: "What is a common psychological complication of rampant caries affecting anterior teeth?",
+    options: [
+      "Improved self-esteem",
+      "Psychological problems",
+      "Better oral hygiene",
+      "Reduced dental anxiety"
+    ],
+    answer: 1
+  },
+  {
+    question: "Which feeding practice is most likely to cause ECC?",
+    options: [
+      "Breastfeeding during daytime only",
+      "Nighttime bottle feeding with milk or juice",
+      "Using a sippy cup with water",
+      "Solid foods at meals only"
+    ],
+    answer: 1
+  },
+  {
+    question: "What is the main goal during the third visit in rampant caries management?",
+    options: [
+      "Initial diagnosis only",
+      "Restoring grossly decayed teeth and endodontic treatment",
+      "Parent counseling only",
+      "Diet analysis only"
+    ],
+    answer: 1
+  },
+  {
+    question: "The unique pattern of ECC lesions is influenced by:",
+    options: [
+      "Chronology of primary tooth eruption",
+      "Only genetic factors",
+      "Use of fluoride toothpaste",
+      "Frequency of dental visits"
+    ],
     answer: 0
   },
   {
-    question: "Which complication of rampant caries may require hospitalization?",
-    options: ["General health impairment", "Improved oral hygiene", "Better dietary habits", "Enhanced speech development"],
-    answer: 0
+    question: "Which of the following is a differential diagnosis for rampant caries?",
+    options: [
+      "Gingivitis",
+      "Enamel hypoplasia",
+      "Dental fluorosis",
+      "Tooth ankylosis"
+    ],
+    answer: 1
   },
   {
-    question: "What is the unique term used for rampant caries in infants or preschool children?",
-    options: ["Adult caries", "Geriatric caries", "Bottle caries or nursing caries", "Orthodontic caries"],
+    question: "What is recommended if a child is emotionally dependent on a bedtime bottle?",
+    options: [
+      "Give juice in the bottle",
+      "Use plain or fluoridated water instead",
+      "Add honey to milk",
+      "Avoid cleaning teeth afterwards"
+    ],
+    answer: 1
+  },
+  {
+    question: "Which factor is linked to impaired salivary gland function in ECC?",
+    options: [
+      "Excess iron intake",
+      "Iron deficiency and lead exposure",
+      "High vitamin C",
+      "Low sugar diet"
+    ],
+    answer: 1
+  },
+  {
+    question: "In rampant caries, which surfaces are often affected that are usually 'immune'?",
+    options: [
+      "Occlusal surfaces of molars",
+      "Buccal surfaces of canines",
+      "Lingual surfaces of mandibular incisors",
+      "Proximal surfaces of premolars"
+    ],
     answer: 2
   },
   {
-    question: "In severe ECC, what might parents mistakenly attribute tooth breakdown to?",
-    options: ["Developmental defects rather than caries", "Excessive fluoride", "Good oral hygiene", "Healthy diet"],
-    answer: 0
+    question: "What is the purpose of a diet record in managing ECC?",
+    options: [
+      "To encourage more sugar intake",
+      "To identify timing and type of food/sugar exposure",
+      "To replace dental treatment",
+      "To diagnose systemic disease"
+    ],
+    answer: 1
   },
   {
-    question: "What can effectively block salivary access to tooth surfaces in ECC?",
-    options: ["Nursing bottle", "Toothbrush", "Dental floss", "Tongue movements"],
-    answer: 0
+    question: "Which statement about caries vaccine research is TRUE?",
+    options: [
+      "Targets Lactobacillus only",
+      "Administration is usually via intramuscular injection only",
+      "Targets Mutans Streptococci",
+      "It is already widely available"
+    ],
+    answer: 2
   },
   {
-    question: "Which parental factor is mentioned in ECC etiology?",
-    options: ["Parental history of caries (especially mother)", "Parental height", "Parental occupation", "Parental educational level only"],
-    answer: 0
+    question: "What is a major implication of early loss of second primary molars due to caries?",
+    options: [
+      "No effect on permanent molars",
+      "May cause mesial drifting of first permanent molars",
+      "Improves alignment",
+      "Reduces caries risk"
+    ],
+    answer: 1
   },
   {
-    question: "What nutritional deficiency can impair salivary gland function?",
-    options: ["Iron deficiency", "Vitamin C excess", "High protein intake", "Excess carbohydrates"],
-    answer: 0
-  },
-  {
-    question: "What is the final stage of ECC lesion progression?",
-    options: ["Whole crown destruction leaving brown-black root stumps", "Complete spontaneous healing", "Enamel hardening", "Root resorption only"],
-    answer: 0
-  },
-  {
-    question: "What increased risk does a child with nursing caries have?",
-    options: ["Caries in permanent dentition", "Improved oral health", "Stronger enamel development", "Reduced bacterial count"],
-    answer: 0
-  },
-  {
-    question: "Which preventive strategy is mentioned for rampant caries?",
-    options: ["Sealing all caries-free pits and fissures", "Avoiding all dental visits", "Increasing sugar consumption", "Reducing water intake"],
-    answer: 0
-  },
-  {
-    question: "What treatment approach is used for grossly destroyed teeth in rampant caries?",
-    options: ["Crowns for grossly destructed teeth", "No treatment needed", "Only oral hygiene instruction", "Extraction without replacement"],
-    answer: 0
+    question: "How does ECC differ from rampant caries in terms of dentition affected?",
+    options: [
+      "ECC affects both dentitions",
+      "Rampant caries affects only permanent teeth",
+      "ECC affects primary dentition only",
+      "Rampant caries affects only primary molars"
+    ],
+    answer: 2
   }
 ];
