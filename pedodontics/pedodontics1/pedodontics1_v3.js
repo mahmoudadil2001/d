@@ -1,77 +1,152 @@
 export const questions = [
   {
-    question: "The specialty that provides oral health care for infants, children, and adolescents, including those with special needs, is:",
-    options: ["Orthodontics", "Periodontics", "Pediatric Dentistry", "Endodontics"],
-    answer: 2
-  },
-  {
-    question: "The interval from crown completion to full occlusion for a permanent tooth is approximately:",
-    options: ["1 year", "3 years", "5 years", "7 years"],
-    answer: 2
-  },
-  {
-    question: "What type of pre-eruptive movement occurs when one part of the tooth germ is fixed while the rest grows?",
-    options: ["Bodily Movement", "Eccentric Movement", "Axial Movement", "Functional Movement"],
+    question: "A newborn is seen in the nursery with a very loose mandibular incisor that is at risk of aspiration. The mother is anxious about breastfeeding. What is the immediate management?",
+    options: [
+      "Leave the tooth and advise careful breastfeeding",
+      "Extract the tooth under topical anesthesia",
+      "Stabilize the tooth with a splint",
+      "Prescribe antibiotics and review in 1 week"
+    ],
     answer: 1
   },
   {
-    question: "The Vascular Pressure theory of eruption was challenged because:",
-    options: ["Vessels are too small to generate pressure", "Eruption continues even if periapical vasculature is removed", "No pressure difference exists", "It only applies to animals"],
+    question: "A 7-year-old’s permanent molar is not erupting despite complete crown formation. Radiograph shows no bony crypt resorption. Which theory is most relevant to this failure?",
+    options: [
+      "Root formation theory",
+      "Bone remodeling theory",
+      "Periodontal ligament traction theory",
+      "Vascular pressure theory"
+    ],
     answer: 1
   },
   {
-    question: "Permanent teeth begin to form during which week of prenatal development?",
-    options: ["6th week", "12th week", "20th week", "28th week"],
+    question: "A 4-year-old presents with horizontal grooves on the enamel of all primary teeth. History reveals the mother had hyperemesis gravidarum during pregnancy. The disturbance occurred during which stage?",
+    options: [
+      "Initiation",
+      "Proliferation",
+      "Apposition",
+      "Calcification"
+    ],
     answer: 2
   },
   {
-    question: "The successional lamina, which gives rise to permanent teeth, is a lingual extension of the:",
-    options: ["Vestibular Lamina", "Dental Papilla", "Dental Lamina", "Enamel Organ"],
-    answer: 2
-  },
-  {
-    question: "A disturbance during the apposition stage can lead to:",
-    options: ["Abnormal tooth size", "Abnormal tooth shape", "Enamel Hypoplasia", "Dentinogenesis Imperfecta"],
-    answer: 2
-  },
-  {
-    question: "The 'funnel-shaped' root is characteristic of a tooth that is:",
-    options: ["Fully formed", "Not fully formed", "Undergoing attrition", "A supernumerary"],
+    question: "A 3-week-old infant has an erupted maxillary central incisor. The pediatric dentist diagnoses it as a neonatal tooth. What is the key distinction from a natal tooth?",
+    options: [
+      "Natal teeth are supernumerary",
+      "Neonatal teeth erupt within 30 days after birth",
+      "Natal teeth have complete roots",
+      "Neonatal teeth are always mandibular"
+    ],
     answer: 1
   },
   {
-    question: "Teeth that erupt within the first 30 days after birth are termed:",
-    options: ["Natal teeth", "Neonatal teeth", "Primary teeth", "Deciduous teeth"],
+    question: "In a class of 8-year-olds, girls show more erupted permanent teeth than boys. This is consistent with which known pattern?",
+    options: [
+      "Boys erupt teeth earlier",
+      "Girls erupt teeth earlier",
+      "Eruption is same for both",
+      "Only molars show gender difference"
+    ],
     answer: 1
   },
   {
-    question: "Which of the following is a recommended approach for a natal tooth that is not extremely mobile or traumatic?",
-    options: ["Immediate extraction", "Stabilization with a splint", "Leave it in place", "Crown reduction"],
-    answer: 2
-  },
-  {
-    question: "The first sign of tooth development visible microscopically is the distinction between the vestibular lamina and the:",
-    options: ["Dental Papilla", "Dental Follicle", "Dental Lamina", "Enamel Organ"],
-    answer: 2
-  },
-  {
-    question: "The process of wearing down tooth surfaces through tooth-to-tooth contact is called:",
-    options: ["Abrasion", "Erosion", "Attrition", "Demastication"],
-    answer: 2
-  },
-  {
-    question: "According to the lecture, the eruption of teeth in girls typically occurs:",
-    options: ["Later than in boys", "At the same time as boys", "Earlier than in boys", "It is not gender-specific"],
-    answer: 2
-  },
-  {
-    question: "The cap stage of tooth development is also known as the:",
-    options: ["Initiation stage", "Proliferation stage", "Bud stage", "Bell stage"],
+    question: "A child with Pierre Robin syndrome is noted to have teeth present at birth. Which syndrome is NOT typically associated with natal teeth?",
+    options: [
+      "Ellis–van Creveld syndrome",
+      "Down syndrome",
+      "Hallermann–Streiff syndrome",
+      "Pierre Robin syndrome"
+    ],
     answer: 1
   },
   {
-    question: "A failure in the initiation stage would most likely result in:",
-    options: ["A misshapen tooth", "A missing tooth (Anodontia/Hypodontia)", "Soft enamel", "Discolored dentin"],
+    question: "An 8-year-old presents with a dens evaginatus on a premolar. This anomaly results from a disturbance during which stage?",
+    options: [
+      "Histodifferentiation",
+      "Morphodifferentiation",
+      "Apposition",
+      "Calcification"
+    ],
     answer: 1
+  },
+  {
+    question: "In an animal study, removal of the dental follicle results in no eruption pathway formation. This supports which theory?",
+    options: [
+      "Dental follicle theory",
+      "Root formation theory",
+      "Vascular pressure theory",
+      "Periodontal ligament theory"
+    ],
+    answer: 0
+  },
+  {
+    question: "A 14-year-old has an impacted canine with a normal PDL and complete root. Which theory does this clinical finding challenge?",
+    options: [
+      "Periodontal ligament traction theory",
+      "Bone remodeling theory",
+      "Root formation theory",
+      "Vascular pressure theory"
+    ],
+    answer: 0
+  },
+  {
+    question: "A natal tooth is firm, not causing symptoms, and the root is two-thirds formed. The parents are worried about future alignment. What should be done?",
+    options: [
+      "Extract to prevent malocclusion",
+      "Monitor and reassure",
+      "Perform pulpectomy",
+      "Apply acid etch and sealant"
+    ],
+    answer: 1
+  },
+  {
+    question: "A patient with dentin dysplasia presents with short roots and periapical radiolucencies. The defect occurred during which stage?",
+    options: [
+      "Initiation",
+      "Histodifferentiation",
+      "Morphodifferentiation",
+      "Apposition"
+    ],
+    answer: 1
+  },
+  {
+    question: "A research experiment severs the apical blood supply to an erupting tooth, but eruption continues. This contradicts which theory?",
+    options: [
+      "Vascular pressure theory",
+      "Dental follicle theory",
+      "Root formation theory",
+      "Bone remodeling theory"
+    ],
+    answer: 0
+  },
+  {
+    question: "A 3-year-old with hypodontia is missing multiple primary teeth. The defect likely occurred during which stage?",
+    options: [
+      "Initiation",
+      "Proliferation",
+      "Apposition",
+      "Eruption"
+    ],
+    answer: 0
+  },
+  {
+    question: "A 6-year-old has a supplemental incisor. This results from excessive activity during which stage?",
+    options: [
+      "Initiation",
+      "Proliferation",
+      "Histodifferentiation",
+      "Calcification"
+    ],
+    answer: 1
+  },
+  {
+    question: "When explaining eruption to parents, the dentist says, 'The dental follicle signals bone to resorb ahead of the tooth.' This describes which theory?",
+    options: [
+      "Bone remodeling theory",
+      "Root formation theory",
+      "Vascular pressure theory",
+      "Periodontal ligament theory"
+    ],
+    answer: 0
   }
 ];
