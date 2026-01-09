@@ -1,77 +1,77 @@
 export const questions = [
   {
-    question: "Bohn nodules are histologically different from Epstein pearls because they originate from:",
-    options: ["Dental lamina remnants", "Epithelial tissue remnants", "Salivary gland tissue remnants", "Enamel organ remnants"],
-    answer: 2
-  },
-  {
-    question: "Where are dental lamina cysts typically located?",
-    options: ["Along the buccal mucosa", "On the crests of dental ridges", "On the hard palate away from raphe", "On the tongue dorsum"],
+    question: "How is the occlusal table of deciduous teeth different from permanent teeth?",
+    options: ["Wider labiolingually", "Narrower labiolingually", "Same width", "No occlusal table"],
     answer: 1
   },
   {
-    question: "The shedding of primary teeth is primarily due to:",
-    options: ["Caries", "Trauma", "Root resorption", "Gingival recession"],
-    answer: 2
-  },
-  {
-    question: "Permanent premolar crowns are initially situated between the roots of which teeth?",
-    options: ["Primary incisors", "Primary canines", "Primary molars", "Permanent molars"],
-    answer: 2
-  },
-  {
-    question: "Retained deciduous teeth are often seen in the absence of:",
-    options: ["Caries", "Permanent successor", "Gingival inflammation", "Enamel defects"],
+    question: "What is the thickness relationship of enamel and dentin in deciduous teeth?",
+    options: ["Thicker than permanent", "Thinner than permanent", "Same thickness", "No enamel in deciduous"],
     answer: 1
   },
   {
-    question: "Which racial group tends to have earlier tooth eruption?",
-    options: ["Asian", "Caucasian", "Negro", "Hispanic"],
-    answer: 2
-  },
-  {
-    question: "A supernumerary tooth is likely to cause:",
-    options: ["Early eruption", "Late eruption", "No effect", "Multiple eruptions"],
+    question: "How are the contact areas between deciduous molars characterized?",
+    options: ["Very narrow and pointed", "Broad and flat", "Absent", "Irregular"],
     answer: 1
   },
   {
-    question: "Hereditary gingival fibromatosis is inherited in which pattern?",
-    options: ["Autosomal recessive", "X-linked", "Autosomal dominant", "Mitochondrial"],
-    answer: 2
+    question: "How do deciduous anterior tooth roots compare mesiodistally to permanent anterior teeth?",
+    options: ["Wider", "Narrower", "Same width", "No roots in anterior teeth"],
+    answer: 1
   },
   {
-    question: "Ankylosis in primary molars is often associated with:",
-    options: ["Congenital absence of permanent teeth", "Early eruption", "Increased mobility", "Hypercementosis"],
+    question: "What is the relationship between root length and crown size in posterior deciduous teeth?",
+    options: ["Roots shorter relative to crown", "Roots longer and slenderer relative to crown", "Same proportion as permanent", "No roots in posterior teeth"],
+    answer: 1
+  },
+  {
+    question: "Which mandibular molar has larger pulp chambers in deciduous teeth?",
+    options: ["Maxillary molar", "Mandibular molar", "Both same size", "No pulp in molars"],
+    answer: 1
+  },
+  {
+    question: "What shape does the pulp chamber of deciduous teeth follow?",
+    options: ["Root shape", "Surface of the crown", "Straight line", "Circular pattern"],
+    answer: 1
+  },
+  {
+    question: "How many pulp horns are typically found under each cusp in deciduous teeth?",
+    options: ["None", "One", "Two", "Variable number"],
+    answer: 1
+  },
+  {
+    question: "What is the characteristic shape of root canals in deciduous teeth?",
+    options: ["Round and wide", "Ribbon shaped (hour glass)", "Triangular", "Square"],
+    answer: 1
+  },
+  {
+    question: "Why do deciduous teeth show reduced sensitivity to pain?",
+    options: ["No nerve supply", "Less number of nerve fibers", "Thicker dentin", "Harder enamel"],
+    answer: 1
+  },
+  {
+    question: "What is the first primary tooth to erupt into the oral cavity?",
+    options: ["Maxillary central incisor", "Mandibular central incisor", "Mandibular first molar", "Maxillary canine"],
+    answer: 1
+  },
+  {
+    question: "How long after eruption does root length completion occur in primary teeth?",
+    options: ["1-4 years", "6 months", "Immediately", "5-7 years"],
     answer: 0
   },
   {
-    question: "Which sound is characteristic of an ankylosed tooth when tapped?",
-    options: ["Dull sound", "Solid sound", "Cushioned sound", "Metallic sound"],
+    question: "What is the process of shedding primary teeth called?",
+    options: ["Resorption", "Exfoliation", "Extraction", "Eruption"],
     answer: 1
   },
   {
-    question: "What is the initial management approach for an ankylosed tooth without complications?",
-    options: ["Immediate extraction", "Watchful waiting", "Crown lengthening", "Orthodontic traction"],
-    answer: 1
+    question: "What percentage of maxillary second primary molars have bifurcated mesiofacial roots?",
+    options: ["25-35%", "50-60%", "75-85%", "85-95%"],
+    answer: 3
   },
   {
-    question: "For an unerupted permanent molar with ankylosis, what is attempted first?",
-    options: ["Extraction", "Removal of overlying soft tissue and bone", "Root canal", "Crown placement"],
-    answer: 1
-  },
-  {
-    question: "Which factor is NOT related to differences in eruption time?",
-    options: ["Sex", "Socioeconomic level", "Tooth color", "Nutrition"],
+    question: "How many roots does a maxillary first primary molar typically have?",
+    options: ["One", "Two", "Three", "Four"],
     answer: 2
-  },
-  {
-    question: "In ankylosis, the tooth is in a state of:",
-    options: ["Hyper-mobility", "Static retention", "Continuous eruption", "Active resorption"],
-    answer: 1
-  },
-  {
-    question: "What may happen if ankylosis occurs early in a primary tooth?",
-    options: ["Early exfoliation", "Tooth appears submerged", "Increased caries", "Premature eruption of successor"],
-    answer: 1
   }
 ];
