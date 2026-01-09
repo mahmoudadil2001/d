@@ -1,77 +1,152 @@
 export const questions = [
   {
-    question: "What does the sudden onset of rampant caries suggest about the oral environment?",
-    options: ["It has perfect balance", "An overwhelming imbalance has occurred", "It has excessive fluoride", "Bacterial count is normal"],
+    question: "A 3-year-old has severe decay on maxillary incisors and molars, but mandibular incisors are healthy. Which term best describes this?",
+    options: [
+      "Rampant caries",
+      "Early Childhood Caries",
+      "Radiation caries",
+      "Traumatic caries"
+    ],
     answer: 1
   },
   {
-    question: "Which factor is NOT mentioned as contributing to rampant caries etiology?",
-    options: ["Parent overindulgence/ignorance", "Frequent cariogenic snacks", "Regular dental flossing", "Emotional disturbances"],
+    question: "Which of the following is a systemic factor that can increase susceptibility to rampant caries?",
+    options: [
+      "High socioeconomic status",
+      "Salivary deficiency",
+      "Good oral hygiene",
+      "Regular dental check-ups"
+    ],
+    answer: 1
+  },
+  {
+    question: "Why are permanent molars especially vulnerable to caries soon after eruption?",
+    options: [
+      "They are fully calcified",
+      "They have incompletely coalesced pits and fissures",
+      "They are not exposed to saliva",
+      "They are covered by gums"
+    ],
+    answer: 1
+  },
+  {
+    question: "Which of the following is NOT a typical complication of rampant caries?",
+    options: [
+      "Psychological problems",
+      "Multiple abscesses",
+      "Improved speech",
+      "Orthodontic problems"
+    ],
     answer: 2
   },
   {
-    question: "How can emotional disturbances lead to rampant caries?",
-    options: ["By causing unusual craving for sweets", "By increasing salivary flow", "By strengthening tooth enamel", "By reducing bacterial count"],
-    answer: 0
-  },
-  {
-    question: "What effect does pronounced reduction or complete absence of saliva have?",
-    options: ["Creates alkaline environment", "Results in acidic environment with rampant caries", "Prevents all dental decay", "Strengthens tooth structure"],
+    question: "What is the main cause of ECC according to current understanding?",
+    options: [
+      "Genetic defects only",
+      "Improper feeding practices during sleep",
+      "High fluoride intake",
+      "Lack of dental visits"
+    ],
     answer: 1
   },
   {
-    question: "Why are newly erupted permanent teeth particularly susceptible to caries?",
-    options: ["They have completed enamel calcification", "Enamel calcification is incomplete at eruption", "They have no nerve supply", "They are covered by protective biofilm"],
+    question: "Which activity during the second visit for rampant caries management is crucial?",
+    options: [
+      "Extraction of all molars",
+      "Analysis of diet chart and sugar control",
+      "Placement of space maintainers",
+      "Starting orthodontic treatment"
+    ],
     answer: 1
   },
   {
-    question: "Which area is specifically mentioned as vulnerable to rapid caries progression?",
-    options: ["Lingual pits on maxillary permanent lateral incisors", "Incisal edges of central incisors", "Cingulum of canines", "Root apices of all teeth"],
-    answer: 0
+    question: "What is the initial clinical sign of ECC on maxillary incisors?",
+    options: [
+      "Brown cavitation",
+      "Dull white area along the gum line",
+      "Yellow staining",
+      "Enamel fracture"
+    ],
+    answer: 1
   },
   {
-    question: "What speech-related complication can result from rampant caries?",
-    options: ["Difficulty in speech", "Improved pronunciation", "Enhanced vocal range", "Better articulation"],
-    answer: 0
-  },
-  {
-    question: "At what age does Early Childhood Caries (ECC) typically occur?",
-    options: ["During adolescence", "In elderly patients", "In children 71 months or younger", "Only in adults"],
+    question: "Which group has the highest caries experience according to diet studies in ECC?",
+    options: [
+      "High milk group",
+      "High water group",
+      "High-carbohydrate soft drink group",
+      "High juice group"
+    ],
     answer: 2
   },
   {
-    question: "What pattern of tooth involvement is characteristic of ECC?",
-    options: ["Mandibular incisors are most affected", "All teeth are equally affected", "Maxillary incisors are most vulnerable", "Only posterior teeth are affected"],
+    question: "What is a key preventive measure for rampant caries in communities?",
+    options: [
+      "Avoiding all dental sealants",
+      "Water fluoridation in low-fluoride areas",
+      "Encouraging nighttime bottle feeding",
+      "Delaying first dental visit to age 6"
+    ],
+    answer: 1
+  },
+  {
+    question: "Which factor is related to the progression of ECC lesions?",
+    options: [
+      "Chronology of permanent tooth eruption",
+      "Duration of deleterious feeding habits",
+      "Use of fluoride toothpaste only",
+      "High socioeconomic status"
+    ],
+    answer: 1
+  },
+  {
+    question: "In rampant caries, which teeth are 'usually regarded as immune to ordinary decay' but can be affected?",
+    options: [
+      "Mandibular molars",
+      "Maxillary incisors",
+      "Mandibular incisors",
+      "All primary teeth"
+    ],
     answer: 2
   },
   {
-    question: "Which factor has NOT been epidemiologically associated with caries in breastfed infants?",
-    options: ["Poor oral hygiene", "Carbohydrate diet", "Human breastfeeding alone", "Frequent nighttime feeding"],
+    question: "What is the primary purpose of collecting saliva in rampant caries management?",
+    options: [
+      "To test for systemic disease",
+      "To determine salivary flow and viscosity",
+      "To culture for viruses",
+      "To measure pH only"
+    ],
+    answer: 1
+  },
+  {
+    question: "Which statement about Mutans Streptococci in ECC is TRUE?",
+    options: [
+      "It cannot be transmitted",
+      "Levels in children are unrelated to caregivers",
+      "Managing adult reservoirs may reduce transmission",
+      "It is harmless in infants"
+    ],
     answer: 2
   },
   {
-    question: "What is implicated in nursing caries due to lactose content?",
-    options: ["Human breast milk, bovine milk, and milk formulas", "Water only", "Vegetable juices", "Meat products"],
-    answer: 0
-  },
-  {
-    question: "During which time is salivary flow decreased, increasing caries risk?",
-    options: ["During physical exercise", "During sleep", "During meals", "During speaking"],
+    question: "What is a major implication of losing primary molars early due to rampant caries?",
+    options: [
+      "No space loss occurs",
+      "Space loss may occur, requiring space maintainers",
+      "Permanent molars erupt normally",
+      "Speech is always affected"
+    ],
     answer: 1
   },
   {
-    question: "What is a key aim in rampant caries management?",
-    options: ["Arrest and control of caries process", "Extraction of all teeth", "Avoiding all restorations", "Postponing treatment indefinitely"],
-    answer: 0
-  },
-  {
-    question: "What should be done during the first visit for rampant caries treatment?",
-    options: ["Extract all questionable teeth", "Excavate and restore all lesions", "Wait for cavities to enlarge", "Only provide oral hygiene instructions"],
-    answer: 1
-  },
-  {
-    question: "What is recommended if a child has considerable emotional dependence on a bottle?",
-    options: ["Continue with sweetened liquids", "Use plain or fluoridated water", "Stop all fluid intake", "Switch to carbonated drinks"],
-    answer: 1
+    question: "How does rampant caries differ from ECC in terms of age group?",
+    options: [
+      "Rampant caries occurs only in infants",
+      "ECC occurs in all age groups",
+      "Rampant caries can occur in adolescents",
+      "ECC only affects adults"
+    ],
+    answer: 2
   }
 ];
