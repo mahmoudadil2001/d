@@ -1,77 +1,152 @@
 export const questions = [
   {
-    question: "What characteristic makes rampant caries different from ordinary decay?",
-    options: ["It affects teeth usually regarded as immune to ordinary decay", "It only occurs in primary teeth", "It progresses very slowly over years", "It is limited to occlusal surfaces only"],
-    answer: 0
-  },
-  {
-    question: "Which emotional factor is mentioned as potentially contributing to rampant caries?",
-    options: ["Excessive happiness", "Repressed emotions and fears", "High self-esteem", "Social extroversion"],
+    question: "A 14-year-old presents with sudden, widespread caries on surfaces usually resistant to decay. This is most characteristic of:",
+    options: [
+      "Early Childhood Caries",
+      "Rampant caries",
+      "Radiation caries",
+      "Enamel hypoplasia"
+    ],
     answer: 1
   },
   {
-    question: "What role does saliva play in controlling dental caries?",
-    options: ["It has no significant role", "It provides natural protective mechanisms", "It increases sugar metabolism", "It hardens dental plaque"],
+    question: "Which factor is strongly linked to the emotional etiology of rampant caries?",
+    options: [
+      "High socioeconomic status",
+      "Repressed emotions and anxiety",
+      "Excessive fluoride use",
+      "Regular dental visits"
+    ],
     answer: 1
   },
   {
-    question: "Children from which socioeconomic background suffer more from tooth decay?",
-    options: ["High-income families", "Middle-class families", "Families living in poverty", "All socioeconomic groups equally"],
+    question: "In ECC, the maxillary incisors are most vulnerable because:",
+    options: [
+      "They erupt first",
+      "They are less mineralized",
+      "They are not protected by saliva during feeding",
+      "They have deeper fissures"
+    ],
     answer: 2
   },
   {
-    question: "Which tooth surface is particularly vulnerable to rapid caries progression?",
-    options: ["Occlusal surfaces of premolars", "Lingual pits on maxillary permanent molars", "Labial surfaces of mandibular canines", "Incisal edges of anterior teeth"],
-    answer: 1
-  },
-  {
-    question: "In permanent teeth, rampant caries typically involves which surfaces?",
-    options: ["Only occlusal surfaces", "Buccal and lingual surfaces of premolars and molars", "Only proximal surfaces of incisors", "Only root surfaces"],
-    answer: 1
-  },
-  {
-    question: "Which complication may result from rampant caries affecting maxillary anterior teeth?",
-    options: ["Improved chewing efficiency", "Psychological problems", "Increased tooth strength", "Better speech articulation"],
-    answer: 1
-  },
-  {
-    question: "What defines Severe Early Childhood Caries (SECC) in children under 3 years?",
-    options: ["Any sign of smooth-surface caries", "Only cavitated lesions on molars", "White spots on occlusal surfaces only", "Caries limited to one tooth"],
-    answer: 0
-  },
-  {
-    question: "Why are mandibular incisors typically protected in ECC?",
-    options: ["They have thicker enamel", "They are protected by tongue and saliva", "They erupt later than other teeth", "They have different morphology"],
-    answer: 1
-  },
-  {
-    question: "What feeding practice is particularly associated with ECC?",
-    options: ["Daytime breastfeeding only", "Nighttime bottle feeding with juice", "Drinking water between meals", "Eating solid foods early"],
-    answer: 1
-  },
-  {
-    question: "Which dietary group had the least caries experience in ECC studies?",
-    options: ["High-carbohydrate soft drink group", "High-juice group", "High-milk group", "High-water group"],
+    question: "Which of the following is a complication of rampant caries?",
+    options: [
+      "Decreased risk of abscess",
+      "Improved general health",
+      "Multiple abscess formation",
+      "Reduced speech difficulty"
+    ],
     answer: 2
   },
   {
-    question: "What happens to front teeth in severe ECC cases?",
-    options: ["They become stronger", "They may break down during eruption", "They change color to pure white", "They develop thicker enamel"],
+    question: "Breastfeeding more than seven times daily after 12 months of age is associated with:",
+    options: [
+      "Reduced caries risk",
+      "Increased risk for Severe ECC",
+      "No effect on caries",
+      "Only affecting permanent teeth"
+    ],
     answer: 1
   },
   {
-    question: "What is the first step in managing rampant caries?",
-    options: ["Extraction of all affected teeth", "Management of existing emergency", "Orthodontic treatment", "Cosmetic bleaching"],
+    question: "What is the primary focus of parent counseling during the first visit for ECC?",
+    options: [
+      "Scheduling orthodontic treatment",
+      "Feeding habits and nocturnal bottle use",
+      "Discussing braces",
+      "Recommending sugary snacks"
+    ],
     answer: 1
   },
   {
-    question: "What is the purpose of maintaining a diet record for one week?",
-    options: ["To track weight gain", "To identify sugar exposure patterns", "To monitor vitamin intake", "To record meal duration"],
+    question: "Which diagnostic condition should be differentiated from rampant caries?",
+    options: [
+      "Dental fluorosis",
+      "Enamel hypoplasia",
+      "Gingivitis",
+      "Tooth erosion"
+    ],
     answer: 1
   },
   {
-    question: "When should review and recall appointments be scheduled after treatment?",
-    options: ["After 1 year", "After 6 months", "After 3 months", "After 1 month"],
+    question: "What is a key strategy in preventing ECC?",
+    options: [
+      "Giving juice at bedtime",
+      "Educating parents about causes",
+      "Avoiding all dental visits until age 3",
+      "Using honey as a pacifier dip"
+    ],
+    answer: 1
+  },
+  {
+    question: "Which salivary characteristic is blamed for rampant caries?",
+    options: [
+      "Normal viscosity",
+      "Thick, ropy saliva or thin, watery saliva",
+      "High flow rate during sleep",
+      "Neutral pH always"
+    ],
+    answer: 1
+  },
+  {
+    question: "What does the term 'nursing caries' refer to?",
+    options: [
+      "Caries from breastfeeding only",
+      "Caries in permanent teeth of adolescents",
+      "Rampant caries in infants/preschoolers related to feeding practices",
+      "Caries caused by radiation therapy"
+    ],
+    answer: 2
+  },
+  {
+    question: "Which surface is typically involved in rampant caries of permanent teeth?",
+    options: [
+      "Only occlusal surfaces",
+      "Buccal and lingual surfaces of premolars/molars",
+      "Only lingual surfaces of incisors",
+      "Only proximal surfaces of canines"
+    ],
+    answer: 1
+  },
+  {
+    question: "What is the role of Mutans Streptococci in ECC?",
+    options: [
+      "It is unrelated to caries",
+      "It can be transmitted from caregiver to child",
+      "It only affects permanent teeth",
+      "It is eliminated by breastfeeding"
+    ],
+    answer: 1
+  },
+  {
+    question: "In the management of rampant caries, when are antibiotics typically prescribed?",
+    options: [
+      "For all patients",
+      "When acute soft tissue swelling or systemic signs are present",
+      "Only after extractions",
+      "Instead of restorations"
+    ],
+    answer: 1
+  },
+  {
+    question: "Which factor makes teeth especially susceptible to caries during the first 2 years after eruption?",
+    options: [
+      "Complete enamel calcification",
+      "Incomplete enamel calcification",
+      "High salivary buffering",
+      "Low sugar exposure"
+    ],
+    answer: 1
+  },
+  {
+    question: "What is a major difference between rampant caries and ECC regarding affected teeth?",
+    options: [
+      "Rampant caries affects only primary teeth",
+      "ECC affects permanent incisors",
+      "Rampant caries can affect mandibular incisors",
+      "ECC affects all teeth equally"
+    ],
     answer: 2
   }
 ];
