@@ -1,77 +1,77 @@
 export const questions = [
   {
-    question: "Epstein pearls are typically found along which anatomical structure?",
-    options: ["Buccal mucosa", "Midpalatine raphe", "Dental ridges", "Gingival margin"],
+    question: "How does the crown length of deciduous teeth compare to permanent teeth?",
+    options: ["Longer", "Shorter", "Same length", "Variable depending on tooth type"],
     answer: 1
   },
   {
-    question: "What is the origin of Bohn nodules?",
-    options: ["Remnants of dental lamina", "Remnants of epithelial tissue", "Remnants of salivary gland tissue", "Remnants of enamel epithelium"],
-    answer: 2
-  },
-  {
-    question: "Dental lamina cysts are commonly located on:",
-    options: ["Midpalatine raphe", "Crests of maxillary and mandibular dental ridges", "Buccal mucosa", "Floor of the mouth"],
+    question: "What is a distinctive feature of deciduous tooth crowns in the cervical portion?",
+    options: ["They are widened", "They are constricted", "They have extra grooves", "They are discolored"],
     answer: 1
   },
   {
-    question: "The process of elimination of deciduous dentition is called:",
-    options: ["Eruption", "Shedding", "Resorption", "Exfoliation"],
-    answer: 3
-  },
-  {
-    question: "Permanent anterior tooth germs are positioned lingual to which part of the primary tooth root?",
-    options: ["Coronal third", "Middle third", "Apical third", "Cervical third"],
-    answer: 2
-  },
-  {
-    question: "Resorption of primary posterior teeth begins in which area?",
-    options: ["Root apex", "Inter-radicular bone area", "Cervical region", "Pulp chamber"],
-    answer: 1
-  },
-  {
-    question: "Which teeth are most commonly associated with retained remnants of deciduous teeth?",
-    options: ["Maxillary central incisors", "Mandibular second primary molars", "Maxillary canines", "Mandibular first molars"],
-    answer: 1
-  },
-  {
-    question: "Which factor causes earlier tooth eruption?",
-    options: ["Poor nutrition", "Female sex", "Systemic disease", "Urban environment"],
-    answer: 1
-  },
-  {
-    question: "Hereditary gingival fibromatosis may cause:",
-    options: ["Early tooth eruption", "Prevention of tooth eruption", "Increased caries risk", "Tooth ankylosis"],
-    answer: 1
-  },
-  {
-    question: "Ankylosed teeth are most commonly found in which primary teeth?",
-    options: ["Mandibular primary molars", "Maxillary incisors", "Mandibular canines", "Maxillary molars"],
+    question: "How do enamel rods in the gingival third of deciduous teeth differ from permanent teeth?",
+    options: ["Extend occlusally from DEJ", "Extend apically from DEJ", "Run horizontally", "Are absent in deciduous teeth"],
     answer: 0
   },
   {
-    question: "Which diagnostic method uses sound comparison to identify ankylosis?",
-    options: ["Radiograph", "Tapping with a blunt instrument", "Mobility test", "Percussion test"],
+    question: "What is the color difference between deciduous and permanent teeth?",
+    options: ["Deciduous are darker", "Deciduous are lighter", "No difference in color", "Deciduous are yellowish"],
     answer: 1
   },
   {
-    question: "What is a common treatment for ankylosed primary molars with missing permanent successors?",
-    options: ["Immediate extraction", "Stainless steel crowns or overlays", "Root canal therapy", "No treatment needed"],
-    answer: 1
-  },
-  {
-    question: "Ankylosis in an unerupted permanent tooth may occur due to:",
-    options: ["Excessive fluoride", "Chronic infection", "Early exfoliation", "Genetic mutation"],
-    answer: 1
-  },
-  {
-    question: "Which is NOT a local factor influencing eruption time?",
-    options: ["Infection around the tooth", "Supernumerary tooth", "Race", "Trauma"],
+    question: "How do deciduous molar roots flare compared to permanent molars?",
+    options: ["Less flaring", "No flaring", "More flaring as they approach apex", "Only flare mesially"],
     answer: 2
   },
   {
-    question: "In ankylosis, the periodontal membrane shows:",
-    options: ["Increased width", "A break in continuity", "No change", "Hyperplasia"],
+    question: "What is the relationship between pulp size and crown size in deciduous teeth?",
+    options: ["Pulp is smaller relative to crown", "Pulp is larger relative to crown", "Same relationship as permanent", "Pulp is absent in deciduous"],
     answer: 1
+  },
+  {
+    question: "Where are the mesial pulp horns positioned in deciduous teeth?",
+    options: ["Far from outer surface", "Closer to outer surface", "At the same depth as permanent", "Absent in deciduous teeth"],
+    answer: 1
+  },
+  {
+    question: "How many teeth are present in the primary dentition?",
+    options: ["20", "24", "28", "32"],
+    answer: 0
+  },
+  {
+    question: "Which teeth are absent in the primary dentition?",
+    options: ["Incisors and canines", "Bicuspids and third molars", "First and second molars", "All molars"],
+    answer: 1
+  },
+  {
+    question: "What is the first permanent tooth to erupt into the oral cavity?",
+    options: ["Maxillary central incisor", "Mandibular central incisor", "Mandibular first molar", "Maxillary first molar"],
+    answer: 2
+  },
+  {
+    question: "What structure initiates root formation and molds root shape?",
+    options: ["Dental papilla", "Hertwig's epithelial root sheath", "Dental lamina", "Enamel organ"],
+    answer: 1
+  },
+  {
+    question: "When do primary tooth roots typically begin resorption after completion?",
+    options: ["Immediately", "About 3 years after completion", "10 years after completion", "Never resorb"],
+    answer: 1
+  },
+  {
+    question: "Where does resorption typically begin in primary anterior teeth?",
+    options: ["Buccal surface", "Lingual surface in apical third", "Incisal edge", "Cervical area"],
+    answer: 1
+  },
+  {
+    question: "What percentage of mandibular first primary molar mesial roots contain two canals?",
+    options: ["25%", "50%", "75%", "95%"],
+    answer: 2
+  },
+  {
+    question: "How many canals does a mandibular second primary molar usually have?",
+    options: ["One", "Two", "Three", "Four"],
+    answer: 2
   }
 ];
