@@ -1,77 +1,152 @@
 export const questions = [
   {
-    question: "What modification did Palmer make to the Zsigmondy system?",
-    options: ["Changed quadrant symbols", "Used letters instead of Roman numerals for primary teeth", "Used numbers instead of letters", "Eliminated quadrant designation"],
+    question: "A 6-year-old's mixed dentition is being charted. Using the Universal system, what number represents the permanent mandibular right central incisor?",
+    options: [
+      "24",
+      "25",
+      "26",
+      "41"
+    ],
     answer: 1
   },
   {
-    question: "What is an advantage of the Palmer notation system?",
-    options: ["Computer compatibility", "Easy writing and communication", "Unique numbers for each tooth", "No symbols needed"],
+    question: "Using the FDI system, what is the correct notation for the primary maxillary right second molar?",
+    options: [
+      "55",
+      "65",
+      "75",
+      "85"
+    ],
+    answer: 0
+  },
+  {
+    question: "A dentist uses Palmer notation to record the primary maxillary left central incisor. How is it written?",
+    options: [
+      "A",
+      "A",
+      "┌A",
+      "└A"
+    ],
+    answer: 2
+  },
+  {
+    question: "A 4-year-old has a purple-blue swelling over an erupting primary molar. The parent fears malignancy. What is the best course of action?",
+    options: [
+      "Refer for oncology consult",
+      "Reassure it is an eruption hematoma and will resolve",
+      "Perform immediate excision",
+      "Prescribe systemic steroids"
+    ],
     answer: 1
   },
   {
-    question: "In Universal system, what numbers represent mandibular teeth?",
-    options: ["1-16", "17-32", "A-J", "K-T"],
+    question: "A child's permanent mandibular incisors are erupting lingually, causing rotation. The primary teeth are still present. What is recommended?",
+    options: [
+      "Extract primary incisors immediately",
+      "Allow natural exfoliation and monitor",
+      "Start orthodontic treatment",
+      "Place a habit-breaking appliance"
+    ],
     answer: 1
   },
   {
-    question: "What is a disadvantage of the Universal system?",
-    options: ["Too simple", "Difficult to remember tooth numbers", "No tooth specificity", "Cannot be used in US"],
+    question: "An 8-year-old's maxillary first molar is locked ectopically against the second primary molar with advanced root resorption. What is the classification?",
+    options: [
+      "Reversible",
+      "Irreversible",
+      "Self-correcting",
+      "Physiological"
+    ],
     answer: 1
   },
   {
-    question: "Which FDI number represents a primary tooth?",
-    options: ["14", "25", "36", "55"],
+    question: "A 2-year-old is irritable, drooling, and has low-grade fever during molar eruption. The mother asks if teething causes fever. How should the dentist respond?",
+    options: [
+      "Yes, fever is a normal part of teething",
+      "No, fever is coincidental and should be evaluated",
+      "Only high fever is related",
+      "Fever occurs only with incisor eruption"
+    ],
+    answer: 1
+  },
+  {
+    question: "In the FDI system, which first digit indicates the permanent mandibular right quadrant?",
+    options: [
+      "1",
+      "2",
+      "3",
+      "4"
+    ],
     answer: 3
   },
   {
-    question: "What is the main advantage of the FDI system?",
-    options: ["Uses only one digit", "Computer compatible", "No quadrant designation", "Uses Roman numerals"],
+    question: "If the mandibular second molar erupts before the second premolar, what may happen to the first molar?",
+    options: [
+      "Distal drift",
+      "Mesial drift",
+      "Intrusion",
+      "Extrusion"
+    ],
     answer: 1
   },
   {
-    question: "What is the most common sequence for maxillary permanent teeth eruption?",
-    options: ["6-1-2-4-5-3-7", "1-2-3-4-5-6-7", "6-1-2-3-4-5-7", "1-6-2-4-5-3-7"],
+    question: "A small bony fragment is irritating the gingiva over an erupting permanent molar. What is the appropriate intervention?",
+    options: [
+      "Prescribe antibiotics",
+      "Remove the fragment under topical anesthesia",
+      "Extract the tooth",
+      "Apply fluoride gel"
+    ],
+    answer: 1
+  },
+  {
+    question: "In the Universal system, which letter corresponds to the primary mandibular right first molar?",
+    options: [
+      "S",
+      "T",
+      "K",
+      "L"
+    ],
     answer: 0
   },
   {
-    question: "What appliance might be used when primary canines are lost prematurely?",
-    options: ["Space maintainer", "Passive lingual arch", "Headgear", "Hawley retainer"],
+    question: "What is the management for an asymptomatic eruption hematoma?",
+    options: [
+      "Surgical uncovering",
+      "Observation",
+      "Incision and drainage",
+      "Tooth extraction"
+    ],
     answer: 1
   },
   {
-    question: "What is a common appearance of newly erupted mandibular incisors?",
-    options: ["Perfectly aligned", "Rotated and staggered", "Spaced evenly", "Lingually inclined"],
+    question: "In Palmer notation, how is the permanent mandibular left second premolar written?",
+    options: [
+      "5",
+      "5",
+      "┌5",
+      "└5"
+    ],
+    answer: 3
+  },
+  {
+    question: "A 9-year-old's maxillary canine is labially displaced due to early loss of the primary first molar. What likely caused this?",
+    options: [
+      "Eruption sequestrum",
+      "Mesial drift of the permanent first molar",
+      "Eruption hematoma",
+      "Lingual eruption of incisors"
+    ],
     answer: 1
   },
   {
-    question: "What should be considered coincidental rather than caused by teething?",
-    options: ["Increased salivation", "Fever and systemic disturbances", "Gingival inflammation", "Restlessness"],
-    answer: 1
-  },
-  {
-    question: "What is the typical management for eruption sequestrum?",
-    options: ["No treatment if asymptomatic", "Always surgical removal", "Antibiotic therapy", "Extraction of adjacent teeth"],
-    answer: 0
-  },
-  {
-    question: "What percentage of ectopic molars self-correct?",
-    options: ["One-third", "Two-thirds", "One-half", "Three-quarters"],
-    answer: 1
-  },
-  {
-    question: "What can ectopic eruption of first molars cause?",
-    options: ["Improved arch length", "Ectopic resorption of primary second molar", "Delayed eruption", "Better occlusion"],
-    answer: 1
-  },
-  {
-    question: "What is the recommended management for teething pain in infants?",
-    options: ["Prescription painkillers", "Low-dose topical anesthetics", "Alcohol rubs", "Hard candy"],
-    answer: 1
-  },
-  {
-    question: "Why must topical anesthetics be used cautiously in infants?",
-    options: ["They don't work", "Rapid systemic absorption", "Cause allergic reactions", "Stain teeth"],
+    question: "Which teeth have the longest 'interval of rest' in the eruption sequence?",
+    options: [
+      "Maxillary central and lateral incisors",
+      "Mandibular lateral incisor and canine",
+      "Maxillary first and second premolars",
+      "Mandibular second premolar and second molar"
+    ],
     answer: 1
   }
 ];
