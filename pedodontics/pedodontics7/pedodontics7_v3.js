@@ -1,77 +1,77 @@
 export const questions = [
   {
-    question: "Epstein pearls are remnants of which tissue?",
-    options: ["Salivary gland", "Dental lamina", "Epithelial tissue", "Connective tissue"],
+    question: "What is the direction of enamel rods in the gingival third of permanent teeth?",
+    options: ["Extend occlusally from DEJ", "Extend slightly apically", "Run horizontally", "No specific direction"],
+    answer: 1
+  },
+  {
+    question: "Why do deciduous molar roots flare more apically?",
+    options: ["For better stability", "To afford room for permanent tooth buds", "For easier eruption", "No specific reason"],
+    answer: 1
+  },
+  {
+    question: "Where do accessory canals often extend from in deciduous teeth?",
+    options: ["Pulp horn to cusp tip", "Floor of pulpal chamber to furcation", "Crown to root apex", "Enamel to dentin"],
+    answer: 1
+  },
+  {
+    question: "How does the blood supply to deciduous pulp affect its response?",
+    options: ["Decreased inflammatory response", "Typical inflammatory response", "No inflammatory response", "Immediate necrosis"],
+    answer: 1
+  },
+  {
+    question: "What is a common response of deciduous pulp to irritation?",
+    options: ["External resorption", "Increased internal resorption", "No response", "Immediate calcification"],
+    answer: 1
+  },
+  {
+    question: "Why is complete debridement impossible in some deciduous root canals?",
+    options: ["Wide canals", "Multiple ramifications", "Straight canals", "Short canals"],
+    answer: 1
+  },
+  {
+    question: "What appearance do ribbon-shaped root canals have?",
+    options: ["Round", "Hour glass", "Square", "Triangular"],
+    answer: 1
+  },
+  {
+    question: "How does the number of primary teeth compare to permanent teeth?",
+    options: ["More primary teeth", "Fewer primary teeth", "Same number", "Variable number"],
+    answer: 1
+  },
+  {
+    question: "What happens to pulp chambers as age increases in primary teeth?",
+    options: ["Increase in size", "Decrease in size", "Stay the same", "Disappear completely"],
+    answer: 1
+  },
+  {
+    question: "What initiates the resorption of primary tooth roots?",
+    options: ["Dental caries", "Trauma", "Underlying eruption of succedaneous tooth", "Aging alone"],
     answer: 2
   },
   {
-    question: "Bohn nodules are commonly found on which area?",
-    options: ["Midpalatine raphe", "Buccal and lingual aspects of dental ridges", "Crests of dental ridges", "Floor of the mouth"],
+    question: "Where is the permanent tooth bud located relative to primary anterior teeth?",
+    options: ["Buccal and coronal", "Lingual and apical", "Directly below", "Mesial and cervical"],
     answer: 1
   },
   {
-    question: "The shedding of primary teeth is also known as:",
-    options: ["Eruption", "Exfoliation", "Resorption", "Extraction"],
+    question: "What is rare in primary maxillary incisors regarding root canals?",
+    options: ["Single canal", "Apical ramifications or accessory canals", "Pulp chamber", "Dentin formation"],
     answer: 1
   },
   {
-    question: "Resorption of primary anterior teeth proceeds in which direction?",
-    options: ["Occluso-lingual", "Occluso-labial", "Apical", "Horizontal only"],
-    answer: 1
-  },
-  {
-    question: "Which primary teeth are most often ankylosed?",
-    options: ["Maxillary incisors", "Mandibular primary molars", "Maxillary canines", "Mandibular incisors"],
-    answer: 1
-  },
-  {
-    question: "Children from higher socioeconomic levels tend to have:",
-    options: ["Later eruption", "Earlier eruption", "No difference", "More caries"],
-    answer: 1
-  },
-  {
-    question: "Infection occurring long before eruption time may lead to:",
-    options: ["Early eruption", "Late eruption due to fibrosis", "No effect", "Tooth loss"],
-    answer: 1
-  },
-  {
-    question: "Hereditary gingival fibromatosis is also called:",
-    options: ["Gingival recession", "Elephantiasis gingivae", "Desquamative gingivitis", "Gingival hyperplasia"],
-    answer: 1
-  },
-  {
-    question: "Ankylosis can be confirmed radiographically by observing:",
-    options: ["Widened periodontal space", "Break in continuity of periodontal membrane", "Root resorption", "Crown fracture"],
-    answer: 1
-  },
-  {
-    question: "Which treatment is used for ankylosed primary molars with missing successors?",
-    options: ["Extraction only", "Composite overlays or crowns", "Root canal therapy", "No treatment"],
-    answer: 1
-  },
-  {
-    question: "Ankylosis in unerupted permanent teeth may follow disintegration of:",
-    options: ["Dentine", "Cementum", "Enamel epithelium", "Pulp tissue"],
+    question: "Which primary teeth have the simplest root canal systems?",
+    options: ["Maxillary molars", "Mandibular molars", "Canines", "Incisors"],
     answer: 2
   },
   {
-    question: "Which is a systemic factor affecting eruption time?",
-    options: ["Trauma", "Supernumerary tooth", "Nutrition", "Gingival fibromatosis"],
-    answer: 2
-  },
-  {
-    question: "In ankylosis, the tooth lacks:",
-    options: ["Crown structure", "Root structure", "Periodontal membrane mobility", "Enamel"],
-    answer: 2
-  },
-  {
-    question: "What may be deposited in place of resorbed enamel in an unerupted ankylosed tooth?",
-    options: ["Dentine", "Bone or coronal cementum", "Pulp stones", "Calculus"],
+    question: "On which surfaces do resorption usually begin in primary molars?",
+    options: ["Outer surfaces", "Inner surfaces next to inter-radicular septum", "Occlusal surfaces", "Cervical areas only"],
     answer: 1
   },
   {
-    question: "Early diagnosis of ankylosis is important to prevent:",
-    options: ["Caries", "Malocclusion and arch length loss", "Gingivitis", "Tooth discoloration"],
+    question: "What percentage range of primary molars have accessory canals and lateral canals?",
+    options: ["1-5%", "10-20%", "30-40%", "50-60%"],
     answer: 1
   }
 ];
