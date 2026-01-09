@@ -1,77 +1,77 @@
 export const questions = [
   {
-    question: "What is the characteristic feature of the occlusal outline of the maxillary first primary molar from the buccal aspect?",
-    options: ["Definite cusp form", "Scalloped with no definite cusp form", "Straight line", "V-shaped"],
+    question: "In the maxillary central incisor, which incisal angle is rounded?",
+    options: ["Mesioincisal", "Distoincisal", "Both", "Neither"],
     answer: 1
   },
   {
-    question: "Which cusp is the most prominent, largest and sharpest in the maxillary first primary molar?",
-    options: ["Distobuccal cusp", "Mesiobuccal cusp", "Mesiolingual cusp", "Distolingual cusp"],
-    answer: 2
-  },
-  {
-    question: "What is the shape of the occlusal surface of the maxillary first primary molar?",
-    options: ["Triangular", "Circular", "Rectangular", "Square"],
-    answer: 2
-  },
-  {
-    question: "Which feature connects the mesiolingual and distobuccal cusps in the maxillary first primary molar?",
-    options: ["Central groove", "Buccal developmental groove", "Oblique ridge", "Transverse ridge"],
-    answer: 2
-  },
-  {
-    question: "How does the primary maxillary second molar compare to the permanent maxillary first molar?",
-    options: ["Larger in size", "Same size", "Smaller in size", "Different number of cusps"],
-    answer: 2
-  },
-  {
-    question: "What is the name of the supplemental cusp found on the lingual surface of the mesiolingual cusp in maxillary second molars?",
-    options: ["Cusp of Carabelli", "Tubercle of Carabelli", "Lingual tubercle", "Fifth cusp of Miller"],
-    answer: 1
-  },
-  {
-    question: "Which primary tooth does NOT resemble any tooth in the permanent dentition?",
-    options: ["Maxillary second molar", "Mandibular first molar", "Mandibular canine", "Maxillary central incisor"],
-    answer: 1
-  },
-  {
-    question: "What is the largest cusp in the mandibular first primary molar?",
-    options: ["Distobuccal cusp", "Mesiobuccal cusp", "Mesiolingual cusp", "Distolingual cusp"],
-    answer: 2
-  },
-  {
-    question: "How many cusps does the mandibular second primary molar typically have?",
-    options: ["Three", "Four", "Five", "Six"],
-    answer: 2
-  },
-  {
-    question: "Which angle is acute and prominent in the mandibular first primary molar from the occlusal aspect?",
-    options: ["Distolingual angle", "Mesiobuccal angle", "Distobuccal angle", "Mesiolingual angle"],
-    answer: 1
-  },
-  {
-    question: "What is the relationship between mesiodistal diameter and cervicoincisal height in maxillary central incisors?",
-    options: ["MD diameter is greater than CI height", "CI height is greater than MD diameter", "They are equal", "Variable relationship"],
+    question: "Which primary tooth has a crown wider mesiodistally than cervicoincisally?",
+    options: ["Maxillary central incisor", "Mandibular canine", "Maxillary lateral incisor", "Mandibular central incisor"],
     answer: 0
   },
   {
-    question: "How does the maxillary lateral incisor differ from the central incisor?",
-    options: ["Larger crown size", "Crown height is greater than mesiodistal width", "Sharper distoincisal angle", "Shorter root"],
+    question: "What is notable about the root length of the maxillary canine?",
+    options: ["It is shorter than crown", "It is twice crown height", "It equals crown height", "It is three times crown height"],
     answer: 1
   },
   {
-    question: "What is the characteristic of the maxillary canine's cusp slopes?",
-    options: ["Both slopes equal", "Distal slope longer than mesial", "Mesial slope longer than distal", "No cusp slopes"],
+    question: "Which surface of the primary maxillary central incisor is smooth without developmental grooves?",
+    options: ["Lingual", "Incisal", "Labial", "Mesial"],
     answer: 2
   },
   {
-    question: "How does the mandibular canine compare to the maxillary canine in mesiodistal dimension?",
-    options: ["Larger", "Smaller", "Same size", "No difference"],
+    question: "In the maxillary lateral incisor, how does crown height compare to mesiodistal width?",
+    options: ["Height is less", "Height is greater", "They are equal", "Varies widely"],
     answer: 1
   },
   {
-    question: "What is the largest tooth in the deciduous dentition?",
-    options: ["Maxillary second molar", "Mandibular second molar", "Maxillary canine", "Mandibular first molar"],
+    question: "Which tooth shows marked cervical constriction in the labial aspect?",
+    options: ["Maxillary central incisor", "Mandibular lateral incisor", "Maxillary canine", "Mandibular central incisor"],
+    answer: 2
+  },
+  {
+    question: "Where is the lingual fossa located in the maxillary central incisor?",
+    options: ["Cervical third", "Middle third", "Incisal third", "Entire surface"],
+    answer: 2
+  },
+  {
+    question: "Which cusp slope is longer in the maxillary canine?",
+    options: ["Mesial", "Distal", "Both equal", "None"],
+    answer: 0
+  },
+  {
+    question: "In primary mandibular incisors, how do roots compare to crowns?",
+    options: ["Same length", "Half as long", "Twice as long", "Three times as long"],
+    answer: 2
+  },
+  {
+    question: "Which tooth is smaller mesiodistally than the maxillary canine?",
+    options: ["Maxillary lateral incisor", "Mandibular canine", "Mandibular central incisor", "Maxillary central incisor"],
     answer: 1
+  },
+  {
+    question: "What is the shape of the mesial outline in maxillary central incisor labial view?",
+    options: ["Convex", "Concave", "Straight", "Angular"],
+    answer: 2
+  },
+  {
+    question: "Which tooth has a distoincisal angle that is more rounded than the central incisor?",
+    options: ["Maxillary lateral incisor", "Mandibular canine", "Mandibular lateral incisor", "Maxillary canine"],
+    answer: 0
+  },
+  {
+    question: "In the maxillary canine, where is the lingual ridge located?",
+    options: ["Mesial to midline", "Distal to midline", "On midline", "Not present"],
+    answer: 1
+  },
+  {
+    question: "Which tooth has a prominent labial cervical bulge?",
+    options: ["Maxillary canine", "Mandibular central incisor", "Maxillary central incisor", "Mandibular lateral incisor"],
+    answer: 1
+  },
+  {
+    question: "What is the crown outline of the maxillary canine in incisal view?",
+    options: ["Round", "Square", "Somewhat angular", "Oval"],
+    answer: 2
   }
 ];
