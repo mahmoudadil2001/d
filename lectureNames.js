@@ -228,7 +228,7 @@ export const lectureNames = {
         "2": "teeth numbering system",
         "3": "Dental caries",
         "4": "Rampant caries",
-        "5": "Morphology of primary teeth",
+        "5": "(5) Morphology of primary teeth 1",
         "6": "morphology differences primary& permenent",
         "7": "morphology differences primary& permenent",
         "8": "Epstein pearls, bohn nodules, dental lamina cysts",
