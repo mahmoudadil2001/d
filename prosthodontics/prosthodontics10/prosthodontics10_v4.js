@@ -1,77 +1,77 @@
 export const questions = [
   {
-    question: "What should be checked at the acrylic resin/metal framework junction before insertion?",
-    options: ["Overlap of acrylic onto metal", "Color mismatch", "Tooth alignment", "Clasp flexibility"],
+    question: "What does mounting with a facebow improve?",
+    options: ["Tooth color", "RPD placement accuracy", "Patient comfort", "Denture cost"],
+    answer: 1
+  },
+  {
+    question: "Interocclusal records are necessary when:",
+    options: ["Hand articulation is inaccurate", "Using acrylic teeth", "The patient is elderly", "The framework is metal"],
     answer: 0
   },
   {
-    question: "How should denture teeth be inspected before insertion?",
-    options: ["For color only", "For fractures during processing", "For size uniformity", "For anatomical shape"],
+    question: "Which is a factor in RPD tooth selection?",
+    options: ["Patient's shoe size", "Amount of available space", "Dentist's experience", "Clinic location"],
     answer: 1
   },
   {
-    question: "What is the recommended way to store an RPD before insertion?",
-    options: ["Dry in open air", "In a sealed bag with mouthwash", "In alcohol solution", "Wrapped in dry gauze"],
+    question: "Which tooth material is rarely used in RPDs due to difficulty in setting?",
+    options: ["Acrylic resin", "Porcelain", "Composite resin", "Gold"],
     answer: 1
   },
   {
-    question: "What is used to identify pressure areas on the denture base?",
-    options: ["Articulating paper", "Pressure indicator paste", "Dental floss", "Study cast"],
-    answer: 1
-  },
-  {
-    question: "Which area in the maxillary arch may require relief at the pterygomaxillary notch?",
-    options: ["Incisive papilla", "Hamular notch", "Zygomatic arch", "Mylohyoid ridge"],
-    answer: 1
-  },
-  {
-    question: "What is the purpose of thinning the distobuccal extension of a maxillary RPD?",
-    options: ["To improve retention", "To allow coronoid process movement", "To reduce weight", "For better esthetics"],
-    answer: 1
-  },
-  {
-    question: "What is used to adjust minor occlusal discrepancies during insertion?",
-    options: ["Adding acrylic", "Selective grinding", "Replacing teeth", "Adjusting clasps only"],
-    answer: 1
-  },
-  {
-    question: "What should a patient avoid initially after RPD insertion?",
-    options: ["Soft foods", "Hard and sticky foods", "Liquids", "Cold foods"],
-    answer: 1
-  },
-  {
-    question: "What is a common cause of RPD instability during mastication?",
-    options: ["Well-balanced occlusion", "Poorly designed clasp", "Adequate support", "Proper retention"],
-    answer: 1
-  },
-  {
-    question: "Which is a symptom of tissue trauma from an RPD?",
-    options: ["Improved chewing", "Sore spots or abrasion", "Better speech", "Increased salivation"],
-    answer: 1
-  },
-  {
-    question: "What can cause gagging with an RPD?",
-    options: ["Psychological rejection", "Inadequate extension", "Smooth borders", "Light occlusion"],
+    question: "Replaced teeth help maintain:",
+    options: ["Esthetics of facial contour", "Hair growth", "Nasal shape", "Ear position"],
     answer: 0
   },
   {
-    question: "What might cause anterior teeth to look unnatural?",
-    options: ["Proper color match", "Incorrect characterization", "Adequate size", "Good alignment"],
+    question: "Acrylic teeth are commonly used because they:",
+    options: ["Are harder than porcelain", "Are easier to place and less likely to fracture", "Cost more", "Are more esthetic than porcelain"],
     answer: 1
   },
   {
-    question: "How soon after insertion should the first adjustment occur if needed?",
-    options: ["Within 24 hours", "After 1 week", "After 1 month", "After 3 months"],
+    question: "For shade selection, the guide should be matched to:",
+    options: ["Remaining natural teeth", "The denture base", "The opposing denture", "The patient's skin"],
     answer: 0
   },
   {
-    question: "What should be evaluated in the mandibular denture post-insertion?",
-    options: ["Posterior palatal seal", "Alveololingual sulcus and mylohyoid ridges", "Maxillary tuberosities", "Incisive papilla"],
+    question: "What should be done first when setting anterior teeth missing across midline?",
+    options: ["Set lateral incisor", "Set central incisor", "Set canine", "Set premolar"],
     answer: 1
   },
   {
-    question: "What can inadequate denture hygiene lead to?",
-    options: ["Improved periodontal health", "Caries and mucosal lesions", "Better retention", "Enhanced esthetics"],
+    question: "A solution for narrow anterior space is:",
+    options: ["Use fewer teeth", "Overlap arrangement", "Make space wider surgically", "Use larger teeth"],
     answer: 1
+  },
+  {
+    question: "Posterior tooth size is usually determined by:",
+    options: ["Patient's gender", "Edentulous space", "Denture base color", "Clasp type"],
+    answer: 1
+  },
+  {
+    question: "Acrylic resin teeth can oppose which surfaces without abrasion?",
+    options: ["Enamel and gold", "Porcelain only", "Acrylic only", "Composite only"],
+    answer: 0
+  },
+  {
+    question: "For mandibular posterior teeth, the central groove should be over:",
+    options: ["The retromolar pad", "The crest of the ridge", "The buccal shelf", "The lingual frenum"],
+    answer: 1
+  },
+  {
+    question: "During wax try-in, what is evaluated?",
+    options: ["Esthetics and phonetics", "Patient's grip strength", "Room humidity", "Denture smell"],
+    answer: 0
+  },
+  {
+    question: "If anterior space is large, what may be incorporated?",
+    options: ["Diastemata", "Additional teeth", "Metal bars", "Soft liners"],
+    answer: 0
+  },
+  {
+    question: "Jaw relation verification is needed if:",
+    options: ["There are no opposing natural teeth in contact", "The patient is young", "The denture is temporary", "The patient prefers it"],
+    answer: 0
   }
 ];
