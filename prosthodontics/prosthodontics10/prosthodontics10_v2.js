@@ -1,77 +1,77 @@
 export const questions = [
   {
-    question: "What should be done if acrylic resin flash covers part of the metal framework?",
-    options: ["Leave it for stability", "Remove it before seating", "Polish it smooth", "Add more acrylic"],
+    question: "Which of the following is a structural requirement considered when selecting RPD teeth?",
+    options: ["Patient's hair color", "Materials used in prosthesis construction", "Patient's dietary preferences", "Climate of patient's location"],
     answer: 1
   },
   {
-    question: "Which junction should be smooth and free of crevices to prevent food entrapment?",
-    options: ["Clasp-to-tooth junction", "Denture-tooth and acrylic resin base junction", "Framework-to-mucosa junction", "Artificial tooth-to-tooth junction"],
+    question: "What must be done if patient casts cannot be accurately hand articulated?",
+    options: ["Use pre-made teeth", "Make interocclusal records", "Skip the mounting step", "Use a different articulator"],
     answer: 1
   },
   {
-    question: "What is the purpose of contouring the distolingual surface of a mandibular RPD?",
-    options: ["To improve retention", "To avoid tongue crowding and irritation", "To enhance esthetics", "To reduce weight"],
-    answer: 1
-  },
-  {
-    question: "How are minor interceptive occlusal contacts corrected during insertion?",
-    options: ["By adding more teeth", "By selective grinding", "By using adhesives", "By adjusting the clasp only"],
-    answer: 1
-  },
-  {
-    question: "What should a patient be instructed to eat initially after RPD insertion?",
-    options: ["Hard foods", "Only liquids", "Soft foods", "Spicy foods"],
-    answer: 2
-  },
-  {
-    question: "Which is a common pressure area in the maxillary arch for an RPD?",
-    options: ["Mylohyoid ridge", "Retromolar pad", "Inside of buccal flange over tuberosities", "Lingual frenum"],
-    answer: 2
-  },
-  {
-    question: "What can cause instability during mastication with an RPD?",
-    options: ["Well-designed clasp", "Interceptive occlusal contacts", "Properly balanced occlusion", "Adequate retention"],
-    answer: 1
-  },
-  {
-    question: "When are maintenance visits typically scheduled after RPD insertion?",
-    options: ["Every month", "Every 3, 6, and 12 months", "Only when problems arise", "Every 2 years"],
-    answer: 1
-  },
-  {
-    question: "What is a common cause of poor esthetics with anterior artificial teeth?",
-    options: ["Correct size and position", "Poor color selection", "Adequate characterization", "Proper alignment"],
-    answer: 1
-  },
-  {
-    question: "What should be examined first in a maxillary denture during post-insertion adjustment?",
-    options: ["Hard palate only", "Buccal vestibule and labial vestibule", "Tongue sides", "Mylohyoid ridge"],
-    answer: 1
-  },
-  {
-    question: "Which is NOT a typical category of RPD post-insertion problems?",
-    options: ["Pain and discomfort", "Improved speech", "Lack of retention", "Esthetic issues"],
-    answer: 1
-  },
-  {
-    question: "What can cause a burning sensation in the mouth with an RPD?",
-    options: ["Allergy to denture base material", "Too thin denture base", "Adequate peripheral seal", "Proper tooth alignment"],
+    question: "Which factor is important for anterior teeth selection due to opposing occlusion?",
+    options: ["Mechanical properties", "Patient's age", "Denture base color", "Framework material"],
     answer: 0
   },
   {
-    question: "What is used to check the complete seating of occlusal rests?",
-    options: ["Articulating paper", "Dental explorer or floss", "Pressure indicator paste", "Study model"],
+    question: "What is a function of replaced teeth in an RPD?",
+    options: ["Reduce patient's speech ability", "Restore masticatory efficiency", "Increase tooth mobility", "Decrease interarch space"],
     answer: 1
   },
   {
-    question: "What might cause difficulty in seating or removing an RPD?",
-    options: ["Properly adjusted clasps", "Bent clasp components", "Smooth polished surfaces", "Adequate retention"],
-    answer: 1
-  },
-  {
-    question: "Why is it important to provide written instructions to the patient?",
-    options: ["To reduce chair time", "For legal purposes only", "To reinforce oral and prosthesis care", "To replace verbal instructions"],
+    question: "Which material is commonly used for RPD teeth due to ease of adjustment?",
+    options: ["Porcelain", "Gold", "Acrylic resin", "Stainless steel"],
     answer: 2
+  },
+  {
+    question: "Why are porcelain teeth rarely used in RPDs?",
+    options: ["They are too flexible", "They are difficult to set", "They cannot be stained", "They are too light"],
+    answer: 1
+  },
+  {
+    question: "In shade selection, matching should be done to:",
+    options: ["The patient's lip color", "The remaining natural teeth", "The denture base", "The opposing denture"],
+    answer: 1
+  },
+  {
+    question: "When setting anterior teeth, which tooth is set first if missing across the midline?",
+    options: ["Canine", "Central incisor", "Lateral incisor", "First premolar"],
+    answer: 1
+  },
+  {
+    question: "What is a solution for narrow mesio-distal space in anterior set-up?",
+    options: ["Use wider teeth", "Overlap arrangement of artificial teeth", "Extract adjacent teeth", "Ignore the space"],
+    answer: 1
+  },
+  {
+    question: "For posterior teeth, occluso-gingival height should match adjacent natural teeth for:",
+    options: ["Good esthetics", "Reduced cost", "Easier cleaning", "Faster fabrication"],
+    answer: 0
+  },
+  {
+    question: "Acrylic resin teeth are preferred over porcelain in RPDs because they:",
+    options: ["Are more abrasive", "Are easier to reshape and adjust", "Last longer", "Are more esthetic"],
+    answer: 1
+  },
+  {
+    question: "For Class III RPDs, what type of occlusion should be maintained?",
+    options: ["Balanced occlusion", "Canine protected occlusion", "Monoplane occlusion", "Lingualized occlusion"],
+    answer: 1
+  },
+  {
+    question: "During wax try-in, what is evaluated besides esthetics?",
+    options: ["Phonetics", "Patient's hearing", "Room temperature", "Denture weight"],
+    answer: 0
+  },
+  {
+    question: "If anterior edentulous space is decreased by drifting, what should be done?",
+    options: ["Place fewer teeth", "Increase the number of teeth", "Use larger teeth", "Leave the space empty"],
+    answer: 0
+  },
+  {
+    question: "When are verification records for jaw relation typically made?",
+    options: ["At a slightly decreased OVD", "At a slightly increased OVD", "At maximum opening", "With teeth in contact"],
+    answer: 1
   }
 ];
