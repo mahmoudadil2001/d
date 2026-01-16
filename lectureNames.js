@@ -297,7 +297,7 @@ export const lectureNames = {
         "7": "support for Distal Extension base",
         "8": "RPD framework try in",
         "9": "Occlusal Relationships for RPD",
-        "10": "RPD Insertion and Recall Visits",
+        "10": "Selection and arrangment of teeth",
         "11": "RPD Insertion and Recall Visits",
         "12": "pre prosthetic surgery",
         "13": "Unknown",
