@@ -1,77 +1,77 @@
 export const questions = [
   {
-    question: "What is the fifth essential phase in removable partial denture service?",
-    options: ["Framework fitting", "Tooth selection", "Insertion visit", "Recall appointment"],
+    question: "What is the primary purpose of mounting patient casts with a facebow?",
+    options: ["To select tooth shade accurately", "To place the RPD more accurately", "To determine jaw relationship", "To fabricate the framework"],
+    answer: 1
+  },
+  {
+    question: "When must interocclusal records be made?",
+    options: ["When the patient has no natural teeth", "When the patient casts cannot be accurately hand articulated", "When porcelain teeth are used", "When there is excessive space mesio-distally"],
+    answer: 1
+  },
+  {
+    question: "Which factor does NOT affect the selection of RPD teeth?",
+    options: ["Available space", "Mechanical properties", "Patient's age", "Cusp height of opposing teeth"],
     answer: 2
   },
   {
-    question: "How should acrylic resin nodules on the tissue surface be identified before insertion?",
-    options: ["Using articulating paper", "Running a finger over the surface", "Using pressure indicator paste", "Visual inspection only"],
-    answer: 1
-  },
-  {
-    question: "What is recommended if surface porosity is found in the acrylic resin of an RPD?",
-    options: ["Polishing the surface", "Rebasing the RPD", "Using stronger adhesives", "Reducing the denture base"],
-    answer: 1
-  },
-  {
-    question: "How should the RPD be stored before the insertion appointment?",
-    options: ["Dry in a sealed container", "In water overnight", "In a plastic bag with mouthwash, heat-sealed", "Wrapped in tissue paper"],
+    question: "Which type of artificial teeth is commonly used in RPDs due to ease of placement and decreased fracture risk?",
+    options: ["Porcelain teeth", "Gold teeth", "Acrylic resin teeth", "Composite resin teeth"],
     answer: 2
   },
   {
-    question: "What is used to evaluate denture base adaptation during insertion?",
-    options: ["Articulating paper", "Pressure indicator paste", "Dental floss", "Study cast"],
+    question: "What is a key function of replaced teeth in an RPD?",
+    options: ["Increase salivary flow", "Prevent migration of remaining teeth", "Reduce bone density", "Enhance taste sensation"],
     answer: 1
   },
   {
-    question: "Which area is a common pressure spot in the mandibular arch for RPD?",
-    options: ["Incisive papilla", "Mylohyoid ridge", "Zygomatic process", "Maxillary tuberosity"],
+    question: "Porcelain denture teeth are rarely used in RPDs primarily because:",
+    options: ["They are too expensive", "They are difficult to set", "They stain easily", "They are too heavy"],
     answer: 1
   },
   {
-    question: "Why is the distobuccal extension of a maxillary distal extension prosthesis thinned?",
-    options: ["To improve esthetics", "To allow movement of the coronoid process", "To reduce weight", "To prevent tongue irritation"],
+    question: "When selecting tooth shade, the guide should be:",
+    options: ["Used under fluorescent light only", "Moistened before using", "Matched to the patient's eye color", "Selected in a dark room"],
     answer: 1
   },
   {
-    question: "What is used to identify occlusal interferences during insertion?",
-    options: ["Pressure indicator paste", "Articulating paper", "Dental explorer", "Flour of pumice"],
+    question: "Which guideline is NOT mentioned for setting anterior teeth?",
+    options: ["Set central incisor first if missing across midline", "Place teeth exactly where natural teeth were", "Reshape ridge lap without shortening crown length", "Recontour proximal surface for better adaptation"],
     answer: 1
   },
   {
-    question: "When should the first recall visit occur after RPD insertion?",
-    options: ["Within 24 hours", "After 1 week", "After 1 month", "After 6 months"],
-    answer: 0
-  },
-  {
-    question: "Which is NOT a common cause of pain in abutment teeth after RPD insertion?",
-    options: ["Interceptive occlusal contacts", "Unstable denture base", "Insufficient interocclusal distance", "Properly adjusted rests"],
-    answer: 3
-  },
-  {
-    question: "What can cause gagging with a maxillary RPD?",
-    options: ["Underextension of borders", "Posterior border too thick", "Insufficient retention", "Lightly polished surface"],
+    question: "What is a common cause of narrow mesio-distal space in anterior set-up?",
+    options: ["Overeruption of opposing teeth", "Tilting or drifting of adjacent teeth", "Excessive bone growth", "Inadequate framework design"],
     answer: 1
   },
   {
-    question: "What is a cause of instability when incising food with an RPD?",
-    options: ["Too many teeth", "Insufficient engagement of retentive areas", "Overpolished surfaces", "Excessive flange thickness"],
+    question: "For posterior RPD teeth selection, the tooth size is generally dictated by:",
+    options: ["Patient's age", "Size of the edentulous space", "Color of adjacent teeth", "Type of clasp used"],
     answer: 1
   },
   {
-    question: "What can poor denture hygiene accelerate?",
-    options: ["Tooth whitening", "Caries and periodontal disease", "Increased saliva flow", "Improved retention"],
+    question: "Which statement is true about acrylic resin teeth in RPDs?",
+    options: ["They must only oppose porcelain surfaces", "They are difficult to adjust", "They can oppose enamel & gold surfaces without abrading them", "They are rarely used in RPDs"],
+    answer: 2
+  },
+  {
+    question: "For mandibular posterior teeth, where should the central groove be placed?",
+    options: ["Lingual to the ridge", "Buccal to the ridge", "Over the crest of the ridge", "In the retromolar pad"],
+    answer: 2
+  },
+  {
+    question: "What is evaluated during the wax try-in appointment?",
+    options: ["Tooth shade only", "Esthetics and phonetics", "Blood pressure of the patient", "Salivary pH"],
     answer: 1
   },
   {
-    question: "Which component should be checked if the RPD framework does not seat properly?",
-    options: ["Artificial teeth color", "Clasp assembly distortion", "Denture base shine", "Patient's bite"],
+    question: "What may a patient report if anterior teeth have been missing for 6 months or more?",
+    options: ["Improved taste", "Sensation of abnormal fullness at the upper lip", "Reduced saliva", "Tingling in the tongue"],
     answer: 1
   },
   {
-    question: "What is a common cause of a burning sensation with an RPD?",
-    options: ["Denture base too thin", "Posterior teeth set too far distally", "Inadequate occlusion", "Excessive saliva"],
+    question: "When should verification of jaw relation be performed?",
+    options: ["Only for complete dentures", "If the partial denture is opposed by a complete denture", "For every patient regardless of condition", "Only if the patient requests it"],
     answer: 1
   }
 ];
