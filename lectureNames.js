@@ -298,7 +298,7 @@ export const lectureNames = {
         "8": "RPD framework try in",
         "9": "Occlusal Relationships for RPD",
         "10": "RPD Insertion and Recall Visits",
-        "11": "Unknown",
+        "11": "RPD Insertion and Recall Visits",
         "12": "Unknown",
         "13": "Unknown",
         "14": "Unknown",
