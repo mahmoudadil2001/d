@@ -299,7 +299,7 @@ export const lectureNames = {
         "9": "Occlusal Relationships for RPD",
         "10": "RPD Insertion and Recall Visits",
         "11": "RPD Insertion and Recall Visits",
-        "12": "Unknown",
+        "12": "pre prosthetic surgery",
         "13": "Unknown",
         "14": "Unknown",
         "15": "Unknown",
