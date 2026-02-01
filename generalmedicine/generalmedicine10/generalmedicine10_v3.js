@@ -1,78 +1,78 @@
 // Version 3
 export const questions = [
   {
-    question: "Which medication is NOT typically first-line for IBD?",
-    options: ["Sulfasalazine", "Corticosteroids", "Infliximab", "Antidiarrheals"],
+    question: "IBD is thought to result from immune dysfunction in:",
+    options: ["Genetically resistant individuals", "Random population", "Genetically susceptible persons", "Immunocompromised only"],
     answer: 2
   },
   {
-    question: "What is the delivery route for sulfasalazine in distal colitis?",
-    options: ["Rectal suppositories", "Intramuscular injection", "Inhalation", "Subcutaneous implant"],
-    answer: 0
-  },
-  {
-    question: "When are immunomodulators introduced?",
-    options: ["First-line", "When steroids fail or dependency exists", "Only in surgery", "For mild cases"],
+    question: "Ulcerative colitis begins in:",
+    options: ["Ileum", "Colon and rectum", "Stomach", "Jejunum"],
     answer: 1
   },
   {
-    question: "Which is a severe complication requiring surgery in IBD?",
-    options: ["Mild cramping", "Toxic megacolon", "Dry mouth", "Headache"],
-    answer: 1
+    question: "Which layer is spared in Ulcerative Colitis?",
+    options: ["Mucosa", "Submucosa", "Muscularis propria", "None, it's transmural in Crohn's"],
+    answer: 3
   },
   {
-    question: "What is a dental concern with IBD patients on immunosuppressants?",
-    options: ["Tooth decay", "Increased lymphoma risk", "Gingival hyperplasia", "Enamel erosion"],
-    answer: 1
-  },
-  {
-    question: "How often are biologic infusions like infliximab typically given?",
-    options: ["Daily", "Weekly", "Every 8 weeks", "Every 6 months"],
+    question: "Which decade shows a second incidence peak for Crohn's?",
+    options: ["Third", "Fifth", "Seventh", "Ninth"],
     answer: 2
   },
   {
-    question: "What should a dentist do before elective surgery on an IBD patient taking sulfasalazine?",
-    options: ["Prescribe antibiotics", "Check bleeding time and CBC", "Cancel appointment", "Give NSAIDs"],
+    question: "Which is a histopathologic finding in Ulcerative Colitis?",
+    options: ["Granulomas", "Epithelial necrosis", "Villi atrophy", "Crypt abscess only in Crohn's"],
     answer: 1
   },
   {
-    question: "Which oral condition presents with vegetative projections?",
-    options: ["Aphthous ulcer", "Pyostomatitis vegetans", "Oral lichen planus", "Candidiasis"],
+    question: "Malabsorption in Crohn's can lead to:",
+    options: ["Weight gain", "Finger clubbing", "Hypertension", "Hypothyroidism"],
     answer: 1
   },
   {
-    question: "When is dental care contraindicated in IBD?",
-    options: ["During remission", "When ESR >30 mm/hr with severe symptoms", "When patient is hungry", "After breakfast"],
+    question: "Which is NOT an extraintestinal manifestation of IBD?",
+    options: ["Arthritis", "Uveitis", "Hepatic complications", "Myocardial infarction"],
+    answer: 3
+  },
+  {
+    question: "Osteoporosis in IBD patients results from:",
+    options: ["Excess vitamin D", "Malabsorption and steroid use", "High calcium intake", "Hyperparathyroidism"],
     answer: 1
   },
   {
-    question: "Which symptom suggests mild IBD?",
-    options: ["Fever and anemia", "Sedimentation rate <20 mm/hr", ">6 bloody stools/day", "Severe dehydration"],
+    question: "The diagnosis of IBD relies LEAST on:",
+    options: ["Endoscopy", "Biopsy", "Clinical findings", "Blood type"],
+    answer: 3
+  },
+  {
+    question: "Which vitamin deficiency is common in IBD due to malabsorption?",
+    options: ["Vitamin C", "Vitamin B12", "Vitamin K only", "Vitamin A"],
     answer: 1
   },
   {
-    question: "What is used to protect GI mucosa during pain management?",
-    options: ["Aspirin", "COX-2 inhibitor + PPI", "Clindamycin", "Steroid enema"],
+    question: "Crohn's disease is described as:",
+    options: ["Always continuous", "Segmental with skip lesions", "Limited to elderly", "Curable with antibiotics"],
     answer: 1
   },
   {
-    question: "What may precede Crohn's diagnosis by years?",
-    options: ["Tooth loss", "Oral manifestations like granulomatosis", "Cavities", "Bruxism"],
+    question: "Which symptom is classic for Ulcerative Colitis?",
+    options: ["Perianal fistulas", "Rectal bleeding", "Gallstones", "Esophageal ulcers"],
     answer: 1
   },
   {
-    question: "Which is NOT an adverse effect of immunomodulators?",
-    options: ["Leukopenia", "Pancreatitis", "Improved immunity", "Hepatitis"],
+    question: "Toxic megacolon may lead to:",
+    options: ["Improved bowel function", "Intestinal perforation", "Reduced inflammation", "Weight gain"],
+    answer: 1
+  },
+  {
+    question: "Which imaging is NOT typically used for IBD?",
+    options: ["CT abdomen", "MRI enterography", "Colonoscopy", "Echocardiogram"],
+    answer: 3
+  },
+  {
+    question: "The risk of surgery in Crohn's disease lifetime is about:",
+    options: ["20–30%", "40–50%", "70–80%", "90–100%"],
     answer: 2
-  },
-  {
-    question: "What is the purpose of ileostomy?",
-    options: ["To feed the patient", "To allow waste exit bypassing colon", "To improve appetite", "To reduce diarrhea"],
-    answer: 1
-  },
-  {
-    question: "When are antibiotics used in Crohn's disease?",
-    options: ["For viral infection", "For abscesses", "For hypertension", "For dental cleaning"],
-    answer: 1
   }
 ];
