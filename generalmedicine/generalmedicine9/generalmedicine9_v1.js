@@ -1,78 +1,77 @@
-// Version 1
 export const questions = [
   {
-    question: "Inflammatory Bowel Disease (IBD) includes which two idiopathic conditions?",
-    options: ["Ulcerative colitis and Crohn's disease", "Diverticulitis and Celiac disease", "Gastritis and Peptic ulcer", "Irritable bowel syndrome and Colorectal cancer"],
-    answer: 0
+    question: "What is the longest part of the alimentary canal?",
+    options: ["Stomach", "Large intestine", "Esophagus", "Small intestine"],
+    answer: 3
   },
   {
-    question: "Which part of the GI tract is affected in Ulcerative Colitis?",
-    options: ["Large intestine and rectum only", "Entire alimentary canal", "Small intestine only", "Stomach and duodenum"],
-    answer: 0
-  },
-  {
-    question: "Crohn's disease is characterized by involvement of:",
-    options: ["Submucosa only", "Transmural bowel wall", "Mucosa only", "Serosa only"],
+    question: "How long is the duodenum approximately?",
+    options: ["10 cm", "25 cm", "40 cm", "60 cm"],
     answer: 1
   },
   {
-    question: "The peak age at onset for IBD is:",
-    options: ["40–60 years", "10–20 years", "20–40 years", "Above 70 years"],
+    question: "Which part of the small intestine receives openings of the bile and pancreatic ducts?",
+    options: ["Ileum", "Jejunum", "Duodenum", "Cecum"],
     answer: 2
   },
   {
-    question: "Which group has a significantly higher risk of developing IBD?",
-    options: ["Asians compared to Europeans", "Males compared to females", "Whites compared to blacks", "Children compared to adults"],
-    answer: 2
-  },
-  {
-    question: "What environmental factor appears to reduce the risk of IBD?",
-    options: ["Smoking", "High-fat diet", "Breastfeeding", "Urban living"],
-    answer: 2
-  },
-  {
-    question: "Ulcerative colitis histopathology includes all EXCEPT:",
-    options: ["Vascular congestion", "Granuloma formation", "Monocellular infiltration", "Epithelial necrosis"],
+    question: "What is the total approximate length of the jejunum and ileum combined?",
+    options: ["3 m", "6 m", "9 m", "12 m"],
     answer: 1
   },
   {
-    question: "Which complication is specific to severe Ulcerative Colitis?",
-    options: ["Toxic megacolon", "Fistula formation", "Small bowel stenosis", "Gallstones"],
-    answer: 0
+    question: "The primary function of the ileum is to absorb:",
+    options: ["Glucose", "Vitamin B12", "Fatty acids", "Amino acids"],
+    answer: 1
   },
   {
-    question: "The risk of colon cancer in Ulcerative Colitis is increased by:",
-    options: ["2 times", "5 times", "10 times", "20 times"],
+    question: "Which part of the large intestine is a blind-ended pouch?",
+    options: ["Appendix", "Cecum", "Sigmoid colon", "Rectum"],
+    answer: 1
+  },
+  {
+    question: "Where is McBurney's point located?",
+    options: ["Left upper quadrant", "Right iliac fossa", "Epigastric region", "Umbilical region"],
+    answer: 1
+  },
+  {
+    question: "What is the approximate length of the appendix?",
+    options: ["2–5 cm", "8–13 cm", "15–20 cm", "25–30 cm"],
+    answer: 1
+  },
+  {
+    question: "Which part of the colon is approximately 38 cm long?",
+    options: ["Ascending colon", "Transverse colon", "Descending colon", "Sigmoid colon"],
+    answer: 1
+  },
+  {
+    question: "The left colic flexure is also known as the:",
+    options: ["Hepatic flexure", "Splenic flexure", "Cecal flexure", "Rectal flexure"],
+    answer: 1
+  },
+  {
+    question: "What is the main function of the large intestine?",
+    options: ["Digestion of proteins", "Absorption of water and electrolytes", "Production of bile", "Secretion of digestive enzymes"],
+    answer: 1
+  },
+  {
+    question: "Perforation of the appendix is often preceded by:",
+    options: ["Increased blood flow", "Thrombosis of appendicular artery", "Dilation of lymphatic vessels", "Reduced peristalsis"],
+    answer: 1
+  },
+  {
+    question: "In appendicitis, where is the pain typically felt initially?",
+    options: ["Right lower quadrant", "Epigastric region", "Umbilical region", "Left iliac fossa"],
     answer: 2
   },
   {
-    question: "Crohn's disease most commonly affects:",
-    options: ["Stomach", "Distal ileum and proximal colon", "Jejunum", "Rectum"],
+    question: "Which structure is attached to the posteromedial surface of the cecum?",
+    options: ["Ileum", "Appendix", "Ascending colon", "Sigmoid colon"],
     answer: 1
   },
   {
-    question: "Which symptom is more typical of Ulcerative Colitis than Crohn's?",
-    options: ["Bloody diarrhea", "Fistula formation", "Perianal abscess", "Malabsorption"],
-    answer: 0
-  },
-  {
-    question: "Extraintestinal manifestations of IBD may include:",
-    options: ["Hepatitis only", "Arthritis and uveitis", "Renal failure", "Pneumonia"],
-    answer: 1
-  },
-  {
-    question: "Which lab finding is common in IBD?",
-    options: ["Low ESR", "Elevated albumin", "Anemia", "Hypercalcemia"],
-    answer: 2
-  },
-  {
-    question: "Diagnosis of IBD is primarily based on:",
-    options: ["Urine analysis", "Clinical findings, endoscopy, biopsy", "Serum electrolytes", "ECG"],
-    answer: 1
-  },
-  {
-    question: "A second incidence peak for Crohn's disease occurs in:",
-    options: ["Childhood", "Teenage years", "Seventh decade", "Eighth decade"],
+    question: "The transverse colon occupies which abdominal region?",
+    options: ["Epigastric", "Hypogastric", "Umbilical", "Left lumbar"],
     answer: 2
   }
 ];
