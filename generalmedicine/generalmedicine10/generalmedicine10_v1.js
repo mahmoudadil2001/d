@@ -1,78 +1,78 @@
 // Version 1
 export const questions = [
   {
-    question: "What is the first-line treatment for managing IBD symptoms?",
-    options: ["Biologics", "Surgery", "Antidiarrheal and anti-inflammatory drugs", "Immunomodulators only"],
-    answer: 2
-  },
-  {
-    question: "Which drug is the mainstay for Ulcerative Colitis treatment?",
-    options: ["Metronidazole", "Infliximab", "Sulfasalazine", "Acetaminophen"],
-    answer: 2
-  },
-  {
-    question: "Why are corticosteroids not used for long-term maintenance in IBD?",
-    options: ["They are ineffective", "They cause severe adverse effects", "They are too expensive", "They require IV administration"],
-    answer: 1
-  },
-  {
-    question: "When should a patient with severe IBD be hospitalized?",
-    options: ["When they have mild diarrhea", "During remission", "When they have severe bloody diarrhea and fever", "When they need routine dental cleaning"],
-    answer: 2
-  },
-  {
-    question: "What is the role of immunomodulators in IBD?",
-    options: ["First-line therapy", "To replace antibiotics", "To reduce steroid dependency and side effects", "To cure the disease"],
-    answer: 2
-  },
-  {
-    question: "Which antibiotic is specifically associated with pseudomembranous colitis?",
-    options: ["Metronidazole", "Ciprofloxacin", "Clindamycin", "Amoxicillin"],
-    answer: 2
-  },
-  {
-    question: "When is elective dental care recommended for IBD patients?",
-    options: ["During acute flare-ups", "During remission", "Only in hospital", "Only with fever"],
-    answer: 1
-  },
-  {
-    question: "Which pain relief option is safer for IBD patients?",
-    options: ["Aspirin", "NSAIDs", "Acetaminophen", "Ibuprofen"],
-    answer: 2
-  },
-  {
-    question: "What oral lesion is associated with Ulcerative Colitis?",
-    options: ["Pyostomatitis vegetans", "Oral candidiasis", "Leukoplakia", "Lichen planus"],
+    question: "Inflammatory Bowel Disease (IBD) includes which two idiopathic conditions?",
+    options: ["Ulcerative colitis and Crohn's disease", "Diverticulitis and Celiac disease", "Gastritis and Peptic ulcer", "Irritable bowel syndrome and Colorectal cancer"],
     answer: 0
   },
   {
-    question: "What should a dentist do if an IBD patient has fever without clear cause?",
-    options: ["Prescribe antibiotics", "Refer to physician promptly", "Ignore it", "Proceed with extraction"],
+    question: "Which part of the GI tract is affected in Ulcerative Colitis?",
+    options: ["Large intestine and rectum only", "Entire alimentary canal", "Small intestine only", "Stomach and duodenum"],
+    answer: 0
+  },
+  {
+    question: "Crohn's disease is characterized by involvement of:",
+    options: ["Submucosa only", "Transmural bowel wall", "Mucosa only", "Serosa only"],
     answer: 1
   },
   {
-    question: "What surgery is standard for severe Ulcerative Colitis?",
-    options: ["Appendectomy", "Total proctocolectomy with ileostomy", "Cholecystectomy", "Gastrectomy"],
-    answer: 1
-  },
-  {
-    question: "What dietary supplement may benefit Crohn's disease patients?",
-    options: ["Vitamin C", "Fish oil", "Calcium tablets", "Protein shakes"],
-    answer: 1
-  },
-  {
-    question: "When are biologics like infliximab typically used?",
-    options: ["As first-line therapy", "For mild cases", "For severe, refractory disease", "Only in children"],
+    question: "The peak age at onset for IBD is:",
+    options: ["40–60 years", "10–20 years", "20–40 years", "Above 70 years"],
     answer: 2
   },
   {
-    question: "Which lab test should be monitored in patients on immunomodulators?",
-    options: ["Blood glucose", "White blood cell count", "Serum sodium", "Cholesterol"],
+    question: "Which group has a significantly higher risk of developing IBD?",
+    options: ["Asians compared to Europeans", "Males compared to females", "Whites compared to blacks", "Children compared to adults"],
+    answer: 2
+  },
+  {
+    question: "What environmental factor appears to reduce the risk of IBD?",
+    options: ["Smoking", "High-fat diet", "Breastfeeding", "Urban living"],
+    answer: 2
+  },
+  {
+    question: "Ulcerative colitis histopathology includes all EXCEPT:",
+    options: ["Vascular congestion", "Granuloma formation", "Monocellular infiltration", "Epithelial necrosis"],
     answer: 1
   },
   {
-    question: "What is a stoma in the context of IBD surgery?",
-    options: ["A type of ulcer", "An opening from ileum to abdomen", "A medication patch", "A dental appliance"],
+    question: "Which complication is specific to severe Ulcerative Colitis?",
+    options: ["Toxic megacolon", "Fistula formation", "Small bowel stenosis", "Gallstones"],
+    answer: 0
+  },
+  {
+    question: "The risk of colon cancer in Ulcerative Colitis is increased by:",
+    options: ["2 times", "5 times", "10 times", "20 times"],
+    answer: 2
+  },
+  {
+    question: "Crohn's disease most commonly affects:",
+    options: ["Stomach", "Distal ileum and proximal colon", "Jejunum", "Rectum"],
     answer: 1
+  },
+  {
+    question: "Which symptom is more typical of Ulcerative Colitis than Crohn's?",
+    options: ["Bloody diarrhea", "Fistula formation", "Perianal abscess", "Malabsorption"],
+    answer: 0
+  },
+  {
+    question: "Extraintestinal manifestations of IBD may include:",
+    options: ["Hepatitis only", "Arthritis and uveitis", "Renal failure", "Pneumonia"],
+    answer: 1
+  },
+  {
+    question: "Which lab finding is common in IBD?",
+    options: ["Low ESR", "Elevated albumin", "Anemia", "Hypercalcemia"],
+    answer: 2
+  },
+  {
+    question: "Diagnosis of IBD is primarily based on:",
+    options: ["Urine analysis", "Clinical findings, endoscopy, biopsy", "Serum electrolytes", "ECG"],
+    answer: 1
+  },
+  {
+    question: "A second incidence peak for Crohn's disease occurs in:",
+    options: ["Childhood", "Teenage years", "Seventh decade", "Eighth decade"],
+    answer: 2
   }
 ];
