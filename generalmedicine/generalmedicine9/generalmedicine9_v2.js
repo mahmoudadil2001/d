@@ -1,78 +1,77 @@
-// Version 2
 export const questions = [
   {
-    question: "Crohn's disease can affect any part of the GI tract from:",
-    options: ["Stomach to colon", "Mouth to anus", "Duodenum to jejunum", "Esophagus to ileum"],
-    answer: 1
-  },
-  {
-    question: "Which feature is characteristic of Crohn's disease?",
-    options: ["Continuous inflammation", "Segmental distribution", "Limited to mucosa", "Only rectal involvement"],
-    answer: 1
-  },
-  {
-    question: "Ulcerative colitis is primarily a disease of:",
-    options: ["Mucosa", "Serosa", "Muscularis propria", "Subserosa"],
-    answer: 0
-  },
-  {
-    question: "Which population shows a 10-fold increased risk of IBD in first-degree relatives?",
-    options: ["General population", "Patients' relatives", "Smokers", "Elderly"],
-    answer: 1
-  },
-  {
-    question: "Breastfeeding is considered to:",
-    options: ["Increase IBD risk", "Have no effect", "Reduce IBD risk", "Trigger IBD"],
+    question: "Which part of the small intestine is the shortest?",
+    options: ["Jejunum", "Ileum", "Duodenum", "Cecum"],
     answer: 2
   },
   {
-    question: "Which genetic factor is involved in IBD pathogenesis?",
-    options: ["Increased bacterial clearance", "Enhanced immune tolerance", "Impaired immune response genes", "Reduced intestinal permeability"],
+    question: "The jejunum is specialized for the absorption of:",
+    options: ["Vitamin B12", "Bile salts", "Small nutrient particles", "Water"],
     answer: 2
   },
   {
-    question: "Chronic inflammation in Ulcerative Colitis can lead to:",
-    options: ["Colonic shortening and narrowing", "Increased bowel length", "Enhanced absorption", "Reduced fibrosis"],
-    answer: 0
-  },
-  {
-    question: "Toxic megacolon results from:",
-    options: ["Superficial mucosal damage", "Disease extension into muscular layers", "Fistula formation", "Malabsorption"],
-    answer: 1
-  },
-  {
-    question: "Which is NOT a common symptom of Crohn's disease?",
-    options: ["Right lower quadrant pain", "Bloody diarrhea (typical)", "Weight loss", "Diarrhea without blood"],
-    answer: 1
-  },
-  {
-    question: "Fistula formation is a complication more common in:",
-    options: ["Ulcerative Colitis", "Crohn's disease", "Both equally", "Neither"],
-    answer: 1
-  },
-  {
-    question: "Extraintestinal manifestations occur in what percentage of IBD patients?",
-    options: ["5%", "20%", "50%", "80%"],
-    answer: 1
-  },
-  {
-    question: "Which radiographic method is useful in IBD diagnosis?",
-    options: ["Chest X-ray", "MRI enterography", "Bone scan", "Ultrasound of thyroid"],
-    answer: 1
-  },
-  {
-    question: "Blood tests in IBD may show:",
-    options: ["High albumin", "Low ESR", "Elevated ESR", "Hyperglycemia"],
+    question: "The large intestine extends from the ileum to the:",
+    options: ["Stomach", "Duodenum", "Anus", "Jejunum"],
     answer: 2
   },
   {
-    question: "Smoking is known to:",
-    options: ["Reduce Crohn's relapses", "Have no effect", "Increase Crohn's relapses", "Cure Ulcerative Colitis"],
+    question: "The cecum is approximately how long?",
+    options: ["3 cm", "6 cm", "12 cm", "20 cm"],
+    answer: 1
+  },
+  {
+    question: "What type of tissue is abundant in the appendix?",
+    options: ["Muscular tissue", "Nervous tissue", "Lymphoid tissue", "Adipose tissue"],
     answer: 2
   },
   {
-    question: "Colorectal cancer risk in Crohn's disease is increased with:",
-    options: ["Short disease duration", "Long-standing colonic disease", "No inflammation", "Young age"],
+    question: "The ascending colon turns at the right colic flexure near which organ?",
+    options: ["Spleen", "Liver", "Pancreas", "Kidney"],
+    answer: 1
+  },
+  {
+    question: "Which part of the colon is about 25 cm long?",
+    options: ["Transverse colon", "Ascending colon", "Descending colon", "Sigmoid colon"],
+    answer: 2
+  },
+  {
+    question: "The rectum is approximately how long?",
+    options: ["6 cm", "12 cm", "18 cm", "24 cm"],
+    answer: 1
+  },
+  {
+    question: "What is a key factor contributing to appendix infection?",
+    options: ["Wide lumen", "High blood flow", "Blind-ended tube", "Lack of lymphoid tissue"],
+    answer: 2
+  },
+  {
+    question: "In appendicitis, pain later shifts to where the inflamed appendix irritates the:",
+    options: ["Liver", "Stomach", "Peritoneum", "Diaphragm"],
+    answer: 2
+  },
+  {
+    question: "Which artery supplies the blind end of the appendix?",
+    options: ["Superior mesenteric artery", "Inferior mesenteric artery", "Appendicular artery", "Celiac artery"],
+    answer: 2
+  },
+  {
+    question: "The ileum ends at the:",
+    options: ["Duodenojejunal flexure", "Ileocecal junction", "Hepatic flexure", "Splenic flexure"],
+    answer: 1
+  },
+  {
+    question: "The transverse colon begins at the:",
+    options: ["Left colic flexure", "Right colic flexure", "Cecum", "Sigmoid colon"],
+    answer: 1
+  },
+  {
+    question: "Which part of the colon is located in the pelvis?",
+    options: ["Ascending colon", "Transverse colon", "Descending colon", "Sigmoid colon"],
+    answer: 3
+  },
+  {
+    question: "The primary function of the duodenum is:",
+    options: ["Water absorption", "Preparation for absorption", "Vitamin B12 absorption", "Feces storage"],
     answer: 1
   }
 ];
