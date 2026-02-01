@@ -174,7 +174,7 @@ export const lectureNames = {
         "12": "Allergy",
         "13": "Radio and chmotherapy patients",
         "14": "Pulmonary diseases",
-        "15": "Unknown",
+        "15": "AIDS",
         "16": "Rheumatologic and CT disorders",
         "17": "Unknown",
         "18": "Unknown",
