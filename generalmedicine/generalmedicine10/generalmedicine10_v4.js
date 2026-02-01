@@ -1,78 +1,78 @@
 // Version 4
 export const questions = [
   {
-    question: "Which is a second-line drug for IBD?",
-    options: ["Sulfasalazine", "Immunosuppressants", "Antidiarrheals", "Acetaminophen"],
+    question: "IBD includes conditions that are:",
+    options: ["Infectious", "Idiopathic", "Neoplastic", "Traumatic"],
     answer: 1
   },
   {
-    question: "Why are steroids combined with sulfasalazine?",
-    options: ["To induce remission during flare-ups", "As maintenance therapy", "To cure IBD", "To improve taste"],
+    question: "Crohn's disease can cause:",
+    options: ["Continuous colonic inflammation", "Patchy ulcers throughout GI tract", "Only rectal ulcers", "Gastric ulcers exclusively"],
+    answer: 1
+  },
+  {
+    question: "Which is TRUE about Ulcerative Colitis distribution?",
+    options: ["Involves entire GI tract", "Starts distally and may spread proximally", "Only in small bowel", "Only in stomach"],
+    answer: 1
+  },
+  {
+    question: "IBD prevalence is higher in:",
+    options: ["Men only", "Women only", "Equal in men and women", "Children only"],
+    answer: 2
+  },
+  {
+    question: "Which is a genetic factor in IBD?",
+    options: ["Enhanced bacterial clearance", "Mutations impairing immune response", "Increased intestinal integrity", "Reduced inflammation genes"],
+    answer: 1
+  },
+  {
+    question: "A key histologic difference: Granulomas are seen in:",
+    options: ["Ulcerative Colitis", "Crohn's disease", "Both", "Neither"],
+    answer: 1
+  },
+  {
+    question: "Which is a complication of chronic Ulcerative Colitis?",
+    options: ["Decreased cancer risk", "Toxic megacolon", "Gallbladder disease", "Pancreatitis"],
+    answer: 1
+  },
+  {
+    question: "Crohn's disease relapses are more common in:",
+    options: ["Non-smokers", "Smokers", "Vegetarians", "Athletes"],
+    answer: 1
+  },
+  {
+    question: "Extraintestinal manifestations include:",
+    options: ["Iritis", "Diabetes", "Asthma", "Migraine"],
     answer: 0
   },
   {
-    question: "What is the third-line treatment for steroid-refractory Crohn's?",
-    options: ["Antibiotics", "Biologics or surgery", "More steroids", "Diet change only"],
+    question: "Lab findings in IBD may show:",
+    options: ["Elevated serum albumin", "Low ESR", "Iron deficiency anemia", "Hypercalcemia"],
+    answer: 2
+  },
+  {
+    question: "Which diagnostic tool is primary for IBD?",
+    options: ["ECG", "Endoscopy with biopsy", "Pulmonary function test", "Skin biopsy"],
     answer: 1
   },
   {
-    question: "Which is a supportive therapy for IBD?",
-    options: ["Bed rest and nutrition", "Chemotherapy", "Radiation", "Acupuncture only"],
-    answer: 0
-  },
-  {
-    question: "What is a risk of antibiotic overuse in IBD?",
-    options: ["C. difficile overgrowth", "Improved digestion", "Reduced inflammation", "Better appetite"],
-    answer: 0
-  },
-  {
-    question: "When should urgent dental care be provided?",
-    options: ["Only during remission", "During acute exacerbations if necessary", "Never", "Routinely every week"],
+    question: "Malabsorption in Crohn's can cause:",
+    options: ["Weight gain", "Finger clubbing and anemia", "Hyponatremia only", "Hyperkalemia"],
     answer: 1
   },
   {
-    question: "Which is an oral sign of Ulcerative Colitis?",
-    options: ["Aphthous-like lesions", "Fordyce granules", "Black hairy tongue", "Geographic tongue"],
-    answer: 0
+    question: "Which is NOT typical of Crohn's disease?",
+    options: ["Fistula formation", "Transmural inflammation", "Continuous mucosal involvement", "Skip lesions"],
+    answer: 2
   },
   {
-    question: "What should be avoided in IBD pain management?",
-    options: ["Acetaminophen", "NSAIDs", "Opioids", "COX-2 inhibitors"],
+    question: "Colon cancer risk in Ulcerative Colitis increases with:",
+    options: ["Short disease duration", "Longstanding disease", "Mild inflammation", "Young age at diagnosis"],
     answer: 1
   },
   {
-    question: "What does a sedimentation rate >30 mm/hr indicate?",
-    options: ["Mild disease", "Severe disease", "Healthy state", "Dental caries"],
+    question: "Which is a common symptom in IBD?",
+    options: ["Polyuria", "Diarrhea", "Chest pain", "Headache"],
     answer: 1
-  },
-  {
-    question: "What is total proctocolectomy?",
-    options: ["Removal of colon and rectum", "Removal of gallbladder", "Stomach stapling", "Jejunal resection"],
-    answer: 0
-  },
-  {
-    question: "How are aphthous-like lesions in IBD treated?",
-    options: ["With antibiotics", "Topical steroids after systemic control", "Surgery first", "No treatment needed"],
-    answer: 1
-  },
-  {
-    question: "Which drug requires monitoring of WBC and LFT?",
-    options: ["Acetaminophen", "Immunomodulators", "Antidiarrheals", "Fish oil"],
-    answer: 1
-  },
-  {
-    question: "What is a dental recommendation for steroid-taking IBD patients?",
-    options: ["Skip dose before appointment", "Take usual dose before dental visit", "Double the dose", "Stop steroids permanently"],
-    answer: 1
-  },
-  {
-    question: "Which is NOT a typical extraintestinal oral manifestation?",
-    options: ["Pyostomatitis vegetans", "Orofacial granulomatosis", "Aphthous ulcers", "Oral cancer"],
-    answer: 3
-  },
-  {
-    question: "What is the main dental risk for IBD patients on biologics?",
-    options: ["Increased infection risk", "Tooth discoloration", "Gingival bleeding only", "Malocclusion"],
-    answer: 0
   }
 ];
