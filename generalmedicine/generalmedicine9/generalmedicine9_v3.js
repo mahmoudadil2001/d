@@ -1,78 +1,77 @@
-// Version 3
 export const questions = [
   {
-    question: "IBD is thought to result from immune dysfunction in:",
-    options: ["Genetically resistant individuals", "Random population", "Genetically susceptible persons", "Immunocompromised only"],
+    question: "The small intestine is divided into how many parts?",
+    options: ["Two", "Three", "Four", "Five"],
+    answer: 1
+  },
+  {
+    question: "Which part of the small intestine is C-shaped?",
+    options: ["Jejunum", "Ileum", "Duodenum", "Cecum"],
     answer: 2
   },
   {
-    question: "Ulcerative colitis begins in:",
-    options: ["Ileum", "Colon and rectum", "Stomach", "Jejunum"],
+    question: "The jejunum makes up what fraction of the jejunum and ileum length?",
+    options: ["One-third", "Two-fifths", "One-half", "Three-fourths"],
     answer: 1
   },
   {
-    question: "Which layer is spared in Ulcerative Colitis?",
-    options: ["Mucosa", "Submucosa", "Muscularis propria", "None, it's transmural in Crohn's"],
-    answer: 3
+    question: "The ileum absorbs bile salts and:",
+    options: ["Glucose", "Vitamin B12", "Amino acids", "Fatty acids"],
+    answer: 1
   },
   {
-    question: "Which decade shows a second incidence peak for Crohn's?",
-    options: ["Third", "Fifth", "Seventh", "Ninth"],
+    question: "The large intestine absorbs water and:",
+    options: ["Proteins", "Electrolytes", "Fats", "Carbohydrates"],
+    answer: 1
+  },
+  {
+    question: "The appendix is attached to which part of the cecum?",
+    options: ["Anterior surface", "Posteromedial surface", "Lateral surface", "Inferior surface"],
+    answer: 1
+  },
+  {
+    question: "McBurney's point is located along a line between the right ASIS and the:",
+    options: ["Xiphoid process", "Umbilicus", "Pubic symphysis", "Left ASIS"],
+    answer: 1
+  },
+  {
+    question: "The ascending colon is approximately how long?",
+    options: ["8 cm", "13 cm", "25 cm", "38 cm"],
+    answer: 1
+  },
+  {
+    question: "Which colic flexure is higher?",
+    options: ["Right colic flexure", "Left colic flexure", "Both are equal", "Neither has a fixed position"],
+    answer: 1
+  },
+  {
+    question: "The descending colon continues as the:",
+    options: ["Cecum", "Transverse colon", "Sigmoid colon", "Rectum"],
     answer: 2
   },
   {
-    question: "Which is a histopathologic finding in Ulcerative Colitis?",
-    options: ["Granulomas", "Epithelial necrosis", "Villi atrophy", "Crypt abscess only in Crohn's"],
+    question: "What controls the expulsion of feces?",
+    options: ["Rectum", "Anus", "Sigmoid colon", "Descending colon"],
     answer: 1
   },
   {
-    question: "Malabsorption in Crohn's can lead to:",
-    options: ["Weight gain", "Finger clubbing", "Hypertension", "Hypothyroidism"],
-    answer: 1
+    question: "Obstruction of the appendix lumen can be caused by:",
+    options: ["Enteroliths", "Gallstones", "Renal calculi", "Polyps"],
+    answer: 0
   },
   {
-    question: "Which is NOT an extraintestinal manifestation of IBD?",
-    options: ["Arthritis", "Uveitis", "Hepatic complications", "Myocardial infarction"],
-    answer: 3
+    question: "Perforation of the appendix can lead to infection of the:",
+    options: ["Liver", "Stomach", "Peritoneum", "Diaphragm"],
+    answer: 2
   },
   {
-    question: "Osteoporosis in IBD patients results from:",
-    options: ["Excess vitamin D", "Malabsorption and steroid use", "High calcium intake", "Hyperparathyroidism"],
-    answer: 1
+    question: "Pain in appendicitis may initially be felt as a vague pain around the:",
+    options: ["Right lower quadrant", "Epigastrium", "Umbilicus", "Left iliac fossa"],
+    answer: 2
   },
   {
-    question: "The diagnosis of IBD relies LEAST on:",
-    options: ["Endoscopy", "Biopsy", "Clinical findings", "Blood type"],
-    answer: 3
-  },
-  {
-    question: "Which vitamin deficiency is common in IBD due to malabsorption?",
-    options: ["Vitamin C", "Vitamin B12", "Vitamin K only", "Vitamin A"],
-    answer: 1
-  },
-  {
-    question: "Crohn's disease is described as:",
-    options: ["Always continuous", "Segmental with skip lesions", "Limited to elderly", "Curable with antibiotics"],
-    answer: 1
-  },
-  {
-    question: "Which symptom is classic for Ulcerative Colitis?",
-    options: ["Perianal fistulas", "Rectal bleeding", "Gallstones", "Esophageal ulcers"],
-    answer: 1
-  },
-  {
-    question: "Toxic megacolon may lead to:",
-    options: ["Improved bowel function", "Intestinal perforation", "Reduced inflammation", "Weight gain"],
-    answer: 1
-  },
-  {
-    question: "Which imaging is NOT typically used for IBD?",
-    options: ["CT abdomen", "MRI enterography", "Colonoscopy", "Echocardiogram"],
-    answer: 3
-  },
-  {
-    question: "The risk of surgery in Crohn's disease lifetime is about:",
-    options: ["20–30%", "40–50%", "70–80%", "90–100%"],
+    question: "The transverse colon occupies which region?",
+    options: ["Epigastric", "Hypogastric", "Umbilical", "Right lumbar"],
     answer: 2
   }
 ];
