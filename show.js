@@ -146,12 +146,6 @@ export const visibleLectures = {
             3,
             4
         ],
-        "20": [
-            1,
-            2,
-            3,
-            4
-        ],
         "nineteen": [
             1
         ],
@@ -173,7 +167,13 @@ export const visibleLectures = {
             3,
             4
         ],
-        "twentyfour": []
+        "twentyfour": [],
+        "twenty": [
+            1,
+            2,
+            3,
+            4
+        ]
     },
     "generalsurgery": {
         "1": [
