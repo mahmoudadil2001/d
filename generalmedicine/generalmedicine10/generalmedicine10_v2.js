@@ -1,78 +1,78 @@
 // Version 2
 export const questions = [
   {
-    question: "What is the primary goal of medical management in IBD?",
-    options: ["Cure the disease", "Manage symptoms and induce remission", "Perform surgery", "Replace the colon"],
+    question: "Crohn's disease can affect any part of the GI tract from:",
+    options: ["Stomach to colon", "Mouth to anus", "Duodenum to jejunum", "Esophagus to ileum"],
     answer: 1
   },
   {
-    question: "Which formulation helps deliver sulfasalazine to the distal bowel?",
-    options: ["IV injection", "Controlled-release oral forms", "Topical gel", "Sublingual tablet"],
+    question: "Which feature is characteristic of Crohn's disease?",
+    options: ["Continuous inflammation", "Segmental distribution", "Limited to mucosa", "Only rectal involvement"],
     answer: 1
   },
   {
-    question: "When are parenteral corticosteroids indicated?",
-    options: ["For mild diarrhea", "During severe attacks requiring hospitalization", "For routine dental visits", "During remission"],
+    question: "Ulcerative colitis is primarily a disease of:",
+    options: ["Mucosa", "Serosa", "Muscularis propria", "Subserosa"],
+    answer: 0
+  },
+  {
+    question: "Which population shows a 10-fold increased risk of IBD in first-degree relatives?",
+    options: ["General population", "Patients' relatives", "Smokers", "Elderly"],
     answer: 1
   },
   {
-    question: "What is a major risk of long-term steroid use in IBD?",
-    options: ["Weight loss", "Adrenal suppression", "Improved immunity", "Reduced appetite"],
-    answer: 1
-  },
-  {
-    question: "Which drug class is used to treat abscesses in Crohn's disease?",
-    options: ["Antidiarrheals", "Antibiotics", "Biologics", "NSAIDs"],
-    answer: 1
-  },
-  {
-    question: "What should be avoided in IBD patients for pain relief?",
-    options: ["Acetaminophen", "Aspirin and NSAIDs", "COX-2 inhibitors", "Opioids"],
-    answer: 1
-  },
-  {
-    question: "Which oral manifestation is linked to Crohn's disease?",
-    options: ["Aphthous-like ulcers", "Pyostomatitis vegetans only", "Orofacial granulomatosis", "Oral thrush"],
+    question: "Breastfeeding is considered to:",
+    options: ["Increase IBD risk", "Have no effect", "Reduce IBD risk", "Trigger IBD"],
     answer: 2
   },
   {
-    question: "When should dental appointments be scheduled for IBD patients?",
-    options: ["During flare-ups", "During remission", "Only in emergency", "Only in hospital"],
+    question: "Which genetic factor is involved in IBD pathogenesis?",
+    options: ["Increased bacterial clearance", "Enhanced immune tolerance", "Impaired immune response genes", "Reduced intestinal permeability"],
+    answer: 2
+  },
+  {
+    question: "Chronic inflammation in Ulcerative Colitis can lead to:",
+    options: ["Colonic shortening and narrowing", "Increased bowel length", "Enhanced absorption", "Reduced fibrosis"],
+    answer: 0
+  },
+  {
+    question: "Toxic megacolon results from:",
+    options: ["Superficial mucosal damage", "Disease extension into muscular layers", "Fistula formation", "Malabsorption"],
     answer: 1
   },
   {
-    question: "Which patient is considered to have mild IBD?",
-    options: [">6 bloody stools/day with fever", "<4 stools/day, no blood, low ESR", "High sedimentation rate", "Severe abdominal pain"],
+    question: "Which is NOT a common symptom of Crohn's disease?",
+    options: ["Right lower quadrant pain", "Bloody diarrhea (typical)", "Weight loss", "Diarrhea without blood"],
     answer: 1
   },
   {
-    question: "What is ileostomy?",
-    options: ["Removal of stomach", "Opening from ileum to abdominal wall", "Colon repair", "Gallbladder removal"],
+    question: "Fistula formation is a complication more common in:",
+    options: ["Ulcerative Colitis", "Crohn's disease", "Both equally", "Neither"],
     answer: 1
   },
   {
-    question: "Why are biologics given at intervals?",
-    options: ["They are oral", "They require slow IV infusion or injections", "They are topical", "They are inhaled"],
+    question: "Extraintestinal manifestations occur in what percentage of IBD patients?",
+    options: ["5%", "20%", "50%", "80%"],
     answer: 1
   },
   {
-    question: "What must be monitored in patients on immunomodulators?",
-    options: ["Blood pressure", "Liver function tests", "Dental plaque", "Vision"],
+    question: "Which radiographic method is useful in IBD diagnosis?",
+    options: ["Chest X-ray", "MRI enterography", "Bone scan", "Ultrasound of thyroid"],
     answer: 1
   },
   {
-    question: "Which is a risk of clindamycin in IBD patients?",
-    options: ["Tooth staining", "Pseudomembranous colitis", "Hypertension", "Dry mouth"],
-    answer: 1
+    question: "Blood tests in IBD may show:",
+    options: ["High albumin", "Low ESR", "Elevated ESR", "Hyperglycemia"],
+    answer: 2
   },
   {
-    question: "What may be needed if an IBD patient on steroids undergoes stressful dental surgery?",
-    options: ["Antibiotics", "Supplemental corticosteroids", "Blood transfusion", "No special care"],
-    answer: 1
+    question: "Smoking is known to:",
+    options: ["Reduce Crohn's relapses", "Have no effect", "Increase Crohn's relapses", "Cure Ulcerative Colitis"],
+    answer: 2
   },
   {
-    question: "What does pyostomatitis vegetans look like?",
-    options: ["White patches", "Papillary projections on red base", "Black hairy tongue", "Smooth erythema"],
+    question: "Colorectal cancer risk in Crohn's disease is increased with:",
+    options: ["Short disease duration", "Long-standing colonic disease", "No inflammation", "Young age"],
     answer: 1
   }
 ];
