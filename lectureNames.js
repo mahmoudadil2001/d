@@ -44,7 +44,7 @@ export const lectureNames = {
         "10": "Inflammatory Bowel Disease part 1",
         "11": "Inflammatory Bowel Disease part 2",
         "12": "Pseudomembranous Colitis",
-        "13": "Unknown",
+        "13": "Peptic Ulcer 1",
         "14": "Unknown",
         "15": "Unknown",
         "16": "Unknown",
