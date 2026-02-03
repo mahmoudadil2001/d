@@ -268,7 +268,7 @@ export const lectureNames = {
         "10": "Dental calculus",
         "11": "dental stain",
         "12": "Risk factors",
-        "13": "Unknown",
+        "13": "Smoking and periodontal diseases",
         "14": "Unknown",
         "15": "Unknown",
         "16": "Unknown",
