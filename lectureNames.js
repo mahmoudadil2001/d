@@ -203,7 +203,7 @@ export const lectureNames = {
         "9": "G&D  Development of Dentition& Occlusion",
         "10": "G&D Development of Dentition& Occlusion 2",
         "11": "Tooth movement",
-        "12": "Unknown",
+        "12": "local factors affect the occlusion",
         "13": "Unknown",
         "14": "Unknown",
         "15": "Unknown",
