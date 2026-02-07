@@ -232,7 +232,7 @@ export const lectureNames = {
         "6": "Morphology of primary teeth 2",
         "7": "morphology differences primary& permenent",
         "8": "Epstein pearls, bohn nodules, dental lamina cysts",
-        "9": "Unknown",
+        "9": "causes of delayed teeth eruption",
         "10": "Unknown",
         "11": "Unknown",
         "12": "Unknown",
