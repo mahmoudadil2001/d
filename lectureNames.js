@@ -104,7 +104,7 @@ export const lectureNames = {
         "6": "dental caries",
         "7": "Pulp Irritants and inflammatory conditions",
         "8": "Restorative Dentistry and Pulpal Health",
-        "9": "Unknown",
+        "9": "managment of Deep-Seated Carious lesions",
         "10": "Unknown",
         "11": "Unknown",
         "12": "Unknown",
