@@ -300,7 +300,7 @@ export const lectureNames = {
         "10": "Selection and arrangment of teeth",
         "11": "RPD Insertion and Recall Visits",
         "12": "pre prosthetic surgery",
-        "13": "diagnosis and treatment plan for complete denture",
+        "13": "diagnosis and treatment plan for complete denture🟦🟩",
         "14": "Impressions for Complete Dentures P.1",
         "15": "Impressions for Complete Dentures P.2",
         "16": "Unknown",
