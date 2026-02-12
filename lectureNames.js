@@ -175,7 +175,7 @@ export const lectureNames = {
         "13": "Radio and chmotherapy patients",
         "14": "Pulmonary diseases",
         "15": "AIDS",
-        "16": "Rheumatologic and CT disorders",
+        "16": "Rheumatologic and CT disorders🟦🟩",
         "17": "pregnancy",
         "18": "Unknown",
         "19": "Unknown",
