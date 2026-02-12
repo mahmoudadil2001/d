@@ -1,77 +1,77 @@
 export const questions = [
   {
-    question: "What is the main purpose of rubber dam in preventing intracanal irrigants from entering the mouth?",
-    options: ["They are toxic", "They have unpleasant taste", "They cause allergic reactions", "They are expensive"],
-    answer: 1
-  },
-  {
-    question: "Which disadvantage of rubber dam can be solved by enhancing communication using hand signals?",
-    options: ["Time consuming", "Limited communication", "Cost", "Patient discomfort"],
-    answer: 1
-  },
-  {
-    question: "What is the thickness of medium rubber dam sheet?",
-    options: ["0.15mm", "0.2mm", "0.25mm", "0.3mm"],
-    answer: 1
-  },
-  {
-    question: "Heavy rubber dam sheet (0.25mm) has which advantage?",
-    options: ["Better for tight contacts", "Does not tear easily", "Less force on lips", "Better flexibility"],
-    answer: 1
-  },
-  {
-    question: "What size options are available for rubber dam sheets?",
-    options: ["4x4 and 5x5 inches", "5x5 and 6x6 inches", "6x6 and 7x7 inches", "Only 6x6 inches"],
-    answer: 1
-  },
-  {
-    question: "Which side of rubber dam sheet should face the tissue?",
-    options: ["Matte side", "Shiny side", "Either side", "Textured side"],
-    answer: 1
-  },
-  {
-    question: "Starvisi frame is made from which material?",
-    options: ["Metal only", "Radiolucent plastic and nylon", "Rubber", "Stainless steel"],
-    answer: 1
-  },
-  {
-    question: "Nygard-Ostby frame is which type?",
-    options: ["Type A", "Type B", "Type C", "Type D"],
+    question: "What is the first step in endodontic treatment?",
+    options: ["Obturation", "Disinfection of the canal system", "Cleaning and shaping of the root canal system", "Crown preparation"],
     answer: 2
   },
   {
-    question: "Ivory No. 1 clamp is specifically used for which teeth?",
-    options: ["Molars", "Incisors", "Bicuspids", "Cuspids"],
+    question: "What is the third step in endodontic treatment?",
+    options: ["Cleaning", "Shaping", "Obturation and 3D closure and seal of the complete canal space", "Access cavity preparation"],
     answer: 2
   },
   {
-    question: "Ivory No. 14A clamp is indicated for which situation?",
-    options: ["Normal molars", "Partially erupted molars", "Anterior teeth", "Bicuspids only"],
-    answer: 1
-  },
-  {
-    question: "Wingless clamps are preferred in which situation?",
-    options: ["Anterior teeth", "Patients with thin cheeks", "Patients with thick cheeks", "All situations"],
+    question: "Where in the root canal are most lateral canals located?",
+    options: ["Coronal region", "Middle region", "Apical region", "Cervical region"],
     answer: 2
   },
   {
-    question: "Gingivally approaching clamps are used for which type of teeth?",
-    options: ["Normal teeth", "Fractured teeth", "Anterior teeth", "Bicuspids"],
-    answer: 1
-  },
-  {
-    question: "What should the hole created by rubber dam puncher be?",
-    options: ["Slightly torn for flexibility", "Clear without tags or tears", "Rough for better grip", "Square shaped"],
-    answer: 1
-  },
-  {
-    question: "In Method 2, what is the main disadvantage?",
-    options: ["No visualization", "Requires assistance", "Tearing of dam", "Time consuming"],
+    question: "According to Schilder, how many biological objectives are there for successful root canal therapy?",
+    options: ["2 biological objectives", "3 biological objectives", "4 biological objectives", "5 biological objectives"],
     answer: 2
   },
   {
-    question: "Method 3 particularly needs assistance for which teeth?",
-    options: ["Maxillary anterior", "Mandibular anterior", "Maxillary molars", "Mandibular molars"],
-    answer: 3
+    question: "What should be the relationship between the canal width apically versus coronally?",
+    options: ["Wider apically, narrower coronally", "Same width throughout", "Narrower apically, widest coronally", "Random width"],
+    answer: 2
+  },
+  {
+    question: "What should be avoided regarding the foramen during instrumentation?",
+    options: ["Cleaning it", "Finding it", "Transportation of the foramen", "Measuring it"],
+    answer: 2
+  },
+  {
+    question: "What is one biological objective of root canal treatment?",
+    options: ["Making the canal as wide as possible", "Confinement of instrumentation within the root canals only", "Removing all dentin", "Creating a straight canal"],
+    answer: 1
+  },
+  {
+    question: "What must be obtained during access cavity preparation?",
+    options: ["A round opening", "A straight line access from the coronal to the apical regions of the canal", "Maximum dentin preservation", "A triangular shape"],
+    answer: 1
+  },
+  {
+    question: "Can nickel titanium instruments be precurved?",
+    options: ["Yes, easily", "No, they are flexible and cannot be curved", "Only with heat", "Only when new"],
+    answer: 1
+  },
+  {
+    question: "What is one advantage of using intra-canal irrigation solutions?",
+    options: ["They weaken the tooth", "They provide lubrication for the cutting motion of files", "They color the canal", "They soften dentin"],
+    answer: 1
+  },
+  {
+    question: "How should irrigation solution be delivered inside the canal?",
+    options: ["With a cotton pellet", "With paper points", "Using a hypodermic syringe", "By pouring directly"],
+    answer: 2
+  },
+  {
+    question: "Why should file flutes be cleaned regularly after each insertion?",
+    options: ["To check for damage", "To ensure efficient cutting action and prevent debris accumulation", "To sterilize them", "To sharpen them"],
+    answer: 1
+  },
+  {
+    question: "What happens if you force an instrument in the canal?",
+    options: ["Better cleaning", "Faster treatment", "The instrument may break", "Better shaping"],
+    answer: 2
+  },
+  {
+    question: "How should instruments be used during canal preparation?",
+    options: ["Skip sizes for faster treatment", "In sequential order with successively larger files", "Randomly", "Largest to smallest"],
+    answer: 1
+  },
+  {
+    question: "What should be maintained during instrumentation to prevent failure?",
+    options: ["Maximum apical enlargement", "An apical stop", "A straight canal", "Multiple foramina"],
+    answer: 1
   }
 ];
