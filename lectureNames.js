@@ -4,7 +4,7 @@ export const lectureNames = {
         "2": "Classification Of Periapical Disease",
         "3": "Access Opening Preparation",
         "4": "Working length Determination",
-        "5": "Rubber Dam",
+        "5": "root canal cleaning and shaping",
         "6": "Clean& Shape Root Canal",
         "7": "Clean& Shape Root Canal 2",
         "8": "Root Canal Obturation",
