@@ -269,7 +269,7 @@ export const lectureNames = {
         "11": "dental stain",
         "12": "Risk factors",
         "13": "Smoking and periodontal diseases",
-        "14": "Unknown",
+        "14": "Treatment planning of Periodontal Diseases",
         "15": "Unknown",
         "16": "Unknown",
         "17": "Unknown",
