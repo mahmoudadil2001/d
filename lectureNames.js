@@ -73,7 +73,7 @@ export const lectureNames = {
         "7": "Fluid balance",
         "8": "Head injuries and multiple trauma",
         "9": "post operative care",
-        "10": "anesthesia",
+        "10": "anesthesia🟦🟩",
         "11": "Unknown",
         "12": "Unknown",
         "13": "Unknown",
