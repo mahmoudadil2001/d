@@ -1,77 +1,77 @@
 export const questions = [
   {
-    question: "Rubber dam is described as what type of aid in endodontic treatment?",
-    options: ["Reusable", "Disposable", "Sterilizable", "Optional"],
+    question: "According to the lecture, what is cleaning and shaping considered in root canal therapy?",
+    options: ["The least important step", "One of the most important steps for success", "An optional step", "The final step"],
     answer: 1
   },
   {
-    question: "What does rubber dam help eliminate by retracting the cheek and tongue?",
-    options: ["Bacterial contamination", "Soft tissue interference", "Patient anxiety", "Treatment time"],
+    question: "What should the root canal preparation mimic according to Schilder's first mechanical objective?",
+    options: ["A straight cylinder", "The natural canal shape with a continuously tapering cone", "A square shape", "An irregular shape"],
     answer: 1
   },
   {
-    question: "What can be enhanced through more training to solve rubber dam disadvantages?",
-    options: ["Patient comfort", "Cost effectiveness", "Using rubber dam", "Communication"],
+    question: "What should be preserved according to Schilder's concept of 'flow'?",
+    options: ["The coronal portion only", "The natural curve of the canal", "The straight sections", "The access cavity"],
+    answer: 1
+  },
+  {
+    question: "What formula demonstrates the increase in foramen surface area?",
+    options: ["πr", "πr²", "2πr", "πd"],
+    answer: 1
+  },
+  {
+    question: "What is the first biological objective according to Schilder?",
+    options: ["Maximum tissue removal", "Confinement of instrumentation within the root canals only", "Creating large canals", "Straightening all canals"],
+    answer: 1
+  },
+  {
+    question: "What is the third biological objective of root canal treatment?",
+    options: ["Minimum debridement", "Optimum debridement of the root canal space", "Random debridement", "Coronal debridement only"],
+    answer: 1
+  },
+  {
+    question: "What helps ensure complete opening of the canal and facilitate working length estimation?",
+    options: ["Access cavity", "The glide path file", "Gates drills", "Paper points"],
+    answer: 1
+  },
+  {
+    question: "Which instruments should be precurved in case of curved canals?",
+    options: ["All instruments", "Only stainless steel instruments", "Only nickel titanium instruments", "No instruments"],
+    answer: 1
+  },
+  {
+    question: "What is one function of intra-canal irrigation solutions?",
+    options: ["Hardening dentin", "Dissolving and flushing out debris from the root canal", "Staining the canal", "Weakening the tooth"],
+    answer: 1
+  },
+  {
+    question: "What concentration of Sodium hypochlorite is commonly used?",
+    options: ["0.5-1%", "2.5-5.25%", "10-15%", "20-25%"],
+    answer: 1
+  },
+  {
+    question: "What should never be done with instruments in the canal?",
+    options: ["Clean them", "Irrigate around them", "Force the instrument in the canal", "Measure them"],
     answer: 2
   },
   {
-    question: "Which thickness of rubber dam is indicated for partially erupted posterior teeth?",
-    options: ["Heavy (0.25mm)", "Thin (0.15mm)", "Medium (0.2mm)", "Extra thin (0.1mm)"],
+    question: "What should be avoided during canal preparation regarding curved canals?",
+    options: ["Using irrigation", "Over preparation and too aggressive over enlargement", "Working length determination", "Using small files"],
     answer: 1
   },
   {
-    question: "What is the size measurement for 6x6 inch rubber dam in centimeters?",
-    options: ["12.5 x 12.5 cm", "15 x 15 cm", "20 x 20 cm", "10 x 10 cm"],
+    question: "What is destroyed if the apical foramen is over-enlarged?",
+    options: ["The canal walls", "The apical stop", "The crown", "The pulp chamber"],
     answer: 1
   },
   {
-    question: "Why should the shiny side of rubber dam face the tissue?",
-    options: ["Better grip", "Can slide over tissue without irritation", "Better visibility", "Stronger material"],
+    question: "What results from the step-back technique with small apical enlargement?",
+    options: ["Minimal taper", "Marked taper from apical to coronal", "No taper", "Reverse taper"],
     answer: 1
   },
   {
-    question: "Young's frame is made from which material?",
-    options: ["Plastic", "Nylon", "Metal", "Rubber"],
-    answer: 2
-  },
-  {
-    question: "What shape are both Young's and Starvisi frames?",
-    options: ["Circular", "Square", "U-shaped", "Triangular"],
-    answer: 2
-  },
-  {
-    question: "What is the function of rubber dam clamps?",
-    options: ["Hold the frame", "Secure dam material and frame in place", "Create holes in dam", "Retract tissues"],
+    question: "What is an advantage of the step-back technique?",
+    options: ["No apical stop", "More flare at coronal part with proper apical stop", "Straight canals only", "No irrigation needed"],
     answer: 1
-  },
-  {
-    question: "Which clamp is used when other clamps fail on molars?",
-    options: ["Ivory No. 26", "Ivory No. 1", "Ivory No. 14A", "Ivory No. 0"],
-    answer: 2
-  },
-  {
-    question: "What advantage do wingless clamps offer?",
-    options: ["More retraction", "Less bulky", "Better grip", "Easier placement"],
-    answer: 1
-  },
-  {
-    question: "Serrated clamps are used for which type of teeth?",
-    options: ["Normal teeth", "Porcelain crowned teeth", "Badly decayed teeth", "Anterior teeth"],
-    answer: 2
-  },
-  {
-    question: "What determines the size of hole punched in rubber dam?",
-    options: ["Clamp size", "Frame type", "Tooth to be isolated", "Patient preference"],
-    answer: 2
-  },
-  {
-    question: "How does the clamp forceps work?",
-    options: ["By rotating the clamp", "By grasping clamp from 2 lateral holes", "By pushing the clamp", "By pulling the dam"],
-    answer: 1
-  },
-  {
-    question: "What should be done after isolating the tooth in Method 1?",
-    options: ["Remove the frame", "Take radiograph", "Swab with disinfectant", "Replace the clamp"],
-    answer: 2
   }
 ];
