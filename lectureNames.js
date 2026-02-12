@@ -176,7 +176,7 @@ export const lectureNames = {
         "14": "Pulmonary diseases",
         "15": "AIDS",
         "16": "Rheumatologic and CT disorders",
-        "17": "Unknown",
+        "17": "pregnancy",
         "18": "Unknown",
         "19": "Unknown",
         "20": "Unknown",
