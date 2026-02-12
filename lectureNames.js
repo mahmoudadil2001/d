@@ -302,7 +302,7 @@ export const lectureNames = {
         "12": "pre prosthetic surgery",
         "13": "diagnosis and treatment plan for complete denture",
         "14": "Impressions for Complete Dentures P.1",
-        "15": "Unknown",
+        "15": "Impressions for Complete Dentures P.2",
         "16": "Unknown",
         "17": "Unknown",
         "18": "Unknown",
