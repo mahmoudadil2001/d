@@ -268,7 +268,7 @@ export const lectureNames = {
         "10": "Dental calculus",
         "11": "dental stain",
         "12": "Risk factors",
-        "13": "Smoking and periodontal diseases",
+        "13": "Smoking and periodontal diseases🟦🟩",
         "14": "Treatment planning of Periodontal Diseases",
         "15": "Unknown",
         "16": "Unknown",
