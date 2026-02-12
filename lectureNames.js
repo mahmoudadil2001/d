@@ -204,7 +204,7 @@ export const lectureNames = {
         "10": "G&D Development of Dentition& Occlusion 2",
         "11": "Tooth movement",
         "12": "local factors affect the occlusion",
-        "13": "Unknown",
+        "13": "Biomechanical Concepts of Tooth Movements",
         "14": "Unknown",
         "15": "Unknown",
         "16": "Unknown",
