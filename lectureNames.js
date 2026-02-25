@@ -234,7 +234,7 @@ export const lectureNames = {
         "8": "Epstein pearls, bohn nodules, dental lamina cysts",
         "9": "causes of delayed teeth eruption🟦🟩",
         "10": "Deep carious lession treatment",
-        "11": "Unknown",
+        "11": "Restorative materials in pedodontic",
         "12": "Unknown",
         "13": "Unknown",
         "14": "Unknown",
