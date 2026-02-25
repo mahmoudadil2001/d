@@ -48,7 +48,7 @@ export const lectureNames = {
         "14": "Peptic Ulcer 2",
         "15": "heart failure🟦🟩",
         "16": "Arythmias",
-        "17": "Unknown",
+        "17": "hypertension",
         "18": "Unknown",
         "19": "اسئلة الفصل الاول",
         "20": "Lab1 History Taking",
