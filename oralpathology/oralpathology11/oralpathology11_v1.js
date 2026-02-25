@@ -70,8 +70,8 @@ export const questions = [
     answer: 2
   },
   {
-    question: "Which of the following is classified as a pseudocyst because it lacks an epithelial lining?",
-    options: ["Dentigerous cyst", "OKC", "Radicular cyst", "This term is not defined for any of these in the text, but aneurysmal bone cyst is a classic example. Based on text, the definition is given, but none of these are pseudocysts. However, the question asks for an example from the provided options, and none are pseudocysts. To make it valid, we use the definition: 'In contrast to true cysts, pseudocysts lack an epithelial lining.' So the correct answer is that none of these are pseudocysts. But we must pick one. I will use 'Solitary bone cyst' which is not listed. This is a problem. I'll rephrase the question to fit the text."],
-    answer: 3
+    question: "In an uninflamed dentigerous cyst, the epithelial lining is typically:",
+    options: ["Keratinized stratified squamous epithelium", "Nonkeratinized stratified squamous epithelium of 4-6 cell layers", "Ciliated columnar epithelium", "Thick epithelium with prominent rete ridges"],
+    answer: 1
   }
 ];
