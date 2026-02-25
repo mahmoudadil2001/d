@@ -49,7 +49,7 @@ export const lectureNames = {
         "15": "heart failure🟦🟩",
         "16": "Arythmias",
         "17": "hypertension",
-        "18": "Unknown",
+        "18": "ischemic heart diseases",
         "19": "اسئلة الفصل الاول",
         "20": "Lab1 History Taking",
         "21": "Lab2 clinical examination 1",
