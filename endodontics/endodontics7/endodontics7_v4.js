@@ -1,77 +1,77 @@
 export const questions = [
   {
-    question: "The step-down technique allows deeper penetration of irrigant by:",
-    options: ["Increasing apical pressure", "Creating coronal flare first", "Using larger apical files", "Reducing working length"],
+    question: "What does obturation of the root canal space aim to replace?",
+    options: ["Healthy pulp tissue", "Necrotic tissue with an inert filling material", "Dentin with gutta-percha", "The smear layer with sealer"],
     answer: 1
   },
   {
-    question: "What length should Hedstrom files reach in step-down technique?",
-    options: ["Full working length", "16 to 18 mm or where they bind", "Apical third only", "5 mm from apex"],
-    answer: 1
-  },
-  {
-    question: "Balanced force technique prevents all EXCEPT:",
-    options: ["Ledge formation", "Canal blockage", "Instrument separation", "Canal transportation"],
+    question: "Why is obturation delayed in cases of active periapical infection?",
+    options: ["To wait for a negative culture", "To allow the patient to rest", "To prevent increasing pressure and tissue destruction", "To allow the sealer to be mixed properly"],
     answer: 2
   },
   {
-    question: "The cutting motion in balanced force is repeated:",
-    options: ["Once", "Twice", "Three times (3/4 counter clockwise)", "Four times"],
+    question: "Which of the following is NOT listed as a material used for obturation?",
+    options: ["Gutta-percha", "Silver points", "Amalgam", "MTA"],
     answer: 2
   },
   {
-    question: "NaOCl is effective against all EXCEPT:",
-    options: ["Enterococcus", "Actinomyces", "Inorganic debris in smear layer", "Candida organisms"],
+    question: "Greater taper gutta-percha points are available with tapers up to what percentage?",
+    options: ["2%", "4%", "6%", "10%"],
+    answer: 3
+  },
+  {
+    question: "Gutta-percha can be dissolved by all of the following solvents EXCEPT:",
+    options: ["Chloroform", "Eucalyptus oil", "Orange oil", "Saline"],
+    answer: 3
+  },
+  {
+    question: "What was the main reason for the decline in the use of silver points?",
+    options: ["They were too flexible", "They were not radiopaque", "Corrosion and toxicity of their by-products", "They were difficult to manufacture"],
     answer: 2
   },
   {
-    question: "What should be done after extended NaOCl use?",
-    options: ["Apply EDTA immediately", "Flush with normal saline", "Place calcium hydroxide", "Dry the canal"],
+    question: "Besides filling gaps, what is another key role of a sealer immediately after placement?",
+    options: ["To strengthen the tooth", "To act as an antimicrobial agent", "To dissolve gutta-percha", "To bleach the dentin"],
     answer: 1
   },
   {
-    question: "The controversy about smear layer involves:",
-    options: ["Its composition", "Whether to remove or maintain it", "Its thickness", "Its color"],
+    question: "In lateral compaction, after coating the master cone with sealer and placing it, what is the next instrument used?",
+    options: ["A plugger", "A spreader", "A paper point", "A heated instrument"],
     answer: 1
   },
   {
-    question: "EDTA helps in enlarging:",
-    options: ["Wide canals", "Narrow canals", "Curved canals", "Calcified canals only"],
-    answer: 1
-  },
-  {
-    question: "The gauge 30G irrigation needle has a diameter of:",
-    options: ["0.42mm", "0.31mm", "0.25mm", "0.50mm"],
-    answer: 1
-  },
-  {
-    question: "Better irrigation to apical region is achieved with:",
-    options: ["Smaller canal diameter", "Larger canal diameter", "Same diameter throughout", "Curved canals"],
-    answer: 1
-  },
-  {
-    question: "Crown-down technique provides room for:",
-    options: ["Better instrumentation only", "Gutta Percha condensation", "Medicament placement", "Access cavity preparation"],
-    answer: 1
-  },
-  {
-    question: "Chlorhexidine at 0.2% concentration is used for:",
-    options: ["Root canal irrigation", "Mouth washes", "Cavity disinfection", "Instrument sterilization"],
-    answer: 1
-  },
-  {
-    question: "The main disadvantage of chlorhexidine is:",
-    options: ["High toxicity", "Unable to dissolve necrotic tissue remnants", "Staining of teeth", "Bad taste"],
-    answer: 1
-  },
-  {
-    question: "Sonic irrigation creates:",
-    options: ["Thermal energy", "Chemical reactions", "Kinetic energy for debridement", "Pressure changes only"],
+    question: "What does the 'tugback' feel indicate during master cone selection?",
+    options: ["The cone is stuck on a ledge", "The cone is too long", "Resistance from the apical 3-5mm of the canal walls", "The cone is too short"],
     answer: 2
   },
   {
-    question: "The biological advantage of crown-down technique includes:",
-    options: ["Faster treatment", "Removal of tissue debris coronally", "Better anesthesia", "Easier access cavity"],
+    question: "In warm vertical compaction, pluggers should be prefitted at what intervals to maximize contact with softened GP?",
+    options: ["1 mm intervals", "3 mm intervals", "5 mm intervals", "10 mm intervals"],
+    answer: 2
+  },
+  {
+    question: "Which of the following is a disadvantage of the warm vertical compaction technique?",
+    options: ["Poor apical seal", "It is a quick procedure", "It is time-consuming", "It cannot fill lateral canals"],
+    answer: 2
+  },
+  {
+    question: "What is the final step in cold lateral compaction after cutting the excess gutta-percha?",
+    options: ["Taking a radiograph", "Cleaning the pulp chamber and placing a restoration", "Applying a final layer of sealer", "Re-inserting the spreader"],
     answer: 1
+  },
+  {
+    question: "The two crystalline forms of gutta-percha are:",
+    options: ["Type I and Type II", "Alpha (α) and Beta (β)", "Organic and Inorganic", "Hard and Soft"],
+    answer: 1
+  },
+  {
+    question: "What is a 'master apical cone' (MAC)?",
+    options: ["The largest file used", "The first accessory cone", "The main gutta-percha cone sized to the master apical file", "The spreader"],
+    answer: 2
+  },
+  {
+    question: "What should be done if the master cone fits shorter than the working length?",
+    options: ["Cut the tip of the cone", "Force it to length", "Check for blockage, a ledge, or canal curvature and treat accordingly", "Use a smaller cone"],
+    answer: 2
   }
 ];
