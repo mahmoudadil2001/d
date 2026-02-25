@@ -74,7 +74,7 @@ export const lectureNames = {
         "8": "Head injuries and multiple trauma",
         "9": "post operative care",
         "10": "anesthesia🟦🟩",
-        "11": "Unknown",
+        "11": "day case surgery",
         "12": "Unknown",
         "13": "Unknown",
         "14": "Unknown",
