@@ -1,77 +1,77 @@
 export const questions = [
   {
-    question: "What is one of the most important steps in root canal therapy for obtaining success?",
-    options: ["Access cavity preparation", "Cleaning and shaping", "Taking radiographs", "Selecting instruments"],
+    question: "What does coronal preflaring in the Step-down technique help eliminate?",
+    options: ["The need for irrigation", "Apical debris", "Coronal interference", "The smear layer"],
+    answer: 2
+  },
+  {
+    question: "In the Balanced Force technique, after cutting with a counter-clockwise rotation, how is the file removed with debris?",
+    options: ["By pulling straight out", "By a 1/4 clockwise rotation while pulling", "By a 1/2 counter-clockwise rotation", "By using a filing motion"],
     answer: 1
   },
   {
-    question: "What should the preparation allow for three-dimensional progressive access?",
-    options: ["Into the coronal part", "Into the middle third", "Into the apical part", "Throughout the canal"],
+    question: "The Crown-down technique was the introductory concept for which technology?",
+    options: ["Step-back preparation", "Balanced force", "Most recent rotary instrumentation", "Passive irrigation"],
     answer: 2
   },
   {
-    question: "What should the final obturation instruments and materials do easily?",
-    options: ["Be removed", "Fit easily", "Be sterilized", "Be visualized"],
+    question: "An ideal irrigant should have low surface tension to:",
+    options: ["Prevent file breakage", "Penetrate into inaccessible areas", "Act as a lubricant", "Reduce toxicity"],
     answer: 1
   },
   {
-    question: "The second mechanical objective introduces what concept?",
-    options: ["Resistance", "Flow", "Retention", "Strength"],
+    question: "Why is there a controversy regarding the smear layer?",
+    options: ["It is difficult to create", "It is unclear whether it should be removed or maintained", "It is only found in curved canals", "It is composed entirely of bacteria"],
     answer: 1
   },
   {
-    question: "What should be kept as small as possible according to the fifth mechanical objective?",
-    options: ["The access cavity", "The pulp chamber", "The apical opening", "The coronal opening"],
+    question: "Irrigants facilitate the removal of debris from which areas of the root canal?",
+    options: ["The coronal third only", "The middle third only", "Inaccessible regions", "The pulp chamber only"],
     answer: 2
   },
   {
-    question: "What is essential for optimum debridement according to biological objectives?",
-    options: ["Large instruments", "High speed", "Root canal space debridement", "Multiple visits"],
+    question: "What must the irrigant do to be effective, besides contacting the substrate?",
+    options: ["Be heated", "Be under high pressure", "Be present in a large quantity and flushed frequently", "Be mixed with saline"],
     answer: 2
   },
   {
-    question: "What must be obtained during access cavity preparation for straight line access?",
-    options: ["Minimal tooth removal", "Removal of overlying dentine", "Crown lengthening", "Root planning"],
+    question: "How should a NaOCl accident be managed initially?",
+    options: ["Immediate obturation", "Copious irrigation with saline and prescribing steroids", "Application of warm compresses", "Incision and drainage"],
     answer: 1
   },
   {
-    question: "When should glide path and apical patency be ensured?",
-    options: ["After canal preparation", "During obturation", "Before starting canal preparation", "At the end of treatment"],
-    answer: 2
+    question: "What is the result of using EDTA after NaOCl irrigation?",
+    options: ["The smear layer is removed and dentinal tubules are opened", "The NaOCl is neutralized", "The canal is dried", "The organic tissue is precipitated"],
+    answer: 0
   },
   {
-    question: "What should instruments be in case of curved canals (stainless steel)?",
-    options: ["Straight", "Flexible", "Precurved", "Rigid"],
-    answer: 2
-  },
-  {
-    question: "What should be done with instruments showing signs of fatigue or damage?",
-    options: ["Reuse them carefully", "Sterilize them", "Discarded", "Repair them"],
-    answer: 2
-  },
-  {
-    question: "What should never be skipped during sequential instrumentation?",
-    options: ["Small files", "Large files", "Any size of instrument", "Medium files"],
-    answer: 2
-  },
-  {
-    question: "What destroys the apical stop if done excessively?",
-    options: ["Under preparation", "Proper preparation", "Over enlarging of apical foramen", "Gentle enlargement"],
-    answer: 2
-  },
-  {
-    question: "Who introduced the step-back technique and when?",
-    options: ["Schilder in 1960s", "Ingle in 1960s", "Clem and Weine in 1960", "All of the above in 1950s"],
-    answer: 2
-  },
-  {
-    question: "What taper results from 1mm and 0.5mm steps in step-back technique?",
-    options: ["0.10 and 0.05 respectively", "0.05 and 0.10 respectively", "0.02 and 0.04 respectively", "0.04 and 0.02 respectively"],
+    question: "Chlorhexidine is less effective on which type of bacteria?",
+    options: ["Gram-positive", "Gram-negative", "Anaerobes", "It is equally effective on all bacteria"],
     answer: 1
   },
   {
-    question: "What is the final result of step-back technique preparation?",
-    options: ["Large apical enlargement", "Small apical enlargement and marked taper", "Uniform enlargement", "No taper formation"],
+    question: "What is the 'dead-water zone' in the context of syringe irrigation?",
+    options: ["The area where irrigant pools in the pulp chamber", "The apical canal region where irrigant cannot be pushed beyond the needle tip", "The part of the syringe that holds the irrigant", "A zone of high pressure"],
     answer: 1
+  },
+  {
+    question: "What is a cited disadvantage of ultrasonic preparation?",
+    options: ["It is too predictable", "It cannot be used with NaOCl", "It can lead to excessive cutting and damage to the preparation", "It is very time-consuming"],
+    answer: 2
+  },
+  {
+    question: "In the Step-down technique, when is the working length (WL) estimated?",
+    options: ["Before any instrumentation", "After preparing the two coronal thirds", "After completing the apical preparation", "During the final obturation"],
+    answer: 1
+  },
+  {
+    question: "Which of the following is listed as a disadvantage of Sodium hypochlorite related to its physical properties?",
+    options: ["It is not economical", "It has a high surface tension, reducing its ability to wet dentin", "It cannot dissolve tissue", "It has no antimicrobial effect"],
+    answer: 1
+  },
+  {
+    question: "Which of the following is a chemically non-active irrigation solution?",
+    options: ["Sodium hypochlorite", "Chlorhexidine", "EDTA", "Normal saline"],
+    answer: 3
   }
 ];
