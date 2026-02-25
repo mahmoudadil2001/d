@@ -205,7 +205,7 @@ export const lectureNames = {
         "11": "Tooth movement",
         "12": "local factors affect the occlusion🟦🟩",
         "13": "Biomechanical Concepts of Tooth Movements",
-        "14": "Unknown",
+        "14": "anchorage in orthosontics",
         "15": "Unknown",
         "16": "Unknown",
         "17": "Unknown",
