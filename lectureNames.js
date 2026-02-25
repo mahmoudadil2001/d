@@ -106,7 +106,7 @@ export const lectureNames = {
         "8": "Restorative Dentistry and Pulpal Health",
         "9": "managment of Deep-Seated Carious lesions🟦🟩",
         "10": "Caries Diagnosis and treatment",
-        "11": "Unknown",
+        "11": "Cervical Lesions",
         "12": "Unknown",
         "13": "Unknown",
         "14": "Unknown",
