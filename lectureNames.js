@@ -138,7 +138,7 @@ export const lectureNames = {
         "8": "Metabolic and Genetic diseases of bone",
         "9": "bone neoplasms",
         "10": "malignant Bone tumors",
-        "11": "Unknown",
+        "11": "odontogenic cysts",
         "12": "Unknown",
         "13": "Unknown",
         "14": "Unknown",
