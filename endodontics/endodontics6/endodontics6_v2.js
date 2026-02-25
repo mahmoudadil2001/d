@@ -1,77 +1,77 @@
 export const questions = [
   {
-    question: "What is the purpose of shaping in root canal therapy?",
-    options: ["To remove bacteria only", "To establish a specifically shaped cavity", "To seal the apex", "To place medication"],
+    question: "One of the objectives of the Step-down technique is to allow deeper penetration of irrigant by:",
+    options: ["Increasing the apical pressure", "Eliminating coronal interference", "Using smaller needles", "Decreasing the working length"],
     answer: 1
   },
   {
-    question: "What should the canal shape maintain according to shaping principles?",
-    options: ["A new artificial shape", "The original shape and taper", "A straight configuration", "Maximum enlargement"],
+    question: "In the Balanced Force technique, after using sizes #15 and #20 to the periodontal ligament, the working depth is reduced by how much for subsequent files?",
+    options: ["0.25 mm", "0.5 mm", "1 mm", "2 mm"],
     answer: 1
   },
   {
-    question: "What happens if there is communication between root canal system and periodontal space?",
-    options: ["Better healing", "Formation of periodontal lesions of endodontic origin", "Faster treatment", "No effect"],
+    question: "What is a key clinical advantage of the Crown-down technique regarding file usage?",
+    options: ["Larger, stiffer files are used to the full working length", "Flexible smaller files are used in the apical portion", "Only rotary instruments can be used", "Files are not needed in the coronal portion"],
     answer: 1
   },
   {
-    question: "According to mechanical objectives, where should the canal be narrower?",
-    options: ["Coronally", "In the middle third", "Apically", "Throughout the canal"],
+    question: "An ideal irrigant should have all the following properties EXCEPT:",
+    options: ["Broad-spectrum antimicrobial activity", "Ability to dissolve necrotic tissue", "High surface tension to remain in place", "Low level of toxicity"],
     answer: 2
   },
   {
-    question: "What should be avoided regarding the foramen during preparation?",
-    options: ["Cleaning it", "Transportation of the foramen", "Locating it", "Enlarging it gently"],
+    question: "The smear layer can prevent which of the following?",
+    options: ["Instrument fracture", "Penetration of intracanal medicaments into dentinal tubules", "The formation of a biofilm", "Bleaching of the tooth"],
     answer: 1
   },
   {
-    question: "What happens when you double the file size apically in terms of surface area?",
-    options: ["Doubles the surface area", "Triples the surface area", "Increases it four folds", "No change in surface area"],
+    question: "What is one of the functions of irrigants related to the instruments themselves?",
+    options: ["Sterilizing the files", "Increasing instrument breakage", "Lubrication to increase instrument efficacy", "Sharpening the cutting edges"],
     answer: 2
   },
   {
-    question: "Where should instrumentation be confined according to biological objectives?",
-    options: ["Throughout the tooth", "Within the root canals only", "In the pulp chamber", "In the periodontal space"],
-    answer: 1
-  },
-  {
-    question: "What should be performed before starting endodontic treatment?",
-    options: ["Immediate instrumentation", "Proper diagnosis and evaluation", "Crown preparation", "Extraction"],
-    answer: 1
-  },
-  {
-    question: "What facilitates working length estimation?",
-    options: ["Large files", "The glide path file", "Irrigation solution", "X-rays only"],
-    answer: 1
-  },
-  {
-    question: "Which instruments are flexible and cannot be curved?",
-    options: ["Stainless steel instruments", "Carbon steel instruments", "Nickel titanium instruments", "All instruments"],
+    question: "The activity of an irrigating solution is modified by its concentration and which other factor?",
+    options: ["The color of the solution", "The patient's age", "The presence of organic tissue", "The type of handpiece used"],
     answer: 2
   },
   {
-    question: "What are the three advantages of intracanal irrigation solutions?",
-    options: ["Cleaning, sterilizing, filling", "Dissolving debris, lubrication, antimicrobial activities", "Cooling, cleaning, sealing", "Whitening, strengthening, protecting"],
+    question: "What is the main disadvantage of using normal saline as an irrigant?",
+    options: ["It is hypertonic and causes cell lysis", "It is expensive", "It has no dissolution or antimicrobial properties", "It stains the teeth"],
+    answer: 2
+  },
+  {
+    question: "Why is it recommended to use EDTA after NaOCl irrigation?",
+    options: ["To neutralize the NaOCl", "To remove the smear layer and open dentinal tubules", "To increase the concentration of NaOCl", "To lubricate the canal for obturation"],
     answer: 1
   },
   {
-    question: "How can irrigation solution be delivered inside the canal?",
-    options: ["Using cotton pellets", "Using hypodermic syringe", "Using paper points", "Using ultrasonic tips only"],
+    question: "Which of the following is an advantage of Sodium hypochlorite?",
+    options: ["It has a pleasant taste", "It increases dentin strength", "It has antibacterial and bleaching action", "It is non-irritating to periapical tissues"],
+    answer: 2
+  },
+  {
+    question: "What is the mechanism of action of Chlorhexidine?",
+    options: ["Chelating calcium ions", "Dissolving organic matter", "Disrupting bacterial cell membranes", "Producing hypochlorous acid"],
+    answer: 2
+  },
+  {
+    question: "A major limitation of using an irrigation syringe and needle is:",
+    options: ["It is too expensive", "It cannot push irrigant beyond the needle tip due to the dead-water zone", "It requires an ultrasonic unit", "It can only be used with saline"],
     answer: 1
   },
   {
-    question: "What should be checked on instruments before each insertion?",
-    options: ["Only the tip", "Signs of fatigue, stress or damage", "Only the handle", "The file number"],
+    question: "What is a potential disadvantage of using ultrasonic activation for irrigation?",
+    options: ["It is too slow", "It can lead to excessive cutting of canal walls", "It cannot activate the irrigant", "It requires a special needle"],
     answer: 1
   },
   {
-    question: "What may happen if you force or continue to rotate an instrument while it's bind to canal wall?",
-    options: ["Better cleaning", "The instrument may break", "Faster preparation", "No effect"],
+    question: "In the Step-down technique, frequent recapitulation with a #25 K-file is advised to prevent:",
+    options: ["Over-instrumentation", "Blockage", "Sodium hypochlorite accident", "Perforation"],
     answer: 1
   },
   {
-    question: "What should be followed when using instruments for canal preparation?",
-    options: ["Random order", "Sequential order", "Largest to smallest", "Only large instruments"],
-    answer: 1
+    question: "Which of the following is NOT listed as a factor modifying the activity of an irrigating solution?",
+    options: ["Concentration", "Quantity and frequency", "The brand of the syringe", "Presence of organic tissue"],
+    answer: 2
   }
 ];
