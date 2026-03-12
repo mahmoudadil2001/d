@@ -179,7 +179,7 @@ export const lectureNames = {
         "17": "pregnancy",
         "18": "odontosenic spaces 1",
         "19": "odontosenic spaces 2",
-        "20": "Unknown",
+        "20": "extraction complications & Flaps and Suturing",
         "21": "Unknown",
         "22": "Unknown",
         "23": "Unknown",
