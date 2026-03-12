@@ -1,78 +1,77 @@
-// Version 2
 export const questions = [
   {
-    question: "The term 'history' is derived from a Greek word meaning:",
-    options: ["Story", "Learning by inquiry", "Record", "Examination"],
-    answer: 1
-  },
-  {
-    question: "Which of these is NOT part of the initial patient introduction?",
-    options: ["Introduce yourself", "Ask patient's permission", "Perform physical exam", "Wash your hands"],
+    question: "Infective endocarditis (IE) is classified based on several factors. Which of the following is NOT mentioned as a basis for its classification?",
+    options: ["The causative microorganism", "The type of valve infected (native vs. prosthetic)", "The patient's blood type", "The source of infection (community vs. hospital acquired)"],
     answer: 2
   },
   {
-    question: "Chief Complaint should be recorded:",
-    options: ["As a diagnosis", "In the patient's own words", "Using medical terminology only", "After the physical exam"],
-    answer: 1
-  },
-  {
-    question: "Which question is best for starting the History of Present Illness?",
-    options: ["Are you allergic to any medications?", "When were you last completely well?", "What is your occupation?", "Do you smoke?"],
-    answer: 1
-  },
-  {
-    question: "In SOCRATES, what does 'C' stand for?",
-    options: ["Cause", "Character", "Chronicity", "Course"],
-    answer: 1
-  },
-  {
-    question: "Which of these is a cardiovascular ROS question?",
-    options: ["Cough", "Dysuria", "Orthopnea", "Joint pain"],
+    question: "According to the document, which group of organisms remains the most common cause of community-acquired native valve endocarditis (NVE)?",
+    options: ["Staphylococcus aureus", "Coagulase-negative staphylococci", "Streptococci viridans", "HACEK group"],
     answer: 2
   },
   {
-    question: "Hemoptysis is a symptom related to which system?",
-    options: ["Cardiovascular", "Respiratory", "Gastrointestinal", "Nervous"],
+    question: "In the pathophysiology of IE, what is the first sequence of events that occurs?",
+    options: ["Formation of a vegetative mass containing bacteria", "Injury or damage to an endothelial surface", "Deposition of fibrin and platelets", "Occurrence of a transient bacteremia"],
     answer: 1
   },
   {
-    question: "Which symptom is part of the genitourinary ROS?",
-    options: ["Dysphagia", "Hematuria", "Headache", "Myalgia"],
-    answer: 1
+    question: "The Duke criteria for diagnosing IE include minor criteria. Which of the following is considered a minor criterion?",
+    options: ["Positive echocardiography", "New valvular regurgitation", "Predisposing heart condition or IV drug use", "Presence of new valvular regurgitation"],
+    answer: 2
   },
   {
-    question: "The mnemonic 'MJ THREADS' is used to recall:",
-    options: ["Surgical procedures", "Past Medical History conditions", "Drug classes", "Family history diseases"],
-    answer: 1
-  },
-  {
-    question: "What does PSH stand for?",
-    options: ["Present Surgical History", "Past Surgical History", "Primary Surgical History", "Post-Surgical Healing"],
-    answer: 1
-  },
-  {
-    question: "In Family History, which relatives are considered first-degree?",
-    options: ["Cousins", "Parents, siblings, children", "Grandparents", "Aunts and uncles"],
-    answer: 1
-  },
-  {
-    question: "Which is part of Occupational History?",
-    options: ["Smoking pack years", "Hobbies", "Recent travel", "Job-related health risks"],
-    answer: 3
-  },
-  {
-    question: "When documenting allergies, what should be included?",
-    options: ["Drug name and type of reaction", "Only severe reactions", "Only drug allergies", "Only food allergies"],
+    question: "What is the estimated time interval between the presumed initiating bacteremia and the onset of IE symptoms in more than 80% of patients?",
+    options: ["Less than 2 weeks", "2 to 4 weeks", "1 to 3 months", "More than 6 months"],
     answer: 0
   },
   {
-    question: "Which factor is considered when refining a differential diagnosis?",
-    options: ["Patient's shoe size", "Geographic location", "Favorite color", "Blood type only"],
+    question: "Splinter hemorrhages, a sign of IE, are located in which part of the body?",
+    options: ["The palms of the hands", "The nail beds", "The conjunctiva", "The buccal mucosa"],
     answer: 1
   },
   {
-    question: "The key to learning how to present a history effectively is:",
-    options: ["Memorization", "Practice", "Using complex terms", "Avoiding eye contact"],
+    question: "According to the document, for which of the following dental procedures is antibiotic prophylaxis recommended?",
+    options: ["Shedding of deciduous teeth", "Placement of orthodontic brackets", "Procedures that perforate the oral mucosa", "Fluoride treatment"],
+    answer: 2
+  },
+  {
+    question: "If an adult patient is unable to take oral medication and is allergic to penicillin, what is the recommended prophylactic antibiotic regimen?",
+    options: ["Ampicillin 2g IM or IV", "Amoxicillin 2g orally", "Cefazolin or Ceftriaxone 1 g IM or IV", "Penicillin G 2 million units IV"],
+    answer: 2
+  },
+  {
+    question: "What is the recommended pediatric dose (mg/kg) of oral Clindamycin for antibiotic prophylaxis?",
+    options: ["15 mg/kg", "20 mg/kg", "50 mg/kg", "100 mg/kg"],
     answer: 1
+  },
+  {
+    question: "The document states that up to what percentage of IE cases are initially found to be 'culture negative'?",
+    options: ["10%", "20%", "30%", "40%"],
+    answer: 2
+  },
+  {
+    question: "Which statement best describes the formation of a vegetative mass in IE?",
+    options: ["It starts as a sterile mass of fibrin and platelets that later becomes infected during bacteremia", "It is initially composed of bacteria that attract fibrin and platelets", "It is a congenital structure that becomes infected", "It is a tumor of the heart muscle that traps bacteria"],
+    answer: 0
+  },
+  {
+    question: "What is the primary reason for performing a preoperative dental evaluation prior to cardiac valve surgery?",
+    options: ["To ensure the patient has no cavities", "To decrease the incidence of late prosthetic valve endocarditis (PVE)", "To obtain baseline radiographs for comparison", "To treat any acute dental pain"],
+    answer: 1
+  },
+  {
+    question: "According to the document, which of the following is NOT a complication of infective endocarditis?",
+    options: ["Heart failure", "Stroke", "Renal dysfunction", "Polycythemia"],
+    answer: 3
+  },
+  {
+    question: "Cephalosporins should not be used for prophylaxis in an individual with a history of which specific reaction to penicillins?",
+    options: ["Mild skin rash", "Gastrointestinal upset", "Anaphylaxis, angioedema, or urticaria", "Headache"],
+    answer: 2
+  },
+  {
+    question: "For a definitive diagnosis of IE using the Duke criteria, which combination of criteria is acceptable?",
+    options: ["One major and two minor criteria", "Two major and one minor criterion", "One major and three minor criteria", "Three major criteria"],
+    answer: 2
   }
 ];
