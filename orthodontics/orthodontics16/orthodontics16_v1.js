@@ -1,6 +1,6 @@
 export const questions = [
   {
-    question: "According to the document, what are the four main components of a removable orthodontic appliance?",
+    question: "what are the four main components of a removable orthodontic appliance?",
     options: [
       "Clasps, screws, elastics, and wires",
       "Active components, retentive components, baseplate, and anchorage",
