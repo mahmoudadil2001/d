@@ -207,7 +207,7 @@ export const lectureNames = {
         "13": "Biomechanical Concepts of Tooth Movements",
         "14": "anchorage in orthosontics",
         "15": "orthodontics appliances",
-        "16": "Unknown",
+        "16": "Removable Orthodontic Appliances",
         "17": "Unknown",
         "18": "Unknown",
         "19": "Unknown",
