@@ -180,7 +180,7 @@ export const lectureNames = {
         "18": "odontosenic spaces 1",
         "19": "odontosenic spaces 2",
         "20": "extraction complications & Flaps and Suturing",
-        "21": "Unknown",
+        "21": "managment impacted teeth Part1",
         "22": "Unknown",
         "23": "Unknown",
         "24": "Unknown",
