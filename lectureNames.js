@@ -182,7 +182,7 @@ export const lectureNames = {
         "20": "extraction complications & Flaps and Suturing",
         "21": "managment impacted teeth Part1",
         "22": "managment impacted teeth Part2",
-        "23": "Unknown",
+        "23": "managment impacted teeth Part3",
         "24": "Unknown",
         "25": "Unknown",
         "26": "Unknown",
