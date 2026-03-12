@@ -1,78 +1,77 @@
-// Version 3
 export const questions = [
   {
-    question: "History-taking serves as a template for:",
-    options: ["Billing", "Transmitting medical information to peers", "Legal documentation only", "Nursing care plans"],
-    answer: 1
-  },
-  {
-    question: "Which action helps establish rapport with a patient?",
-    options: ["Standing above the patient", "Using medical jargon", "Sitting at the patient's level", "Avoiding eye contact"],
-    answer: 2
-  },
-  {
-    question: "How should the Chief Complaint be documented?",
-    options: ["As a confirmed diagnosis", "In the doctor's interpretation", "In the patient's own words", "Only after lab results"],
-    answer: 2
-  },
-  {
-    question: "Which is a component of the History of Present Illness?",
-    options: ["Chronological story of symptoms", "List of medications", "Family history of cancer", "Social habits"],
-    answer: 0
-  },
-  {
-    question: "In SOCRATES, 'O' stands for:",
-    options: ["Onset", "Outcome", "Occurrence", "Observation"],
-    answer: 0
-  },
-  {
-    question: "Which symptom is part of the General Review of Systems?",
-    options: ["Chest pain", "Weight loss", "Hematuria", "Joint stiffness"],
-    answer: 1
-  },
-  {
-    question: "Dysuria and frequency are symptoms related to which system?",
-    options: ["Gastrointestinal", "Genitourinary", "Nervous", "Musculoskeletal"],
-    answer: 1
-  },
-  {
-    question: "Which is a neurological ROS symptom?",
-    options: ["Dyspnea", "Hemoptysis", "Limb weakness", "Diarrhea"],
-    answer: 2
-  },
-  {
-    question: "Which condition is NOT part of MJ THREADS?",
-    options: ["Myocardial infarction", "Diabetes", "Asthma", "Liver cirrhosis"],
+    question: "Infective endocarditis (IE) can be caused by various microorganisms. The term 'infective' is used to reflect this:",
+    options: ["bacterial origin", "viral origin", "fungal origin", "multimicrobial origin"],
     answer: 3
   },
   {
-    question: "What should be asked in Past Surgical History?",
-    options: ["Only major surgeries", "All operations and procedures", "Only recent surgeries", "Only complications"],
+    question: "According to recent studies cited in the document, which organism has emerged as the most common cause of IE?",
+    options: ["Streptococcus viridans", "Staphylococcus aureus", "Candida albicans", "Pseudomonas aeruginosa"],
     answer: 1
   },
   {
-    question: "Which is a relevant Family History question?",
-    options: ["Mother's occupation", "Cause of death in first-degree relatives", "Number of siblings", "Family income"],
+    question: "What is the role of platelets and fibrin in the early formation of a vegetation in IE?",
+    options: ["They directly kill bacteria", "They form a protective covering over bacteria seeded on NBTE", "They prevent the initial endothelial injury", "They are the primary source of infection"],
     answer: 1
   },
   {
-    question: "What does a 'pack year' calculate?",
-    options: ["Cigarette consumption over time", "Alcohol units per week", "Cups of coffee per day", "Hours of exercise per week"],
-    answer: 0
+    question: "For a definitive diagnosis of IE using the Duke criteria, which of the following combinations is NOT sufficient?",
+    options: ["Two major criteria", "One major and three minor criteria", "One major and one minor criterion", "Five minor criteria"],
+    answer: 2
   },
   {
-    question: "Which is part of Drug History?",
-    options: ["Only prescribed drugs", "Prescribed, OTC, and herbal remedies", "Only allergy medications", "Only vitamins"],
+    question: "Janeway lesions are characterized as:",
+    options: ["Tender, red nodules", "Small, erythematous or hemorrhagic, nontender lesions on palms and soles", "Oval retinal hemorrhages", "Painful subcutaneous nodules in the finger pulps"],
     answer: 1
   },
   {
-    question: "After history-taking, you should always:",
-    options: ["Start treatment immediately", "Write a differential diagnosis", "Order all possible tests", "Discharge the patient"],
+    question: "Which of the following cardiac conditions, if completely repaired with prosthetic material, requires prophylaxis only during the first 6 months after the procedure?",
+    options: ["Prosthetic cardiac valve", "Previous infective endocarditis", "Congenital heart disease (CHD)", "Cardiac transplant with valvulopathy"],
+    answer: 2
+  },
+  {
+    question: "What is the recommended time frame for administering the single prophylactic antibiotic dose before a dental procedure?",
+    options: ["Immediately before the procedure", "30-60 minutes before the procedure", "2-4 hours before the procedure", "The night before the procedure"],
     answer: 1
   },
   {
-    question: "Which factor helps weigh a differential diagnosis?",
-    options: ["Patient's age", "Hospital room number", "Time of day", "Weather"],
-    answer: 0
+    question: "For an adult patient allergic to penicillin who can take oral medication, what is the recommended dose of Cephalexin for prophylaxis?",
+    options: ["500 mg", "1 g", "2 g", "600 mg"],
+    answer: 2
+  },
+  {
+    question: "Renal dysfunction in IE patients is a common complication. According to the document, what are two potential causes?",
+    options: ["Dehydration and antibiotic toxicity", "Immune complex glomerulonephritis or infarction", "Hypertension and diabetes", "Obstruction and infection"],
+    answer: 1
+  },
+  {
+    question: "Which of the following is NOT listed in the document as a predisposing condition attributed to IE?",
+    options: ["Mitral valve prolapse", "Aortic valve disease", "Hypertrophic cardiomyopathy", "Prosthetic valve"],
+    answer: 2
+  },
+  {
+    question: "The document emphasizes that bacteremia can result from normal daily activities. This highlights the importance of:",
+    options: ["prophylactic antibiotics before every meal", "maintaining good oral hygiene", "avoiding all dental procedures", "using mouthwash every hour"],
+    answer: 1
+  },
+  {
+    question: "For a prolonged dental procedure lasting longer than 6 hours, what is advisable regarding prophylaxis?",
+    options: ["No additional dose is needed", "Administer an additional prophylactic dose", "Cancel the procedure", "Switch to IV antibiotics"],
+    answer: 1
+  },
+  {
+    question: "Roth spots are named after which type of professional?",
+    options: ["A Canadian physician (Sir William Osler)", "An American physician (Edward Janeway)", "A Swiss Pathologist (Moritz Roth)", "A British surgeon"],
+    answer: 2
+  },
+  {
+    question: "Which of the following is NOT a reason to avoid using a cephalosporin in a patient with a penicillin allergy?",
+    options: ["History of anaphylaxis", "History of angioedema", "History of urticaria", "History of a mild, non-allergic stomach upset"],
+    answer: 3
+  },
+  {
+    question: "A patient with a prosthetic cardiac valve is undergoing a dental extraction. According to the guidelines, this patient:",
+    options: ["Does not need prophylaxis", "Needs prophylaxis only if they have a fever", "Is in the highest risk category and requires prophylaxis", "Needs prophylaxis only for the first 6 months after valve surgery"],
+    answer: 2
   }
 ];
