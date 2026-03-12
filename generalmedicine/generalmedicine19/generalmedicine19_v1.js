@@ -1,253 +1,77 @@
 export const questions = [
   {
-    question: "What is insulin's main function in the body?",
-    options: [
-      "To break down fats",
-      "To help blood sugar move from the bloodstream into cells.",
-      "To lower blood pressure",
-      "To increase cholesterol levels"
-    ],
+    question: "According to the document, into how many groups are antibodies responsible for autoimmune hemolytic anemia customarily divided based on their physical properties?",
+    options: ["One", "Two", "Three", "Four"],
     answer: 1
   },
   {
-    question: "Which of the following is NOT a common symptom of type 2 diabetes?",
-    options: [
-      "Increased thirst (Polydipsia)",
-      "Frequent urination (Polyturia)",
-      "Extreme hunger (Polypiagia)",
-      "Blurred vision",
-      "Slow healing infections"
-    ],
-    answer: 3
-  },
-  {
-    question: "What gland secret insulin?",
-    options: [
-      "A dental glands",
-      "Primary gland",
-      "Pancreas",
-      "Thyroid gland"
-    ],
+    question: "What is the term for a failure of the body's immune system to recognize its own cells and tissues as 'self', leading to an immune response against them?",
+    options: ["Immunodeficiency", "Hypersensitivity", "Autoimmunity", "Allergy"],
     answer: 2
   },
   {
-    question: "What is a long-term complication of poorly controlled diabetes?",
-    options: [
-      "Improved immune function",
-      "Nerve damage",
-      "Lower blood pressure",
-      "Weight gain"
-    ],
-    answer: 3
-  },
-  {
-    question: "Which test measures the average blood sugar level over the past 2-3 months?",
-    options: [
-      "Oral glucose tolerance test",
-      "Hemoglobin A1c test",
-      "Rashup plasma glucose test",
-      "Erythroglutine glucose test"
-    ],
+    question: "In autoimmune hemolytic anemia, which component, along with antibody, facilitates the opsonization of RBCs, leading to their engulfment by macrophages?",
+    options: ["C1q", "C3b", "C5a", "Properdin"],
     answer: 1
   },
   {
-    question: "Which of the following blood cells are critical for blood clotting?",
-    options: [
-      "Erythrocytes (Red Blood Cells)",
-      "Thrombocytes (Platelets)",
-      "Neutrophils",
-      "Lymphocytes"
-    ],
-    answer: 1
-  },
-  {
-    question: "Which plasma protein is converted into fibrin to form a clot?",
-    options: [
-      "An ominous",
-      "Fibronogen",
-      "Hemoglobin",
-      "Albumin"
-    ],
-    answer: 1
-  },
-  {
-    question: "What is the liquid component of blood that contains clotting factors?",
-    options: [
-      "Serum",
-      "Plasma",
-      "Lymph",
-      "Intestinal fluid"
-    ],
-    answer: 1
-  },
-  {
-    question: "The vitamin essential for this synthesis of several key clotting factors is:",
-    options: [
-      "Vitamin A",
-      "Vitamin C",
-      "Vitamin K",
-      "Vitamin D"
-    ],
+    question: "In Graves' disease, autoantibodies act as agonists for which receptor, leading to hyperthyroidism?",
+    options: ["Thyroid peroxidase receptor", "Insulin receptor", "Thyrotropin (TSH) receptor", "Glutamic acid decarboxylase"],
     answer: 2
   },
   {
-    question: "Which of the following is NOT one of the four major physiologic events of homeostasis?",
-    options: [
-      "Fibronolysis",
-      "vasodilation",
-      "Platelet plug formation",
-      "Fibrin production"
-    ],
+    question: "Autoimmune disorders are characterized by the persistent activation of which mechanisms, altering the function and integrity of cells and organs?",
+    options: ["Pharmacologic effector mechanisms", "Immunologic effector mechanisms", "Neurologic effector mechanisms", "Endocrine effector mechanisms"],
     answer: 1
   },
   {
-    question: "Which is required for platelet adherence to injured endothelium?",
-    options: [
-      "Thromboxane As",
-      "Glycosporate As, Thr/IIIa",
-      "Adenocarcinoma (Acipnea (ADP))",
-      "Van Willel and factor (VWF)"
-    ],
-    answer: 3
-  },
-  {
-    question: "Which clotting factors is common to both intrinsic and extrinsic pathways?",
-    options: [
-      "Factor IX (Christmas factor)",
-      "Factor I (Fibrinogen)",
-      "Factor X",
-      "Factor XI"
-    ],
-    answer: 2
-  },
-  {
-    question: "Regarding Hemophilia A:",
-    options: [
-      "Is X-Liked disease",
-      "lab tests reveals Prolonged PT and PTT",
-      "Is an autosomal dominant disease",
-      "Only A and B are correct"
-    ],
-    answer: 3
-  },
-  {
-    question: "Vascular bleeding defect could be due to:",
-    options: [
-      "Infectious and hypersensitivity vasculitis",
-      "Rickettsis and meningococcal infections",
-      "Kinocellanoidin purpuri (immune)",
-      "All are correct."
-    ],
-    answer: 3
-  },
-  {
-    question: "Regarding Thrombocytopathy:",
-    options: [
-      "Can be caused by uremia.",
-      "Patient presented with sever life threatening bleeding.",
-      "Due to factor VII deficiency.",
-      "only A & B are correct."
-    ],
-    answer: 3
-  },
-  {
-    question: "The Von Willabrand Disease. One is wrong.",
-    options: [
-      "The factor is Synthesised in endothelium and megalaryocytes.",
-      "Inheritance is autosomal dominant",
-      "Incidence - 1/100.",
-      "Clinical Features ; mucocutaneous bleeding."
-    ],
-    answer: 2
-  },
-  {
-    question: "Which of the following is not a Causes of Vit K deficiency:",
-    options: [
-      "Malnutrition and Mahabsorption.",
-      "Dehydration.",
-      "Biliary obstruction.",
-      "Antibiotic therapy."
-    ],
+    question: "What is a common symptom of the increased metabolism seen in Graves' disease?",
+    options: ["Weight gain", "Weight loss", "Cold intolerance", "Bradycardia"],
     answer: 1
   },
   {
-    question: "Bleeding due to vessel defect one is wrong:",
-    options: [
-      "Reductsial and meningococcal infections.",
-      "Vit D deficiency.",
-      "Henoch-Schonlein purpura.",
-      "Vit C deficiency."
-    ],
-    answer: 1
-  },
-  {
-    question: "Clinical manifestations of hemophilia (A & B) one is wrong.",
-    options: [
-      "Hemarthrosis (most common) Fixed joints.",
-      "Petechiae.",
-      "Soft tissue hematomas.",
-      "bleeding of Urinary tract & CNS, neck."
-    ],
-    answer: 1
-  },
-  {
-    question: "Treatment of Vit K deficiency",
-    options: [
-      "Vitamin K.",
-      "Factor IX supplement.",
-      "Fresh frozen plasma.",
-      "Only A&C are correct."
-    ],
-    answer: 3
-  },
-  {
-    question: "Regarding oral anti-diabetic drugs :",
-    options: [
-      "Metformin reduces insulin resistance.",
-      "Increase appetite.",
-      "Stimulates hepatic gluconeogenesis.",
-      "All are correct."
-    ],
-    answer: 0
-  },
-  {
-    question: "Treatment of diabetes with metformin: one is wrong.",
-    options: [
-      "Is used as first-line therapy for type 2 diabetes.",
-      "Is given as an adjunct to insulin therapy in obese patients with type 1 diabetes.",
-      "It causes severe hypoglycemia.",
-      "It is given as first-line therapy in all patients, who tolerate it."
-    ],
+    question: "According to the document, autoantibodies can be demonstrated in hemolytic disease of the newborn resulting from disorders like serum sickness. This indicates that the immune response is clearly the _____ of the disease.",
+    options: ["effect", "correlate", "cause", "byproduct"],
     answer: 2
   },
   {
-    question: "Regarding insulin therapy which is wrong?",
-    options: [
-      "It's the basic treatment of type 1 diabetes.",
-      "I maintain my bed of human or mental organs.",
-      "Patients on insulin therapy have no diet restriction.",
-      "The main complication of insulin therapy is hypoglycemia."
-    ],
+    question: "What is the name of the antigen, expressed on the surface of RBCs, that cold agglutinins (primarily IgM) are specific for?",
+    options: ["Rh antigen", "ABO antigen", "I antigen", "Thyroglobulin antigen"],
     answer: 2
   },
   {
-    question: "The main complication of Type 1 diabetes is:",
-    options: [
-      "Diabetic Ketosclerosis .",
-      "Low ketonemia and ketonuria.",
-      "Hypoglycemia.",
-      "None of the above is correct."
-    ],
-    answer: 0
+    question: "Which of the following is listed in the document as an example of an autoimmune disease?",
+    options: ["Osteoarthritis", "Type 2 diabetes mellitus", "Systemic lupus erythematosus", "Parkinson's disease"],
+    answer: 2
   },
   {
-    question: "Complications of diabetes.",
-    options: [
-      "Xecostoma.",
-      "Poor wound healing.",
-      "Increased incidence and severity of cants.",
-      "All are correct."
-    ],
-    answer: 3
+    question: "The destruction of RBCs through antibody-dependent cellular cytotoxicity (ADCC) in autoimmune hemolytic anemia is mediated by which cells?",
+    options: ["Macrophages and B cells", "NK cells and other effector cells", "Neutrophils and eosinophils", "Cytotoxic T cells only"],
+    answer: 1
+  },
+  {
+    question: "What is the approximate female-to-male ratio for Graves' disease, as stated in the document?",
+    options: ["2:1", "4:1", "8:1", "10:1"],
+    answer: 2
+  },
+  {
+    question: "According to the document, autoimmune disorders represent the _____ largest cause of disability in Europe and the United States.",
+    options: ["second", "third", "fourth", "fifth"],
+    answer: 2
+  },
+  {
+    question: "Cold agglutinins are described as attaching to RBCs optimally at which temperature condition?",
+    options: ["At 37°C only", "Above 40°C", "Below 37°C", "At any temperature"],
+    answer: 2
+  },
+  {
+    question: "The release of hemoglobin into the urine, a possible consequence of RBC destruction, is specifically termed:",
+    options: ["Hematuria", "Hemoglobinuria", "Proteinuria", "Bilirubinuria"],
+    answer: 1
+  },
+  {
+    question: "Patients with severe Graves' disease may develop eye problems. Which of the following is NOT mentioned as one of these problems?",
+    options: ["Bulging of the eye", "Double vision", "Cataracts", "Inflammation of the soft tissue surrounding the eye"],
+    answer: 2
   }
 ];
