@@ -170,7 +170,7 @@ export const visibleLectures = {
             3,
             4
         ],
-        "nineteen": [
+        "19": [
             1
         ],
         "twentyone": [
