@@ -107,7 +107,7 @@ export const lectureNames = {
         "9": "managment of Deep-Seated Carious lesions🟦🟩",
         "10": "Caries Diagnosis and treatment",
         "11": "Cervical Lesions",
-        "12": "Unknown",
+        "12": "Composite (Direct tooth-colored restorations)",
         "13": "Unknown",
         "14": "Unknown",
         "15": "Unknown",
