@@ -1,6 +1,6 @@
 export const questions = [
   {
-    question: "According to the document, what are the five standard stages of the surgical procedure for impacted teeth removal?",
+    question: "what are the five standard stages of the surgical procedure for impacted teeth removal?",
     options: [
       "Anesthesia, incision, bone removal, tooth delivery, closure",
       "Incision, bone removal, tooth sectioning and delivery, debridement, closure",
