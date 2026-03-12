@@ -76,7 +76,7 @@ export const lectureNames = {
         "10": "anesthesia🟦🟩",
         "11": "day case surgery",
         "12": "patient safety",
-        "13": "Unknown",
+        "13": "medical ethics",
         "14": "Unknown",
         "15": "Unknown",
         "16": "Unknown",
