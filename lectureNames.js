@@ -181,7 +181,7 @@ export const lectureNames = {
         "19": "odontosenic spaces 2",
         "20": "extraction complications & Flaps and Suturing",
         "21": "managment impacted teeth Part1",
-        "22": "Unknown",
+        "22": "managment impacted teeth Part2",
         "23": "Unknown",
         "24": "Unknown",
         "25": "Unknown",
