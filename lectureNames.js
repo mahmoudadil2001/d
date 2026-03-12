@@ -139,7 +139,7 @@ export const lectureNames = {
         "9": "bone neoplasms",
         "10": "malignant Bone tumors",
         "11": "odontogenic cysts",
-        "12": "Unknown",
+        "12": "Odontogenic tumor",
         "13": "Unknown",
         "14": "Unknown",
         "15": "Unknown",
