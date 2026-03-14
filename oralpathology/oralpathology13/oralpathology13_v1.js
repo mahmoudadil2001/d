@@ -1,6 +1,6 @@
 export const questions = [
   {
-    question: "According to the document, the development of teeth is regulated by genes, but the genetic program is very sensitive to disturbances in the environment such as:",
+    question: "the development of teeth is regulated by genes, but the genetic program is very sensitive to disturbances in the environment such as:",
     options: ["Temperature changes", "Infection or toxic chemicals", "Atmospheric pressure", "Magnetic fields"],
     answer: 1
   },
