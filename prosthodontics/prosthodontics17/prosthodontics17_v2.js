@@ -1,77 +1,77 @@
 export const questions = [
   {
-    question: "The lecture states that the correct horizontal relationship for complete dentures is always the:",
-    options: ["Centric occlusion position", "Centric relation position", "Lateral relation position", "Protrusive relation position"],
+    question: "The vertical dimension at occlusion (VDO) is defined as:",
+    options: ["The distance between two points when the mandible is in its physiological rest position", "The distance between two points when the teeth or occlusal rims are in contact in centric occlusion", "The distance from the incisive papilla to the mandibular incisors", "The space between the upper and lower occlusal rims when pronouncing 's' sounds"],
     answer: 1
   },
   {
-    question: "Centric relation is best defined as a maxillomandibular relationship involving the:",
-    options: ["Maxillary teeth in contact with mandibular teeth", "Condyles articulating with the thinnest avascular portion of their respective disks", "The most forward position of the mandible", "The position of maximum muscle contraction"],
-    answer: 1
-  },
-  {
-    question: "Why is it advisable to practice the centric relation position with the patient before making the recording?",
-    options: ["It is a universally easy position for patients to assume", "Patients sometimes find it difficult to achieve this position", "It allows the dentist to select the right size of occlusion rim", "It is required to set the condylar guidance on the articulator"],
-    answer: 1
-  },
-  {
-    question: "Where does the non-dominant hand's thumb and index finger rest to stabilize the record bases during a centric relation record?",
-    options: ["On the labial surfaces of the anterior teeth", "On the opposing buccal surfaces of the occlusion rims in the first molar region", "On the lingual surfaces of the mandibular rim", "On the patient's chin"],
-    answer: 1
-  },
-  {
-    question: "The definition of centric occlusion provided in the text is:",
-    options: ["The bone-to-bone relationship of the mandible to the maxilla", "The occlusion of opposing teeth when the mandible is in centric relation", "The position of the mandible at rest", "The most retruded position of the condyles"],
-    answer: 1
-  },
-  {
-    question: "What should the patient do prior to the clinician attempting to achieve the centric relation position?",
-    options: ["Protrude the mandible several times", "Close to the correct occlusal vertical dimension", "Perform lateral excursions", "Relax with the mouth wide open"],
-    answer: 1
-  },
-  {
-    question: "What is one of the techniques suggested to help a patient relax the mandible into centric relation?",
-    options: ["The clinician gently shakes the mandible up and down", "The patient bites down hard on cotton rolls", "The patient opens against resistance", "The patient is asked to sing"],
-    answer: 0
-  },
-  {
-    question: "Why is space created between the occlusion rims before recording centric relation?",
-    options: ["To increase the vertical dimension", "To allow room for the recording material at the correct OVD", "To make the rims lighter", "To check for even contacts"],
-    answer: 1
-  },
-  {
-    question: "According to the lecture, centric relation is located by detecting which specific position of the mandible?",
-    options: ["The most protruded position", "The most lateral position", "The only retruded position that allows a pure vertical hinge movement", "The position of maximum intercuspation"],
+    question: "Which of the following is a consequence of an excessively small vertical dimension at occlusion?",
+    options: ["Clicking of teeth", "Difficulty in swallowing", "Prominence of the mandible and chin", "Sensation of bulky dentures"],
     answer: 2
   },
   {
-    question: "The 'nick and notch' method creates a recording that is replicated in the mandibular denture using which material, as shown in one of the figures?",
-    options: ["Plaster of Paris", "Impression compound", "Aluwax", "Zinc oxide eugenol paste"],
+    question: "The tactile sense method for recording VDR relies on:",
+    options: ["The dentist's perception of muscle tone", "The patient's perception of muscle relaxation", "The measurement of anatomic landmarks on the face", "The pronunciation of specific letters"],
+    answer: 1
+  },
+  {
+    question: "What is the primary limitation of using the parallelism of ridges method to determine VDO?",
+    options: ["It can only be used in dentulous patients", "It cannot be used in patients with severe ridge resorption", "It is not reliable in patients who lost their teeth at different times or had periodontal disease", "It requires a bimeter to measure"],
     answer: 2
   },
   {
-    question: "After seating the occlusion rims on their casts, what must be checked before proceeding with mounting on the articulator?",
-    options: ["The fit of the face-bow", "For possible contact in the posterior areas of the casts", "The patient's signature", "The shade of the teeth"],
+    question: "According to the lecture, which of the following is NOT listed as a method for recording vertical dimension at rest (VDR)?",
+    options: ["Electromyographic method", "Swallowing threshold method", "Tactile sense method", "Facial expression method"],
     answer: 1
   },
   {
-    question: "What is a key characteristic of centric relation that makes it the ideal reference point for complete denture fabrication?",
-    options: ["It is the position of maximum biting force", "It is the patient's most comfortable position", "It is repeatable and can be verified", "It is the position where the tongue is most relaxed"],
+    question: "In the phonetic method for determining VDO, if the anterior teeth click together when the patient makes 's' sounds, this indicates that the VDO is probably:",
+    options: ["Too small", "Too large", "Correct", "Irrelevant to phonetics"],
+    answer: 1
+  },
+  {
+    question: "The bimeter used in the 'power point' method is attached to which part of the record base?",
+    options: ["The maxillary record base", "The mandibular record base", "The occlusion rim", "The articulator"],
+    answer: 1
+  },
+  {
+    question: "According to the lecture, what is the first step in the 'facial measurements after swallowing and relaxing' method for recording VDR?",
+    options: ["Ask the patient to pronounce 'm' repeatedly", "Measure the distance from the pupil to the rima oris", "Have the patient sit or stand upright with head erect and eyes looking straight ahead", "Place a cone of soft wax on the lower denture base"],
     answer: 2
   },
   {
-    question: "What is one of the methods illustrated for sealing or recording the centric relation between wax rims?",
-    options: ["Using a face-bow", "Using a hot instrument", "Using a boley gauge", "Using a willis gauge"],
+    question: "Why is the incisive papilla considered a useful landmark for measuring vertical dimension?",
+    options: ["It is always visible intraorally", "It is a stable landmark that changes little with ridge resorption", "It is directly related to the position of the mental foramen", "It moves with the mandible during function"],
     answer: 1
   },
   {
-    question: "What role does the other hand (not the one stabilizing the rims) play during the recording of centric relation?",
-    options: ["It holds the patient's nose closed", "It is used to help guide the patient to the centric relation position", "It retracts the patient's cheek", "It holds the recording material"],
+    question: "Errors in recording vertical dimension are particularly critical because they can lead to:",
+    options: ["Increased salivary flow", "Straining of the muscles of mastication and the TMJ", "Changes in the color of the denture base", "Increased plaque accumulation"],
     answer: 1
   },
   {
-    question: "The centric relation position for a complete denture patient becomes which position once the dentures are fabricated?",
-    options: ["The rest position", "The centric occlusion position", "The protrusive position", "The lateral position"],
-    answer: 1
+    question: "Which method of recording VDR is described as having questionable accuracy, especially in patients with facial asymmetry?",
+    options: ["Phonetic method", "Tactile sense method", "Willis technique (anatomic landmarks)", "Electromyographic method"],
+    answer: 2
+  },
+  {
+    question: "The interocclusal distance (freeway space) in the premolar region, used to verify VDO from the rest position, should ideally be:",
+    options: ["0-1 mm", "1-2 mm", "2-4 mm", "4-6 mm"],
+    answer: 2
+  },
+  {
+    question: "What is the role of articulated casts as a pre-extraction record?",
+    options: ["To provide a profile view of the patient's face", "To measure the maximum biting force", "To compare the inter-arch distance before and after extraction", "To record the patient's phonetic patterns"],
+    answer: 2
+  },
+  {
+    question: "The physiological rest position is best described as the position of the mandible when:",
+    options: ["The teeth are in maximum intercuspation", "The condyles are in their most superoposterior position", "The associated muscles are in a state of minimal contractual activity", "The patient is actively swallowing"],
+    answer: 2
+  },
+  {
+    question: "Which of the following is NOT mentioned as an important role of establishing the correct vertical jaw relation?",
+    options: ["Phonetics", "Esthetics", "Mastication", "Salivation"],
+    answer: 3
   }
 ];
