@@ -1,77 +1,77 @@
 export const questions = [
   {
-    question: "The vertical dimension at occlusion (VDO) is defined as:",
-    options: ["The distance between two points when the mandible is in its physiological rest position", "The distance between two points when the teeth or occlusal rims are in contact in centric occlusion", "The distance from the incisive papilla to the mandibular incisors", "The space between the upper and lower occlusal rims when pronouncing 's' sounds"],
-    answer: 1
-  },
-  {
-    question: "Which of the following is a consequence of an excessively small vertical dimension at occlusion?",
-    options: ["Clicking of teeth", "Difficulty in swallowing", "Prominence of the mandible and chin", "Sensation of bulky dentures"],
+    question: "What does a face-bow transfer primarily record and transfer to the articulator?",
+    options: ["The vertical dimension of occlusion", "The centric occlusion of the teeth", "The relationship of the jaws to the opening axis of the mandible", "The lateral movements of the mandible"],
     answer: 2
   },
   {
-    question: "The tactile sense method for recording VDR relies on:",
-    options: ["The dentist's perception of muscle tone", "The patient's perception of muscle relaxation", "The measurement of anatomic landmarks on the face", "The pronunciation of specific letters"],
-    answer: 1
-  },
-  {
-    question: "What is the primary limitation of using the parallelism of ridges method to determine VDO?",
-    options: ["It can only be used in dentulous patients", "It cannot be used in patients with severe ridge resorption", "It is not reliable in patients who lost their teeth at different times or had periodontal disease", "It requires a bimeter to measure"],
+    question: "The hinge axis is now also referred to as the:",
+    options: ["Sagittal axis", "Vertical axis", "Transverse horizontal axis", "Bennett axis"],
     answer: 2
   },
   {
-    question: "According to the lecture, which of the following is NOT listed as a method for recording vertical dimension at rest (VDR)?",
-    options: ["Electromyographic method", "Swallowing threshold method", "Tactile sense method", "Facial expression method"],
-    answer: 1
-  },
-  {
-    question: "In the phonetic method for determining VDO, if the anterior teeth click together when the patient makes 's' sounds, this indicates that the VDO is probably:",
-    options: ["Too small", "Too large", "Correct", "Irrelevant to phonetics"],
-    answer: 1
-  },
-  {
-    question: "The bimeter used in the 'power point' method is attached to which part of the record base?",
-    options: ["The maxillary record base", "The mandibular record base", "The occlusion rim", "The articulator"],
-    answer: 1
-  },
-  {
-    question: "According to the lecture, what is the first step in the 'facial measurements after swallowing and relaxing' method for recording VDR?",
-    options: ["Ask the patient to pronounce 'm' repeatedly", "Measure the distance from the pupil to the rima oris", "Have the patient sit or stand upright with head erect and eyes looking straight ahead", "Place a cone of soft wax on the lower denture base"],
-    answer: 2
-  },
-  {
-    question: "Why is the incisive papilla considered a useful landmark for measuring vertical dimension?",
-    options: ["It is always visible intraorally", "It is a stable landmark that changes little with ridge resorption", "It is directly related to the position of the mental foramen", "It moves with the mandible during function"],
-    answer: 1
-  },
-  {
-    question: "Errors in recording vertical dimension are particularly critical because they can lead to:",
-    options: ["Increased salivary flow", "Straining of the muscles of mastication and the TMJ", "Changes in the color of the denture base", "Increased plaque accumulation"],
-    answer: 1
-  },
-  {
-    question: "Which method of recording VDR is described as having questionable accuracy, especially in patients with facial asymmetry?",
-    options: ["Phonetic method", "Tactile sense method", "Willis technique (anatomic landmarks)", "Electromyographic method"],
-    answer: 2
-  },
-  {
-    question: "The interocclusal distance (freeway space) in the premolar region, used to verify VDO from the rest position, should ideally be:",
-    options: ["0-1 mm", "1-2 mm", "2-4 mm", "4-6 mm"],
-    answer: 2
-  },
-  {
-    question: "What is the role of articulated casts as a pre-extraction record?",
-    options: ["To provide a profile view of the patient's face", "To measure the maximum biting force", "To compare the inter-arch distance before and after extraction", "To record the patient's phonetic patterns"],
-    answer: 2
-  },
-  {
-    question: "The physiological rest position is best described as the position of the mandible when:",
-    options: ["The teeth are in maximum intercuspation", "The condyles are in their most superoposterior position", "The associated muscles are in a state of minimal contractual activity", "The patient is actively swallowing"],
-    answer: 2
-  },
-  {
-    question: "Which of the following is NOT mentioned as an important role of establishing the correct vertical jaw relation?",
-    options: ["Phonetics", "Esthetics", "Mastication", "Salivation"],
+    question: "Which of the following is NOT a type of jaw relationship discussed in the text?",
+    options: ["Vertical relation", "Centric jaw relation", "Protrusive and lateral relationship", "Maxillo-mandibular tooth alignment"],
     answer: 3
+  },
+  {
+    question: "On a semi-adjustable articulator, which hinge axis is typically used?",
+    options: ["True hinge axis", "Arbitrary hinge axis", "Kinematic hinge axis", "Condylar hinge axis"],
+    answer: 1
+  },
+  {
+    question: "Normally, the movement in the upper compartment of the TMJ is chiefly:",
+    options: ["A hinge-like movement", "A rotational movement", "A gliding anteroposterior motion", "A lateral side shift"],
+    answer: 2
+  },
+  {
+    question: "The suprahyoid and infrahyoid muscles are classified as:",
+    options: ["The closing muscles", "The guiding muscles", "The opening muscles", "The muscles of mastication only"],
+    answer: 2
+  },
+  {
+    question: "Translatory or gliding movement of the mandible takes place in which compartment of the TMJ?",
+    options: ["Lower compartment", "Upper compartment", "Between the condyle and meniscus", "Within the articular capsule only"],
+    answer: 1
+  },
+  {
+    question: "The limits of border movements of the mandible are determined by all of the following EXCEPT:",
+    options: ["Nerves and ligaments", "Bones and muscles", "Teeth when present", "Blood vessels"],
+    answer: 3
+  },
+  {
+    question: "In the sagittal plane, which border movement appears as one arc where the condyles rotate and translate?",
+    options: ["Posterior border movement", "Anterior border movement", "Lateral border movement", "Terminal hinge movement"],
+    answer: 1
+  },
+  {
+    question: "The Bennett angle is the angle that the path of the balancing condyle makes with which plane?",
+    options: ["The sagittal plane", "The frontal plane", "The median plane", "The horizontal plane"],
+    answer: 2
+  },
+  {
+    question: "Which class of articulator simulates condylar pathways using averages or mechanical equivalents and is considered semi-adjustable?",
+    options: ["Class I", "Class II", "Class III", "Class IV"],
+    answer: 2
+  },
+  {
+    question: "What is the term for the amount of space between the rims with jaws at rest and with the wax rims in occlusion?",
+    options: ["Occlusal plane", "Freeway space", "Vertical dimension", "Centric relation"],
+    answer: 2
+  },
+  {
+    question: "According to some authors, when might a face-bow transfer be unnecessary?",
+    options: ["When cusped posterior teeth are selected.", "When balanced occlusion is desired.", "If cuspless teeth and a monoplane occlusion are selected.", "When interocclusal check records are used."],
+    answer: 2
+  },
+  {
+    question: "Movements that occur in the clenching, tapping, or grinding of the teeth are known as:",
+    options: ["Functional movements", "Border movements", "Parafunctional movements", "Habitual movements"],
+    answer: 2
+  },
+  {
+    question: "To program a fully-adjustable articulator, which type of tracing is typically used?",
+    options: ["Interocclusal records", "Facebook record", "Pantographic tracing", "Protrusive record"],
+    answer: 2
   }
 ];
