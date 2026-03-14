@@ -1,77 +1,77 @@
 export const questions = [
   {
-    question: "Which horizontal relationship is emphasized in the lecture as the correct one for complete denture fabrication?",
-    options: ["Centric relation", "Eccentric relation", "Protrusive relation", "Lateral relation"],
-    answer: 0
-  },
-  {
-    question: "The definition of centric relation includes the phrase 'against the shapes of the':",
-    options: ["Mandibular fossae", "Articular eminencies", "Condylar heads", "Buccal shelves"],
+    question: "What is the definition of 'vertical dimension' in prosthodontics?",
+    options: ["The length of the maxillary arch", "The distance between two selected points, one on a fixed and one on a movable member", "The height of the occlusal rim", "The amount of space available for the tongue"],
     answer: 1
   },
   {
-    question: "According to the lecture, why is it important to instruct the patient to close to the correct OVD before achieving CR?",
-    options: ["To prevent muscle fatigue", "Because achieving CR is difficult without first establishing the correct vertical stop", "To allow the dentist to see the occlusion rims", "To test the strength of the recording material"],
+    question: "Which of the following is a consequence of an excessively large vertical dimension at occlusion?",
+    options: ["Thin-lipped appearance", "Increased rate of residual ridge resorption", "Prominence of the chin", "Excessive wrinkles at the corners of the mouth"],
     answer: 1
   },
   {
-    question: "What is the role of the dominant hand during the centric relation recording procedure?",
-    options: ["To stabilize the maxillary rim", "To help guide the patient to the centric relation position", "To hold the mirror for the patient", "To mix the plaster"],
+    question: "The 'facial expression' method for determining VDR relies on:",
+    options: ["The patient's ability to relax on command", "The dentist's experience in noticing relaxed facial features", "Measuring the distance between anatomic landmarks", "The pronunciation of specific words"],
     answer: 1
   },
   {
-    question: "How is 'centric occlusion' defined in the text?",
-    options: ["The position of the condyles in the fossae", "The occlusion of opposing teeth when the mandible is in centric relation", "The most anterior position of the mandible", "The position where the freeway space is zero"],
+    question: "In the 'swallowing threshold' method, what is used to stimulate the flow of saliva to encourage repeated swallowing?",
+    options: ["A sip of water", "A piece of candy", "A sour-tasting liquid", "Repeated instructions from the dentist"],
     answer: 1
   },
   {
-    question: "What instruction is given to the patient to help them achieve the centric relation position?",
-    options: ["Bite as hard as you can", "Close slowly with a relaxed jaw", "Move your jaw from side to side", "Open wide and hold it"],
+    question: "Why is it essential to record the vertical dimension at rest (VDR) quickly?",
+    options: ["Because the patient will become fatigued", "Because the patient cannot maintain the physiological rest position indefinitely", "Because the recording material has a short setting time", "Because the dentist must work efficiently"],
     answer: 1
   },
   {
-    question: "Which of the following techniques can be used to help a patient find centric relation, as mentioned in the lecture?",
-    options: ["Looking in a mirror to see the mandible position", "Placing fingers in the ears", "Swallowing repeatedly with force", "Biting on the tip of the tongue"],
-    answer: 0
+    question: "What is the main disadvantage of using the 'parallelism of ridges' method for determining VDO?",
+    options: ["It requires a special device called a bimeter", "It is unreliable in patients with a history of periodontal disease or teeth lost at different times", "It is only applicable in dentulous patients", "It is a very time-consuming procedure"],
+    answer: 1
   },
   {
-    question: "What is the purpose of creating space between the occlusion rims before recording centric relation?",
-    options: ["To allow for the recording material", "To increase the freeway space", "To check the patient's swallowing threshold", "To assess phonetics"],
-    answer: 0
+    question: "Which phonetic sounds are used to determine the 'closest speaking space' as described by Silverman Meyer?",
+    options: ["m, b, p", "f, v", "ch, s, j", "t, d, n"],
+    answer: 2
   },
   {
-    question: "Centric relation is a position that is restricted to what type of movement?",
-    options: ["Lateral translation", "Protrusive slide", "A purely vertical hinge movement", "Rotary movement on the transverse horizontal axis"],
+    question: "The 'power point' method for determining VDO utilizes a device called a:",
+    options: ["Boley's gauge", "Willis gauge", "Bimeter", "Facebook"],
+    answer: 2
+  },
+  {
+    question: "According to the lecture, what is the relationship between the mandible and maxilla at occlusion, in terms of ridge parallelism?",
+    options: ["The mandible is at a 5-degree angle to the maxilla", "The mandible is parallel to the maxilla", "The ridges are always non-parallel", "The mandible is slightly anterior to the maxilla"],
+    answer: 1
+  },
+  {
+    question: "Which of the following is a problem associated with an excessively large VDO?",
+    options: ["Prominence of the mandible and chin", "Neuralgia", "Loss of biting power", "Inability to open the mouth widely"],
     answer: 3
   },
   {
-    question: "In the 'nick and notch' method, what is used to create the initial notches in the maxillary wax rim?",
-    options: ["A hot instrument", "A carbide bur", "A sharp scalpel", "A pair of scissors"],
-    answer: 0
-  },
-  {
-    question: "Before mounting the casts, after seating the records, what must be checked?",
-    options: ["The fit of the face-bow fork", "For possible contact in the posterior areas of the casts", "The patient's occlusal vertical dimension", "The alignment of the midline"],
+    question: "The method of using pre-extraction profile photographs as a record involves:",
+    options: ["Tracing the outline of the mandible", "Enlarging the photograph to life-size and comparing measurements on the photograph to those on the face", "Superimposing the photograph on a radiograph", "Using the photograph to select artificial teeth"],
     answer: 1
   },
   {
-    question: "Which characteristic of centric relation makes it a reliable reference point for denture construction?",
-    options: ["It is the position of maximum esthetics", "It is the most comfortable position for the patient", "It is repeatable and verifiable", "It is the position where the patient has the most biting force"],
+    question: "In patients with prolonged edentulousness, why is it important not to fabricate dentures using the habitual rest position?",
+    options: ["It causes severe pain", "It is the same as the physiological rest position", "The dentist needs to re-determine the physiological rest position", "It leads to increased salivary flow"],
     answer: 2
   },
   {
-    question: "The maxillary master cast is placed on the articulator using which type of recording before the centric relation record is made?",
-    options: ["A protrusive record", "A face-bow recording", "A lateral check bite", "An interocclusal record"],
+    question: "The interocclusal distance measured between the wax rims when the mandible is in its physiological rest position should be used to assess:",
+    options: ["The centric relation", "The freeway space", "The patient's esthetics", "The condylar inclination"],
     answer: 1
   },
   {
-    question: "What should the clinician do with the patient's mandible to help them relax into the centric relation position?",
-    options: ["Firmly pull it forward", "Gently shake it up and down", "Push it to the left and right", "Hold it in a protruded position"],
-    answer: 1
-  },
-  {
-    question: "What is the recommended first step if the posterior areas of the casts touch when the centric relation record is in place?",
-    options: ["Proceed with mounting, as this is normal", "Increase the height of the occlusion rims", "Trim the interfering part of the cast", "Discard the record and start over"],
+    question: "All of the following are physiological methods for measuring VDO EXCEPT:",
+    options: ["Swallowing threshold", "Phonetics", "Measurement from former dentures", "Physiological rest position"],
     answer: 2
+  },
+  {
+    question: "The sensation of 'bulky dentures' is most likely to occur when the VDO is recorded:",
+    options: ["Too small", "Too large", "Correctly, but the teeth are set too far buccally", "Correctly, but the denture base is too thick"],
+    answer: 1
   }
 ];
