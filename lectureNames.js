@@ -303,7 +303,7 @@ export const lectureNames = {
         "13": "diagnosis and treatment plan for complete denture🟦🟩",
         "14": "Impressions for Complete Dentures P.1",
         "15": "Impressions for Complete Dentures P.2",
-        "16": "Vertical jaw relation",
+        "16": "mandibular movements & jaw relations",
         "17": "Vertical jaw relation",
         "18": "horizontal jaw relation",
         "19": "Unknown",
