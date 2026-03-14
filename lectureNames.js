@@ -235,7 +235,7 @@ export const lectureNames = {
         "9": "causes of delayed teeth eruption🟦🟩",
         "10": "Deep carious lession treatment",
         "11": "Restorative materials in pedodontic",
-        "12": "Unknown",
+        "12": "Pulp treatment",
         "13": "Unknown",
         "14": "Unknown",
         "15": "Unknown",
