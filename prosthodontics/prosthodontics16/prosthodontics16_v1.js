@@ -1,6 +1,6 @@
 export const questions = [
   {
-    question: "According to the text, what is the primary purpose of recording the occlusal plane?",
+    question: "what is the primary purpose of recording the occlusal plane?",
     options: ["To record the position of the jaws relative to the opening axis.", "To determine the horizontal and vertical level of the teeth.", "To determine the space between the rims at rest.", "To record the most posterior position of the mandible."],
     answer: 1
   },
