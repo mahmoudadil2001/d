@@ -304,7 +304,7 @@ export const lectureNames = {
         "14": "Impressions for Complete Dentures P.1",
         "15": "Impressions for Complete Dentures P.2",
         "16": "Vertical jaw relation",
-        "17": "horizontal jaw relation",
+        "17": "Vertical jaw relation",
         "18": "horizontal jaw relation",
         "19": "Unknown",
         "20": "Unknown",
