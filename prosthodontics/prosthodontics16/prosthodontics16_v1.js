@@ -1,77 +1,77 @@
 export const questions = [
   {
-    question: "What is the term for the space that exists between the teeth when the mandible is in its physiological rest position?",
-    options: ["Interocclusal rest distance (freeway space)", "Vertical dimension at occlusion", "Maxillomandibular space", "Physiological clearance"],
-    answer: 0
+    question: "According to the text, what is the primary purpose of recording the occlusal plane?",
+    options: ["To record the position of the jaws relative to the opening axis.", "To determine the horizontal and vertical level of the teeth.", "To determine the space between the rims at rest.", "To record the most posterior position of the mandible."],
+    answer: 1
   },
   {
-    question: "Which of the following is a consequence of recording an excessively large vertical dimension at occlusion (VDO)?",
-    options: ["Thin-lipped appearance", "Angular cheilitis", "Sensation of bulky dentures", "Prominence of the chin"],
+    question: "What is the term for an imaginary line between the mandibular condyles around which the mandible can rotate without translatory movement?",
+    options: ["Centric relation", "Occlusal plane", "Hinge axis", "Bennett movement"],
     answer: 2
   },
   {
-    question: "The Willis technique for recording vertical dimension at rest involves measuring the distance between the pupil and the rima oris, and comparing it to the distance between which two points?",
-    options: ["Tip of the nose and the chin", "Anterior nasal spine and the lower border of the mandible", "Corner of the eye and the corner of the mouth", "Tragus of the ear and the ala of the nose"],
-    answer: 1
-  },
-  {
-    question: "According to the lecture, which statement best describes the importance of the physiological rest position in complete denture fabrication?",
-    options: ["The denture should be fabricated so the teeth are in contact at this position", "It acts as a reference point for recording the vertical dimension at occlusion", "It is the position used for swallowing, so it determines the occlusal scheme", "It is used to set the horizontal condylar guidance"],
-    answer: 1
-  },
-  {
-    question: "A patient's existing dentures can serve as a valuable pre-extraction record. What instrument is used to measure the distance between the borders of the maxillary and mandibular dentures when they are in occlusion?",
-    options: ["Willis gauge", "Bimeter", "Boley's gauge", "Facebook"],
-    answer: 2
-  },
-  {
-    question: "The 'power point' or maximum force method for determining VDO is based on the theory that maximum force is exerted when:",
-    options: ["The mandible is at its physiological rest position", "The teeth or rims contact at the correct VDO", "The patient is pronouncing the letter 'm'", "The jaws are parallel to each other"],
-    answer: 1
-  },
-  {
-    question: "Which of the following is a problem associated with an excessively small vertical dimension at occlusion?",
-    options: ["Lip separation", "Clicking of teeth during function", "Excessive display of teeth", "Cheek biting"],
+    question: "Which type of jaw relation is defined as the most retruded relation of the mandible to the maxillae when the condyles are in the most posterior unstrained position?",
+    options: ["Eccentric jaw relation", "Protrusive jaw relation", "Lateral jaw relation", "Centric jaw relation"],
     answer: 3
   },
   {
-    question: "In the context of vertical jaw relations, what is the primary role of the musculature?",
-    options: ["To provide a rigid stop for the mandible", "To determine the vertical jaw relation through minimal tonic contraction at rest", "To pull the mandible forward into protrusion", "To control the lateral movements of the mandible only"],
+    question: "The resilience of soft tissues makes the precise location of rotational centers almost impossible, therefore which type of face-bow is generally NOT used for complete denture fabrication?",
+    options: ["Arbitrary face-bow", "Kinematic face-bow", "Hanau H-2 face-bow", "Earpiece face-bow"],
     answer: 1
   },
   {
-    question: "When using the phonetic method to verify VDO, the 'closest speaking space' is observed when the patient enunciates which sounds?",
-    options: ["b, p, and m", "f and v", "ch, s, and j", "k, g, and ng"],
+    question: "The temporomandibular joint is divided into upper and lower compartments by which structure?",
+    options: ["The glenoid fossa", "The condyle", "The meniscus", "The articular capsule"],
     answer: 2
   },
   {
-    question: "The distance from the incisive papilla to the incisal edge of the mandibular incisors in a natural dentition is approximately:",
-    options: ["2 mm", "4 mm", "6 mm", "8 mm"],
+    question: "Which of the following muscles are classified as the 'guiding muscles'?",
+    options: ["Masseter and temporal", "Lateral pterygoid", "Suprahyoid and infrahyoid", "Medial pterygoid"],
     answer: 1
   },
   {
-    question: "The physiological rest position can be influenced by all of the following EXCEPT:",
-    options: ["Presence of neuromuscular disease", "The patient's habitual chewing pattern", "Incorrect measurement technique", "The patient's inability to maintain the position indefinitely"],
+    question: "Rotation movements of the mandible take place in which compartment of the TMJ?",
+    options: ["The upper compartment", "The lower compartment", "The glenoid fossa", "The articular capsule"],
     answer: 1
   },
   {
-    question: "What is the main disadvantage of using profile photographs as a pre-extraction record for VDO?",
-    options: ["They are difficult to enlarge to life-size", "Photograph angulation can differ with patient's posture", "The landmarks on the face are not reproducible", "They cannot be used for edentulous patients"],
+    question: "What are the three-dimensional limits of mandibular movement, such as opening (50-60mm) and protrusion (~9mm), known as?",
+    options: ["Functional movements", "Habitual movements", "Border movements", "Parafunctional movements"],
+    answer: 2
+  },
+  {
+    question: "In the horizontal plane, the tracing of mandibular movement from the most retruded position to the most protruded position is known as what?",
+    options: ["Bennett angle", "Gothic arch tracing", "Centric occlusion", "Sagittal plane tracing"],
     answer: 1
   },
   {
-    question: "According to Niswanger's formula, what is the normal range for the freeway space?",
-    options: ["0-1 mm", "2-4 mm", "4-6 mm", "6-8 mm"],
+    question: "What is the bodily lateral movement or side shift of the mandible called?",
+    options: ["Protrusive movement", "Hinge movement", "Bennett movement", "Translatory movement"],
+    answer: 2
+  },
+  {
+    question: "Which class of articulator is a simple holding instrument capable of accepting a single static registration, also known as non-adjustable?",
+    options: ["Class I", "Class II", "Class III", "Class IV"],
+    answer: 0
+  },
+  {
+    question: "What is the term for any relation of the mandible to the maxilla?",
+    options: ["Jaw relation", "Occlusal plane", "Vertical dimension", "Centric relation"],
+    answer: 0
+  },
+  {
+    question: "The points for an arbitrary face-bow registration, like with the Hanau H-2, are often located 13mm anterior to which anatomical landmark?",
+    options: ["Outer canthus of the eye", "Distal edge of the tragus of the ear", "The condyle", "The infraorbital rim"],
     answer: 1
   },
   {
-    question: "The theory behind the swallowing threshold method for recording VDO is that at the beginning of the swallowing cycle, the teeth:",
-    options: ["Are 4-6 mm apart", "Come together with a very light contact", "Are in a protrusive position", "Exert maximum biting force"],
-    answer: 1
+    question: "The hinge-like movement of the mandible is considered one of the four movements of prime importance for what purpose?",
+    options: ["Recording the Gothic arch", "Reduction of fibrous food", "Opening and closing the mouth for food introduction", "Programming a fully-adjustable articulator"],
+    answer: 2
   },
   {
-    question: "In a normal dentulous patient, which statement is true regarding the teeth at rest?",
-    options: ["The teeth maintain light occlusal contact", "The teeth do not maintain contact", "The teeth are in centric occlusion", "The teeth are 4-6 mm apart due to the freeway space"],
-    answer: 1
+    question: "The stylomandibular ligament is classified as what type of ligament?",
+    options: ["A primary fibrous capsule ligament", "A muscle of mastication", "An accessory ligament", "An intra-articular ligament"],
+    answer: 2
   }
 ];
