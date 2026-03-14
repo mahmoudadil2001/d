@@ -1,6 +1,6 @@
 export const questions = [
   {
-    question: "According to the document, into how many groups are antibodies responsible for autoimmune hemolytic anemia customarily divided based on their physical properties?",
+    question: "into how many groups are antibodies responsible for autoimmune hemolytic anemia customarily divided based on their physical properties?",
     options: ["One", "Two", "Three", "Four"],
     answer: 1
   },
