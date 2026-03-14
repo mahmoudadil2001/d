@@ -1,77 +1,77 @@
 export const questions = [
   {
-    question: "What is the definition of 'vertical dimension' in prosthodontics?",
-    options: ["The length of the maxillary arch", "The distance between two selected points, one on a fixed and one on a movable member", "The height of the occlusal rim", "The amount of space available for the tongue"],
-    answer: 1
-  },
-  {
-    question: "Which of the following is a consequence of an excessively large vertical dimension at occlusion?",
-    options: ["Thin-lipped appearance", "Increased rate of residual ridge resorption", "Prominence of the chin", "Excessive wrinkles at the corners of the mouth"],
-    answer: 1
-  },
-  {
-    question: "The 'facial expression' method for determining VDR relies on:",
-    options: ["The patient's ability to relax on command", "The dentist's experience in noticing relaxed facial features", "Measuring the distance between anatomic landmarks", "The pronunciation of specific words"],
-    answer: 1
-  },
-  {
-    question: "In the 'swallowing threshold' method, what is used to stimulate the flow of saliva to encourage repeated swallowing?",
-    options: ["A sip of water", "A piece of candy", "A sour-tasting liquid", "Repeated instructions from the dentist"],
-    answer: 1
-  },
-  {
-    question: "Why is it essential to record the vertical dimension at rest (VDR) quickly?",
-    options: ["Because the patient will become fatigued", "Because the patient cannot maintain the physiological rest position indefinitely", "Because the recording material has a short setting time", "Because the dentist must work efficiently"],
-    answer: 1
-  },
-  {
-    question: "What is the main disadvantage of using the 'parallelism of ridges' method for determining VDO?",
-    options: ["It requires a special device called a bimeter", "It is unreliable in patients with a history of periodontal disease or teeth lost at different times", "It is only applicable in dentulous patients", "It is a very time-consuming procedure"],
-    answer: 1
-  },
-  {
-    question: "Which phonetic sounds are used to determine the 'closest speaking space' as described by Silverman Meyer?",
-    options: ["m, b, p", "f, v", "ch, s, j", "t, d, n"],
+    question: "Which of the following is one of the four movements of prime importance to complete denture service, involving the bodily side shift of the mandible?",
+    options: ["Hinge movement", "Protrusive movement", "Bennett movement", "Lateral movement for grinding"],
     answer: 2
   },
   {
-    question: "The 'power point' method for determining VDO utilizes a device called a:",
-    options: ["Boley's gauge", "Willis gauge", "Bimeter", "Facebook"],
+    question: "The term 'jaw relation' is defined as:",
+    options: ["The relationship between the upper and lower teeth only.", "The movement path of the condyle.", "Any relation of the mandible to the maxilla.", "The distance from the nose to the chin."],
     answer: 2
   },
   {
-    question: "According to the lecture, what is the relationship between the mandible and maxilla at occlusion, in terms of ridge parallelism?",
-    options: ["The mandible is at a 5-degree angle to the maxilla", "The mandible is parallel to the maxilla", "The ridges are always non-parallel", "The mandible is slightly anterior to the maxilla"],
+    question: "An eccentric jaw relation is defined as:",
+    options: ["The most retruded relation of the mandible.", "Any position of the mandible other than centric.", "The relation when the teeth are in maximum contact.", "The position of the mandible at rest."],
     answer: 1
   },
   {
-    question: "Which of the following is a problem associated with an excessively large VDO?",
-    options: ["Prominence of the mandible and chin", "Neuralgia", "Loss of biting power", "Inability to open the mouth widely"],
-    answer: 3
-  },
-  {
-    question: "The method of using pre-extraction profile photographs as a record involves:",
-    options: ["Tracing the outline of the mandible", "Enlarging the photograph to life-size and comparing measurements on the photograph to those on the face", "Superimposing the photograph on a radiograph", "Using the photograph to select artificial teeth"],
-    answer: 1
-  },
-  {
-    question: "In patients with prolonged edentulousness, why is it important not to fabricate dentures using the habitual rest position?",
-    options: ["It causes severe pain", "It is the same as the physiological rest position", "The dentist needs to re-determine the physiological rest position", "It leads to increased salivary flow"],
+    question: "Which type of face-bow is initially used to accurately locate the hinge axis by using condyle styli as the mandible moves?",
+    options: ["Arbitrary face-bow", "Earpiece face-bow", "Kinematic face-bow", "Hanau face-bow"],
     answer: 2
   },
   {
-    question: "The interocclusal distance measured between the wax rims when the mandible is in its physiological rest position should be used to assess:",
-    options: ["The centric relation", "The freeway space", "The patient's esthetics", "The condylar inclination"],
-    answer: 1
-  },
-  {
-    question: "All of the following are physiological methods for measuring VDO EXCEPT:",
-    options: ["Swallowing threshold", "Phonetics", "Measurement from former dentures", "Physiological rest position"],
+    question: "The interarticular fibrocartilage, or meniscus, divides the TMJ into which compartments?",
+    options: ["Medial and lateral", "Anterior and posterior", "Upper and lower", "Internal and external"],
     answer: 2
   },
   {
-    question: "The sensation of 'bulky dentures' is most likely to occur when the VDO is recorded:",
-    options: ["Too small", "Too large", "Correctly, but the teeth are set too far buccally", "Correctly, but the denture base is too thick"],
+    question: "If both lateral pterygoid muscles contract simultaneously, they will pull the mandible:",
+    options: ["Backward", "Laterally", "Forward", "Upward"],
+    answer: 2
+  },
+  {
+    question: "The point of intersection of the frontal, horizontal, and sagittal planes of the skull is called the:",
+    options: ["Condylar point", "Orbitale", "Center of rotation", "Gnathion"],
+    answer: 2
+  },
+  {
+    question: "Habitual and border movements are subdivisions of which type of mandibular movement?",
+    options: ["Protrusive movement", "Lateral movement", "Opening and closing movements", "Bennett movement"],
+    answer: 2
+  },
+  {
+    question: "In the horizontal plane diagram, the movement from the most retruded position (point 1) to the most protruded movement (point 4) is part of the:",
+    options: ["Bennett movement tracing", "Sagittal plane tracing", "Gothic arch tracing", "Condylar path tracing"],
+    answer: 2
+  },
+  {
+    question: "The angle of the Bennette movement typically varies between which values?",
+    options: ["0° to 5°", "5° to 30°", "30° to 45°", "45° to 60°"],
     answer: 1
+  },
+  {
+    question: "An articulator that permits horizontal and vertical motion but does not orient the motion to the TMJs is which class?",
+    options: ["Class I", "Class II", "Class III", "Class IV"],
+    answer: 1
+  },
+  {
+    question: "To achieve an optimal and comfortable function for complete dentures, the recording must include an appropriate:",
+    options: ["Incisal guidance", "Vertical dimension of occlusion (VDO)", "Tooth shade", "Denture base extension"],
+    answer: 1
+  },
+  {
+    question: "One average measurement for arbitrary face-bow placement places the rotational point along a line from the tragus to the:",
+    options: ["Nasion", "Outer canthus of the eye", "Angle of the mouth", "Ala of the nose"],
+    answer: 1
+  },
+  {
+    question: "Yawning and swallowing are examples of which type of mandibular movement?",
+    options: ["Border movements", "Parafunctional movements", "Functional movements", "Reflexive movements"],
+    answer: 2
+  },
+  {
+    question: "A Class III articulator may be of which type?",
+    options: ["Non-adjustable", "Fully-adjustable", "Arcon or nonarcon", "Static holding instrument"],
+    answer: 2
   }
 ];
