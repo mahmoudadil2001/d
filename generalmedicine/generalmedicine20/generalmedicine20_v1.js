@@ -1,6 +1,6 @@
 export const questions = [
   {
-    question: "According to the document, infective endocarditis (IE) is defined as a microbial infection of which specific surface?",
+    question: "infective endocarditis (IE) is defined as a microbial infection of which specific surface?",
     options: ["The myocardial muscle tissue", "The pericardial sac", "The endothelial surface of the heart or heart valves", "The coronary arteries"],
     answer: 2
   },
