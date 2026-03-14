@@ -271,7 +271,7 @@ export const lectureNames = {
         "13": "Smoking and periodontal diseases🟦🟩",
         "14": "Treatment planning of Periodontal Diseases",
         "15": "Phase II Surgical Therapy",
-        "16": "Unknown",
+        "16": "Periodontal instruments",
         "17": "Unknown",
         "18": "Unknown",
         "19": "Unknown",
