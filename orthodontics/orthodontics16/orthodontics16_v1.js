@@ -120,7 +120,7 @@ export const questions = [
     answer: 1
   },
   {
-    question: "According to the document, appliance design should never be delegated solely to:",
+    question: "appliance design should never be delegated solely to:",
     options: [
       "The patient",
       "The orthodontist",
