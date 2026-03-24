@@ -1,6 +1,6 @@
 export const questions = [
   {
-    question: "According to the lecture, caries is best defined as:",
+    question: "caries is best defined as:",
     options: ["An irreversible cavitation of the tooth surface", "A static process that always leads to tooth loss", "A dynamic process of demineralization and remineralization", "An infection caused solely by poor oral hygiene"],
     answer: 2
   },
