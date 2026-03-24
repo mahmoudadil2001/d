@@ -1,6 +1,6 @@
 export const questions = [
   {
-    question: "According to the document, when and where were self-curing acrylic resins for tooth-colored restorations developed?",
+    question: "when and where were self-curing acrylic resins for tooth-colored restorations developed?",
     options: ["1878 in England", "1930 in Germany", "1962 in the USA", "1996 in Europe"],
     answer: 1
   },
