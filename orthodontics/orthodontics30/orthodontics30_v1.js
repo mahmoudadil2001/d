@@ -232,50 +232,6 @@ export const questions = [
     answer: 1
   },
   {
-    question: "The Nance palatal button enhances intra-oral anchorage by using:",
-    options: [
-      "The palatal rugae",
-      "The maxillary incisors",
-      "Hard palate (basal bone) to resist mesial movement of maxillary molars",
-      "The tongue",
-      "The mandibular arch"
-    ],
-    answer: 2
-  },
-  {
-    question: "Which statement most accurately reflects the relationship between PGE₂ concentration, tooth movement, and root resorption?",
-    options: [
-      "Higher PGE₂ concentration increases tooth movement",
-      "Lower PGE₂ concentration contributes to root resorption",
-      "PGE₂ has no effect on tooth movement",
-      "PGE₂ only affects root resorption, not tooth movement",
-      "Lower PGE₂ concentration increases tooth movement, whereas higher concentration contributes to root resorption"
-    ],
-    answer: 4
-  },
-  {
-    question: "According to Schwartz's Pressure-Tension Theory, orthodontic tooth movement occurs because:",
-    options: [
-      "Ligament fibers stretch and pull teeth",
-      "Tooth roots bend under pressure",
-      "Bone resorption occurs only on tension side",
-      "Bone apposition occurs only on pressure side",
-      "Bone resorption occurs in pressure areas and bone apposition occurs in tension areas"
-    ],
-    answer: 4
-  },
-  {
-    question: "Which clinical condition is best suited for treatment with a removable orthodontic appliance?",
-    options: [
-      "Severe crowding requiring torque",
-      "Comprehensive adult orthodontic treatment",
-      "Extraction space closure",
-      "Anterior crossbite in mixed dentition",
-      "Severe skeletal Class III malocclusion"
-    ],
-    answer: 3
-  },
-  {
     question: "Regarding micro-osteoperforation (MOP), which option matches the protocol and planned biological effect?",
     options: [
       "Requires periodontal flap surgery performed by a periodontist",
