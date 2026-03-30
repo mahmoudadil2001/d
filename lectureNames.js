@@ -221,7 +221,7 @@ export const lectureNames = {
         "27": "Unknown",
         "28": "Unknown",
         "29": "Unknown",
-        "30": "Unknown"
+        "30": "اسئلة الفصل الثاني نسخة B"
     },
     "pedodontics": {
         "1": "Teeth reuption",
