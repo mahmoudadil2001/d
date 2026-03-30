@@ -1,6 +1,6 @@
 export const questions = [
   {
-    question: "What is the correct horizontal relationship for fabricating complete dentures, according to the lecture?",
+    question: "What is the correct horizontal relationship for fabricating complete dentures?",
     options: ["Centric occlusion", "Centric relation", "Eccentric occlusion", "Protrusive relation"],
     answer: 1
   },
