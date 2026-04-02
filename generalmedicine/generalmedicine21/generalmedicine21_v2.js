@@ -1,78 +1,77 @@
-// Version 2
 export const questions = [
   {
-    question: "Which of the following is part of the Glasgow Coma Scale assessment?",
-    options: ["Blood pressure", "Verbal response", "Respiratory rate", "Body temperature"],
+    question: "What is the function of calcitonin?",
+    options: ["Increase blood calcium", "Decrease blood calcium", "Increase blood glucose", "Decrease blood glucose"],
     answer: 1
   },
   {
-    question: "Standard precautions in infection control include:",
-    options: ["Handwashing and glove use", "Prescribing antibiotics", "Taking vital signs", "Measuring height"],
+    question: "Calcitonin is secreted by which cells?",
+    options: ["Follicular cells", "Parafollicular cells (C-cells)", "Chief cells", "Beta cells"],
+    answer: 1
+  },
+  {
+    question: "The secretion of calcitonin is controlled by:",
+    options: ["TSH", "TRH", "Calcium level in blood", "Pituitary gland"],
+    answer: 2
+  },
+  {
+    question: "Which action opposes parathyroid hormone?",
+    options: ["Calcitonin mobilizing calcium to bone", "T4 increasing metabolism", "TSH stimulating thyroid", "TRH from hypothalamus"],
     answer: 0
   },
   {
-    question: "Heat loss from the body occurs through all EXCEPT:",
-    options: ["Urine and feces", "Respiration and perspiration", "Muscle contraction", "Radiation from skin"],
-    answer: 2
-  },
-  {
-    question: "Which temperature site is considered least accurate?",
-    options: ["Rectal", "Oral", "Axillary", "Tympanic"],
-    answer: 2
-  },
-  {
-    question: "Hyperpyrexia refers to a body temperature above:",
-    options: ["38°C", "39°C", "40°C", "41°C"],
-    answer: 2
-  },
-  {
-    question: "For infants, how should the ear be positioned when using a tympanic thermometer?",
-    options: ["Pull ear up and back", "Pull ear straight back", "Pull ear downward", "Do not touch the ear"],
+    question: "During which condition is calcitonin level increased?",
+    options: ["Hypercalcemia", "Pregnancy and lactation", "Starvation", "Dehydration"],
     answer: 1
   },
   {
-    question: "Oral temperature should NOT be taken in which situation?",
-    options: ["After eating", "In a conscious patient", "In a seated position", "With a digital thermometer"],
-    answer: 0
-  },
-  {
-    question: "How long should an axillary thermometer be left in place?",
-    options: ["1 minute", "2–3 minutes", "5 minutes", "10 minutes"],
-    answer: 3
-  },
-  {
-    question: "What is a 'bounding' pulse?",
-    options: ["Weak and thready", "Strong and full", "Irregular", "Absent"],
+    question: "What is the normal total plasma T4 level in adults?",
+    options: ["4 μg/dL", "8 μg/dL", "12 μg/dL", "15 μg/dL"],
     answer: 1
   },
   {
-    question: "Bradycardia is defined as a heart rate below:",
-    options: ["100 bpm", "80 bpm", "60 bpm", "40 bpm"],
-    answer: 2
-  },
-  {
-    question: "What is the term for no breathing?",
-    options: ["Dyspnea", "Tachypnea", "Apnea", "Hyperventilation"],
-    answer: 2
-  },
-  {
-    question: "Normal blood pressure is approximately:",
-    options: ["100/60 mmHg", "120/80 mmHg", "140/90 mmHg", "90/50 mmHg"],
+    question: "Free thyroid hormones in plasma are important because they:",
+    options: ["Are stored for long term", "Are physiologically active and feedback to inhibit TSH", "Bind to albumin only", "Are excreted rapidly"],
     answer: 1
   },
   {
-    question: "Which method of BP measurement uses a stethoscope over the brachial artery?",
-    options: ["Palpatory method", "Auscultatory method", "Direct method", "Oscillometric method"],
-    answer: 1
-  },
-  {
-    question: "Which factor decreases blood pressure?",
-    options: ["Stress", "Exercise", "Lying down", "High-sodium diet"],
+    question: "One function of protein-binding of thyroid hormones is to:",
+    options: ["Prevent any cellular uptake", "Promote excess uptake by first cells", "Maintain a large mobilizable hormone pool", "Increase hormone degradation"],
     answer: 2
   },
   {
-    question: "What is the proper name for a blood pressure cuff?",
-    options: ["Stethoscope", "Sphygmomanometer", "Manometer", "Hemodynamometer"],
+    question: "Thyroid hormones increase transcription of:",
+    options: ["Only a few genes", "Large numbers of genes", "No genes", "Only mitochondrial genes"],
+    answer: 1
+  },
+  {
+    question: "Which of the following is a cardiovascular effect of thyroid hormone?",
+    options: ["Decreased β-adrenergic receptors", "Increased proportion of α-myosin heavy chain", "Decreased heart rate", "Decreased contractility"],
+    answer: 1
+  },
+  {
+    question: "On adipose tissue, thyroid hormones exert:",
+    options: ["Anabolic effect", "Catabolic effect (stimulated lipolysis)", "No effect", "Lipogenesis"],
+    answer: 1
+  },
+  {
+    question: "Hypothyroidism during fetal and neonatal life results in:",
+    options: ["Increased growth", "Severe mental retardation and dwarfism", "Hyperactivity", "Early puberty"],
+    answer: 1
+  },
+  {
+    question: "Endemic goiter is usually due to:",
+    options: ["Excess iodine", "Insufficient iodine in food", "Excess TSH", "Thyroid cancer"],
+    answer: 1
+  },
+  {
+    question: "Which food may contain goitrogenic substances?",
+    options: ["Rice and wheat", "Cabbages and turnips", "Apples and oranges", "Beef and chicken"],
+    answer: 1
+  },
+  {
+    question: "In hypothyroidism, the husky voice and slow speech are due to:",
+    options: ["Laryngeal tumor", "Myxedema of vocal cords", "Nervous system damage", "Muscle spasm"],
     answer: 1
   }
 ];
