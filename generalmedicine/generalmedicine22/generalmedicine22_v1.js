@@ -1,78 +1,77 @@
-// Version 1
 export const questions = [
   {
-    question: "What does JVP stand for in neck examination?",
-    options: ["Jugular Venous Pressure", "Jugular Venous Pulse", "Jugular Vascular Pressure", "Jugular Venous Pattern"],
-    answer: 0
-  },
-  {
-    question: "The sternal angle is approximately how many cm above the right atrium?",
-    options: ["2 cm", "5 cm", "7 cm", "10 cm"],
-    answer: 1
-  },
-  {
-    question: "Which characteristic distinguishes jugular venous pulsation from carotid pulsation?",
-    options: ["One peak per heartbeat", "Palpable", "Unaffected by neck pressure", "Two peaks per heartbeat in sinus rhythm"],
-    answer: 3
-  },
-  {
-    question: "JVP rises with which of the following maneuvers?",
-    options: ["Abdominal pressure", "Deep inspiration", "Carotid massage", "Head elevation"],
-    answer: 0
-  },
-  {
-    question: "Which condition is associated with giant 'a' waves in JVP?",
-    options: ["Atrial fibrillation", "Tricuspid stenosis", "Complete heart block", "Superior vena cava obstruction"],
-    answer: 1
-  },
-  {
-    question: "What maneuver makes the thyroid gland more visible during inspection?",
-    options: ["Having the patient cough", "Asking the patient to swallow water", "Palpating from the front", "Percussing the manubrium"],
-    answer: 1
-  },
-  {
-    question: "A thyroid bruit is most commonly associated with:",
-    options: ["Thyroid cancer", "Graves' disease", "Hashimoto's thyroiditis", "Simple goiter"],
-    answer: 1
-  },
-  {
-    question: "When palpating cervical lymph nodes, what should be assessed?",
-    options: ["Size, site, consistency, tenderness", "Color, temperature, mobility, pulsation", "Shape, moisture, texture, elasticity", "Odor, discharge, bleeding, scarring"],
-    answer: 0
-  },
-  {
-    question: "Finger clubbing is characterized by:",
-    options: ["Painful swelling of proximal phalanges", "Soft tissue swelling of terminal phalanges", "Nail pitting and ridges", "Ulnar deviation of fingers"],
-    answer: 1
-  },
-  {
-    question: "Which of the following is a thoracic cause of clubbing?",
-    options: ["Cirrhosis", "Lung cancer", "Crohn's disease", "Thyrotoxicosis"],
-    answer: 1
-  },
-  {
-    question: "Schamroth's window sign is used to assess:",
-    options: ["Cyanosis", "Clubbing", "Lymphadenopathy", "Thyroid enlargement"],
-    answer: 1
-  },
-  {
-    question: "Which skin color change indicates low oxygen levels?",
-    options: ["Jaundice", "Pallor", "Cyanosis", "Erythema"],
+    question: "What percentage of individuals with an eating disorder also suffer from one or more anxiety disorders?",
+    options: ["45%", "55%", "65%", "75%"],
     answer: 2
   },
   {
-    question: "A small, raised bump on the skin is called a:",
-    options: ["Macule", "Papule", "Vesicle", "Nodule"],
+    question: "According to the document, anxiety disorders often _____ eating disorders.",
+    options: ["follow", "precede", "have no relation to", "develop after treatment of"],
     answer: 1
   },
   {
-    question: "Which gait pattern is associated with foot drop?",
-    options: ["Antalgic gait", "Steppage gait", "Trendelenburg gait", "Ataxic gait"],
+    question: "Disordered eating behaviors may act as _____ coping mechanisms to manage uncertainty.",
+    options: ["adaptive", "maladaptive", "positive", "healthy"],
     answer: 1
   },
   {
-    question: "In a hemiplegic gait, the patient typically:",
-    options: ["Drags the affected leg in a semicircle", "Takes small shuffling steps", "Slams the foot hard on the ground", "Walks with a waddling motion"],
+    question: "Which two brain areas are involved in both anxiety and eating disorders?",
+    options: ["Hippocampus and thalamus", "Amygdala and prefrontal cortex", "Occipital lobe and cerebellum", "Brainstem and basal ganglia"],
+    answer: 1
+  },
+  {
+    question: "High anxiety increases levels of which hormone?",
+    options: ["Insulin", "Cortisol", "Estrogen", "Testosterone"],
+    answer: 1
+  },
+  {
+    question: "Which of the following is a common overlapping trait between anxiety and eating disorders?",
+    options: ["Impulsivity", "Perfectionism", "Sensation seeking", "Extraversion"],
+    answer: 1
+  },
+  {
+    question: "In OCD, repetitive behaviors designed to alleviate anxiety are called:",
+    options: ["Obsessions", "Compulsions", "Hallucinations", "Delusions"],
+    answer: 1
+  },
+  {
+    question: "Fear of contamination is a common type of which disorder?",
+    options: ["GAD", "Social anxiety", "OCD", "Panic disorder"],
+    answer: 2
+  },
+  {
+    question: "Compulsive need to repeatedly check locks or alarms is characteristic of which OCD type?",
+    options: ["Hoarding OCD", "Checking OCD", "Symmetry OCD", "Contamination OCD"],
+    answer: 1
+  },
+  {
+    question: "The Anxiety-ED cycle begins with:",
+    options: ["ED behavior", "Biological fallout", "Trigger", "Increased anxiety"],
+    answer: 2
+  },
+  {
+    question: "What does CBT stand for?",
+    options: ["Cognitive Behavioral Therapy", "Compulsive Behavior Treatment", "Central Brain Therapy", "Calm Breathing Technique"],
     answer: 0
+  },
+  {
+    question: "ERP is a specialized form of CBT primarily used to treat:",
+    options: ["Depression", "OCD and anxiety disorders", "Bipolar disorder", "Schizophrenia"],
+    answer: 1
+  },
+  {
+    question: "In ERP, 'R' stands for:",
+    options: ["Response prevention", "Reaction punishment", "Relaxation practice", "Ritual encouragement"],
+    answer: 0
+  },
+  {
+    question: "Mindfulness helps patients to:",
+    options: ["Act on anxiety immediately", "Tolerate anxiety without acting on it", "Avoid all triggers", "Increase compulsive behaviors"],
+    answer: 1
+  },
+  {
+    question: "Which medications may improve conditions associated with eating disorders?",
+    options: ["Only antibiotics", "Only antivirals", "Antidepressants and antipsychotics", "Only painkillers"],
+    answer: 2
   }
 ];
