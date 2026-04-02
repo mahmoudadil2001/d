@@ -361,20 +361,20 @@ document.getElementById("moreOptionsToggle").addEventListener("click", () => {
   const button = document.getElementById("moreOptionsToggle");
 
   if (content.style.maxHeight === "0px" || content.style.maxHeight === "") {
-      // فتح الخيارات مع انزلاق بطيء وناعم
-      content.style.transition = "all 1s cubic-bezier(0.25, 0.46, 0.45, 0.94)";
-      content.style.maxHeight = "280px";
-      content.style.opacity = "1";
-      icon.textContent = "▲";
-      button.style.background = "linear-gradient(135deg, #28a745, #20c997)";
-    } else {
-      // إغلاق الخيارات مع انزلاق بطيء وناعم
-      content.style.transition = "all 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94)";
-      content.style.maxHeight = "0px";
-      content.style.opacity = "0";
-      icon.textContent = "▼";
-      button.style.background = "linear-gradient(135deg, #6c757d, #495057)";
-    }
+    // فتح الخيارات مع انزلاق بطيء وناعم
+    content.style.transition = "all 1s cubic-bezier(0.25, 0.46, 0.45, 0.94)";
+    content.style.maxHeight = "280px";
+    content.style.opacity = "1";
+    icon.textContent = "▲";
+    button.style.background = "linear-gradient(135deg, #28a745, #20c997)";
+  } else {
+    // إغلاق الخيارات مع انزلاق بطيء وناعم
+    content.style.transition = "all 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94)";
+    content.style.maxHeight = "0px";
+    content.style.opacity = "0";
+    icon.textContent = "▼";
+    button.style.background = "linear-gradient(135deg, #6c757d, #495057)";
+  }
 });
 
 // إضافة وظيفة توسيع/إخفاء الخيارات للوضع الترفيهي مع انزلاق محسن
@@ -384,20 +384,20 @@ document.getElementById("moreOptionsFunToggle").addEventListener("click", () => 
   const button = document.getElementById("moreOptionsFunToggle");
 
   if (content.style.maxHeight === "0px" || content.style.maxHeight === "") {
-      // فتح الخيارات مع انزلاق بطيء وناعم
-      content.style.transition = "all 1s cubic-bezier(0.25, 0.46, 0.45, 0.94)";
-      content.style.maxHeight = "280px";
-      content.style.opacity = "1";
-      icon.textContent = "▲";
-      button.style.background = "linear-gradient(135deg, #28a745, #20c997)";
-    } else {
-      // إغلاق الخيارات مع انزلاق بطيء وناعم
-      content.style.transition = "all 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94)";
-      content.style.maxHeight = "0px";
-      content.style.opacity = "0";
-      icon.textContent = "▼";
-      button.style.background = "linear-gradient(135deg, #6c757d, #495057)";
-    }
+    // فتح الخيارات مع انزلاق بطيء وناعم
+    content.style.transition = "all 1s cubic-bezier(0.25, 0.46, 0.45, 0.94)";
+    content.style.maxHeight = "280px";
+    content.style.opacity = "1";
+    icon.textContent = "▲";
+    button.style.background = "linear-gradient(135deg, #28a745, #20c997)";
+  } else {
+    // إغلاق الخيارات مع انزلاق بطيء وناعم
+    content.style.transition = "all 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94)";
+    content.style.maxHeight = "0px";
+    content.style.opacity = "0";
+    icon.textContent = "▼";
+    button.style.background = "linear-gradient(135deg, #6c757d, #495057)";
+  }
 });
 
 // إضافة select خاص بالتنقل بين الأسئلة (سيظهر عند الضغط على ابدأ)
@@ -474,7 +474,7 @@ document.addEventListener("click", (e) => {
   const isButton = e.target.tagName === "BUTTON";
   const isOptionBtn = e.target.classList.contains("option-btn");
   const isSelect = e.target.tagName === "SELECT";
-  
+
   // تجنب التداخل مع العناصر الأساسية
   if (isButton && !isOptionBtn && !isSelect) {
     playSound(clickSound);
@@ -532,8 +532,8 @@ document.addEventListener('DOMContentLoaded', () => {
       const numericLectures = lectures.filter(lec => {
         // قائمة الكلمات المكتوبة بالأرقام لتجاهلها
         const textNumbers = ['zero', 'one', 'two', 'three', 'four', 'five', 'six', 'seven', 'eight', 'nine', 'ten',
-                            'eleven', 'twelve', 'thirteen', 'fourteen', 'fifteen', 'sixteen', 'seventeen', 'eighteen', 'nineteen', 'twenty',
-                            'thirty', 'forty', 'fifty', 'sixty', 'seventy', 'eighty', 'ninety', 'hundred', 'thousand'];
+          'eleven', 'twelve', 'thirteen', 'fourteen', 'fifteen', 'sixteen', 'seventeen', 'eighteen', 'nineteen', 'twenty',
+          'thirty', 'forty', 'fifty', 'sixty', 'seventy', 'eighty', 'ninety', 'hundred', 'thousand'];
 
         // التحقق من عدم وجود كلمات نصية
         const lecLower = lec.toString().toLowerCase();
@@ -586,15 +586,15 @@ document.addEventListener('DOMContentLoaded', () => {
 // دالة للتحقق من أن المحاضرة الحالية هي من أول محاضرتين
 function isFirstTwoLectures(subject, lecture) {
   if (!subject || !lecture) return false;
-  
+
   // تحويل رقم المحاضرة إلى عدد صحيح
   const lectureNum = parseInt(lecture, 10);
-  
+
   // التحقق من أن رقم المحاضرة صحيح وأنه 1 أو 2
   if (!isNaN(lectureNum) && (lectureNum === 1 || lectureNum === 2)) {
     return true;
   }
-  
+
   return false;
 }
 
@@ -621,9 +621,9 @@ function updateVersionSelector() {
 
   // التحقق المحسن من حالة تسجيل الدخول
   const isUserSignedIn = authManager &&
-                        authManager.currentUser &&
-                        authManager.currentUser.uid &&
-                        authManager.isSignedIn();
+    authManager.currentUser &&
+    authManager.currentUser.uid &&
+    authManager.isSignedIn();
 
   // Check if user has access (signed in with VIP OR free trial active OR first 2 lectures)
   const hasAccess = (isUserSignedIn && vipMode) || freeTrialActive || isFreeLecture;
@@ -697,12 +697,12 @@ function updateVersionSelector() {
       if (directSignInBtn) {
         // إزالة أي مستمعين سابقين
         directSignInBtn.onclick = null;
-        
+
         directSignInBtn.addEventListener('click', (e) => {
           e.preventDefault();
           e.stopPropagation();
           console.log('Direct sign in button clicked');
-          
+
           // التأكد من وجود authManager
           if (window.authManager && typeof window.authManager.showSignInPage === 'function') {
             console.log('Calling showSignInPage');
@@ -715,7 +715,7 @@ function updateVersionSelector() {
             alert('حدث خطأ. يرجى تحديث الصفحة والمحاولة مرة أخرى.');
           }
         });
-        
+
         // إضافة onclick كحل احتياطي
         directSignInBtn.onclick = (e) => {
           e.preventDefault();
@@ -1107,81 +1107,81 @@ document.addEventListener('DOMContentLoaded', () => {
   if (loadBtn) {
     loadBtn.addEventListener("click", async (e) => {
       e.stopPropagation();
-  const subject = subjectSelect.value;
-  const lecture = lectureSelect.value;
-  const version = versionSelect.value;
+      const subject = subjectSelect.value;
+      const lecture = lectureSelect.value;
+      const version = versionSelect.value;
 
-  timerEnabled = document.getElementById("timerToggle").checked;
+      timerEnabled = document.getElementById("timerToggle").checked;
 
-  // التحقق من تسجيل الدخول والاشتراك أو التجربة المجانية أو أول محاضرتين قبل تفعيل ميزات الترتيب العشوائي
-  const isUserSignedIn = authManager &&
-                        authManager.currentUser &&
-                        authManager.currentUser.uid &&
-                        authManager.isSignedIn();
+      // التحقق من تسجيل الدخول والاشتراك أو التجربة المجانية أو أول محاضرتين قبل تفعيل ميزات الترتيب العشوائي
+      const isUserSignedIn = authManager &&
+        authManager.currentUser &&
+        authManager.currentUser.uid &&
+        authManager.isSignedIn();
 
-  // التحقق من أن المحاضرة الحالية هي من أول محاضرتين
-  const isFreeLecture = isFirstTwoLectures(subject, lecture);
+      // التحقق من أن المحاضرة الحالية هي من أول محاضرتين
+      const isFreeLecture = isFirstTwoLectures(subject, lecture);
 
-  // Shuffle features available for VIP, free trial users, or first 2 lectures
-  const hasShuffleAccess = (isUserSignedIn && vipMode) || freeTrialActive || isFreeLecture;
+      // Shuffle features available for VIP, free trial users, or first 2 lectures
+      const hasShuffleAccess = (isUserSignedIn && vipMode) || freeTrialActive || isFreeLecture;
 
-  shuffleEnabled = hasShuffleAccess && document.getElementById("shuffleToggle").checked;
-  shuffleAnswersEnabled = hasShuffleAccess && document.getElementById("shuffleAnswersToggle").checked;
+      shuffleEnabled = hasShuffleAccess && document.getElementById("shuffleToggle").checked;
+      shuffleAnswersEnabled = hasShuffleAccess && document.getElementById("shuffleAnswersToggle").checked;
 
-  const navigatorTimer = document.getElementById("navigatorTimer");
-  if (!timerEnabled) {
-    navigatorTimer.style.display = "none";
-  }
+      const navigatorTimer = document.getElementById("navigatorTimer");
+      if (!timerEnabled) {
+        navigatorTimer.style.display = "none";
+      }
 
-  const path = `./${subject}/${subject}${lecture}/${subject}${lecture}_v${version}.js`;
+      const path = `./${subject}/${subject}${lecture}/${subject}${lecture}_v${version}.js`;
 
-  try {
-    const module = await import(path);
-    let questions = module.questions;
+      try {
+        const module = await import(path);
+        let questions = module.questions;
 
-    if (!questions || !Array.isArray(questions) || questions.length === 0) {
-      throw new Error('No valid questions found in the module');
-    }
+        if (!questions || !Array.isArray(questions) || questions.length === 0) {
+          throw new Error('No valid questions found in the module');
+        }
 
-    // خلط الأسئلة إذا كان الخيار مفعل
-    if (shuffleEnabled) {
-      questions = shuffleQuestions(questions);
-    }
+        // خلط الأسئلة إذا كان الخيار مفعل
+        if (shuffleEnabled) {
+          questions = shuffleQuestions(questions);
+        }
 
-    // خلط الأجوبة إذا كان الخيار مفعل
-    if (shuffleAnswersEnabled) {
-      questions = questions.map(question => shuffleAnswers(question));
-    }
+        // خلط الأجوبة إذا كان الخيار مفعل
+        if (shuffleAnswersEnabled) {
+          questions = questions.map(question => shuffleAnswers(question));
+        }
 
-    currentQuestions = questions;
-    currentIndex = 0;
-    correctCount = 0;
-    questionStatus = new Array(currentQuestions.length).fill("unanswered");
-    isFunMode = false;
+        currentQuestions = questions;
+        currentIndex = 0;
+        correctCount = 0;
+        questionStatus = new Array(currentQuestions.length).fill("unanswered");
+        isFunMode = false;
 
-    controlsContainer.style.display = "none";
-    questionsContainer.style.display = "block";
-    homeBtn.style.display = "block";
-    questionNavigatorDiv.style.display = "block";
+        controlsContainer.style.display = "none";
+        questionsContainer.style.display = "block";
+        homeBtn.style.display = "block";
+        questionNavigatorDiv.style.display = "block";
 
-    // Hide the title when entering quiz mode
-    document.querySelector("h1").style.display = "none";
+        // Hide the title when entering quiz mode
+        document.querySelector("h1").style.display = "none";
 
-    // Hide user info when entering quiz mode
-    authManager.updateUserInfoVisibility();
+        // Hide user info when entering quiz mode
+        authManager.updateUserInfoVisibility();
 
-    // إخفاء مؤقت التجربة المجانية عند دخول وضع الاختبار
-    hideFreeTrialBadge();
+        // إخفاء مؤقت التجربة المجانية عند دخول وضع الاختبار
+        hideFreeTrialBadge();
 
-    // تفعيل وضع الاختبار (إخفاء الشريط العلوي)
-    toggleQuizMode(true);
+        // تفعيل وضع الاختبار (إخفاء الشريط العلوي)
+        toggleQuizMode(true);
 
-    updateQuestionNavigator();
-    showQuestion();
-  } catch (err) {
-      questionsContainer.innerHTML = `<p style="color:red;">فشل تحميل الأسئلة من: ${path}</p>`;
-      console.error(err);
-    }
+        updateQuestionNavigator();
+        showQuestion();
+      } catch (err) {
+        questionsContainer.innerHTML = `<p style="color:red;">فشل تحميل الأسئلة من: ${path}</p>`;
+        console.error(err);
+      }
     });
   }
 });
@@ -1454,7 +1454,7 @@ function showQuestion() {
         playSoundIfEnabled(wrongSound);
         // تطبيق لون الإجابة الخاطئة فوراً
         btn.style.setProperty('background', '#dc3545', 'important');
-        btn.style.setProperty('background-color', '#dc3545', 'important'); 
+        btn.style.setProperty('background-color', '#dc3545', 'important');
         btn.style.setProperty('border', '2px solid #c82333', 'important');
         btn.style.setProperty('color', '#ffffff', 'important');
         btn.style.setProperty('text-shadow', '0 1px 3px rgba(0,0,0,0.5)', 'important');
@@ -1482,7 +1482,7 @@ function showQuestion() {
       Array.from(optionsList.children).forEach((li) => {
         li.querySelector("button").disabled = true;
       });
-      
+
       // فرض تطبيق الألوان مرة أخرى بعد قليل
       setTimeout(() => {
         forceApplyAnswerColors();
@@ -1498,7 +1498,7 @@ function showQuestion() {
 
   // Apply current theme to the newly created question elements
   applyTheme(currentTheme);
-  
+
   // تطبيق ألوان الإجابات إذا كانت موجودة
   setTimeout(() => {
     forceApplyAnswerColors();
@@ -1725,33 +1725,33 @@ authManager.setAuthChangeCallback(async (user) => {
 
   if (user) {
     console.log("User signed in:", user);
-    
+
     // إذا كان المستخدم حقيقي (ليس ضيف)
     if (!user.isGuest) {
       // إخفاء شارة التجربة المجانية إذا كانت موجودة
       if (typeof hideFreeTrialBadge === 'function') {
         hideFreeTrialBadge();
       }
-      
+
       // Load settings (including VIP status) after sign in
       await loadSettings();
-      
+
       // Start listening for VIP status changes
       startVipStatusListener(user.uid);
-      
+
       // Initialize quiz when user signs in - ensure event listeners are ready
       setTimeout(() => {
         if (subjectSelect) {
           subjectSelect.dispatchEvent(new Event("change"));
         }
       }, 100);
-      
+
       // تحديث فوري للواجهة عند تسجيل الدخول
       updateVersionSelector();
       updateShuffleControls();
       updateVipButtonVisibility();
       updateTopHeaderDisplay();
-      
+
       // إظهار زر الأصدقاء
       setupFriendsSystem();
 
@@ -1761,7 +1761,7 @@ authManager.setAuthChangeCallback(async (user) => {
           chatManager.startGlobalMessageListener();
         }
       }, 1000);
-      
+
       console.log('Real user signed in - UI updated immediately');
     } else {
       // مستخدم ضيف - تحديث أساسي فقط
@@ -1770,20 +1770,20 @@ authManager.setAuthChangeCallback(async (user) => {
       updateShuffleControls();
       updateVipButtonVisibility();
       updateTopHeaderDisplay();
-      
+
       console.log('Guest user active');
     }
   } else {
     console.log("User signed out");
     // Stop listening for VIP status changes
     stopVipStatusListener();
-    
+
     // Reset VIP status and load settings
     await loadSettings();
-    
+
     // Hide VIP badge when user signs out
     hideVipBadge();
-    
+
     // Reset quiz state when user signs out
     if (questionsContainer) {
       questionsContainer.innerHTML = "";
@@ -2046,7 +2046,7 @@ async function openFriendsModal() {
     if (loadingIndicator.parentNode) {
       loadingIndicator.parentNode.removeChild(loadingIndicator);
     }
-    
+
     // المتابعة مع البيانات المتاحة
     switchTab("myFriends");
     loadMyFriends();
@@ -2054,7 +2054,7 @@ async function openFriendsModal() {
 }
 
 // دالة إعادة تفعيل زر الأصدقاء بعد التحدي
-window.reactivateFriendsButton = function() {
+window.reactivateFriendsButton = function () {
   console.log('Reactivating friends button...');
 
   const friendsBtn = document.getElementById("friendsBtn");
@@ -2085,7 +2085,7 @@ window.reactivateFriendsButton = function() {
     friendsBtn.parentNode.replaceChild(newFriendsBtn, friendsBtn);
 
     // إضافة مستمع جديد مقاوم للأخطاء
-    newFriendsBtn.addEventListener('click', function(e) {
+    newFriendsBtn.addEventListener('click', function (e) {
       e.preventDefault();
       e.stopPropagation();
       console.log('Friends button clicked after reactivation');
@@ -2170,17 +2170,17 @@ const ADMIN_EMAIL = 'mahmod.adil2001@gmail.com';
 
 // Check if current user is admin
 function isAdmin() {
-  return authManager && 
-         authManager.isSignedIn() && 
-         authManager.currentUser && 
-         authManager.currentUser.email === ADMIN_EMAIL;
+  return authManager &&
+    authManager.isSignedIn() &&
+    authManager.currentUser &&
+    authManager.currentUser.email === ADMIN_EMAIL;
 }
 
 // Load settings from localStorage
 async function loadSettings() {
   soundEnabled = localStorage.getItem('soundEnabled') !== 'false';
   currentTheme = localStorage.getItem('currentTheme') || 'dark';
-  
+
   // Load VIP status from Firebase for signed-in users, otherwise false
   if (authManager && authManager.isSignedIn() && authManager.currentUser) {
     try {
@@ -2254,7 +2254,7 @@ function saveSettings() {
 function initializeFreeTrial() {
   const trialStartTime = localStorage.getItem('freeTrialStartTime');
   const trialUsed = localStorage.getItem('freeTrialUsed');
-  
+
   // If trial was never used before
   if (!trialStartTime && !trialUsed) {
     startFreeTrial();
@@ -2263,7 +2263,7 @@ function initializeFreeTrial() {
     const startTime = parseInt(trialStartTime);
     const currentTime = Date.now();
     const elapsedTime = (currentTime - startTime) / 1000; // in seconds
-    
+
     if (elapsedTime < 30) { // 30 seconds
       // Continue existing trial
       freeTrialActive = true;
@@ -2283,7 +2283,7 @@ function startFreeTrial() {
   localStorage.setItem('freeTrialStartTime', Date.now().toString());
   startFreeTrialTimer();
   showFreeTrialNotification();
-  
+
   // تفعيل المزيد من الخيارات تلقائياً مع تأثير ديناميكي
   setTimeout(() => {
     activateTrialFeatures();
@@ -2295,16 +2295,16 @@ function startFreeTrialTimer() {
   if (freeTrialTimer) {
     clearInterval(freeTrialTimer);
   }
-  
+
   freeTrialTimer = setInterval(() => {
     freeTrialTimeLeft--;
     updateFreeTrialBadge();
-    
+
     if (freeTrialTimeLeft <= 0) {
       endFreeTrial();
     }
   }, 1000);
-  
+
   updateFreeTrialBadge();
 }
 
@@ -2314,14 +2314,14 @@ function endFreeTrial() {
   freeTrialTimeLeft = 0;
   localStorage.setItem('freeTrialUsed', 'true');
   localStorage.removeItem('freeTrialStartTime');
-  
+
   if (freeTrialTimer) {
     clearInterval(freeTrialTimer);
     freeTrialTimer = null;
   }
-  
+
   hideFreeTrialBadge();
-  
+
   // تنظيف أي إشعارات سابقة أولاً
   const existingNotifications = document.querySelectorAll('[id*="trialExpiredNotification"]');
   existingNotifications.forEach(el => {
@@ -2331,14 +2331,14 @@ function endFreeTrial() {
       el.parentNode.removeChild(el);
     }
   });
-  
+
   // تأخير قصير للتأكد من تحديث الحالة
   setTimeout(() => {
     try {
       updateVersionSelector();
       updateShuffleControls();
       updateVipButtonVisibility();
-      
+
       // تأخير إضافي قبل إظهار الإشعار للتأكد من استقرار الواجهة
       setTimeout(() => {
         showTrialExpiredNotification();
@@ -2369,9 +2369,9 @@ function showFreeTrialNotification() {
   notification.innerHTML = `
     
   `;
-  
+
   document.body.appendChild(notification);
-  
+
   // Auto remove after 4 seconds
   setTimeout(() => {
     if (document.body.contains(notification)) {
@@ -2390,19 +2390,19 @@ function activateTrialFeatures() {
   // تحديث إعدادات النسخة أولاً
   updateVersionSelector();
   updateShuffleControls();
-  
+
   // فتح المزيد من الخيارات مع تأثير بصري محسن
   const moreOptionsToggle = document.getElementById("moreOptionsToggle");
   const moreOptionsContent = document.getElementById("moreOptionsContent");
   const moreOptionsIcon = document.getElementById("moreOptionsIcon");
-  
+
   if (moreOptionsToggle && moreOptionsContent && moreOptionsIcon) {
     // إضافة تأثير مضيء للزر
     moreOptionsToggle.style.cssText += `
       animation: trialGlow 2s ease-in-out 4;
       box-shadow: 0 0 20px rgba(40, 167, 69, 0.6) !important;
     `;
-    
+
     // فتح المحتوى مع تأثير انزلاق بطيء وناعم
     setTimeout(() => {
       // تحسين انتقال الانزلاق
@@ -2411,14 +2411,14 @@ function activateTrialFeatures() {
       moreOptionsContent.style.opacity = "1";
       moreOptionsIcon.textContent = "▲";
       moreOptionsToggle.style.background = "linear-gradient(135deg, #28a745, #20c997)";
-      
+
       // تفعيل الخيارات العشوائية واحدة تلو الأخرى
       setTimeout(() => {
         activateShuffleOptionsSequentially();
       }, 800);
     }, 1200);
   }
-  
+
   // إضافة تأثير للأزرار المفعلة حديثاً
   setTimeout(() => {
     addTrialActivationEffects();
@@ -2429,13 +2429,13 @@ function activateTrialFeatures() {
 function activateShuffleOptionsSequentially() {
   const shuffleToggle = document.getElementById("shuffleToggle");
   const shuffleAnswersToggle = document.getElementById("shuffleAnswersToggle");
-  
+
   // تفعيل الخيار الأول (ترتيب الأسئلة عشوائياً)
   if (shuffleToggle) {
     setTimeout(() => {
       shuffleToggle.checked = true;
       shuffleToggle.disabled = false;
-      
+
       // تأثير تفعيل محسن
       const shuffleLabel = shuffleToggle.closest('label');
       if (shuffleLabel) {
@@ -2443,7 +2443,7 @@ function activateShuffleOptionsSequentially() {
         shuffleLabel.style.color = '#28a745';
         shuffleLabel.style.fontWeight = '700';
         shuffleLabel.style.textShadow = '0 0 10px rgba(40, 167, 69, 0.5)';
-        
+
         // إضافة أيقونة تفعيل مؤقتة
         const activationIcon = document.createElement('span');
         activationIcon.style.cssText = `
@@ -2453,7 +2453,7 @@ function activateShuffleOptionsSequentially() {
         `;
         activationIcon.textContent = '✨';
         shuffleLabel.appendChild(activationIcon);
-        
+
         // إزالة الأيقونة بعد انتهاء التأثير
         setTimeout(() => {
           if (shuffleLabel.contains(activationIcon)) {
@@ -2463,13 +2463,13 @@ function activateShuffleOptionsSequentially() {
       }
     }, 300);
   }
-  
+
   // تفعيل الخيار الثاني (ترتيب الأجوبة عشوائياً) بعد فترة
   if (shuffleAnswersToggle) {
     setTimeout(() => {
       shuffleAnswersToggle.checked = true;
       shuffleAnswersToggle.disabled = false;
-      
+
       // تأثير تفعيل محسن
       const shuffleAnswersLabel = shuffleAnswersToggle.closest('label');
       if (shuffleAnswersLabel) {
@@ -2477,7 +2477,7 @@ function activateShuffleOptionsSequentially() {
         shuffleAnswersLabel.style.color = '#28a745';
         shuffleAnswersLabel.style.fontWeight = '700';
         shuffleAnswersLabel.style.textShadow = '0 0 10px rgba(40, 167, 69, 0.5)';
-        
+
         // إضافة أيقونة تفعيل مؤقتة
         const activationIcon = document.createElement('span');
         activationIcon.style.cssText = `
@@ -2487,7 +2487,7 @@ function activateShuffleOptionsSequentially() {
         `;
         activationIcon.textContent = '✨';
         shuffleAnswersLabel.appendChild(activationIcon);
-        
+
         // إزالة الأيقونة بعد انتهاء التأثير
         setTimeout(() => {
           if (shuffleAnswersLabel.contains(activationIcon)) {
@@ -2503,11 +2503,11 @@ function activateShuffleOptionsSequentially() {
 function activateShuffleOptions() {
   const shuffleToggle = document.getElementById("shuffleToggle");
   const shuffleAnswersToggle = document.getElementById("shuffleAnswersToggle");
-  
+
   if (shuffleToggle) {
     shuffleToggle.checked = true;
     shuffleToggle.disabled = false;
-    
+
     // تأثير تفعيل
     const shuffleLabel = shuffleToggle.closest('label');
     if (shuffleLabel) {
@@ -2516,11 +2516,11 @@ function activateShuffleOptions() {
       shuffleLabel.style.fontWeight = '700';
     }
   }
-  
+
   if (shuffleAnswersToggle) {
     shuffleAnswersToggle.checked = true;
     shuffleAnswersToggle.disabled = false;
-    
+
     // تأثير تفعيل
     const shuffleAnswersLabel = shuffleAnswersToggle.closest('label');
     if (shuffleAnswersLabel) {
@@ -2538,7 +2538,7 @@ function addTrialActivationEffects() {
   if (loadBtn) {
     loadBtn.style.animation = 'trialPulse 1.5s ease-in-out 2';
     loadBtn.style.boxShadow = '0 0 25px rgba(102, 126, 234, 0.7)';
-    
+
     // إضافة نص ديناميكي
     const originalText = loadBtn.textContent;
     loadBtn.innerHTML = `
@@ -2546,7 +2546,7 @@ function addTrialActivationEffects() {
         ✨ ${originalText} ✨
       </span>
     `;
-    
+
     // إزالة التأثير بعد 5 ثوان
     setTimeout(() => {
       loadBtn.style.animation = '';
@@ -2554,7 +2554,7 @@ function addTrialActivationEffects() {
       loadBtn.textContent = originalText;
     }, 5000);
   }
-  
+
   // إضافة نمط CSS للتأثيرات المحسنة
   if (!document.getElementById('trialEffectsStyle')) {
     const style = document.createElement('style');
@@ -2638,7 +2638,7 @@ function addTrialActivationEffects() {
     `;
     document.head.appendChild(style);
   }
-  
+
   // عرض رسالة تأكيد جميلة
   showTrialActivationMessage();
 }
@@ -2662,7 +2662,7 @@ function showTrialActivationMessage() {
     animation: slideInFromTop 0.8s ease-out;
     max-width: 400px;
   `;
-  
+
   message.innerHTML = `
     <div style="font-size: 50px; margin-bottom: 15px; animation: sparkle 2s infinite;">🎁</div>
     <h3 style="margin: 0 0 15px 0; font-size: 20px; font-weight: 700;">
@@ -2677,7 +2677,7 @@ function showTrialActivationMessage() {
      تونسوا بالاسئلة  ان شاء الله يعجبكم 
     </div>
   `;
-  
+
   // إضافة تأثير CSS للرسالة
   const messageStyle = document.createElement('style');
   messageStyle.textContent = `
@@ -2700,9 +2700,9 @@ function showTrialActivationMessage() {
     }
   `;
   document.head.appendChild(messageStyle);
-  
+
   document.body.appendChild(message);
-  
+
   // إزالة الرسالة بعد 4 ثوان مع تأثير انزلاق
   setTimeout(() => {
     message.style.animation = 'slideInFromTop 0.5s ease-out reverse';
@@ -2750,7 +2750,7 @@ function showTrialExpiredNotification() {
     box-sizing: border-box;
     overflow: hidden;
   `;
-  
+
   notification.innerHTML = `
     <div style="font-size: 40px; margin-bottom: 12px;">⏰</div>
     <div style="margin-bottom: 15px; font-size: 18px; font-weight: 700;"> سويلك حساب عالسريع </div>
@@ -2772,7 +2772,7 @@ function showTrialExpiredNotification() {
       box-sizing: border-box;
     ">تسجيل الدخول</button>
   `;
-  
+
   // إضافة النمط المطلوب للتأثيرات إذا لم يكن موجوداً
   if (!document.getElementById('trialExpiredStyles')) {
     const style = document.createElement('style');
@@ -2802,22 +2802,22 @@ function showTrialExpiredNotification() {
     `;
     document.head.appendChild(style);
   }
-  
+
   document.body.appendChild(notification);
-  
+
   // إضافة مستمع الأحداث مع حماية من الأخطاء
   const signInBtn = notification.querySelector('.trial-expired-signin-btn');
   if (signInBtn) {
     signInBtn.addEventListener('click', (e) => {
       e.preventDefault();
       e.stopPropagation();
-      
+
       try {
         // إزالة الإشعار فوراً
         if (notification.parentNode) {
           notification.parentNode.removeChild(notification);
         }
-        
+
         // فتح صفحة تسجيل الدخول
         setTimeout(() => {
           if (window.authManager && typeof window.authManager.showSignInPage === 'function') {
@@ -2829,14 +2829,14 @@ function showTrialExpiredNotification() {
             alert('حدث خطأ. يرجى تحديث الصفحة والمحاولة مرة أخرى.');
           }
         }, 100);
-        
+
       } catch (error) {
         console.error('Error in trial expired sign in:', error);
         alert('حدث خطأ. يرجى تحديث الصفحة والمحاولة مرة أخرى.');
       }
     });
   }
-  
+
   // إزالة تلقائية بعد 6 ثوانٍ مع تنظيف آمن
   const autoRemoveTimeout = setTimeout(() => {
     try {
@@ -2852,7 +2852,7 @@ function showTrialExpiredNotification() {
       console.error('Error removing trial expired notification:', error);
     }
   }, 6000);
-  
+
   // إضافة خاصية للتنظيف اليدوي
   notification.manualCleanup = () => {
     clearTimeout(autoRemoveTimeout);
@@ -2865,11 +2865,11 @@ function showTrialExpiredNotification() {
 // Update free trial badge
 function updateFreeTrialBadge() {
   let badge = document.getElementById('freeTrialBadge');
-  
+
   if (freeTrialActive && freeTrialTimeLeft > 0) {
     // التحقق من وضع الاختبار - إخفاء الشارة في وضع الاختبار
     const isQuizMode = document.body.classList.contains('quiz-mode');
-    
+
     if (!badge) {
       badge = document.createElement('div');
       badge.id = 'freeTrialBadge';
@@ -2892,7 +2892,7 @@ function updateFreeTrialBadge() {
         box-shadow: none !important;
         display: none;
       `;
-      
+
       // إضافة زر التخطي الصغير تحت المؤقت
       const skipButton = document.createElement('button');
       skipButton.id = 'skipTrialButton';
@@ -2916,29 +2916,29 @@ function updateFreeTrialBadge() {
       skipButton.addEventListener('click', () => {
         endFreeTrial();
       });
-      
+
       skipButton.addEventListener('mouseenter', () => {
         skipButton.style.opacity = '1';
         skipButton.style.background = 'rgba(108, 117, 125, 0.9) !important';
         skipButton.style.transform = 'scale(1.05)';
       });
-      
+
       skipButton.addEventListener('mouseleave', () => {
         skipButton.style.opacity = '0.7';
         skipButton.style.background = 'rgba(108, 117, 125, 0.8) !important';
         skipButton.style.transform = 'scale(1)';
       });
-      
+
       badge.appendChild(skipButton);
       document.body.appendChild(badge);
     }
-    
+
     // إخفاء الشارة دائماً
     badge.style.display = 'none';
-    
+
     const minutes = Math.floor(freeTrialTimeLeft / 60);
     const seconds = freeTrialTimeLeft % 60;
-    
+
     // تحديث النص فقط إذا كانت الشارة مرئية
     if (!isQuizMode) {
       if (badge.querySelector('#skipTrialButton')) {
@@ -2948,7 +2948,7 @@ function updateFreeTrialBadge() {
           تجربة مجانية: ${minutes}:${seconds.toString().padStart(2, '0')}
         `;
       }
-      
+
       // Change color when time is running out
       if (freeTrialTimeLeft <= 10) {
         badge.style.color = '#dc3545';
@@ -2968,7 +2968,7 @@ function hideFreeTrialBadge() {
     badge.style.display = 'none';
     badge.remove();
   }
-  
+
   // إزالة زر التخطي إذا كان موجوداً بشكل منفصل
   const skipButton = document.getElementById('skipTrialButton');
   if (skipButton) {
@@ -3244,7 +3244,7 @@ function showVipSubscriptionModal() {
 
     // Function to toggle the features section with smooth animations
     function toggleFeatures() {
-      if(vipFeatures.classList.contains('show')){
+      if (vipFeatures.classList.contains('show')) {
         vipFeatures.classList.remove('show');
         vipFeatures.style.maxHeight = '0';
         vipFeatures.style.opacity = '0';
@@ -3263,7 +3263,7 @@ function showVipSubscriptionModal() {
       vipFeatures.style.maxHeight = '1000px';
       vipFeatures.style.opacity = '1';
       expandIndicator.textContent = '▲';
-      
+
       // Auto-hide after 2.5 seconds
       setTimeout(() => {
         vipFeatures.classList.remove('show');
@@ -3309,7 +3309,7 @@ function showVipSubscriptionModal() {
       });
     });
 
-    
+
   }, 100);
 
   // Close modal when clicking outside
@@ -3337,13 +3337,13 @@ function copyToClipboard(text, element) {
     // Visual feedback
     element.style.background = 'rgba(40, 167, 69, 0.3)';
     element.style.transform = 'scale(1.02)';
-    
+
     const originalText = element.querySelector('div div:last-child');
     const originalContent = originalText.textContent;
     originalText.textContent = '✅ تم النسخ!';
     originalText.style.color = '#155724';
     originalText.style.fontWeight = 'bold';
-    
+
     setTimeout(() => {
       element.style.background = 'rgba(255, 255, 255, 0.2)';
       element.style.transform = 'scale(1)';
@@ -3387,7 +3387,7 @@ function openSettingsModal() {
       if (userInfoSection) {
         userInfoSection.style.display = 'none';
       }
-      
+
       if (authManager && authManager.guestUser && !authManager.currentUser) {
         // للضيوف - إظهار رسالة مخصصة
         passwordNotSignedIn.style.display = 'block';
@@ -3555,7 +3555,7 @@ function updateVoiceToggleUI() {
       slider.style.transform = 'translateX(-25px)';
       slider.style.background = '#ffffff';
     }
-    
+
     // Add hover effects
     toggle.addEventListener('mouseenter', () => {
       if (soundEnabled) {
@@ -3564,7 +3564,7 @@ function updateVoiceToggleUI() {
         toggle.style.background = '#5a6268';
       }
     });
-    
+
     toggle.addEventListener('mouseleave', () => {
       if (soundEnabled) {
         toggle.style.background = '#28a745';
@@ -3694,13 +3694,13 @@ function updateVipToggleUI() {
 
   if (toggle && slider) {
     toggle.checked = vipMode;
-    
+
     if (vipMode) {
       toggle.style.background = '#ffc107';
       toggle.style.boxShadow = '0 2px 8px rgba(255, 193, 7, 0.4)';
       slider.style.transform = 'translateX(0)';
       slider.style.background = '#ffffff';
-      
+
       // Enable light theme button
       if (lightThemeBtn) {
         lightThemeBtn.disabled = false;
@@ -3718,7 +3718,7 @@ function updateVipToggleUI() {
       toggle.style.boxShadow = '0 2px 8px rgba(108, 117, 125, 0.3)';
       slider.style.transform = 'translateX(-25px)';
       slider.style.background = '#ffffff';
-      
+
       // Disable light theme button and force dark theme
       if (lightThemeBtn) {
         lightThemeBtn.disabled = true;
@@ -3726,7 +3726,7 @@ function updateVipToggleUI() {
         lightThemeBtn.style.cursor = 'not-allowed';
         lightThemeBtn.title = 'VIP مطلوب لاستخدام المظهر الفاتح';
       }
-      
+
       // Force dark theme when VIP is off
       if (currentTheme === 'light') {
         currentTheme = 'dark';
@@ -3738,7 +3738,7 @@ function updateVipToggleUI() {
       // Hide VIP badge
       hideVipBadge();
     }
-    
+
     // Set toggle to read-only for non-admin users
     if (isAdmin()) {
       toggle.style.cursor = 'pointer';
@@ -3747,7 +3747,7 @@ function updateVipToggleUI() {
       toggle.style.cursor = 'pointer';
       toggle.title = vipMode ? 'VIP مفعل بواسطة الإدارة' : 'اشترك في VIP';
     }
-    
+
     // Different hover effects for admin vs regular users
     toggle.addEventListener('mouseenter', () => {
       if (isAdmin()) {
@@ -3757,7 +3757,7 @@ function updateVipToggleUI() {
         toggle.style.background = '#28a745';
       }
     });
-    
+
     toggle.addEventListener('mouseleave', () => {
       if (vipMode) {
         toggle.style.background = '#ffc107';
@@ -3774,7 +3774,7 @@ function updateVipToggleUI() {
 // Update VIP button visibility based on user login, VIP status, and free trial
 function updateVipButtonVisibility() {
   const vipSubscribeBtn = document.getElementById('vipSubscribeBtn');
-  
+
   if (vipSubscribeBtn) {
     // Show button only if user is signed in, VIP is not active, and no free trial
     if (authManager && authManager.isSignedIn() && !vipMode && !freeTrialActive) {
@@ -3872,7 +3872,7 @@ function setTheme(theme) {
 
     return;
   }
-  
+
   currentTheme = theme;
   applyTheme(theme);
   updateThemeButtons();
@@ -3882,7 +3882,7 @@ function setTheme(theme) {
 // Apply theme to the page
 function applyTheme(theme) {
   const body = document.body;
-  
+
   // تطبيق ألوان الإجابات عند تغيير الثيم
   setTimeout(() => {
     forceApplyAnswerColors();
@@ -3930,11 +3930,11 @@ function applyTheme(theme) {
     const optionButtons = document.querySelectorAll('li button, .option-btn, #challengeQuestionContainer button, #questionsContainer button');
     optionButtons.forEach(button => {
       // Only update if it's not a correct/wrong answer
-      if (!button.style.backgroundColor || 
-          (button.style.backgroundColor !== 'lightgreen' && 
-           button.style.backgroundColor !== 'salmon' &&
-           !button.style.backgroundColor.includes('rgb(144, 238, 144)') &&
-           !button.style.backgroundColor.includes('rgb(250, 128, 114)'))) {
+      if (!button.style.backgroundColor ||
+        (button.style.backgroundColor !== 'lightgreen' &&
+          button.style.backgroundColor !== 'salmon' &&
+          !button.style.backgroundColor.includes('rgb(144, 238, 144)') &&
+          !button.style.backgroundColor.includes('rgb(250, 128, 114)'))) {
         button.style.setProperty('color', '#212529', 'important');
         button.style.setProperty('text-shadow', 'none', 'important');
         button.style.setProperty('background', 'linear-gradient(135deg, #ffffff, #f8f9fa)', 'important');
@@ -4014,11 +4014,11 @@ function applyTheme(theme) {
     const optionButtons = document.querySelectorAll('li button, .option-btn');
     optionButtons.forEach(button => {
       // Only reset if it's not a correct/wrong answer
-      if (!button.style.backgroundColor || 
-          (button.style.backgroundColor !== 'lightgreen' && 
-           button.style.backgroundColor !== 'salmon' &&
-           !button.style.backgroundColor.includes('rgb(144, 238, 144)') &&
-           !button.style.backgroundColor.includes('rgb(250, 128, 114)'))) {
+      if (!button.style.backgroundColor ||
+        (button.style.backgroundColor !== 'lightgreen' &&
+          button.style.backgroundColor !== 'salmon' &&
+          !button.style.backgroundColor.includes('rgb(144, 238, 144)') &&
+          !button.style.backgroundColor.includes('rgb(250, 128, 114)'))) {
         button.style.color = '#ffffff !important';
         button.style.textShadow = '0 1px 5px rgba(0, 0, 0, 0.7) !important';
         button.style.background = 'rgba(255, 255, 255, 0.1) !important';
@@ -4062,7 +4062,7 @@ function applyTheme(theme) {
       '.option-btn.correct-answer',
       '[data-answer-state="correct"]'
     ];
-    
+
     correctSelectors.forEach(selector => {
       const buttons = document.querySelectorAll(selector);
       buttons.forEach(btn => {
@@ -4090,7 +4090,7 @@ function applyTheme(theme) {
       '.option-btn.wrong-answer',
       '[data-answer-state="wrong"]'
     ];
-    
+
     wrongSelectors.forEach(selector => {
       const buttons = document.querySelectorAll(selector);
       buttons.forEach(btn => {
@@ -4150,30 +4150,30 @@ function forceApplyAnswerColors() {
   // البحث عن جميع الأزرار بطرق مختلفة
   const selectors = [
     'button',
-    '.option-btn', 
+    '.option-btn',
     'li button',
     '#questionsContainer button',
     '#challengeQuestionContainer button'
   ];
-  
+
   selectors.forEach(selector => {
     const buttons = document.querySelectorAll(selector);
-    
+
     buttons.forEach(btn => {
       // تحديد ما إذا كان الزر إجابة صحيحة
       const isCorrect = btn.style.backgroundColor === 'lightgreen' ||
-                       btn.style.backgroundColor.includes('rgb(144, 238, 144)') ||
-                       btn.classList.contains('correct-answer') ||
-                       btn.getAttribute('data-answer-state') === 'correct' ||
-                       btn.style.backgroundColor.includes('lightgreen');
-      
+        btn.style.backgroundColor.includes('rgb(144, 238, 144)') ||
+        btn.classList.contains('correct-answer') ||
+        btn.getAttribute('data-answer-state') === 'correct' ||
+        btn.style.backgroundColor.includes('lightgreen');
+
       // تحديد ما إذا كان الزر إجابة خاطئة  
       const isWrong = btn.style.backgroundColor === 'salmon' ||
-                     btn.style.backgroundColor.includes('rgb(250, 128, 114)') ||
-                     btn.classList.contains('wrong-answer') ||
-                     btn.getAttribute('data-answer-state') === 'wrong' ||
-                     btn.style.backgroundColor.includes('salmon');
-      
+        btn.style.backgroundColor.includes('rgb(250, 128, 114)') ||
+        btn.classList.contains('wrong-answer') ||
+        btn.getAttribute('data-answer-state') === 'wrong' ||
+        btn.style.backgroundColor.includes('salmon');
+
       if (isCorrect) {
         // تطبيق لون الإجابة الصحيحة
         btn.style.setProperty('background', '#28a745', 'important');
@@ -4184,11 +4184,11 @@ function forceApplyAnswerColors() {
         btn.style.setProperty('font-weight', '700', 'important');
         btn.style.setProperty('box-shadow', '0 4px 15px rgba(40, 167, 69, 0.4)', 'important');
       }
-      
+
       if (isWrong) {
         // تطبيق لون الإجابة الخاطئة
         btn.style.setProperty('background', '#dc3545', 'important');
-        btn.style.setProperty('background-color', '#dc3545', 'important'); 
+        btn.style.setProperty('background-color', '#dc3545', 'important');
         btn.style.setProperty('border', '2px solid #c82333', 'important');
         btn.style.setProperty('color', '#ffffff', 'important');
         btn.style.setProperty('text-shadow', '0 1px 3px rgba(0,0,0,0.5)', 'important');
@@ -4197,13 +4197,13 @@ function forceApplyAnswerColors() {
       }
     });
   });
-  
+
   // إضافة MutationObserver لمراقبة التغييرات
   if (!window.answerColorsObserver) {
     window.answerColorsObserver = new MutationObserver(() => {
       setTimeout(forceApplyAnswerColors, 50);
     });
-    
+
     const container = document.getElementById('questionsContainer');
     if (container) {
       window.answerColorsObserver.observe(container, {
@@ -4341,7 +4341,7 @@ function showVipUsersModal() {
     searchInput.addEventListener('input', (e) => {
       clearTimeout(searchTimeout);
       const searchTerm = e.target.value.trim();
-      
+
       searchTimeout = setTimeout(() => {
         loadVipUsersList(searchTerm);
       }, 300);
@@ -4381,10 +4381,10 @@ async function loadVipUsersList(searchTerm = '') {
     const { collection, getDocs, db } = await import('./firebase-config.js');
 
     console.log('Loading VIP users list...');
-    
+
     const usersQuery = collection(db, 'users');
     const querySnapshot = await getDocs(usersQuery);
-    
+
     console.log('Query executed, processing results...');
     const allUsers = [];
 
@@ -4413,7 +4413,7 @@ async function loadVipUsersList(searchTerm = '') {
     // Filter users based on search term
     let filteredUsers = allUsers;
     if (searchTerm && searchTerm.length > 0) {
-      filteredUsers = allUsers.filter(user => 
+      filteredUsers = allUsers.filter(user =>
         user.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
         user.email.toLowerCase().includes(searchTerm.toLowerCase())
       );
@@ -4477,7 +4477,25 @@ async function loadVipUsersList(searchTerm = '') {
               ">
                 ${user.vipStatus ? '🚫 إلغاء VIP' : '✅ تفعيل VIP'}
               </button>
-              <button onclick="deleteUser('${user.uid}', '${user.name}', '${user.email}')" style="
+              ${user.vipStatus ? `
+              <button onclick="showAdminUserSettings('${user.uid}', ${user.hideFromPublicVip}, ${user.extraThanksPoints || 0}, '${user.name.replace(/'/g, '\\\'')}')" style="
+                background: #17a2b8;
+                color: white;
+                border: none;
+                border-radius: 8px;
+                padding: 8px 12px;
+                font-size: 12px;
+                cursor: pointer;
+                font-weight: 600;
+                font-family: 'Tajawal', sans-serif;
+                transition: all 0.3s ease;
+                white-space: nowrap;
+                width: 100%;
+                margin-bottom: 5px;
+              ">
+                ⚙️ إعدادات الشكر والظهور
+              </button>` : ''}
+              <button onclick="deleteUser('${user.uid}', '${user.name.replace(/'/g, '\\\'')}', '${user.email.replace(/'/g, '\\\'')}')" style="
                 background: #dc3545;
                 color: white;
                 border: none;
@@ -4504,9 +4522,9 @@ async function loadVipUsersList(searchTerm = '') {
 
   } catch (error) {
     console.error('Error loading users list:', error);
-    
+
     let errorMessage = 'حدث خطأ في تحميل قائمة المستخدمين';
-    
+
     if (error.code === 'permission-denied') {
       errorMessage = 'ليس لديك صلاحية للوصول لقاعدة البيانات';
     } else if (error.code === 'unavailable') {
@@ -4514,7 +4532,7 @@ async function loadVipUsersList(searchTerm = '') {
     } else if (error.message) {
       errorMessage += ': ' + error.message;
     }
-    
+
     usersList.innerHTML = `
       <div style="
         text-align: center; 
@@ -4553,39 +4571,39 @@ async function toggleUserVipStatus(userId, newVipStatus) {
   try {
     const { updateDoc, doc } = await import('./firebase-config.js');
     const { db } = await import('./firebase-config.js');
-    
+
     const updateData = {
       vipStatus: newVipStatus,
       vipUpdatedAt: new Date().toISOString(),
       vipUpdatedBy: authManager.currentUser.email
     };
-    
+
     // Add notification flag for VIP activation
     if (newVipStatus) {
       updateData.vipActivationNotificationId = Date.now() + '_' + Math.random().toString(36).substr(2, 9);
     }
-    
+
     await updateDoc(doc(db, 'users', userId), updateData);
 
     // Check if this user is currently signed in and update their VIP status
     if (authManager && authManager.isSignedIn() && authManager.currentUser.uid === userId) {
       // Update the global VIP mode for the current user
       vipMode = newVipStatus;
-      
+
       // Update the VIP toggle UI
       updateVipToggleUI();
-      
+
       // Update version selector to reflect new VIP status
       updateVersionSelector();
-      
+
       // Update shuffle controls
       updateShuffleControls();
-      
+
       // Show notification to the user only for activation
       if (newVipStatus) {
         // Store the notification ID to prevent showing it again on page refresh
         localStorage.setItem('vipNotificationShown', updateData.vipActivationNotificationId);
-        
+
         const userNotification = document.createElement('div');
         userNotification.style.cssText = `
           position: fixed;
@@ -4615,7 +4633,7 @@ async function toggleUserVipStatus(userId, newVipStatus) {
             ⚡ الأولوية في الدعم
           </div>
         `;
-        
+
         // Add animation styles
         const style = document.createElement('style');
         style.textContent = `
@@ -4627,9 +4645,9 @@ async function toggleUserVipStatus(userId, newVipStatus) {
           }
         `;
         document.head.appendChild(style);
-        
+
         document.body.appendChild(userNotification);
-        
+
         // Auto remove after 5 seconds
         setTimeout(() => {
           if (document.body.contains(userNotification)) {
@@ -4642,7 +4660,7 @@ async function toggleUserVipStatus(userId, newVipStatus) {
           }
         }, 5000);
       }
-      
+
       // Save settings to reflect the change
       saveSettings();
     }
@@ -4694,17 +4712,17 @@ async function startVipStatusListener(userId) {
   try {
     const { onSnapshot, doc } = await import('./firebase-config.js');
     const { db } = await import('./firebase-config.js');
-    
+
     vipStatusListener = onSnapshot(doc(db, 'users', userId), (docSnapshot) => {
       if (docSnapshot.exists()) {
         const userData = docSnapshot.data();
         const newVipStatus = userData.vipStatus === true;
-        
+
         // Only update if VIP status actually changed
         if (newVipStatus !== vipMode) {
           const previousVipMode = vipMode;
           vipMode = newVipStatus;
-          
+
           // Update UI elements
           updateVipToggleUI();
           updateVersionSelector();
@@ -4720,17 +4738,17 @@ async function startVipStatusListener(userId) {
 
           // Update VIP button visibility
           updateVipButtonVisibility();
-          
+
           // Show notification only if this is a change (not initial load) and hasn't been shown before
           if (previousVipMode !== undefined) {
             if (newVipStatus && userData.vipActivationNotificationId) {
               // Check if we already showed this notification
               const lastShownNotificationId = localStorage.getItem('vipNotificationShown');
-              
+
               if (lastShownNotificationId !== userData.vipActivationNotificationId) {
                 // Store the notification ID to prevent showing it again
                 localStorage.setItem('vipNotificationShown', userData.vipActivationNotificationId);
-                
+
                 const userNotification = document.createElement('div');
                 userNotification.style.cssText = `
                   position: fixed;
@@ -4760,9 +4778,9 @@ async function startVipStatusListener(userId) {
                     ⚡ الأولوية في الدعم
                   </div>
                 `;
-                
+
                 document.body.appendChild(userNotification);
-                
+
                 // Auto remove after 5 seconds
                 setTimeout(() => {
                   if (document.body.contains(userNotification)) {
@@ -4774,7 +4792,7 @@ async function startVipStatusListener(userId) {
                     }, 300);
                   }
                 }, 5000);
-                
+
                 console.log(`VIP activation notification shown for notification ID: ${userData.vipActivationNotificationId}`);
               } else {
                 console.log('VIP notification already shown for this activation');
@@ -4804,9 +4822,9 @@ async function startVipStatusListener(userId) {
                 <div style="font-size: 50px; margin-bottom: 15px;">❌</div>
                 <div style="margin-bottom: 20px;">❌ تم إلغاء VIP من حسابك</div>
               `;
-              
+
               document.body.appendChild(userNotification);
-              
+
               // Auto remove after 5 seconds
               setTimeout(() => {
                 if (document.body.contains(userNotification)) {
@@ -4819,13 +4837,13 @@ async function startVipStatusListener(userId) {
                 }
               }, 5000);
             }
-            
+
             console.log(`VIP status updated in real-time: ${newVipStatus}`);
           }
         }
       }
     });
-    
+
     console.log('VIP status listener started for user:', userId);
   } catch (error) {
     console.error('Error setting up VIP status listener:', error);
@@ -4922,7 +4940,7 @@ async function deleteUser(userId, userName, userEmail) {
     // If the deleted user is currently signed in, sign them out
     if (authManager && authManager.isSignedIn() && authManager.currentUser.uid === userId) {
       await authManager.signOutUser();
-      
+
       // Show notification to the deleted user
       const userNotification = document.createElement('div');
       userNotification.style.cssText = `
@@ -4947,9 +4965,9 @@ async function deleteUser(userId, userName, userEmail) {
         <div style="margin-bottom: 20px;">تم حذف حسابك من قبل الإدارة</div>
         <div style="font-size: 14px; opacity: 0.9;">سيتم إعادة تحويلك للصفحة الرئيسية</div>
       `;
-      
+
       document.body.appendChild(userNotification);
-      
+
       setTimeout(() => {
         if (document.body.contains(userNotification)) {
           document.body.removeChild(userNotification);
@@ -4969,7 +4987,7 @@ async function deleteUser(userId, userName, userEmail) {
     }
 
     console.error('Error deleting user:', error);
-    
+
     let errorMessage = 'حدث خطأ في حذف المستخدم';
     if (error.code === 'permission-denied') {
       errorMessage = 'ليس لديك صلاحية لحذف هذا المستخدم';
@@ -5113,7 +5131,7 @@ function showGuestFriendsModal() {
       button.style.transform = 'translateY(-2px)';
       button.style.boxShadow = '0 8px 25px rgba(0, 0, 0, 0.2)';
     });
-    
+
     button.addEventListener('mouseleave', () => {
       button.style.transform = 'translateY(0)';
       button.style.boxShadow = button.style.boxShadow.replace('0 8px 25px', '0 4px 15px');
@@ -5170,44 +5188,383 @@ const motionToggleSlider = document.getElementById('motionToggleSlider');
 const ringBackground = document.querySelector('.ring-background');
 
 function updateMotionState(enabled, save = true) {
-    if (!motionToggle || !motionToggleSlider || !ringBackground) return;
+  if (!motionToggle || !motionToggleSlider || !ringBackground) return;
 
-    if (enabled) {
-        ringBackground.style.display = 'flex';
-        document.body.classList.remove('motion-off');
-        // Reset body background to default if needed, though CSS classes handle most of it
-        document.body.style.background = ''; 
-        motionToggle.checked = true;
-        motionToggle.style.background = '#667eea';
-        motionToggleSlider.style.transform = 'translateX(0)';
-    } else {
-        ringBackground.style.display = 'none';
-        document.body.classList.add('motion-off');
-        document.body.style.background = '#f8f9fa';
-        motionToggle.checked = false;
-        motionToggle.style.background = '#ccc';
-        motionToggleSlider.style.transform = 'translateX(-22px)';
-    }
+  if (enabled) {
+    ringBackground.style.display = 'flex';
+    document.body.classList.remove('motion-off');
+    // Reset body background to default if needed, though CSS classes handle most of it
+    document.body.style.background = '';
+    motionToggle.checked = true;
+    motionToggle.style.background = '#667eea';
+    motionToggleSlider.style.transform = 'translateX(0)';
+  } else {
+    ringBackground.style.display = 'none';
+    document.body.classList.add('motion-off');
+    document.body.style.background = '#f8f9fa';
+    motionToggle.checked = false;
+    motionToggle.style.background = '#ccc';
+    motionToggleSlider.style.transform = 'translateX(-22px)';
+  }
 
-    if (save) {
-        localStorage.setItem('motionEnabled', enabled);
-    }
+  if (save) {
+    localStorage.setItem('motionEnabled', enabled);
+  }
 }
 
 if (motionToggle) {
-    motionToggle.addEventListener('change', () => {
-        updateMotionState(motionToggle.checked);
-    });
-    
-    // Initial Load from Cache
-    const savedMotion = localStorage.getItem('motionEnabled');
-    if (savedMotion !== null) {
-        updateMotionState(savedMotion === 'true', false);
-    }
+  motionToggle.addEventListener('change', () => {
+    updateMotionState(motionToggle.checked);
+  });
+
+  // Initial Load from Cache
+  const savedMotion = localStorage.getItem('motionEnabled');
+  if (savedMotion !== null) {
+    updateMotionState(savedMotion === 'true', false);
+  }
 }
 // --- End Background Motion Logic ---
 
+// Show Public VIP members list
+function showPublicVipMembersModal() {
+  const modal = document.createElement('div');
+  modal.id = 'publicVipMembersModal';
+  modal.style.cssText = `
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.7);
+    backdrop-filter: blur(8px);
+    z-index: 10000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    animation: fadeIn 0.3s ease-out;
+  `;
+
+  modal.innerHTML = `
+    <div style="
+      background: linear-gradient(135deg, #f6d365, #fda085);
+      border-radius: 20px;
+      box-shadow: 0 25px 50px rgba(253, 160, 133, 0.4);
+      width: 90%;
+      max-width: 600px;
+      max-height: 85vh;
+      overflow-y: auto;
+      animation: slideIn 0.5s ease-out;
+      position: relative;
+      color: white;
+    ">
+      <!-- Header -->
+      <div style="
+        background: rgba(255, 255, 255, 0.15);
+        padding: 25px;
+        border-radius: 20px 20px 0 0;
+        text-align: center;
+        position: relative;
+        border-bottom: 2px solid rgba(255, 255, 255, 0.3);
+      ">
+        <div style="font-size: 50px; margin-bottom: 10px;">👑</div>
+        <h2 style="margin: 0; font-family: 'Tajawal', sans-serif; font-size: 28px; font-weight: 700; color: white;">
+          شركاء النجاح (مشتركي VIP)
+        </h2>
+        <p style="margin: 10px 0 0 0; opacity: 0.9; font-size: 16px; font-weight: 600;">
+          شكراً لدعمكم المستمر للمنصة! ❤️
+        </p>
+        <button onclick="closePublicVipMembersModal()" style="
+          position: absolute;
+          top: 20px;
+          left: 25px;
+          background: rgba(255, 255, 255, 0.25);
+          border: none;
+          color: white;
+          border-radius: 50%;
+          width: 40px;
+          height: 40px;
+          cursor: pointer;
+          font-size: 20px;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          transition: all 0.3s ease;
+          font-weight: bold;
+        ">×</button>
+      </div>
+
+      <!-- Content -->
+      <div style="padding: 30px;">
+        <div id="publicVipList" style="
+          max-height: 400px;
+          overflow-y: auto;
+          margin-top: 10px;
+          display: grid;
+          gap: 10px;
+        "></div>
+      </div>
+    </div>
+  `;
+
+  document.body.appendChild(modal);
+
+  // Close modal when clicking outside
+  modal.addEventListener('click', (e) => {
+    if (e.target === modal) {
+      closePublicVipMembersModal();
+    }
+  });
+
+  // Load public VIP users list
+  loadPublicVipMembers();
+}
+
+function closePublicVipMembersModal() {
+  const modal = document.getElementById('publicVipMembersModal');
+  if (modal) {
+    modal.style.animation = 'fadeIn 0.3s ease-out reverse';
+    setTimeout(() => {
+      modal.remove();
+    }, 300);
+  }
+}
+
+async function loadPublicVipMembers() {
+  const usersList = document.getElementById('publicVipList');
+  if (!usersList) return;
+
+  usersList.innerHTML = '<div style="text-align: center; color: white; padding: 20px; font-weight: 600;">🔄 جاري تحميل قائمة الداعمين...</div>';
+
+  try {
+    const { collection, getDocs, db } = await import('./firebase-config.js');
+
+    const usersQuery = collection(db, 'users');
+    const querySnapshot = await getDocs(usersQuery);
+
+    const vipUsers = [];
+
+    querySnapshot.forEach((doc) => {
+      try {
+        const userData = doc.data();
+
+        // Hide "محمود عادل جوهر" or ADMIN email by default unless expressly allowed
+        const isOwner = userData.email === 'mahmod.adil2001@gmail.com' ||
+          userData["الايميل"] === 'mahmod.adil2001@gmail.com' ||
+          userData.name === 'محمود عادل جوهر' ||
+          userData["الاسم الكامل"] === 'محمود عادل جوهر' ||
+          userData.fullName === 'محمود عادل جوهر';
+
+        if (userData.vipStatus === true && userData.hideFromPublicVip !== true && !isOwner) {
+          vipUsers.push({
+            name: userData["الاسم الكامل"] || userData.fullName || userData.name || 'داعم مجهول',
+            group: userData["الجروب"] || userData.group || '',
+            extraThanksPoints: parseInt(userData.extraThanksPoints || 0)
+          });
+        }
+      } catch (docError) {
+        console.error('Error processing document:', doc.id, docError);
+      }
+    });
+
+    if (vipUsers.length === 0) {
+      usersList.innerHTML = '<div style="text-align: center; color: white; padding: 20px; font-weight: 600;">📭 لا يوجد داعمين حالياً. كن أنت الأول!</div>';
+      return;
+    }
+
+    // Sort users by max thanks points first
+    vipUsers.sort((a, b) => b.extraThanksPoints - a.extraThanksPoints);
+
+    let html = '';
+    vipUsers.forEach(user => {
+      let starsHtml = '';
+      if (user.extraThanksPoints > 0) {
+        starsHtml = `<div style="background: rgba(0,0,0,0.4); padding: 4px 8px; border-radius: 12px; display: inline-flex; align-items: center; gap: 5px; font-size: 13px; font-weight: 700; margin-top: 5px; color: #ffd700; border: 1px solid rgba(255,215,0,0.5);">
+          💎 داعم خاص: ${user.extraThanksPoints.toLocaleString()} extra IQD
+        </div>`;
+      }
+
+      html += `
+        <div style="
+          background: rgba(255, 255, 255, 0.2);
+          border-radius: 12px;
+          padding: 15px;
+          border: 2px solid rgba(255, 255, 255, 0.4);
+          transition: all 0.3s ease;
+          display: flex;
+          align-items: center;
+          gap: 15px;
+        ">
+          <div style="font-size: 32px;">👑</div>
+          <div style="flex: 1;">
+            <div style="font-weight: 700; font-size: 18px; color: white; margin-bottom: 3px;">
+              ${user.name}
+            </div>
+            ${user.group ? `<div style="font-size: 14px; color: rgba(255,255,255,0.9); font-weight: 600;">👥 ${user.group}</div>` : ''}
+            ${starsHtml}
+          </div>
+        </div>
+      `;
+    });
+
+    usersList.innerHTML = html;
+
+  } catch (error) {
+    console.error('Error loading public VIP users list:', error);
+    usersList.innerHTML = '<div style="text-align: center; color: white; padding: 20px; font-weight: 600;">❌ حدث خطأ أثناء تحميل البيانات</div>';
+  }
+}
+
+// Admin User Settings for VIP public list
+function showAdminUserSettings(uid, isHidden, currentPoints, userName) {
+  if (!isAdmin()) return;
+
+  const modal = document.createElement('div');
+  modal.id = 'adminUserSettingsModal';
+  modal.style.cssText = `
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.7);
+    backdrop-filter: blur(8px);
+    z-index: 10001;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    animation: fadeIn 0.3s ease-out;
+  `;
+
+  modal.innerHTML = `
+    <div style="
+      background: linear-gradient(135deg, #2c3e50, #34495e);
+      border-radius: 20px;
+      box-shadow: 0 25px 50px rgba(0, 0, 0, 0.5);
+      width: 90%;
+      max-width: 400px;
+      animation: slideIn 0.3s ease-out;
+      position: relative;
+      color: white;
+      padding: 30px;
+      font-family: 'Tajawal', sans-serif;
+    ">
+      <h3 style="margin: 0 0 20px 0; font-size: 20px; text-align: center; border-bottom: 1px solid rgba(255,255,255,0.2); padding-bottom: 15px;">
+        ⚙️ إعدادات: ${userName}
+      </h3>
+      
+      <div style="margin-bottom: 20px;">
+        <label style="display: block; margin-bottom: 8px; font-weight: 600;">إخفاء من قائمة الداعمين للعامة:</label>
+        <div style="display: flex; align-items: center; gap: 10px;">
+          <input type="checkbox" id="adminHideUserCheckbox" ${isHidden ? 'checked' : ''} style="
+            width: 20px; height: 20px; cursor: pointer;
+          ">
+          <span style="font-size: 14px; opacity: 0.9;">نعم، أخفِ هذا المستخدم</span>
+        </div>
+      </div>
+
+      <div style="margin-bottom: 25px;">
+        <label style="display: block; margin-bottom: 8px; font-weight: 600;">مبلغ الدعم الإضافي (extra IQD):</label>
+        <input type="number" id="adminExtraPointsInput" value="${currentPoints}" min="0" step="1000" style="
+          width: 100%;
+          padding: 10px 15px;
+          border-radius: 8px;
+          border: none;
+          font-family: 'Tajawal', sans-serif;
+          font-size: 16px;
+          box-sizing: border-box;
+          text-align: center;
+          color: black;
+        ">
+      </div>
+
+      <div style="display: flex; gap: 10px;">
+        <button onclick="updateVipUserSettings('${uid}')" style="
+          flex: 1;
+          background: #28a745;
+          color: white;
+          border: none;
+          border-radius: 8px;
+          padding: 12px;
+          font-size: 14px;
+          font-weight: 600;
+          cursor: pointer;
+          font-family: 'Tajawal', sans-serif;
+          transition: background 0.3s;
+        ">💾 حفظ</button>
+        <button onclick="closeAdminUserSettingsModal()" style="
+          flex: 1;
+          background: #dc3545;
+          color: white;
+          border: none;
+          border-radius: 8px;
+          padding: 12px;
+          font-size: 14px;
+          font-weight: 600;
+          cursor: pointer;
+          font-family: 'Tajawal', sans-serif;
+          transition: background 0.3s;
+        ">❌ إلغاء</button>
+      </div>
+    </div>
+  `;
+
+  document.body.appendChild(modal);
+}
+
+function closeAdminUserSettingsModal() {
+  const modal = document.getElementById('adminUserSettingsModal');
+  if (modal) modal.remove();
+}
+
+async function updateVipUserSettings(uid) {
+  if (!isAdmin()) return;
+  const isHidden = document.getElementById('adminHideUserCheckbox').checked;
+  const points = parseInt(document.getElementById('adminExtraPointsInput').value) || 0;
+
+  try {
+    const { updateDoc, doc } = await import('./firebase-config.js');
+    const { db } = await import('./firebase-config.js');
+
+    await updateDoc(doc(db, 'users', uid), {
+      hideFromPublicVip: isHidden,
+      extraThanksPoints: points
+    });
+
+    closeAdminUserSettingsModal();
+
+    // Show success message
+    const div = document.createElement('div');
+    div.style.cssText = 'position:fixed; top:20px; right:20px; background:#28a745; color:white; padding:15px; border-radius:8px; z-index:10002;';
+    div.textContent = 'تم حفظ الإعدادات بنجاح!';
+    document.body.appendChild(div);
+    setTimeout(() => div.remove(), 3000);
+
+    // Refresh the list
+    const searchTerm = document.getElementById('userSearchInput')?.value || '';
+    loadVipUsersList(searchTerm);
+  } catch (err) {
+    console.error('Error updating user settings:', err);
+    alert('حدث خطأ أثناء حفظ الإعدادات.');
+  }
+}
+
+// Show the public VIP members button easily after 3-4 seconds
+window.addEventListener('load', () => {
+  setTimeout(() => {
+    const btn = document.getElementById('publicVipMembersBtn');
+    if (btn) {
+      btn.style.display = 'flex';
+      btn.style.animation = 'fadeIn 0.5s ease-out';
+    }
+  }, 3500); // 3.5 seconds
+});
+
 window.toggleVip = toggleVip;
+window.showAdminUserSettings = showAdminUserSettings;
+window.closeAdminUserSettingsModal = closeAdminUserSettingsModal;
+window.updateVipUserSettings = updateVipUserSettings;
+window.showPublicVipMembersModal = showPublicVipMembersModal;
+window.closePublicVipMembersModal = closePublicVipMembersModal;
 window.showVipSubscriptionModal = showVipSubscriptionModal;
 window.closeVipSubscriptionModal = closeVipSubscriptionModal;
 window.copyToClipboard = copyToClipboard;
@@ -5219,7 +5576,7 @@ window.deleteUser = deleteUser;
 window.closeGuestFriendsModal = closeGuestFriendsModal;
 window.goToSignInFromFriends = goToSignInFromFriends;
 window.goToSignUpFromFriends = goToSignUpFromFriends;
-window.closeFriendsModal = function() {
+window.closeFriendsModal = function () {
   const friendsModal = document.getElementById('friendsModal');
   if (friendsModal) {
     friendsModal.style.display = 'none';
@@ -5371,7 +5728,7 @@ async function loadMyFriends() {
       // عد المتصلين حقاً فقط
       if (status.isReallyOnline === true) {
         reallyOnlineFriends++;
-      } 
+      }
       // عد النشطين مؤخراً (بدون المتصلين حقاً لتجنب التكرار)
       else if (status.status.includes("نشط مؤخراً")) {
         recentlyActiveFriends++;
@@ -5667,7 +6024,7 @@ async function updateOnlineFriendsBadge() {
 
     console.log(`Checking activity status for ${friendsManager.friends.length} friends`);
     const friendsStatus = await friendsManager.getFriendsActivityStatus();
-    
+
     // عدد دقيق للمتصلين حقاً
     let reallyOnlineCount = 0;
     let recentlyActiveCount = 0;
@@ -5676,15 +6033,15 @@ async function updateOnlineFriendsBadge() {
     friendsManager.friends.forEach((friend) => {
       const status = friendsStatus[friend.uid];
       totalChecked++;
-      
+
       if (status) {
         console.log(`Friend ${friend.name}: ${status.status}, isReallyOnline: ${status.isReallyOnline}`);
-        
+
         // عد المتصلين حقاً فقط
         if (status.isReallyOnline === true) {
           reallyOnlineCount++;
         }
-        
+
         // عد النشطين مؤخراً (بدون المتصلين حقاً لتجنب التكرار)
         if (status.status.includes('نشط مؤخراً') && !status.isReallyOnline) {
           recentlyActiveCount++;
@@ -5702,7 +6059,7 @@ async function updateOnlineFriendsBadge() {
     if (displayCount > 0) {
       onlineBadge.textContent = displayCount;
       onlineBadge.style.display = "flex";
-      
+
       // لون أخضر للمتصلين حقاً
       onlineBadge.style.background = 'linear-gradient(135deg, #28a745, #20c997)';
       console.log(`Showing ${displayCount} really online friends`);
@@ -5800,7 +6157,7 @@ document.addEventListener('DOMContentLoaded', async () => {
 
   // Load settings on page load
   await loadSettings();
-  
+
   // Initialize free trial check for all users on first load
   if (!authManager || !authManager.isSignedIn()) {
     initializeFreeTrial();
@@ -6280,9 +6637,9 @@ function updateShuffleControls() {
   if (!shuffleToggle || !shuffleAnswersToggle) return;
 
   const isUserSignedIn = authManager &&
-                        authManager.currentUser &&
-                        authManager.currentUser.uid &&
-                        authManager.isSignedIn();
+    authManager.currentUser &&
+    authManager.currentUser.uid &&
+    authManager.isSignedIn();
 
   // التحقق من أن المحاضرة الحالية هي من أول محاضرتين
   const selectedSubject = subjectSelect ? subjectSelect.value : '';
@@ -6348,7 +6705,7 @@ window.updateVersionSelector = updateVersionSelector;
 
 // مستمع حدث تغيير التبويبات
 document.querySelectorAll('.friends-tab').forEach(tab => {
-  tab.addEventListener('click', function() {
+  tab.addEventListener('click', function () {
     const tabName = this.id.replace('Tab', '').replace('my', 'my').replace('search', 'search').replace('friend', 'friend');
     if (tabName === 'myFriends') {
       switchTab('myFriends');
@@ -6361,19 +6718,19 @@ document.querySelectorAll('.friends-tab').forEach(tab => {
 });
 
 // مستمعي الأحداث لروابط الفوتر
-document.addEventListener('DOMContentLoaded', function() {
+document.addEventListener('DOMContentLoaded', function () {
   const aboutUsLink = document.getElementById('aboutUsLink');
   const contactUsLink = document.getElementById('contactUsLink');
 
   if (aboutUsLink) {
-    aboutUsLink.addEventListener('click', function(e) {
+    aboutUsLink.addEventListener('click', function (e) {
       e.preventDefault();
       showAboutUsModal();
     });
   }
 
   if (contactUsLink) {
-    contactUsLink.addEventListener('click', function(e) {
+    contactUsLink.addEventListener('click', function (e) {
       e.preventDefault();
       showContactUsModal();
     });
@@ -6470,7 +6827,7 @@ function showAboutUsModal() {
 
 
 // دوال إغلاق النوافذ
-window.closeAboutUsModal = function() {
+window.closeAboutUsModal = function () {
   const modal = document.getElementById('aboutUsModal');
   if (modal) {
     modal.remove();
@@ -6482,9 +6839,9 @@ window.closeAboutUsModal = function() {
 
 
 // إغلاق النوافذ عند النقر خارجها
-document.addEventListener('click', function(e) {
+document.addEventListener('click', function (e) {
   if (e.target.id === 'aboutUsModal') {
     closeAboutUsModal();
   }
-  
+
 });
