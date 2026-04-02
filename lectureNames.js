@@ -140,7 +140,7 @@ export const lectureNames = {
         "10": "malignant Bone tumors",
         "11": "odontogenic cysts🟩🟦",
         "12": "Odontogenic tumor",
-        "13": "developmental defects of oral region",
+        "13": "developmental defects of oral and maxillofacial region 1",
         "14": "Unknown",
         "15": "Unknown",
         "16": "Unknown",
