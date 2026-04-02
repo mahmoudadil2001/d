@@ -186,7 +186,7 @@ export const lectureNames = {
         "24": "dental implants 1",
         "25": "dental implants 2",
         "26": "Unknown",
-        "27": "Unknown",
+        "27": "biobsy",
         "28": "Unknown",
         "29": "Unknown",
         "30": "Unknown"
