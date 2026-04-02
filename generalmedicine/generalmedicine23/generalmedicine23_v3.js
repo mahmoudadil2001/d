@@ -1,78 +1,77 @@
-// Version 3
 export const questions = [
   {
-    question: "Cachexia in a CVS patient suggests:",
-    options: ["Chronic illness", "Acute infection", "Hyperlipidemia", "Benign condition"],
-    answer: 0
-  },
-  {
-    question: "Finger clubbing in CVS exam may indicate:",
-    options: ["Cyanotic heart disease", "Hyperlipidemia", "Mitral stenosis only", "Pericarditis"],
-    answer: 0
-  },
-  {
-    question: "Janeway lesions are associated with:",
-    options: ["Infective endocarditis", "Hyperlipidemia", "Rheumatic fever", "Aortic dissection"],
-    answer: 0
-  },
-  {
-    question: "Features of hyperlipidemia may include:",
-    options: ["Tendon xanthomata", "Splinter hemorrhages", "Malar rash", "Clubbing"],
-    answer: 0
-  },
-  {
-    question: "Inspection of the precordium is done with the patient sitting at:",
-    options: ["30-degree angle", "45-degree angle", "60-degree angle", "90-degree angle"],
+    question: "In the 4 D's, 'Distress' refers to:",
+    options: ["Harm to others", "Symptoms upsetting to the individual", "Interference with daily life", "Deviance from norms"],
     answer: 1
   },
   {
-    question: "Pectus carinatum is also known as:",
-    options: ["Funnel chest", "Pigeon chest", "Barrel chest", "Flat chest"],
-    answer: 1
-  },
-  {
-    question: "A left submammary scar may indicate previous:",
-    options: ["Mitral valve surgery", "Aortic valve surgery", "Pacemaker insertion", "Coronary artery bypass"],
-    answer: 0
-  },
-  {
-    question: "The apex beat is displaced in all EXCEPT:",
-    options: ["Left ventricular dilatation", "Dextrocardia", "Mitral stenosis (tapping apex)", "Hypertrophic cardiomyopathy"],
+    question: "Genetics and brain structure are part of which Biopsychosocial domain?",
+    options: ["Psychological", "Social", "Biological", "Cultural"],
     answer: 2
   },
   {
-    question: "To better feel the apex beat, you may roll the patient into:",
-    options: ["Right lateral position", "Left lateral position", "Prone position", "Supine position only"],
+    question: "Borderline personality disorder is characterized by:",
+    options: ["Loss of reality", "Rigid patterns of behavior", "Fear and worry", "Emotional extremes"],
     answer: 1
   },
   {
-    question: "A parasternal pulsation may indicate:",
-    options: ["Right ventricular enlargement", "Left ventricular enlargement", "Aortic aneurysm", "Pulmonary embolism"],
-    answer: 0
+    question: "Which category includes fear and worry as primary symptoms?",
+    options: ["Mood Disorders", "Psychotic Disorders", "Anxiety Disorders", "Personality Disorders"],
+    answer: 2
   },
   {
-    question: "The stethoscope diaphragm is best for hearing:",
-    options: ["Low-pitched sounds", "High-pitched sounds", "All sounds equally", "Only S1"],
+    question: "Emotional extremes are the primary symptom of:",
+    options: ["Anxiety Disorders", "Mood Disorders", "Psychotic Disorders", "Trauma-Related Disorders"],
     answer: 1
   },
   {
-    question: "An S3 heart sound is typically heard in:",
-    options: ["Heart failure", "Aortic stenosis", "Hypertrophic cardiomyopathy", "Pericarditis"],
-    answer: 0
-  },
-  {
-    question: "A 'click' sound may indicate:",
-    options: ["Mitral valve prolapse", "Aortic stenosis", "Pulmonary hypertension", "Ventricular septal defect"],
-    answer: 0
-  },
-  {
-    question: "Diastolic murmurs are heard between:",
-    options: ["S1 and S2", "S2 and S1", "Only after S3", "Only before S4"],
+    question: "PTSD occurs after exposure to:",
+    options: ["Minor stress", "Intense traumatic event", "Daily hassles", "Positive life event"],
     answer: 1
   },
   {
-    question: "Radiation of a murmur helps identify:",
-    options: ["The valve involved", "Blood pressure", "Heart rate", "Respiratory rate"],
-    answer: 0
+    question: "Which of the following is NOT a symptom of PTSD?",
+    options: ["Intrusive memory", "Avoidance", "Euphoria", "Negative alteration in mood"],
+    answer: 2
+  },
+  {
+    question: "Withdrawal is classified as which type of symptom?",
+    options: ["Cognitive", "Emotional", "Behavioral", "Physiological"],
+    answer: 2
+  },
+  {
+    question: "Stigma in mental health refers to:",
+    options: ["Having multiple disorders", "Social labeling that worsens outcomes", "Cultural differences", "Genetic predisposition"],
+    answer: 1
+  },
+  {
+    question: "Venlafaxine belongs to which medication class?",
+    options: ["SSRI", "SNRI", "Antipsychotic", "Benzodiazepine"],
+    answer: 1
+  },
+  {
+    question: "SNRI stands for:",
+    options: ["Selective Norepinephrine Reuptake Inhibitor", "Serotonin-Norepinephrine Reuptake Inhibitor", "Sodium Norepinephrine Inhibitor", "Serotonin Neurotransmitter Inhibitor"],
+    answer: 1
+  },
+  {
+    question: "Benzodiazepines are primarily used as:",
+    options: ["Antidepressants", "Antipsychotics", "Anxiolytics (antianxiety)", "Stimulants"],
+    answer: 2
+  },
+  {
+    question: "Methylphenidate is used to treat:",
+    options: ["Depression", "Anxiety", "ADHD", "Bipolar disorder"],
+    answer: 2
+  },
+  {
+    question: "The Biopsychosocial Model includes all of the following EXCEPT:",
+    options: ["Biological", "Psychological", "Social", "Spiritual only"],
+    answer: 3
+  },
+  {
+    question: "According to the summary, early intervention and reduced stigma improve:",
+    options: ["Only physical health", "Recovery", "Only social life", "Only medication adherence"],
+    answer: 1
   }
 ];
