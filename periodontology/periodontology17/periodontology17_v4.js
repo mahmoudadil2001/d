@@ -1,77 +1,17 @@
 export const questions = [
-  {
-    question: "Which index is used to measure oral cleanliness?",
-    options: ["OHI-S", "DMFT", "GI", "CPITN"],
-    answer: 0
-  },
-  {
-    question: "Which index measures plaque at gingival margin?",
-    options: ["Plaque Index", "DMFT", "GI", "CPI"],
-    answer: 0
-  },
-  {
-    question: "Which index is used for caries epidemiology?",
-    options: ["DMFT", "GI", "PI", "CI"],
-    answer: 0
-  },
-  {
-    question: "Which index includes bleeding on probing?",
-    options: ["GI", "DMFT", "PI", "CI"],
-    answer: 0
-  },
-  {
-    question: "Which index includes calculus and debris?",
-    options: ["OHI-S", "GI", "PI", "DMFT"],
-    answer: 0
-  },
-  {
-    question: "Which index uses codes 0–4?",
-    options: ["CPITN", "DMFT", "PI", "GI"],
-    answer: 0
-  },
-  {
-    question: "Which index is irreversible?",
-    options: ["DMFT", "GI", "PI", "OHI-S"],
-    answer: 0
-  },
-  {
-    question: "Which index assesses gingival bleeding severity?",
-    options: ["GI", "DMFT", "PI", "CI"],
-    answer: 0
-  },
-  {
-    question: "Which index uses sextants?",
-    options: ["CPITN", "GI", "PI", "DMFT"],
-    answer: 0
-  },
-  {
-    question: "Which index measures plaque only?",
-    options: ["PI", "GI", "DMFT", "CI"],
-    answer: 0
-  },
-  {
-    question: "Which index is best for hygiene instruction?",
-    options: ["OHI-S", "DMFT", "CPI", "Russell Index"],
-    answer: 0
-  },
-  {
-    question: "Which index records decayed teeth?",
-    options: ["DMFT", "GI", "PI", "CI"],
-    answer: 0
-  },
-  {
-    question: "Which index evaluates periodontal pockets?",
-    options: ["CPITN", "PI", "GI", "DMFT"],
-    answer: 0
-  },
-  {
-    question: "Which index measures gingival inflammation?",
-    options: ["GI", "DMFT", "PI", "CI"],
-    answer: 0
-  },
-  {
-    question: "Which index is simplest to use?",
-    options: ["OHI-S", "GI", "PI", "CPI"],
-    answer: 0
-  }
+  { question: "Measures oral cleanliness:", options: ["DMFT", "OHI-S", "GI", "CPITN"], answer: 1 },
+  { question: "Plaque at gingival margin:", options: ["PI", "DMFT", "GI", "CPI"], answer: 0 },
+  { question: "Caries epidemiology:", options: ["GI", "PI", "DMFT", "CI"], answer: 2 },
+  { question: "Bleeding on probing:", options: ["PI", "DMFT", "GI", "CI"], answer: 2 },
+  { question: "Includes debris & calculus:", options: ["GI", "PI", "OHI-S", "DMFT"], answer: 2 },
+  { question: "Codes 0–4:", options: ["DMFT", "PI", "GI", "CPITN"], answer: 3 },
+  { question: "Irreversible:", options: ["GI", "DMFT", "PI", "OHI-S"], answer: 1 },
+  { question: "Gingival bleeding severity:", options: ["CI", "GI", "PI", "DMFT"], answer: 1 },
+  { question: "Uses sextants:", options: ["GI", "CPITN", "PI", "DMFT"], answer: 1 },
+  { question: "Measures plaque only:", options: ["PI", "GI", "DMFT", "CI"], answer: 0 },
+  { question: "Best for hygiene instruction:", options: ["DMFT", "Russell", "OHI-S", "CPI"], answer: 2 },
+  { question: "Records decayed teeth:", options: ["PI", "GI", "DMFT", "CI"], answer: 2 },
+  { question: "Evaluates pockets:", options: ["CPITN", "PI", "GI", "DMFT"], answer: 0 },
+  { question: "Measures gingivitis:", options: ["GI", "DMFT", "PI", "CI"], answer: 0 },
+  { question: "Simplest index:", options: ["GI", "PI", "OHI-S", "CPI"], answer: 2 }
 ];
