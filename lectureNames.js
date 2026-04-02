@@ -272,7 +272,7 @@ export const lectureNames = {
         "14": "Treatment planning of Periodontal Diseases",
         "15": "Phase II Surgical Therapy",
         "16": "Periodontal instruments",
-        "17": "Unknown",
+        "17": "periodontal incides",
         "18": "Unknown",
         "19": "Unknown",
         "20": "Unknown",
