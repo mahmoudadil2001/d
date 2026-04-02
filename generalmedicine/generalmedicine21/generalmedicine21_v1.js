@@ -1,78 +1,77 @@
-// Version 1
 export const questions = [
   {
-    question: "What is the highest possible score on the Glasgow Coma Scale (GCS)?",
-    options: ["10", "12", "15", "20"],
+    question: "What are the two secretions of the thyroid gland?",
+    options: ["T3 and T4 only", "Thyroid hormones and calcitonin", "TSH and TRH", "Calcitonin and parathyroid hormone"],
+    answer: 1
+  },
+  {
+    question: "Which hormone from the anterior pituitary controls thyroid function?",
+    options: ["TRH", "TSH", "T3", "Calcitonin"],
+    answer: 1
+  },
+  {
+    question: "What is the minimum daily iodine intake to maintain normal thyroid function in adults?",
+    options: ["50 μg", "100 μg", "150 μg", "500 μg"],
     answer: 2
   },
   {
-    question: "Which component is NOT part of the general appearance assessment?",
-    options: ["Conscious level", "Body built", "Respiratory distress", "Blood glucose level"],
+    question: "In most developed countries, average dietary iodine intake is about:",
+    options: ["150 μg/d", "300 μg/d", "500 μg/d", "1000 μg/d"],
+    answer: 2
+  },
+  {
+    question: "Which plasma protein binds the majority of thyroid hormones?",
+    options: ["Albumin", "Globulins", "Thyroxin binding globulin (TBG)", "Fibrinogen"],
+    answer: 2
+  },
+  {
+    question: "Which of the following is a calorigenic action of thyroid hormones?",
+    options: ["Decreased O2 consumption", "Increased O2 consumption and heat production", "Decreased metabolic rate", "Reduced protein breakdown"],
+    answer: 1
+  },
+  {
+    question: "Which tissue is an exception to the calorigenic action of thyroid hormones?",
+    options: ["Liver", "Heart", "Adult brain", "Adipose tissue"],
+    answer: 2
+  },
+  {
+    question: "Which symptom is characteristic of hypothyroidism?",
+    options: ["Rapid heartbeat", "Weight loss", "Heat intolerance", "Puffy face"],
     answer: 3
   },
   {
-    question: "Vital signs are affected by all of the following EXCEPT:",
-    options: ["Age and sex", "Illness and emotions", "Time of day", "Shoe size"],
-    answer: 3
-  },
-  {
-    question: "Which site provides the most accurate body temperature measurement?",
-    options: ["Oral", "Rectal", "Axillary", "Tympanic"],
-    answer: 1
-  },
-  {
-    question: "What is the normal oral temperature range in °C?",
-    options: ["35.0–36.0", "36.5–37.5", "38.0–39.0", "34.0–35.0"],
-    answer: 1
-  },
-  {
-    question: "Hyperthermia is defined as a body temperature above:",
-    options: ["37.5°C", "38°C", "39°C", "40°C"],
-    answer: 1
-  },
-  {
-    question: "Which thermometer type uses infrared to measure tympanic membrane temperature?",
-    options: ["Glass mercury thermometer", "Digital thermometer", "Tympanic thermometer", "Disposable strip"],
+    question: "Which symptom is characteristic of hyperthyroidism?",
+    options: ["Slow heartbeat", "Weight gain", "Bulging eyes", "Constipation"],
     answer: 2
   },
   {
-    question: "When taking an oral temperature with a glass thermometer, how long should it remain in place?",
-    options: ["30 seconds", "1 minute", "2–3 minutes", "10 minutes"],
+    question: "In hypothyroidism, plasma T4 levels are typically:",
+    options: ["Increased", "Decreased", "Normal", "Fluctuating"],
+    answer: 1
+  },
+  {
+    question: "In hyperthyroidism, which gastrointestinal symptom is common?",
+    options: ["Constipation", "Decreased appetite", "Frequent bowel movements", "Weight gain"],
     answer: 2
   },
   {
-    question: "Which pulse site is most commonly used in clinical practice?",
-    options: ["Femoral", "Radial", "Temporal", "Apical"],
+    question: "What is the term for enlargement of the thyroid gland for any reason?",
+    options: ["Thyroiditis", "Goiter", "Thyrotoxicosis", "Myxedema"],
     answer: 1
   },
   {
-    question: "What is the normal adult pulse rate range (beats per minute)?",
-    options: ["40–60", "60–100", "100–120", "120–140"],
+    question: "Physiological goiter occurs during puberty due to:",
+    options: ["Iodine toxicity", "Increased demand for T3 and T4", "Decreased TSH", "Thyroid atrophy"],
     answer: 1
   },
   {
-    question: "Tachycardia is defined as a heart rate above:",
-    options: ["60 bpm", "80 bpm", "100 bpm", "120 bpm"],
-    answer: 2
-  },
-  {
-    question: "How is respiratory rate typically counted?",
-    options: ["Count for 15 seconds × 4", "Count for 30 seconds × 2", "Count for 1 full minute", "Estimate by observation"],
+    question: "Which substance can interfere with iodide uptake by follicular cells?",
+    options: ["Sodium ions", "Thiocyanate ions", "Calcium ions", "Potassium ions"],
     answer: 1
   },
   {
-    question: "What is the normal adult respiratory rate range (breaths per minute)?",
-    options: ["8–12", "12–20", "20–30", "30–40"],
-    answer: 1
-  },
-  {
-    question: "Which phase of Korotkoff sounds corresponds to systolic blood pressure?",
-    options: ["Phase I", "Phase III", "Phase IV", "Phase V"],
-    answer: 0
-  },
-  {
-    question: "Which factor generally increases blood pressure?",
-    options: ["Lying down", "High-sodium diet", "Young age", "Female gender"],
+    question: "Myxedema in hypothyroidism is characterized by:",
+    options: ["Pitting edema", "Nonpitting edema (hard)", "Localized swelling only", "No edema"],
     answer: 1
   }
 ];
