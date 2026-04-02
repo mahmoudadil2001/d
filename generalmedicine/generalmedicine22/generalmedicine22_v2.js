@@ -1,78 +1,77 @@
-// Version 2
 export const questions = [
   {
-    question: "JVP reflects pressure in which heart chamber?",
-    options: ["Left atrium", "Right atrium", "Left ventricle", "Right ventricle"],
-    answer: 1
-  },
-  {
-    question: "In a healthy person lying at 45°, JVP should be ≤ how many cm above the sternal angle?",
-    options: ["2 cm", "4 cm", "6 cm", "8 cm"],
-    answer: 1
-  },
-  {
-    question: "Which pulsation is palpable?",
-    options: ["Jugular venous", "Carotid arterial", "Both are palpable", "Neither is palpable"],
-    answer: 1
-  },
-  {
-    question: "Kussmaul's sign in JVP is associated with:",
-    options: ["Pericardial constriction", "Heart failure", "Pulmonary embolism", "Atrial fibrillation"],
-    answer: 0
-  },
-  {
-    question: "Which JVP abnormality is seen in complete heart block?",
-    options: ["Giant 'a' waves", "Absent 'a' waves", "Cannon waves", "Prominent 'y' descent"],
+    question: "Which anxiety subtype is linked to ritualistic eating and calorie obsession?",
+    options: ["Social anxiety", "GAD", "OCD", "Panic disorder"],
     answer: 2
   },
   {
-    question: "During thyroid examination, percussing the manubrium assesses:",
-    options: ["Thyroid consistency", "Retrosternal extension", "Thyroid bruit", "Lymph node involvement"],
+    question: "Fear of eating in public is associated with which anxiety subtype?",
+    options: ["OCD", "Social anxiety", "Specific phobia", "Agoraphobia"],
     answer: 1
   },
   {
-    question: "Tenderness in lymphadenopathy may indicate:",
-    options: ["Malignancy", "Inflammation or infection", "Metastasis", "Chronic disease"],
+    question: "Persistent worry relieved by focus on food or weight is linked to:",
+    options: ["Panic disorder", "Social anxiety", "GAD (Generalized Anxiety Disorder)", "OCD"],
+    answer: 2
+  },
+  {
+    question: "Intrusive, unwanted thoughts in OCD are called:",
+    options: ["Compulsions", "Obsessions", "Fixations", "Ruminations"],
     answer: 1
   },
   {
-    question: "Dupuytren's contracture affects which structure?",
-    options: ["Nail bed", "Palmar fascia", "Metacarpophalangeal joints", "Ulnar nerve"],
+    question: "Hoarding OCD is characterized by:",
+    options: ["Fear of germs", "Compulsion to collect unneeded items", "Need for symmetry", "Checking rituals"],
     answer: 1
   },
   {
-    question: "Clubbing is LEAST likely to be caused by:",
-    options: ["Chronic obstructive pulmonary disease", "Lung cancer", "Cyanotic heart disease", "Migraine"],
+    question: "Distress-driven need for items to be perfectly aligned is seen in which OCD type?",
+    options: ["Contamination OCD", "Checking OCD", "Symmetry and ordering OCD", "Hoarding OCD"],
+    answer: 2
+  },
+  {
+    question: "Persistent unwanted thoughts about causing harm to oneself or others, without desire to act, is:",
+    options: ["Harm/intrusive thoughts OCD", "Contamination OCD", "Hoarding OCD", "Checking OCD"],
+    answer: 0
+  },
+  {
+    question: "In the Anxiety-ED cycle, ED behavior leads to:",
+    options: ["Trigger", "Anxiety", "Biological fallout", "Resolution"],
+    answer: 2
+  },
+  {
+    question: "Biological fallout in the cycle leads to:",
+    options: ["Decreased anxiety", "Increased anxiety", "No change", "Euphoria"],
+    answer: 1
+  },
+  {
+    question: "Which treatment involves challenging distorted thoughts?",
+    options: ["ERP", "CBT", "Mindfulness alone", "Medication only"],
+    answer: 1
+  },
+  {
+    question: "ERP involves exposing patients to fear-inducing triggers while:",
+    options: ["Encouraging compulsive responses", "Preventing habitual responses", "Prescribing medication", "Using hypnosis"],
+    answer: 1
+  },
+  {
+    question: "Treatment options for eating disorders include all EXCEPT:",
+    options: ["Individual therapy", "Group therapy", "Family therapy", "Only inpatient surgery"],
     answer: 3
   },
   {
-    question: "Which nail abnormality is shown in the image with pitting?",
-    options: ["Onycholysis", "Beau's lines", "Koilonychia", "Leukonychia"],
-    answer: 0
-  },
-  {
-    question: "Spider naevi are often associated with:",
-    options: ["Liver disease", "Thyroid disorder", "Heart failure", "Renal failure"],
-    answer: 0
-  },
-  {
-    question: "Sacral edema is best assessed with the patient in which position?",
-    options: ["Standing", "Sitting", "Lying flat", "Lying on the side"],
-    answer: 3
-  },
-  {
-    question: "Which pulse is palpated in the groin?",
-    options: ["Popliteal", "Femoral", "Dorsalis pedis", "Posterior tibial"],
+    question: "Many people with eating disorders choose which therapy?",
+    options: ["Psychoanalysis", "CBT", "Electroconvulsive therapy", "Art therapy alone"],
     answer: 1
   },
   {
-    question: "A flat, red spot on the skin is called a:",
-    options: ["Papule", "Macule", "Pustule", "Vesicle"],
-    answer: 1
+    question: "Intense, irrational fear of germs leading to excessive washing is:",
+    options: ["Contamination/cleaning OCD", "Checking OCD", "Symmetry OCD", "Hoarding OCD"],
+    answer: 0
   },
   {
-    question: "Trendelenburg gait is caused by weakness of which muscles?",
-    options: ["Gluteal muscles", "Quadriceps", "Tibialis anterior", "Gastrocnemius"],
-    answer: 0
+    question: "The cycle of OCD consists of intrusive thoughts and _____ behaviors.",
+    options: ["relaxing", "repetitive", "spontaneous", "creative"],
+    answer: 1
   }
 ];
