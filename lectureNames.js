@@ -55,7 +55,7 @@ export const lectureNames = {
         "21": "thyroid function",
         "22": "anxity disorder",
         "23": "physcological disturbance",
-        "24": "Unknown",
+        "24": "liver disease",
         "25": "Unknown",
         "26": "Unknown",
         "27": "Unknown",
