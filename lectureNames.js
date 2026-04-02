@@ -142,7 +142,7 @@ export const lectureNames = {
         "12": "Odontogenic tumor",
         "13": "developmental defects of oral and maxillofacial region 1",
         "14": "developmental defects of oral and maxillofacial region 2",
-        "15": "Unknown",
+        "15": "oral mucosal lesions",
         "16": "Unknown",
         "17": "Unknown",
         "18": "Unknown",
