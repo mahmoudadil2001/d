@@ -1,78 +1,77 @@
-// Version 3
 export const questions = [
   {
-    question: "Which of these is assessed under 'general appearance'?",
-    options: ["Blood type", "Mood", "Cholesterol level", "Allergy history"],
+    question: "Which hypothalamic hormone controls thyroid function?",
+    options: ["CRH", "TRH", "GnRH", "GHRH"],
     answer: 1
   },
   {
-    question: "In GCS, 'Eye Opening to sound' scores:",
-    options: ["1", "2", "3", "4"],
+    question: "Negative feedback regulation of thyroid hormones acts on:",
+    options: ["Only the hypothalamus", "Only the anterior pituitary", "Both anterior pituitary and hypothalamus", "Thyroid gland directly"],
     answer: 2
   },
   {
-    question: "Which is NOT a vital sign?",
-    options: ["Pulse", "Blood pressure", "Height", "Respiratory rate"],
+    question: "Iodine is excreted from the body primarily by:",
+    options: ["Feces", "Sweat", "Kidneys (urine)", "Lungs"],
     answer: 2
   },
   {
-    question: "Rectal temperature is typically how much higher than oral?",
-    options: ["0.1°C", "0.5°C", "1.0°C", "2.0°C"],
+    question: "T4 and T3 are metabolized mainly in the:",
+    options: ["Kidneys and spleen", "Liver and other tissues", "Heart and lungs", "Brain and muscles"],
     answer: 1
   },
   {
-    question: "Hypothermia is defined as a body temperature below:",
-    options: ["36°C", "35°C", "34°C", "33°C"],
-    answer: 1
-  },
-  {
-    question: "Which thermometer contains mercury in a glass tube?",
-    options: ["Digital", "Tympanic", "Glass thermometer", "Disposable strip"],
+    question: "Which plasma protein binds thyroid hormones to promote uniform tissue distribution?",
+    options: ["Albumin only", "TBG only", "Both albumin and TBG", "Hemoglobin"],
     answer: 2
   },
   {
-    question: "When taking a rectal temperature, how far should the thermometer be inserted?",
-    options: ["0.5 inch", "1 inch", "2 inches", "3 inches"],
-    answer: 1
-  },
-  {
-    question: "Which pulse is taken with a stethoscope over the heart?",
-    options: ["Radial", "Apical", "Femoral", "Temporal"],
-    answer: 1
-  },
-  {
-    question: "The difference between apical and radial pulse rates is called:",
-    options: ["Pulse pressure", "Pulse deficit", "Heart murmur", "Arrhythmia"],
-    answer: 1
-  },
-  {
-    question: "For children aged 2–6 years, the normal pulse range is:",
-    options: ["60–100 bpm", "70–110 bpm", "80–120 bpm", "100–140 bpm"],
+    question: "Thyroid hormones increase cellular metabolic activity of:",
+    options: ["Only the heart", "Only the liver", "Almost all tissues", "Only the brain"],
     answer: 2
   },
   {
-    question: "Tachypnea is defined as a respiratory rate above:",
-    options: ["12 bpm", "16 bpm", "20 bpm", "24 bpm"],
-    answer: 2
-  },
-  {
-    question: "Bradypnea refers to:",
-    options: ["Fast breathing", "Slow breathing", "No breathing", "Difficult breathing"],
+    question: "Which is NOT an exception to thyroid hormone's calorigenic action?",
+    options: ["Testes", "Liver", "Spleen", "Anterior pituitary"],
     answer: 1
   },
   {
-    question: "Systolic pressure represents:",
-    options: ["Pressure when heart is relaxed", "Pressure when heart contracts", "Mean arterial pressure", "Pulse pressure"],
+    question: "In hypothyroidism, a patient would most likely experience:",
+    options: ["Heat intolerance", "Increased appetite", "Fatigue and memory loss", "Rapid reflexes"],
+    answer: 2
+  },
+  {
+    question: "In hyperthyroidism, menstrual periods are typically:",
+    options: ["Heavy", "Scant", "Normal", "Irregular but heavy"],
     answer: 1
   },
   {
-    question: "In the auscultatory method, diastolic pressure is often taken at:",
-    options: ["Phase I", "Phase III", "Phase IV or V", "Phase II"],
+    question: "Which psychological aspect is associated with hyperthyroidism?",
+    options: ["Depression and apathy", "Nervous, emotional state", "Lethargy", "Memory loss"],
+    answer: 1
+  },
+  {
+    question: "In hyperthyroidism, pulse is typically:",
+    options: ["Slow", "Normal", "Rapid", "Irregularly slow"],
     answer: 2
   },
   {
-    question: "Which factor is associated with higher blood pressure?",
-    options: ["Young age", "Female gender", "Overweight", "Low-sodium diet"],
-    answer: 2
+    question: "Hypothyroidism caused by absence of thyroid function in fetal life leads to:",
+    options: ["Cretinism", "Acromegaly", "Cushing syndrome", "Addison disease"],
+    answer: 0
+  },
+  {
+    question: "A goiter with decreased metabolic function is seen in:",
+    options: ["Hyperthyroidism", "Hypothyroidism", "Thyroid cancer only", "Normal thyroid"],
+    answer: 1
+  },
+  {
+    question: "One cause of endemic goiter is:",
+    options: ["Excess dietary iodine", "Deficiency of iodine intake", "Excess TSH from tumor", "Thyroid hormone excess"],
+    answer: 1
+  },
+  {
+    question: "In hypothyroidism, cardiac output is typically:",
+    options: ["Increased", "Decreased", "Normal", "Fluctuating"],
+    answer: 1
   }
 ];
