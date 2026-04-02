@@ -1,78 +1,77 @@
-// Version 4
 export const questions = [
   {
-    question: "Central cyanosis in CVS exam suggests:",
-    options: ["Low oxygen saturation", "Hyperlipidemia", "Local infection", "Dehydration"],
-    answer: 0
-  },
-  {
-    question: "Petechiae on the skin may indicate:",
-    options: ["Infective endocarditis", "Hyperlipidemia", "Mitral stenosis", "Aortic regurgitation"],
-    answer: 0
-  },
-  {
-    question: "Tendon xanthomata are deposits associated with:",
-    options: ["High cholesterol", "Low hemoglobin", "High blood sugar", "Low albumin"],
-    answer: 0
-  },
-  {
-    question: "Leg edema in a cardiac patient suggests:",
-    options: ["Right heart failure", "Left heart failure", "Pulmonary hypertension", "All of the above"],
+    question: "In the 4 D's, which one involves potential harm?",
+    options: ["Deviance", "Distress", "Dysfunction", "Danger"],
     answer: 3
   },
   {
-    question: "An infraclavicular scar may indicate previous:",
-    options: ["Pacemaker insertion", "Appendectomy", "Knee replacement", "Thyroid surgery"],
-    answer: 0
-  },
-  {
-    question: "Which condition causes hyperinflated lungs making the apex beat impalpable?",
-    options: ["Obesity", "Emphysema", "Mitral stenosis", "Aortic stenosis"],
+    question: "Cognition is part of which Biopsychosocial domain?",
+    options: ["Biological", "Psychological", "Social", "Environmental"],
     answer: 1
   },
   {
-    question: "In dextrocardia, the apex beat is palpable on the:",
-    options: ["Left side", "Right side", "Both sides", "Nowhere"],
-    answer: 1
-  },
-  {
-    question: "A thrill is a palpable:",
-    options: ["Heart sound", "Murmur", "Rub", "Click"],
-    answer: 1
-  },
-  {
-    question: "The most common thrill is that of:",
-    options: ["Mitral regurgitation", "Aortic stenosis", "Pulmonary stenosis", "Tricuspid regurgitation"],
-    answer: 1
-  },
-  {
-    question: "The stethoscope bell is best for hearing:",
-    options: ["High-pitched murmurs", "Low-pitched sounds like S3", "Pericardial rubs", "Clicks"],
-    answer: 1
-  },
-  {
-    question: "Which extra heart sound is normal in young adults?",
-    options: ["S3", "S4", "Opening snap", "Pericardial knock"],
-    answer: 0
-  },
-  {
-    question: "A murmur that increases with inspiration suggests:",
-    options: ["Left-sided lesion", "Right-sided lesion", "Aortic stenosis", "Mitral regurgitation"],
-    answer: 1
-  },
-  {
-    question: "A pericardial rub is typically:",
-    options: ["Musical", "Scratchy", "Low-pitched", "Only diastolic"],
-    answer: 1
-  },
-  {
-    question: "To identify radiation of a murmur, you should listen over:",
-    options: ["Carotid arteries", "Axilla", "Back", "All of the above"],
+    question: "Antisocial personality disorder falls under which category?",
+    options: ["Anxiety Disorders", "Mood Disorders", "Psychotic Disorders", "Personality Disorders"],
     answer: 3
   },
   {
-    question: "The intensity of a murmur is graded on a scale of:",
-    options: ["I–III", "I–IV", "I–VI", "I–X"],
+    question: "Loss of reality is the primary symptom of:",
+    options: ["Anxiety Disorders", "Mood Disorders", "Psychotic Disorders", "Trauma-Related Disorders"],
     answer: 2
+  },
+  {
+    question: "PTSD is characterized by intrusive memory, avoidance, and negative alteration in:",
+    options: ["Appetite", "Sleep", "Mood/cognition", "Weight"],
+    answer: 2
+  },
+  {
+    question: "Negative or distorted thoughts are which type of symptom?",
+    options: ["Behavioral", "Emotional", "Cognitive", "Social"],
+    answer: 2
+  },
+  {
+    question: "Intense emotions are classified as:",
+    options: ["Cognitive symptoms", "Emotional symptoms", "Behavioral symptoms", "Physical symptoms"],
+    answer: 1
+  },
+  {
+    question: "Multiple disorders occurring together is called:",
+    options: ["Stigma", "Comorbidity", "Cultural relativity", "Deviance"],
+    answer: 1
+  },
+  {
+    question: "DBT is a type of psychotherapy that stands for:",
+    options: ["Dynamic Behavioral Therapy", "Dialectical Behavioral Therapy", "Direct Behavioral Treatment", "Differential Behavioral Technique"],
+    answer: 1
+  },
+  {
+    question: "SSRIs like Fluoxetine are typically prescribed for:",
+    options: ["Psychosis", "Anxiety and depression", "ADHD", "Bipolar mania"],
+    answer: 1
+  },
+  {
+    question: "SSRI treatment for depression usually lasts:",
+    options: ["2 weeks", "1 month", "6 months", "1 year"],
+    answer: 2
+  },
+  {
+    question: "Clonazepam is an example of which drug class?",
+    options: ["SSRI", "SNRI", "Antipsychotic", "Benzodiazepine"],
+    answer: 3
+  },
+  {
+    question: "Amphetamine is used for:",
+    options: ["Depression", "Anxiety", "ADHD and narcolepsy", "Bipolar disorder"],
+    answer: 2
+  },
+  {
+    question: "Lifestyle interventions for psychological disturbance include all EXCEPT:",
+    options: ["Sleep", "Exercise", "Social support", "Isolation"],
+    answer: 3
+  },
+  {
+    question: "Psychological disturbance is defined as multifactorial, meaning:",
+    options: ["Single cause", "Caused by many factors", "No known cause", "Only genetic"],
+    answer: 1
   }
 ];
