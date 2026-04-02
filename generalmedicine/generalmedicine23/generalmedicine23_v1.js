@@ -1,78 +1,77 @@
-// Version 1
 export const questions = [
   {
-    question: "During general appearance assessment in CVS exam, which sign suggests distress?",
-    options: ["Visible pulsations", "Breathlessness", "Scar presence", "Normal weight"],
-    answer: 1
-  },
-  {
-    question: "Which syndrome is associated with cardiovascular disease?",
-    options: ["Marfan's syndrome", "Down's syndrome", "Turner's syndrome", "All of the above"],
-    answer: 3
-  },
-  {
-    question: "Capillary refill time is assessed in which part of the examination?",
-    options: ["Hands", "Face", "Precordium", "Lower limbs"],
-    answer: 0
-  },
-  {
-    question: "Splinter hemorrhages are peripheral signs of:",
-    options: ["Hyperlipidemia", "Infective endocarditis", "Mitral stenosis", "Aortic regurgitation"],
-    answer: 1
-  },
-  {
-    question: "Malar rash over the upper cheeks is seen in:",
-    options: ["Severe mitral stenosis", "Aortic stenosis", "Pulmonary embolism", "Hypertrophic cardiomyopathy"],
-    answer: 0
-  },
-  {
-    question: "Which chest deformity is characterized by a sunken sternum?",
-    options: ["Pectus carinatum", "Pectus excavatum", "Barrel chest", "Kyphosis"],
-    answer: 1
-  },
-  {
-    question: "The apex beat is normally palpated in which intercostal space?",
-    options: ["2nd ICS, midclavicular line", "4th ICS, midclavicular line", "5th ICS, midclavicular line", "6th ICS, midclavicular line"],
+    question: "Which of the following is NOT one of the 4 D's defining psychological disturbance?",
+    options: ["Deviance", "Distress", "Dementia", "Dysfunction"],
     answer: 2
   },
   {
-    question: "A 'tapping' apex beat is characteristic of:",
-    options: ["Mitral stenosis", "Aortic regurgitation", "Ventricular septal defect", "Pericardial effusion"],
+    question: "In the 4 D's, 'Deviance' refers to:",
+    options: ["Harm to self or others", "Symptoms upsetting the individual", "Thoughts differing from social norms", "Interference with daily life"],
+    answer: 2
+  },
+  {
+    question: "In the 4 D's, 'Danger' refers to:",
+    options: ["Potential harm to self or others", "Interference with daily life", "Thoughts differing from norms", "Symptoms causing upset"],
     answer: 0
   },
   {
-    question: "A double apical impulse is typical of:",
-    options: ["Hypertrophic cardiomyopathy", "Dilated cardiomyopathy", "Aortic stenosis", "Pulmonary hypertension"],
-    answer: 0
+    question: "According to the Biopsychosocial Model, neurotransmitters fall under which domain?",
+    options: ["Psychological", "Social", "Biological", "Cultural"],
+    answer: 2
   },
   {
-    question: "To feel a right ventricular heave, the examiner should apply pressure in which area?",
-    options: ["Apex", "Left parasternal area", "Upper right sternal border", "Epigastric area"],
+    question: "Trauma and environment are considered part of which domain in the Biopsychosocial Model?",
+    options: ["Biological", "Psychological", "Social", "Genetic"],
+    answer: 2
+  },
+  {
+    question: "Which category of psychological disturbance is characterized by loss of reality?",
+    options: ["Anxiety Disorders", "Mood Disorders", "Psychotic Disorders", "Personality Disorders"],
+    answer: 2
+  },
+  {
+    question: "Schizophrenia falls under which major category?",
+    options: ["Anxiety Disorders", "Mood Disorders", "Psychotic Disorders", "Trauma-Related Disorders"],
+    answer: 2
+  },
+  {
+    question: "Generalized Anxiety Disorder (GAD) must last for at least how long?",
+    options: ["2 weeks", "1 month", "6 months", "1 year"],
+    answer: 2
+  },
+  {
+    question: "PTSD is characterized by all of the following EXCEPT:",
+    options: ["Intrusive memory", "Avoidance", "Increased appetite", "Negative alteration in mood/cognition"],
+    answer: 2
+  },
+  {
+    question: "Which of the following is an example of a cognitive symptom of psychological disturbance?",
+    options: ["Withdrawal", "Intense emotions", "Negative or distorted thoughts", "Substance use"],
+    answer: 2
+  },
+  {
+    question: "Compulsions are classified under which type of symptom?",
+    options: ["Cognitive", "Emotional", "Behavioral", "Biological"],
+    answer: 2
+  },
+  {
+    question: "What does 'comorbidity' refer to in diagnostic challenges?",
+    options: ["Single disorder only", "Multiple disorders together", "No disorder", "Physical illness only"],
     answer: 1
   },
   {
-    question: "A thrill of aortic stenosis is usually best felt over:",
-    options: ["Apex", "Lower left sternal border", "Upper right sternal border", "Carotid artery"],
-    answer: 2
-  },
-  {
-    question: "Which heart sound is best heard with the stethoscope bell?",
-    options: ["S1", "S2", "S3", "All of the above"],
-    answer: 2
-  },
-  {
-    question: "The first heart sound (S1) corresponds to:",
-    options: ["Aortic valve closure", "Pulmonic valve closure", "Mitral and tricuspid valve closure", "Ventricular filling"],
-    answer: 2
-  },
-  {
-    question: "A pericardial rub is best heard with the:",
-    options: ["Bell at apex", "Diaphragm at left sternal border", "Bell at carotid", "Diaphragm at lung bases"],
+    question: "Social labeling that worsens outcomes is called:",
+    options: ["Comorbidity", "Stigma", "Cultural relativity", "Deviance"],
     answer: 1
   },
   {
-    question: "Which murmur is typically systolic?",
-    options: ["Mitral stenosis", "Aortic regurgitation", "Aortic stenosis", "Mitral regurgitation"],
-    answer: 3
+    question: "CBT is a form of:",
+    options: ["Pharmacotherapy", "Psychotherapy", "Lifestyle intervention", "Surgery"],
+    answer: 1
+  },
+  {
+    question: "DBT involves holding two opposite ideas simultaneously. This is called:",
+    options: ["Black and white thinking", "Dialectical thinking", "Catastrophizing", "Avoidance"],
+    answer: 1
   }
 ];
