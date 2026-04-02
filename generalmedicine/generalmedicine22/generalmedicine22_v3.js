@@ -1,78 +1,77 @@
-// Version 3
 export const questions = [
   {
-    question: "What is the normal JVP in cm H₂O?",
-    options: ["<5 cm", "<9 cm", "<12 cm", "<15 cm"],
-    answer: 1
-  },
-  {
-    question: "JVP varies with which of the following?",
-    options: ["Respiration", "Carotid pressure", "Pulse regularity", "Blood glucose"],
-    answer: 0
-  },
-  {
-    question: "Which JVP finding suggests pericardial effusion?",
-    options: ["Elevation with Kussmaul's sign", "Elevation with prominent 'y' descent", "Giant 'v' waves", "Absent 'a' waves"],
-    answer: 1
-  },
-  {
-    question: "During thyroid palpation, the patient's neck should be:",
-    options: ["Hyperextended", "Slightly flexed", "Rotated fully", "In neutral position"],
-    answer: 1
-  },
-  {
-    question: "A thrill felt over the thyroid indicates:",
-    options: ["Malignancy", "Increased blood flow", "Calcification", "Cystic change"],
-    answer: 1
-  },
-  {
-    question: "When examining cervical lymph nodes, you should:",
-    options: ["Palpate both sides simultaneously", "Compare with contralateral side", "Avoid touching the skin", "Use only the thumb"],
-    answer: 1
-  },
-  {
-    question: "Acromegaly is associated with which hand finding?",
-    options: ["Clubbing", "Coarse skin and broad hands", "Ulnar deviation", "Palmar erythema"],
-    answer: 1
-  },
-  {
-    question: "Which is a cardiovascular cause of clubbing?",
-    options: ["Cirrhosis", "Cyanotic congenital heart disease", "Inflammatory bowel disease", "Thyrotoxicosis"],
-    answer: 1
-  },
-  {
-    question: "Beau's lines in nails are seen after:",
-    options: ["Chronic liver disease", "Acute severe illness", "Iron deficiency", "Fungal infection"],
-    answer: 1
-  },
-  {
-    question: "Gynecomastia refers to:",
-    options: ["Breast enlargement in males", "Breast reduction in females", "Nipple discharge", "Axillary lymphadenopathy"],
-    answer: 0
-  },
-  {
-    question: "Erythema nodosum presents as:",
-    options: ["Purple striae", "Tender red nodules on shins", "Spider-like blood vessels", "Generalized pallor"],
-    answer: 1
-  },
-  {
-    question: "Which pulse is palpated behind the medial malleolus?",
-    options: ["Femoral", "Popliteal", "Posterior tibial", "Dorsalis pedis"],
+    question: "Restricting food or over-exercising may temporarily reduce internal distress by affecting:",
+    options: ["Blood pressure", "Cortisol levels", "Regulation of fight or flight", "Body temperature"],
     answer: 2
   },
   {
-    question: "Jaundice presents with which skin color?",
-    options: ["Blue", "Yellow", "Pale", "Red"],
+    question: "Which personality trait is commonly overlapping in anxiety and eating disorders?",
+    options: ["Carelessness", "Harm avoidance", "Risk taking", "Spontaneity"],
     answer: 1
   },
   {
-    question: "A gait with small shuffling steps and stooped posture is typical of:",
-    options: ["Cerebellar ataxia", "Parkinsonism", "Hemiplegia", "Neuropathic gait"],
+    question: "In OCD, the need for exact symmetry is a type of:",
+    options: ["Obsession", "Compulsion", "Delusion", "Hallucination"],
     answer: 1
   },
   {
-    question: "Circumduction gait is often seen in:",
-    options: ["Foot drop", "Hip weakness", "Hemiplegia/Stroke", "Cerebellar dysfunction"],
-    answer: 2
+    question: "Hoarding OCD is driven by severe fear of:",
+    options: ["Germs", "Losing things", "Symmetry", "Harm to others"],
+    answer: 1
+  },
+  {
+    question: "The Anxiety-ED cycle includes the step 'Biological fallout' which leads to:",
+    options: ["Trigger", "Anxiety", "ED behavior", "Increased anxiety"],
+    answer: 3
+  },
+  {
+    question: "What does ERP stand for?",
+    options: ["Exposure and Response Prevention", "Emotional Regulation Protocol", "Early Response Program", "Extinction of Ritual Practice"],
+    answer: 0
+  },
+  {
+    question: "ERP is used primarily to treat:",
+    options: ["Depression and bipolar", "OCD and anxiety disorders", "Psychosis", "Substance abuse"],
+    answer: 1
+  },
+  {
+    question: "In ERP, 'exposure' means safely exposing patients to:",
+    options: ["Medications", "Fear-inducing triggers", "Relaxation techniques", "Group therapy"],
+    answer: 1
+  },
+  {
+    question: "Mindfulness is used to help patients tolerate anxiety without:",
+    options: ["Feeling it", "Acting on it", "Remembering it", "Discussing it"],
+    answer: 1
+  },
+  {
+    question: "Antidepressants may improve conditions that occur with eating disorders, such as:",
+    options: ["Hypertension", "Anxiety or depression", "Diabetes", "Asthma"],
+    answer: 1
+  },
+  {
+    question: "The 'fight or flight' response in anxiety involves which brain region?",
+    options: ["Cerebellum", "Amygdala", "Brainstem", "Occipital lobe"],
+    answer: 1
+  },
+  {
+    question: "Social anxiety is linked to fear of:",
+    options: ["Contamination", "Eating in public", "Symmetry", "Checking locks"],
+    answer: 1
+  },
+  {
+    question: "GAD is characterized by persistent worry relieved by focus on:",
+    options: ["Exercise only", "Food or weight", "Sleep", "Social interactions"],
+    answer: 1
+  },
+  {
+    question: "Which OCD type involves compulsive washing and cleaning?",
+    options: ["Contamination OCD", "Checking OCD", "Hoarding OCD", "Harm OCD"],
+    answer: 0
+  },
+  {
+    question: "The 'Hungry Mind' concept refers to the intersection of anxiety and:",
+    options: ["Depression", "Eating disorders", "Bipolar disorder", "Substance abuse"],
+    answer: 1
   }
 ];
