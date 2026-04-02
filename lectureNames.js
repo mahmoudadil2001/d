@@ -184,7 +184,7 @@ export const lectureNames = {
         "22": "managment impacted teeth Part2",
         "23": "managment impacted teeth Part3",
         "24": "dental implants 1",
-        "25": "Unknown",
+        "25": "dental implants 2",
         "26": "Unknown",
         "27": "Unknown",
         "28": "Unknown",
