@@ -1,78 +1,77 @@
-// Version 2
 export const questions = [
   {
-    question: "What should be examined at the end of the general appearance assessment?",
-    options: ["Only pulse", "Skin for petechiae, temperature, urinalysis", "Only blood pressure", "Only JVP"],
-    answer: 1
-  },
-  {
-    question: "Tobacco staining on fingers suggests:",
-    options: ["Hyperlipidemia", "Smoking history", "Infective endocarditis", "Cyanotic heart disease"],
-    answer: 1
-  },
-  {
-    question: "Osler's nodes are found on:",
-    options: ["Palmar aspects", "Soles of feet", "Over cheeks", "On the back"],
-    answer: 0
-  },
-  {
-    question: "Bilateral cyanotic or dusky pink discoloration over the upper cheeks is due to:",
-    options: ["Capillary refill delay", "Arteriovenous anastomosis & vascular stasis", "Hyperlipidemia", "Pulmonary embolism"],
-    answer: 1
-  },
-  {
-    question: "Which scar is typical of previous cardiac surgery?",
-    options: ["Appendectomy scar", "Midline sternotomy", "Knee surgery scar", "Laparoscopic scar"],
-    answer: 1
-  },
-  {
-    question: "The apex beat may be impalpable in which condition?",
-    options: ["Asthma or emphysema", "Left ventricular hypertrophy", "Mitral stenosis", "Aortic regurgitation"],
-    answer: 0
-  },
-  {
-    question: "In left ventricular dilatation, the apex beat is displaced:",
-    options: ["Superiorly and medially", "Inferiorly and laterally", "Only superiorly", "Only medially"],
-    answer: 1
-  },
-  {
-    question: "Dextrocardia has a prevalence of approximately:",
-    options: ["1:100", "1:1,000", "1:10,000", "1:100,000"],
+    question: "In the 4 D's, 'Dysfunction' refers to:",
+    options: ["Harm to self", "Symptoms upsetting the individual", "Interference with daily life", "Thoughts differing from norms"],
     answer: 2
   },
   {
-    question: "To palpate a right ventricular heave, the patient should hold their breath in:",
-    options: ["Inspiration", "Expiration", "Mid-breath", "It doesn't matter"],
+    question: "In the Biopsychosocial Model, personality and coping strategies fall under:",
+    options: ["Biological", "Psychological", "Social", "Environmental"],
     answer: 1
   },
   {
-    question: "Thrills are best felt using:",
-    options: ["Heel of the hand", "Flat of the fingers", "Fingertips only", "Palm only"],
-    answer: 1
-  },
-  {
-    question: "Which area is NOT a primary auscultation site for heart sounds?",
-    options: ["Apex", "Lower left sternal border", "Upper right sternal border", "Right mid-axillary line"],
+    question: "Which category includes Borderline and Antisocial personality disorders?",
+    options: ["Anxiety Disorders", "Mood Disorders", "Psychotic Disorders", "Personality Disorders"],
     answer: 3
   },
   {
-    question: "The second heart sound (S2) corresponds to:",
-    options: ["Mitral valve closure", "Aortic and pulmonic valve closure", "Tricuspid valve opening", "Ventricular contraction"],
+    question: "PTSD is classified under which major category?",
+    options: ["Anxiety Disorders", "Mood Disorders", "Psychotic Disorders", "Trauma-Related Disorders"],
+    answer: 3
+  },
+  {
+    question: "Panic disorder and phobias fall under which category?",
+    options: ["Mood Disorders", "Anxiety Disorders", "Psychotic Disorders", "Personality Disorders"],
     answer: 1
   },
   {
-    question: "An S4 heart sound is associated with:",
-    options: ["Atrial contraction", "Rapid ventricular filling", "Aortic stenosis", "Mitral regurgitation"],
-    answer: 0
+    question: "Depression and Bipolar disorder are examples of:",
+    options: ["Anxiety Disorders", "Mood Disorders", "Psychotic Disorders", "Trauma-Related Disorders"],
+    answer: 1
   },
   {
-    question: "A 'snap' sound is often heard in:",
-    options: ["Mitral stenosis", "Aortic regurgitation", "Pulmonary stenosis", "Tricuspid regurgitation"],
-    answer: 0
-  },
-  {
-    question: "Murmurs are described by all EXCEPT:",
-    options: ["Timing", "Duration", "Blood group", "Intensity"],
+    question: "PTSD symptoms typically last for at least:",
+    options: ["1 week", "2 weeks", "1 month", "6 months"],
     answer: 2
+  },
+  {
+    question: "Which of the following is an emotional symptom of psychological disturbance?",
+    options: ["Negative thoughts", "Withdrawal", "Intense or blunted emotions", "Compulsions"],
+    answer: 2
+  },
+  {
+    question: "Substance use as a symptom is classified under:",
+    options: ["Cognitive", "Emotional", "Behavioral", "Biological"],
+    answer: 2
+  },
+  {
+    question: "Cultural relativity in diagnosis refers to:",
+    options: ["Same symptoms across all cultures", "Diagnosis being independent of culture", "Cultural differences affecting diagnosis", "Stigma only in certain cultures"],
+    answer: 2
+  },
+  {
+    question: "Which medication class is mentioned for ADHD and narcolepsy?",
+    options: ["SSRIs", "SNRIs", "Stimulants", "Benzodiazepines"],
+    answer: 2
+  },
+  {
+    question: "Fluoxetine is an example of which medication class?",
+    options: ["SNRI", "SSRI", "Antipsychotic", "Anxiolytic"],
+    answer: 1
+  },
+  {
+    question: "SSRIs typically start working after:",
+    options: ["1-2 days", "1-2 weeks", "1-2 months", "6 months"],
+    answer: 1
+  },
+  {
+    question: "Lithium is used for which disorder?",
+    options: ["Anxiety", "Depression alone", "Bipolar disorder", "ADHD"],
+    answer: 2
+  },
+  {
+    question: "Alprazolam and diazepam belong to which drug class?",
+    options: ["SSRIs", "SNRIs", "Antipsychotics", "Benzodiazepines"],
+    answer: 3
   }
 ];
