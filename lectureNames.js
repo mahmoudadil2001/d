@@ -306,7 +306,7 @@ export const lectureNames = {
         "16": "mandibular movements & jaw relations",
         "17": "Vertical jaw relation",
         "18": "horizontal jaw relation",
-        "19": "Unknown",
+        "19": "RCD Selection of Artificial Teeth and Try-in",
         "20": "Unknown",
         "21": "Unknown",
         "22": "Unknown",
