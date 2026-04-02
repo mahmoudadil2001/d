@@ -200,7 +200,7 @@ export const visibleLectures = {
             3,
             4
         ],
-        "twentyfour": []
+        "24": []
     },
     "generalsurgery": {
         "1": [
