@@ -1,78 +1,77 @@
-// Version 4
 export const questions = [
   {
-    question: "JVP level is measured relative to:",
-    options: ["The clavicle", "The sternal angle", "The thyroid cartilage", "The mandible"],
-    answer: 1
-  },
-  {
-    question: "Which is TRUE about carotid pulsation?",
-    options: ["Has two peaks per beat", "Varies with respiration", "Unaffected by neck pressure", "Impalpable"],
+    question: "Roughly what percentage of individuals with an eating disorder have at least one anxiety disorder?",
+    options: ["25%", "45%", "65%", "85%"],
     answer: 2
   },
   {
-    question: "Elevated JVP with sustained abdominojugular reflux >10 seconds suggests:",
-    options: ["Heart failure", "Pulmonary embolism", "Pericardial constriction", "Superior vena cava obstruction"],
-    answer: 0
-  },
-  {
-    question: "In superior vena cava obstruction, JVP shows:",
-    options: ["Giant 'a' waves", "Loss of pulsation", "Cannon waves", "Prominent 'y' descent"],
-    answer: 1
-  },
-  {
-    question: "To examine for retrosternal thyroid extension, you should:",
-    options: ["Auscultate for bruit", "Percuss the manubrium", "Palpate from behind", "Inspect during swallowing"],
-    answer: 1
-  },
-  {
-    question: "Which lymph node characteristic suggests malignancy?",
-    options: ["Tenderness", "Rubbery consistency", "Fixed to deep structures", "Small size (<1 cm)"],
+    question: "Disordered eating behaviors are described as _____ mechanisms to manage lack of control.",
+    options: ["adaptive", "healthy", "maladaptive", "positive"],
     answer: 2
   },
   {
-    question: "Peripheral cyanosis with warm hands may indicate:",
-    options: ["COPD with hypercapnia", "Heart failure", "Hypovolemic shock", "Raynaud's disease"],
+    question: "High cortisol levels result from:",
+    options: ["Low anxiety", "High anxiety", "Normal thyroid", "High calcium"],
+    answer: 1
+  },
+  {
+    question: "Which brain region is involved in regulation of distress in both conditions?",
+    options: ["Prefrontal cortex", "Occipital lobe", "Parietal lobe", "Temporal lobe"],
     answer: 0
   },
   {
-    question: "Clubbing is absent in which condition?",
-    options: ["Bronchiectasis", "Cystic fibrosis", "Chronic bronchitis without hypoxemia", "Lung cancer"],
+    question: "Need for control is a common trait in:",
+    options: ["Only anxiety", "Only eating disorders", "Both anxiety and eating disorders", "Neither condition"],
     answer: 2
   },
   {
-    question: "Koilonychia (spoon-shaped nails) is associated with:",
-    options: ["Iron deficiency anemia", "Liver cirrhosis", "Psoriasis", "Thyroid disease"],
+    question: "Intrusive harm-related thoughts are characteristic of which OCD type?",
+    options: ["Contamination OCD", "Checking OCD", "Harm/intrusive thoughts OCD", "Hoarding OCD"],
+    answer: 2
+  },
+  {
+    question: "In checking OCD, the compulsion is to repeatedly:",
+    options: ["Wash hands", "Check things like locks", "Align objects", "Collect items"],
+    answer: 1
+  },
+  {
+    question: "Symmetry and ordering OCD involves distress if items are not:",
+    options: ["Clean", "Perfectly aligned", "Checked", "Collected"],
+    answer: 1
+  },
+  {
+    question: "The sequence of the Anxiety-ED cycle is:",
+    options: ["Trigger → Anxiety → ED behavior → Biological fallout → Increased anxiety", "ED behavior → Trigger → Anxiety → Biological fallout", "Anxiety → Trigger → ED behavior → Biological fallout", "Biological fallout → Anxiety → ED behavior → Trigger"],
     answer: 0
   },
   {
-    question: "Striae on the abdomen may indicate:",
-    options: ["Cushing's syndrome", "Addison's disease", "Hyperthyroidism", "Diabetes insipidus"],
-    answer: 0
+    question: "CBT focuses on challenging:",
+    options: ["Only behaviors", "Only thoughts", "Distorted thoughts", "Only emotions"],
+    answer: 2
   },
   {
-    question: "Unilateral leg swelling suggests possible:",
-    options: ["Deep vein thrombosis", "Congestive heart failure", "Liver cirrhosis", "Nephrotic syndrome"],
-    answer: 0
+    question: "In ERP, 'response prevention' means preventing:",
+    options: ["Fear", "Anxiety", "Compulsive responses", "Exposure"],
+    answer: 2
   },
   {
-    question: "Purpura refers to:",
-    options: ["Redness from inflammation", "Yellow skin from bilirubin", "Blue skin from low oxygen", "Bleeding under the skin"],
+    question: "Treatment for eating disorders may include all of the following EXCEPT:",
+    options: ["Individual therapy", "Group therapy", "Family therapy", "Strict isolation without therapy"],
     answer: 3
   },
   {
-    question: "Which gait is characterized by slamming the foot hard on the ground?",
-    options: ["Sensory gait", "Steppage gait", "Antalgic gait", "Diplegic gait"],
-    answer: 0
+    question: "Medications such as antipsychotics may be used to improve conditions that:",
+    options: ["Cause eating disorders", "Occur with eating disorders", "Prevent eating disorders", "Are unrelated to eating disorders"],
+    answer: 1
   },
   {
-    question: "Choreiform gait involves:",
-    options: ["Jerky involuntary movements", "Stiff, shuffling steps", "Circumduction of leg", "Waddling motion"],
-    answer: 0
+    question: "The OCD cycle consists of obsessions that are _____ and unwanted.",
+    options: ["pleasant", "intrusive", "voluntary", "relaxing"],
+    answer: 1
   },
   {
-    question: "A patient with weak gluteal muscles will likely have which gait?",
-    options: ["Trendelenburg gait", "Parkinsonian gait", "Ataxic gait", "Hemiplegic gait"],
-    answer: 0
+    question: "Which type of OCD involves a severe fear of losing things or needing them later?",
+    options: ["Contamination OCD", "Checking OCD", "Hoarding OCD", "Harm OCD"],
+    answer: 2
   }
 ];
