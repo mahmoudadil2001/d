@@ -53,7 +53,7 @@ export const lectureNames = {
         "19": "infective endocarditis",
         "20": "imunologic disorders",
         "21": "thyroid function",
-        "22": "Lab3 clinical examination 2",
+        "22": "anxity disorder",
         "23": "Lab 4 CVS examination",
         "24": "Unknown",
         "25": "Unknown",
