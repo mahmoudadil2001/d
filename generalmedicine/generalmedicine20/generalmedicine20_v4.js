@@ -1,77 +1,77 @@
 export const questions = [
   {
-    question: "In addition to bacteria, which other microorganisms can cause infective endocarditis (IE), justifying the term 'infective'?",
-    options: ["Prions only", "Fungi and other microorganisms", "Protozoa only", "Helminths only"],
-    answer: 1
-  },
-  {
-    question: "According to the document, what percentage range of IE cases is attributed to staphylococci?",
-    options: ["10% - 20%", "At least 30% - 40%", "50% - 60%", "More than 70%"],
-    answer: 1
-  },
-  {
-    question: "After bacteria seed a sterile NBTE mass, what happens next in the sequence of events leading to a mature vegetation?",
-    options: ["The bacteria are destroyed by host immune cells", "The mass dissolves", "Additional platelets and fibrin are deposited, protecting the bacteria", "The endothelial injury is repaired"],
+    question: "The document states that autoimmune disorders remain among the most poorly understood and poorly recognized of any category of illnesses. They can affect any organ, and examples given include:",
+    options: ["Infectious diseases like tuberculosis", "Genetic disorders like cystic fibrosis", "Rheumatoid arthritis and nephrotic syndrome", "Traumatic injuries and fractures"],
     answer: 2
   },
   {
-    question: "Which of the following is considered a vascular phenomenon, a minor criterion in the Duke criteria?",
-    options: ["Positive blood cultures", "Osler's nodes", "Embolic events", "Fever"],
-    answer: 2
-  },
-  {
-    question: "Osler's nodes are named after which famous physician?",
-    options: ["Edward Janeway", "Moritz Roth", "Sir William Osler", "Austin Flint"],
-    answer: 2
-  },
-  {
-    question: "According to the dental management guidelines, antibiotic prophylaxis is NOT recommended for which of the following procedures?",
-    options: ["Dental extraction", "Periodontal surgery", "Routine anesthetic injections through noninfected tissue", "Implant placement"],
-    answer: 2
-  },
-  {
-    question: "If an adult patient is unable to take oral medication and is not allergic to penicillin, what is the recommended prophylactic antibiotic regimen?",
-    options: ["Clindamycin 600 mg IM or IV", "Ampicillin 2g IM or IV", "Azithromycin 500 mg orally", "Cefazolin 500 mg IM or IV"],
+    question: "In the context of autoimmune hemolytic anemia, what happens during the process of opsonization facilitated by antibody and C3b?",
+    options: ["RBCs are directly lysed by complement", "RBCs are bound to and engulfed by macrophages", "RBCs are destroyed by NK cells", "RBCs undergo apoptosis"],
     answer: 1
   },
   {
-    question: "What is the recommended pediatric dose (mg/kg) of oral Amoxicillin for antibiotic prophylaxis?",
-    options: ["20 mg/kg", "50 mg/kg", "75 mg/kg", "100 mg/kg"],
-    answer: 1
-  },
-  {
-    question: "What are the HACEK organisms, mentioned as less common causes of IE, an acronym for?",
-    options: ["A group of fungi", "A group of viruses", "A group of fastidious bacteria", "A group of parasites"],
+    question: "What is the primary antigen targeted by autoantibodies in Graves' disease?",
+    options: ["Thyroglobulin", "Thyroid peroxidase", "The thyrotropin receptor (TSHR)", "Insulin"],
     answer: 2
   },
   {
-    question: "What is the primary medical management for IE?",
-    options: ["Anticoagulation therapy only", "Antibiotics and possibly surgery", "Radiation therapy", "Strict bed rest and diuretics"],
-    answer: 1
-  },
-  {
-    question: "The clinical outcome of IE can result from antibody response and subsequent tissue injury. How does this injury occur?",
-    options: ["Direct bacterial destruction of tissue", "Deposition of preformed immune complexes or antibody/complement interaction with tissue antigens", "Activation of cytotoxic T cells", "Release of bacterial toxins"],
-    answer: 1
-  },
-  {
-    question: "For a patient already taking penicillin for secondary prevention of rheumatic fever, why should cephalosporins be avoided for IE prophylaxis?",
-    options: ["They are less effective", "They have more side effects", "Because of cross-resistance", "They are too expensive"],
+    question: "Which mechanism of RBC destruction in autoimmune hemolytic anemia is mediated by NK cells and does not require complement?",
+    options: ["Complement-mediated lysis", "Opsonization", "Antibody-dependent cellular cytotoxicity (ADCC)", "Phagocytosis"],
     answer: 2
   },
   {
-    question: "Splinter hemorrhages in the nail beds are a classic sign of IE. What is their typical appearance?",
-    options: ["Red, tender bumps", "Reddish-brown lines under the nails", "Yellow discoloration of the nails", "Clubbing of the nail bed"],
-    answer: 1
+    question: "According to the document, autoantibodies can sometimes be demonstrated in hemolytic disease of the newborn resulting from disorders where the immune response is clearly the cause, such as:",
+    options: ["serum sickness and anaphylaxis", "myocardial infarction", "diabetic ketoacidosis", "fracture healing"],
+    answer: 0
   },
   {
-    question: "According to the document, for completely repaired congenital heart disease with prosthetic material, why is prophylaxis recommended during the first 6 months?",
-    options: ["The patient is more susceptible to infections", "Endothelialization of prosthetic material occurs during this time", "The immune system is suppressed", "Bacteria are more virulent during this period"],
-    answer: 1
+    question: "The warm autoantibodies in autoimmune hemolytic anemia are primarily IgG and some react with which antigens expressed on the surface of RBCs?",
+    options: ["ABO antigens", "Duffy antigens", "Kell antigens", "Rh antigens"],
+    answer: 3
   },
   {
-    question: "Which of the following is a major criterion for the diagnosis of IE according to the Duke criteria?",
-    options: ["Fever > 38°C", "Presence of a predisposing heart condition", "Evidence of endocardial involvement (e.g., positive echocardiography)", "Vascular phenomena like emboli"],
+    question: "What is the characteristic eye finding that may develop in patients with severe Graves' disease, involving the protrusion of the eyeball?",
+    options: ["Ptosis", "Strabismus", "Bulging of the eye (proptosis)", "Miosis"],
     answer: 2
+  },
+  {
+    question: "Why are cold agglutinins (IgM) highly efficient at causing lysis of erythrocytes?",
+    options: ["They are small and can penetrate cells", "They bind to multiple sites on the RBC", "They are highly efficient at activating the complement cascade", "They resist degradation at body temperature"],
+    answer: 2
+  },
+  {
+    question: "Table 1-2 lists 'Glutamic acid decarboxylase' as an antigen implicated in which autoimmune endocrine disease?",
+    options: ["Graves' disease", "Hashimoto's disease", "Addison's disease", "Type 1 diabetes"],
+    answer: 3
+  },
+  {
+    question: "The term 'autoimmune disorder' is used when demonstrable immunoglobulins or cytotoxic T cells display specificity for self-antigens and contribute to the _____ of the disorder.",
+    options: ["diagnosis", "pathogenesis", "prevention", "treatment"],
+    answer: 1
+  },
+  {
+    question: "If a patient's blood sample is tested for cold agglutinins, at what temperature should the test be performed to allow the antibodies to attach to the RBCs?",
+    options: ["37°C", "Room temperature (25°C)", "Below 37°C", "Above 40°C"],
+    answer: 2
+  },
+  {
+    question: "Normally, what shuts down the production of TSH and subsequently thyroid hormones via a negative-feedback loop?",
+    options: ["Low levels of thyroid hormones", "High levels of thyroid hormones", "High levels of TRH", "Low levels of iodine"],
+    answer: 1
+  },
+  {
+    question: "Autoimmune disorders are characterized by the persistent activation of immunologic effector mechanisms that alter the function and integrity of:",
+    options: ["only blood cells", "individual cells and organs", "only the endocrine system", "only connective tissue"],
+    answer: 1
+  },
+  {
+    question: "Which of the following is listed as an antigen implicated in Addison's disease?",
+    options: ["Thyroglobulin", "Insulin receptor", "Adrenal cortical cells", "Thyrotropin receptor"],
+    answer: 2
+  },
+  {
+    question: "Graves' disease most commonly affects women. In which age group is it most prevalent?",
+    options: ["Teens and 20s", "30s and 40s", "50s and 60s", "70s and 80s"],
+    answer: 1
   }
 ];
