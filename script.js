@@ -911,28 +911,48 @@ document.getElementById("downloadPdfBtn").addEventListener("click", async () => 
       }
     });
 
-    // فوتر الصفحة الأخيرة
-    drawFooter();
-
-    // تحميل ملف PDF - الطريقة الأكثر استقراراً لتجنب الصفحة البيضاء
+    // تحميل ملف PDF - تخصيص بناءً على البيئة
     const fileName = `Dentistology_${subject}_lec${lecture}_v${version}.pdf`;
+    const userAgent = navigator.userAgent;
     
-    // التحقق من البيئة
-    const isMobile = /Android|iPhone|iPad|iPod/i.test(navigator.userAgent);
-    const isTelegram = /Telegram/i.test(navigator.userAgent);
+    // فحص دقيق للبيئة
+    const isAndroidTelegram = /Android/i.test(userAgent) && /Telegram/i.test(userAgent);
+    const isIOS = /iPhone|iPad|iPod/i.test(userAgent);
+    const isMobile = /Android|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(userAgent);
 
-    if (isMobile || isTelegram) {
-      // للموبايل وتلجرام: نستخدم التحميل المباشر فقط لتجنب المشاكل التقنية
-      doc.save(fileName);
-      showToast("جاري التحميل... يرجى فتح الملف من قائمة التنبيهات في هاتفك 📂");
+    if (isAndroidTelegram) {
+      // حالة خاصة: تلجرام أندرويد فقط - يستخدم "المشاركة" لمنع الصفحة البيضاء
+      try {
+        const pdfBlob = doc.output('blob');
+        const file = new File([pdfBlob], fileName, { type: 'application/pdf' });
+        
+        if (navigator.share) {
+          await navigator.share({
+            files: [file],
+            title: 'فتح ملف الأسئلة',
+            text: `تم إنشاء ملف PDF بنجاح لـ ${subject} - المحاضرة ${lecture}`
+          });
+          showToast("تم فتح قائمة المشاركة... اختر تطبيق العرض المفضل لديك 📂");
+        } else {
+          doc.save(fileName);
+          showToast("جاري التحميل... يرجى فتح الملف من التنبيهات 📂");
+        }
+      } catch (shareErr) {
+        console.warn("فشلت المشاركة، التراجع للتحميل المباشر:", shareErr);
+        doc.save(fileName);
+      }
     } else {
-      // للكمبيوتر: نحاول الفتح في نافذة جديدة أو التحميل المباشر
+      // أي بيئة أخرى (iOS، كمبيوتر، متصفحات أندرويد العادية): تحميل وفتح تقليدي
       const pdfBlob = doc.output('blob');
       const pdfUrl = URL.createObjectURL(pdfBlob);
+      
+      // محاولة الفتح التلقائي في نافذة جديدة
       const newWindow = window.open(pdfUrl, '_blank');
       
-      if (!newWindow || newWindow.closed || typeof newWindow.closed == 'undefined') {
-        doc.save(fileName); // تحميل مباشر في حال منع الـ popup
+      // إذا فشلت النافذة المنبثقة أو كنا على جوال (غير تلجرام أندرويد) نقوم بالتحميل المباشر
+      if (!newWindow || isMobile) {
+        doc.save(fileName);
+        if (isMobile) showToast("جاري التحميل... يرجى فتح الملف من التنبيهات 📂");
       }
       
       // تنظيف الذاكرة
