@@ -832,8 +832,47 @@
       color: #28a745 !important;
     }
 
-    .friends-tab:hover:not(.active) {
-      background: rgba(40, 167, 69, 0.1) !important;
+    #refreshFriendsBtn:hover:not(.active) {
+        background: rgba(40, 167, 69, 0.1) !important;
+      }
+
+    /* Sound Wave Bars Animation */
+    @keyframes bar-wave {
+      0%, 100% { transform: scaleY(0.4); }
+      50% { transform: scaleY(1); }
+    }
+
+    .audio-ripple {
+      display: none;
+      align-items: flex-end;
+      justify-content: center;
+      gap: 2px;
+      width: 15px;
+      height: 15px;
+      margin-right: 4px;
+      transition: all 0.3s ease;
+      vertical-align: middle;
+    }
+
+    .audio-ripple.playing {
+      display: inline-flex;
+    }
+
+    .audio-ripple .bar {
+      width: 2.5px;
+      height: 100%;
+      background-color: #ff3b30;
+      border-radius: 1px;
+      animation: bar-wave 0.8s ease-in-out infinite;
+      transform-origin: bottom;
+    }
+
+    .audio-ripple .bar:nth-child(2) {
+      animation-delay: 0.2s;
+    }
+
+    .audio-ripple .bar:nth-child(3) {
+      animation-delay: 0.4s;
     }
 
     #refreshFriendsBtn:hover:not(.active) {
@@ -2332,6 +2371,11 @@
             👑 الداعمين 
           </button>
           <audio id="instructionAudio7" src="instructions/voice7.m4a" preload="none"></audio>
+          <div id="voice7Ripple" class="audio-ripple">
+            <div class="bar"></div>
+            <div class="bar"></div>
+            <div class="bar"></div>
+          </div>
           <span id="voice7Span" style="
             display: none;
             color: #ff3b30;
@@ -2382,6 +2426,11 @@
       <div style="margin: 18px 0 8px 0; display: flex; align-items: center; gap: 8px;">
         <label style="margin: 0;">اختر المادة:</label>
         <audio id="instructionAudio" src="instructions/voice1.m4a" preload="none"></audio>
+        <div id="instructionAudioRipple" class="audio-ripple">
+          <div class="bar"></div>
+          <div class="bar"></div>
+          <div class="bar"></div>
+        </div>
         <span style="
           color: #ff3b30;
           font-size: 16px;
@@ -2408,6 +2457,11 @@
       <div style="margin: 18px 0 8px 0; display: flex; align-items: center; gap: 8px;">
         <label style="margin: 0;">اختر نموذج الاسئلة:</label>
         <audio id="instructionAudio2" src="instructions/voice2.m4a" preload="none"></audio>
+        <div id="instructionAudio2Ripple" class="audio-ripple">
+          <div class="bar"></div>
+          <div class="bar"></div>
+          <div class="bar"></div>
+        </div>
         <span style="
           color: #ff3b30;
           font-size: 16px;
@@ -2445,6 +2499,11 @@
         ">تسجيل الدخول</a> لتحصل على أكثر من نسخة أسئلة لنفس المحاضرة
 
         <audio id="instructionAudio3" src="instructions/voice3.m4a" preload="none"></audio>
+        <div id="instructionAudio3Ripple" class="audio-ripple" style="vertical-align: middle; margin-right: 4px;">
+          <div class="bar"></div>
+          <div class="bar"></div>
+          <div class="bar"></div>
+        </div>
         <span style="
           color: #ff3b30;
           font-size: 16px;
