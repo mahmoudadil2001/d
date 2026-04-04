@@ -871,7 +871,29 @@ document.getElementById("downloadPdfBtn").addEventListener("click", async () => 
 
     // تحميل الملف
     const fileName = `Dentistology_${subject}_lec${lecture}_v${version}.pdf`;
-    doc.save(fileName);
+    
+    // التحقق من البيئة (تلجرام أو جوال عموماً)
+    const isTelegram = /Telegram/i.test(navigator.userAgent);
+    const isMobile = /Android|iPhone|iPad|iPod/i.test(navigator.userAgent);
+    const pdfBlob = doc.output('blob');
+
+    // محاولة استخدام واجهة مشاركة الملفات إذا كانت متوفرة وتناسب الجوال/تلجرام
+    if (navigator.share && (isTelegram || isMobile)) {
+      try {
+        const file = new File([pdfBlob], fileName, { type: 'application/pdf' });
+        await navigator.share({
+          files: [file],
+          title: 'تحميل ملف الأسئلة',
+          text: `تم إنشاء ملف PDF بنجاح لـ ${subject} - المحاضرة ${lecture}`
+        });
+      } catch (shareErr) {
+        console.warn("فشلت المشاركة، التراجع للتحميل التقليدي:", shareErr);
+        doc.save(fileName);
+      }
+    } else {
+      // الطريقة الافتراضية للمتصفحات العادية على الكمبيوتر
+      doc.save(fileName);
+    }
 
   } catch (err) {
     console.error("خطأ في تحميل PDF:", err);
