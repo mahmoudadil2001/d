@@ -245,26 +245,64 @@ controlsContainer.parentNode.insertBefore(funModeContainer, controlsContainer);
 const moreOptionsDiv = document.createElement("div");
 moreOptionsDiv.style.margin = "10px 0";
 moreOptionsDiv.innerHTML = `
-  <button type="button" id="moreOptionsToggle" style="
-    background: linear-gradient(135deg, #6c757d, #495057);
-    color: white;
-    border: none;
-    border-radius: 8px;
-    padding: 8px 16px;
-    font-size: 14px;
-    cursor: pointer;
-    font-family: 'Tajawal', sans-serif;
-    font-weight: 600;
-    transition: all 0.3s ease;
-    display: flex;
-    align-items: center;
-    gap: 8px;
-    width: fit-content;
-    margin-bottom: 10px;
-  ">
-    <span id="moreOptionsIcon">▼</span>
-    المزيد من الخيارات
-  </button>
+  <div style="display: flex; gap: 8px; align-items: center; margin-bottom: 10px; flex-wrap: wrap;">
+    <button type="button" id="moreOptionsToggle" style="
+      background: linear-gradient(135deg, #6c757d, #495057);
+      color: white;
+      border: none;
+      border-radius: 8px;
+      padding: 8px 16px;
+      font-size: 14px;
+      cursor: pointer;
+      font-family: 'Tajawal', sans-serif;
+      font-weight: 600;
+      transition: all 0.3s ease;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      width: fit-content;
+    ">
+      <span id="moreOptionsIcon">▼</span>
+      المزيد من الخيارات
+    </button>
+
+    <button type="button" id="downloadPdfBtn" style="
+      background: linear-gradient(135deg, #e74c3c, #c0392b);
+      color: white;
+      border: none;
+      border-radius: 8px;
+      padding: 8px 16px;
+      font-size: 14px;
+      cursor: pointer;
+      font-family: 'Tajawal', sans-serif;
+      font-weight: 600;
+      transition: all 0.3s ease;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      width: fit-content;
+    ">
+      📄 تحميل PDF
+    </button>
+    <audio id="instructionAudio4" src="instructions/voice4.m4a" preload="none"></audio>
+    <span style="
+      color: #ff3b30;
+      font-size: 16px;
+      font-weight: bold;
+      cursor: pointer;
+      user-select: none;
+      text-shadow: 0 1px 3px rgba(0,0,0,0.5);
+      margin-right: 2px;
+    " onclick="
+      var myAudio4 = document.getElementById('instructionAudio4');
+      if (!myAudio4.paused) {
+        myAudio4.pause();
+        myAudio4.currentTime = 0;
+      } else {
+        myAudio4.play();
+      }
+    " title="استمع للتعليمات">؟</span>
+  </div>
 
   <div id="moreOptionsContent" style="
     max-height: 0;
@@ -397,6 +435,447 @@ document.getElementById("moreOptionsFunToggle").addEventListener("click", () => 
     content.style.opacity = "0";
     icon.textContent = "▼";
     button.style.background = "linear-gradient(135deg, #6c757d, #495057)";
+  }
+});
+
+// دالة تحميل الأسئلة كملف PDF مع ترتيب عشوائي للأجوبة وتنسيق احترافي
+document.getElementById("downloadPdfBtn").addEventListener("click", async () => {
+  const subject = subjectSelect.value;
+  const lecture = lectureSelect.value;
+  const version = versionSelect.value;
+
+  if (!subject || !lecture || !version) {
+    alert("يرجى اختيار المادة والمحاضرة والنسخة أولاً");
+    return;
+  }
+
+  const btn = document.getElementById("downloadPdfBtn");
+  const originalText = btn.innerHTML;
+  btn.innerHTML = "⏳ جاري التحميل...";
+  btn.style.opacity = "0.7";
+  btn.style.pointerEvents = "none";
+
+  try {
+    const path = `./${subject}/${subject}${lecture}/${subject}${lecture}_v${version}.js`;
+    const module = await import(path);
+    let questions = module.questions;
+
+    if (!questions || !Array.isArray(questions) || questions.length === 0) {
+      throw new Error("لا توجد أسئلة في هذه النسخة");
+    }
+
+    // خلط ترتيب الأجوبة بشكل عشوائي لكل سؤال
+    const shuffledQuestions = questions.map((q) => {
+      const opts = [...q.options];
+      const correctText = opts[q.answer];
+
+      for (let i = opts.length - 1; i > 0; i--) {
+        const j = Math.floor(Math.random() * (i + 1));
+        [opts[i], opts[j]] = [opts[j], opts[i]];
+      }
+
+      const newCorrectIndex = opts.indexOf(correctText);
+
+      return {
+        question: q.question,
+        options: opts,
+        answer: newCorrectIndex,
+      };
+    });
+
+    // ألوان التصميم
+    const colors = {
+      primary: [102, 126, 234],      // أزرق بنفسجي
+      primaryDark: [90, 111, 216],    // أزرق بنفسجي داكن
+      secondary: [118, 75, 162],      // بنفسجي
+      success: [40, 167, 69],         // أخضر
+      successLight: [212, 237, 218],  // أخضر فاتح
+      successBg: [232, 245, 233],     // أخضر فاتح جداً
+      danger: [220, 53, 69],          // أحمر
+      dark: [33, 37, 41],             // أسود تقريباً
+      gray: [108, 117, 125],          // رمادي
+      lightGray: [233, 236, 239],     // رمادي فاتح
+      white: [255, 255, 255],         // أبيض
+      headerGreen: [32, 201, 151],    // أخضر فيروزي
+      questionBg: [248, 249, 250],    // خلفية السؤال
+    };
+
+    const { jsPDF } = window.jspdf;
+    const doc = new jsPDF({
+      orientation: "portrait",
+      unit: "mm",
+      format: "a4",
+    });
+
+    const pageWidth = doc.internal.pageSize.getWidth();
+    const pageHeight = doc.internal.pageSize.getHeight();
+    const margin = 15;
+    const contentWidth = pageWidth - margin * 2;
+    let y = margin;
+    const optionLetters = ["A", "B", "C", "D", "E", "F"];
+    const lectureName = lectureNames[subject]?.[lecture] || "Unknown";
+    let pageNum = 1;
+
+    // === دالة رسم الهيدر في كل صفحة ===
+    function drawHeader() {
+      // شريط علوي أخضر متدرج
+      doc.setFillColor(...colors.success);
+      doc.rect(0, 0, pageWidth, 28, "F");
+
+      // شريط سفلي للهيدر بلون أغمق
+      doc.setFillColor(...colors.primaryDark);
+      doc.rect(0, 28, pageWidth, 2, "F");
+
+      // اسم الموقع - Dentistology
+      doc.setTextColor(...colors.white);
+      doc.setFontSize(22);
+      doc.setFont("helvetica", "bold");
+      doc.text("Dentistology", pageWidth / 2, 12, { align: "center" });
+      doc.link(pageWidth / 2 - 30, 4, 60, 10, { url: 'https://www.dentisitlogy.com' });
+
+      // روابط الموقع والتليجرام
+      doc.setFontSize(9);
+      doc.setFont("helvetica", "normal");
+      doc.text("Website: www.dentisitlogy.com", 10, 10);
+      doc.link(10, 6, 45, 6, { url: 'https://www.dentisitlogy.com' });
+
+      doc.text("Telegram: t.me/dentisitlogy", pageWidth - 10, 10, { align: "right" });
+      doc.link(pageWidth - 50, 6, 45, 6, { url: 'https://t.me/dentisitlogy' });
+
+      // عنوان فرعي
+      doc.setFontSize(9);
+      doc.setFont("helvetica", "normal");
+      doc.text("Dental Exam Questions Bank", pageWidth / 2, 18, { align: "center" });
+
+      // معلومات المادة على اليسار
+      doc.setFontSize(7);
+      doc.text(`${subject.charAt(0).toUpperCase() + subject.slice(1)} | Lec ${lecture} | V${version}`, pageWidth / 2, 24, { align: "center" });
+
+      // إعادة لون النص للأسود
+      doc.setTextColor(...colors.dark);
+
+      y = 36;
+    }
+
+    // === دالة رسم الفوتر ===
+    function drawFooter() {
+      // خط فاصل
+      doc.setDrawColor(...colors.lightGray);
+      doc.setLineWidth(0.3);
+      doc.line(margin, pageHeight - 12, pageWidth - margin, pageHeight - 12);
+
+      // رقم الصفحة
+      doc.setFontSize(8);
+      doc.setTextColor(...colors.gray);
+      doc.setFont("helvetica", "normal");
+      doc.text(`Page ${pageNum}`, pageWidth / 2, pageHeight - 7, { align: "center" });
+
+      // اسم الموقع في الفوتر
+      doc.text("Dentistology - dentistology.com", margin, pageHeight - 7);
+
+      // التاريخ
+      const today = new Date().toLocaleDateString('en-US', { year: 'numeric', month: 'short', day: 'numeric' });
+      doc.text(today, pageWidth - margin, pageHeight - 7, { align: "right" });
+
+      doc.setTextColor(...colors.dark);
+    }
+
+    // === دالة إضافة صفحة جديدة ===
+    function addNewPage() {
+      drawFooter();
+      doc.addPage();
+      pageNum++;
+      drawHeader();
+    }
+
+    // === الصفحة الأولى ===
+    drawHeader();
+
+    // عنوان المادة والمحاضرة
+    doc.setFillColor(...colors.questionBg);
+    doc.roundedRect(margin, y, contentWidth, 18, 3, 3, "F");
+    doc.setDrawColor(...colors.primary);
+    doc.setLineWidth(0.5);
+    doc.roundedRect(margin, y, contentWidth, 18, 3, 3, "S");
+
+    // خط ملون على اليسار
+    doc.setFillColor(...colors.primary);
+    doc.rect(margin, y, 3, 18, "F");
+
+    doc.setFontSize(14);
+    doc.setFont("helvetica", "bold");
+    doc.setTextColor(...colors.primaryDark);
+    const subjectTitle = subject.charAt(0).toUpperCase() + subject.slice(1);
+    doc.text(`${subjectTitle} - Lecture ${lecture}`, margin + 8, y + 7);
+
+    doc.setFontSize(10);
+    doc.setFont("helvetica", "normal");
+    doc.setTextColor(...colors.gray);
+    doc.text(`${lectureName} | Version ${version} | ${shuffledQuestions.length} Questions`, margin + 8, y + 14);
+
+    doc.setTextColor(...colors.dark);
+    y += 24;
+
+    // مصفوفة الإجابات
+    const answerKey = [];
+
+    // === كتابة الأسئلة ===
+    shuffledQuestions.forEach((q, idx) => {
+      const estimatedHeight = 16 + q.options.length * 7 + 10;
+      if (y + estimatedHeight > pageHeight - 20) {
+        addNewPage();
+      }
+
+      // خلفية السؤال
+      const qBoxHeight = 8 + q.options.length * 6.5 + 4;
+      doc.setFillColor(252, 252, 253);
+      doc.roundedRect(margin, y - 2, contentWidth, qBoxHeight, 2, 2, "F");
+
+      // شريط رقم السؤال
+      doc.setFillColor(...colors.primary);
+      doc.roundedRect(margin, y - 2, 22, 7, 2, 2, "F");
+      doc.setTextColor(...colors.white);
+      doc.setFontSize(9);
+      doc.setFont("helvetica", "bold");
+      doc.text(`Q ${idx + 1}`, margin + 11, y + 3, { align: "center" });
+
+      // نص السؤال
+      doc.setTextColor(...colors.dark);
+      doc.setFontSize(10.5);
+      doc.setFont("helvetica", "bold");
+      const splitQuestion = doc.splitTextToSize(q.question, contentWidth - 28);
+      doc.text(splitQuestion, margin + 25, y + 3);
+      y += splitQuestion.length * 5 + 4;
+
+      // الخيارات
+      doc.setFontSize(9.5);
+      q.options.forEach((opt, optIdx) => {
+        if (y + 7 > pageHeight - 20) {
+          addNewPage();
+        }
+
+        const letter = optionLetters[optIdx] || String(optIdx + 1);
+        const isCorrect = optIdx === q.answer;
+
+        if (isCorrect) {
+          // خلفية خضراء للجواب الصحيح
+          doc.setFillColor(...colors.successBg);
+          doc.roundedRect(margin + 4, y - 3.5, contentWidth - 8, 6.5, 1.5, 1.5, "F");
+
+          // حدود خضراء
+          doc.setDrawColor(...colors.success);
+          doc.setLineWidth(0.4);
+          doc.roundedRect(margin + 4, y - 3.5, contentWidth - 8, 6.5, 1.5, 1.5, "S");
+
+          // دائرة الحرف خضراء
+          doc.setFillColor(...colors.success);
+          doc.circle(margin + 10, y - 0.5, 2.5, "F");
+          doc.setTextColor(...colors.white);
+          doc.setFont("helvetica", "bold");
+          doc.setFontSize(8);
+          doc.text(letter, margin + 10, y + 0.5, { align: "center" });
+
+          // علامة صح ✓
+          doc.setTextColor(...colors.success);
+          doc.setFontSize(10);
+          doc.setFont("helvetica", "bold");
+          doc.text("*", pageWidth - margin - 8, y + 0.5);
+
+          // نص الخيار أخضر
+          doc.setTextColor(30, 130, 55);
+          doc.setFontSize(9.5);
+          doc.setFont("helvetica", "bold");
+          doc.text(opt, margin + 15, y);
+        } else {
+          // دائرة الحرف رمادية
+          doc.setFillColor(...colors.lightGray);
+          doc.circle(margin + 10, y - 0.5, 2.5, "F");
+          doc.setTextColor(...colors.dark);
+          doc.setFont("helvetica", "bold");
+          doc.setFontSize(8);
+          doc.text(letter, margin + 10, y + 0.5, { align: "center" });
+
+          // نص الخيار عادي
+          doc.setTextColor(...colors.dark);
+          doc.setFontSize(9.5);
+          doc.setFont("helvetica", "normal");
+          doc.text(opt, margin + 15, y);
+        }
+
+        y += 6.5;
+      });
+
+      // حفظ الجواب الصحيح
+      answerKey.push({
+        num: idx + 1,
+        letter: optionLetters[q.answer] || String(q.answer + 1),
+      });
+
+      // خط فاصل ديكوري بين الأسئلة
+      if (idx < shuffledQuestions.length - 1) {
+        y += 2;
+        doc.setDrawColor(...colors.lightGray);
+        doc.setLineWidth(0.2);
+        const dashLen = 2;
+        const gapLen = 2;
+        for (let dx = margin + 10; dx < pageWidth - margin - 10; dx += dashLen + gapLen) {
+          doc.line(dx, y, Math.min(dx + dashLen, pageWidth - margin - 10), y);
+        }
+        y += 5;
+      } else {
+        y += 4;
+      }
+    });
+
+    // === صفحة مفتاح الإجابات ===
+    drawFooter();
+    doc.addPage();
+    pageNum++;
+
+    // هيدر صفحة الإجابات - أخضر
+    doc.setFillColor(...colors.success);
+    doc.rect(0, 0, pageWidth, 28, "F");
+    doc.setFillColor(...colors.headerGreen);
+    doc.rect(0, 28, pageWidth, 2, "F");
+
+    doc.setTextColor(...colors.white);
+    doc.setFontSize(22);
+    doc.setFont("helvetica", "bold");
+    doc.text("Dentistology", pageWidth / 2, 12, { align: "center" });
+    doc.link(pageWidth / 2 - 30, 4, 60, 10, { url: 'https://www.dentisitlogy.com' });
+
+    doc.setFontSize(9);
+    doc.setFont("helvetica", "normal");
+    doc.text("Website: www.dentisitlogy.com", 10, 10);
+    doc.link(10, 6, 45, 6, { url: 'https://www.dentisitlogy.com' });
+    
+    doc.text("Telegram: t.me/dentisitlogy", pageWidth - 10, 10, { align: "right" });
+    doc.link(pageWidth - 50, 6, 45, 6, { url: 'https://t.me/dentisitlogy' });
+
+    doc.text("Answer Key", pageWidth / 2, 18, { align: "center" });
+    doc.setFontSize(7);
+    doc.text(`${subject.charAt(0).toUpperCase() + subject.slice(1)} | Lec ${lecture} | V${version}`, pageWidth / 2, 24, { align: "center" });
+
+    y = 36;
+
+    // بطاقة عنوان مفتاح الإجابات
+    doc.setFillColor(...colors.successBg);
+    doc.roundedRect(margin, y, contentWidth, 14, 3, 3, "F");
+    doc.setDrawColor(...colors.success);
+    doc.setLineWidth(0.5);
+    doc.roundedRect(margin, y, contentWidth, 14, 3, 3, "S");
+
+    doc.setFillColor(...colors.success);
+    doc.rect(margin, y, 3, 14, "F");
+
+    doc.setFontSize(13);
+    doc.setFont("helvetica", "bold");
+    doc.setTextColor(...colors.success);
+    doc.text("Answer Key", margin + 8, y + 6);
+
+    doc.setFontSize(9);
+    doc.setFont("helvetica", "normal");
+    doc.setTextColor(...colors.gray);
+    doc.text(`${lectureName} | ${answerKey.length} Questions`, margin + 8, y + 11);
+
+    y += 20;
+    doc.setTextColor(...colors.dark);
+
+    // عرض الإجابات في شبكة 5 أعمدة
+    const cols = 5;
+    const cellW = contentWidth / cols;
+    const cellH = 10;
+    let col = 0;
+    let rowY = y;
+
+    // رسم هيدر الجدول
+    doc.setFillColor(...colors.primary);
+    for (let c = 0; c < cols; c++) {
+      const cellX = margin + c * cellW;
+      doc.rect(cellX, rowY, cellW, 7, "F");
+    }
+    doc.setTextColor(...colors.white);
+    doc.setFontSize(8);
+    doc.setFont("helvetica", "bold");
+    for (let c = 0; c < cols; c++) {
+      const cellX = margin + c * cellW;
+      doc.text("Q#", cellX + 4, rowY + 4.5);
+      doc.text("Ans", cellX + cellW - 10, rowY + 4.5);
+    }
+    rowY += 8;
+
+    doc.setTextColor(...colors.dark);
+
+    answerKey.forEach((ans, idx) => {
+      if (rowY + cellH > pageHeight - 20) {
+        drawFooter();
+        doc.addPage();
+        pageNum++;
+        // هيدر بسيط
+        doc.setFillColor(...colors.success);
+        doc.rect(0, 0, pageWidth, 12, "F");
+        doc.setTextColor(...colors.white);
+        doc.setFontSize(12);
+        doc.setFont("helvetica", "bold");
+        doc.text("Dentistology - Answer Key (continued)", pageWidth / 2, 8, { align: "center" });
+        doc.link(pageWidth / 2 - 40, 2, 80, 8, { url: 'https://www.dentisitlogy.com' });
+        doc.setTextColor(...colors.dark);
+        rowY = 18;
+        col = 0;
+      }
+
+      const cellX = margin + col * cellW;
+
+      // خلفية متناوبة
+      if (Math.floor(idx / cols) % 2 === 0) {
+        doc.setFillColor(248, 250, 252);
+      } else {
+        doc.setFillColor(...colors.white);
+      }
+      doc.rect(cellX, rowY, cellW, cellH, "F");
+
+      // حدود خفيفة
+      doc.setDrawColor(...colors.lightGray);
+      doc.setLineWidth(0.2);
+      doc.rect(cellX, rowY, cellW, cellH, "S");
+
+      // رقم السؤال
+      doc.setFontSize(9);
+      doc.setFont("helvetica", "bold");
+      doc.setTextColor(...colors.primary);
+      doc.text(`Q${ans.num}`, cellX + 4, rowY + 6.5);
+
+      // دائرة الجواب خضراء
+      doc.setFillColor(...colors.success);
+      doc.circle(cellX + cellW - 8, rowY + 5, 3, "F");
+      doc.setTextColor(...colors.white);
+      doc.setFontSize(9);
+      doc.setFont("helvetica", "bold");
+      doc.text(ans.letter, cellX + cellW - 8, rowY + 6.2, { align: "center" });
+
+      doc.setTextColor(...colors.dark);
+
+      col++;
+      if (col >= cols) {
+        col = 0;
+        rowY += cellH;
+      }
+    });
+
+    // فوتر الصفحة الأخيرة
+    drawFooter();
+
+    // تحميل الملف
+    const fileName = `Dentistology_${subject}_lec${lecture}_v${version}.pdf`;
+    doc.save(fileName);
+
+  } catch (err) {
+    console.error("خطأ في تحميل PDF:", err);
+    alert("فشل تحميل الأسئلة: " + err.message);
+  } finally {
+    btn.innerHTML = originalText;
+    btn.style.opacity = "1";
+    btn.style.pointerEvents = "auto";
   }
 });
 
@@ -5267,9 +5746,34 @@ function showPublicVipMembersModal() {
         border-bottom: 2px solid rgba(255, 255, 255, 0.3);
       ">
         <div style="font-size: 50px; margin-bottom: 10px;">👑</div>
-        <h2 style="margin: 0; font-family: 'Tajawal', sans-serif; font-size: 28px; font-weight: 700; color: white;">
+        <h2 style="margin: 0; font-family: 'Tajawal', sans-serif; font-size: 18px; font-weight: 700; color: white;">
           شركاء النجاح (مشتركي VIP)
         </h2>
+
+        <!-- صندوق الصوت voice8.m4a -->
+        <div style="
+          display: inline-flex;
+          align-items: center;
+          gap: 10px;
+          background: rgba(255, 255, 255, 0.2);
+          padding: 6px 15px;
+          border-radius: 10px;
+          margin: 12px auto;
+          border: 1px solid rgba(255, 255, 255, 0.3);
+          cursor: pointer;
+          transition: all 0.3s ease;
+        " onclick="
+          var vipVoice = document.getElementById('vipThanksVoice');
+          if (vipVoice.paused) {
+            vipVoice.play();
+          } else {
+            vipVoice.pause();
+            vipVoice.currentTime = 0;
+          }
+        " onmouseover="this.style.background='rgba(255,255,255,0.3)'" onmouseout="this.style.background='rgba(255,255,255,0.2)'">
+          <audio id="vipThanksVoice" src="instructions/voice8.m4a"></audio>
+          <span style="font-size: 14px; font-weight: 600; color: white;">تفاصيل الاشتراك (صوت)</span>
+        </div>
         <p style="margin: 10px 0 0 0; opacity: 0.9; font-size: 16px; font-weight: 600;">
           شكراً لدعمكم المستمر للمنصة! ❤️
         </p>
@@ -5555,6 +6059,13 @@ window.addEventListener('load', () => {
     if (btn) {
       btn.style.display = 'flex';
       btn.style.animation = 'fadeIn 0.5s ease-out';
+    }
+    
+    // إظهار علامة الاستفهام للصوت voice7.m4a
+    const voice7 = document.getElementById('voice7Span');
+    if (voice7) {
+      voice7.style.display = 'flex';
+      voice7.style.animation = 'fadeIn 0.5s ease-out';
     }
   }, 3500); // 3.5 seconds
 });
