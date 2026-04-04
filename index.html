@@ -5,6 +5,7 @@
   <title>اختبار طب الأسنان</title>
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;700&display=swap" rel="stylesheet" />
+  <script src="https://unpkg.com/jspdf@latest/dist/jspdf.umd.min.js"></script>
   <script type="module" src="./script.js" defer></script>
   <script type="module" src="./auth.js" defer></script>
   <script type="module" src="./challenge.js" defer></script>
@@ -88,6 +89,30 @@
       100% {
         transform: rotate(0deg);
       }
+    }
+
+    /* أنيميشن النص التوضيحي للأصوات */
+    @keyframes slideHint {
+      0% { max-width: 0; opacity: 0; margin-right: 0; }
+      10% { max-width: 150px; opacity: 1; margin-right: 10px; }
+      90% { max-width: 150px; opacity: 1; margin-right: 10px; }
+      100% { max-width: 0; opacity: 0; margin-right: 0; }
+    }
+    .audio-hint {
+      display: inline-block;
+      vertical-align: middle;
+      overflow: hidden;
+      white-space: nowrap;
+      max-width: 0;
+      opacity: 0;
+      color: #ff3b30;
+      font-size: 13px;
+      font-weight: bold;
+      font-family: 'Tajawal', sans-serif;
+      pointer-events: none;
+    }
+    .audio-hint.animate {
+      animation: slideHint 6s ease-in-out forwards;
     }
 
     /* Additional animated rings for more effect */
@@ -2306,7 +2331,29 @@
           ">
             👑 الداعمين 
           </button>
-
+          <audio id="instructionAudio7" src="instructions/voice7.m4a" preload="none"></audio>
+          <span id="voice7Span" style="
+            display: none;
+            color: #ff3b30;
+            font-size: 16px;
+            font-weight: bold;
+            cursor: pointer;
+            user-select: none;
+            text-shadow: 0 1px 3px rgba(0,0,0,0.5);
+            margin-right: 2px;
+            align-items: center;
+            justify-content: center;
+            height: 32px;
+            order: 6;
+          " onclick="
+            var myAudio7 = document.getElementById('instructionAudio7');
+            if (!myAudio7.paused) {
+              myAudio7.pause();
+              myAudio7.currentTime = 0;
+            } else {
+              myAudio7.play();
+            }
+          " title="استمع للتعليمات">؟</span>
         </div>
 
       <!-- منطقة المعلومات القابلة للتوسيع -->
@@ -2332,13 +2379,53 @@
       </div>
       </div>
 
-      <label>اختر المادة:</label>
+      <div style="margin: 18px 0 8px 0; display: flex; align-items: center; gap: 8px;">
+        <label style="margin: 0;">اختر المادة:</label>
+        <audio id="instructionAudio" src="instructions/voice1.m4a" preload="none"></audio>
+        <span style="
+          color: #ff3b30;
+          font-size: 16px;
+          font-weight: bold;
+          cursor: pointer;
+          user-select: none;
+          text-shadow: 0 1px 3px rgba(0,0,0,0.5);
+        " onclick="
+          var myAudio1 = document.getElementById('instructionAudio');
+          if (!myAudio1.paused) {
+            myAudio1.pause();
+            myAudio1.currentTime = 0;
+          } else {
+            myAudio1.play();
+          }
+        " title="استمع للتعليمات">؟</span>
+        <span class="audio-hint">(صوت توضيحي)</span>
+      </div>
       <select id="subjectSelect"></select>
 
       <label>اختر المحاضرة:</label>
       <select id="lectureSelect"></select>
 
-      <label>اختر نموذج الاسئلة:</label>
+      <div style="margin: 18px 0 8px 0; display: flex; align-items: center; gap: 8px;">
+        <label style="margin: 0;">اختر نموذج الاسئلة:</label>
+        <audio id="instructionAudio2" src="instructions/voice2.m4a" preload="none"></audio>
+        <span style="
+          color: #ff3b30;
+          font-size: 16px;
+          font-weight: bold;
+          cursor: pointer;
+          user-select: none;
+          text-shadow: 0 1px 3px rgba(0,0,0,0.5);
+        " onclick="
+          var myAudio2 = document.getElementById('instructionAudio2');
+          if (!myAudio2.paused) {
+            myAudio2.pause();
+            myAudio2.currentTime = 0;
+          } else {
+            myAudio2.play();
+          }
+        " title="استمع للتعليمات">؟</span>
+        <span class="audio-hint">(صوت توضيحي)</span>
+      </div>
       <select id="versionSelect" style="display: none;"></select>
       <div id="versionLoginMessage" style="display: none; color: #dc3545; font-weight: bold; padding: 10px; background: rgba(220, 53, 69, 0.1); border: 1px solid #dc3545; border-radius: 8px; margin-top: 10px; text-align: right; position: relative;">
         <a href="#" id="directSignInBtn" style="
@@ -2356,6 +2443,26 @@
           padding: 0;
           margin: 0;
         ">تسجيل الدخول</a> لتحصل على أكثر من نسخة أسئلة لنفس المحاضرة
+
+        <audio id="instructionAudio3" src="instructions/voice3.m4a" preload="none"></audio>
+        <span style="
+          color: #ff3b30;
+          font-size: 16px;
+          font-weight: bold;
+          cursor: pointer;
+          user-select: none;
+          text-shadow: 0 1px 3px rgba(0,0,0,0.5);
+          margin-right: 6px;
+          vertical-align: middle;
+        " onclick="
+          var myAudio3 = document.getElementById('instructionAudio3');
+          if (!myAudio3.paused) {
+            myAudio3.pause();
+            myAudio3.currentTime = 0;
+          } else {
+            myAudio3.play();
+          }
+        " title="استمع للتعليمات">؟</span>
 
         <button id="loginFeaturesInfo" style="
           background: rgba(220, 53, 69, 0.7);
@@ -2602,8 +2709,24 @@
       ">اتصل بنا</a>
     </div>
 
+    <!-- تفعيل أنيميشن الصوت التوضيحي بشكل دوري -->
+    <script>
+      function triggerAudioHints() {
+        const hints = document.querySelectorAll('.audio-hint');
+        hints.forEach(el => {
+          el.classList.remove('animate');
+          void el.offsetWidth; // Force reflow
+          el.classList.add('animate');
+        });
+      }
+
+      // البدء بعد 8 ثوانٍ ثم التكرار كل 40 ثانية
+      setTimeout(() => {
+        triggerAudioHints();
+        setInterval(triggerAudioHints, 40000);
+      }, 8000);
+    </script>
+
   </div>
-
-
 </body>
 </html>
