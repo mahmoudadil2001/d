@@ -869,31 +869,43 @@ document.getElementById("downloadPdfBtn").addEventListener("click", async () => 
     // فوتر الصفحة الأخيرة
     drawFooter();
 
-    // تحميل الملف
+    // تحميل وفتح الملف
     const fileName = `Dentistology_${subject}_lec${lecture}_v${version}.pdf`;
     
-    // التحقق من البيئة (تلجرام أو جوال عموماً)
+    // التحقق من البيئة
     const isTelegram = /Telegram/i.test(navigator.userAgent);
     const isMobile = /Android|iPhone|iPad|iPod/i.test(navigator.userAgent);
     const pdfBlob = doc.output('blob');
+    const pdfUrl = URL.createObjectURL(pdfBlob);
 
-    // محاولة استخدام واجهة مشاركة الملفات إذا كانت متوفرة وتناسب الجوال/تلجرام
+    // 1. محاولة الفتح التلقائي للمتصفحات التي تدعم النوافذ المنبثقة
+    const newWindow = window.open(pdfUrl, '_blank');
+    if (!newWindow || newWindow.closed || typeof newWindow.closed == 'undefined') {
+      console.warn("تم حظر النافذة المنبثقة، سيتم الاعتماد على ميزة المشاركة أو التحميل المباشر.");
+    }
+
+    // 2. استخدام واجهة المشاركة (للجوال وتلجرام) - الخيار الأكثر فاعلية للفتح المباشر
     if (navigator.share && (isTelegram || isMobile)) {
       try {
         const file = new File([pdfBlob], fileName, { type: 'application/pdf' });
         await navigator.share({
           files: [file],
-          title: 'تحميل ملف الأسئلة',
+          title: 'فتح ملف الأسئلة',
           text: `تم إنشاء ملف PDF بنجاح لـ ${subject} - المحاضرة ${lecture}`
         });
       } catch (shareErr) {
         console.warn("فشلت المشاركة، التراجع للتحميل التقليدي:", shareErr);
-        doc.save(fileName);
+        if (!newWindow) doc.save(fileName); // فقط إذا لم يفتح في نافذة جديدة
       }
     } else {
-      // الطريقة الافتراضية للمتصفحات العادية على الكمبيوتر
-      doc.save(fileName);
+      // 3. التحميل التقليدي (للكومبيوتر) في حال لم تفتح النافذة الجديدة
+      if (!newWindow) {
+        doc.save(fileName);
+      }
     }
+
+    // تنظيف الذاكرة بعد فترة قصيرة
+    setTimeout(() => URL.revokeObjectURL(pdfUrl), 1000 * 60);
 
   } catch (err) {
     console.error("خطأ في تحميل PDF:", err);
