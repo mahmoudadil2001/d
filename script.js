@@ -285,6 +285,11 @@ moreOptionsDiv.innerHTML = `
       📄 تحميل PDF
     </button>
     <audio id="instructionAudio4" src="instructions/voice4.m4a" preload="none"></audio>
+    <div id="instructionAudio4Ripple" class="audio-ripple">
+      <div class="bar"></div>
+      <div class="bar"></div>
+      <div class="bar"></div>
+    </div>
     <span style="
       color: #ff3b30;
       font-size: 16px;
@@ -292,7 +297,6 @@ moreOptionsDiv.innerHTML = `
       cursor: pointer;
       user-select: none;
       text-shadow: 0 1px 3px rgba(0,0,0,0.5);
-      margin-right: 2px;
     " onclick="
       var myAudio4 = document.getElementById('instructionAudio4');
       if (!myAudio4.paused) {
@@ -5762,6 +5766,7 @@ function showPublicVipMembersModal() {
           border: 1px solid rgba(255, 255, 255, 0.3);
           cursor: pointer;
           transition: all 0.3s ease;
+          width: fit-content;
         " onclick="
           var vipVoice = document.getElementById('vipThanksVoice');
           if (vipVoice.paused) {
@@ -5771,6 +5776,11 @@ function showPublicVipMembersModal() {
             vipVoice.currentTime = 0;
           }
         " onmouseover="this.style.background='rgba(255,255,255,0.3)'" onmouseout="this.style.background='rgba(255,255,255,0.2)'">
+          <div id="vipRippleContainer" class="audio-ripple">
+            <div class="bar"></div>
+            <div class="bar"></div>
+            <div class="bar"></div>
+          </div>
           <audio id="vipThanksVoice" src="instructions/voice8.m4a"></audio>
           <span style="font-size: 14px; font-weight: 600; color: white;">تفاصيل الاشتراك (صوت)</span>
         </div>
@@ -6062,10 +6072,10 @@ window.addEventListener('load', () => {
     }
     
     // إظهار علامة الاستفهام للصوت voice7.m4a
-    const voice7 = document.getElementById('voice7Span');
-    if (voice7) {
-      voice7.style.display = 'flex';
-      voice7.style.animation = 'fadeIn 0.5s ease-out';
+    const voice7Span = document.getElementById('voice7Span');
+    if (voice7Span) {
+      voice7Span.style.display = 'flex';
+      voice7Span.style.animation = 'fadeIn 0.5s ease-out';
     }
   }, 3500); // 3.5 seconds
 });
@@ -7356,3 +7366,76 @@ document.addEventListener('click', function (e) {
   }
 
 });
+
+// ==========================================
+// Audio Ripple & Background Preloading Logic
+// ==========================================
+(function() {
+  // Mapping audio element IDs to their ripple container IDs
+  const audioRippleMap = {
+    'instructionAudio': 'instructionAudioRipple',
+    'instructionAudio2': 'instructionAudio2Ripple',
+    'instructionAudio3': 'instructionAudio3Ripple',
+    'instructionAudio4': 'instructionAudio4Ripple',
+    'instructionAudio7': 'voice7Ripple',
+    'vipThanksVoice': 'vipRippleContainer'
+  };
+
+  // Function to toggle the "playing" class on the ripple container
+  const handleAudioState = (e, isPlaying) => {
+    const rippleId = audioRippleMap[e.target.id];
+    if (rippleId) {
+      const ripple = document.getElementById(rippleId);
+      if (ripple) {
+        if (isPlaying) {
+          ripple.classList.add('playing');
+        } else {
+          ripple.classList.remove('playing');
+        }
+      }
+    }
+  };
+
+  // Using capture phase to listen for events that don't bubble
+  document.addEventListener('play', (e) => {
+    // Mutual exclusion: pause all other audio elements when one starts
+    const allAudios = document.querySelectorAll('audio');
+    allAudios.forEach(audio => {
+      if (audio !== e.target && !audio.paused) {
+        audio.pause();
+        audio.currentTime = 0; // Reset to beginning for a clean restart
+      }
+    });
+
+    handleAudioState(e, true);
+  }, true);
+
+  document.addEventListener('pause', (e) => handleAudioState(e, false), true);
+  document.addEventListener('ended', (e) => handleAudioState(e, false), true);
+
+  // Background preloading after 10 seconds delay
+  // We keep a reference to the objects to ensure they are loaded and cached
+  const preloadedAudios = [];
+  setTimeout(() => {
+    console.log('🚀 Dentistology: Starting background preloading for all instruction sounds...');
+    const audioFiles = [
+      'instructions/voice1.m4a',
+      'instructions/voice2.m4a',
+      'instructions/voice3.m4a',
+      'instructions/voice4.m4a',
+      'instructions/voice5.m4a',
+      'instructions/voice6.m4a',
+      'instructions/voice7.m4a',
+      'instructions/voice8.m4a'
+    ];
+
+    audioFiles.forEach(src => {
+      const audio = new Audio();
+      audio.src = src;
+      audio.preload = 'auto';
+      audio.load(); // Forces the browser to start fetching
+      preloadedAudios.push(audio); // Preserve reference
+    });
+    console.log('✅ Dentistology: Audio preloading successfully queued.');
+  }, 10000);
+})();
