@@ -12,6 +12,51 @@ let chatManager = null;
 // جعل authManager متاحاً عالمياً
 window.authManager = authManager;
 
+// دالة لإظهار تنبيهات بسيطة بجانب الأزرار أو في زاوية الشاشة
+function showToast(message, type = 'success') {
+  const toast = document.createElement('div');
+  toast.className = 'custom-toast';
+  toast.innerHTML = `
+    <div style="
+      position: fixed;
+      bottom: 20px;
+      left: 50%;
+      transform: translateX(-50%);
+      background: ${type === 'success' ? 'linear-gradient(135deg, #28a745, #20c997)' : 'linear-gradient(135deg, #dc3545, #c82333)'};
+      color: white;
+      padding: 12px 25px;
+      border-radius: 50px;
+      z-index: 10001;
+      font-family: 'Tajawal', sans-serif;
+      font-weight: 600;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+      animation: slideUpToast 0.5s ease-out;
+      text-align: center;
+      min-width: 250px;
+    ">
+      ${message}
+    </div>
+    <style>
+      @keyframes slideUpToast {
+        from { bottom: -50px; opacity: 0; }
+        to { bottom: 20px; opacity: 1; }
+      }
+      @keyframes slideDownToast {
+        from { bottom: 20px; opacity: 1; }
+        to { bottom: -50px; opacity: 0; }
+      }
+    </style>
+  `;
+  document.body.appendChild(toast);
+  
+  setTimeout(() => {
+    toast.style.animation = 'slideDownToast 0.5s ease-in forwards';
+    setTimeout(() => {
+      if (toast.parentNode) document.body.removeChild(toast);
+    }, 500);
+  }, 4000);
+}
+
 // تهيئة ChatManager بعد تحميل الصفحة بالكامل
 document.addEventListener('DOMContentLoaded', () => {
   try {
@@ -869,43 +914,30 @@ document.getElementById("downloadPdfBtn").addEventListener("click", async () => 
     // فوتر الصفحة الأخيرة
     drawFooter();
 
-    // تحميل وفتح الملف
+    // تحميل ملف PDF - الطريقة الأكثر استقراراً لتجنب الصفحة البيضاء
     const fileName = `Dentistology_${subject}_lec${lecture}_v${version}.pdf`;
     
     // التحقق من البيئة
-    const isTelegram = /Telegram/i.test(navigator.userAgent);
     const isMobile = /Android|iPhone|iPad|iPod/i.test(navigator.userAgent);
-    const pdfBlob = doc.output('blob');
-    const pdfUrl = URL.createObjectURL(pdfBlob);
+    const isTelegram = /Telegram/i.test(navigator.userAgent);
 
-    // 1. محاولة الفتح التلقائي للمتصفحات التي تدعم النوافذ المنبثقة
-    const newWindow = window.open(pdfUrl, '_blank');
-    if (!newWindow || newWindow.closed || typeof newWindow.closed == 'undefined') {
-      console.warn("تم حظر النافذة المنبثقة، سيتم الاعتماد على ميزة المشاركة أو التحميل المباشر.");
-    }
-
-    // 2. استخدام واجهة المشاركة (للجوال وتلجرام) - الخيار الأكثر فاعلية للفتح المباشر
-    if (navigator.share && (isTelegram || isMobile)) {
-      try {
-        const file = new File([pdfBlob], fileName, { type: 'application/pdf' });
-        await navigator.share({
-          files: [file],
-          title: 'فتح ملف الأسئلة',
-          text: `تم إنشاء ملف PDF بنجاح لـ ${subject} - المحاضرة ${lecture}`
-        });
-      } catch (shareErr) {
-        console.warn("فشلت المشاركة، التراجع للتحميل التقليدي:", shareErr);
-        if (!newWindow) doc.save(fileName); // فقط إذا لم يفتح في نافذة جديدة
-      }
+    if (isMobile || isTelegram) {
+      // للموبايل وتلجرام: نستخدم التحميل المباشر فقط لتجنب المشاكل التقنية
+      doc.save(fileName);
+      showToast("جاري التحميل... يرجى فتح الملف من قائمة التنبيهات في هاتفك 📂");
     } else {
-      // 3. التحميل التقليدي (للكومبيوتر) في حال لم تفتح النافذة الجديدة
-      if (!newWindow) {
-        doc.save(fileName);
+      // للكمبيوتر: نحاول الفتح في نافذة جديدة أو التحميل المباشر
+      const pdfBlob = doc.output('blob');
+      const pdfUrl = URL.createObjectURL(pdfBlob);
+      const newWindow = window.open(pdfUrl, '_blank');
+      
+      if (!newWindow || newWindow.closed || typeof newWindow.closed == 'undefined') {
+        doc.save(fileName); // تحميل مباشر في حال منع الـ popup
       }
+      
+      // تنظيف الذاكرة
+      setTimeout(() => URL.revokeObjectURL(pdfUrl), 1000 * 60);
     }
-
-    // تنظيف الذاكرة بعد فترة قصيرة
-    setTimeout(() => URL.revokeObjectURL(pdfUrl), 1000 * 60);
 
   } catch (err) {
     console.error("خطأ في تحميل PDF:", err);
