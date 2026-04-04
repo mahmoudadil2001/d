@@ -915,23 +915,20 @@ document.getElementById("downloadPdfBtn").addEventListener("click", async () => 
     const fileName = `Dentistology_${subject}_lec${lecture}_v${version}.pdf`.replace(/\s+/g, '_');
     const userAgent = navigator.userAgent;
     
-    // فحص دقيق للبيئة
+    // فحص دقيق وشامل للبيئة
     const isAndroid = /Android/i.test(userAgent);
-    const isTelegram = /Telegram/i.test(userAgent);
+    const isTelegram = /Telegram|Messenger/i.test(userAgent);
     const isAndroidTelegram = isAndroid && isTelegram;
-    const isIOS = /iPhone|iPad|iPod/i.test(userAgent);
-    const isMobile = isAndroid || isIOS || /BlackBerry|IEMobile|Opera Mini/i.test(userAgent);
+    const isMobile = isAndroid || /iPhone|iPad|iPod/i.test(userAgent);
 
     if (isAndroidTelegram) {
-      // حالة خاصة: تلجرام أندرويد فقط - أكثر عرضة للمشاكل التقنية
+      // === عزل صارم لبيئة تلجرام أندرويد ===
+      // نمنع تماماً window.open أو doc.save هنا لمنع "بياض الصفحة"
       try {
         const pdfBlob = doc.output('blob');
         const file = new File([pdfBlob], fileName, { type: 'application/pdf' });
         
-        // التحقق من دعم المشاركة "للملفات" تحديداً
-        const canShareFiles = navigator.share && navigator.canShare && navigator.canShare({ files: [file] });
-
-        if (canShareFiles) {
+        if (navigator.share && navigator.canShare && navigator.canShare({ files: [file] })) {
           await navigator.share({
             files: [file],
             title: 'فتح ملف الأسئلة',
@@ -939,28 +936,25 @@ document.getElementById("downloadPdfBtn").addEventListener("click", async () => 
           });
           showToast("تم فتح قائمة المشاركة 📂");
         } else {
-          // بديل مباشر في حال عدم دعم المشاركة العميقة
-          doc.save(fileName);
-          showToast("جاري التحميل... تحقق من التنبيهات 📂");
+          // إذا لم تتوفر المشاركة، نظهر رسالة توجيهية دون أن يتغير لون الصفحة
+          showToast("⚠️ متصفحك الحالي لا يدعم التحميل. اضغط (⋮) بالأعلى واختر 'فتح في Chrome'.", "error");
         }
       } catch (shareErr) {
-        console.warn("حدث خلل في تلجرام أندرويد:", shareErr);
-        // توجيه ذكي للمستخدم في حال فشل الطريقة التلقائية
-        showToast("⚠️ حدث خلل! اضغط (⋮) بالأعلى واختر 'فتح في Chrome' للتحميل.", "error");
-        doc.save(fileName); // محاولة أخيرة
+        console.warn("فشلت المشاركة في تلجرام:", shareErr);
+        showToast("⚠️ حدث خلل! يرجى اختيار 'فتح في Chrome' من القائمة بالأعلى.", "error");
       }
     } else {
-      // أي بيئة أخرى (iOS، كمبيوتر، متصفحات أندرويد العادية): تحميل وفتح تقليدي
+      // === بقية البيئات (iOS، كمبيوتر، أندرويد عادي) ===
       const pdfBlob = doc.output('blob');
       const pdfUrl = URL.createObjectURL(pdfBlob);
       
-      // محاولة الفتح التلقائي في نافذة جديدة
+      // محاولة فتح تلقائي في نافذة جديدة (تعمل في iOS والكمبيوتر)
       const newWindow = window.open(pdfUrl, '_blank');
       
-      // إذا فشلت النافذة المنبثقة أو كنا على جوال (غير تلجرام أندرويد) نقوم بالتحميل المباشر
+      // إذا فشلت النافذة أو كنا على جوال، نقوم بالتحميل المباشر
       if (!newWindow || isMobile) {
         doc.save(fileName);
-        if (isMobile) showToast("جاري التحميل... يرجى فتح الملف من التنبيهات 📂");
+        if (isMobile) showToast("جاري التحميل... تحقق من التنبيهات 📂");
       }
       
       // تنظيف الذاكرة
