@@ -442,6 +442,101 @@ document.getElementById("moreOptionsFunToggle").addEventListener("click", () => 
   }
 });
 
+// دالة تحميل ذكية للـ PDF تدعم جميع المتصفحات وخاصة Telegram Android
+function smartDownloadPDF(doc, fileName) {
+  const isTelegram = /Telegram/i.test(navigator.userAgent);
+  const isAndroid = /Android/i.test(navigator.userAgent);
+
+  console.log("Download attempt - Telegram:", isTelegram, "Android:", isAndroid);
+
+  try {
+    if (!isTelegram) {
+      doc.save(fileName);
+      return;
+    }
+  } catch (e) {
+    console.error("Standard save failed:", e);
+  }
+
+  // Fallback 1: Blob URL and Window Open
+  try {
+    const blob = doc.output("blob");
+    const url = URL.createObjectURL(blob);
+    const newWindow = window.open(url, "_blank");
+    if (newWindow) return;
+  } catch (e) {
+    console.error("Window open fallback failed:", e);
+  }
+
+  // Fallback 2: Hidden Iframe
+  try {
+    const blob = doc.output("blob");
+    const url = URL.createObjectURL(blob);
+    const iframe = document.createElement("iframe");
+    iframe.style.display = "none";
+    iframe.src = url;
+    document.body.appendChild(iframe);
+    setTimeout(() => document.body.removeChild(iframe), 5000);
+    return;
+  } catch (e) {
+    console.error("Iframe fallback failed:", e);
+  }
+
+  // Fallback 3: Forced Anchor Click
+  try {
+    const blob = doc.output("blob");
+    const url = URL.createObjectURL(blob);
+    const a = document.createElement("a");
+    a.href = url;
+    a.download = fileName;
+    document.body.appendChild(a);
+    a.click();
+    document.body.removeChild(a);
+    return;
+  } catch (e) {
+    console.error("Anchor fallback failed:", e);
+  }
+
+  // Fallback 4: Direct Redirect (Last Resort)
+  const blob = doc.output("blob");
+  const url = URL.createObjectURL(blob);
+  window.location.href = url;
+}
+
+// دالة متوافقة لتحميل البيانات بدلاً من import() الديناميكي الذي قد يفشل في WebView
+async function loadDataCompat(path, variableName = 'questions') {
+  try {
+    // المحاولة الأولى: import() الديناميكي (للمتصفحات الحديثة)
+    const module = await import(path);
+    return module[variableName];
+  } catch (e) {
+    console.warn(`Dynamic import failed for ${path}, falling back to fetch:`, e);
+    // المحاولة الثانية: fetch وتفكيك النص (للمتصفحات القديمة وTelegram WebView)
+    try {
+      const response = await fetch(path);
+      if (!response.ok) throw new Error(`HTTP error! status: ${response.status}`);
+      const text = await response.text();
+      
+      // استخراج المصفوفة أو الكائن
+      const startChar = variableName === 'questions' ? '[' : '{';
+      const endChar = variableName === 'questions' ? ']' : '}';
+      
+      const startIdx = text.indexOf(startChar);
+      const endIdx = text.lastIndexOf(endChar) + 1;
+      
+      if (startIdx !== -1 && endIdx !== -1) {
+        const dataStr = text.substring(startIdx, endIdx);
+        // استخدام Function لتقييم البيانات بدلاً من JSON.parse لتجنب مشاكل trailing commas و single quotes
+        return new Function(`return ${dataStr}`)();
+      }
+      throw new Error(`Could not find ${variableName} in file content`);
+    } catch (err) {
+      console.error(`Fallback fetch failed for ${path}:`, err);
+      throw err;
+    }
+  }
+}
+
 // دالة تحميل الأسئلة كملف PDF مع ترتيب عشوائي للأجوبة وتنسيق احترافي
 document.getElementById("downloadPdfBtn").addEventListener("click", async () => {
   const subject = subjectSelect.value;
@@ -461,8 +556,7 @@ document.getElementById("downloadPdfBtn").addEventListener("click", async () => 
 
   try {
     const path = `./${subject}/${subject}${lecture}/${subject}${lecture}_v${version}.js`;
-    const module = await import(path);
-    let questions = module.questions;
+    const questions = await loadDataCompat(path);
 
     if (!questions || !Array.isArray(questions) || questions.length === 0) {
       throw new Error("لا توجد أسئلة في هذه النسخة");
@@ -871,7 +965,7 @@ document.getElementById("downloadPdfBtn").addEventListener("click", async () => 
 
     // تحميل الملف
     const fileName = `Dentistology_${subject}_lec${lecture}_v${version}.pdf`;
-    doc.save(fileName);
+    smartDownloadPDF(doc, fileName);
 
   } catch (err) {
     console.error("خطأ في تحميل PDF:", err);
@@ -1619,8 +1713,7 @@ document.addEventListener('DOMContentLoaded', () => {
       const path = `./${subject}/${subject}${lecture}/${subject}${lecture}_v${version}.js`;
 
       try {
-        const module = await import(path);
-        let questions = module.questions;
+        const questions = await loadDataCompat(path);
 
         if (!questions || !Array.isArray(questions) || questions.length === 0) {
           throw new Error('No valid questions found in the module');
@@ -1672,7 +1765,7 @@ document.addEventListener('DOMContentLoaded', () => {
 // تحميل فئات الأسئلة الترفيهية
 async function loadFunCategories() {
   try {
-    const { funCategories } = await import('./forfun/funCategories.js');
+    const funCategories = await loadDataCompat('./forfun/funCategories.js', 'funCategories');
     const funCategorySelect = document.getElementById("funCategorySelect");
 
     // مسح الخيارات الموجودة
@@ -1716,8 +1809,7 @@ document.getElementById("loadFunBtn").addEventListener("click", async () => {
   const path = `./forfun/${selectedCategory}.js`; // افتراض أن الملفات في مجلد forfun
 
   try {
-    const module = await import(path);
-    let questions = module.questions;
+    const questions = await loadDataCompat(path);
 
     if (!questions || !Array.isArray(questions) || questions.length === 0) {
       throw new Error('No valid questions found in the module');
