@@ -922,25 +922,25 @@ document.getElementById("downloadPdfBtn").addEventListener("click", async () => 
     const isMobile = isAndroid || /iPhone|iPad|iPod/i.test(userAgent);
 
     if (isAndroidTelegram) {
-      // === عزل صارم لبيئة تلجرام أندرويد ===
-      // نمنع تماماً window.open أو doc.save هنا لمنع "بياض الصفحة"
+      // === توجيه تلقائي لمستعرض الجهاز الافتراضي لضمان نجاح التحميل ===
       try {
-        const pdfBlob = doc.output('blob');
-        const file = new File([pdfBlob], fileName, { type: 'application/pdf' });
+        const currentUrl = window.location.origin + window.location.pathname;
+        const params = new URLSearchParams({
+          subject: subject,
+          lecture: lecture,
+          version: version,
+          autoDownload: 'true'
+        });
+        const finalUrl = `${currentUrl}?${params.toString()}`;
+        // استخدام Intent URL لإجبار أندرويد على الخروج من WebView لمتصفح خارجي (المتصفح الافتراضي)
+        const intentUrl = `intent://${finalUrl.replace(/^https?:\/\//, '')}#Intent;scheme=https;action=android.intent.action.VIEW;end;`;
         
-        if (navigator.share && navigator.canShare && navigator.canShare({ files: [file] })) {
-          await navigator.share({
-            files: [file],
-            title: 'فتح ملف الأسئلة',
-            text: `ملف PDF: ${subject} - ${lecture}`
-          });
-          showToast("تم فتح قائمة المشاركة 📂");
-        } else {
-          // إذا لم تتوفر المشاركة، نظهر رسالة توجيهية دون أن يتغير لون الصفحة
-          showToast("⚠️ متصفحك الحالي لا يدعم التحميل. اضغط (⋮) بالأعلى واختر 'فتح في Chrome'.", "error");
-        }
-      } catch (shareErr) {
-        console.warn("فشلت المشاركة في تلجرام:", shareErr);
+        showToast("🚀 جاري الانتقال للمتصفح الافتراضي لبدء التحميل...");
+        setTimeout(() => {
+          window.location.href = intentUrl;
+        }, 1500);
+      } catch (err) {
+        console.error("فشل التوجيه:", err);
         showToast("⚠️ حدث خلل! يرجى اختيار 'فتح في Chrome' من القائمة بالأعلى.", "error");
       }
     } else {
@@ -6780,7 +6780,42 @@ document.addEventListener('DOMContentLoaded', () => {
   // تأكد من أن جميع العناصر محملة قبل تشغيل الحدث
   setTimeout(() => {
     if (subjectSelect) {
-      subjectSelect.dispatchEvent(new Event("change"));
+      // التحقق من وجود طلب تحميل تلقائي (من توجيه تليجرام أندرويد)
+      const urlParams = new URLSearchParams(window.location.search);
+      if (urlParams.get('autoDownload') === 'true') {
+        const targetSubject = urlParams.get('subject');
+        const targetLecture = urlParams.get('lecture');
+        const targetVersion = urlParams.get('version');
+
+        if (targetSubject) {
+          subjectSelect.value = targetSubject;
+          subjectSelect.dispatchEvent(new Event("change"));
+          
+          // ننتظر قليلاً حتى تمتلىء القائمة الثانية
+          setTimeout(() => {
+            if (targetLecture) {
+              lectureSelect.value = targetLecture;
+              lectureSelect.dispatchEvent(new Event("change"));
+              
+              // ننتظر قليلاً حتى تمتلىء القائمة الثالثة
+              setTimeout(() => {
+                if (targetVersion) {
+                  versionSelect.value = targetVersion;
+                  // تشغيل زر التحميل تلقائياً
+                  const downloadBtn = document.getElementById("downloadPdfBtn");
+                  if (downloadBtn) {
+                    showToast("⚙️ جاري بدء التحميل التلقائي...");
+                    downloadBtn.click();
+                  }
+                }
+              }, 500);
+            }
+          }, 500);
+        }
+      } else {
+        // التهيئة العادية إذا لم يكن هناك تحميل تلقائي
+        subjectSelect.dispatchEvent(new Event("change"));
+      }
     }
   }, 200);
 });
