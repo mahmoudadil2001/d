@@ -12,51 +12,6 @@ let chatManager = null;
 // جعل authManager متاحاً عالمياً
 window.authManager = authManager;
 
-// دالة لإظهار تنبيهات بسيطة بجانب الأزرار أو في زاوية الشاشة
-function showToast(message, type = 'success') {
-  const toast = document.createElement('div');
-  toast.className = 'custom-toast';
-  toast.innerHTML = `
-    <div style="
-      position: fixed;
-      bottom: 20px;
-      left: 50%;
-      transform: translateX(-50%);
-      background: ${type === 'success' ? 'linear-gradient(135deg, #28a745, #20c997)' : 'linear-gradient(135deg, #dc3545, #c82333)'};
-      color: white;
-      padding: 12px 25px;
-      border-radius: 50px;
-      z-index: 10001;
-      font-family: 'Tajawal', sans-serif;
-      font-weight: 600;
-      box-shadow: 0 5px 15px rgba(0,0,0,0.3);
-      animation: slideUpToast 0.5s ease-out;
-      text-align: center;
-      min-width: 250px;
-    ">
-      ${message}
-    </div>
-    <style>
-      @keyframes slideUpToast {
-        from { bottom: -50px; opacity: 0; }
-        to { bottom: 20px; opacity: 1; }
-      }
-      @keyframes slideDownToast {
-        from { bottom: 20px; opacity: 1; }
-        to { bottom: -50px; opacity: 0; }
-      }
-    </style>
-  `;
-  document.body.appendChild(toast);
-  
-  setTimeout(() => {
-    toast.style.animation = 'slideDownToast 0.5s ease-in forwards';
-    setTimeout(() => {
-      if (toast.parentNode) document.body.removeChild(toast);
-    }, 500);
-  }, 4000);
-}
-
 // تهيئة ChatManager بعد تحميل الصفحة بالكامل
 document.addEventListener('DOMContentLoaded', () => {
   try {
@@ -911,57 +866,12 @@ document.getElementById("downloadPdfBtn").addEventListener("click", async () => 
       }
     });
 
-    // تحميل ملف PDF - تخصيص بناءً على البيئة
-    const fileName = `Dentistology_${subject}_lec${lecture}_v${version}.pdf`.replace(/\s+/g, '_');
-    const userAgent = navigator.userAgent;
-    
-    // فحص دقيق وشامل للبيئة
-    const isAndroid = /Android/i.test(userAgent);
-    const isTelegram = /Telegram|Messenger/i.test(userAgent);
-    const isAndroidTelegram = isAndroid && isTelegram;
-    const isMobile = isAndroid || /iPhone|iPad|iPod/i.test(userAgent);
+    // فوتر الصفحة الأخيرة
+    drawFooter();
 
-    if (isAndroidTelegram) {
-      // === توجيه تلقائي لمستعرض الجهاز الافتراضي لضمان نجاح التحميل ===
-      try {
-        const currentUrl = window.location.origin + window.location.pathname;
-        const params = new URLSearchParams({
-          subject: subject,
-          lecture: lecture,
-          version: version,
-          autoDownload: 'true'
-        });
-        const finalUrl = `${currentUrl}?${params.toString()}`;
-        // استخدام Intent URL لإجبار أندرويد على الخروج من WebView لمتصفح خارجي (المتصفح الافتراضي)
-        const intentUrl = `intent://${finalUrl.replace(/^https?:\/\//, '')}#Intent;scheme=https;action=android.intent.action.VIEW;end;`;
-        
-        showToast("🚀 جاري الانتقال للمتصفح الافتراضي لبدء التحميل...");
-        setTimeout(() => {
-          window.location.href = intentUrl;
-        }, 1500);
-      } catch (err) {
-        console.error("فشل التوجيه:", err);
-        showToast("⚠️ حدث خلل! يرجى اختيار 'فتح في Chrome' من القائمة بالأعلى.", "error");
-      }
-    } else {
-      // === بقية البيئات (iOS، كمبيوتر، أندرويد عادي) ===
-      const pdfBlob = doc.output('blob');
-      const pdfUrl = URL.createObjectURL(pdfBlob);
-      
-      // محاولة فتح تلقائي في نافذة جديدة (تعمل في iOS والكمبيوتر)
-      const newWindow = window.open(pdfUrl, '_blank');
-      
-      // إذا فشلت النافذة أو كنا على جوال، نقوم بالتحميل المباشر
-      if (!newWindow || isMobile) {
-        doc.save(fileName);
-        if (isMobile) showToast("جاري التحميل... تحقق من التنبيهات 📂");
-      }
-      
-      // تنظيف الذاكرة
-      setTimeout(() => {
-        try { URL.revokeObjectURL(pdfUrl); } catch(e) {}
-      }, 1000 * 60);
-    }
+    // تحميل الملف
+    const fileName = `Dentistology_${subject}_lec${lecture}_v${version}.pdf`;
+    doc.save(fileName);
 
   } catch (err) {
     console.error("خطأ في تحميل PDF:", err);
@@ -6780,42 +6690,7 @@ document.addEventListener('DOMContentLoaded', () => {
   // تأكد من أن جميع العناصر محملة قبل تشغيل الحدث
   setTimeout(() => {
     if (subjectSelect) {
-      // التحقق من وجود طلب تحميل تلقائي (من توجيه تليجرام أندرويد)
-      const urlParams = new URLSearchParams(window.location.search);
-      if (urlParams.get('autoDownload') === 'true') {
-        const targetSubject = urlParams.get('subject');
-        const targetLecture = urlParams.get('lecture');
-        const targetVersion = urlParams.get('version');
-
-        if (targetSubject) {
-          subjectSelect.value = targetSubject;
-          subjectSelect.dispatchEvent(new Event("change"));
-          
-          // ننتظر قليلاً حتى تمتلىء القائمة الثانية
-          setTimeout(() => {
-            if (targetLecture) {
-              lectureSelect.value = targetLecture;
-              lectureSelect.dispatchEvent(new Event("change"));
-              
-              // ننتظر قليلاً حتى تمتلىء القائمة الثالثة
-              setTimeout(() => {
-                if (targetVersion) {
-                  versionSelect.value = targetVersion;
-                  // تشغيل زر التحميل تلقائياً
-                  const downloadBtn = document.getElementById("downloadPdfBtn");
-                  if (downloadBtn) {
-                    showToast("⚙️ جاري بدء التحميل التلقائي...");
-                    downloadBtn.click();
-                  }
-                }
-              }, 500);
-            }
-          }, 500);
-        }
-      } else {
-        // التهيئة العادية إذا لم يكن هناك تحميل تلقائي
-        subjectSelect.dispatchEvent(new Event("change"));
-      }
+      subjectSelect.dispatchEvent(new Event("change"));
     }
   }, 200);
 });
