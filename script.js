@@ -467,11 +467,8 @@ function smartDownloadWithShare(doc, fileName) {
     return;
   }
 
-  // 🔴 ضغطة ثانية خلال 10 ثواني → مشاركة
+  // ضغطة ثانية خلال 10 ثواني → مشاركة
   lastDownloadTime = now;
-  
-  // تنبيه بسيط للمستخدم ليتمكن من معرفة سبب التأخير
-  alert("جاري فتح خيارات المشاركة...");
 
   // ✅ الطريقة الأفضل: Web Share API
   if (navigator.share && navigator.canShare && navigator.canShare({ files: [file] })) {
