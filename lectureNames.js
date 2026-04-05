@@ -236,7 +236,7 @@ export const lectureNames = {
         "10": "Deep carious lession treatment",
         "11": "Restorative materials in pedodontic",
         "12": "Pulp treatment",
-        "13": "Unknown",
+        "13": "Local anesthesia and pain control",
         "14": "Unknown",
         "15": "Unknown",
         "16": "Unknown",
