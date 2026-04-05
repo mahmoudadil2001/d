@@ -20,7 +20,7 @@ export const questions = [
     answer: 1
   },
   {
-    question: "Which of the following is a form of topical anesthesia mentioned in the text?",
+    question: "Which of the following is a form of topical anesthesia?",
     options: ["Tablet", "Inhaler", "Pressurized spray", "Suppository"],
     answer: 2
   },
