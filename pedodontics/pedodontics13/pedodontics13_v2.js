@@ -15,7 +15,7 @@ export const questions = [
     answer: 2
   },
   {
-    question: "Which topical anesthetic agent is mentioned in the text?",
+    question: "Which topical is anesthetic agent?",
     options: ["Procaine", "Benzocaine", "Bupivacaine", "Ropivacaine"],
     answer: 1
   },
@@ -65,7 +65,7 @@ export const questions = [
     answer: 2
   },
   {
-    question: "What is the maximum recommended dose of lidocaine for children mentioned in the text?",
+    question: "What is the maximum recommended dose of lidocaine for children?",
     options: ["2.2 mg/kg", "4.4 mg/kg", "6.6 mg/kg", "8.8 mg/kg"],
     answer: 1
   },
