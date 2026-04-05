@@ -4,6 +4,8 @@ import AuthManager from "./auth.js";
 import FriendsManager from "./friends.js";
 import ChatManager from "./chat.js";
 
+let lastDownloadTime = 0;
+
 // Initialize auth, friends and chat managers
 const authManager = new AuthManager();
 const friendsManager = new FriendsManager(authManager);
@@ -443,64 +445,47 @@ document.getElementById("moreOptionsFunToggle").addEventListener("click", () => 
 });
 
 // دالة تحميل ذكية للـ PDF تدعم جميع المتصفحات وخاصة Telegram Android
-function smartDownloadPDF(doc, fileName) {
-  const isTelegram = /Telegram/i.test(navigator.userAgent);
-  const isAndroid = /Android/i.test(navigator.userAgent);
+function smartDownloadWithShare(doc, fileName) {
+  const now = Date.now();
+  const timeDiff = now - lastDownloadTime;
 
-  console.log("Download attempt - Telegram:", isTelegram, "Android:", isAndroid);
-
-  try {
-    if (!isTelegram) {
-      doc.save(fileName);
-      return;
-    }
-  } catch (e) {
-    console.error("Standard save failed:", e);
-  }
-
-  // Fallback 1: Blob URL and Window Open
-  try {
-    const blob = doc.output("blob");
-    const url = URL.createObjectURL(blob);
-    const newWindow = window.open(url, "_blank");
-    if (newWindow) return;
-  } catch (e) {
-    console.error("Window open fallback failed:", e);
-  }
-
-  // Fallback 2: Hidden Iframe
-  try {
-    const blob = doc.output("blob");
-    const url = URL.createObjectURL(blob);
-    const iframe = document.createElement("iframe");
-    iframe.style.display = "none";
-    iframe.src = url;
-    document.body.appendChild(iframe);
-    setTimeout(() => document.body.removeChild(iframe), 5000);
-    return;
-  } catch (e) {
-    console.error("Iframe fallback failed:", e);
-  }
-
-  // Fallback 3: Forced Anchor Click
-  try {
-    const blob = doc.output("blob");
-    const url = URL.createObjectURL(blob);
-    const a = document.createElement("a");
-    a.href = url;
-    a.download = fileName;
-    document.body.appendChild(a);
-    a.click();
-    document.body.removeChild(a);
-    return;
-  } catch (e) {
-    console.error("Anchor fallback failed:", e);
-  }
-
-  // Fallback 4: Direct Redirect (Last Resort)
   const blob = doc.output("blob");
+  const file = new File([blob], fileName, { type: "application/pdf" });
+
+  // 🟢 أول ضغطة (أو بعد 10 ثواني)
+  if (timeDiff > 10000) {
+    lastDownloadTime = now;
+
+    try {
+      doc.save(fileName);
+    } catch (e) {
+      // fallback
+      const url = URL.createObjectURL(blob);
+      window.open(url, "_blank");
+    }
+
+    return;
+  }
+
+  // 🔴 ضغطة ثانية خلال 10 ثواني → مشاركة
+  lastDownloadTime = now;
+  
+  // تنبيه بسيط للمستخدم ليتمكن من معرفة سبب التأخير
+  alert("جاري فتح خيارات المشاركة...");
+
+  // ✅ الطريقة الأفضل: Web Share API
+  if (navigator.share && navigator.canShare && navigator.canShare({ files: [file] })) {
+    navigator.share({
+      files: [file],
+      title: fileName,
+      text: "PDF File"
+    }).catch(err => console.log("Share cancelled:", err));
+    return;
+  }
+
+  // 🟡 fallback: فتح الملف (يقدر يشاركه من viewer)
   const url = URL.createObjectURL(blob);
-  window.location.href = url;
+  window.open(url, "_blank");
 }
 
 // دالة متوافقة لتحميل البيانات بدلاً من import() الديناميكي الذي قد يفشل في WebView
@@ -965,7 +950,7 @@ document.getElementById("downloadPdfBtn").addEventListener("click", async () => 
 
     // تحميل الملف
     const fileName = `Dentistology_${subject}_lec${lecture}_v${version}.pdf`;
-    smartDownloadPDF(doc, fileName);
+    smartDownloadWithShare(doc, fileName);
 
   } catch (err) {
     console.error("خطأ في تحميل PDF:", err);
