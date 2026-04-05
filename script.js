@@ -450,7 +450,11 @@ function smartDownloadWithShare(doc, fileName) {
   const timeDiff = now - lastDownloadTime;
 
   const blob = doc.output("blob");
-  const file = new File([blob], fileName, { type: "application/pdf" });
+  // إضافة date لزيادة التوافق مع أنظمة أندرويد
+  const file = new File([blob], fileName, { 
+    type: "application/pdf",
+    lastModified: Date.now()
+  });
 
   // 🟢 أول ضغطة (أو بعد 10 ثواني)
   if (timeDiff > 10000) {
@@ -470,13 +474,17 @@ function smartDownloadWithShare(doc, fileName) {
   // ضغطة ثانية خلال 10 ثواني → مشاركة
   lastDownloadTime = now;
 
-  // ✅ الطريقة الأفضل: Web Share API
+  // ✅ الطريقة الأفضل: Web Share API (تم تبسيطها لتوافق أعلى مع تلجرام)
   if (navigator.share && navigator.canShare && navigator.canShare({ files: [file] })) {
+    // نرسل الملف فقط لضمان أن تلجرام يتعامل معه كملف مرفق وليس كنص
     navigator.share({
-      files: [file],
-      title: fileName,
-      text: "PDF File"
-    }).catch(err => console.log("Share cancelled:", err));
+      files: [file]
+    }).catch(err => {
+      console.log("Share failed or cancelled:", err);
+      // إذا فشلت المشاركة، نفتح الملف في نافذة جديدة كحل أخير
+      const url = URL.createObjectURL(blob);
+      window.open(url, "_blank");
+    });
     return;
   }
 
