@@ -1,6 +1,6 @@
 export const questions = [
   {
-    question: "What is the foundation of sound dental care according to the lecture?",
+    question: "What is the foundation of sound dental care?",
     options: ["Advanced technology", "Pretreatment considerations", "Patient's age", "Dental materials"],
     answer: 1
   },
