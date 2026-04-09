@@ -145,7 +145,7 @@ export const lectureNames = {
         "15": "oral mucosal lesions",
         "16": "immune mediated disorders",
         "17": "Vesiculobullous lesions of oral cavity",
-        "18": "Unknown",
+        "18": "Epithelial Pathology",
         "19": "Unknown",
         "20": "Unknown",
         "21": "Unknown",
