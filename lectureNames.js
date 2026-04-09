@@ -114,7 +114,7 @@ export const lectureNames = {
         "16": "composite inlays and onlays restoration",
         "17": "dental laser 1",
         "18": "dental laser 2",
-        "19": "Unknown",
+        "19": "Fluoride Releasing Materials",
         "20": "Unknown",
         "21": "Unknown",
         "22": "Unknown",
