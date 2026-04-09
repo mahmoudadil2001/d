@@ -144,7 +144,7 @@ export const lectureNames = {
         "14": "developmental defects of oral and maxillofacial region 2",
         "15": "oral mucosal lesions",
         "16": "immune mediated disorders",
-        "17": "Unknown",
+        "17": "Vesiculobullous lesions of oral cavity",
         "18": "Unknown",
         "19": "Unknown",
         "20": "Unknown",
