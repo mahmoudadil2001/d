@@ -95,9 +95,22 @@ function renderLectures() {
 
 
 function setupEventListeners() {
-    document.getElementById('question-count').oninput = (e) => {
+    const qInput = document.getElementById('question-count');
+
+    qInput.oninput = (e) => {
         state.totalQuestions = parseInt(e.target.value) || 0;
-        validateReady(); // Automatically clamp the inputted value
+        validateReady();
+    };
+
+    qInput.onblur = (e) => {
+        if (state.selectedLectures.size > 0) {
+            const minRequired = state.selectedLectures.size * 2;
+            if (state.totalQuestions < minRequired) {
+                state.totalQuestions = minRequired;
+                e.target.value = minRequired;
+            }
+        }
+        validateReady();
     };
 
     document.getElementById('select-all-lecs').onclick = () => {
@@ -226,21 +239,17 @@ function validateReady() {
     const maxPossible = Math.min(120, state.selectedLectures.size * 20);
     qCountInput.max = maxPossible;
 
-    // Enforce limits immediately
-    if (state.selectedLectures.size > 0) {
-        if (state.totalQuestions > maxPossible) {
-            state.totalQuestions = maxPossible;
-            qCountInput.value = maxPossible;
-        }
-
-        const minRequired = state.selectedLectures.size * 2;
-        if (state.totalQuestions < minRequired) {
-            state.totalQuestions = minRequired;
-            qCountInput.value = minRequired;
-        }
+    // Clamp to max only (min is enforced on blur, not during typing)
+    if (state.selectedLectures.size > 0 && state.totalQuestions > maxPossible) {
+        state.totalQuestions = maxPossible;
+        qCountInput.value = maxPossible;
     }
 
-    const isReady = state.selectedSubject && state.selectedLectures.size > 0 && state.totalQuestions > 0;
+    const minRequired = state.selectedLectures.size > 0 ? state.selectedLectures.size * 2 : 1;
+    const isReady = state.selectedSubject &&
+                    state.selectedLectures.size > 0 &&
+                    state.totalQuestions >= minRequired &&
+                    state.totalQuestions <= maxPossible;
     startBtn.disabled = !isReady;
 }
 
