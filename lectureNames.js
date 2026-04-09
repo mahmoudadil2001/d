@@ -108,7 +108,7 @@ export const lectureNames = {
         "10": "Caries Diagnosis and treatment",
         "11": "Cervical Lesions",
         "12": "Composite (Direct tooth-colored restorations)",
-        "13": "Unknown",
+        "13": "Inlays and Onlays (Indirect aesthetic adhesive restorations)",
         "14": "Unknown",
         "15": "Unknown",
         "16": "Unknown",
