@@ -115,7 +115,7 @@ export const lectureNames = {
         "17": "dental laser 1",
         "18": "dental laser 2",
         "19": "Fluoride Releasing Materials",
-        "20": "Unknown",
+        "20": "CAD CAM Techniques",
         "21": "Unknown",
         "22": "Unknown",
         "23": "Unknown",
