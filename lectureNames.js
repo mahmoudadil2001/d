@@ -109,7 +109,7 @@ export const lectureNames = {
         "11": "Cervical Lesions",
         "12": "Composite (Direct tooth-colored restorations)",
         "13": "Inlays and Onlays (Indirect aesthetic adhesive restorations)",
-        "14": "Unknown",
+        "14": "Inlays and Onlays 2 (Indirect Tooth Colored Restorations) ",
         "15": "Unknown",
         "16": "Unknown",
         "17": "Unknown",
