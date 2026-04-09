@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MedQuiz Pro | Premium MCQ Testing</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div id="app">
+        <!-- Setup Screen -->
+        <main id="setup-screen" class="screen">
+            <header style="position:relative;">
+                <a href="/" style="
+                  display: inline-flex;
+                  align-items: center;
+                  gap: 6px;
+                  background: rgba(255,255,255,0.12);
+                  border: 1.5px solid rgba(255,255,255,0.3);
+                  color: #fff;
+                  font-family: 'Outfit', sans-serif;
+                  font-size: 13px;
+                  font-weight: 600;
+                  padding: 6px 14px;
+                  border-radius: 20px;
+                  text-decoration: none;
+                  cursor: pointer;
+                  backdrop-filter: blur(6px);
+                  transition: background 0.25s, transform 0.2s;
+                  position: absolute;
+                  top: 0;
+                  left: 0;
+                " onmouseover="this.style.background='rgba(255,255,255,0.25)';this.style.transform='scale(1.05)'" onmouseout="this.style.background='rgba(255,255,255,0.12)';this.style.transform='scale(1)'">
+                  &#8592; الرئيسية
+                </a>
+                <div class="logo">
+                    <span class="icon">🩺</span>
+                    <h1>MedQuiz <span class="highlight">Pro</span></h1>
+                </div>
+                <p>اختار عدد المحاضرات وعدد الاسئلة الي تريدها وابدا امتحانك</p>
+            </header>
+
+            <div class="setup-container">
+                <section class="config-card">
+                    <h2>1. Choose Subject</h2>
+                    <div class="custom-select-wrapper">
+                        <select id="subject-dropdown" class="custom-select">
+                            <option value="" disabled selected>Select a subject...</option>
+                            <!-- Subjects will be injected here -->
+                        </select>
+                    </div>
+                </section>
+
+                <div class="grid-configs">
+                    <section class="config-card">
+                        <h2>2. Select Lectures</h2>
+                        <div class="lecture-selection-header">
+                            <button id="select-all-lecs" class="btn-text">Select All</button>
+                            <button id="deselect-all-lecs" class="btn-text">Clear</button>
+                        </div>
+                        <div class="lecture-seek-bar hidden">
+                            <span class="seek-label">⬆</span>
+                            <input type="range" id="lecture-seek" min="0" max="100" value="0">
+                            <span class="seek-label">⬇</span>
+                        </div>
+                        <div id="lecture-grid" class="lecture-grid">
+                            <!-- 1 to 30 lecture checkboxes -->
+                        </div>
+                    </section>
+
+                    <section class="config-card">
+                        <h2>3. Test Settings</h2>
+                        <div class="input-group">
+                            <label for="question-count">Total Questions</label>
+                            <input type="number" id="question-count" value="10" min="1" max="100" lang="en" dir="ltr"
+                                style="font-family: Arial, Helvetica, sans-serif;">
+                        </div>
+                        <button id="start-btn" class="btn-primary" disabled>Start Quiz</button>
+                    </section>
+                </div>
+            </div>
+        </main>
+
+        <!-- Quiz Screen -->
+        <main id="quiz-screen" class="screen hidden">
+            <nav class="quiz-nav">
+                <div class="nav-left">
+                    <button id="quit-btn" class="btn-icon-text">
+                        <span>&larr;</span> Quit
+                    </button>
+                    <div class="quiz-info">
+                        <span id="active-subject-header">Endodontics</span>
+                        <small id="active-info-sub">Lec 1-30 • 10 Questions</small>
+                    </div>
+                </div>
+
+                <div class="view-toggle">
+                    <button id="show-paper" class="toggle-btn active">Question Paper</button>
+                    <button id="show-bubbles" class="toggle-btn">Bubble Sheet</button>
+                </div>
+
+                <div id="timer-display" class="timer">
+                    <span class="timer-icon">⏱️</span>
+                    <span id="time-left">00:00</span>
+                </div>
+
+                <div class="nav-right">
+                    <button id="finish-btn" class="btn-finish">Finish Exam</button>
+                </div>
+            </nav>
+
+            <div class="quiz-layout-full">
+                <!-- Paper View (Styled Question Sheet) -->
+                <div id="paper-view" class="paper-view container-view">
+                    <!-- Pages will be injected here -->
+                </div>
+
+                <!-- Answer Entry (Bubble Sheet) -->
+                <div id="bubble-sheet-exam" class="bubble-sheet-exam container-view hidden">
+                    <!-- Entire exam sheet (1. A B C D, 2. A B C D...) -->
+                </div>
+
+                <!-- Results View (Shown after Finish) -->
+                <div id="results-view" class="container-view hidden">
+                    <div class="results-card">
+                        <div class="results-header">
+                            <div class="trophy">🏆</div>
+                            <h1>Quiz Completed!</h1>
+                            <p>Here's how you performed today</p>
+                        </div>
+
+                        <div class="score-display">
+                            <div class="score-circle">
+                                <span id="result-score-raw">0/20</span>
+                                <small id="result-score-percent">0%</small>
+                            </div>
+                        </div>
+
+                        <div class="stats-grid">
+                            <div class="stat-item">
+                                <span class="stat-label">Correct</span>
+                                <span id="stat-correct" class="stat-value text-success">0</span>
+                            </div>
+                            <div class="stat-item">
+                                <span class="stat-label">Incorrect</span>
+                                <span id="stat-incorrect" class="stat-value text-error">0</span>
+                            </div>
+                            <div class="stat-item">
+                                <span class="stat-label">Unanswered</span>
+                                <span id="stat-unanswered" class="stat-value text-muted">0</span>
+                            </div>
+                        </div>
+
+                        <div class="results-actions">
+                            <button id="restart-btn" class="btn-primary">Start New Quiz</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <!-- Background Decoration -->
+    <div class="bg-blur">
+        <div class="blob blob-1"></div>
+        <div class="blob blob-2"></div>
+        <div class="blob blob-3"></div>
+    </div>
+
+    <script type="module" src="script.js"></script>
+</body>
+
+</html>
