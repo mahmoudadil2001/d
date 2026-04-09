@@ -400,6 +400,7 @@ export const visibleLectures = {
             4
         ],
         "19": [
+            1,
             2,
             3,
             4
