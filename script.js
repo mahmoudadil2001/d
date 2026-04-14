@@ -1703,7 +1703,7 @@ document.addEventListener('DOMContentLoaded', () => {
       const path = `./${subject}/${subject}${lecture}/${subject}${lecture}_v${version}.js`;
 
       try {
-        const questions = await loadDataCompat(path);
+        let questions = await loadDataCompat(path);
 
         if (!questions || !Array.isArray(questions) || questions.length === 0) {
           throw new Error('No valid questions found in the module');
@@ -1799,7 +1799,7 @@ document.getElementById("loadFunBtn").addEventListener("click", async () => {
   const path = `./forfun/${selectedCategory}.js`; // افتراض أن الملفات في مجلد forfun
 
   try {
-    const questions = await loadDataCompat(path);
+    let questions = await loadDataCompat(path);
 
     if (!questions || !Array.isArray(questions) || questions.length === 0) {
       throw new Error('No valid questions found in the module');
