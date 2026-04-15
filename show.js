@@ -286,12 +286,12 @@ export const visibleLectures = {
             3,
             4
         ],
-        "20": [
-            1,
-            2
-        ],
         "twentynine": [
             4
+        ],
+        "twenty": [
+            1,
+            2
         ]
     },
     "operative": {
