@@ -273,7 +273,7 @@ export const lectureNames = {
         "15": "Phase II Surgical Therapy",
         "16": "Periodontal instruments",
         "17": "periodontal incides",
-        "18": "Unknown",
+        "18": "Gingival and periodontal pocket",
         "19": "Unknown",
         "20": "Unknown",
         "21": "Unknown",
