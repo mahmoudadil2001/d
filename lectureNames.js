@@ -274,7 +274,7 @@ export const lectureNames = {
         "16": "Periodontal instruments",
         "17": "periodontal incides",
         "18": "Gingival and periodontal pocket",
-        "19": "Unknown",
+        "19": "chemothrapy (systemic antibiotic)",
         "20": "Unknown",
         "21": "Unknown",
         "22": "Unknown",
