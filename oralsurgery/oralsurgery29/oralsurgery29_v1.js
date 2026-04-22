@@ -1,77 +1,77 @@
 export const questions = [
   {
-    question: "Which of the following is an example of invasive or interventional imaging?",
-    options: ["Panoramic radiograph", "Ultrasonography", "Angiography", "CBCT"],
-    answer: 2
-  },
-  {
-    question: "What is the main advantage of interventional procedures?",
-    options: ["High radiation dose", "Palliative treatment with minimum morbidity", "Requires open surgery", "Long recovery time"],
+    question: "What is the definition of osteomyelitis clinically?",
+    options: ["Inflammation of the joint", "Infection of the bone", "Degeneration of the bone marrow", "Fracture of the cortical bone"],
     answer: 1
   },
   {
-    question: "X-rays were discovered by Roentgen in which year?",
-    options: ["1885", "1895", "1905", "1915"],
+    question: "What crucial event in the pathogenesis of mandibular osteomyelitis leads to bone necrosis?",
+    options: ["Increased blood flow", "Thrombosis of vessels in the marrow and periosteal stripping", "Excessive bone deposition", "Reduced white blood cell count"],
     answer: 1
   },
   {
-    question: "The scientific unit for measurement of radiation dose is the:",
-    options: ["Hounsfield unit", "Millisievert (mSv)", "Decibel", "Watt"],
+    question: "Why is osteomyelitis more common in the mandible than the maxilla?",
+    options: ["The maxilla has a thicker cortex", "The mandible has a multifocal and robust blood supply", "The mandible primarily obtains blood supply from the inferior alveolar artery and periosteum", "The maxilla is more exposed to periapical pathogens"],
+    answer: 2
+  },
+  {
+    question: "Which of the following is a risk factor for developing osteomyelitis due to lack of intact host defenses?",
+    options: ["Regular exercise", "Well-controlled diabetes mellitus", "Chronic corticosteroid regimens", "Young age"],
+    answer: 2
+  },
+  {
+    question: "According to the text, which bacteria are traditionally known to be predominant in osteomyelitis of other body bones?",
+    options: ["Streptococcus species", "Anaerobic bacteria like Bacteroides", "Staphylococcus species", "Eikenella corrodens"],
+    answer: 2
+  },
+  {
+    question: "What is the empiric antibiotic of choice for orofacial infections according to the lecture?",
+    options: ["Tetracycline", "Fluoroquinolones", "Clindamycin", "Penicillin"],
+    answer: 3
+  },
+  {
+    question: "In acute suppurative osteomyelitis, where do microorganisms initially colonize?",
+    options: ["Deep within the medullary space first", "The surface of the necrotic bone", "The periosteal blood vessels", "The surrounding muscle tissue"],
     answer: 1
   },
   {
-    question: "Which tissue appears radiolucent on conventional radiography?",
-    options: ["Bone", "Air (lung)", "Muscle", "Fat"],
+    question: "What is a key radiographic feature of acute suppurative osteomyelitis when bone loss is present?",
+    options: ["Sclerotic bone with no lucency", "Moth-eaten appearance with radiolucency", "Uniform radiopacity", "Well-defined corticated border"],
     answer: 1
   },
   {
-    question: "Which of the following is a disadvantage of conventional radiography?",
-    options: ["No ionizing radiation", "Gives three-dimensional record", "Superimposition of structures", "Detects subtle pathology easily"],
-    answer: 2
+    question: "In chronic suppurative osteomyelitis, what is the recommended minimum duration of outpatient IV antibiotic administration?",
+    options: ["1 week", "2 weeks", "4 weeks", "6 weeks"],
+    answer: 3
   },
   {
-    question: "Conventional radiography is insensitive until at least what percentage of mineral content change occurs?",
-    options: ["10%", "20%", "30%", "40%"],
-    answer: 2
-  },
-  {
-    question: "Digital radiography uses which type of plates to capture data?",
-    options: ["Film plates", "X-ray-sensitive plates", "Phosphor plates only", "Glass plates"],
+    question: "Which organisms are the offending pathogens in chronic sclerosing osteomyelitis?",
+    options: ["Staphylococcus aureus and Streptococcus", "Actinomyces species and Eikenella corrodens", "Candida and Klebsiella", "Fusobacterium and Lactobacillus"],
     answer: 1
   },
   {
-    question: "Which of the following is an advantage of digital radiography over conventional radiography?",
-    options: ["Higher radiation dose", "Requires chemical processing", "Images acquired immediately", "Cannot adjust contrast"],
+    question: "What is the pathognomonic clinical sign of chronic sclerosing osteomyelitis?",
+    options: ["Facial swelling", "Purulent drainage", "Intense pain", "Paresthesia"],
     answer: 2
   },
   {
-    question: "A disadvantage of digital radiography is that it is:",
-    options: ["Inexpensive", "Slow to acquire", "Expensive, requires computers and servers", "Cannot store images long-term"],
+    question: "Garre osteomyelitis (osteomyelitis with proliferative periostitis) typically affects which patient population?",
+    options: ["Elderly patients", "Middle-aged adults", "Children", "Infants"],
     answer: 2
   },
   {
-    question: "Ultrasound waves have a frequency above the limit of human audibility, which is greater than:",
-    options: ["10 kHz", "15 kHz", "20 kHz", "25 kHz"],
+    question: "What is the most notable radiographic finding in Garre osteomyelitis?",
+    options: ["Sequestrum formation", "Ground glass appearance", "Paracortical bone formation (onion skinning)", "Internal resorption"],
     answer: 2
   },
   {
-    question: "In ultrasonography, which tissue allows all sound waves to pass without reflection?",
-    options: ["Bone", "Air", "Fluid (urine, blood, cyst)", "Muscle"],
-    answer: 2
-    },
-  {
-    question: "Which tissue reflects all ultrasound waves back and does not allow them to pass?",
-    options: ["Fluid", "Soft tissue", "Bone and air", "Fat"],
-    answer: 2
+    question: "What is the primary treatment for osteomyelitis with proliferative periostitis?",
+    options: ["Long-term IV antibiotics", "Removal of the infectious source", "Hyperbaric oxygen therapy alone", "Radiation therapy"],
+    answer: 1
   },
   {
-    question: "Doppler ultrasound is used to detect and measure the rate of movement of:",
-    options: ["Bone", "Air", "Fluid such as blood", "Solid tissue"],
-    answer: 2
-  },
-  {
-    question: "Color Doppler distinguishes the direction of flowing blood by:",
-    options: ["Sound intensity", "Different colors", "Wave amplitude", "Frequency shift only"],
+    question: "What term describes the radiopaque areas of non-resorbed bone within a radiolucent area in osteomyelitis?",
+    options: ["Involucrum", "Sequestra", "Cortex", "Trabeculae"],
     answer: 1
   }
 ];
