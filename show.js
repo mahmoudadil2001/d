@@ -1183,7 +1183,8 @@ export const visibleLectures = {
         ],
         "24": [
             1,
-            2
+            2,
+            3
         ]
     }
 };
