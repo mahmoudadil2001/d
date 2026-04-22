@@ -1,77 +1,77 @@
 export const questions = [
   {
-    question: "During the DMLS procedure, what happens to particles with the lower melting point?",
-    options: ["They partially melt", "They completely melt", "They do not melt", "They evaporate"],
+    question: "Which maxillary area had an injury frequency of 27% according to the study?",
+    options: ["Incisive papilla", "Posterior palatal seal area in the soft palate", "Tuberosity", "Hard palate"],
     answer: 1
   },
   {
-    question: "During the DMLS procedure, what happens to particles with a high melting point?",
-    options: ["They completely melt", "They partially melt", "They do not change", "They become gas"],
+    question: "What is the consequence of shrinkage of denture during processing?",
+    options: ["Improved aesthetics", "Better retention", "Need to rebase the denture", "Increased patient comfort"],
+    answer: 2
+  },
+  {
+    question: "Which of the following is NOT listed as a limitation that should be explained to the patient prior to denture delivery?",
+    options: ["Dentures are less efficient than natural teeth", "Patients with minimal ridges will likely encounter more sore spots", "Dentures will never need adjustments", "Better ridge form means fewer problems"],
+    answer: 2
+  },
+  {
+    question: "What is the recommended action for an error in occlusion where teeth diagonally across the arch from the sore area are problematic?",
+    options: ["Adjust the denture base", "Check occlusion diagonally across the arch from the sore area", "Reline the denture", "Reduce tooth height"],
     answer: 1
   },
   {
-    question: "Which base-metal alloys are most widely used in the dental field according to the text?",
-    options: ["Gold and platinum", "Cobalt-chromium, nickel-chromium, and nickel-titanium alloys", "Silver and copper", "Iron and steel"],
+    question: "According to the text, what percentage of mandibular denture wearers were 'very satisfied'?",
+    options: ["67%", "51%", "The text does not specify a percentage for mandibular very satisfied", "42%"],
+    answer: 2
+  },
+  {
+    question: "What is a common patient complaint besides looseness and aesthetics?",
+    options: ["Difficulty while eating", "Too much retention", "Denture color fading", "Metal taste"],
+    answer: 0
+  },
+  {
+    question: "What should be done if there is excessive overbite causing problems under the labial flange?",
+    options: ["Adjust anterior occlusion", "Extend the flange", "Reduce vertical dimension", "Add more acrylic"],
+    answer: 0
+  },
+  {
+    question: "Which of the following is true about the relationship between inadequate retention and patient complaints?",
+    options: ["There is no relationship", "There is a significant relationship between inadequate retention and improper intermaxillary relationships with complaints", "Only retention matters, not jaw relationships", "Complaints are always psychological"],
     answer: 1
   },
   {
-    question: "Which thermoplastic material is mentioned for denture fabrication?",
-    options: ["Silicone", "Polymethylmetacrylate (PMMA), Polyaryletherketone (PAEK), PEEK, and Acetal", "Polyurethane", "Polyethylene"],
+    question: "What is a common issue when vertical dimension has been changed in new dentures?",
+    options: ["Improved speech immediately", "Initial decreased efficiency, cheek or lip biting", "Better retention", "No adaptation needed"],
     answer: 1
   },
   {
-    question: "What is stated about studies evaluating whether digital RPD methods can produce sufficient accuracy for clinical use?",
-    options: ["Many studies confirm high accuracy", "Studies have been limited", "No studies exist", "All studies show poor accuracy"],
+    question: "What is the recommended action for overextension in the anterior area?",
+    options: ["Add more material", "Adjust peripheral overextension", "Rebase the denture", "Increase vertical dimension"],
     answer: 1
   },
   {
-    question: "What did a previous study on digital RPD accuracy analyze?",
-    options: ["Patient satisfaction only", "Errors generated in the design process and accuracy after completion, but in a small number of participants", "Cost effectiveness only", "Laboratory time only"],
+    question: "How do patients with more acute oral sensory perception adapt to dentures?",
+    options: ["They adapt more easily", "They have more difficulty adapting", "They have no difference", "They adapt faster than others"],
     answer: 1
   },
   {
-    question: "What was needed according to the text regarding digital RPD accuracy?",
-    options: ["No further studies", "An analysis of accuracy on a larger number of participants", "Only laboratory studies", "Only patient surveys"],
+    question: "What is the effect of alveolar ridge resorption on denture bearing tissue?",
+    options: ["Improved retention", "Leads to poorer denture retention and stability", "No effect on dentures", "Increased comfort"],
     answer: 1
   },
   {
-    question: "What is the first clinical step described for digital RPD fabrication?",
-    options: ["Computer design", "Intraoral functional impressions including border molding", "Framework casting", "Tooth selection"],
+    question: "Which mandibular area had a lesion frequency of 2.1%?",
+    options: ["Sublingual fold", "Labial sulcus", "Buccal frenum and buccal shelf", "Retromylohyoid area"],
+    answer: 2
+  },
+  {
+    question: "What should be done for heavy biting force causing generalized soreness?",
+    options: ["Increase vertical dimension", "Reduce buccolingual width of teeth; reduce vertical", "Add more posterior teeth", "Use harder acrylic"],
     answer: 1
   },
   {
-    question: "What is obtained after intraoral functional impressions?",
-    options: ["A digital file only", "A definitive cast", "The final prosthesis", "The metal framework"],
-    answer: 1
-  },
-  {
-    question: "How is the definitive cast processed for digital RPD fabrication?",
-    options: ["It is discarded", "It is scanned using a laboratory scanner", "It is directly used for casting", "It is measured manually"],
-    answer: 1
-  },
-  {
-    question: "What is done after scanning the definitive cast?",
-    options: ["Immediate casting", "Files are extracted and loaded onto CAD software", "The framework is cast directly", "The denture is delivered"],
-    answer: 1
-  },
-  {
-    question: "What is designed by setting a surveying axis and computing the undercut?",
-    options: ["Tooth color", "An ideal path of insertion and removal", "Denture base thickness", "Flange contour"],
-    answer: 1
-  },
-  {
-    question: "Which components are designed for the RPD framework according to the text?",
-    options: ["Only the major connector", "Major connector, clasps, rests, proximal plates, and finish line", "Only clasps", "Only rests"],
-    answer: 1
-  },
-  {
-    question: "What rapid prototyping machine is mentioned for printing the resin pattern?",
-    options: ["Formlabs 2", "ProJet DP 3000 (3D Systems)", "Ultimaker S5", "MakerBot Replicator"],
-    answer: 1
-  },
-  {
-    question: "What material is mentioned for printing the resin pattern?",
-    options: ["PMMA resin", "Visilet M3 Dentcast (3D Systems)", "Epoxy resin", "Polyurethane resin"],
+    question: "According to the text, what is true about initial speaking problems with new dentures?",
+    options: ["They are permanent", "They are usually transitory because the tongue is very adaptable", "They require speech therapy", "They only occur in elderly patients"],
     answer: 1
   }
 ];
