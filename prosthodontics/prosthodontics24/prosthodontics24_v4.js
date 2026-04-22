@@ -1,77 +1,77 @@
 export const questions = [
   {
-    question: "What is done with the resin pattern after it is printed?",
-    options: ["It is delivered directly to the patient", "It is invested, eliminated, and cast to generate the RPD framework", "It is used as the final denture", "It is discarded"],
+    question: "What should a patient be informed about regarding sneezing, yawning, or excessive tongue movements while wearing dentures?",
+    options: ["They can do these activities freely without affecting dentures", "These activities will improve denture retention", "If these activities are necessary, the patient should use adhesives", "These activities should be completely avoided at all times"],
+    answer: 2
+  },
+  {
+    question: "What percentage of denture wearers in a study reported being 'very satisfied' with their maxillary denture?",
+    options: ["51%", "67%", "42%", "33%"],
+    answer: 0
+  },
+  {
+    question: "Which of the following is recommended for cleaning dentures?",
+    options: ["Abrasive toothpaste", "Baking soda paste", "Any mild hand soap", "Bleach solution"],
+    answer: 2
+  },
+  {
+    question: "What is the most frequent complaint associated with complete dentures, cited by several authors?",
+    options: ["Comfort while eating", "Retention and stability", "Aesthetics", "Food accumulation under the appliance"],
+    answer: 2
+  },
+  {
+    question: "In the study mentioned, which mandibular area was most frequently injured?",
+    options: ["Buccal shelf", "Labial sulcus", "Sublingual fold", "Retromylohyoid area"],
+    answer: 3
+  },
+  {
+    question: "Which factor most often appears to impact either the success or failure of complete dentures?",
+    options: ["Patient's age", "Viscosity of saliva", "Aesthetics", "Position of occlusal plane"],
+    answer: 2
+  },
+  {
+    question: "What should the clinician do before concluding that a patient's complaint is related to age or medical condition?",
+    options: ["Immediately reline the denture", "Carefully evaluate the denture for faults in horizontal and vertical jaw relationships", "Prescribe pain medication", "Refer the patient to a specialist"],
     answer: 1
   },
   {
-    question: "How is the RPD completed after casting the framework?",
-    options: ["Using only metal", "Using the conventional method with heat polymerized resin and artificial teeth", "Using only acrylic", "Using 3D printed teeth"],
+    question: "What is a common fault in denture construction related to patient complaints of looseness and difficult eating?",
+    options: ["Tooth color", "Inadequate retention and improper intermaxillary relationships", "Excessive polishing", "Base material type"],
     answer: 1
   },
   {
-    question: "What adjustments are made to ensure proper fit of the framework?",
-    options: ["Tooth color adjustments", "Adjustments to ensure rests are seated on rest seats of abutment teeth", "Flange length adjustments only", "Occlusal adjustments only"],
+    question: "Which maxillary area had the lowest frequency of ulcerations (0%) according to the study?",
+    options: ["Posterior palatal seal area", "Tuberosity", "Hard palate and mid-palatal suture", "Buccal sulci"],
+    answer: 2
+  },
+  {
+    question: "Patients with minimal ridges should be advised that their dentures will likely:",
+    options: ["Never need adjustments", "Move, especially the mandibular denture", "Be more retentive than natural teeth", "Cause no sore spots"],
     answer: 1
   },
   {
-    question: "How many main pathways for manufacturing removable partial dentures are described?",
-    options: ["Two", "Three", "Four", "Five"],
+    question: "Which of the following is NOT listed as a factor influencing patients' satisfaction with dentures?",
+    options: ["Quality of bone tissue", "Color of the denture base", "Adaptability of the neuromuscular mechanism", "Viscosity of saliva"],
     answer: 1
   },
   {
-    question: "What is the first technique described for RPD manufacturing?",
-    options: ["Conventional lost wax", "Manufacturing metal frameworks directly by selective laser melting or milling, then flashing with acrylic", "3D printing the entire denture", "Hand carving"],
+    question: "What is a potential consequence if maximum intercuspaton is not in harmony with centric relation for a mandibular denture?",
+    options: ["Drives the mandibular denture forward", "Increases retention", "Reduces sore spots", "Improves speech"],
+    answer: 0
+  },
+  {
+    question: "What adaptation strategy is recommended for patients experiencing initial decreased chewing efficiency?",
+    options: ["Avoid eating for one week", "Initially eating soft foods, cutting food into smaller pieces", "Use only the front teeth for chewing", "Remove dentures while eating"],
     answer: 1
   },
   {
-    question: "What is the second technique described for RPD manufacturing?",
-    options: ["Direct metal printing only", "Fabricating a sacrificial resin or wax pattern, then investing and casting to metal frameworks, then flashing with acrylic", "Milling from a solid block", "Hand waxing only"],
-    answer: 1
+    question: "Which of the following is a limitation of dentures compared to natural teeth?",
+    options: ["They are more efficient", "They never require maintenance", "They are less efficient", "They prevent all alveolar resorption"],
+    answer: 2
   },
   {
-    question: "How are the first two techniques characterized in the text?",
-    options: ["As purely digital", "As hybrid techniques that start with digital design and complete through conventional casting", "As purely conventional", "As experimental only"],
-    answer: 1
-  },
-  {
-    question: "What advantage do hybrid techniques provide due to decreased human error factors?",
-    options: ["Lower cost", "Higher results", "Faster delivery", "Simpler equipment"],
-    answer: 1
-  },
-  {
-    question: "What is the third technique described for RPD manufacturing?",
-    options: ["Direct laser sintering", "The conventional lost wax technique: designing, wax pattern fabrication, investing, casting, then flashing with acrylic", "Milling only", "3D printing only"],
-    answer: 1
-  },
-  {
-    question: "What occurs during the data acquisition stage of digital denture fabrication?",
-    options: ["Data is deleted", "Selected data of natural teeth, adjacent and opposing soft and hard tissues is collected and converted to 3D digital data", "Only tooth color is recorded", "Only soft tissue is scanned"],
-    answer: 1
-  },
-  {
-    question: "How can data acquisition be performed according to the text?",
-    options: ["Only intraorally", "Through intraoral scanners or extraoral scanning using a stone model from conventional impression via desktop scanner", "Only extraorally", "Only using CBCT"],
-    answer: 1
-  },
-  {
-    question: "What does CAD (computer aided design) involve in digital dentistry?",
-    options: ["Physical model making", "Software for designing virtual restorations on a virtual working cast as 3D maps", "Direct milling", "Hand drawing"],
-    answer: 1
-  },
-  {
-    question: "What does CAM (computer aided machine) involve?",
-    options: ["Only design", "Only scanning", "Fabrication of different types of restorations", "Only patient communication"],
-    answer: 1
-  },
-  {
-    question: "According to the text, what is stated about the accuracy of digital RPD frameworks?",
-    options: ["It is perfect", "A systematic review on accuracy was published in J Prosthet Dent (2021)", "No research exists", "All studies show poor accuracy"],
-    answer: 1
-  },
-  {
-    question: "What advantage does digital fabrication offer regarding trial prostheses?",
-    options: ["They cannot be made", "Create trial prostheses based on stored digital data as a rapid accurate alternative", "They take longer to make", "They are less accurate"],
-    answer: 1
+    question: "What may cause an initial, transitory increase in saliva in new denture wearers?",
+    options: ["Infection", "Allergic reaction", "Adaptation to the new prostheses", "Dehydration"],
+    answer: 2
   }
 ];
