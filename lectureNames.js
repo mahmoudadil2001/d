@@ -208,7 +208,7 @@ export const lectureNames = {
         "14": "anchorage in orthosontics",
         "15": "orthodontics appliances",
         "16": "Removable Orthodontic Appliances",
-        "17": "Unknown",
+        "17": "orthopedic appliances",
         "18": "Unknown",
         "19": "Unknown",
         "20": "lec0 Genetic Factors of Malocclusion",
