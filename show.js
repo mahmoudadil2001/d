@@ -697,7 +697,8 @@ export const visibleLectures = {
             4
         ],
         "30": [
-            1
+            1,
+            2
         ]
     },
     "orthodontics": {
