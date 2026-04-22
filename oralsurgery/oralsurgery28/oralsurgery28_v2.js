@@ -1,77 +1,77 @@
 export const questions = [
   {
-    question: "Ogawa discovered that MRI can distinguish oxygenated blood from deoxygenated blood and named it:",
-    options: ["T1-weighted imaging", "T2-weighted imaging", "Functional MRI (fMRI)", "Diffusion MRI"],
+    question: "Which imaging modality is classified as invasive or interventional?",
+    options: ["Ultrasonography", "MRI", "Angiography", "Conventional radiography"],
     answer: 2
   },
   {
-    question: "In MRI, when protons become aligned longitudinally, this is referred to as:",
-    options: ["T2 relaxation", "T1 relaxation", "Proton density", "Magnetic susceptibility"],
-    answer: 1
-  },
-  {
-    question: "When the radiofrequency pulse causes proton alignment to change 90 degrees horizontally, this is called:",
-    options: ["T1 relaxation", "T2 relaxation", "Longitudinal alignment", "Magnetization"],
-    answer: 1
-  },
-  {
-    question: "Which MRI view is often used for identifying normal anatomic structures?",
-    options: ["T2-weighted", "Proton density", "T1-weighted", "Diffusion-weighted"],
+    question: "What is a main advantage of interventional radiology procedures?",
+    options: ["Always requires open surgery", "High morbidity", "Gives palliative treatment with minimum morbidity and mortality", "Cannot be used for diagnosis"],
     answer: 2
   },
   {
-    question: "In T1-weighted images, water appears:",
-    options: ["Lighter", "Brighter", "Darker", "Same as fat"],
+    question: "In digital radiography, what happens immediately after data capture?",
+    options: ["Film is processed in a darkroom", "Data is transferred to a computer", "The X-ray plate is discarded", "A cassette is developed"],
+    answer: 1
+  },
+  {
+    question: "Which of the following is a disadvantage of digital radiography?",
+    options: ["Cannot adjust contrast", "Images cannot be stored long-term", "Prone to intentional manipulation", "Higher radiation dose than conventional"],
     answer: 2
   },
   {
-    question: "In T2-weighted images of cerebral and spinal studies, cerebrospinal fluid (CSF) appears:",
-    options: ["Darker", "Lighter", "Invisible", "Same as bone"],
-    answer: 1
-  },
-  {
-    question: "Which of the following is an advantage of MRI?",
-    options: ["Non-invasive and non-ionizing radiation", "High cost but fast", "Bone imaging superior to CT", "Short scan time"],
-    answer: 0
-  },
-  {
-    question: "A disadvantage of MRI is that bone imaging is limited because:",
-    options: ["Bone absorbs all radiation", "Lack of signal from cortical bone", "Bone has too many protons", "Bone moves during scanning"],
-    answer: 1
-  },
-  {
-    question: "Patients may experience claustrophobia during MRI due to:",
-    options: ["The cold temperature", "The enclosed space", "The injection of contrast", "The radiation exposure"],
-    answer: 1
-  },
-  {
-    question: "Powerful magnetic fields in MRI can interfere with which medical device?",
-    options: ["Plastic dentures", "Ceramic crowns", "Pacemakers", "Silicon implants"],
+    question: "On ultrasound, how does bone affect sound waves?",
+    options: ["All waves pass through", "Waves are partly allowed to pass", "All waves are reflected back", "Waves are absorbed completely"],
     answer: 2
   },
   {
-    question: "MRI is particularly useful to evaluate areas where artifacts may degrade the CT image, such as:",
-    options: ["Soft tissue edema", "Dental amalgam fillings", "Bone fractures", "Sinusitis"],
-    answer: 1
-  },
-  {
-    question: "The resolution of soft tissue in MRI is _____ CT.",
-    options: ["Inferior to", "Superior to", "Equal to", "Unrelated to"],
-    answer: 1
-  },
-  {
-    question: "The resolution of bone is better with:",
-    options: ["MRI", "Ultrasound", "CT", "Nuclear medicine"],
+    question: "What is a limitation of ultrasonography?",
+    options: ["Expensive equipment", "Uses ionizing radiation", "Cannot evaluate intracranial or intrathoracic lesions due to bone and air", "Painful procedure"],
     answer: 2
   },
   {
-    question: "Contrast agent reaction in MRI is:",
-    options: ["Common", "Rare", "Always severe", "Same as CT contrast reaction"],
+    question: "What does 'Tomography' mean?",
+    options: ["Picture writing", "Slice picture", "Body radiation", "Magnetic imaging"],
     answer: 1
   },
   {
-    question: "The slice thickness in MRI is approximately:",
-    options: ["0.6-1 mm", "1-2 mm", "3 mm", "5 mm"],
+    question: "What is the typical slice width in modern CT scanners that provides very good tissue detail?",
+    options: ["5-10 mm", "0.5-3 mm", "10-15 mm", "15-20 mm"],
+    answer: 1
+  },
+  {
+    question: "What is the approximate radiation dose of CBCT compared to OPG?",
+    options: ["CBCT = 33-82 OPG dose", "CBCT = 3-28 OPG dose", "CBCT = 1-2 OPG dose", "CBCT = 100-200 OPG dose"],
+    answer: 1
+  },
+  {
+    question: "Which statement about CT is true?",
+    options: ["CT has poor contrast resolution compared to conventional X-ray", "CT provides 2D images only", "CT differentiates body structures without superimposition", "CT cannot be used for postoperative evaluation"],
+    answer: 2
+  },
+  {
+    question: "What is a common cause of artifact scatter on CT images in dental patients?",
+    options: ["Gutta-percha points", "Dental amalgam fillings and metallic crowns", "Acrylic dentures", "Composite restorations"],
+    answer: 1
+  },
+  {
+    question: "In MRI, what happens to hydrogen protons when a radiofrequency pulse is turned off?",
+    options: ["They remain horizontally aligned", "They are destroyed", "They return to their normal position, emitting weak radiosignals", "They convert to helium"],
+    answer: 2
+  },
+  {
+    question: "Which MRI sequence is especially useful for depicting inflammatory processes and neoplasms?",
+    options: ["T1-weighted", "T2-weighted", "Proton density", "Diffusion-weighted"],
+    answer: 1
+  },
+  {
+    question: "What is an advantage of MRI over CT?",
+    options: ["Shorter scan time", "Less expensive", "Decreases artifact scatter due to dental fillings", "Better bone imaging"],
+    answer: 2
+  },
+  {
+    question: "What is a disadvantage of MRI compared to CT?",
+    options: ["Uses ionizing radiation", "Cannot image soft tissues", "Limited slice thickness (3mm vs 0.6-1mm in CT)", "No contraindications"],
     answer: 2
   }
 ];
