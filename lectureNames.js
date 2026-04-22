@@ -209,7 +209,7 @@ export const lectureNames = {
         "15": "orthodontics appliances",
         "16": "Removable Orthodontic Appliances",
         "17": "orthopedic appliances",
-        "18": "Unknown",
+        "18": "functional appliances",
         "19": "Unknown",
         "20": "lec0 Genetic Factors of Malocclusion",
         "21": "Unknown",
