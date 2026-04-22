@@ -311,7 +311,7 @@ export const lectureNames = {
         "21": "Post Insertion Problems in Complete Denture",
         "22": "Relining and Rebasing of RPD and Complete Denture",
         "23": "Esthetic Denture Materials",
-        "24": "Unknown",
+        "24": "Digital Denture",
         "25": "Unknown",
         "26": "Unknown",
         "27": "Unknown",
