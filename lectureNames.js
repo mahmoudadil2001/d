@@ -309,7 +309,7 @@ export const lectureNames = {
         "19": "RCD Selection of Artificial Teeth and Try-in",
         "20": "Insertion of Complete Dentures",
         "21": "Post Insertion Problems in Complete Denture",
-        "22": "Unknown",
+        "22": "Relining and Rebasing of RPD and Complete Denture",
         "23": "Unknown",
         "24": "Unknown",
         "25": "Unknown",
