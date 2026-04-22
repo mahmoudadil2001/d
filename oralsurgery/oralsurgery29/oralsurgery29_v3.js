@@ -1,77 +1,77 @@
 export const questions = [
   {
-    question: "Which of the following is an advantage of CT scanning?",
-    options: ["Ionizing radiation", "Expensive", "Non-invasive and gives 3D image", "Requires sedation for children"],
-    answer: 2
-  },
-  {
-    question: "CT can differentiate various body structures and demonstrates their relationship without:",
-    options: ["Radiation", "Contrast", "Superimposition", "Software"],
-    answer: 2
-  },
-  {
-    question: "Which of the following is a disadvantage of CT scanning?",
-    options: ["No ionizing radiation", "Low cost", "Artifact scatter due to dental amalgam", "No contrast reactions"],
-    answer: 2
-  },
-  {
-    question: "Artifact scatter on CT can be caused by:",
-    options: ["Patient movement", "Dental amalgam fillings and metallic crowns", "Low radiation dose", "Soft tissue edema"],
+    question: "What initiates the inflammatory process that leads to thrombosis of vessels in the marrow?",
+    options: ["Trauma without infection", "Inflammation causing vessel thrombosis", "Autoimmune reaction", "Metabolic disorder"],
     answer: 1
   },
   {
-    question: "CT is an effective means of guiding the placement of:",
-    options: ["Surgical drills", "Fine needle aspiration (FNA) for biopsy", "Dental implants", "Orthodontic brackets"],
-    answer: 1
-  },
-  {
-    question: "CBCT has an advantage over conventional CT by giving a 3D image and exposing tissues to:",
-    options: ["Higher radiation dose", "Relatively small doses of radiation", "No radiation", "Magnetic fields"],
-    answer: 1
-  },
-  {
-    question: "The radiation dose of medical CT exceeds that of:",
-    options: ["CBCT only", "Conventional panoramic radiography only", "Both CBCT and conventional panoramic radiography", "Ultrasound"],
+    question: "The periosteal blood supply to the maxilla penetrates its cortex more easily than the mandible because:",
+    options: ["The maxilla has a much thicker cortex", "The mandible has more perforating arteries", "The maxilla's cortex is much thinner and more porous", "The mandible has no periosteum"],
     answer: 2
   },
   {
-    question: "CBCT dento-alveolar effective dose median is equivalent to how many days of natural background radiation?",
-    options: ["5 days", "10 days", "14 days", "4 months"],
+    question: "Which of the following patient conditions may lead to osteomyelitis due to lack of intact host defenses?",
+    options: ["High athletic performance", "Chronic malnutrition", "Young adult age", "Mild anxiety"],
     answer: 1
   },
   {
-    question: "Multislice CT effective dose range is equivalent to how many months of natural background radiation?",
-    options: ["2-8 days", "2-8 weeks", "2-8 months", "2-8 years"],
-    answer: 2
-  },
-  {
-    question: "Which of the following is an advantage of CT scanning over conventional x-ray?",
-    options: ["Lower cost", "No ionizing radiation", "Contrast resolution is much better", "No artifacts"],
-    answer: 2
-  },
-  {
-    question: "CT scanning is used for all of the following EXCEPT:",
-    options: ["Evaluation of bony structure", "Evaluation of soft tissue", "Detection of dental caries only", "Postoperative evaluation"],
-    answer: 2
-  },
-  {
-    question: "CT scanning can be used to evaluate:",
-    options: ["Only bone", "Only soft tissue", "Intracranial lesions such as hematoma and tumors", "Only teeth"],
-    answer: 2
-  },
-  {
-    question: "The scan time for modern CT scanners is:",
-    options: ["Several minutes", "10-50 seconds", "1-2 hours", "30-60 minutes"],
+    question: "Besides Streptococcus spp., which anaerobic bacteria are commonly found in mandibular osteomyelitis?",
+    options: ["Salmonella", "Bacteroides", "Chlamydia", "Rickettsia"],
     answer: 1
   },
   {
-    question: "One advantage of fast CT scan time is that it:",
-    options: ["Increases radiation dose", "Minimizes motion artifacts", "Reduces image quality", "Requires more contrast"],
+    question: "Why is it important to use culture and sensitivity testing before long-term antibiotic administration?",
+    options: ["To reduce hospital stay", "To prevent development of bacterial drug resistance", "To increase antibiotic price", "To comply with legal requirements"],
     answer: 1
   },
   {
-    question: "3D reconstruction from CT scan data takes approximately:",
-    options: ["5-10 minutes", "20-30 minutes", "1 hour", "2 hours"],
+    question: "In acute suppurative osteomyelitis, what is typically absent in most patients?",
+    options: ["Localized pain", "Erythema", "Systemic manifestations", "Edema"],
+    answer: 2
+  },
+  {
+    question: "The 'moth-eaten appearance' on radiograph in osteomyelitis can be confused with which condition?",
+    options: ["Benign cyst", "Fibrous dysplasia", "Malignancy", "Osteoma"],
+    answer: 2
+  },
+  {
+    question: "What is the radiolucent area surrounding a sequestrum called?",
+    options: ["Cavity", "Involucrum", "Sinus tract", "Fistula"],
+    answer: 1
+  },
+  {
+    question: "In chronic suppurative osteomyelitis, what should be done if the area was previously treated with bone grafting?",
+    options: ["Leave hardware in place", "Remove all nonviable tissue and hardware", "Only add more bone graft", "Perform only soft tissue closure"],
+    answer: 1
+  },
+  {
+    question: "Standard management of chronic suppurative osteomyelitis includes all EXCEPT:",
+    options: ["Culture and sensitivity of bone biopsy", "Aggressive debridement", "High dose oral antibiotics only", "High dose intravenous antibiotics"],
+    answer: 2
+  },
+  {
+    question: "Why is a longer duration of antibiotics needed for osteomyelitis compared to common odontogenic infections?",
+    options: ["Patients are sicker", "Bone penetration and resolution of colonization is more difficult", "Bacteria are more resistant", "Antibiotics are less effective"],
+    answer: 1
+  },
+  {
+    question: "In chronic sclerosing osteomyelitis, what is generally absent?",
+    options: ["Pain", "Swelling", "Purulence or drainage", "Bone expansion"],
+    answer: 2
+  },
+  {
+    question: "Radiographically, chronic sclerosing osteomyelitis shows:",
+    options: ["Increased trabecular bone density", "Large cyst-like radiolucency", "Periosteal reaction only", "Pathologic fracture"],
+    answer: 0
+  },
+  {
+    question: "What is the alternative name for osteomyelitis with proliferative periostitis?",
+    options: ["Paget's disease", "Garre osteomyelitis", "Caffey's disease", "Albers-Schonberg disease"],
+    answer: 1
+  },
+  {
+    question: "The new bone formation in Garre osteomyelitis is described as:",
+    options: ["Lamellar bone", "Woven bone in layers parallel to the cortex", "Compact bone only", "Spongy bone with large marrow spaces"],
     answer: 1
   }
 ];
