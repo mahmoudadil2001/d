@@ -187,7 +187,7 @@ export const lectureNames = {
         "25": "dental implants 2",
         "26": "Unknown",
         "27": "biobsy",
-        "28": "diagnostic imaging 1",
+        "28": "diagnostic imaging",
         "29": "diagnostic imaging 2",
         "30": "Unknown"
     },
