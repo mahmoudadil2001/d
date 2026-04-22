@@ -1,77 +1,77 @@
 export const questions = [
   {
-    question: "Who first used MRI for medical imaging in 1972?",
-    options: ["Ogawa", "Lauterbur", "Roentgen", "Hounsfield"],
-    answer: 1
-  },
-  {
-    question: "The principle of MRI is based on the magnetic properties of which atomic nucleus?",
-    options: ["Oxygen protons", "Carbon protons", "Hydrogen protons", "Nitrogen protons"],
+    question: "What is the scientific unit for measuring the effective dose of radiation?",
+    options: ["Rad", "Roentgen", "Millisievert (mSv)", "Sievert"],
     answer: 2
   },
   {
-    question: "In MRI, when the radiofrequency pulse is turned off, protons emit weak radiosignals that are detected by:",
-    options: ["X-ray tube", "Gamma camera", "Receiver coil", "Ultrasound transducer"],
+    question: "Which type of tissue appears radiolucent on conventional radiography?",
+    options: ["Calcified tissue (Bone)", "Soft tissue (muscle)", "Soft tissue (fat)", "Air (lung)"],
+    answer: 3
+  },
+  {
+    question: "What is a major disadvantage of conventional radiography?",
+    options: ["No ionizing radiation", "Provides 3D images easily", "Requires at least 30% mineral content change to detect pathology", "No superimposition of structures"],
     answer: 2
   },
   {
-    question: "Which MRI view highlights tissues with high water content and is especially useful for depicting inflammation and neoplasms?",
-    options: ["T1-weighted", "T2-weighted", "Proton density", "Diffusion-weighted"],
+    question: "Which imaging modality uses high-frequency sound waves above 20 kHz?",
+    options: ["Conventional radiography", "Ultrasonography (USG)", "CT scan", "MRI"],
     answer: 1
   },
   {
-    question: "In T1-weighted MRI images, adipose tissue appears:",
-    options: ["Dark", "Lighter", "Black", "Invisible"],
-    answer: 1
-  },
-  {
-    question: "In T2-weighted MRI images, water appears:",
-    options: ["Darker", "Lighter", "Same as fat", "Invisible"],
-    answer: 1
-  },
-  {
-    question: "Which of the following is an advantage of MRI?",
-    options: ["Ionizing radiation", "Poor soft tissue contrast", "Superior soft tissue contrast", "High cost only"],
+    question: "On ultrasound, how does fluid (like blood or cyst contents) typically appear?",
+    options: ["Hyperechoic", "All waves are reflected back", "All waves are allowed to pass without reflection", "Waves are partly allowed to pass"],
     answer: 2
   },
   {
-    question: "MRI can decrease artifact scatter seen in CT due to:",
-    options: ["Patient movement", "Dental fillings and metallic crowns", "Bone density", "Soft tissue swelling"],
+    question: "What does Doppler ultrasound specifically detect and measure?",
+    options: ["Bone density", "Rate of movement of fluid such as blood", "Tissue calcification", "Airway patency"],
     answer: 1
   },
   {
-    question: "Which of the following is a disadvantage of MRI?",
-    options: ["Fast scan time", "No claustrophobia", "Motion artifacts due to long procedure", "Low cost"],
+    question: "Who first tried the clinical application of CT in diagnostic imaging in 1969?",
+    options: ["Lauterbur", "Ogawa", "Roentgen", "Godfrey Hounsfield"],
+    answer: 3
+  },
+  {
+    question: "What is the Hounsfield Unit (HU) range for bone?",
+    options: ["-1000 to 0", "+35 to +50", "+300 to +1000", "0 to +300"],
     answer: 2
   },
   {
-    question: "The full scan time for MRI is approximately:",
-    options: ["5-10 minutes", "10-20 minutes", "30-60 minutes", "2-3 hours"],
+    question: "Which type of CT scan is especially used for preoperative planning of dental implant placement?",
+    options: ["Spiral CT", "Conventional axial CT", "Cone Beam CT (CBCT)", "Single-slice CT"],
     answer: 2
   },
   {
-    question: "Which of the following is an absolute contraindication for MRI?",
-    options: ["Dental amalgam", "Titanium implant", "Ferromagnetic aneurysm clips", "Gold crown"],
+    question: "What is a key advantage of CBCT over medical CT?",
+    options: ["Higher radiation dose", "Longer scan time", "Exposes tissues to relatively smaller doses of radiation", "Cannot assess bone density"],
     answer: 2
   },
   {
-    question: "Tissues containing low numbers of suitable hydrogen protons, such as aerated lungs and dense bone, are:",
-    options: ["Clearly visualized", "Poorly visualized on MRI", "Best seen on MRI", "Not visible on any imaging"],
+    question: "According to the table, what is the approximate effective dose range for a panoramic radiograph?",
+    options: ["280-1410 μSv", "11-674 μSv", "2.7-24 μSv", "30-1073 μSv"],
+    answer: 2
+  },
+  {
+    question: "Which of the following is a disadvantage of CT scan?",
+    options: ["No ionizing radiation", "Excellent for patients with dental amalgam fillings", "Artifact scatter due to metallic crowns", "Very low cost"],
+    answer: 2
+  },
+  {
+    question: "MRI was first used for medical imaging in 1972 by whom?",
+    options: ["Ogawa", "Godfrey Hounsfield", "Roentgen", "Lauterbur"],
+    answer: 3
+  },
+  {
+    question: "In T1-weighted MRI images, which tissue appears brightest (highest signal)?",
+    options: ["Water", "Adipose tissue (fat)", "Cortical bone", "Cerebrospinal fluid"],
     answer: 1
   },
   {
-    question: "MRI is the procedure of choice to visualize cranial nerves because it can differentiate nerves from:",
-    options: ["Muscle and tendon", "Fat and CSF", "Bone and cartilage", "Blood and lymph"],
-    answer: 1
-  },
-  {
-    question: "CT uses iodinated contrast which can be harmful in patients who are:",
-    options: ["Diabetic", "Hypertensive", "Allergic to the contrast agent", "Pregnant"],
-    answer: 2
-  },
-  {
-    question: "Unlike CT, MRI does NOT use:",
-    options: ["Magnetic fields", "Radio waves", "Ionizing radiation", "Receiver coils"],
+    question: "What is a major contraindication for MRI?",
+    options: ["Pregnancy", "Dental amalgam fillings", "Presence of a pacemaker", "Claustrophobia"],
     answer: 2
   }
 ];
