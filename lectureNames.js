@@ -308,7 +308,7 @@ export const lectureNames = {
         "18": "horizontal jaw relation",
         "19": "RCD Selection of Artificial Teeth and Try-in",
         "20": "Insertion of Complete Dentures",
-        "21": "Unknown",
+        "21": "Post Insertion Problems in Complete Denture",
         "22": "Unknown",
         "23": "Unknown",
         "24": "Unknown",
