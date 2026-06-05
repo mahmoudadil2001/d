@@ -913,13 +913,13 @@ export const visibleLectures = {
             3,
             4
         ],
-        "twentysix": [
+        "29": [
             1,
             2,
             3,
             4
         ],
-        "twentynine": [
+        "twentysix": [
             1,
             2,
             3,
